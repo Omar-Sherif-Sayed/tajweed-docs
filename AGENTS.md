@@ -36,12 +36,13 @@ repository the task touches → (6) the last record in [`docs/sessions/`](docs/s
 | --- | --- |
 | Date | 2026-11-17 |
 | Phase | **0 — Foundations** (§14) |
-| Exists | This documentation repository, local only: parent `AGENTS.md`, `README.md`, the detailed plan, one session record, one commit. |
+| Exists | This documentation repository, local only: parent `AGENTS.md`, `README.md`, the detailed plan, one session record with a conversation copy, two commits. |
 | Does not exist | Any GitHub repository, any application code, any design, the data-source register. |
 | Last task done | `P0-01` Documentation repository. |
-| Folder name | `Tajweed - The Noble Quran and Its Sciences`. If the folder on disk is still called `Tajweed`, the rename is pending: close every program that uses the folder, then run in PowerShell `Rename-Item 'C:\Programming\WorkSpaces\Tajweed' 'Tajweed - The Noble Quran and Its Sciences'`. |
-| **Next task** | `P0-02` — the author gives his GitHub user name (it fixes the application id, R3) and says yes to R1 (create the public repositories and push). Then `P0-03`, and `P0-11` (design) in parallel. |
-| Waiting for the author | His GitHub user name · R1 · Android Studio installed (`P0-05`; he was installing it on 2026-11-17) · read this file and `docs/sessions/` once before they become public. |
+| Folder name | `C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences` — renamed by the author on 2026-11-17. |
+| GitHub account | `Omar-Sherif-Sayed` (read from the author's Chrome session, 2026-11-17). No repository named `tajweed-*` exists there yet. |
+| **Next task** | `P0-02` — the author says yes to R1 (create the five public repositories and push), confirms the application id `io.github.omarsherifsayed.tajweed` (R3) and chooses the commit e-mail (R10). Then `P0-03`, and `P0-11` (design) in parallel. |
+| Waiting for the author | R1 · R3 · R10 · Android Studio installed (`P0-05`; it was installing on 2026-11-17) · read this file and `docs/sessions/` once before they become public. |
 
 **At the end of every session:** update the table above, the statuses in §14.1, the change log §19; write or extend
 the session record; commit as the author (§1). Details: `docs/plan/execution-plan.md` §1.
@@ -57,6 +58,9 @@ The author's own rules — the same in all his projects:
 - **Commits (author, 2026-11-16):** the agent may commit. The commit author is always **Omar Sherif** with the author's
   own e-mail (set per repository with `git config user.name` / `user.email`); no AI co-author and no "generated with"
   line in a commit message. **Pushing and creating repositories: only after the author says so** (§18.2 R1).
+  ⚠ The author's GitHub account has "Keep my email addresses private" switched on, but an address written in a commit
+  is public once the commit is pushed — which address the commits carry is point R10 (§18.2), decided before the
+  first push.
 - **After every task, update the `AGENTS.md` of every repository the task touched** (and its `README.md` for human
   readers), plus this parent file when scope, structure, sources or decisions change.
 - **Document everything.** Documents go in `docs/<kind>/` of the owning repository with an index `docs/README.md`;
@@ -122,7 +126,7 @@ read, only the author can write** (author, 2026-11-16). Names (final unless the 
 
 ```
 C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences\
-                         = the documentation repository  -> github.com/<account>/tajweed-docs
+                         = the documentation repository  -> github.com/Omar-Sherif-Sayed/tajweed-docs
   AGENTS.md              this file (parent)            README.md      for human readers
   .gitignore             ignores the four application folders below
   docs\
@@ -134,11 +138,22 @@ C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences\
     design\              tokens.json, HTML prototypes, Figma link (task P0-11)
     deployment\          hosting and store guides (release track)
     quality\             acceptance runs, iPhone test sessions
-  tajweed-backend\       Spring Boot REST API            -> github.com/<account>/tajweed-backend
-  tajweed-frontend\      Angular web application         -> github.com/<account>/tajweed-frontend
-  tajweed-android\       Android application             -> github.com/<account>/tajweed-android
-  tajweed-ios\           iPhone application              -> github.com/<account>/tajweed-ios
+  tajweed-backend\       Spring Boot REST API            -> github.com/Omar-Sherif-Sayed/tajweed-backend
+  tajweed-frontend\      Angular web application         -> github.com/Omar-Sherif-Sayed/tajweed-frontend
+  tajweed-android\       Android application             -> github.com/Omar-Sherif-Sayed/tajweed-android
+  tajweed-ios\           iPhone application              -> github.com/Omar-Sherif-Sayed/tajweed-ios
 ```
+
+| Repository | Holds | Does not hold |
+| --- | --- | --- |
+| `tajweed-docs` (this folder) | **The main picture of the whole product:** this `AGENTS.md`, the detailed plan and task status, decisions, the register of content sources, permission letters, the design (tokens, HTML prototypes, the Figma link and exported screens), hosting and store guides, session records and conversation copies | Application code |
+| `tajweed-backend` | The Spring Boot REST API, the database migrations, the content import tool and the untouched source files of the content (Quran text, search text), the OpenAPI contract | Designs, product decisions |
+| `tajweed-frontend` | The Angular web application | Content files (it reads the API) |
+| `tajweed-android` | The Android application (Kotlin, Compose) with the Quran database shipped inside it | — |
+| `tajweed-ios` | The iPhone application (Swift, SwiftUI) with the same Quran database | — |
+
+Each application repository also has its own `AGENTS.md`, `README.md` and `docs/` — only about that codebase; anything
+that concerns more than one application is written here.
 
 - **The workspace folder itself is the fifth repository, `tajweed-docs`** (decided 2026-11-17, the author asked for
   a repository for the plan, the designs and everything that is not part of a running application). Reason: this
@@ -151,7 +166,9 @@ C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences\
   in that repository's own `docs/`).
 - Each application repository: `AGENTS.md`, `README.md`, `docs/` (+ `docs/README.md` index), `LICENSE`, `.gitignore`,
   CI workflow.
-- **Session records** are written to `docs/sessions/` (rules in `docs/README.md`). ⚠ **Raw transcripts are never
+- **The session memory is kept in this repository** in three forms: the current state in §0, a written record per
+  session in `docs/sessions/`, and beside it a **conversation copy** — every message the author typed and every text
+  answer of the agent, made by a script (rules in `docs/README.md`). ⚠ **Raw transcripts are never
   committed**: a transcript contains whole files of other projects, tool output and the author's e-mail, and this
   repository is public. They are kept privately on the author's machine in
   `C:\Programming\WorkSpaces\ai-agent-workspace\Tajweed\transcripts\`, with other private
@@ -639,7 +656,7 @@ reviewer). Task ids: `P<phase>-<area><n>`, areas **D** data · **B** backend · 
 | Task | What | Status |
 | --- | --- | --- |
 | P0-01 | Documentation repository: this folder, `docs/`, the detailed plan, first session record, first commit | ✔ 2026-11-17 (local; GitHub in P0-03) |
-| P0-02 | The author gives his GitHub user name (application id, R3) and confirms R1 (§18.2) | ⏸ author |
+| P0-02 | The author confirms R1 (create and push), R3 (application id) and R10 (commit e-mail) — §18.2 | ⏸ author |
 | P0-03 | Create the five public GitHub repositories through the author's Chrome session; remotes; first push | ⏸ needs an explicit yes (R1) |
 | P0-04 | Licences: MIT for code; the licence of these documents; the content notice | ☐ |
 | P0-05 | Machine: install Android Studio; confirm Docker runs | ⏸ author |
@@ -731,7 +748,7 @@ Listed for the author to accept or reject — none is built without approval.
 | # | Topic | Decision / status |
 | --- | --- | --- |
 | Q1 | Name | ✔ **تجويد - القرآن الكريم وعلومه**, short «تجويد» / "Tajweed" (accepted 2026-11-17; ☐ English wording and store check, §2). |
-| Q2 | GitHub | ✔ Public repositories; only the author writes. ☐ Account name, creation and code licence — R1. |
+| Q2 | GitHub | ✔ Public repositories; only the author writes. ✔ Account `Omar-Sherif-Sayed` (2026-11-17). ☐ Creation, push and code licence — R1. |
 | Q3 | Fifth repository `tajweed-docs` | ✔ Yes (2026-11-17): the workspace folder itself (§3). Local commit done; GitHub in P0-03. |
 | Q4 | Commits and notes | ✔ The agent commits as Omar Sherif (§1). ☐ Push — R1. ✔ Session records in `docs/sessions/`; raw transcripts stay private in `ai-agent-workspace\Tajweed\` (§3). |
 | Q5 | UI library | ✔ Angular 22 + Angular Material 22 + Tailwind CSS (§4.2). |
@@ -749,19 +766,20 @@ Listed for the author to accept or reject — none is built without approval.
 ### 18.2 Remaining points (the agent's default is applied unless the author says otherwise)
 
 The author read these on 2026-11-16 and did not object in his next message; the defaults are in effect. **R1 still needs an
-explicit yes** (it is public), and R3 needs the author's GitHub user name. R2 and R4 are settled.
+explicit yes** (it is public); R3 (permanent) and R10 (public) need the author's confirmation. R2 and R4 are settled.
 
 | # | Point | Default |
 | --- | --- | --- |
-| R1 | GitHub account name; may the agent create the public repositories through the author's Chrome session and push? Code licence? | The agent reads the account name in Chrome, creates the repositories only after an explicit "yes", pushes only when told. Licence: MIT for the code; content keeps its own licences. |
+| R1 | May the agent create the five public repositories under `Omar-Sherif-Sayed` through the author's Chrome session and push? Code licence? | The agent creates the repositories only after an explicit "yes", pushes only when told. Licence: MIT for the code; content keeps its own licences. |
 | R2 | A fifth public repository `tajweed-docs`. | ✔ Settled 2026-11-17 — the workspace folder itself (§3). |
-| R3 | Base Java package and the Android / iPhone application id. ⚠ **It can never be changed after the first store release.** | `io.github.<account>.tajweed`, where `<account>` is the author's GitHub user name in lower case (a `-` in the name becomes `_`, because a package name cannot contain `-`). Example: user name `omar-sherif` → `io.github.omar_sherif.tajweed`. ☐ The author gives his user name — the agent could not read it on 2026-11-17 (the Chrome extension was not connected, and the built-in browser is not signed in to GitHub). |
+| R3 | Base Java package and the Android / iPhone application id. ⚠ **It can never be changed after the first store release.** | **`io.github.omarsherifsayed.tajweed`** — one identical value for the Java base package, the Android application id and the iPhone bundle id. It is the GitHub user name `Omar-Sherif-Sayed` in lower case **with the hyphens removed**: a Java / Android name cannot contain `-`, and an Apple bundle id cannot contain `_` (✔ Apple: only letters, digits, `-` and `.`, checked 2026-11-17), so plain letters are the only form valid everywhere. ☐ The author confirms before the first scaffold. |
 | R4 | Red colouring. | ✔ Closed 2026-11-17 — no coloured words (§8.1). |
 | R5 | Sheikh Noreen (riwayah الدوري عن أبي عمرو). | Listening only, labelled with his riwayah, without showing or highlighting the Hafs text (§6.7). |
 | R6 | Adhan: accept the iPhone and web limits (§8.6)? Sources for the six muezzins' recordings? | Limits accepted; a muezzin is added only when a clean recording with a known origin and permission is found. |
 | R7 | Order: backend + web + Android first, iPhone after each feature is stable on Android? | Yes (§11–12). |
 | R8 | Recommendations in §17. | All accepted except the "later" items. |
 | R9 | A qualified reviewer before phases 5–7 (tajweed, adhkar, hadith) are published. | Those phases are built, but published only inside the limits of §6.10. |
+| R10 | Which e-mail do the commits carry? The author asked for his personal address; his GitHub account hides his address ("Keep my email addresses private" is on), and a pushed commit would show it to everyone, for ever. | **Recommended:** the account's GitHub "noreply" address (shown on GitHub → Settings → Emails) — the commits still appear under his name and profile, and the personal address stays private. Until he answers, the local commits carry the personal address as he asked; they are rewritten before the first push if he chooses the noreply address. |
 
 ### 18.3 Original questions (2026-11-16, kept for reference)
 
@@ -791,3 +809,4 @@ explicit yes** (it is public), and R3 needs the author's GitHub user name. R2 an
 | 2026-11-16 | The author's answers recorded (§18.1): name تجويد / Tajweed; public repositories; the agent commits as the author; Angular Material + Tailwind instead of PrimeNG (§4.2); two native mobile repositories and the plan for iPhone without a Mac (§4.3, §11–12); PostgreSQL; model mushaf for the red colouring (§8.1); محمد رفعت and البهتيمي left out after a second search (§7.3); no reviewer → rule §6.10; Sunni sources only; HTML prototypes before Figma. Remaining points: §18.2. |
 | 2026-11-17 | Name accepted: «تجويد - القرآن الكريم وعلومه» (§2). The workspace folder became the documentation repository `tajweed-docs` (§3) with `README.md`, `docs/README.md`, `docs/plan/execution-plan.md` and the first session record. Added §0 "Start here" (handoff for any agent or model), the contents table and §14.1 (every task with its status). Machine checked: Docker installed, Android Studio not. First commit as the author; nothing pushed. |
 | 2026-11-17 | Second update of the day (author's message): the coloured name of Allah is withdrawn — a standard one-colour mushaf with full tashkeel (§8.1, R4 closed); new feature F16 Quran search (word with or without tashkeel, surah name, ayah number) with a separate search text; the name is written with a plain hyphen and the workspace folder is named `Tajweed - The Noble Quran and Its Sciences` (§3); references to the author's other projects removed; the application id formula explained (R3) — the GitHub user name is still needed; Android Studio Rabbit 2 Patch 1 confirmed as the current version. |
+| 2026-11-17 | Third update of the day: the author renamed the workspace folder; GitHub account read from his Chrome session — `Omar-Sherif-Sayed` (§0, §3); application id proposed as `io.github.omarsherifsayed.tajweed`, valid on Java, Android and iPhone (R3 — corrects the earlier "hyphen becomes underscore" note, which Apple does not accept); new point R10, the e-mail carried by the commits; §3 now lists what each repository holds; a conversation copy of the session added to `docs/sessions/`. |

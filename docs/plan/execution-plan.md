@@ -70,17 +70,21 @@ commit as the author. Not done: the GitHub repository and the push (`P0-03`).
 
 ### P0-02 Author's confirmations (author)
 
-`AGENTS.md` §18.2, R1–R9. The defaults written there are in effect; two points need an explicit answer because
+`AGENTS.md` §18.2, R1–R9. The defaults written there are in effect; three points need an explicit answer because
 they cannot be undone or are public:
 
 - **R1** — create the public repositories and push (public from the first second);
-- **R3** — the application id `io.github.<account>.tajweed` (permanent after the first store release): the agent
-  needs the author's GitHub user name.
+- **R3** — the application id `io.github.omarsherifsayed.tajweed` (permanent after the first store release; the same
+  value for the Java package, Android and iPhone);
+- **R10** — the e-mail carried by the commits: the personal address, or the account's GitHub "noreply" address
+  (recommended, because the account hides its address). Decided before the first push; if it changes, the local
+  commits are rewritten first.
 
 ### P0-03 GitHub repositories (author: explicit yes)
 
-- The author gives his GitHub user name — or connects the Claude in Chrome extension so that the agent can read it
-  (it was not connected on 2026-11-17).
+- Account: `Omar-Sherif-Sayed` (read from the author's Chrome session on 2026-11-17; no `tajweed-*` repository
+  existed there). The repositories are created in that Chrome session (the Claude in Chrome extension must be
+  connected).
 - Create five **public** repositories, empty (no generated README): `tajweed-docs`, `tajweed-backend`,
   `tajweed-frontend`, `tajweed-android`, `tajweed-ios`. Description in English and Arabic; default branch `main`; no
   collaborators (only the author can write).
@@ -405,7 +409,8 @@ path monitor. Started after the Android slice is accepted. Device checks wait fo
 | Needed | For |
 | --- | --- |
 | Explicit yes to create public repositories and push | P0-03 |
-| His GitHub user name (it fixes the application id) | P0-03, P0-07, P0-09, P0-10 |
+| Confirmation of the application id `io.github.omarsherifsayed.tajweed` | P0-07, P0-09, P0-10 |
+| Choice of the commit e-mail (R10) | P0-03 |
 | Android Studio installed | P0-09 |
 | Colour and screen approval | P0-11 |
 | Choice of Quran text and font | P0-12 |

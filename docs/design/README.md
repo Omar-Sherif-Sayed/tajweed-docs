@@ -29,9 +29,10 @@ beside the existing design, so that one of the two is chosen for web, Android an
 | Kufic letters | the script of the early Quran manuscripts | headings, in Noto Kufi Arabic (a modern font, OFL 1.1) |
 
 Nine colour directions, each in day and night: Parchment, Madinah, Makkah, Al-Quds, Gardens, Two seas, Lamps,
-Honey, and Mountains — high contrast. Every text / background pair is at least 4.5 : 1, and 7 : 1 in Mountains,
-with normal colour vision and as simulated for the three kinds of colour blindness (checked by
-`tools/design2_palettes.py` on every build; the "Colour vision" switch shows the same simulation). The reason for each colour and icon: `design-2-meanings.md`. The Quran page is the same as in design 1: the King Fahd page fonts, one text colour.
+Honey, and Mountains. Every text / background pair is at least 4.5 : 1. **Mountains is the only direction made for
+colour blindness and weak sight** (the author's decision, 2026-11-18): 7 : 1, also as simulated for the three kinds
+of colour blindness (checked by `tools/design2_palettes.py` on every build; the "Colour vision" switch shows the
+same simulation). The reason for each colour and icon: `design-2-meanings.md`. The Quran page is the same as in design 1: the King Fahd page fonts, one text colour.
 Start state in the address: `round-3.html#gardens-dark-en-545` (direction, theme, language, page).
 
 Third pass checked on 2026-11-18: 9 directions × day / night × Arabic / English × 5 pages — no line wider than

@@ -45,9 +45,8 @@ that are named in the Quran, or that were really seen in the places and objects 
 ## 3. The nine colour directions
 
 Six directions were made on 2026-11-17; the author asked for more on 2026-11-18, and three were added (3.7 – 3.9).
-Each direction has a day theme and a night theme. Every text / background pair passes 4.5 : 1 (the high-contrast
-direction 7 : 1), checked by script — with normal colour vision **and** as seen with each of the three kinds of
-colour blindness (section 3.10). The roles are the same in every direction: background, text, main button, the
+Each direction has a day theme and a night theme. Every text / background pair passes 4.5 : 1, checked by script.
+Only Mountains is made for readers with colour blindness or weak sight (section 3.10). The roles are the same in every direction: background, text, main button, the
 small "dot" marks, a second colour (prayer, Qibla, adhkar, "verified"), and the prayer card.
 
 ### 3.1 الرَّقّ — Parchment (the first one, unchanged)
@@ -125,9 +124,10 @@ It takes its three colours from one verse: «وَمِنَ ٱلْجِبَالِ �
 | Intense black `#000000` | text, buttons (day); background (night) | 21 : 1 |
 | Red `#8E0016` (day) / `#FF9C9C` (night) | the dot marks | at least 9.7 : 1 |
 
-No grain texture and no soft colours in this direction: everything is drawn at full strength. It is also the
-direction meant for **colour-blind readers** (the author's request of 2026-11-18): as simulated for protanopia,
-deuteranopia and tritanopia, every pair stays at 8.4 : 1 or more (section 3.10).
+No grain texture and no soft colours in this direction: everything is drawn at full strength. It is **the only
+direction made for readers with colour blindness, weak colour vision or weak sight** (the author's decision of
+2026-11-18): as simulated for protanopia, deuteranopia and tritanopia, every pair stays at 8.4 : 1 or more
+(section 3.10). Its name says so: «الجبال — لضعف البصر وعمى الألوان».
 
 ### 3.7 البحران — Two seas
 
@@ -160,19 +160,20 @@ ends with a mention of punishment, so it is not cited (rule 7).
 
 ### 3.10 Colour vision — for readers who cannot tell colours apart
 
-The author asked on 2026-11-18 that at least one direction serve people who cannot distinguish colours. What was
-done:
+The author asked on 2026-11-18 that one direction serve people who cannot distinguish colours, and then decided
+that **only Mountains** is made for them — not every direction, and not the night themes of the other directions.
+What was done:
 
-1. **Every direction is checked as a colour-blind reader sees it.** The build simulates protanopia, deuteranopia
-   and tritanopia with the published model of Machado, Oliveira & Fernandes (IEEE TVCG 2009, severity 1.0, matrices
-   read on the authors' page) and stops if any text pair falls below the direction's minimum. All nine pass.
-2. **Mountains** is the direction for low vision and colour blindness: black and white at full strength, at least
-   8.4 : 1 under every simulation.
-3. **Colour is never the only signal**, in every direction: the active tab has a dot *and* bold text; a selected
-   choice has a thicker border; the current prayer has a filled dot *and* bold text; a source's status is written
-   in words. This is a rule for the applications too.
-4. The prototype has a **"Colour vision" switch** that shows every screen through the same simulation, so the
-   author can see it himself.
+1. **Mountains is the direction for colour blindness, weak colour vision and weak sight:** black and white at full
+   strength, at least 7 : 1 everywhere.
+2. **Mountains is checked as a colour-blind reader sees it.** The build simulates protanopia, deuteranopia and
+   tritanopia with the published model of Machado, Oliveira & Fernandes (IEEE TVCG 2009, severity 1.0, matrices
+   read on the authors' page) and stops if any text pair of Mountains falls below 7 : 1; today it stays at 8.4 : 1
+   or more. The other eight directions are checked for normal colour vision only (4.5 : 1).
+3. **In Mountains, colour is never the only signal:** the active tab has a dot *and* bold text; a selected choice
+   has a thicker border; the current prayer has a filled dot *and* bold text; a source's status is written in words.
+4. The prototype has a **"Colour vision" switch** that shows the screens through the same simulation, to check
+   Mountains.
 
 ### 3.11 The language choice — 30:22
 

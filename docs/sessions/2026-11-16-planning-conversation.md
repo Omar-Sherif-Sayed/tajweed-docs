@@ -824,3 +824,61 @@ The index is correct: Al-Fatihah page 1, Al-Baqarah 2, Aal-Imran 50, An-Nisa 77,
 "| Date |" also matches the change log's header row. Making that replacement exact:
 
 Records updated. Now the conversation copy, the privacy scan, then commit and push.
+
+Design 2 now has nine colour directions, all checked for colour-blind readers. Each surah shows whether it is Makki or Madani, its number of ayahs and its order, and the mushaf has a full index. Everything is checked in the browser, committed and pushed in [round-3.html](docs/design/prototypes/round-3.html).
+
+#### Ayah 30:22 — after reading its tafsirs
+
+Al-Muyassar, al-Sa'di, al-Baghawi, al-Jalalayn and al-Muntakhab all say the same. «أَلْسِنَتِكُمْ» are people's languages (Arabic and others). «أَلْوَٰنِكُمْ» are people's own colours (white, black and others), even though all people come from one origin.
+
+**My decision:** the ayah sits **beside the language choice only**, as a card in the "Why this design" section («لماذا أكثر من لغة؟»). I don't use it for the colour directions, because its colours are the colours of people, not of things. Its meaning will appear in the app only as a word-for-word quote from a published tafsir, once we have permission to use one.
+
+#### Three new directions (nine in all)
+
+| Direction | From |
+| --- | --- |
+| **البحران — Two seas** | «مَرَجَ ٱلْبَحْرَيْنِ» (55:19), and the pearl and coral that come out of them (55:22): sea blue, pearl, coral |
+| **المصابيح — Lamps** | The sky adorned with lamps (41:12), and «سِرَٰجًا وَقَمَرًا مُّنِيرًا» (25:61): night blue and lamplight, made to look best at night. I left out 67:5 because it ends with a mention of punishment. |
+| **النحل — Honey** | «شَرَابٌ مُّخْتَلِفٌ أَلْوَٰنُهُۥ» (16:69), and the trees where the bees make their homes (16:68): amber, beeswax and leaf green |
+
+#### Colour blindness
+
+- **Mountains is the direction for colour-blind and low-vision readers.** As you thought, it is black and white at full strength. As a colour-blind reader would see it, its text stays very easy to read: at least 8.4 : 1 contrast, against a normal minimum of 4.5 : 1.
+- **All nine directions pass for colour-blind readers too.** On every build, the check shows each colour as people with the three main kinds of colour blindness see it. It uses a published scientific model (Machado and colleagues, 2009), and the build stops if any text becomes hard to read.
+- **Colour is never the only signal.** An active item has a dot *and* bold text, a selected choice has a thicker border, and a status is written in words.
+- **You can see it yourself:** the new "Colour vision" switch at the top of the page shows every screen as a colour-blind person sees it.
+
+#### Surah details and the index
+
+- **On the mushaf page:** the surah's header line shows «ترتيبها ٥٩» and «آياتها ٢٤», as in your printed copy.
+- **In the reader's top bar:** «مدنية · آياتها ٢٤ · ترتيبها ٥٩».
+- **No, there wasn't an index before; now there is (phone 7):** the 114 surahs, each with its number, Makki or Madani, ayah count and first page, plus a tab for the 30 juz. The data comes from the verified Tanzil metadata, and the ayah counts add up to 6,236. I spot-checked the first pages against the printed mushaf: Al-Baqarah 2, Aal-Imran 50, An-Nisa 77, juz 2 on page 22.
+- **Still to do:** a few surahs are classed Makki or Madani differently in different sources. Before release I'll compare each surah with the index of the printed Madinah mushaf; that is now listed under the Quran-data task.
+
+#### Checked
+
+- 180 combinations (nine directions × day and night × Arabic and English × five pages): no line spills past its page, no ayah is missing, and there are no errors.
+- The new Quran quotes in [design-2-meanings.md](docs/design/design-2-meanings.md) match the verified text character for character. The build checks this each time.
+- I corrected one of my own notes before publishing it: the bees make their homes in the trees (16:68) and eat from all fruits (16:69).
+
+Sources:
+- [Tafsirs of 30:22 — quran-tafsir.net](https://quran-tafsir.net/baghawy-saady-tantawy-qotb-katheer-atia-mobdii/sura30-aya22.html) · [surahquran.org](https://surahquran.org/aya-tafsser-22-30.html)
+- [Colour-vision simulation — Machado, Oliveira & Fernandes](https://www.inf.ufrgs.br/~oliveira/pubs_files/CVD_Simulation/CVD_Simulation.html)
+
+## The author — 2026-11-17 23:22
+
+```text
+تمام كويس - بس أنا محتاج أن direction الجبال تباين عالٍ فقط هي التي تكون مخصصه للذين يعانون من عمي او ضعف الألوان او ضعف البصر وليس كل ال directions dark theme
+```
+
+## The agent — 2026-11-17 23:22
+
+I understand: only الجبال (Mountains) is the direction for readers with colour blindness or weak sight. The other directions don't need to be built around that. I'll make the build enforce the colour-blind check on Mountains alone, and label Mountains clearly in the app.
+
+Only Mountains is now checked against colour blindness. It stays at 8.4 : 1 or more under every simulation, and the other eight need the normal 4.5 : 1 only. Now the documents.
+
+Documents rebuilt. Now checking that the longer Mountains name fits its card on the first-launch screen.
+
+The browser pane is hidden, so I'll check through the page itself rather than screenshots.
+
+The longer name wraps onto a second line but fits: no overflow, and the first-launch screen still doesn't need scrolling. Committing and pushing.

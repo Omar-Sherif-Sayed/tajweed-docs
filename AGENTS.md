@@ -588,7 +588,9 @@ era of Islam, and that the reasons become a section of the application. The reas
 - every card says "This is a design choice, not an interpretation" in both languages;
 - 30:22 (the languages of people) is shown beside the language choice only — after reading its tafsirs, its
   colours are people's colours, so it is not used for the colour directions (author's request, 2026-11-18);
-- colour is never the only signal (a dot *and* bold text, a border, words) — for colour-blind readers;
+- **only Mountains** («الجبال — لضعف البصر وعمى الألوان») is made for readers with colour blindness or weak sight —
+  7 : 1, also as simulated for the three kinds of colour blindness, and colour is never its only signal; the
+  other directions and their night themes are not built for it (author, 2026-11-18);
 - English shows an ayah's meaning only from a published translation;
 - before release a qualified reviewer reads it (§6.6), or it stays inside the rules above.
 
@@ -749,9 +751,10 @@ Agreed for both platforms whatever the option:
   pair checked by `tools/design2_palettes.py` (≥ 4.5 : 1). New section icons, each from the first era. The reason
   for every colour, icon and the logo: `docs/design/design-2-meanings.md`. Values: `docs/design/tokens-design-2.json`.
 - **Round 3, third pass (2026-11-18):** nine directions (+ Two seas 55:19–22, Lamps 41:12 / 25:61, Honey
-  16:68–69); every text pair is also checked as seen with protanopia, deuteranopia and tritanopia (Machado et al.
-  2009), and a "Colour vision" switch previews it; **Mountains is the direction for low vision and colour
-  blindness** (≥ 8.4 : 1 under every simulation); the surah details and the index (§8.1).
+  16:68–69); **only Mountains is the direction for colour blindness and weak sight** (author, 2026-11-18) — it is
+  checked as seen with protanopia, deuteranopia and tritanopia (Machado et al. 2009; ≥ 8.4 : 1), and a "Colour
+  vision" switch previews it; the other directions need 4.5 : 1 for normal vision; the surah details and the index
+  (§8.1).
 - Screens to design: language choice, colour-direction choice, sources (F17), home, Quran reader (+ ayah actions: play, tafsir, bookmark), player, reciter
   picker, tajweed lesson, radio list and player, prayer times (six backgrounds), adhan settings, Qibla, adhkar list and
   counter, hadith, book reader, settings, about.
@@ -955,3 +958,4 @@ explicit yes** (it is public); R3 (permanent) and R10 (public) need the author's
 | 2026-11-17 | Ninth update of the day (author's review of round 2): default Quran font = the King Fahd page fonts (Madinah mushaf 1405H); his printed copy (دار طيبة, Cairo) photographed — pages 1, 2, 263, 264 match the layout, and the ۞ stands before 15:49, so the quarter question is closed; prayer times follow the user's location and country on web and phones (§8.5); design round 3 — a second design, "early Islam", to compare with design 1 (§13). |
 | 2026-11-17 | Tenth update of the day (author's message): design 2 gets six colour directions — Parchment, Madinah, Makkah, Al-Quds, Gardens, Mountains (high contrast) — and new section icons; every colour, icon and the logo is explained in `docs/design/design-2-meanings.md` (ayahs copied and checked by script); new feature F19, the in-app section "Why this design" (§8.10); `P2-D1` recorded as "do not forget" (§0, §8.5). |
 | 2026-11-18 | Eleventh update (author's message): design 2 gets three more directions — Two seas, Lamps, Honey (nine in all); every direction is checked for colour-blind readers by simulation, and Mountains is the direction for low vision and colour blindness; 30:22 placed beside the language choice after reading its tafsirs (§8.10); each surah shows Makki / Madani, its ayahs and its order, and the mushaf has an index (F2, §8.1). |
+| 2026-11-18 | Twelfth update (author's message): **only Mountains** is the direction for colour blindness, weak colour vision and weak sight — renamed «الجبال — لضعف البصر وعمى الألوان»; the colour-blind check applies to it alone; the other directions and their night themes are not built for it (§8.10, §13). |

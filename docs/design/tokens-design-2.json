@@ -2,7 +2,7 @@
   "design": "2 — early Islam",
   "generated_by": "docs/design/prototypes/tools/build_round3.py",
   "meanings": "docs/design/design-2-meanings.md",
-  "roles": "(the same in every direction):\n  bg, surface, surface2  page background and cards       text, muted   body text, secondary text\n  border, rule           card edges, thin ink rules      ink, page     Quran text and the mushaf page\n  primary, onprimary     main buttons                    dot, dotsoft  the small marks (active item, page number)\n  second, secondsoft     prayer / qibla / adhkar, \"verified\"   card, oncard   the prayer card\nRule: every text / background pair below reaches 4.5 : 1 (the high-contrast direction 7 : 1), with normal colour\nvision and as simulated for protanopia, deuteranopia and tritanopia.",
+  "roles": "(the same in every direction):\n  bg, surface, surface2  page background and cards       text, muted   body text, secondary text\n  border, rule           card edges, thin ink rules      ink, page     Quran text and the mushaf page\n  primary, onprimary     main buttons                    dot, dotsoft  the small marks (active item, page number)\n  second, secondsoft     prayer / qibla / adhkar, \"verified\"   card, oncard   the prayer card\nRule: every text / background pair below reaches 4.5 : 1 with normal colour vision. The direction marked\n\"accessible\" (Mountains — the only direction made for readers with colour blindness or weak sight, the author's\ndecision of 2026-11-18) must reach 7 : 1, also as simulated for protanopia, deuteranopia and tritanopia.",
   "directions": {
     "parchment": {
       "name": {
@@ -366,8 +366,8 @@
     },
     "mountains": {
       "name": {
-        "ar": "الجبال — تباين عالٍ",
-        "en": "Mountains — high contrast"
+        "ar": "الجبال — لضعف البصر وعمى الألوان",
+        "en": "Mountains — for low vision and colour blindness"
       },
       "minimum_contrast": 7.0,
       "light": {

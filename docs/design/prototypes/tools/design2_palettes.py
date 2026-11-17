@@ -8,8 +8,9 @@ Roles (the same in every direction):
   border, rule           card edges, thin ink rules      ink, page     Quran text and the mushaf page
   primary, onprimary     main buttons                    dot, dotsoft  the small marks (active item, page number)
   second, secondsoft     prayer / qibla / adhkar, "verified"   card, oncard   the prayer card
-Rule: every text / background pair below reaches 4.5 : 1 (the high-contrast direction 7 : 1), with normal colour
-vision and as simulated for protanopia, deuteranopia and tritanopia.
+Rule: every text / background pair below reaches 4.5 : 1 with normal colour vision. The direction marked
+"accessible" (Mountains — the only direction made for readers with colour blindness or weak sight, the author's
+decision of 2026-11-18) must reach 7 : 1, also as simulated for protanopia, deuteranopia and tritanopia.
 """
 
 DIRECTIONS = {
@@ -102,7 +103,8 @@ DIRECTIONS = {
                      card="#E2A33C", oncard="#1E1305"),
     },
     "mountains": {
-        "name": {"ar": "الجبال — تباين عالٍ", "en": "Mountains — high contrast"}, "min": 7.0,
+        "name": {"ar": "الجبال — لضعف البصر وعمى الألوان", "en": "Mountains — for low vision and colour blindness"},
+        "min": 7.0, "accessible": True,
         "light": dict(bg="#FFFFFF", surface="#FFFFFF", surface2="#F0F0F0", border="#767676", rule="#3D3D3D",
                       text="#000000", muted="#333333", ink="#000000", page="#FFFFFF", primary="#000000",
                       onprimary="#FFFFFF", dot="#8E0016", dotsoft="#FFFFFF", second="#000000",
@@ -161,15 +163,15 @@ def simulate(hex_colour, kind):
 def check():
     """Returns (lowest ratio per direction and theme, list of failures).
 
-    Every pair must pass with normal colour vision and also as seen with protanopia, deuteranopia and tritanopia,
-    so that no text becomes hard to read for a colour-blind reader in any direction.
+    Every pair must pass with normal colour vision. The accessible direction (Mountains) must also pass as seen with
+    protanopia, deuteranopia and tritanopia; the other directions are not made for colour-blind readers.
     """
     lowest, failures = {}, []
     for did, d in DIRECTIONS.items():
         for theme in ("light", "dark"):
             c = d[theme]
             worst = (99, "", "", "")
-            for vision in ("normal",) + tuple(CVD):
+            for vision in ("normal",) + (tuple(CVD) if d.get("accessible") else ()):
                 cc = c if vision == "normal" else {k: simulate(v, vision) for k, v in c.items()}
                 for f, b in PAIRS:
                     r = ratio(cc[f], cc[b])

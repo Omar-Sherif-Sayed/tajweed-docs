@@ -34,16 +34,16 @@ repository the task touches → (6) the last record in [`docs/sessions/`](docs/s
 
 | | Current state — **update this table at the end of every session** |
 | --- | --- |
-| Date | 2026-11-17 |
+| Date | 2026-11-18 |
 | Phase | **0 — Foundations** (§14) |
 | Exists | **Five public repositories on GitHub** (`main` branch), the same five folders on this machine. `tajweed-docs` (this one): parent `AGENTS.md`, `README.md`, `LICENSE` (CC BY 4.0), the detailed plan, the session record with a conversation copy, and the design in `docs/design/`: round 1 (colour directions), round 2 (first-launch screen, mushaf pages as printed, six Quran fonts, Sources screen) and **round 3** (design 2, "early Islam") with the verified source files and the scripts that check them. The four application repositories: `README.md`, `AGENTS.md`, `LICENSE` (MIT), `.gitignore` — no application code. |
 | Does not exist | Any application code, the register of content sources, the remaining screens. |
-| Last task done | `P0-11` round 3, second pass (2026-11-17): design 2 now has six colour directions (Parchment, Madinah, Makkah, Al-Quds, Gardens, Mountains — high contrast), new section icons, and `docs/design/design-2-meanings.md`, which explains every colour, icon and the logo from the Quran, the hadith and the first era; every ayah in it is copied from the Tanzil file and checked by script. |
+| Last task done | `P0-11` round 3, third pass (2026-11-18): design 2 has **nine** colour directions (+ Two seas, Lamps, Honey); every direction is checked for colour-blind readers by simulation, and Mountains is the direction for low vision and colour blindness; the reader shows each surah's Makki / Madani, number of ayahs and order; a mushaf index (114 surahs, 30 juz); 30:22 placed beside the language choice after reading its tafsirs. |
 | GitHub access from this machine | **Over SSH only** (the Windows certificate store blocks the HTTPS sign-in, §1). Key `~/.ssh/id_ed25519_tajweed` (no passphrase, fingerprint `SHA256:EPCRVeCpF+Jvsj40LKpu4Cta+mKF3ivLO8szlC2k/Po`), registered in the author's account as "Tajweed project - work laptop" (he confirmed it himself). Each of the five repositories uses it through its local `core.sshCommand`; remotes are `git@github.com:Omar-Sherif-Sayed/<name>.git`. A new clone on this machine needs the same two settings. Test: `ssh -i ~/.ssh/id_ed25519_tajweed -o IdentitiesOnly=yes -T git@github.com`. |
 | Folder name | `C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences` — renamed by the author on 2026-11-17. |
 | GitHub account | `Omar-Sherif-Sayed` — <https://github.com/Omar-Sherif-Sayed?tab=repositories>. Pushing is allowed for this product (R1); push at the end of every task. |
 | Do not forget | `P2-D1` — the default prayer-time method of every country, each with a named official source (the author, 2026-11-17: it may be done at any time, before phase 2 starts) · **F19** — the in-app section «لماذا هذا التصميم؟ / Why this design?»: the reason for every colour, icon and the logo (§8.10, `docs/design/design-2-meanings.md`). |
-| **Next task** | The author compares design 1 (`round-2.html`) and design 2 (`round-3.html`, six directions) and chooses one design and its directions for web, Android and iPhone; he reads `design-2-meanings.md`. Then `P0-11` round 4: the remaining screens in the chosen design, then Figma; or `P0-06` + `P0-07` (backend scaffold) in parallel. |
+| **Next task** | The author compares design 1 (`round-2.html`) and design 2 (`round-3.html`, nine directions) and chooses one design and its directions for web, Android and iPhone; he reads `design-2-meanings.md`. Then `P0-11` round 4: the remaining screens in the chosen design, then Figma; or `P0-06` + `P0-07` (backend scaffold) in parallel. |
 | Waiting for the author | His choice between design 1 and design 2 (and which directions to keep); his reading of the meanings document. |
 
 **At the end of every session:** update the table above, the statuses in §14.1, the change log §19; write or extend
@@ -112,7 +112,7 @@ too long for a store title, the store shows "Tajweed" with the rest as the subti
 | # | Feature | Summary |
 | --- | --- | --- |
 | F1 | Language | Arabic / English, chosen on first launch (mobile and web). |
-| F2 | Quran reader | The full Quran text with complete tashkeel, **laid out exactly like the printed Madinah mushaf**: 604 pages of 15 lines, every page starting and every line ending on the same word as the printed copy, surah headers, basmala, juz / hizb / quarter marks in their places — one text colour (§8.1). |
+| F2 | Quran reader | The full Quran text with complete tashkeel, **laid out exactly like the printed Madinah mushaf**: 604 pages of 15 lines, every page starting and every line ending on the same word as the printed copy, surah headers, basmala, juz / hizb / quarter marks in their places — one text colour (§8.1). Each surah shows whether it is Makki or Madani, its number of ayahs and its order; the mushaf has an index (فهرس) of the 114 surahs and 30 juz with their pages (author, 2026-11-18). |
 | F3 | Recitation | Choose a reciter and a recitation style (murattal / mujawwad / muallim). Play a surah, an ayah range, or from a start point to the end of the Quran, then restart from Al-Fatiha, forever. |
 | F4 | Muallim mushaf | Teaching recitation per ayah from a reciter who has one (Al-Husary, Al-Minshawi, Ayman Suwayd). |
 | F5 | Tafsir | Select an ayah and read its tafsirs and explanations. |
@@ -436,6 +436,12 @@ words.**
     العثماني», printed by دار طيبة, Cairo. Its pages 1, 2, 5, 263, 264, 545 and 546 match the old Madinah layout
     line by line. «بالرسم العثماني» names the spelling of the words (the Uthmani rasm), which every Madinah mushaf
     and the Tanzil Uthmani text follow — it is not the name of a font.
+- **Surah details and the index (author, 2026-11-18).** Beside each surah's name: Makki or Madani, its number of
+  ayahs and its order in the mushaf. On the mushaf page itself the header line shows «ترتيبها» and «آياتها» as
+  the author's printed copy does; Makki / Madani is shown in the reader's title bar. An index (فهرس) lists the 114
+  surahs (order, name, Makki / Madani, ayahs, first page) and the 30 juz (first ayah, first page). Source: Tanzil's
+  metadata (`type`, `ayas`, page starts). ☐ `P0-12`: compare Makki / Madani with the index of the printed Madinah
+  mushaf, surah by surah, and record any difference — the classification of a few surahs differs between sources.
 - **Justification:** printed lines are filled by stretching letters (kashida), not by wider spaces. The DigitalKhatt
   fonts can do this; other fonts can only widen spaces. ☐ Decided with the font (P0-12).
 - **The coloured name of Allah is withdrawn.** History, so that it is not proposed again without new facts: requested
@@ -580,6 +586,9 @@ era of Islam, and that the reasons become a section of the application. The reas
 - a hadith is shown by book, number and the grading stated by its source;
 - where a word needs explaining, only the verbatim text of a named, licensed tafsir;
 - every card says "This is a design choice, not an interpretation" in both languages;
+- 30:22 (the languages of people) is shown beside the language choice only — after reading its tafsirs, its
+  colours are people's colours, so it is not used for the colour directions (author's request, 2026-11-18);
+- colour is never the only signal (a dot *and* bold text, a border, words) — for colour-blind readers;
 - English shows an ayah's meaning only from a published translation;
 - before release a qualified reviewer reads it (§6.6), or it stays inside the rules above.
 
@@ -739,6 +748,10 @@ Agreed for both platforms whatever the option:
   Madinah, Makkah, Al-Quds, Gardens, and Mountains (high contrast, ≥ 7 : 1), each in day and night; every text
   pair checked by `tools/design2_palettes.py` (≥ 4.5 : 1). New section icons, each from the first era. The reason
   for every colour, icon and the logo: `docs/design/design-2-meanings.md`. Values: `docs/design/tokens-design-2.json`.
+- **Round 3, third pass (2026-11-18):** nine directions (+ Two seas 55:19–22, Lamps 41:12 / 25:61, Honey
+  16:68–69); every text pair is also checked as seen with protanopia, deuteranopia and tritanopia (Machado et al.
+  2009), and a "Colour vision" switch previews it; **Mountains is the direction for low vision and colour
+  blindness** (≥ 8.4 : 1 under every simulation); the surah details and the index (§8.1).
 - Screens to design: language choice, colour-direction choice, sources (F17), home, Quran reader (+ ayah actions: play, tafsir, bookmark), player, reciter
   picker, tajweed lesson, radio list and player, prayer times (six backgrounds), adhan settings, Qibla, adhkar list and
   counter, hadith, book reader, settings, about.
@@ -786,8 +799,8 @@ reviewer). Task ids: `P<phase>-<area><n>`, areas **D** data · **B** backend · 
 | P0-08 | Scaffold `tajweed-frontend`: Angular 22, Material, Tailwind, wrappers, language choice, CI | ☐ |
 | P0-09 | Scaffold `tajweed-android`: Kotlin, Compose, both languages, CI | ☐ (needs P0-05) |
 | P0-10 | Scaffold `tajweed-ios`: generated project, SwiftUI, CI on a macOS runner | ☐ |
-| P0-11 | Design: tokens, 2–3 colour directions, HTML prototypes, the author's approval, then Figma | ◐ round 1 (2026-11-17): three directions, all kept; round 2: first launch on one screen, mushaf pages as printed, six fonts, Sources — reviewed; round 3 (2026-11-17): design 2 "early Islam" with six directions and new icons — ⏸ the author chooses design 1 or design 2; then the remaining screens and Figma |
-| P0-12 | Data-source register; choose the Quran text and font; checksums | ◐ text, layout and default font chosen (Tanzil Uthmani; old Madinah 1405H layout from DigitalKhatt; King Fahd page fonts — author, 2026-11-17); quarter at 15:49 settled by the printed copy. Still to do: the register, the 9-ayah glyph table, justification, the move to the backend repository |
+| P0-11 | Design: tokens, 2–3 colour directions, HTML prototypes, the author's approval, then Figma | ◐ round 1 (2026-11-17): three directions, all kept; round 2: first launch on one screen, mushaf pages as printed, six fonts, Sources — reviewed; round 3 (2026-11-17/18): design 2 "early Islam" with nine directions, colour-vision check, new icons, surah details and index — ⏸ the author chooses design 1 or design 2; then the remaining screens and Figma |
+| P0-12 | Data-source register; choose the Quran text and font; checksums | ◐ text, layout and default font chosen (Tanzil Uthmani; old Madinah 1405H layout from DigitalKhatt; King Fahd page fonts — author, 2026-11-17); quarter at 15:49 settled by the printed copy. Still to do: the register, the 9-ayah glyph table, justification, Makki / Madani compared with the printed index, the move to the backend repository |
 | P0-13 | Permission letters, sent by the author, tracked | ☐ — includes a letter to the King Fahd Complex for its page fonts (author's decision 2026-11-17: use them and ask) |
 | P0-14 | Content pipeline decisions D1, D2; API contract for phase 1 | ☐ |
 | P0-15 | Phase 0 review with the author | ☐ |
@@ -941,3 +954,4 @@ explicit yes** (it is public); R3 (permanent) and R10 (public) need the author's
 | 2026-11-17 | Eighth update of the day: design round 2 built and checked (`docs/design/`): first-launch screen with language, colour direction and light / dark on one page; mushaf pages exactly as printed; six Quran fonts; Sources screen. The old-Madinah layout (DigitalKhatt) verified against Tanzil — 0 word differences in 6,236 ayahs, 0 page-start differences in 604 pages; page 5 confirmed by the author on his printed copy. King Fahd page fonts used by the author's decision; KFGQPC Hafs 0.09 rejected (missing mark). Open: the quarter sign at 15:49 / 15:50, 9 ayahs in the King Fahd glyph list (§8.1). |
 | 2026-11-17 | Ninth update of the day (author's review of round 2): default Quran font = the King Fahd page fonts (Madinah mushaf 1405H); his printed copy (دار طيبة, Cairo) photographed — pages 1, 2, 263, 264 match the layout, and the ۞ stands before 15:49, so the quarter question is closed; prayer times follow the user's location and country on web and phones (§8.5); design round 3 — a second design, "early Islam", to compare with design 1 (§13). |
 | 2026-11-17 | Tenth update of the day (author's message): design 2 gets six colour directions — Parchment, Madinah, Makkah, Al-Quds, Gardens, Mountains (high contrast) — and new section icons; every colour, icon and the logo is explained in `docs/design/design-2-meanings.md` (ayahs copied and checked by script); new feature F19, the in-app section "Why this design" (§8.10); `P2-D1` recorded as "do not forget" (§0, §8.5). |
+| 2026-11-18 | Eleventh update (author's message): design 2 gets three more directions — Two seas, Lamps, Honey (nine in all); every direction is checked for colour-blind readers by simulation, and Mountains is the direction for low vision and colour blindness; 30:22 placed beside the language choice after reading its tafsirs (§8.10); each surah shows Makki / Madani, its ayahs and its order, and the mushaf has an index (F2, §8.1). |

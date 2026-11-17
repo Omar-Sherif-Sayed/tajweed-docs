@@ -299,7 +299,7 @@ three modes, playback that survives network loss, About page.
 | Task | What |
 | --- | --- |
 | P1-W1 | Home and navigation as designed; language choice (F1) complete. |
-| P1-W2 | Quran reader: by surah and by page; go to surah / juz / page; font size; light / dark; last read position and bookmarks in browser storage. |
+| P1-W2 | Quran reader: by surah and by page; the index (فهرس) of 114 surahs and 30 juz; each surah's Makki / Madani, number of ayahs and order (§8.1); go to surah / juz / page; font size; light / dark; last read position and bookmarks in browser storage. |
 | P1-W3 | Search (F16): one search box for a word with or without tashkeel, a surah name, or an ayah number; results grouped by surah with the match highlighted (a display layer — the text is not changed), the number of results, and opening the ayah in the reader. |
 | P1-W4 | Audio engine — one global service implementing §8.3: ordered sources, growing retry delay with a cap, switch to the next source, no retry limit, `online` event, resume at the same position, the message «جارٍ إعادة الاتصال…». |
 | P1-W5 | Recitation modes (F3): one surah · ayah range · from a start ayah to the end and again from Al-Fatiha without end; the playing ayah is highlighted and scrolled into view; Media Session controls. |

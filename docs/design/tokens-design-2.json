@@ -2,7 +2,7 @@
   "design": "2 — early Islam",
   "generated_by": "docs/design/prototypes/tools/build_round3.py",
   "meanings": "docs/design/design-2-meanings.md",
-  "roles": "(the same in every direction):\n  bg, surface, surface2  page background and cards       text, muted   body text, secondary text\n  border, rule           card edges, thin ink rules      ink, page     Quran text and the mushaf page\n  primary, onprimary     main buttons                    dot, dotsoft  the small marks (active item, page number)\n  second, secondsoft     prayer / qibla / adhkar, \"verified\"   card, oncard   the prayer card\nRule: every text / background pair below reaches 4.5 : 1; the high-contrast direction reaches 7 : 1.",
+  "roles": "(the same in every direction):\n  bg, surface, surface2  page background and cards       text, muted   body text, secondary text\n  border, rule           card edges, thin ink rules      ink, page     Quran text and the mushaf page\n  primary, onprimary     main buttons                    dot, dotsoft  the small marks (active item, page number)\n  second, secondsoft     prayer / qibla / adhkar, \"verified\"   card, oncard   the prayer card\nRule: every text / background pair below reaches 4.5 : 1 (the high-contrast direction 7 : 1), with normal colour\nvision and as simulated for protanopia, deuteranopia and tritanopia.",
   "directions": {
     "parchment": {
       "name": {
@@ -227,6 +227,141 @@
         "secondsoft": "#17301F",
         "card": "#2F6B4B",
         "oncard": "#F4F8F4"
+      }
+    },
+    "seas": {
+      "name": {
+        "ar": "البحران",
+        "en": "Two seas"
+      },
+      "minimum_contrast": 4.5,
+      "light": {
+        "bg": "#EEF2F0",
+        "surface": "#FAFCFB",
+        "surface2": "#E1E8E5",
+        "border": "#C3CFCA",
+        "rule": "#9DAEA7",
+        "text": "#132227",
+        "muted": "#4A5B60",
+        "ink": "#0E1A1E",
+        "page": "#F6F9F7",
+        "primary": "#0F4A5A",
+        "onprimary": "#FAFCFB",
+        "dot": "#9C3628",
+        "dotsoft": "#F6DDD6",
+        "second": "#1D6470",
+        "secondsoft": "#D6E8EA",
+        "card": "#174F5E",
+        "oncard": "#F6F9F7"
+      },
+      "dark": {
+        "bg": "#0A1418",
+        "surface": "#101D22",
+        "surface2": "#16272D",
+        "border": "#25404A",
+        "rule": "#3A5862",
+        "text": "#E6F0F0",
+        "muted": "#A2B6B9",
+        "ink": "#EDF4F4",
+        "page": "#0D181C",
+        "primary": "#8FD0DB",
+        "onprimary": "#072128",
+        "dot": "#F0A090",
+        "dotsoft": "#3A2420",
+        "second": "#86C7CF",
+        "secondsoft": "#15303A",
+        "card": "#2A6E7C",
+        "oncard": "#F2F8F8"
+      }
+    },
+    "lamps": {
+      "name": {
+        "ar": "المصابيح",
+        "en": "Lamps"
+      },
+      "minimum_contrast": 4.5,
+      "light": {
+        "bg": "#ECEDF3",
+        "surface": "#F8F8FB",
+        "surface2": "#E1E3EC",
+        "border": "#C6CAD9",
+        "rule": "#9EA4BA",
+        "text": "#141A2E",
+        "muted": "#4E5470",
+        "ink": "#10152A",
+        "page": "#F6F6F9",
+        "primary": "#1F2A55",
+        "onprimary": "#F8F8FB",
+        "dot": "#765708",
+        "dotsoft": "#F1E6C6",
+        "second": "#2F4C7A",
+        "secondsoft": "#DCE3F0",
+        "card": "#1F2A55",
+        "oncard": "#F4F1E6"
+      },
+      "dark": {
+        "bg": "#0B0F22",
+        "surface": "#121734",
+        "surface2": "#1A2042",
+        "border": "#2B335E",
+        "rule": "#434C7D",
+        "text": "#ECEBF4",
+        "muted": "#AEB2CC",
+        "ink": "#F2F0E6",
+        "page": "#0E1229",
+        "primary": "#F0D58A",
+        "onprimary": "#1A1606",
+        "dot": "#F2C766",
+        "dotsoft": "#332A12",
+        "second": "#A9BFEA",
+        "secondsoft": "#1C2A4A",
+        "card": "#E8C66A",
+        "oncard": "#17130A"
+      }
+    },
+    "honey": {
+      "name": {
+        "ar": "النحل",
+        "en": "Honey"
+      },
+      "minimum_contrast": 4.5,
+      "light": {
+        "bg": "#F4EBD6",
+        "surface": "#FBF6EA",
+        "surface2": "#EBDDBC",
+        "border": "#D7C293",
+        "rule": "#B99E62",
+        "text": "#2A1E0C",
+        "muted": "#66532F",
+        "ink": "#21170A",
+        "page": "#F9F1DE",
+        "primary": "#5A3A0C",
+        "onprimary": "#FBF6EA",
+        "dot": "#854808",
+        "dotsoft": "#F3DDBE",
+        "second": "#556218",
+        "secondsoft": "#E6EACB",
+        "card": "#8A5208",
+        "oncard": "#FFF8EA"
+      },
+      "dark": {
+        "bg": "#16110A",
+        "surface": "#1F1810",
+        "surface2": "#2A2116",
+        "border": "#433522",
+        "rule": "#614D31",
+        "text": "#F2E8D2",
+        "muted": "#BCAA88",
+        "ink": "#F5ECD8",
+        "page": "#1B150D",
+        "primary": "#F0BE5E",
+        "onprimary": "#231705",
+        "dot": "#F5B04A",
+        "dotsoft": "#3D2A10",
+        "second": "#C4CF83",
+        "secondsoft": "#2A2E16",
+        "card": "#E2A33C",
+        "oncard": "#1E1305"
       }
     },
     "mountains": {

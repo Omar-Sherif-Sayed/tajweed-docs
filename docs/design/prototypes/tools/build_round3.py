@@ -44,7 +44,10 @@ VERSES = {
     "17:1": "الاقصا", "95:1": "الزيتون", "24:35": "زيتونة",   # Al-Quds: al-Aqsa, the olive
     "55:64": "مدهامتان", "55:76": "خضر", "18:31": "خضرا", "76:21": "خضر", "35:33": "لولوا",  # gardens
     "2:144": "قبلة", "7:204": "فاستمعوا", "73:4": "ترتيلا", "96:4": "بالقلم",  # icons
-    "30:22": "السنتكم",                          # an idea considered and not used
+    "30:22": "السنتكم",                          # languages: the F19 card for the language choice
+    "55:19": "البحرين", "55:22": "المرجان",      # two seas: pearl and coral
+    "41:12": "مصبيح", "25:61": "سرجا",           # lamps: the night sky
+    "16:68": "النحل", "16:69": "الونه",          # honey
 }
 TASHKEEL = re.compile("[ً-ْٰ]")
 
@@ -109,6 +112,22 @@ def main():
     for ref in verses:
         s = ref.split(":")[0]
         data["names"][s] = names[int(s)]
+    # The index (فهرس) and the surah details, from Tanzil's metadata: the first page of every surah and juz is the
+    # page whose first ayah is the last one not after it (page starts were verified against the layout: 0 differences).
+    page_starts = [(int(x.get("index")), (int(x.get("sura")), int(x.get("aya")))) for x in root.iter("page")]
+
+    def page_of(key):
+        return max(n for n, start in page_starts if start <= key)
+
+    data["surahs"] = [{"n": int(s.get("index")), "ar": s.get("name"), "en": s.get("tname"),
+                       "type": {"Meccan": "makki", "Medinan": "madani"}[s.get("type")],
+                       "ayas": int(s.get("ayas")), "page": page_of((int(s.get("index")), 1))}
+                      for s in root.iter("sura")]
+    data["juzs"] = [{"n": int(j.get("index")), "s": int(j.get("sura")), "a": int(j.get("aya")),
+                     "page": page_of((int(j.get("sura")), int(j.get("aya"))))} for j in root.find("juzs")]
+    if len(data["surahs"]) != 114 or sum(s["ayas"] for s in data["surahs"]) != 6236 or len(data["juzs"]) != 30:
+        R2.fail("metadata counts")
+    print("index: 114 surahs (6,236 ayahs), 30 juz")
     data["directions"] = {k: {"name": d["name"], "min": d["min"],
                               "swatch": {t: [d[t]["primary"], d[t]["dot"], d[t]["second"], d[t]["bg"]]
                                          for t in ("light", "dark")}}
@@ -116,6 +135,7 @@ def main():
     R2.embed(PAGE, "ROUND3", data, FONTS)
     html = open(PAGE, encoding="utf-8", newline="").read()
     html = R2.replace_block(html, "/*ROUND3-THEMES-BEGIN*/", "/*ROUND3-THEMES-END*/", P.css())
+    html = R2.replace_block(html, "<!--ROUND3-CVD-BEGIN-->", "<!--ROUND3-CVD-END-->", P.svg_filters())
     open(PAGE, "w", encoding="utf-8", newline="\n").write(html)
     tokens = {"design": "2 — early Islam", "generated_by": "docs/design/prototypes/tools/build_round3.py",
               "meanings": "docs/design/design-2-meanings.md", "roles": P.__doc__.split("Roles")[1].strip(),

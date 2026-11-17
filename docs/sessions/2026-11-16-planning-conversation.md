@@ -729,3 +729,98 @@ One bug: the colour circles in section 8 collapse to thin lines, because a gener
 Fixed. The browser check is done; now the documents and the two tasks you asked me to write down.
 
 Now the patch script for this round's records.
+
+The basmala is correctly stripped from 17:1. Committing and pushing.
+
+Design 2 now has six colour directions, new icons, and a written reason for every colour, icon and the logo. Both tasks you asked for are in the plan. Everything is checked in the browser, committed and pushed.
+
+#### Two tasks written into the plan
+
+- **Prayer-time method per country (P2-D1):** marked "do not forget" at the top of `AGENTS.md`. The note says it can be done at any time, starting with Egypt, Saudi Arabia and Japan.
+- **New feature F19, «لماذا هذا التصميم؟ — Why this design?»:** a section inside the app that shows the reason behind each colour, icon and the logo. Its rules are in `AGENTS.md` §8.10, with tasks for web, Android and iPhone. Phone 6 in [round-3.html](docs/design/prototypes/round-3.html) shows a draft of it.
+
+#### Six directions, each in day and night
+
+| Direction | Where its colours come from |
+| --- | --- |
+| **الرَّقّ Parchment** | Parchment, red vowel dots and brown ink of the earliest manuscripts. The Quran names parchment itself: «فِى رَقٍّ مَّنشُورٍ» (52:3). |
+| **المدينة Madinah** | The Prophet's mosque: mud brick, palm trunks, a palm-frond roof (Sahih al-Bukhari 446), the palms of 50:10, and dates |
+| **مكة Makkah** | Milk white and black, from the Black Stone (al-Tirmidhi 877), and the granite of Makkah's mountains. Linked to 3:96 «بِبَكَّةَ». |
+| **القدس Al-Quds** | Jerusalem stone, the olive (95:1) and its oil in lamplight (24:35), and al-Aqsa (17:1) |
+| **الجنّات Gardens** | Words from the descriptions of Paradise: «مُدْهَآمَّتَانِ» deep green, «خُضْر» green, «سُندُس» silk, gold, pearl, silver |
+| **الجبال Mountains, high contrast** | One ayah, 35:27: white streaks, red streaks and «غَرَابِيبُ سُودٌ» intense black. Every text colour reaches at least 7 : 1, and there is no texture. |
+
+Every text colour in all six directions meets the contrast limit, and the build checks this each time.
+
+#### The rules I followed
+
+- **A colour is "named after a word" of an ayah, never "the meaning" of it.** Saying what a verse means is tafsir, which we don't write without a reviewer (§6.10). Each card in the app will say "This is a design choice, not an interpretation."
+- **No ayah is typed by hand.** Every ayah is copied whole from the verified Tanzil text. The build also stops if any Quran excerpt in the document doesn't match the text exactly. That check caught a short excerpt I had typed myself: it looked the same, but two marks were stored in a different order. It was replaced with the file's own text.
+- **Only true to the first era.** I left out things that came later, and the document gives each one's date: the green dome (painted green in 1253 AH), the black and gold kiswa, the modern gold of the Dome of the Rock, and domes and arches.
+- **Waiting on a source:** hadith gradings still have to be copied from Dorar, and tafsir quotes need a licensed tafsir.
+
+#### Icons and logo
+
+Search and arrow icons stay generic so they're understood at once. Each section icon now comes from the first era:
+
+- **Home:** palm trunks under a frond roof, the Prophet's mosque.
+- **Prayer times:** a stick and its shadow, from the hadith of Jibril, where prayer times are set by the length of shadows.
+- **Adhkar:** a hand, because the Prophet ﷺ counted tasbih on his fingers.
+- **Tajweed:** bars of 2, 4 and 6, the lengths of madd.
+- **Qibla:** a plain cube for the Kaaba.
+- **Books:** a reed pen (96:4).
+- **Sources:** a chain, after the isnad.
+- **Logo:** the rings of early coins, with the three verse-end dots of the first manuscripts in the centre.
+
+#### One idea that needs your decision
+
+30:22 mentions «وَٱخْتِلَـٰفُ أَلْسِنَتِكُمْ وَأَلْوَٰنِكُمْ» (your languages and your colours), which matches the first screen, where you choose language and colours. I didn't use it, because it could be read as stretching the verse's meaning. It is listed in the document as needing a scholar's approval.
+
+I've sent you round-3.html and design-2-meanings.md.
+
+Sources:
+- [Sahih al-Bukhari 446 — Dorar](https://dorar.net/h/wVDAbFDs)
+- [Hadith of Jibril — Dorar](https://dorar.net/h/yVPS80BX)
+- [Counting tasbih](https://surahquran.com/Hadith-58649.html) · [Khaled al-Sabt](https://khaledalsabt.com/explanations/590)
+- [The Black Stone](https://surahquran.com/Hadith-41457.html) · [Alukah](https://www.alukah.net/homayed/12438/135950/)
+- [The green dome — islamqa](https://islamqa.info/ar/answers/110061)
+- [Dome of the Rock — Smarthistory](https://smarthistory.org/?p=1256)
+- [مدهامتان — al-Tabari](https://quran.ksu.edu.sa/tafseer/tabary/sura55-aya64.html) · [al-Muyassar](https://qurano.com/ar/55-ar-rahman/aya-64/)
+
+## The author — 2026-11-17 22:54
+
+```text
+* One idea that needs your decision, ->
+*  بالنسبة لهذه النقطة يمكنك رؤية تفاسير هذه الآيه وفهمها ويمكنك زيادة ال directions, ما فعلته جميل للغايه يمكنك زيادتة 
+
+* ما قصدتة ب contrast اقصد ان يكون هناك one direction at last للناس التي لا تستطيع تمييز الألوان - اعتقد انك استخدمتة في direction الجبال تباين عالٍ 
+* بالنسبة لأسم السورة هل يمكنك وضع عدد الأيات بجوارها وهل هي مكية ام مدنية وترتيبها في المصحف - وهل وضعت فهرس للمصحف في أخره؟
+```
+
+## The agent — 2026-11-17 22:55
+
+Three requests here: study the tafsirs of 30:22 and decide on it, add more directions (and make sure one works for colour-blind readers), and add each surah's details plus a mushaf index. I'll verify every fact first, starting with the tafsirs, the colour-blindness simulation method, and the verses for the new directions.
+
+The tafsirs agree on 30:22 (summary below). For the colour-blindness check I need the exact published matrices, so I'm reading them from the authors' own page rather than trusting memory.
+
+41:12 (lamps adorning the sky) and 25:61 (a lamp and a shining moon) carry no such mention, so the night direction uses those. Next, the three new palettes and the colour-blindness check.
+
+Now the build: the new ayahs, all 114 surahs and 30 juz for the index, and the colour-blind preview filters.
+
+Now the page itself, edited in place: the colour-vision preview, surah details in the page header and top bar, the index screen, the new directions, and the 30:22 card for languages.
+
+Now the browser check: the index, the surah header line, the new directions, and the colour-blind preview.
+
+The browser pane closed overnight. Restarting the preview server.
+
+The top bar now reads «مدنية · آياتها ٢٤ · ترتيبها ٥٩». Next, the surah header inside page 545 and the index screen.
+
+The header line is right («ترتيبها ٥٩» on one side, «آياتها ٢٤» on the other, as printed), but the text is too small to read. Enlarging it, then checking the index.
+
+The index is correct: Al-Fatihah page 1, Al-Baqarah 2, Aal-Imran 50, An-Nisa 77, and onward. The Juz tab didn't seem to switch in that capture, so I'm checking it directly.
+
+180 combinations (9 directions × 2 themes × 2 languages × 5 pages): no overflow, no empty verse, no console error. Now the meanings document.
+
+"| Date |" also matches the change log's header row. Making that replacement exact:
+
+Records updated. Now the conversation copy, the privacy scan, then commit and push.

@@ -1,6 +1,6 @@
 # Design 2 — "early Islam": why every colour, icon and mark was chosen
 
-The author asked on 2026-11-17 for an explanation of every element of design 2: the colours, the six colour
+The author asked on 2026-11-17 for an explanation of every element of design 2: the colours, the colour
 directions, the logo and the icons. He asked that the choices come from reflection on the Quran, the hadith and the
 first era of Islam, and that the explanation can later become a section inside the application. This document is that
 explanation. The section in the application is feature **F19** (parent `AGENTS.md` §2, §8.10).
@@ -42,10 +42,12 @@ the mountains that are white, red and intensely black, and people and animals of
 also 16:13 and 39:21). So the design does not use colour as decoration only: each direction is built from colours
 that are named in the Quran, or that were really seen in the places and objects of the first era.
 
-## 3. The six colour directions
+## 3. The nine colour directions
 
+Six directions were made on 2026-11-17; the author asked for more on 2026-11-18, and three were added (3.7 – 3.9).
 Each direction has a day theme and a night theme. Every text / background pair passes 4.5 : 1 (the high-contrast
-direction 7 : 1), checked by script. The roles are the same in every direction: background, text, main button, the
+direction 7 : 1), checked by script — with normal colour vision **and** as seen with each of the three kinds of
+colour blindness (section 3.10). The roles are the same in every direction: background, text, main button, the
 small "dot" marks, a second colour (prayer, Qibla, adhkar, "verified"), and the prayer card.
 
 ### 3.1 الرَّقّ — Parchment (the first one, unchanged)
@@ -123,7 +125,68 @@ It takes its three colours from one verse: «وَمِنَ ٱلْجِبَالِ �
 | Intense black `#000000` | text, buttons (day); background (night) | 21 : 1 |
 | Red `#8E0016` (day) / `#FF9C9C` (night) | the dot marks | at least 9.7 : 1 |
 
-No grain texture and no soft colours in this direction: everything is drawn at full strength.
+No grain texture and no soft colours in this direction: everything is drawn at full strength. It is also the
+direction meant for **colour-blind readers** (the author's request of 2026-11-18): as simulated for protanopia,
+deuteranopia and tritanopia, every pair stays at 8.4 : 1 or more (section 3.10).
+
+### 3.7 البحران — Two seas
+
+| Colour | Taken from |
+| --- | --- |
+| Sea blue `#0F4A5A` (buttons), `#1D6470` | The two seas, «مَرَجَ ٱلْبَحْرَيْنِ يَلْتَقِيَانِ» (55:19). The Quran does not name the colour of the sea; the blue is our choice. |
+| Pearl `#EEF2F0` (background) | «يَخْرُجُ مِنْهُمَا ٱللُّؤْلُؤُ وَٱلْمَرْجَانُ» (55:22) — the pearl. |
+| Coral red `#9C3628` (dots) | The coral of the same ayah. |
+
+Note: «ٱلْمَرْجَانُ» also appears in 55:58, which describes people; this direction cites 55:22 only, where pearl and
+coral are what comes out of the seas.
+
+### 3.8 المصابيح — Lamps: the night sky
+
+| Colour | Taken from |
+| --- | --- |
+| Night blue `#0B0F22` (night background), indigo `#1F2A55` (day buttons) | The lowest heaven adorned with lamps: «وَزَيَّنَّا ٱلسَّمَآءَ ٱلدُّنْيَا بِمَصَـٰبِيحَ» (41:12). The night blue is our choice. |
+| Lamplight gold `#F2C766` (night dots), `#765708` (day) | «وَجَعَلَ فِيهَا سِرَٰجًا وَقَمَرًا مُّنِيرًا» (25:61) — a lamp and a shining moon. |
+
+Made to be at its best in the night theme, for reading at night. 67:5 also speaks of the lamps of the sky, but it
+ends with a mention of punishment, so it is not cited (rule 7).
+
+### 3.9 النحل — Honey
+
+| Colour | Taken from |
+| --- | --- |
+| Amber `#854808` (dots), honey `#8A5208` (prayer card), dark comb `#5A3A0C` (buttons) | Honey: «شَرَابٌ مُّخْتَلِفٌ أَلْوَٰنُهُۥ» (16:69) — a drink of varying colours, from the bees. |
+| Beeswax cream `#F4EBD6` (background) | The bees and their homes. |
+| Leaf green `#556218` | The trees in which the bees make their homes, «وَمِنَ ٱلشَّجَرِ» (16:68). |
+
+### 3.10 Colour vision — for readers who cannot tell colours apart
+
+The author asked on 2026-11-18 that at least one direction serve people who cannot distinguish colours. What was
+done:
+
+1. **Every direction is checked as a colour-blind reader sees it.** The build simulates protanopia, deuteranopia
+   and tritanopia with the published model of Machado, Oliveira & Fernandes (IEEE TVCG 2009, severity 1.0, matrices
+   read on the authors' page) and stops if any text pair falls below the direction's minimum. All nine pass.
+2. **Mountains** is the direction for low vision and colour blindness: black and white at full strength, at least
+   8.4 : 1 under every simulation.
+3. **Colour is never the only signal**, in every direction: the active tab has a dot *and* bold text; a selected
+   choice has a thicker border; the current prayer has a filled dot *and* bold text; a source's status is written
+   in words. This is a rule for the applications too.
+4. The prototype has a **"Colour vision" switch** that shows every screen through the same simulation, so the
+   author can see it himself.
+
+### 3.11 The language choice — 30:22
+
+Asked by the author on 2026-11-18: read the tafsirs of 30:22 and decide. The ayah:
+«وَمِنْ ءَايَـٰتِهِۦ خَلْقُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَٱخْتِلَـٰفُ أَلْسِنَتِكُمْ وَأَلْوَٰنِكُمْ» (30:22).
+
+What the tafsirs say (read 2026-11-18; ☐ quoted word for word in F19 only from a licensed tafsir): al-Tafsir
+al-Muyassar, al-Sa'di, al-Baghawi, al-Jalalayn and al-Muntakhab agree that «أَلْسِنَتِكُمْ» are people's languages
+(Arabic, non-Arabic and others) and «أَلْوَٰنِكُمْ» are people's colours (white, black and others), though all
+come from one origin — a sign for those who have knowledge.
+
+Decision: the ayah is shown **beside the language choice only** — on the "Why more than one language?" card of
+F19. It is **not** used for the colour directions, because its colours are the colours of people, not of things.
+
 
 ## 4. The logo
 
@@ -161,7 +224,8 @@ sections each come from something of the first era:
 
 | Idea | Why not |
 | --- | --- |
-| The languages and colours of 30:22, «وَٱخْتِلَـٰفُ أَلْسِنَتِكُمْ وَأَلْوَٰنِكُمْ», on the first-launch screen, where the user chooses a language and colours | It is a striking match, but the verse speaks of people's languages and colours as signs of Allah. Using it to decorate a settings screen may be read as stretching its meaning. ☐ Only with a scholar's approval. |
+| 30:22 for the colour directions | Its colours are people's colours (the tafsirs, 3.11); it is used for the language choice only. |
+| 67:5 for the Lamps direction | It ends with a mention of punishment (rule 7); 41:12 and 25:61 are used instead. |
 | The green dome | 1253 AH — not of the first era (3.2). |
 | Domes, pointed arches, minarets, star patterns | They developed after the first era; the first mosque had none of them. |
 | The black and gold kiswa | Its present look is from much later periods (3.3). |
@@ -191,16 +255,22 @@ A draft of one card is phone 6 in the prototype.
 | Al-Baqara 2:144 (البقرة) | قَدْ نَرَىٰ تَقَلُّبَ وَجْهِكَ فِى ٱلسَّمَآءِ ۖ فَلَنُوَلِّيَنَّكَ قِبْلَةً تَرْضَىٰهَا ۚ فَوَلِّ وَجْهَكَ شَطْرَ ٱلْمَسْجِدِ ٱلْحَرَامِ ۚ وَحَيْثُ مَا كُنتُمْ فَوَلُّوا۟ وُجُوهَكُمْ شَطْرَهُۥ ۗ وَإِنَّ ٱلَّذِينَ أُوتُوا۟ ٱلْكِتَـٰبَ لَيَعْلَمُونَ أَنَّهُ ٱلْحَقُّ مِن رَّبِّهِمْ ۗ وَمَا ٱللَّهُ بِغَـٰفِلٍ عَمَّا يَعْمَلُونَ |
 | Aal-i-Imraan 3:96 (آل عمران) | إِنَّ أَوَّلَ بَيْتٍ وُضِعَ لِلنَّاسِ لَلَّذِى بِبَكَّةَ مُبَارَكًا وَهُدًى لِّلْعَـٰلَمِينَ |
 | Al-A'raaf 7:204 (الأعراف) | وَإِذَا قُرِئَ ٱلْقُرْءَانُ فَٱسْتَمِعُوا۟ لَهُۥ وَأَنصِتُوا۟ لَعَلَّكُمْ تُرْحَمُونَ |
+| An-Nahl 16:68 (النحل) | وَأَوْحَىٰ رَبُّكَ إِلَى ٱلنَّحْلِ أَنِ ٱتَّخِذِى مِنَ ٱلْجِبَالِ بُيُوتًا وَمِنَ ٱلشَّجَرِ وَمِمَّا يَعْرِشُونَ |
+| An-Nahl 16:69 (النحل) | ثُمَّ كُلِى مِن كُلِّ ٱلثَّمَرَٰتِ فَٱسْلُكِى سُبُلَ رَبِّكِ ذُلُلًا ۚ يَخْرُجُ مِنۢ بُطُونِهَا شَرَابٌ مُّخْتَلِفٌ أَلْوَٰنُهُۥ فِيهِ شِفَآءٌ لِّلنَّاسِ ۗ إِنَّ فِى ذَٰلِكَ لَـَٔايَةً لِّقَوْمٍ يَتَفَكَّرُونَ |
 | Al-Israa 17:1 (الإسراء) | سُبْحَـٰنَ ٱلَّذِىٓ أَسْرَىٰ بِعَبْدِهِۦ لَيْلًا مِّنَ ٱلْمَسْجِدِ ٱلْحَرَامِ إِلَى ٱلْمَسْجِدِ ٱلْأَقْصَا ٱلَّذِى بَـٰرَكْنَا حَوْلَهُۥ لِنُرِيَهُۥ مِنْ ءَايَـٰتِنَآ ۚ إِنَّهُۥ هُوَ ٱلسَّمِيعُ ٱلْبَصِيرُ |
 | Al-Kahf 18:31 (الكهف) | أُو۟لَـٰٓئِكَ لَهُمْ جَنَّـٰتُ عَدْنٍ تَجْرِى مِن تَحْتِهِمُ ٱلْأَنْهَـٰرُ يُحَلَّوْنَ فِيهَا مِنْ أَسَاوِرَ مِن ذَهَبٍ وَيَلْبَسُونَ ثِيَابًا خُضْرًا مِّن سُندُسٍ وَإِسْتَبْرَقٍ مُّتَّكِـِٔينَ فِيهَا عَلَى ٱلْأَرَآئِكِ ۚ نِعْمَ ٱلثَّوَابُ وَحَسُنَتْ مُرْتَفَقًا |
 | An-Noor 24:35 (النور) | ٱللَّهُ نُورُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ مَثَلُ نُورِهِۦ كَمِشْكَوٰةٍ فِيهَا مِصْبَاحٌ ۖ ٱلْمِصْبَاحُ فِى زُجَاجَةٍ ۖ ٱلزُّجَاجَةُ كَأَنَّهَا كَوْكَبٌ دُرِّىٌّ يُوقَدُ مِن شَجَرَةٍ مُّبَـٰرَكَةٍ زَيْتُونَةٍ لَّا شَرْقِيَّةٍ وَلَا غَرْبِيَّةٍ يَكَادُ زَيْتُهَا يُضِىٓءُ وَلَوْ لَمْ تَمْسَسْهُ نَارٌ ۚ نُّورٌ عَلَىٰ نُورٍ ۗ يَهْدِى ٱللَّهُ لِنُورِهِۦ مَن يَشَآءُ ۚ وَيَضْرِبُ ٱللَّهُ ٱلْأَمْثَـٰلَ لِلنَّاسِ ۗ وَٱللَّهُ بِكُلِّ شَىْءٍ عَلِيمٌ |
+| Al-Furqaan 25:61 (الفرقان) | تَبَارَكَ ٱلَّذِى جَعَلَ فِى ٱلسَّمَآءِ بُرُوجًا وَجَعَلَ فِيهَا سِرَٰجًا وَقَمَرًا مُّنِيرًا |
 | Ar-Room 30:22 (الروم) | وَمِنْ ءَايَـٰتِهِۦ خَلْقُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَٱخْتِلَـٰفُ أَلْسِنَتِكُمْ وَأَلْوَٰنِكُمْ ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍ لِّلْعَـٰلِمِينَ |
 | Faatir 35:27 (فاطر) | أَلَمْ تَرَ أَنَّ ٱللَّهَ أَنزَلَ مِنَ ٱلسَّمَآءِ مَآءً فَأَخْرَجْنَا بِهِۦ ثَمَرَٰتٍ مُّخْتَلِفًا أَلْوَٰنُهَا ۚ وَمِنَ ٱلْجِبَالِ جُدَدٌۢ بِيضٌ وَحُمْرٌ مُّخْتَلِفٌ أَلْوَٰنُهَا وَغَرَابِيبُ سُودٌ |
 | Faatir 35:28 (فاطر) | وَمِنَ ٱلنَّاسِ وَٱلدَّوَآبِّ وَٱلْأَنْعَـٰمِ مُخْتَلِفٌ أَلْوَٰنُهُۥ كَذَٰلِكَ ۗ إِنَّمَا يَخْشَى ٱللَّهَ مِنْ عِبَادِهِ ٱلْعُلَمَـٰٓؤُا۟ ۗ إِنَّ ٱللَّهَ عَزِيزٌ غَفُورٌ |
 | Faatir 35:33 (فاطر) | جَنَّـٰتُ عَدْنٍ يَدْخُلُونَهَا يُحَلَّوْنَ فِيهَا مِنْ أَسَاوِرَ مِن ذَهَبٍ وَلُؤْلُؤًا ۖ وَلِبَاسُهُمْ فِيهَا حَرِيرٌ |
+| Fussilat 41:12 (فصلت) | فَقَضَىٰهُنَّ سَبْعَ سَمَـٰوَاتٍ فِى يَوْمَيْنِ وَأَوْحَىٰ فِى كُلِّ سَمَآءٍ أَمْرَهَا ۚ وَزَيَّنَّا ٱلسَّمَآءَ ٱلدُّنْيَا بِمَصَـٰبِيحَ وَحِفْظًا ۚ ذَٰلِكَ تَقْدِيرُ ٱلْعَزِيزِ ٱلْعَلِيمِ |
 | Qaaf 50:10 (ق) | وَٱلنَّخْلَ بَاسِقَـٰتٍ لَّهَا طَلْعٌ نَّضِيدٌ |
 | At-Tur 52:2 (الطور) | وَكِتَـٰبٍ مَّسْطُورٍ |
 | At-Tur 52:3 (الطور) | فِى رَقٍّ مَّنشُورٍ |
+| Ar-Rahmaan 55:19 (الرحمن) | مَرَجَ ٱلْبَحْرَيْنِ يَلْتَقِيَانِ |
+| Ar-Rahmaan 55:22 (الرحمن) | يَخْرُجُ مِنْهُمَا ٱللُّؤْلُؤُ وَٱلْمَرْجَانُ |
 | Ar-Rahmaan 55:64 (الرحمن) | مُدْهَآمَّتَانِ |
 | Ar-Rahmaan 55:76 (الرحمن) | مُتَّكِـِٔينَ عَلَىٰ رَفْرَفٍ خُضْرٍ وَعَبْقَرِىٍّ حِسَانٍ |
 | Al-Muzzammil 73:4 (المزمل) | أَوْ زِدْ عَلَيْهِ وَرَتِّلِ ٱلْقُرْءَانَ تَرْتِيلًا |
@@ -219,6 +289,8 @@ A draft of one card is phone 6 in the prototype.
 - The Dome of the Rock, 72 AH — https://smarthistory.org/?p=1256 · https://courses.lumenlearning.com/suny-arthistory1/chapter/dome-of-the-rock/
 - «مدهامتان» in the tafsirs — https://quran.ksu.edu.sa/tafseer/tabary/sura55-aya64.html · https://qurano.com/ar/55-ar-rahman/aya-64/
 - Early manuscripts and the red dots — https://en.wikipedia.org/wiki/Hijazi_script · https://al-islam.org/ar/node/39578
+- The tafsirs of 30:22 (read 2026-11-18) — https://quran-tafsir.net/baghawy-saady-tantawy-qotb-katheer-atia-mobdii/sura30-aya22.html · https://surahquran.org/aya-tafsser-22-30.html
+- Colour-vision simulation (Machado, Oliveira & Fernandes 2009) — https://www.inf.ufrgs.br/~oliveira/pubs_files/CVD_Simulation/CVD_Simulation.html
 
 The short Quranic excerpts in sections 3–6 only point at the verse. The build checks each vowelled excerpt in «»
 against the Tanzil file and stops if it is not an exact part of a cited ayah. The whole ayahs, copied from the

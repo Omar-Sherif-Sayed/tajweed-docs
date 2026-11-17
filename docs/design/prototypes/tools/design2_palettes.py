@@ -8,7 +8,8 @@ Roles (the same in every direction):
   border, rule           card edges, thin ink rules      ink, page     Quran text and the mushaf page
   primary, onprimary     main buttons                    dot, dotsoft  the small marks (active item, page number)
   second, secondsoft     prayer / qibla / adhkar, "verified"   card, oncard   the prayer card
-Rule: every text / background pair below reaches 4.5 : 1; the high-contrast direction reaches 7 : 1.
+Rule: every text / background pair below reaches 4.5 : 1 (the high-contrast direction 7 : 1), with normal colour
+vision and as simulated for protanopia, deuteranopia and tritanopia.
 """
 
 DIRECTIONS = {
@@ -67,6 +68,39 @@ DIRECTIONS = {
                      onprimary="#0B2116", dot="#E1BE6A", dotsoft="#352B14", second="#8ED0A6", secondsoft="#17301F",
                      card="#2F6B4B", oncard="#F4F8F4"),
     },
+    "seas": {
+        "name": {"ar": "البحران", "en": "Two seas"}, "min": 4.5,
+        "light": dict(bg="#EEF2F0", surface="#FAFCFB", surface2="#E1E8E5", border="#C3CFCA", rule="#9DAEA7",
+                      text="#132227", muted="#4A5B60", ink="#0E1A1E", page="#F6F9F7", primary="#0F4A5A",
+                      onprimary="#FAFCFB", dot="#9C3628", dotsoft="#F6DDD6", second="#1D6470",
+                      secondsoft="#D6E8EA", card="#174F5E", oncard="#F6F9F7"),
+        "dark": dict(bg="#0A1418", surface="#101D22", surface2="#16272D", border="#25404A", rule="#3A5862",
+                     text="#E6F0F0", muted="#A2B6B9", ink="#EDF4F4", page="#0D181C", primary="#8FD0DB",
+                     onprimary="#072128", dot="#F0A090", dotsoft="#3A2420", second="#86C7CF", secondsoft="#15303A",
+                     card="#2A6E7C", oncard="#F2F8F8"),
+    },
+    "lamps": {
+        "name": {"ar": "المصابيح", "en": "Lamps"}, "min": 4.5,
+        "light": dict(bg="#ECEDF3", surface="#F8F8FB", surface2="#E1E3EC", border="#C6CAD9", rule="#9EA4BA",
+                      text="#141A2E", muted="#4E5470", ink="#10152A", page="#F6F6F9", primary="#1F2A55",
+                      onprimary="#F8F8FB", dot="#765708", dotsoft="#F1E6C6", second="#2F4C7A",
+                      secondsoft="#DCE3F0", card="#1F2A55", oncard="#F4F1E6"),
+        "dark": dict(bg="#0B0F22", surface="#121734", surface2="#1A2042", border="#2B335E", rule="#434C7D",
+                     text="#ECEBF4", muted="#AEB2CC", ink="#F2F0E6", page="#0E1229", primary="#F0D58A",
+                     onprimary="#1A1606", dot="#F2C766", dotsoft="#332A12", second="#A9BFEA", secondsoft="#1C2A4A",
+                     card="#E8C66A", oncard="#17130A"),
+    },
+    "honey": {
+        "name": {"ar": "النحل", "en": "Honey"}, "min": 4.5,
+        "light": dict(bg="#F4EBD6", surface="#FBF6EA", surface2="#EBDDBC", border="#D7C293", rule="#B99E62",
+                      text="#2A1E0C", muted="#66532F", ink="#21170A", page="#F9F1DE", primary="#5A3A0C",
+                      onprimary="#FBF6EA", dot="#854808", dotsoft="#F3DDBE", second="#556218",
+                      secondsoft="#E6EACB", card="#8A5208", oncard="#FFF8EA"),
+        "dark": dict(bg="#16110A", surface="#1F1810", surface2="#2A2116", border="#433522", rule="#614D31",
+                     text="#F2E8D2", muted="#BCAA88", ink="#F5ECD8", page="#1B150D", primary="#F0BE5E",
+                     onprimary="#231705", dot="#F5B04A", dotsoft="#3D2A10", second="#C4CF83", secondsoft="#2A2E16",
+                     card="#E2A33C", oncard="#1E1305"),
+    },
     "mountains": {
         "name": {"ar": "الجبال — تباين عالٍ", "en": "Mountains — high contrast"}, "min": 7.0,
         "light": dict(bg="#FFFFFF", surface="#FFFFFF", surface2="#F0F0F0", border="#767676", rule="#3D3D3D",
@@ -97,19 +131,64 @@ def ratio(a, b):
     return (la + 0.05) / (lb + 0.05)
 
 
+# Colour vision deficiency: Machado, Oliveira & Fernandes, "A Physiologically-based Model for Simulation of Color
+# Vision Deficiency", IEEE TVCG 15(6), 2009 — Table 1, severity 1.0 (read on the authors' page
+# inf.ufrgs.br/~oliveira/pubs_files/CVD_Simulation/CVD_Simulation.html, 2026-11-18). Applied to linear RGB.
+CVD = {
+    "protanopia": [[0.152286, 1.052583, -0.204868], [0.114503, 0.786281, 0.099216], [-0.003882, -0.048116, 1.051998]],
+    "deuteranopia": [[0.367322, 0.860646, -0.227968], [0.280085, 0.672501, 0.047413], [-0.011820, 0.042940, 0.968881]],
+    "tritanopia": [[1.255528, -0.076749, -0.178779], [-0.078411, 0.930809, 0.147602], [0.004733, 0.691367, 0.303900]],
+}
+
+
+def _lin(x):
+    return x / 12.92 if x <= 0.04045 else ((x + 0.055) / 1.055) ** 2.4
+
+
+def _enc(x):
+    x = min(1.0, max(0.0, x))
+    return 12.92 * x if x <= 0.0031308 else 1.055 * x ** (1 / 2.4) - 0.055
+
+
+def simulate(hex_colour, kind):
+    """The colour as a person with the given full colour-vision deficiency would see it."""
+    rgb = [_lin(int(hex_colour[i:i + 2], 16) / 255) for i in (1, 3, 5)]
+    m = CVD[kind]
+    out = [_enc(sum(m[r][k] * rgb[k] for k in range(3))) for r in range(3)]
+    return "#" + "".join("%02X" % round(v * 255) for v in out)
+
+
 def check():
-    """Returns (lowest ratio per direction and theme, list of failures)."""
+    """Returns (lowest ratio per direction and theme, list of failures).
+
+    Every pair must pass with normal colour vision and also as seen with protanopia, deuteranopia and tritanopia,
+    so that no text becomes hard to read for a colour-blind reader in any direction.
+    """
     lowest, failures = {}, []
     for did, d in DIRECTIONS.items():
         for theme in ("light", "dark"):
             c = d[theme]
-            worst = min((ratio(c[f], c[b]), f, b) for f, b in PAIRS)
+            worst = (99, "", "", "")
+            for vision in ("normal",) + tuple(CVD):
+                cc = c if vision == "normal" else {k: simulate(v, vision) for k, v in c.items()}
+                for f, b in PAIRS:
+                    r = ratio(cc[f], cc[b])
+                    worst = min(worst, (r, f, b, vision))
+                    if r < d["min"]:
+                        failures.append("%s/%s %s on %s, %s = %.2f (needs %.1f)"
+                                        % (did, theme, f, b, vision, r, d["min"]))
             lowest[did + "/" + theme] = worst
-            for f, b in PAIRS:
-                r = ratio(c[f], c[b])
-                if r < d["min"]:
-                    failures.append("%s/%s %s on %s = %.2f (needs %.1f)" % (did, theme, f, b, r, d["min"]))
     return lowest, failures
+
+
+def svg_filters():
+    """SVG filters that let the prototype show every screen as a colour-blind reader would see it."""
+    out = []
+    for kind, m in CVD.items():
+        values = " ".join("%s %s %s 0 0" % tuple(row) for row in m) + " 0 0 0 1 0"
+        out.append('<filter id="cvd-%s" color-interpolation-filters="linearRGB"><feColorMatrix type="matrix" '
+                   'values="%s"/></filter>' % (kind, values))
+    return "\n".join(out) + "\n"
 
 
 def css():
@@ -126,7 +205,7 @@ if __name__ == "__main__":
     import sys
     sys.stdout.reconfigure(encoding="utf-8")
     low, bad = check()
-    for k, (r, f, b) in low.items():
-        print("%-18s lowest %.2f (%s on %s)" % (k, r, f, b))
+    for k, (r, f, b, vision) in low.items():
+        print("%-18s lowest %.2f (%s on %s, %s)" % (k, r, f, b, vision))
     print("\n".join(bad) or "all pairs pass")
     sys.exit(1 if bad else 0)

@@ -44,7 +44,7 @@ repository the task touches → (6) the last record in [`docs/sessions/`](docs/s
 | GitHub account | `Omar-Sherif-Sayed` — <https://github.com/Omar-Sherif-Sayed?tab=repositories>. Pushing is allowed for this product (R1); push at the end of every task. |
 | Do not forget | `P2-D1` — the default prayer-time method of every country, each with a named official source (the author, 2026-11-17: it may be done at any time, before phase 2 starts) · **F19** — the in-app section «لماذا هذا التصميم؟ / Why this design?»: the reason for every colour, icon and the logo (§8.10, `docs/design/design-2-meanings.md`). |
 | **Next task** | The author compares design 1 (`round-2.html`) and design 2 (`round-3.html`, nine directions) and chooses one design and its directions for web, Android and iPhone; he reads `design-2-meanings.md`. Then `P0-11` round 4: the remaining screens in the chosen design, then Figma; or `P0-06` + `P0-07` (backend scaffold) in parallel. |
-| Waiting for the author | His choice between design 1 and design 2 (and which directions to keep); his reading of the meanings document. |
+| Waiting for the author | His choice between design 1 and design 2 (and which directions to keep); his reading of the meanings document; his final list of languages and their order (§8.9). |
 
 **At the end of every session:** update the table above, the statuses in §14.1, the change log §19; write or extend
 the session record; commit as the author (§1). Details: `docs/plan/execution-plan.md` §1.
@@ -103,7 +103,7 @@ too long for a store title, the store shows "Tajweed" with the rest as the subti
 | --- | --- |
 | Free and public | No registration, no login, no accounts, no payments. Preferences live on the device only. |
 | No ads | No advertising of any kind, in any client, at any time. |
-| Languages | Arabic (default, right-to-left) and English at first; German, Italian, Japanese and Chinese may follow (§8.9). The user chooses on first launch and can change it later. |
+| Languages | Arabic (default, right-to-left) and English at first; then the languages of §8.9 — Russian, Spanish, German, Italian, French, Urdu, Hindi, Korean, Indonesian, Japanese, Chinese, and the recommended ones. The user chooses on first launch and can change it later. |
 | Correct data | Every text, audio link, time and reference comes from a named, verified source (§6, §7). |
 | Author | **Omar Sherif — عمر شريف**, shown on the About page with one link only: `https://www.linkedin.com/in/omarsherif21/` |
 
@@ -111,7 +111,7 @@ too long for a store title, the store shows "Tajweed" with the rest as the subti
 
 | # | Feature | Summary |
 | --- | --- | --- |
-| F1 | Language | Arabic / English, chosen on first launch (mobile and web). |
+| F1 | Language | Arabic / English, chosen on first launch (mobile and web); more languages after the first release (§8.9 — the list asked by the author on 2026-11-18). |
 | F2 | Quran reader | The full Quran text with complete tashkeel, **laid out exactly like the printed Madinah mushaf**: 604 pages of 15 lines, every page starting and every line ending on the same word as the printed copy, surah headers, basmala, juz / hizb / quarter marks in their places — one text colour (§8.1). Each surah shows whether it is Makki or Madani, its number of ayahs and its order; the mushaf has an index (فهرس) of the 114 surahs and 30 juz with their pages (author, 2026-11-18). |
 | F3 | Recitation | Choose a reciter and a recitation style (murattal / mujawwad / muallim). Play a surah, an ayah range, or from a start point to the end of the Quran, then restart from Al-Fatiha, forever. |
 | F4 | Muallim mushaf | Teaching recitation per ayah from a reciter who has one (Al-Husary, Al-Minshawi, Ayman Suwayd). |
@@ -559,16 +559,55 @@ is re-checked against تحفة الأطفال / المقدمة الجزرية be
   explanation (we link to the explanation rather than copy it, unless Dorar permits) — §18 Q11.
 - **Books (F14):** a reader with volumes / chapters / pages and search; large texts are loaded by chapter.
 
-### 8.9 More languages later (author, 2026-11-17)
+### 8.9 More languages (author, 2026-11-17 and 2026-11-18)
 
-Arabic and English first; German, Italian, Japanese and Chinese are planned additions. What this means from day
-one, in all four codebases:
+Arabic and English first. The author asked on 2026-11-17 for German, Italian, Japanese and Chinese, and on 2026-11-18
+for Russian, Spanish, German, Italian, French, Urdu ("Pakistani" — Urdu is Pakistan's national language), Hindi,
+Korean and Indonesian, and asked which others should be there. **Recommended by the agent (☐ the author decides):**
+Turkish, Bengali, Persian, Malay, Swahili, Hausa, Portuguese, Pashto, Uzbek — languages of large Muslim communities,
+each with a published translation of the meanings on QuranEnc. Others on QuranEnc for later: Tamil, Bosnian,
+Albanian, Kurdish, Somali, Amharic, Tagalog, Thai.
+
+| Code | Language | Script, direction | Interface font (☐ licence read before use) | Published translation of the meanings — QuranEnc, read 2026-11-18 |
+| --- | --- | --- | --- | --- |
+| ar | العربية — Arabic | Arabic, RTL | IBM Plex Sans Arabic / Noto Kufi Arabic | — (the Quran itself) |
+| en | English | Latin, LTR | Inter | ☐ several on QuranEnc (e.g. Saheeh International) |
+| ru | Русский — Russian | Cyrillic, LTR | Inter | ☐ Rowwad Translation Center; Abu Adel |
+| es | Español — Spanish | Latin, LTR | Inter | ✔ Muhammad Isa García; Noor International Center |
+| de | Deutsch — German | Latin, LTR | Inter | ✔ Frank Bubenheim and Dr. Nadeem Elyas; Rowwad; Abu Rida |
+| it | Italiano — Italian | Latin, LTR | Inter | ✔ Rowwad Translation Center |
+| fr | Français — French | Latin, LTR | Inter | ✔ Rashid Maash; Dr. Nabil Radwan; Muhammad Hamidullah |
+| ur | اردو — Urdu (the national language of Pakistan) | Arabic script (Nastaliq), RTL | Noto Nastaliq Urdu | ☐ Muhammad Ibrahim Junagarhi; Dr. Muhammad Luqman Salafi |
+| hi | हिन्दी — Hindi | Devanagari, LTR | Noto Sans Devanagari | ☐ Azizul Haq al-Umari |
+| ko | 한국어 — Korean | Hangul, LTR | Noto Sans KR | ☐ Hamid Choi; Rowwad |
+| id | Bahasa Indonesia — Indonesian | Latin, LTR | Inter | ☐ Indonesian Ministry of Religious Affairs; Sabiq |
+| ja | 日本語 — Japanese | Japanese, LTR | Noto Sans JP | ☐ Saeed Sato |
+| zh | 中文 — Chinese | Chinese (simplified), LTR | Noto Sans SC | ☐ Muhammad Makeen (attribution to be checked) |
+| tr | Türkçe — Turkish *(recommended)* | Latin, LTR | Inter | ✔ Rowwad Translation Center; ☐ others |
+| bn | বাংলা — Bengali *(recommended)* | Bengali, LTR | Noto Sans Bengali | ☐ Abu Bakr Zakaria; Rowwad |
+| fa | فارسی — Persian *(recommended)* | Arabic script, RTL | Vazirmatn or Noto Naskh Arabic | ☐ Rowwad Translation Center |
+| ms | Bahasa Melayu — Malay *(recommended)* | Latin, LTR | Inter | ☐ Abdullah Basmeih |
+| sw | Kiswahili — Swahili *(recommended)* | Latin, LTR | Inter | ✔ Ali Muhsin al-Barwani; Dr. Abdullah Muhammad Abu Bakr and Sheikh Nasser Khamis; Rowwad |
+| ha | Hausa *(recommended)* | Latin, LTR | Inter | ✔ Abubakar Mahmoud Gumi |
+| pt | Português — Portuguese *(recommended)* | Latin, LTR | Inter | ✔ Dr. Helmi Nasr |
+| ps | پښتو — Pashto *(recommended)* | Arabic script, RTL | Noto Naskh Arabic | ☐ Rowwad; others |
+| uz | Oʻzbekcha — Uzbek *(recommended)* | Latin, LTR | Inter | ☐ Muhammad Sadiq Muhammad Yusuf; Rowwad |
+
+✔ = read word for word on quranenc.com/en/home; ☐ = read only in a summary of that page, to be checked. Al-Mukhtasar
+and Tafsir al-Sa'di entries on QuranEnc are tafsirs, not translations of the meanings. ⚠ QuranEnc says its
+translations "can be downloaded and re-published, subject to" its Terms and Policies, but the link to them leads
+nowhere (2026-11-18) → ask in writing (`P0-13`) before any translation is shipped.
+
+What this means from day one, in all four codebases:
 
 - No user-facing text in code: every text has a key in a language file (`ar`, `en`; later `de`, `it`, `ja`, `zh`).
 - Numbers, dates and times are formatted through the platform's locale functions, never by hand.
 - Layouts work in both directions (Arabic right to left, the others left to right) and do not assume a word
   length: German is long, Japanese and Chinese are short and need their own interface fonts.
 - The language list is data (code, native name, direction, font), so adding a language does not change screens.
+- Four of the planned languages are written right to left (Arabic, Urdu, Persian, Pashto); Urdu needs a Nastaliq
+  font. Hindi, Bengali, Korean, Japanese and Chinese need their own fonts.
+- Every language's interface text is read by a native speaker before it ships (`LANG-*` tasks, §14.1).
 - Backend: `Accept-Language` decides the language of messages and of names that exist in that language; content
   tables keep one row per language.
 - ⚠ **Religious content in a new language** (meaning of the ayahs, tafsir, hadith, adhkar) is only a **published
@@ -755,6 +794,11 @@ Agreed for both platforms whatever the option:
   checked as seen with protanopia, deuteranopia and tritanopia (Machado et al. 2009; ≥ 8.4 : 1), and a "Colour
   vision" switch previews it; the other directions need 4.5 : 1 for normal vision; the surah details and the index
   (§8.1).
+- **Night themes, reviewed (author, 2026-11-18):** the night theme of every direction except Mountains follows six
+  rules, checked by `tools/design2_palettes.py` on every build: a deep tinted background, not black (L* 7 – 11);
+  cards lighter step by step; the mushaf page a little lighter than the background; soft body text (11 – 16 : 1);
+  calm accents (saturation ≤ 0.65); no bright block — the prayer card mid-dark (L* 20 – 42). Mountains stays as it
+  is (black and white at full strength). The first-launch screen lists the planned languages by their own names.
 - Screens to design: language choice, colour-direction choice, sources (F17), home, Quran reader (+ ayah actions: play, tafsir, bookmark), player, reciter
   picker, tajweed lesson, radio list and player, prayer times (six backgrounds), adhan settings, Qibla, adhkar list and
   counter, hadith, book reader, settings, about.
@@ -833,6 +877,7 @@ reviewer). Task ids: `P<phase>-<area><n>`, areas **D** data · **B** backend · 
 | P7-D1, P7-D2, P7-B1, P7-W/A/I-1 | Hadith with references | ☐ (⏸ الدرر السنية permission for links / explanations) |
 | P8-D1, P8-B1, P8-W/A/I-1 | Books reader | ☐ (⏸ edition rights) |
 | RT-01 … RT-07 | Hosting, domain, deployment, privacy pages, Google Play, App Store, store listings | ☐ (author: accounts, costs, the Mac) |
+| LANG-01 … LANG-04 | More languages (§8.9): the author's final list and order · per language: interface strings read by a native speaker, its font, its RTL / LTR check · the published translation of the meanings with written permission (QuranEnc, `P0-13`) · store listings in that language | ☐ (after the first release; ⏸ the author's list) |
 
 ## 15. Going public — hosting and stores
 
@@ -959,3 +1004,4 @@ explicit yes** (it is public); R3 (permanent) and R10 (public) need the author's
 | 2026-11-17 | Tenth update of the day (author's message): design 2 gets six colour directions — Parchment, Madinah, Makkah, Al-Quds, Gardens, Mountains (high contrast) — and new section icons; every colour, icon and the logo is explained in `docs/design/design-2-meanings.md` (ayahs copied and checked by script); new feature F19, the in-app section "Why this design" (§8.10); `P2-D1` recorded as "do not forget" (§0, §8.5). |
 | 2026-11-18 | Eleventh update (author's message): design 2 gets three more directions — Two seas, Lamps, Honey (nine in all); every direction is checked for colour-blind readers by simulation, and Mountains is the direction for low vision and colour blindness; 30:22 placed beside the language choice after reading its tafsirs (§8.10); each surah shows Makki / Madani, its ayahs and its order, and the mushaf has an index (F2, §8.1). |
 | 2026-11-18 | Twelfth update (author's message): **only Mountains** is the direction for colour blindness, weak colour vision and weak sight — renamed «الجبال — لضعف البصر وعمى الألوان»; the colour-blind check applies to it alone; the other directions and their night themes are not built for it (§8.10, §13). |
+| 2026-11-18 | Thirteenth update (author's message): more languages planned — Russian, Spanish, German, Italian, French, Urdu, Hindi, Korean, Indonesian (with Japanese and Chinese), and nine recommended (Turkish, Bengali, Persian, Malay, Swahili, Hausa, Portuguese, Pashto, Uzbek), each with its script, font and published translation (§8.9, tasks `LANG-*`); the night themes of the eight directions other than Mountains reviewed against six rules (§13). |

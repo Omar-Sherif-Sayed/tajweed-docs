@@ -882,3 +882,33 @@ Documents rebuilt. Now checking that the longer Mountains name fits its card on 
 The browser pane is hidden, so I'll check through the page itself rather than screenshots.
 
 The longer name wraps onto a second line but fits: no overflow, and the first-launch screen still doesn't need scrolling. Committing and pushing.
+
+Done: الجبال (Mountains) is now the only direction made for people with colour blindness, weak colour vision or weak sight. The change is committed and pushed.
+
+- **New name:** «الجبال — لضعف البصر وعمى الألوان» / "Mountains — for low vision and colour blindness". The user sees what it is for while choosing on the first-launch screen.
+- **Mountains only:** the build checks Mountains as people with each kind of colour blindness would see it. Its contrast stays at least 8.4 : 1, well above the 7 : 1 it requires. In Mountains, colour is never the only signal: the selected item also has a dot, bold text or a thicker border.
+- **The other eight directions:** they're no longer built for colour blindness. They only need the normal readability level of 4.5 : 1, and they can use colour more freely.
+- **Recorded:** the decision is written in `AGENTS.md`, [design-2-meanings.md](docs/design/design-2-meanings.md) and the session record.
+
+Your sentence also mentioned the dark theme, and I wasn't sure what you meant. Right now Mountains has both a day version (black on white) and a night version (white on black). Many people with weak sight read better with white text on black, so I recommend keeping both.
+
+## The author — 2026-11-17 23:29
+
+```text
+* حسناً أريد اضافة لغات مثل الروسية والأسبانية والألمانية والإيطالية والفرنسية والباكستانية والهندية والكورية والاندنويسة والهندية - لو في لغات تانية شايفها المفروض تكون موجودة تقدر تقولي 
+* ما أقصدة ب dark modes انك تقدر تراجع عليها كلهم ليكونوا افضل كل ال directions ال dark mode - يمكنك تركهم كما هم لو كانوا يلبون المطلوب وليس لضعاف البصر (ماعادا الجبال اجلعها تلبطي طلباتهم كما هي الأن)
+```
+
+## The agent — 2026-11-17 23:29
+
+Two requests: more languages, and a review of every direction's dark mode except Mountains, which stays as it is. I'll start with what can be measured. First the dark palettes, then which of your languages have published Quran translations, because §6.10 allows only those for religious text.
+
+Five of eight already pass every rule. Three backgrounds are a shade too dark, and one Honey accent is at the saturation limit. Small adjustments:
+
+All nine pass: eight improved night themes and Mountains unchanged. The meanings document quotes two of the old night colours (Lamps), so I'm updating them:
+
+Dark themes done. Next, which of these languages have published Quran translations by named translators, read from QuranEnc's own catalogue.
+
+Now the browser check: the first-launch screen with the language list, and the new night themes.
+
+Records updated. Committing and pushing.

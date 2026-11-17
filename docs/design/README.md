@@ -33,6 +33,11 @@ Honey, and Mountains. Every text / background pair is at least 4.5 : 1. **Mounta
 colour blindness and weak sight** (the author's decision, 2026-11-18): 7 : 1, also as simulated for the three kinds
 of colour blindness (checked by `tools/design2_palettes.py` on every build; the "Colour vision" switch shows the
 same simulation). The reason for each colour and icon: `design-2-meanings.md`. The Quran page is the same as in design 1: the King Fahd page fonts, one text colour.
+**Night themes (2026-11-18):** the eight directions other than Mountains follow six rules for night reading, checked
+on every build — a deep tinted background (not black), cards lighter step by step, the mushaf page a little lighter
+than the background, soft body text (11 – 16 : 1), calm accents, and no bright block. Mountains stays at full
+strength. The first-launch screen lists the planned languages by their own names (`AGENTS.md` §8.9).
+
 Start state in the address: `round-3.html#gardens-dark-en-545` (direction, theme, language, page).
 
 Third pass checked on 2026-11-18: 9 directions × day / night × Arabic / English × 5 pages — no line wider than

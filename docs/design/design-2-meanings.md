@@ -144,8 +144,8 @@ coral are what comes out of the seas.
 
 | Colour | Taken from |
 | --- | --- |
-| Night blue `#0B0F22` (night background), indigo `#1F2A55` (day buttons) | The lowest heaven adorned with lamps: «وَزَيَّنَّا ٱلسَّمَآءَ ٱلدُّنْيَا بِمَصَـٰبِيحَ» (41:12). The night blue is our choice. |
-| Lamplight gold `#F2C766` (night dots), `#765708` (day) | «وَجَعَلَ فِيهَا سِرَٰجًا وَقَمَرًا مُّنِيرًا» (25:61) — a lamp and a shining moon. |
+| Night blue `#13172C` (night background), indigo `#1F2A55` (day buttons) | The lowest heaven adorned with lamps: «وَزَيَّنَّا ٱلسَّمَآءَ ٱلدُّنْيَا بِمَصَـٰبِيحَ» (41:12). The night blue is our choice. |
+| Lamplight gold `#E0C584` (night dots), `#765708` (day) | «وَجَعَلَ فِيهَا سِرَٰجًا وَقَمَرًا مُّنِيرًا» (25:61) — a lamp and a shining moon. |
 
 Made to be at its best in the night theme, for reading at night. 67:5 also speaks of the lamps of the sky, but it
 ends with a mention of punishment, so it is not cited (rule 7).

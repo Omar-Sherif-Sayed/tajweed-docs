@@ -20,10 +20,10 @@ DIRECTIONS = {
                       text="#2A2018", muted="#665443", ink="#1F1811", page="#F6EDD8", primary="#2E231A",
                       onprimary="#F8F1E0", dot="#9E2F1D", dotsoft="#F1DACB", second="#45602F",
                       secondsoft="#DDE5CB", card="#7E4B2E", oncard="#FFF6E6"),
-        "dark": dict(bg="#15110C", surface="#1F1913", surface2="#2A2219", border="#40342A", rule="#5E4D3B",
-                     text="#EEE4CF", muted="#B8A98F", ink="#F0E6D0", page="#1B160F", primary="#E9DCBD",
-                     onprimary="#1E1711", dot="#E58A6E", dotsoft="#3D2219", second="#A7BC86", secondsoft="#26301C",
-                     card="#C98A62", oncard="#1A120C"),
+        "dark": dict(bg="#1A1611", surface="#231E17", surface2="#2D261D", border="#463B2E", rule="#625240",
+                     text="#E8DFCC", muted="#B5A78D", ink="#ECE3D0", page="#201B14", primary="#E3D5B5",
+                     onprimary="#1E1711", dot="#DC9078", dotsoft="#3E261D", second="#A9B98E", secondsoft="#29301F",
+                     card="#5C3B26", oncard="#F2E6D2"),
     },
     "madinah": {
         "name": {"ar": "المدينة", "en": "Madinah"}, "min": 4.5,
@@ -31,10 +31,10 @@ DIRECTIONS = {
                       text="#2B2416", muted="#62553C", ink="#211B10", page="#F6ECD3", primary="#2F4A2A",
                       onprimary="#F8F0DC", dot="#8B3A22", dotsoft="#EFD8C6", second="#3D6633",
                       secondsoft="#DCE6C9", card="#8A5A36", oncard="#FFF6E6"),
-        "dark": dict(bg="#13140D", surface="#1C1D14", surface2="#26271B", border="#3C3D2C", rule="#585A40",
-                     text="#ECE6CF", muted="#B4AD90", ink="#EFE9D2", page="#191A11", primary="#B9D3A1",
-                     onprimary="#16220F", dot="#E59A7C", dotsoft="#3A2418", second="#A9C98E", secondsoft="#243020",
-                     card="#C79566", oncard="#1A120B"),
+        "dark": dict(bg="#171811", surface="#20211A", surface2="#2A2B22", border="#424434", rule="#5D5F49",
+                     text="#E7E2CE", muted="#B2AC93", ink="#EBE6D2", page="#1D1E16", primary="#B5CDA0",
+                     onprimary="#16220F", dot="#DC9F86", dotsoft="#3B2619", second="#A8C590", secondsoft="#263222",
+                     card="#5E4128", oncard="#F3E8D3"),
     },
     "makkah": {
         "name": {"ar": "مكة", "en": "Makkah"}, "min": 4.5,
@@ -42,10 +42,10 @@ DIRECTIONS = {
                       text="#1A1918", muted="#57534D", ink="#121110", page="#FBFAF6", primary="#161514",
                       onprimary="#FBFAF6", dot="#7B4030", dotsoft="#F0DFD7", second="#3E4E57",
                       secondsoft="#E0E5E8", card="#24211F", oncard="#FBFAF6"),
-        "dark": dict(bg="#0E0E0D", surface="#181716", surface2="#22211F", border="#36342F", rule="#55524B",
-                     text="#F3F1EC", muted="#B5B0A6", ink="#F6F4EF", page="#141312", primary="#F3F1EC",
-                     onprimary="#141312", dot="#E0A08C", dotsoft="#3A2620", second="#A9BAC4", secondsoft="#222A2F",
-                     card="#E9E5DC", oncard="#151413"),
+        "dark": dict(bg="#191817", surface="#22211F", surface2="#2C2A28", border="#3E3B37", rule="#5A5650",
+                     text="#E6E3DC", muted="#B0ABA2", ink="#EAE7E0", page="#1B1A18", primary="#E3DFD6",
+                     onprimary="#161514", dot="#D8A393", dotsoft="#3A2722", second="#A6B5BE", secondsoft="#232B30",
+                     card="#46413C", oncard="#F1EDE5"),
     },
     "quds": {
         "name": {"ar": "القدس", "en": "Al-Quds"}, "min": 4.5,
@@ -53,10 +53,10 @@ DIRECTIONS = {
                       text="#24221B", muted="#5E5946", ink="#1C1A14", page="#F7F2E4", primary="#3B4722",
                       onprimary="#FAF6EC", dot="#7C5010", dotsoft="#F0E0C2", second="#4F6230",
                       secondsoft="#E1E6CF", card="#4B5A2A", oncard="#FAF6EC"),
-        "dark": dict(bg="#12130E", surface="#1B1C15", surface2="#25261D", border="#3B3C2E", rule="#5A5B45",
-                     text="#EEEADB", muted="#B5B096", ink="#F1EDDE", page="#181912", primary="#C9D59F",
-                     onprimary="#1A2010", dot="#E2B061", dotsoft="#3A2E17", second="#B4C68A", secondsoft="#262E1A",
-                     card="#B9C78A", oncard="#151A0C"),
+        "dark": dict(bg="#16170F", surface="#1F2018", surface2="#292A20", border="#3F4132", rule="#5B5D48",
+                     text="#E8E5D6", muted="#B1AD95", ink="#ECE9DA", page="#1C1D14", primary="#C6D19E",
+                     onprimary="#1A2010", dot="#DAB074", dotsoft="#3A2E18", second="#B0C08C", secondsoft="#283019",
+                     card="#4A562C", oncard="#F1EFE2"),
     },
     "gardens": {
         "name": {"ar": "الجنّات", "en": "Gardens"}, "min": 4.5,
@@ -64,10 +64,10 @@ DIRECTIONS = {
                       text="#13241B", muted="#4C5A51", ink="#0F1C15", page="#F8F7F0", primary="#173A2A",
                       onprimary="#FBFAF5", dot="#7E5C10", dotsoft="#F1E5C6", second="#2E6B45",
                       secondsoft="#D9EADF", card="#1F4D36", oncard="#FBFAF5"),
-        "dark": dict(bg="#0B1410", surface="#111D17", surface2="#18271F", border="#294033", rule="#3F5A4A",
-                     text="#E9F0EA", muted="#A6B8AC", ink="#EEF3EE", page="#0F1A14", primary="#9FD4B3",
-                     onprimary="#0B2116", dot="#E1BE6A", dotsoft="#352B14", second="#8ED0A6", secondsoft="#17301F",
-                     card="#2F6B4B", oncard="#F4F8F4"),
+        "dark": dict(bg="#0F1813", surface="#16211B", surface2="#1E2B24", border="#2D4237", rule="#435C4E",
+                     text="#E4ECE6", muted="#A3B5A9", ink="#E9F0EA", page="#131D17", primary="#9FCFB1",
+                     onprimary="#0B2116", dot="#D9BF80", dotsoft="#352C16", second="#8ECBA4", secondsoft="#1A3122",
+                     card="#2A5C42", oncard="#F1F6F2"),
     },
     "seas": {
         "name": {"ar": "البحران", "en": "Two seas"}, "min": 4.5,
@@ -75,10 +75,10 @@ DIRECTIONS = {
                       text="#132227", muted="#4A5B60", ink="#0E1A1E", page="#F6F9F7", primary="#0F4A5A",
                       onprimary="#FAFCFB", dot="#9C3628", dotsoft="#F6DDD6", second="#1D6470",
                       secondsoft="#D6E8EA", card="#174F5E", oncard="#F6F9F7"),
-        "dark": dict(bg="#0A1418", surface="#101D22", surface2="#16272D", border="#25404A", rule="#3A5862",
-                     text="#E6F0F0", muted="#A2B6B9", ink="#EDF4F4", page="#0D181C", primary="#8FD0DB",
-                     onprimary="#072128", dot="#F0A090", dotsoft="#3A2420", second="#86C7CF", secondsoft="#15303A",
-                     card="#2A6E7C", oncard="#F2F8F8"),
+        "dark": dict(bg="#0E171B", surface="#152126", surface2="#1C2B31", border="#2A434D", rule="#405C66",
+                     text="#E2ECED", muted="#A0B3B6", ink="#E8F1F1", page="#121C21", primary="#94CBD5",
+                     onprimary="#072128", dot="#E2A698", dotsoft="#3A2622", second="#8BC2CA", secondsoft="#18313A",
+                     card="#255F6B", oncard="#F1F7F7"),
     },
     "lamps": {
         "name": {"ar": "المصابيح", "en": "Lamps"}, "min": 4.5,
@@ -86,10 +86,10 @@ DIRECTIONS = {
                       text="#141A2E", muted="#4E5470", ink="#10152A", page="#F6F6F9", primary="#1F2A55",
                       onprimary="#F8F8FB", dot="#765708", dotsoft="#F1E6C6", second="#2F4C7A",
                       secondsoft="#DCE3F0", card="#1F2A55", oncard="#F4F1E6"),
-        "dark": dict(bg="#0B0F22", surface="#121734", surface2="#1A2042", border="#2B335E", rule="#434C7D",
-                     text="#ECEBF4", muted="#AEB2CC", ink="#F2F0E6", page="#0E1229", primary="#F0D58A",
-                     onprimary="#1A1606", dot="#F2C766", dotsoft="#332A12", second="#A9BFEA", secondsoft="#1C2A4A",
-                     card="#E8C66A", oncard="#17130A"),
+        "dark": dict(bg="#13172C", surface="#1A1F37", surface2="#232843", border="#30375A", rule="#474F79",
+                     text="#E6E5F0", muted="#AEB1C9", ink="#ECEBE2", page="#14182D", primary="#E5D4A2",
+                     onprimary="#1A1606", dot="#E0C584", dotsoft="#332B15", second="#AABCE0", secondsoft="#1E2A47",
+                     card="#353F78", oncard="#F2EFE2"),
     },
     "honey": {
         "name": {"ar": "النحل", "en": "Honey"}, "min": 4.5,
@@ -97,10 +97,10 @@ DIRECTIONS = {
                       text="#2A1E0C", muted="#66532F", ink="#21170A", page="#F9F1DE", primary="#5A3A0C",
                       onprimary="#FBF6EA", dot="#854808", dotsoft="#F3DDBE", second="#556218",
                       secondsoft="#E6EACB", card="#8A5208", oncard="#FFF8EA"),
-        "dark": dict(bg="#16110A", surface="#1F1810", surface2="#2A2116", border="#433522", rule="#614D31",
-                     text="#F2E8D2", muted="#BCAA88", ink="#F5ECD8", page="#1B150D", primary="#F0BE5E",
-                     onprimary="#231705", dot="#F5B04A", dotsoft="#3D2A10", second="#C4CF83", secondsoft="#2A2E16",
-                     card="#E2A33C", oncard="#1E1305"),
+        "dark": dict(bg="#1D170F", surface="#261F15", surface2="#30271B", border="#473A27", rule="#655238",
+                     text="#EEE5D2", muted="#BBAA89", ink="#F1E8D6", page="#20190F", primary="#E0C48F",
+                     onprimary="#231705", dot="#D9B47F", dotsoft="#3D2A10", second="#C2CB8C", secondsoft="#2C3018",
+                     card="#6A4A1C", oncard="#F7EEDC"),
     },
     "mountains": {
         "name": {"ar": "الجبال — لضعف البصر وعمى الألوان", "en": "Mountains — for low vision and colour blindness"},
@@ -160,6 +160,45 @@ def simulate(hex_colour, kind):
     return "#" + "".join("%02X" % round(v * 255) for v in out)
 
 
+def lightness(hex_colour):
+    """CIE L* (0 = black, 100 = white)."""
+    y = luminance(hex_colour)
+    return 116 * y ** (1 / 3) - 16 if y > 0.008856 else 903.3 * y
+
+
+def saturation(hex_colour):
+    r, g, b = [int(hex_colour[i:i + 2], 16) / 255 for i in (1, 3, 5)]
+    hi, lo = max(r, g, b), min(r, g, b)
+    if hi == lo:
+        return 0.0
+    l = (hi + lo) / 2
+    return (hi - lo) / (2 - hi - lo) if l > 0.5 else (hi - lo) / (hi + lo)
+
+
+# Night themes (author's request, 2026-11-18: make every night theme better; Mountains stays as it is).
+DARK_RULES = [
+    ("background is a deep tint, not black (L* 7 – 11)", lambda c: 7 <= lightness(c["bg"]) <= 11),
+    ("cards are lighter than the background, step by step", lambda c: lightness(c["surface"]) - lightness(c["bg"]) >= 2.5
+     and lightness(c["surface2"]) - lightness(c["surface"]) >= 2.5),
+    ("the mushaf page is a little lighter than the background", lambda c: 0 < lightness(c["page"]) - lightness(c["bg"]) <= 4),
+    ("body text is soft, not harsh (11 – 16 : 1)", lambda c: 11 <= ratio(c["text"], c["bg"]) <= 16),
+    ("accents are calm (saturation at most 0.65)", lambda c: max(saturation(c[k]) for k in ("primary", "dot", "second")) <= 0.65),
+    ("no bright block: the prayer card is mid-dark (L* 20 – 42)", lambda c: 20 <= lightness(c["card"]) <= 42),
+]
+
+
+def check_dark():
+    """The night-theme rules, for every direction except the accessible one."""
+    failures = []
+    for did, d in DIRECTIONS.items():
+        if d.get("accessible"):
+            continue
+        for text, rule in DARK_RULES:
+            if not rule(d["dark"]):
+                failures.append("%s/dark: %s" % (did, text))
+    return failures
+
+
 def check():
     """Returns (lowest ratio per direction and theme, list of failures).
 
@@ -180,7 +219,7 @@ def check():
                         failures.append("%s/%s %s on %s, %s = %.2f (needs %.1f)"
                                         % (did, theme, f, b, vision, r, d["min"]))
             lowest[did + "/" + theme] = worst
-    return lowest, failures
+    return lowest, failures + check_dark()
 
 
 def svg_filters():

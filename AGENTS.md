@@ -12,7 +12,7 @@ true, must be checked before it is relied on · **⚠** = a limitation or risk t
 | --- | --- | --- | --- |
 | 0 | **Start here** — state, next task, handoff | 10 | Web structure and conventions |
 | 1 | Working agreement (the author's rules) | 11–12 | Android and iPhone |
-| 2 | The product and its features F1–F16 | 13 | Design system and Figma |
+| 2 | The product and its features F1–F18 | 13 | Design system and Figma |
 | 3 | Repositories and folder layout | 14 | **Plan and task status** |
 | 4 | Technology and versions | 15 | Hosting and stores |
 | 5 | Architecture | 16 | Risks and limitations |
@@ -42,8 +42,8 @@ repository the task touches → (6) the last record in [`docs/sessions/`](docs/s
 | GitHub access from this machine | **Over SSH only** (the Windows certificate store blocks the HTTPS sign-in, §1). Key `~/.ssh/id_ed25519_tajweed` (no passphrase, fingerprint `SHA256:EPCRVeCpF+Jvsj40LKpu4Cta+mKF3ivLO8szlC2k/Po`), registered in the author's account as "Tajweed project - work laptop" (he confirmed it himself). Each of the five repositories uses it through its local `core.sshCommand`; remotes are `git@github.com:Omar-Sherif-Sayed/<name>.git`. A new clone on this machine needs the same two settings. Test: `ssh -i ~/.ssh/id_ed25519_tajweed -o IdentitiesOnly=yes -T git@github.com`. |
 | Folder name | `C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences` — renamed by the author on 2026-11-17. |
 | GitHub account | `Omar-Sherif-Sayed` — <https://github.com/Omar-Sherif-Sayed?tab=repositories>. Pushing is allowed for this product (R1); push at the end of every task. |
-| **Next task** | `P0-11` round 2 — after the author chooses a colour direction (A, B or C, or changes) and gives a first opinion on the Quran font: make `tokens.json` final for phase 1 and draw the remaining screens in the chosen direction (`docs/design/README.md`, "Next rounds"). In parallel when the author wants: `P0-06` + `P0-07` (backend scaffold). Every task starts with plan → questions → the author's answer (§1). |
-| Waiting for the author | His choice of the colour direction and his opinion on the Quran font (design round 1). |
+| **Next task** | `P0-11` round 2 — after the author answers the download questions of 2026-11-17: the first-launch flow (language → colour direction, light / dark), real mushaf pages in the old Madinah layout (pages 1, 2, 5, 545), a Quran-font comparison, and the Sources screen; tokens keep all three directions. Then the remaining screens. |
+| Waiting for the author | Permission to download the DigitalKhatt layout and fonts (and, if wanted, the King Fahd Complex fonts from a mirror) · his printed page 5: does ayah 25 take four lines? |
 
 **At the end of every session:** update the table above, the statuses in §14.1, the change log §19; write or extend
 the session record; commit as the author (§1). Details: `docs/plan/execution-plan.md` §1.
@@ -65,7 +65,9 @@ The author's own rules — the same in all his projects:
   readers), plus this parent file when scope, structure, sources or decisions change.
 - **Document everything.** Documents go in `docs/<kind>/` of the owning repository with an index `docs/README.md`;
   never loose files.
-- **Arabic and English only**, in every client. Every user-facing text exists in both languages.
+- **Arabic and English in the first release**, in every client; every user-facing text exists in both. The code is
+  built so that more languages can be added later without changing screens (author, 2026-11-17: German, Italian,
+  Japanese, Chinese) — §8.9.
 - **Correct data only** — §6 is binding. When a fact cannot be verified, it is not shipped.
 - **No advertisements, ever** — no ad SDK, no sponsored content, no tracking for marketing (§2).
 - **The plan lives in files.** Every decision, every task and its status is written in this repository on the day it
@@ -100,7 +102,7 @@ too long for a store title, the store shows "Tajweed" with the rest as the subti
 | --- | --- |
 | Free and public | No registration, no login, no accounts, no payments. Preferences live on the device only. |
 | No ads | No advertising of any kind, in any client, at any time. |
-| Two languages | Arabic (default, right-to-left) and English. The user chooses on first launch and can change it later. |
+| Languages | Arabic (default, right-to-left) and English at first; German, Italian, Japanese and Chinese may follow (§8.9). The user chooses on first launch and can change it later. |
 | Correct data | Every text, audio link, time and reference comes from a named, verified source (§6, §7). |
 | Author | **Omar Sherif — عمر شريف**, shown on the About page with one link only: `https://www.linkedin.com/in/omarsherif21/` |
 
@@ -109,7 +111,7 @@ too long for a store title, the store shows "Tajweed" with the rest as the subti
 | # | Feature | Summary |
 | --- | --- | --- |
 | F1 | Language | Arabic / English, chosen on first launch (mobile and web). |
-| F2 | Quran reader | The full Quran text with complete tashkeel, as in a standard printed mushaf — one text colour (§8.1). |
+| F2 | Quran reader | The full Quran text with complete tashkeel, **laid out exactly like the printed Madinah mushaf**: 604 pages of 15 lines, every page starting and every line ending on the same word as the printed copy, surah headers, basmala, juz / hizb / quarter marks in their places — one text colour (§8.1). |
 | F3 | Recitation | Choose a reciter and a recitation style (murattal / mujawwad / muallim). Play a surah, an ayah range, or from a start point to the end of the Quran, then restart from Al-Fatiha, forever. |
 | F4 | Muallim mushaf | Teaching recitation per ayah from a reciter who has one (Al-Husary, Al-Minshawi, Ayman Suwayd). |
 | F5 | Tafsir | Select an ayah and read its tafsirs and explanations. |
@@ -122,7 +124,9 @@ too long for a store title, the store shows "Tajweed" with the rest as the subti
 | F12 | Adhkar and duas | All supplications with their repeat counts (morning, evening, travel, entering the mosque, leaving home, …), like Hisn Al-Muslim. |
 | F13 | Hadith | The noble hadiths, each with its reference (e.g. a link to الدرر السنية) and its explanation. |
 | F14 | Books | Religious books (الأم للشافعي، صحيح البخاري، صحيح مسلم). |
-| F15 | About | Author name and LinkedIn link; sources and licences; privacy statement. |
+| F15 | About | Author name and LinkedIn link; privacy statement; a link to F17. |
+| F17 | Sources | A section listing **every** source the application uses — Quran text and its layout, fonts, audio and timings, tafsir, hadith, adhkar, books, prayer-time method, radio streams, icons, software libraries — each with its owner, link, licence and verification date; built from the register `docs/data-sources/README.md`, so it is never out of step (author, 2026-11-17). |
+| F18 | Appearance | Three colour directions (A emerald and gold, B teal and sand, C mushaf), each with a light and a dark theme; chosen on first launch after the language, changeable in settings; the Quran font is a reader setting (author, 2026-11-17 — §13). |
 | F16 | Quran search | Search for a word with or without tashkeel, by the surah's name, and by the ayah's number (§8.1) — added by the author, 2026-11-17. |
 
 Reference applications to study during design: Hisn Al-Muslim, Nusuk, Ayah, إذاعة القرآن الكريم من القاهرة, Radio Garden.
@@ -388,8 +392,30 @@ words.**
   the small alef, the madd sign, the sukun, the pause marks.
 - **Rendering check on every client:** sample pages are compared with a printed mushaf, mark by mark, on real
   devices — a wrong font or a missing mark is treated as wrong data.
-- **Views:** by page, following the usual 604-page layout (☐ source of the page positions — task P0-12), and by
-  surah. Go to surah / juz / page / ayah. Text size. Light and dark theme.
+- **Page layout identical to the printed mushaf (author, 2026-11-17)** — so that a person who memorises from a
+  printed mushaf finds no difference: page 1 is Al-Fatihah; page 5 begins with 2:25 and its first line ends with
+  «جَنَّٰتٖ»; every page has 15 lines (pages 1 and 2 are the decorated opening pages); juz, hizb and quarter marks
+  (۞) stand where the printed copy has them. This is the default reading view; a continuous "by surah" view is a
+  second option. Go to surah / juz / hizb / page / ayah. Light and dark theme.
+- **Which printed edition — research of 2026-11-17.** Two Madinah layouts exist in open data. The author's
+  photographed page 545 (58:22 – 59:3) matches, line by line, the **old Madinah layout (1405H print, written by
+  Uthman Taha)** and not the newer one, which breaks the same page differently. Proposed: the old Madinah layout.
+  In that layout, ayah 2:25 takes lines 1–4 of page 5 (line 1 ends with «جَنَّٰتٖ», line 4 with «خَٰلِدُونَ ٢٥») —
+  ☐ the author checks his printed page 5 (he remembered three lines).
+- **Layout source — candidates (☐ decided in task P0-12):**
+  - **DigitalKhatt** (github.com/DigitalKhatt, sponsored by Tarteel): the whole Quran as 604 pages × lines, old and
+    new Madinah layouts, in the `digitalkhatt.org` repository (MIT licence); fonts made for those layouts —
+    `oldmadinafont` and `madinafont` (SIL Open Font Licence 1.1). ✔ Checked 2026-11-17: 604 pages; page 5 and page
+    545 as above; the ۞ quarter marks are in the text. ⚠ The text's own origin is not stated: before use, a script
+    must prove that every one of the 6,236 ayahs has the same words as the verified text (§6.1); any difference is
+    listed and not shipped.
+  - **King Fahd Complex page fonts (QPC V1, 1405H)** — one font per page, used by large Quran sites. ⚠ The
+    Complex's own site lists its fonts as «قريباً» (no download, 2026-11-17); copies exist only on third-party
+    mirrors with no licence file — not usable until the licence is confirmed (§6.8).
+  - **QUL (qul.tarteel.ai) layout databases** — ⚠ the resource page says it has no copyright information; several
+    open questions ask the same. Not usable until answered.
+- **Justification:** printed lines are filled by stretching letters (kashida), not by wider spaces. The DigitalKhatt
+  fonts can do this; other fonts can only widen spaces. ☐ Decided with the font (P0-12).
 - **The coloured name of Allah is withdrawn.** History, so that it is not proposed again without new facts: requested
   on 2026-11-16; the author's printed mushaf (reviewed by the Al-Azhar committee, Hafs) prints «الله» in red; no
   digital word list of that edition exists; printed mushafs do not agree on which words are coloured; deciding what a
@@ -497,6 +523,22 @@ is re-checked against تحفة الأطفال / المقدمة الجزرية be
   البخاري and صحيح مسلم, each hadith with number, grade and a link to its page on الدرر السنية for the takhrij and
   explanation (we link to the explanation rather than copy it, unless Dorar permits) — §18 Q11.
 - **Books (F14):** a reader with volumes / chapters / pages and search; large texts are loaded by chapter.
+
+### 8.9 More languages later (author, 2026-11-17)
+
+Arabic and English first; German, Italian, Japanese and Chinese are planned additions. What this means from day
+one, in all four codebases:
+
+- No user-facing text in code: every text has a key in a language file (`ar`, `en`; later `de`, `it`, `ja`, `zh`).
+- Numbers, dates and times are formatted through the platform's locale functions, never by hand.
+- Layouts work in both directions (Arabic right to left, the others left to right) and do not assume a word
+  length: German is long, Japanese and Chinese are short and need their own interface fonts.
+- The language list is data (code, native name, direction, font), so adding a language does not change screens.
+- Backend: `Accept-Language` decides the language of messages and of names that exist in that language; content
+  tables keep one row per language.
+- ⚠ **Religious content in a new language** (meaning of the ayahs, tafsir, hadith, adhkar) is only a **published
+  translation by a named translator with permission** (§6.10) — never a machine or AI translation. Where none
+  exists, the screen shows the Arabic with a note. The interface (buttons, menus) can be translated freely.
 
 ## 9. Backend — `tajweed-backend` (structure and conventions)
 
@@ -633,7 +675,11 @@ Agreed for both platforms whatever the option:
   compare. The Quran text on the reader screen is real: a script copies it from the untouched Tanzil file
   (`docs/design/prototypes/assets/tanzil/`, checksum recorded) — nobody typed it. Every text / background pair
   passes 4.5 : 1 in all six combinations. Details and limits: `docs/design/README.md`.
-- Screens to design: language choice, home, Quran reader (+ ayah actions: play, tafsir, bookmark), player, reciter
+- **Decided after round 1 (author, 2026-11-17): all three directions are built**, each with its light and dark
+  theme. First launch asks the language, then the colour direction (with a preview); both can be changed in
+  settings. The Quran font is a reader setting; the author wants more fonts close to the printed mushaf to compare
+  (round 2). The design tokens therefore keep all three directions (`docs/design/tokens.json`).
+- Screens to design: language choice, colour-direction choice, sources (F17), home, Quran reader (+ ayah actions: play, tafsir, bookmark), player, reciter
   picker, tajweed lesson, radio list and player, prayer times (six backgrounds), adhan settings, Qibla, adhkar list and
   counter, hadith, book reader, settings, about.
 
@@ -829,3 +875,4 @@ explicit yes** (it is public); R3 (permanent) and R10 (public) need the author's
 | 2026-11-17 | Fourth update of the day: the author said yes to creating and pushing (R1), confirmed the application id (R3) and chose his personal address for the commits (R10). The five public repositories were created on GitHub; the four application folders got their first commit (`README.md`, `AGENTS.md`, MIT `LICENSE`, `.gitignore`). **The push did not happen:** the machine's certificate store blocks the HTTPS sign-in (§0, §1); SSH is reachable and is the way forward once the author agrees to an SSH key. |
 | 2026-11-17 | Fifth update of the day: the author agreed to an SSH key and confirmed it on GitHub himself; **all five repositories were pushed** and checked on GitHub (§0); Android Studio and the SDK are installed (P0-05 done). Phase 0 tasks 01, 02, 03 and 05 are done. |
 | 2026-11-17 | Sixth update of the day: design round 1 (`docs/design/`, §13) — three colour directions on four screens, draft tokens; the Tanzil Uthmani text downloaded with the author's permission for the reader mock-up (SHA-256 recorded, file kept untouched); documents and designs of this repository licensed CC BY 4.0 (P0-04 done). |
+| 2026-11-17 | Seventh update of the day (author's feedback on design round 1): all three colour directions are built, chosen at first launch after the language, each with light and dark (F18, §13); more languages later — German, Italian, Japanese, Chinese (§8.9); the reader reproduces the printed Madinah mushaf page by page and line by line (F2, §8.1 — research: the author's page 545 matches the old Madinah 1405H layout; DigitalKhatt data and fonts are the open candidates); a Sources section listing every source (F17); more Quran fonts to compare. |

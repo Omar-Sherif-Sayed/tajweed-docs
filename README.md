@@ -32,6 +32,7 @@ yet.
 | [`docs/plan/execution-plan.md`](docs/plan/execution-plan.md) | Every task in detail |
 | [`docs/README.md`](docs/README.md) | Index of all documents |
 | [`docs/sessions/`](docs/sessions/) | What happened in each working session |
+| [`docs/design/`](docs/design/) | The designs — start with `prototypes/colour-directions.html` |
 
 ## Planned features
 
@@ -61,4 +62,10 @@ Tajweed - The Noble Quran and Its Sciences/     this repository (tajweed-docs)
 ## Licence
 
 The content the application will show (Quran text, audio, tafsir, hadith, books) belongs to its sources and keeps
-their licences. The licence of the documents in this repository is not chosen yet (task P0-04).
+their licences.
+
+The documents and designs written for this project are under the Creative Commons Attribution 4.0 International
+licence ([`LICENSE`](LICENSE)) — reuse them with credit to Omar Sherif. **Third-party material kept in this
+repository is not covered by it** and keeps its own licence: the Tanzil Quran text file
+(`docs/design/prototypes/assets/tanzil/`, Creative Commons Attribution 3.0, no changes allowed) and the fonts the
+prototypes load.

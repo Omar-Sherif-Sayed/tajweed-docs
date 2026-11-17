@@ -9,7 +9,7 @@ Rule: no loose files — every document is in `docs/<kind>/` and listed here.
 | [`sessions/`](sessions/) | The session memory: one record per working session (the author's messages, what was done, decisions, sources) and a conversation copy beside it. | [2026-11-16 planning — record](sessions/2026-11-16-planning.md) · [conversation copy](sessions/2026-11-16-planning-conversation.md) |
 | `data-sources/` | The register of every content source: owner, URL, licence, checksum, verification date. | task P0-12 |
 | `permissions/` | Permission letters (Arabic / English), the answers, and the status table. | task P0-13 |
-| `design/` | `tokens.json`, HTML prototypes (`prototypes/`), screenshots, the link to the Figma file. | task P0-11 |
+| [`design/`](design/) | [`README.md`](design/README.md), `tokens.json`, HTML prototypes (`prototypes/`), later screenshots and the link to the Figma file. | round 1: [colour directions](design/prototypes/colour-directions.html), waiting for the author's choice |
 | `deployment/` | Step-by-step guides: hosting, domain, Google Play, App Store. | release track |
 | `quality/` | Checklists used across the applications (acceptance runs, iPhone test sessions on the Mac). | from phase 1 |
 

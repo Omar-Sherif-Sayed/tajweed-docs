@@ -103,7 +103,8 @@ they cannot be undone or are public:
 ### P0-04 Licences
 
 - Code: `LICENSE` = MIT in the four application repositories (default R1).
-- `tajweed-docs`: our own documents and designs — ☐ author chooses (proposal: CC BY 4.0).
+- `tajweed-docs`: our own documents and designs — **CC BY 4.0** (author, 2026-11-17); the full licence text is in
+  `LICENSE`. Third-party material inside the repository (the Tanzil text file, fonts) keeps its own licence.
 - Every repository's `README.md` says: **content (Quran text, audio, tafsir, hadith, books) keeps the licence of its
   source** and is listed in `docs/data-sources/README.md`; the MIT licence covers the code only.
 
@@ -189,7 +190,7 @@ Done when: CI is green and the application runs on the emulator in both language
 
 Done when: the CI build and tests are green. ⚠ "Runs on a device" is **not** claimed until a session on the Mac.
 
-### P0-11 Design (can start right after `P0-02`; lives in this repository)
+### P0-11 Design ◐ (round 1 done 2026-11-17; lives in this repository)
 
 1. `docs/design/tokens.json`: colours (light and dark), the search-result highlight,
    the six prayer backgrounds, typography, spacing, radius, elevation.
@@ -201,6 +202,10 @@ Done when: the CI build and tests are green. ⚠ "Runs on a device" is **not** c
 4. (author) review → changes → approval written in `AGENTS.md` §13.
 5. After approval: the Figma file in the author's account, through his Chrome session.
 6. ☐ Fonts: the licence of each font is checked and recorded before it is used (Quran font: `P0-12`).
+
+**State 2026-11-17:** steps 1 (draft) and 2 are done — `docs/design/prototypes/colour-directions.html`, three
+directions on four screens, with real Quran text copied by `prototypes/tools/build_quran_sample.py`; the author is
+choosing. Remaining: steps 3 to 6 in the chosen direction.
 
 Done when: the author has approved the colours and the key screens, and the tokens file is final for phase 1.
 

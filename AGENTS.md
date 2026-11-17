@@ -36,14 +36,14 @@ repository the task touches → (6) the last record in [`docs/sessions/`](docs/s
 | --- | --- |
 | Date | 2026-11-17 |
 | Phase | **0 — Foundations** (§14) |
-| Exists | **Five public repositories on GitHub, pushed 2026-11-17** (`main` branch): `tajweed-docs` (this one: parent `AGENTS.md`, `README.md`, the detailed plan, a session record with a conversation copy) and the four application repositories, each with `README.md`, `AGENTS.md`, `LICENSE` (MIT), `.gitignore` — no application code. The same five folders exist on this machine. |
-| Does not exist | Any application code, any design, the data-source register. |
-| Last task done | `P0-03` — repositories created and pushed; every page checked from a browser that is not signed in. `P0-05` — Android Studio, the Android SDK and an emulator are installed. |
+| Exists | **Five public repositories on GitHub** (`main` branch), the same five folders on this machine. `tajweed-docs` (this one): parent `AGENTS.md`, `README.md`, `LICENSE` (CC BY 4.0), the detailed plan, a session record with a conversation copy, and **design round 1** in `docs/design/`. The four application repositories: `README.md`, `AGENTS.md`, `LICENSE` (MIT), `.gitignore` — no application code. |
+| Does not exist | Any application code, the chosen design direction, the data-source register. |
+| Last task done | `P0-11` round 1: three colour directions on four screens (`docs/design/prototypes/colour-directions.html`), draft `docs/design/tokens.json`. `P0-04` done (documents: CC BY 4.0). |
 | GitHub access from this machine | **Over SSH only** (the Windows certificate store blocks the HTTPS sign-in, §1). Key `~/.ssh/id_ed25519_tajweed` (no passphrase, fingerprint `SHA256:EPCRVeCpF+Jvsj40LKpu4Cta+mKF3ivLO8szlC2k/Po`), registered in the author's account as "Tajweed project - work laptop" (he confirmed it himself). Each of the five repositories uses it through its local `core.sshCommand`; remotes are `git@github.com:Omar-Sherif-Sayed/<name>.git`. A new clone on this machine needs the same two settings. Test: `ssh -i ~/.ssh/id_ed25519_tajweed -o IdentitiesOnly=yes -T git@github.com`. |
 | Folder name | `C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences` — renamed by the author on 2026-11-17. |
 | GitHub account | `Omar-Sherif-Sayed` — <https://github.com/Omar-Sherif-Sayed?tab=repositories>. Pushing is allowed for this product (R1); push at the end of every task. |
-| **Next task** | The author chooses what starts first: `P0-11` design (colour directions and the first HTML screens — in this repository) or `P0-06` + `P0-07` (version check and backend scaffold). Small open item: `P0-04`, the licence of the documents in this repository (proposal: CC BY 4.0). Every task starts with plan → questions → the author's answer (§1). |
-| Waiting for the author | Which task starts first · the licence of the documents (`P0-04`). |
+| **Next task** | `P0-11` round 2 — after the author chooses a colour direction (A, B or C, or changes) and gives a first opinion on the Quran font: make `tokens.json` final for phase 1 and draw the remaining screens in the chosen direction (`docs/design/README.md`, "Next rounds"). In parallel when the author wants: `P0-06` + `P0-07` (backend scaffold). Every task starts with plan → questions → the author's answer (§1). |
+| Waiting for the author | His choice of the colour direction and his opinion on the Quran font (design round 1). |
 
 **At the end of every session:** update the table above, the statuses in §14.1, the change log §19; write or extend
 the session record; commit as the author (§1). Details: `docs/plan/execution-plan.md` §1.
@@ -626,6 +626,13 @@ Agreed for both platforms whatever the option:
   fast to review and change), agree on colours and layout, then produce the Figma file from the agreed design — §18 Q8.
 - **Decided (2026-11-16):** HTML prototypes first; after the author approves the colours and the layout, the Figma
   file is created in the author's own Figma account through his Chrome session (the account he named for this project).
+- **Round 1 (2026-11-17) — waiting for the author's choice:** `docs/design/prototypes/colour-directions.html`, one
+  self-contained page with three directions — **A** emerald and gold on parchment, **B** deep teal and sand, **C**
+  "mushaf" (cream page, dark red and black frame, after the author's printed mushaf) — each on four screens
+  (language choice, home, Quran reader, player), Arabic and English, light and dark, with three Quran fonts to
+  compare. The Quran text on the reader screen is real: a script copies it from the untouched Tanzil file
+  (`docs/design/prototypes/assets/tanzil/`, checksum recorded) — nobody typed it. Every text / background pair
+  passes 4.5 : 1 in all six combinations. Details and limits: `docs/design/README.md`.
 - Screens to design: language choice, home, Quran reader (+ ayah actions: play, tafsir, bookmark), player, reciter
   picker, tajweed lesson, radio list and player, prayer times (six backgrounds), adhan settings, Qibla, adhkar list and
   counter, hadith, book reader, settings, about.
@@ -666,15 +673,15 @@ reviewer). Task ids: `P<phase>-<area><n>`, areas **D** data · **B** backend · 
 | P0-01 | Documentation repository: this folder, `docs/`, the detailed plan, first session record, first commit | ✔ 2026-11-17 (local; GitHub in P0-03) |
 | P0-02 | The author confirms R1 (create and push), R3 (application id) and R10 (commit e-mail) — §18.2 | ✔ 2026-11-17 |
 | P0-03 | Create the five public GitHub repositories through the author's Chrome session; remotes; first push | ✔ 2026-11-17 — created, pushed over SSH, pages checked |
-| P0-04 | Licences: MIT for code; the licence of these documents; the content notice | ◐ MIT `LICENSE` and the content notice are in the four application repositories; the licence of the documents is still open |
+| P0-04 | Licences: MIT for code; the licence of these documents; the content notice | ✔ 2026-11-17 — MIT in the four application repositories; CC BY 4.0 for the documents and designs here (`LICENSE`); third-party content keeps its own licence (`README.md`) |
 | P0-05 | Machine: install Android Studio; confirm Docker runs | ✔ 2026-11-17 — Android Studio, SDK and an emulator installed; Docker installed (start it before P0-07) |
 | P0-06 | Re-verify every version on scaffold day and write it down | ☐ |
 | P0-07 | Scaffold `tajweed-backend` with CI and `GET /v1/app-info` | ☐ |
 | P0-08 | Scaffold `tajweed-frontend`: Angular 22, Material, Tailwind, wrappers, language choice, CI | ☐ |
 | P0-09 | Scaffold `tajweed-android`: Kotlin, Compose, both languages, CI | ☐ (needs P0-05) |
 | P0-10 | Scaffold `tajweed-ios`: generated project, SwiftUI, CI on a macOS runner | ☐ |
-| P0-11 | Design: tokens, 2–3 colour directions, HTML prototypes, the author's approval, then Figma | ☐ |
-| P0-12 | Data-source register; choose the Quran text and font; checksums | ☐ |
+| P0-11 | Design: tokens, 2–3 colour directions, HTML prototypes, the author's approval, then Figma | ◐ round 1 done 2026-11-17 (three directions, four screens, draft tokens); ⏸ the author's choice; then the remaining screens and Figma |
+| P0-12 | Data-source register; choose the Quran text and font; checksums | ☐ (the Tanzil Uthmani file is already downloaded for the design, with its checksum: `docs/design/prototypes/assets/tanzil/README.md`) |
 | P0-13 | Permission letters, sent by the author, tracked | ☐ |
 | P0-14 | Content pipeline decisions D1, D2; API contract for phase 1 | ☐ |
 | P0-15 | Phase 0 review with the author | ☐ |
@@ -821,3 +828,4 @@ explicit yes** (it is public); R3 (permanent) and R10 (public) need the author's
 | 2026-11-17 | Third update of the day: the author renamed the workspace folder; GitHub account read from his Chrome session — `Omar-Sherif-Sayed` (§0, §3); application id proposed as `io.github.omarsherifsayed.tajweed`, valid on Java, Android and iPhone (R3 — corrects the earlier "hyphen becomes underscore" note, which Apple does not accept); new point R10, the e-mail carried by the commits; §3 now lists what each repository holds; a conversation copy of the session added to `docs/sessions/`. |
 | 2026-11-17 | Fourth update of the day: the author said yes to creating and pushing (R1), confirmed the application id (R3) and chose his personal address for the commits (R10). The five public repositories were created on GitHub; the four application folders got their first commit (`README.md`, `AGENTS.md`, MIT `LICENSE`, `.gitignore`). **The push did not happen:** the machine's certificate store blocks the HTTPS sign-in (§0, §1); SSH is reachable and is the way forward once the author agrees to an SSH key. |
 | 2026-11-17 | Fifth update of the day: the author agreed to an SSH key and confirmed it on GitHub himself; **all five repositories were pushed** and checked on GitHub (§0); Android Studio and the SDK are installed (P0-05 done). Phase 0 tasks 01, 02, 03 and 05 are done. |
+| 2026-11-17 | Sixth update of the day: design round 1 (`docs/design/`, §13) — three colour directions on four screens, draft tokens; the Tanzil Uthmani text downloaded with the author's permission for the reader mock-up (SHA-256 recorded, file kept untouched); documents and designs of this repository licensed CC BY 4.0 (P0-04 done). |

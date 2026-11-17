@@ -3,3 +3,6 @@
 *.jpg binary
 *.png binary
 *.pdf binary
+
+# The downloaded Quran text must stay byte for byte as published (its checksum is recorded).
+docs/design/prototypes/assets/tanzil/*.txt -text

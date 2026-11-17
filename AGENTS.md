@@ -36,14 +36,14 @@ repository the task touches → (6) the last record in [`docs/sessions/`](docs/s
 | --- | --- |
 | Date | 2026-11-17 |
 | Phase | **0 — Foundations** (§14) |
-| Exists | **Five public repositories on GitHub** (`main` branch), the same five folders on this machine. `tajweed-docs` (this one): parent `AGENTS.md`, `README.md`, `LICENSE` (CC BY 4.0), the detailed plan, a session record with a conversation copy, and **design round 1** in `docs/design/`. The four application repositories: `README.md`, `AGENTS.md`, `LICENSE` (MIT), `.gitignore` — no application code. |
-| Does not exist | Any application code, the chosen design direction, the data-source register. |
-| Last task done | `P0-11` round 1: three colour directions on four screens (`docs/design/prototypes/colour-directions.html`), draft `docs/design/tokens.json`. `P0-04` done (documents: CC BY 4.0). |
+| Exists | **Five public repositories on GitHub** (`main` branch), the same five folders on this machine. `tajweed-docs` (this one): parent `AGENTS.md`, `README.md`, `LICENSE` (CC BY 4.0), the detailed plan, the session record with a conversation copy, and the design in `docs/design/`: round 1 (colour directions) and **round 2** (first-launch screen, mushaf pages as printed, six Quran fonts, Sources screen) with the verified source files and the scripts that check them. The four application repositories: `README.md`, `AGENTS.md`, `LICENSE` (MIT), `.gitignore` — no application code. |
+| Does not exist | Any application code, the register of content sources, the remaining screens. |
+| Last task done | `P0-11` round 2 (2026-11-17): `docs/design/prototypes/round-2.html`; the old-Madinah layout verified against Tanzil (0 word differences in 6,236 ayahs, 0 page-start differences in 604 pages); fonts and their licences read from the font files (`docs/design/prototypes/assets/README.md`). |
 | GitHub access from this machine | **Over SSH only** (the Windows certificate store blocks the HTTPS sign-in, §1). Key `~/.ssh/id_ed25519_tajweed` (no passphrase, fingerprint `SHA256:EPCRVeCpF+Jvsj40LKpu4Cta+mKF3ivLO8szlC2k/Po`), registered in the author's account as "Tajweed project - work laptop" (he confirmed it himself). Each of the five repositories uses it through its local `core.sshCommand`; remotes are `git@github.com:Omar-Sherif-Sayed/<name>.git`. A new clone on this machine needs the same two settings. Test: `ssh -i ~/.ssh/id_ed25519_tajweed -o IdentitiesOnly=yes -T git@github.com`. |
 | Folder name | `C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences` — renamed by the author on 2026-11-17. |
 | GitHub account | `Omar-Sherif-Sayed` — <https://github.com/Omar-Sherif-Sayed?tab=repositories>. Pushing is allowed for this product (R1); push at the end of every task. |
-| **Next task** | `P0-11` round 2 — after the author answers the download questions of 2026-11-17: the first-launch flow (language → colour direction, light / dark), real mushaf pages in the old Madinah layout (pages 1, 2, 5, 545), a Quran-font comparison, and the Sources screen; tokens keep all three directions. Then the remaining screens. |
-| Waiting for the author | Permission to download the DigitalKhatt layout and fonts (and, if wanted, the King Fahd Complex fonts from a mirror) · his printed page 5: does ayah 25 take four lines? |
+| **Next task** | The author reviews round 2 (first-launch screen, default Quran font, page look, Sources screen) and checks the quarter sign at 15:49 on his printed copy. Then `P0-11` round 3: the remaining screens in all three directions; or, if he prefers, `P0-06` + `P0-07` (backend scaffold) in parallel. |
+| Waiting for the author | His review of round 2 · the default Quran font · the quarter sign of 15:49 or 15:50 in his printed mushaf. |
 
 **At the end of every session:** update the table above, the statuses in §14.1, the change log §19; write or extend
 the session record; commit as the author (§1). Details: `docs/plan/execution-plan.md` §1.
@@ -324,6 +324,10 @@ calculation exist once, so the two phones cannot disagree.
 | Quran Foundation API — `api-docs.quran.foundation` | Text, tafsirs, translations, audio with timings | ✔ Needs registration: OAuth2 client credentials, secret kept on our server; has its own developer terms (the text must not be modified). ☐ Request access; read the terms. |
 | الدرر السنية — `dorar.net/article/389` | Hadith search with grading | ✔ A JSON search service for site owners exists (`dorar_api.json?skey=`). ☐ No published terms found — ask Dorar for permission and for the allowed use. |
 | Angular, Spring Boot, PrimeNG | Versions and licences | ✔ §4. |
+| Tanzil Quran Metadata 1.0 — `tanzil.net/res/text/metadata/quran-data.xml` | Page, juz, hizb-quarter and sajdah positions of the Madinah mushaf | ✔ Downloaded 2026-11-17 (SHA-256 in `docs/design/prototypes/assets/README.md`); Tanzil terms (CC BY 3.0). 604 pages, 240 quarters. |
+| DigitalKhatt — `github.com/DigitalKhatt` | The whole Quran laid out as the printed old Madinah mushaf (1405H): 604 pages × 15 lines; the fonts DigitalKhatt Old Madina and New Madina | ✔ Layout in `digitalkhatt.org` (MIT); fonts SIL OFL 1.1 (stated in the repositories and inside the font). ✔ Verified 2026-11-17 against Tanzil: 0 word differences in 6,236 ayahs, 0 page-start differences in 604 pages; page 545 equals the author's photo; page 5 equals his printed copy. ⚠ The text's own origin is not stated by DigitalKhatt — the check above is what makes it usable. |
+| King Fahd Complex fonts — via the mirror `github.com/nuqayah/qpc-fonts` | QCF page fonts (1405H, one font per page, each word the printed shape) and Uthmanic Script HAFS | ⚠ The Complex's site offers no download today («قريباً»); its copyright page is gone (404). Page fonts: "All rights reserved" only — **used by the author's decision (2026-11-17)**, credited, permission requested (`P0-13`). Hafs 0.09: licence inside the font allows use, copy and distribution, forbids sale and modification; ⚠ it does not draw U+06DF, so it is not usable as is. |
+| Google Fonts — `github.com/google/fonts` | Amiri Quran, Scheherazade New, IBM Plex Sans Arabic, Inter, Noto Naskh Arabic | ✔ All SIL OFL 1.1 (`ofl/` folders with `OFL.txt`, checked 2026-11-17). |
 | Apple notifications | Adhan on iPhone | ✔ A notification sound must be under 30 seconds (Apple documentation) — §8.6. |
 
 ### 7.2 Candidates — ☐ to verify before use (licence, completeness, accuracy)
@@ -414,6 +418,15 @@ words.**
     mirrors with no licence file — not usable until the licence is confirmed (§6.8).
   - **QUL (qul.tarteel.ai) layout databases** — ⚠ the resource page says it has no copyright information; several
     open questions ask the same. Not usable until answered.
+- **Round 2 findings (2026-11-17)** — details in `docs/design/prototypes/assets/README.md`:
+  - The **King Fahd page fonts** reproduce the printed page exactly (checked on pages 1, 2, 5, 545, 546). Their
+    glyph list matches the layout word by word except in **9 ayahs** (2:79, 13:37, 18:1, 19:38, 36:52, 69:8, 69:28,
+    75:27, 83:14 — mostly saktah signs drawn as separate glyphs) and gives page 588 instead of 589 for 83:35: these
+    need an explicit, reviewed table in `P0-12` before every page is shipped.
+  - **Quarter sign at 15:49 or 15:50:** the layout and the King Fahd data put it at 15:49; Tanzil's metadata at
+    15:50. ☐ The author checks his printed copy; the printed mushaf decides.
+  - **Fonts that can ship:** King Fahd page fonts (author's decision), DigitalKhatt Old and New Madina, Amiri Quran,
+    Scheherazade New. KFGQPC Uthmanic HAFS 0.09 cannot (missing mark). ☐ The author chooses the default.
 - **Justification:** printed lines are filled by stretching letters (kashida), not by wider spaces. The DigitalKhatt
   fonts can do this; other fonts can only widen spaces. ☐ Decided with the font (P0-12).
 - **The coloured name of Allah is withdrawn.** History, so that it is not proposed again without new facts: requested
@@ -679,6 +692,10 @@ Agreed for both platforms whatever the option:
   theme. First launch asks the language, then the colour direction (with a preview); both can be changed in
   settings. The Quran font is a reader setting; the author wants more fonts close to the printed mushaf to compare
   (round 2). The design tokens therefore keep all three directions (`docs/design/tokens.json`).
+- **Round 2 (2026-11-17) — waiting for the author's review:** `docs/design/prototypes/round-2.html` — the first
+  launch on **one screen** (language, colour direction and light / dark, with a live example, as the author asked),
+  the home screen, mushaf pages 1, 2, 5, 545, 546 exactly as printed with six Quran fonts, a two-page view, and the
+  Sources screen (F17). Details: `docs/design/README.md`.
 - Screens to design: language choice, colour-direction choice, sources (F17), home, Quran reader (+ ayah actions: play, tafsir, bookmark), player, reciter
   picker, tajweed lesson, radio list and player, prayer times (six backgrounds), adhan settings, Qibla, adhkar list and
   counter, hadith, book reader, settings, about.
@@ -726,9 +743,9 @@ reviewer). Task ids: `P<phase>-<area><n>`, areas **D** data · **B** backend · 
 | P0-08 | Scaffold `tajweed-frontend`: Angular 22, Material, Tailwind, wrappers, language choice, CI | ☐ |
 | P0-09 | Scaffold `tajweed-android`: Kotlin, Compose, both languages, CI | ☐ (needs P0-05) |
 | P0-10 | Scaffold `tajweed-ios`: generated project, SwiftUI, CI on a macOS runner | ☐ |
-| P0-11 | Design: tokens, 2–3 colour directions, HTML prototypes, the author's approval, then Figma | ◐ round 1 done 2026-11-17 (three directions, four screens, draft tokens); ⏸ the author's choice; then the remaining screens and Figma |
-| P0-12 | Data-source register; choose the Quran text and font; checksums | ☐ (the Tanzil Uthmani file is already downloaded for the design, with its checksum: `docs/design/prototypes/assets/tanzil/README.md`) |
-| P0-13 | Permission letters, sent by the author, tracked | ☐ |
+| P0-11 | Design: tokens, 2–3 colour directions, HTML prototypes, the author's approval, then Figma | ◐ round 1 (2026-11-17): three directions, all kept; round 2 (2026-11-17): first launch on one screen, mushaf pages as printed, six fonts, Sources screen — ⏸ the author's review; then the remaining screens and Figma |
+| P0-12 | Data-source register; choose the Quran text and font; checksums | ◐ layout and fonts found and verified for the design (old Madinah 1405H, DigitalKhatt + King Fahd page fonts, Tanzil text) — files, checksums and results in `docs/design/prototypes/assets/README.md`; still to do: the register, the default font, the 9-ayah glyph table, the quarter at 15:49, the move to the backend repository |
+| P0-13 | Permission letters, sent by the author, tracked | ☐ — includes a letter to the King Fahd Complex for its page fonts (author's decision 2026-11-17: use them and ask) |
 | P0-14 | Content pipeline decisions D1, D2; API contract for phase 1 | ☐ |
 | P0-15 | Phase 0 review with the author | ☐ |
 
@@ -876,3 +893,4 @@ explicit yes** (it is public); R3 (permanent) and R10 (public) need the author's
 | 2026-11-17 | Fifth update of the day: the author agreed to an SSH key and confirmed it on GitHub himself; **all five repositories were pushed** and checked on GitHub (§0); Android Studio and the SDK are installed (P0-05 done). Phase 0 tasks 01, 02, 03 and 05 are done. |
 | 2026-11-17 | Sixth update of the day: design round 1 (`docs/design/`, §13) — three colour directions on four screens, draft tokens; the Tanzil Uthmani text downloaded with the author's permission for the reader mock-up (SHA-256 recorded, file kept untouched); documents and designs of this repository licensed CC BY 4.0 (P0-04 done). |
 | 2026-11-17 | Seventh update of the day (author's feedback on design round 1): all three colour directions are built, chosen at first launch after the language, each with light and dark (F18, §13); more languages later — German, Italian, Japanese, Chinese (§8.9); the reader reproduces the printed Madinah mushaf page by page and line by line (F2, §8.1 — research: the author's page 545 matches the old Madinah 1405H layout; DigitalKhatt data and fonts are the open candidates); a Sources section listing every source (F17); more Quran fonts to compare. |
+| 2026-11-17 | Eighth update of the day: design round 2 built and checked (`docs/design/`): first-launch screen with language, colour direction and light / dark on one page; mushaf pages exactly as printed; six Quran fonts; Sources screen. The old-Madinah layout (DigitalKhatt) verified against Tanzil — 0 word differences in 6,236 ayahs, 0 page-start differences in 604 pages; page 5 confirmed by the author on his printed copy. King Fahd page fonts used by the author's decision; KFGQPC Hafs 0.09 rejected (missing mark). Open: the quarter sign at 15:49 / 15:50, 9 ayahs in the King Fahd glyph list (§8.1). |

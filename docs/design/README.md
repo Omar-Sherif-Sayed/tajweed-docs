@@ -1,59 +1,62 @@
 # Design
 
 The design of the three applications (web, Android, iPhone) is made once, here. Rules and background: parent
-[`AGENTS.md`](../../AGENTS.md) §13; task `P0-11` in [`../plan/execution-plan.md`](../plan/execution-plan.md).
+[`AGENTS.md`](../../AGENTS.md) §13 and §8.1; task `P0-11` in [`../plan/execution-plan.md`](../plan/execution-plan.md).
 
 | File | What it is | State |
 | --- | --- | --- |
-| [`prototypes/colour-directions.html`](prototypes/colour-directions.html) | **Round 1.** Three colour directions on four screens (language choice, home, Quran reader, player), Arabic and English, light and dark, three Quran fonts to compare. One file — open it in any browser. | waiting for the author's choice |
-| [`tokens.json`](tokens.json) | The colours of the three directions as data. After the choice it keeps one direction and gains typography, spacing, radius and the prayer backgrounds. | draft |
-| [`prototypes/assets/tanzil/`](prototypes/assets/tanzil/) | The untouched Quran text file used by the prototypes, with its source, options and checksum. | see its README |
-| [`prototypes/tools/build_quran_sample.py`](prototypes/tools/build_quran_sample.py) | Copies a few ayahs from that file into the prototype pages. Nobody types Quran text. | — |
+| [`prototypes/round-2.html`](prototypes/round-2.html) | **Round 2 (current).** First launch on one screen (language, colour direction, light / dark, live example); mushaf pages 1, 2, 5, 545, 546 exactly as printed; six Quran fonts to compare; the Sources screen; a two-page view. One self-contained file (3.1 MB, fonts inside). | waiting for the author's review |
+| [`prototypes/colour-directions.html`](prototypes/colour-directions.html) | Round 1: the three colour directions on four screens, with the contrast table. | done — all three directions kept |
+| [`tokens.json`](tokens.json) | The colours of the three directions, light and dark. Typography, spacing and the prayer backgrounds follow. | all three directions kept (decision 2026-11-17) |
+| [`prototypes/assets/`](prototypes/assets/) | The untouched source files (Quran text, metadata, page layout, fonts) with checksums, origins and licences. | see its README |
+| [`prototypes/tools/`](prototypes/tools/) | `verify_mushaf_layout.py` (checks the layout against Tanzil), `build_round2.py` (writes the data and fonts into round 2), `build_quran_sample.py` (round 1), `read_font_licence.py` (prints the licence stored in a font). Nobody types Quran text. | — |
 
-## How to look at round 1
+## How to look at round 2
 
-Open `prototypes/colour-directions.html`. Use the four switches at the top: **Direction** (A, B, C), **Theme**,
-**Language**, **Quran font**. Below the phones, the page lists the colours of the selected direction and checks the
-contrast of every text / background pair (4.5 : 1 or more is required for text).
+Open `prototypes/round-2.html` in a browser (Chrome, Edge, Firefox). Everything is inside the file except four
+Google fonts (Amiri Quran, Scheherazade New, IBM Plex Sans Arabic, Inter), which need a network connection.
 
-A start state can be written in the address, for example `colour-directions.html#c-dark-en-amiri`.
+- **Phone 1 — first launch.** Tap a language, a colour direction and light or dark: the whole screen and the example
+  change at once, and so do the other phones.
+- **Phone 3 — the mushaf page.** Use the arrows or the "Page" switch (1, 2, 5, 545, 546) and the font chips.
+- **Section 5** shows pages 545 and 546 side by side, to hold next to the printed copy.
+- **Section 6** shows the first line of page 5 in the six fonts, with each font's licence.
 
-| Direction | Idea |
-| --- | --- |
-| **A · Emerald and gold on parchment** | The classic look of printed mushafs and mosques: deep green, gold lines, warm paper. |
-| **B · Deep teal and sand** | Calmer and more modern: blue-green, white cards, sand accents. |
-| **C · Mushaf** | After the author's printed mushaf: cream page, black text, dark red and black frame. |
+A start state can be given in the address: `round-2.html#c-dark-en-qcf-545` (direction, theme, language, font, page).
+
+## The six Quran fonts
+
+| Font | Looks like the printed mushaf | Licence | Can ship? |
+| --- | --- | --- | --- |
+| **King Fahd Complex page fonts (QCF, 1405H)** | Identical — each word is the printed mushaf's own shape | "All rights reserved"; no official licence text found; the author decided to use them and request permission | yes, by the author's decision (2026-11-17); permission letter in `P0-13` |
+| **DigitalKhatt Old Madina** | Very close — a font made for the 1405H Madinah mushaf | SIL OFL 1.1 | yes |
+| **DigitalKhatt New Madina** | Close — the newer Madinah style | SIL OFL 1.1 | yes |
+| **Amiri Quran** | Naskh, classic book style | SIL OFL 1.1 | yes |
+| **Scheherazade New** | Naskh, very readable | SIL OFL 1.1 | yes |
+| KFGQPC Uthmanic Script HAFS 0.09 | Madinah style | KFGQPC licence (free use, no modification) | ⚠ no — this version does not draw one mark of the verified text (dotted circles) |
 
 ## What is real and what is a sample
 
-- **Real:** the Quran text (surah 1, and surah 2 ayahs 1–5), copied by the script from the Tanzil file, with full
-  tashkeel; the ayah counts shown in the surah headers (counted from the same file).
-- **Sample:** the prayer name and time, "continue reading", the reciter, the playing position. They only show the
-  layout.
-- **Display layers added by the page, not part of the text:** the ayah-number signs between ayahs, the highlight of
-  the playing ayah, the basmala of surah 2 on its own line.
+- **Real:** every Quran word and line. The page layout (DigitalKhatt, old Madinah 1405H) was checked against the
+  Tanzil text: 0 differences in 6,236 ayahs; page starts: 0 differences in 604 pages; page 545 matches the author's
+  photo; page 5 matches his printed copy. Details: `prototypes/assets/README.md`.
+- **Display layers, not part of the text:** the ayah-number signs for the Amiri and Scheherazade rows (the Tanzil text
+  has none), the surah header frame, the page header (surah, juz, hizb) and the page number.
+- **Sample:** prayer time, "continue reading", the reciter.
 
 ## Checked on 2026-11-17
 
-- All three directions, light and dark, Arabic (right to left) and English (left to right), were opened and looked at.
-- Every text / background pair listed on the page passes 4.5 : 1 in all six combinations.
-- The three Quran fonts load and draw the text. ⚠ **Not checked yet:** each tashkeel and pause mark against a printed
-  mushaf, font by font — that is part of choosing the text and the font (task `P0-12`).
+- Pages 1, 2, 5, 545 and 546 in the King Fahd page fonts, DigitalKhatt Old Madina and Amiri Quran; direction A light
+  Arabic, B light English, C dark English. Fixed during the check: page 1 was measured before its font arrived (it was
+  cut off); the wordmark overlapped the tagline in English.
+- No errors in the browser console.
+- ⚠ Not checked: every page of every font against a printed mushaf (only the five pages above); lines are justified by
+  widening spaces, while the printed mushaf stretches letters — a decision for `P0-12`.
 
-## Limits of these prototypes
+## Next
 
-- Fonts come from Google Fonts **for the prototype only** (Amiri Quran, Scheherazade New, Noto Naskh Arabic, IBM
-  Plex Sans Arabic, Inter — ☐ the licence of each is recorded before it is used in an application). The applications
-  will ship their fonts inside them: no third-party request at run time.
-- The font of the Madinah mushaf (King Fahd Complex) is not among the three, because it is not on Google Fonts; it
-  is compared in task `P0-12`.
-- The reader shows a scrolling page, not yet the 604-page layout.
-- Media buttons (previous / play / next) keep the same order in both languages, as in most players.
-
-## Next rounds
-
-1. The author chooses a direction (or asks for changes) and a first opinion on the Quran font.
-2. `tokens.json` becomes final for phase 1; the remaining screens are drawn in the chosen direction: reciter picker,
-   search, prayer times (six backgrounds), Qibla, radio, adhkar counter, tajweed lesson, hadith, book reader,
-   settings, About — phone and desktop width.
-3. After approval, the Figma file is made in the author's account.
+1. The author reviews round 2: the first-launch screen, the fonts (which one is the default), the page look, the
+   Sources screen.
+2. The author checks the quarter sign at 15:49 on his printed copy (`prototypes/assets/README.md`).
+3. Then: the remaining screens in all three directions (reciter picker, search, prayer times with six backgrounds,
+   Qibla, radio, adhkar counter, tajweed lesson, hadith, book reader, settings, About), phone and desktop; then Figma.

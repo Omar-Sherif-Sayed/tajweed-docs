@@ -16,3 +16,7 @@ Desktop.ini
 # Never commit raw session transcripts or private material (docs/README.md)
 *.jsonl
 /private/
+
+# Python caches
+__pycache__/
+*.pyc

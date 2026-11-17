@@ -474,3 +474,92 @@ The layout works, but the Quran text did not load in the app's viewer because it
 All three directions render correctly in both languages and themes, and every text colour pair passes the contrast check. Now writing the draft tokens, the licence and the notes, then committing.
 
 Plan documents updated. Last step: session record, commit and push.
+
+Design round 1 is ready, committed and pushed: one page showing three colour directions on four screens. Open [colour-directions.html](docs/design/prototypes/colour-directions.html) and use the four switches at the top (direction, theme, language, Quran font).
+
+#### The three directions
+
+| Direction | Idea |
+| --- | --- |
+| **A · Emerald and gold** | The classic look of printed mushafs: deep green, gold lines, warm paper. |
+| **B · Teal and sand** | Calmer and more modern: blue-green, white cards, sand accents. |
+| **C · Mushaf** | After your printed mushaf: cream page, black text, dark red and black frame. |
+
+Each one shows the language choice, home, Quran reader and player, in Arabic and English, light and dark. My recommendation is A: it is the most familiar for a Quran app and the green works well in both themes. B is also there if you prefer it; just type it.
+
+#### What is real and what is a sample
+
+- **Real:** the Quran text on the reader screen (Al-Fatihah and the first five ayahs of Al-Baqarah). A script copies it from the Tanzil file you approved; nobody typed it. The file has 6,236 ayahs and 114 surahs, and its checksum is recorded.
+- **Sample:** the prayer time, "continue reading", the reciter and the playing position. They only show the layout.
+
+#### What I checked
+
+- I opened the page in several combinations of direction, theme and language (not every one by eye), and each of the three fonts.
+- Every text and background colour pair passes the contrast limit in all six direction-and-theme combinations. One pair in direction A failed at first and I darkened it.
+- **Not checked:** each tashkeel and pause mark against a printed mushaf, font by font. That belongs to choosing the final text and font. The three fonts on the page are only the ones available from Google Fonts; the Madinah mushaf font will be compared then.
+
+#### Also done
+
+- **Licence:** the documents and designs in `tajweed-docs` are now CC BY 4.0, as you chose. The Tanzil file keeps its own licence.
+- **Records:** the plan, session record and conversation copy are updated and pushed.
+
+Besides the direction, tell me which Quran font looks best to you, and anything you want changed (colours, the frame, the home layout). After that I will draw the remaining screens in the chosen direction.
+
+Files are in `docs/design`:
+- [README.md](docs/design/README.md)
+- [tokens.json](docs/design/tokens.json)
+
+## The author — 2026-11-17 18:16
+
+```text
+* i want all directions implemented and choosing one after first time opening the app or web like language 
+* in the feature we may add other languages, like German, Italian, Japanese, and Chinese
+* i want all pages like pages in the real moshaf, يعني أول صفحة يكون فيها الفاتحة وزي المصاحف العادية صفحة 5 تبدأ بالأيه رقم 25 من سورة البقرة واول 3 اسطر يمثلون الاية رقم 25 واول سطر ينتهي بكلمة جنات - بمعني ان يكون كالمصحف العادي وذلك لتسهيل الحفظ لمن يريد الحفظ بالقرائة فلا يجد اي اختلاف بين هذا المصحف والحقيقي - كذلك الأحزاب وترقيمها في اماكنها الصحيحة 
+* يرجي عمل سيكشن لذكر المصادر في الابليكيشنز او الويب - كل المصادر كلهااااا
+* كما اتفقنا ممكن للمستخدم اختيار ال direction and each one has it is them dark or light, so we will implement every thing
+* also the font, i need to see more fonts like the real the Noble Quran , recommend more fonts
+```
+
+## The agent — 2026-11-17 18:17
+
+The page-by-page layout needs its own data source: the Tanzil text has no line breaks. I'm researching that first.
+
+The layout data on QUL has no clear licence, which matters for a public app. Checking the open-source DigitalKhatt project and the official sources directly.
+
+DigitalKhatt has the Madinah mushaf text laid out page by page and line by line in an MIT-licensed repository. Checking your page-5 example against it.
+
+Your page-5 example matches this layout exactly. Your photo of page 545 has different line breaks though, so I'm checking DigitalKhatt's second layout, the old Madinah edition, against it.
+
+That denial was for running downloaded code as JavaScript; I should not have done that. Reading the same files as plain text instead.
+
+The King Fahd Complex's own site currently lists all its fonts as «قريباً» (coming soon): there is no official download today. Checking the best-known mirror and its licence notes.
+
+Research is done. Recording your new decisions in the plan before asking about the downloads.
+
+Git Bash rewrote the leading `/` in the paths into Windows folders. Fixing that.
+
+All needed files are downloaded except the new-Madinah DigitalKhatt font. Fetching that one, then reading the licence text embedded in each font.
+
+Now the verification script: it compares the two sources and changes nothing.
+
+Now writing the build script. It reads only the verified files, places the verified words on the printed lines, embeds the fonts, and stops if anything does not match.
+
+Cleaning two leftover lines in the script before running it.
+
+Now the round-2 page itself.
+
+One wrong assumption: I counted U+06DC (the small seen written above some letters, as in «يَبْصُۜطُ») as a pause mark. It belongs to the word. Fixing it in both scripts.
+
+Built: 3.1 MB, every font and word inside the one file. Opening it to check the rendering.
+
+The preview pane will not open a 3 MB local file directly, so I'll serve the folder with a small local web server instead.
+
+The King Fahd page font renders page 5. Zooming in to compare it with the printed page.
+
+Page 1 is cut off at the edges: the size was measured before its page font had finished loading. Fixing it so pages are re-measured when a font arrives.
+
+Page 1 now fits but is drawn smaller than needed. Adjusting that, then checking all six fonts side by side.
+
+Rendering is fixed and there are no console errors. Now the documentation: provenance and licences of every new file, the verification results, and the plan updates.
+
+Now the parent plan: sources, findings, task status, and the state for the next session.

@@ -6,3 +6,9 @@
 
 # The downloaded Quran text must stay byte for byte as published (its checksum is recorded).
 docs/design/prototypes/assets/tanzil/*.txt -text
+# Source files of the design prototypes: kept byte for byte (checksums in docs/design/prototypes/assets/README.md).
+docs/design/prototypes/assets/** -text
+*.ttf binary
+*.TTF binary
+*.otf binary
+*.woff2 binary

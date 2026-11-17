@@ -36,13 +36,14 @@ repository the task touches → (6) the last record in [`docs/sessions/`](docs/s
 | --- | --- |
 | Date | 2026-11-17 |
 | Phase | **0 — Foundations** (§14) |
-| Exists | This documentation repository, local only: parent `AGENTS.md`, `README.md`, the detailed plan, one session record with a conversation copy, two commits. |
-| Does not exist | Any GitHub repository, any application code, any design, the data-source register. |
-| Last task done | `P0-01` Documentation repository. |
+| Exists | **On GitHub:** five public repositories under `Omar-Sherif-Sayed`, created 2026-11-17, **still empty there — nothing is pushed yet.** **On this machine:** this documentation repository (parent `AGENTS.md`, `README.md`, the detailed plan, a session record with a conversation copy), and the four application folders, each with one commit: `README.md`, `AGENTS.md`, `LICENSE` (MIT), `.gitignore`. |
+| Does not exist | Any application code, any design, the data-source register. |
+| Last task done | `P0-02` (the author's confirmations). `P0-03` is half done: the repositories are created, the push is blocked — see the next rows. |
+| ⚠ Push is blocked | This machine's Windows certificate store does not trust GitHub's certificate chain (the roots are missing and the automatic root update is disabled by the administrator's policy). Git itself can connect with `-c http.sslBackend=openssl` (certificate checking stays on), but the sign-in helper (Git Credential Manager) cannot, so HTTPS has no way to sign in. **SSH works** (`github.com:22` and `ssh.github.com:443` answer; the host key matches GitHub's published fingerprint). Way forward: an SSH key for this product only, registered in the author's GitHub account — it needs his yes. Never switch certificate checking off. |
 | Folder name | `C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences` — renamed by the author on 2026-11-17. |
-| GitHub account | `Omar-Sherif-Sayed` (read from the author's Chrome session, 2026-11-17). No repository named `tajweed-*` exists there yet. |
-| **Next task** | `P0-02` — the author says yes to R1 (create the five public repositories and push), confirms the application id `io.github.omarsherifsayed.tajweed` (R3) and chooses the commit e-mail (R10). Then `P0-03`, and `P0-11` (design) in parallel. |
-| Waiting for the author | R1 · R3 · R10 · Android Studio installed (`P0-05`; it was installing on 2026-11-17) · read this file and `docs/sessions/` once before they become public. |
+| GitHub account | `Omar-Sherif-Sayed` (read from the author's Chrome session, 2026-11-17). Remotes are set in all five local repositories (HTTPS URLs; they change to SSH URLs when the key is in place). |
+| **Next task** | Finish `P0-03`: after the author's yes — create the SSH key, register it on GitHub, switch the five remotes to SSH, push `main` of all five, check each repository page. Then `P0-11` (design) and `P0-06` / `P0-07` (backend scaffold). |
+| Waiting for the author | His yes to the SSH key (or his own fix of the certificates through the administrator) · Android Studio: he is reinstalling it through JetBrains Toolbox (the Android SDK folder already exists). |
 
 **At the end of every session:** update the table above, the statuses in §14.1, the change log §19; write or extend
 the session record; commit as the author (§1). Details: `docs/plan/execution-plan.md` §1.
@@ -58,9 +59,8 @@ The author's own rules — the same in all his projects:
 - **Commits (author, 2026-11-16):** the agent may commit. The commit author is always **Omar Sherif** with the author's
   own e-mail (set per repository with `git config user.name` / `user.email`); no AI co-author and no "generated with"
   line in a commit message. **Pushing and creating repositories: only after the author says so** (§18.2 R1).
-  ⚠ The author's GitHub account has "Keep my email addresses private" switched on, but an address written in a commit
-  is public once the commit is pushed — which address the commits carry is point R10 (§18.2), decided before the
-  first push.
+  The commits carry the author's personal address — the one his GitHub account is registered with (his decision,
+  2026-11-17, R10); it is visible in the public history.
 - **After every task, update the `AGENTS.md` of every repository the task touched** (and its `README.md` for human
   readers), plus this parent file when scope, structure, sources or decisions change.
 - **Document everything.** Documents go in `docs/<kind>/` of the owning repository with an index `docs/README.md`;
@@ -71,8 +71,14 @@ The author's own rules — the same in all his projects:
 - **The plan lives in files.** Every decision, every task and its status is written in this repository on the day it
   happens, so that another agent or another model can continue without the conversation (§0).
 - Platform is Windows 11 (PowerShell + Git Bash). Installed (checked 2026-11-17): JDK 25, Node 22, Git, Python 3.13,
-  Docker. Not installed: the GitHub CLI (`gh`), the PostgreSQL client, Android Studio / the Android SDK (the author is
-  installing Android Studio Rabbit 2 Patch 1 — ✔ the current version on developer.android.com, 2026-11-17).
+  Docker, the Android SDK (Android Studio Rabbit 2 Patch 1; the author is moving it to JetBrains Toolbox). Not
+  installed: the GitHub CLI (`gh`), the PostgreSQL client.
+- ⚠ **Certificates on this machine (checked 2026-11-17).** The Windows certificate store lacks the roots of GitHub's
+  certificate chain, and the automatic root update is disabled by policy. Programs that use the Windows store fail on
+  `github.com` with "untrusted root" (Git's default `schannel` backend, Git Credential Manager, and probably `gh`).
+  Programs with their own certificate bundle work (Chrome, Git with `-c http.sslBackend=openssl`, OpenSSH; npm and
+  Maven Central were reachable). **Never disable certificate checking** to get around it; use SSH for GitHub, and
+  report any other failing host to the author.
 
 ## 2. The product
 
@@ -656,10 +662,10 @@ reviewer). Task ids: `P<phase>-<area><n>`, areas **D** data · **B** backend · 
 | Task | What | Status |
 | --- | --- | --- |
 | P0-01 | Documentation repository: this folder, `docs/`, the detailed plan, first session record, first commit | ✔ 2026-11-17 (local; GitHub in P0-03) |
-| P0-02 | The author confirms R1 (create and push), R3 (application id) and R10 (commit e-mail) — §18.2 | ⏸ author |
-| P0-03 | Create the five public GitHub repositories through the author's Chrome session; remotes; first push | ⏸ needs an explicit yes (R1) |
-| P0-04 | Licences: MIT for code; the licence of these documents; the content notice | ☐ |
-| P0-05 | Machine: install Android Studio; confirm Docker runs | ⏸ author |
+| P0-02 | The author confirms R1 (create and push), R3 (application id) and R10 (commit e-mail) — §18.2 | ✔ 2026-11-17 |
+| P0-03 | Create the five public GitHub repositories through the author's Chrome session; remotes; first push | ◐ created and remotes set 2026-11-17; **push ⏸** — certificates block HTTPS sign-in, SSH key needs the author's yes (§0) |
+| P0-04 | Licences: MIT for code; the licence of these documents; the content notice | ◐ MIT `LICENSE` and the content notice are in the four application repositories; the licence of the documents is still open |
+| P0-05 | Machine: install Android Studio; confirm Docker runs | ◐ the Android SDK is present; the author is reinstalling Android Studio through JetBrains Toolbox; Docker runs — re-check when P0-09 starts |
 | P0-06 | Re-verify every version on scaffold day and write it down | ☐ |
 | P0-07 | Scaffold `tajweed-backend` with CI and `GET /v1/app-info` | ☐ |
 | P0-08 | Scaffold `tajweed-frontend`: Angular 22, Material, Tailwind, wrappers, language choice, CI | ☐ |
@@ -767,19 +773,20 @@ Listed for the author to accept or reject — none is built without approval.
 
 The author read these on 2026-11-16 and did not object in his next message; the defaults are in effect. **R1 still needs an
 explicit yes** (it is public); R3 (permanent) and R10 (public) need the author's confirmation. R2 and R4 are settled.
+**Update 2026-11-17: the author answered R1 (yes), R3 (confirmed) and R10 (his personal address) — see the rows.**
 
 | # | Point | Default |
 | --- | --- | --- |
-| R1 | May the agent create the five public repositories under `Omar-Sherif-Sayed` through the author's Chrome session and push? Code licence? | The agent creates the repositories only after an explicit "yes", pushes only when told. Licence: MIT for the code; content keeps its own licences. |
+| R1 | May the agent create the five public repositories under `Omar-Sherif-Sayed` through the author's Chrome session and push? Code licence? | ✔ **Yes** (author, 2026-11-17: "Create and push: Okay"). The five repositories are created; pushing is allowed for this product from now on. Licence: MIT for the code; content keeps its own licences. |
 | R2 | A fifth public repository `tajweed-docs`. | ✔ Settled 2026-11-17 — the workspace folder itself (§3). |
-| R3 | Base Java package and the Android / iPhone application id. ⚠ **It can never be changed after the first store release.** | **`io.github.omarsherifsayed.tajweed`** — one identical value for the Java base package, the Android application id and the iPhone bundle id. It is the GitHub user name `Omar-Sherif-Sayed` in lower case **with the hyphens removed**: a Java / Android name cannot contain `-`, and an Apple bundle id cannot contain `_` (✔ Apple: only letters, digits, `-` and `.`, checked 2026-11-17), so plain letters are the only form valid everywhere. ☐ The author confirms before the first scaffold. |
+| R3 | Base Java package and the Android / iPhone application id. ⚠ **It can never be changed after the first store release.** | **`io.github.omarsherifsayed.tajweed`** — one identical value for the Java base package, the Android application id and the iPhone bundle id. It is the GitHub user name `Omar-Sherif-Sayed` in lower case **with the hyphens removed**: a Java / Android name cannot contain `-`, and an Apple bundle id cannot contain `_` (✔ Apple: only letters, digits, `-` and `.`, checked 2026-11-17), so plain letters are the only form valid everywhere. ✔ **Confirmed by the author, 2026-11-17 — final.** |
 | R4 | Red colouring. | ✔ Closed 2026-11-17 — no coloured words (§8.1). |
 | R5 | Sheikh Noreen (riwayah الدوري عن أبي عمرو). | Listening only, labelled with his riwayah, without showing or highlighting the Hafs text (§6.7). |
 | R6 | Adhan: accept the iPhone and web limits (§8.6)? Sources for the six muezzins' recordings? | Limits accepted; a muezzin is added only when a clean recording with a known origin and permission is found. |
 | R7 | Order: backend + web + Android first, iPhone after each feature is stable on Android? | Yes (§11–12). |
 | R8 | Recommendations in §17. | All accepted except the "later" items. |
 | R9 | A qualified reviewer before phases 5–7 (tajweed, adhkar, hadith) are published. | Those phases are built, but published only inside the limits of §6.10. |
-| R10 | Which e-mail do the commits carry? The author asked for his personal address; his GitHub account hides his address ("Keep my email addresses private" is on), and a pushed commit would show it to everyone, for ever. | **Recommended:** the account's GitHub "noreply" address (shown on GitHub → Settings → Emails) — the commits still appear under his name and profile, and the personal address stays private. Until he answers, the local commits carry the personal address as he asked; they are rewritten before the first push if he chooses the noreply address. |
+| R10 | Which e-mail do the commits carry? The author asked for his personal address; his GitHub account hides his address ("Keep my email addresses private" is on), and a pushed commit would show it to everyone, for ever. | ✔ **Decided by the author, 2026-11-17: his personal address** — the one his GitHub account is registered with — in every commit of this product. (The agent had recommended the account's "noreply" address; the author chose otherwise, knowing the address is public in the history.) |
 
 ### 18.3 Original questions (2026-11-16, kept for reference)
 
@@ -810,3 +817,4 @@ explicit yes** (it is public); R3 (permanent) and R10 (public) need the author's
 | 2026-11-17 | Name accepted: «تجويد - القرآن الكريم وعلومه» (§2). The workspace folder became the documentation repository `tajweed-docs` (§3) with `README.md`, `docs/README.md`, `docs/plan/execution-plan.md` and the first session record. Added §0 "Start here" (handoff for any agent or model), the contents table and §14.1 (every task with its status). Machine checked: Docker installed, Android Studio not. First commit as the author; nothing pushed. |
 | 2026-11-17 | Second update of the day (author's message): the coloured name of Allah is withdrawn — a standard one-colour mushaf with full tashkeel (§8.1, R4 closed); new feature F16 Quran search (word with or without tashkeel, surah name, ayah number) with a separate search text; the name is written with a plain hyphen and the workspace folder is named `Tajweed - The Noble Quran and Its Sciences` (§3); references to the author's other projects removed; the application id formula explained (R3) — the GitHub user name is still needed; Android Studio Rabbit 2 Patch 1 confirmed as the current version. |
 | 2026-11-17 | Third update of the day: the author renamed the workspace folder; GitHub account read from his Chrome session — `Omar-Sherif-Sayed` (§0, §3); application id proposed as `io.github.omarsherifsayed.tajweed`, valid on Java, Android and iPhone (R3 — corrects the earlier "hyphen becomes underscore" note, which Apple does not accept); new point R10, the e-mail carried by the commits; §3 now lists what each repository holds; a conversation copy of the session added to `docs/sessions/`. |
+| 2026-11-17 | Fourth update of the day: the author said yes to creating and pushing (R1), confirmed the application id (R3) and chose his personal address for the commits (R10). The five public repositories were created on GitHub; the four application folders got their first commit (`README.md`, `AGENTS.md`, MIT `LICENSE`, `.gitignore`). **The push did not happen:** the machine's certificate store blocks the HTTPS sign-in (§0, §1); SSH is reachable and is the way forward once the author agrees to an SSH key. |

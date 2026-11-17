@@ -20,7 +20,8 @@ the permission letters, the designs and the session records. It holds no applica
 | `tajweed-android` | Android application (Kotlin, Jetpack Compose) |
 | `tajweed-ios` | iPhone application (Swift, SwiftUI) |
 
-The four application repositories do not exist yet.
+All five repositories are at <https://github.com/Omar-Sherif-Sayed>. The four application repositories hold no code
+yet.
 
 ## Where to read
 

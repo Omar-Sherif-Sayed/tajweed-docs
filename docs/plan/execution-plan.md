@@ -53,6 +53,7 @@ acceptance. Phase 0 tasks are `P0-01` … Release-track tasks are `RT-01` …
 | PostgreSQL client (`psql`) | not installed — not needed (Docker) |
 | **Android Studio / Android SDK** | ⚠ **not installed yet** — the author is installing Android Studio Rabbit 2 Patch 1 (✔ the current version on developer.android.com, 2026-11-17); needed before `P0-09` |
 | GitHub CLI (`gh`) | not installed — repositories are created through the author's Chrome session |
+| **Certificates** | ⚠ the Windows store does not trust GitHub's certificate chain and the automatic root update is disabled by policy: Git Credential Manager cannot sign in over HTTPS. Git works with `-c http.sslBackend=openssl`; SSH to GitHub works. Use SSH for GitHub; never disable certificate checking (`AGENTS.md` §1) |
 | Mac / Xcode / iPhone | ⚠ none — `AGENTS.md` §11–12 |
 
 ---
@@ -89,6 +90,12 @@ they cannot be undone or are public:
   `tajweed-frontend`, `tajweed-android`, `tajweed-ios`. Description in English and Arabic; default branch `main`; no
   collaborators (only the author can write).
 - In each local folder: `git remote add origin …`, set `user.name` / `user.email` (§1), push `main`.
+- **State 2026-11-17:** the five repositories are created and the remotes are set. The push is blocked by the
+  machine's certificates (§2). Remaining steps, after the author's yes: create an SSH key used only for this product
+  (`~/.ssh/`, referenced by each repository's `core.sshCommand`, so that other projects on the machine are not
+  affected); register its public half in the author's GitHub account (Settings → SSH and GPG keys) through his Chrome
+  session; `git remote set-url origin git@github.com:Omar-Sherif-Sayed/<name>.git` in the five folders; push; open
+  each repository page and check that `README.md` shows.
 - ☐ Before the first push of `tajweed-docs`: the author reads `AGENTS.md` and `docs/sessions/` once — they become
   public (they contain local folder paths and the author's own messages).
 - Done when: five repositories exist, each shows its `README.md`, the parent `AGENTS.md` §3 holds the real URLs.

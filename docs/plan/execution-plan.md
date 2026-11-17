@@ -203,9 +203,10 @@ Done when: the CI build and tests are green. ⚠ "Runs on a device" is **not** c
 5. After approval: the Figma file in the author's account, through his Chrome session.
 6. ☐ Fonts: the licence of each font is checked and recorded before it is used (Quran font: `P0-12`).
 
-**State 2026-11-17 (round 2):** `docs/design/prototypes/round-2.html` — first launch on one screen (language,
-direction, light / dark, live example), mushaf pages as printed (old Madinah layout verified against Tanzil), six
-Quran fonts, two-page view, Sources screen; waiting for the author's review. Earlier (round 1): steps 1 (draft) and 2 are done — `docs/design/prototypes/colour-directions.html`, three
+**State 2026-11-17 (round 3):** two designs to choose from — design 1 (`round-2.html`, three colour directions;
+reviewed by the author, default Quran font chosen) and design 2 (`round-3.html`, "early Islam": parchment and
+ink, first launch, home, mushaf page, prayer times by location, Sources, web reader). Waiting for the author's
+choice. Round 2: first launch on one screen, mushaf pages as printed, six Quran fonts, Sources screen. Earlier (round 1): steps 1 (draft) and 2 are done — `docs/design/prototypes/colour-directions.html`, three
 directions on four screens, with real Quran text copied by `prototypes/tools/build_quran_sample.py`; the author is
 choosing. Remaining: steps 3 to 6 in the chosen direction.
 
@@ -218,10 +219,10 @@ Done when: the author has approved the colours and the key screens, and the toke
    Move the facts of `AGENTS.md` §7 into it; §7 keeps a summary.
 2. **Choose the Quran text, its layout and its font once** — prepared in design round 2: displayed text Tanzil
    Uthmani (verified), page layout DigitalKhatt old Madinah 1405H (verified against Tanzil, 0 differences), fonts:
-   King Fahd page fonts (author's decision) or the open DigitalKhatt fonts; the author chooses the default. Still to
-   settle: the 9 ayahs of the King Fahd glyph list, the quarter sign at 15:49 / 15:50, justification by letter
-   stretching. Files and results: `docs/design/prototypes/assets/README.md`.
-   Complex Hafs text — licence, matching font, how each one writes the small marks, what other applications use.
+   **default: the King Fahd page fonts (author, 2026-11-17)**; the open DigitalKhatt fonts stay as an alternative.
+   Quarter sign: 15:49, as the author's printed copy (quarter positions are taken from the layout). Still to
+   settle: the 9 ayahs of the King Fahd glyph list, justification by letter stretching. Files and results:
+   `docs/design/prototypes/assets/README.md`.
 3. Download the chosen file, record its SHA-256, keep the file untouched under `content/quran/` of the backend
    repository together with its licence notice.
 4. Choose the search text (§8.1): download it untouched, record its checksum, and prove that it has the same 6,236

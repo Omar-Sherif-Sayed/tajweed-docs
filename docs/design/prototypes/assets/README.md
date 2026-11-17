@@ -47,5 +47,6 @@ task `P0-12`; then the files move to the backend repository and the register of 
 | Lines per page | 15 on every page from 3 to 604 (pages 1 and 2: 8) |
 | Page 5 | starts with 2:25; line 1 ends with «جَنَّٰتࣲ»; ayah 2:25 takes lines 1–4 — confirmed by the author on his printed copy |
 | Page 545 | line by line the same as the author's photo |
-| Quarter signs (۞) | the layout and the King Fahd glyph data agree with each other everywhere; with Tanzil's metadata they differ at one place: **15:49** (layout, King Fahd) against **15:50** (Tanzil) — ☐ the author checks his printed copy |
+| Pages 1, 2, 263, 264, 546 | line by line the same as the author's photos of 2026-11-17 (his copy: «بالرسم العثماني», printed by دار طيبة, Cairo) |
+| Quarter signs (۞) | the layout and the King Fahd glyph data agree with each other everywhere; with Tanzil's metadata they differ at one place: **15:49** (layout, King Fahd) against **15:50** (Tanzil). ✔ The author's printed copy has it at **15:49** (photo of pages 263–264, 2026-11-17): the layout is right there |
 | King Fahd glyph data (`mushaf.txt`) | one glyph per word, per pause mark, per quarter sign, per sajdah sign and per ayah end, in all but **9 ayahs** (2:79, 13:37, 18:1, 19:38, 36:52, 69:8, 69:28, 75:27, 83:14 — mostly saktah signs drawn as separate glyphs); the page of 83:35 is given as 588 instead of 589. Handled in task `P0-12`; none is on the prototype pages |

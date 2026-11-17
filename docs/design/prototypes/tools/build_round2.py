@@ -11,6 +11,7 @@ Nothing in the Quran text is typed or changed. The script:
   4. embeds the fonts (base64) and the data into round-2.html between marker comments.
 
 Usage: python -I build_round2.py
+`build_round3.py` uses the same functions (`check_sources`, `build_data`, `embed`) for its own pages.
 """
 import base64
 import hashlib
@@ -67,11 +68,21 @@ def read(rel, mode="rb"):
 
 def main():
     sys.stdout.reconfigure(encoding="utf-8")
-    for rel, digest in SHA256.items():
+    check_sources(SHA256)
+    data = build_data(PAGES)
+    embed(PAGE, "ROUND2", data, FONTS)
+
+
+def check_sources(sha256):
+    for rel, digest in sha256.items():
         got = hashlib.sha256(read(rel).read()).hexdigest()
         if got != digest:
             fail("checksum of %s changed: %s" % (rel, got))
-    print("checksums: %d files ok" % len(SHA256))
+    print("checksums: %d files ok" % len(sha256))
+
+
+def build_data(pages):
+    """Lines of the given pages, with the layout, Tanzil and King Fahd forms of every word, all cross-checked."""
 
     tanzil = V.parse_tanzil(os.path.join(ASSETS, "tanzil/quran-uthmani.txt"))
     V.BASMALA_SKELETON = V.skeleton(tanzil[(1, 1)].replace(" ", ""))
@@ -112,7 +123,7 @@ def main():
     tz_cache, qcf_pos, rub_keys = {}, {}, set()
     quarter_index = {q: i for i, q in enumerate(quarters)}
     for pno in range(1, 605):
-        keep = pno in PAGES
+        keep = pno in pages
         lines_out = []
         first_key = None
         for lno, (rline, cline) in enumerate(zip(raw_pages[pno - 1], clean_pages[pno - 1]), start=1):
@@ -203,19 +214,24 @@ def main():
     data = {"pages": pages_out, "names": {str(k): names[k] for k in sorted({s for p in pages_out.values()
                                                                              for s in p["surahs"]})},
             "checked": {"ayahs": len(tanzil), "pages": len(meta_pages)}}
+    return data
 
-    page_html = open(PAGE, encoding="utf-8", newline="").read()
-    data_block = "window.ROUND2 = " + json.dumps(data, ensure_ascii=False) + ";\n"
+
+def embed(page, prefix, data, fonts):
+    """Writes the data (as window.<prefix>) and the fonts (base64) between the page's marker comments."""
+    page_html = open(page, encoding="utf-8", newline="").read()
+    data_block = "window." + prefix + " = " + json.dumps(data, ensure_ascii=False) + ";\n"
     css = []
-    for family, (rel, fmt) in FONTS.items():
+    for family, (rel, fmt) in fonts.items():
         b64 = base64.b64encode(read(rel).read()).decode("ascii")
         mime = {"woff2": "font/woff2", "truetype": "font/ttf", "opentype": "font/otf"}[fmt]
         css.append("@font-face{font-family:'%s';src:url(data:%s;base64,%s) format('%s');font-display:block}"
                    % (family, mime, b64, fmt))
-    page_html = replace_block(page_html, "/*ROUND2-DATA-BEGIN*/", "/*ROUND2-DATA-END*/", data_block)
-    page_html = replace_block(page_html, "/*ROUND2-FONTS-BEGIN*/", "/*ROUND2-FONTS-END*/", "\n".join(css) + "\n")
-    open(PAGE, "w", encoding="utf-8", newline="\n").write(page_html)
-    print("written round-2.html: %.2f MB" % (len(page_html.encode("utf-8")) / 1e6))
+    page_html = replace_block(page_html, "/*%s-DATA-BEGIN*/" % prefix, "/*%s-DATA-END*/" % prefix, data_block)
+    page_html = replace_block(page_html, "/*%s-FONTS-BEGIN*/" % prefix, "/*%s-FONTS-END*/" % prefix,
+                              "\n".join(css) + "\n")
+    open(page, "w", encoding="utf-8", newline="\n").write(page_html)
+    print("written %s: %.2f MB" % (os.path.basename(page), len(page_html.encode("utf-8")) / 1e6))
 
 
 def replace_block(text, begin, end, body):

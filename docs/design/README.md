@@ -5,11 +5,34 @@ The design of the three applications (web, Android, iPhone) is made once, here. 
 
 | File | What it is | State |
 | --- | --- | --- |
-| [`prototypes/round-2.html`](prototypes/round-2.html) | **Round 2 (current).** First launch on one screen (language, colour direction, light / dark, live example); mushaf pages 1, 2, 5, 545, 546 exactly as printed; six Quran fonts to compare; the Sources screen; a two-page view. One self-contained file (3.1 MB, fonts inside). | waiting for the author's review |
+| [`prototypes/round-3.html`](prototypes/round-3.html) | **Round 3 (current) — design 2, "early Islam" (صدر الإسلام).** A second, simpler design to compare with design 1: first launch, home, mushaf page (King Fahd page fonts), prayer times by location, Sources, the web reader with two pages, and what the style is made of. One file (1.2 MB). | waiting for the author's choice between design 1 and design 2 |
+| [`prototypes/round-2.html`](prototypes/round-2.html) | **Round 2 — design 1.** First launch on one screen (language, colour direction, light / dark, live example); mushaf pages 1, 2, 5, 545, 546 exactly as printed; six Quran fonts to compare; the Sources screen; a two-page view. One self-contained file (3.1 MB, fonts inside). | reviewed (2026-11-17): first launch accepted, default font chosen — King Fahd page fonts |
 | [`prototypes/colour-directions.html`](prototypes/colour-directions.html) | Round 1: the three colour directions on four screens, with the contrast table. | done — all three directions kept |
 | [`tokens.json`](tokens.json) | The colours of the three directions, light and dark. Typography, spacing and the prayer backgrounds follow. | all three directions kept (decision 2026-11-17) |
 | [`prototypes/assets/`](prototypes/assets/) | The untouched source files (Quran text, metadata, page layout, fonts) with checksums, origins and licences. | see its README |
-| [`prototypes/tools/`](prototypes/tools/) | `verify_mushaf_layout.py` (checks the layout against Tanzil), `build_round2.py` (writes the data and fonts into round 2), `build_quran_sample.py` (round 1), `read_font_licence.py` (prints the licence stored in a font). Nobody types Quran text. | — |
+| [`prototypes/tools/`](prototypes/tools/) | `verify_mushaf_layout.py` (checks the layout against Tanzil), `build_round2.py` (writes the data and fonts into round 2), `build_round3.py` (the same for round 3), `build_quran_sample.py` (round 1), `read_font_licence.py` (prints the licence stored in a font). Nobody types Quran text. | — |
+
+## Design 2 — "early Islam" (round 3)
+
+Asked by the author on 2026-11-17: a simple, beautiful design that speaks of the art of the first era of Islam,
+beside the existing design, so that one of the two is chosen for web, Android and iPhone.
+
+| Element | Inspired by | Where it is used |
+| --- | --- | --- |
+| Parchment and brown-black ink | the earliest Quran manuscripts, written on parchment | backgrounds (with a faint grain drawn by the browser), text |
+| Red dots | early copies marked the vowels with red dots (a system attributed to Abu al-Aswad al-Du'ali, d. 69 AH) | the active item, the page number, small marks — never on the Quran text |
+| Verse-end dots | early manuscripts end a verse with a group of dots or strokes | the divider between sections |
+| Palm trunks, palm-frond roof, mud brick | the Prophet's mosque — walls of mud brick, a roof of palm fronds, pillars of palm trunks, as Ibn Umar describes it in Sahih al-Bukhari 446 (dorar.net/h/wVDAbFDs) | the band at the top of the home screen; the brick texture of the prayer card; no arches, no domes (they came later) |
+| Rings and a dotted border | early Islamic coins | the logo; the prayer dial |
+| Kufic letters | the script of the early Quran manuscripts | headings, in Noto Kufi Arabic (a modern font, OFL 1.1) |
+
+One palette, light ("day") and dark ("night"); every text / background pair is at least 4.5 : 1 (checked with a
+script; the lowest is 5.2). The Quran page is the same as in design 1: the King Fahd page fonts, one text colour.
+Start state in the address: `round-3.html#dark-en-545` (theme, language, page).
+
+Checked in a browser on 2026-11-17: pages 1, 2, 5, 545, 546 in light / dark and Arabic / English — no line wider
+than its page, no console error; the web reader with the two pages; the surah start pages in the web side list
+read from Tanzil's metadata.
 
 ## How to look at round 2
 
@@ -55,8 +78,8 @@ A start state can be given in the address: `round-2.html#c-dark-en-qcf-545` (dir
 
 ## Next
 
-1. The author reviews round 2: the first-launch screen, the fonts (which one is the default), the page look, the
-   Sources screen.
-2. The author checks the quarter sign at 15:49 on his printed copy (`prototypes/assets/README.md`).
-3. Then: the remaining screens in all three directions (reciter picker, search, prayer times with six backgrounds,
+1. ✔ The author reviewed round 2 (2026-11-17): default Quran font — the King Fahd page fonts; the quarter sign is
+   at 15:49 in his printed copy.
+2. The author chooses design 1 (round 2) or design 2 (round 3).
+3. Then, in the chosen design: the remaining screens in all three directions (reciter picker, search, prayer times with six backgrounds,
    Qibla, radio, adhkar counter, tajweed lesson, hadith, book reader, settings, About), phone and desktop; then Figma.

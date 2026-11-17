@@ -563,3 +563,89 @@ Page 1 now fits but is drawn smaller than needed. Adjusting that, then checking 
 Rendering is fixed and there are no console errors. Now the documentation: provenance and licences of every new file, the verification results, and the plan updates.
 
 Now the parent plan: sources, findings, task status, and the state for the next session.
+
+Design round 2 is ready: [round-2.html](docs/design/prototypes/round-2.html). I checked it in a browser, committed it and pushed it. Open it in Chrome or Edge; it is one file with the fonts inside.
+
+#### What it shows
+
+- **First launch on one screen:** language, colour direction (A, B or C) and light or dark, with a live example. The whole screen and the other phones change as you tap.
+- **Mushaf pages exactly as printed:** pages 1, 2, 5, 545 and 546, 15 lines per page, with juz, hizb and quarter marks. Section 5 shows 545 and 546 side by side to hold next to your copy.
+- **Six Quran fonts** to switch between, and a comparison of the same line in each.
+- **The Sources screen**, listing every source with its licence and status.
+- **Future languages:** German, Italian, Japanese and Chinese are written into the plan as a rule for all four codebases: no fixed text in code, and religious content only from published translations.
+
+#### Is the text correct?
+
+- **Which edition:** your photographed page 545 matches the **old Madinah mushaf (1405H)** line by line, and your page 5 confirmed it.
+- **Layout source:** the page layout comes from DigitalKhatt, an open project under the MIT licence.
+- **Word check:** a script compared every ayah of that layout with the verified Tanzil text: **0 differences in 6,236 ayahs**.
+- **Page check:** every page start matches Tanzil's Madinah page list: **0 differences in 604 pages**.
+- **No text changed:** nobody typed or altered any Quran text; the scripts only copy and compare.
+- **Not yet checked:** I compared five pages by eye, not all 604. Lines are also spread by wider spaces, while print stretches the letters; that is left for the font task.
+
+#### Fonts
+
+| Font | Result |
+| --- | --- |
+| King Fahd Complex page fonts (1405H) | Identical to print: each word is the printed shape. Licence: "All rights reserved" only, and the Complex's copyright page no longer exists. Used by your decision; I'll prepare a permission letter. |
+| DigitalKhatt Old Madina | Very close to print; open licence |
+| DigitalKhatt New Madina | Close; open licence |
+| Amiri Quran, Scheherazade New | Classic book style; open licence |
+| King Fahd Uthmanic Hafs 0.09 | **Not usable:** this version does not draw one mark of the verified text (dotted circles appear), and the text must not be changed |
+
+#### Open points
+
+- **Quarter mark:** please check your printed copy. Is the ۞ before **15:49** «نَبِّئْ عِبَادِي» or before **15:50**? The layout and the King Fahd data say 15:49; Tanzil says 15:50. Your mushaf decides.
+- **King Fahd glyph data:** in 9 ayahs across the whole Quran (mostly the saktah signs) its glyphs are split differently. None is on these pages, but they must be handled before all 604 pages are shown.
+- **Refused action:** one of my actions, running a downloaded file as code to read it, was blocked by the safety check. That was the right call, and I read it as plain text instead.
+
+Details and checksums are in [docs/design/README.md](docs/design/README.md) and [docs/design/prototypes/assets/README.md](docs/design/prototypes/assets/README.md).
+
+## The author — 2026-11-17 19:52
+
+```text
+* I am okay with (Madinah mushaf 1405H (page fonts)) this font is good use it
+* attached photos as you asked, also first 3 pages, i think my picked font match the attached font الرسم العثماني؟
+* كل شيء جيد الأن - هذه يمكنك عمل تصميم اخر يعبر عن عصر الإسلام الفن الإسلامي القديم بعصر صدر الإسلام - تصميم بسيط جميل سهل للابليكيشن نفسة - خلي التصميم القديم واعمل جديد وخلينا نختار بينهم لتصميم ال wen - angular and the android and iphone 
+* مواقيت الصلاه هاتكون حسب اللوكيشن المستخدم بالويب او الموبايل - مثلاً في مصر غير السعودية غير اليابان
+
+[4 photo(s) attached — kept privately, not in this repository]
+```
+
+## The agent — 2026-11-17 19:55
+
+Your printed pages 263–264 and pages 1–2 match the layout line for line, including «٤٧» at the start of line 13 and the ۞ before 15:49. Saving the photos privately now.
+
+Before I design anything, I'm checking the historical facts the new style will lean on, and the licence of the interface font.
+
+The page renderer can be reused as is. I'm splitting the round-2 build script so round 3 can call it for its own pages, without changing round 2's output.
+
+The shell changed the escaped backslashes. I'll write the refactor as a script file instead.
+
+Round 2 rebuilds byte for byte the same. Next, the palette for the new style, with a contrast check.
+
+The palette passes 4.5 : 1 for every text and background pair in light and dark (lowest 5.20). Now writing round 3.
+
+Built, 1.22 MB. The web view's side list shows surah start pages I wrote from memory, so I'm checking them against the Tanzil metadata before trusting them.
+
+All five page numbers match Tanzil. Now the browser check.
+
+I'm checking round 3 in the browser now. The pane is scaling the page down, so I'm narrowing it to view each phone at full size.
+
+Found it: the coin code removed the first drawing it found, which was the centre dots, not the old rings. Fixing the selector.
+
+The reader and the prayer screen render correctly; page 5 line 1 ends with «جَنَّٰتٖ» as printed. Now dark, English, page 1, and the web view.
+
+The browser window is covered, so screenshots fail. I'm checking the layout through the page itself instead: line widths, overflow and console errors.
+
+The only console error is my own earlier mistyped URL. Now the web view at desktop width.
+
+Everything renders in both themes and both languages, with no overflow on any page. One sentence in section 7 overclaims, since the interface font is modern; I'm correcting it.
+
+Browser check is done. Now the documents. First, how the session-record tools are run.
+
+I'll append this exchange to the session record and update the plan files together, with checked replacements. First, the exact lines in the execution plan.
+
+Now the patch script for all the documents.
+
+No private data in the changes. Now refreshing the private transcript copy and the public conversation copy.

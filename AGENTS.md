@@ -38,12 +38,13 @@ repository the task touches → (6) the last record in [`docs/sessions/`](docs/s
 | Phase | **0 — Foundations** (§14) |
 | Exists | **Five public repositories on GitHub** (`main` branch), the same five folders on this machine. `tajweed-docs` (this one): parent `AGENTS.md`, `README.md`, `LICENSE` (CC BY 4.0), the detailed plan, the session record with a conversation copy, and the design in `docs/design/`: round 1 (colour directions), round 2 (first-launch screen, mushaf pages as printed, six Quran fonts, Sources screen) and **round 3** (design 2, "early Islam") with the verified source files and the scripts that check them. The four application repositories: `README.md`, `AGENTS.md`, `LICENSE` (MIT), `.gitignore` — no application code. |
 | Does not exist | Any application code, the register of content sources, the remaining screens. |
-| Last task done | `P0-11` round 3 (2026-11-17): `docs/design/prototypes/round-3.html` — design 2, "early Islam" (صدر الإسلام), beside design 1 (round 2). The author chose the King Fahd page fonts as the default Quran font; his printed copy settled the quarter sign at 15:49 (§8.1). |
+| Last task done | `P0-11` round 3, second pass (2026-11-17): design 2 now has six colour directions (Parchment, Madinah, Makkah, Al-Quds, Gardens, Mountains — high contrast), new section icons, and `docs/design/design-2-meanings.md`, which explains every colour, icon and the logo from the Quran, the hadith and the first era; every ayah in it is copied from the Tanzil file and checked by script. |
 | GitHub access from this machine | **Over SSH only** (the Windows certificate store blocks the HTTPS sign-in, §1). Key `~/.ssh/id_ed25519_tajweed` (no passphrase, fingerprint `SHA256:EPCRVeCpF+Jvsj40LKpu4Cta+mKF3ivLO8szlC2k/Po`), registered in the author's account as "Tajweed project - work laptop" (he confirmed it himself). Each of the five repositories uses it through its local `core.sshCommand`; remotes are `git@github.com:Omar-Sherif-Sayed/<name>.git`. A new clone on this machine needs the same two settings. Test: `ssh -i ~/.ssh/id_ed25519_tajweed -o IdentitiesOnly=yes -T git@github.com`. |
 | Folder name | `C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences` — renamed by the author on 2026-11-17. |
 | GitHub account | `Omar-Sherif-Sayed` — <https://github.com/Omar-Sherif-Sayed?tab=repositories>. Pushing is allowed for this product (R1); push at the end of every task. |
-| **Next task** | The author compares design 1 (`round-2.html`) and design 2 (`round-3.html`) and chooses one for web, Android and iPhone. Then `P0-11` round 4: the remaining screens in the chosen design, then Figma; or, if he prefers, `P0-06` + `P0-07` (backend scaffold) in parallel. |
-| Waiting for the author | His choice between design 1 and design 2. |
+| Do not forget | `P2-D1` — the default prayer-time method of every country, each with a named official source (the author, 2026-11-17: it may be done at any time, before phase 2 starts) · **F19** — the in-app section «لماذا هذا التصميم؟ / Why this design?»: the reason for every colour, icon and the logo (§8.10, `docs/design/design-2-meanings.md`). |
+| **Next task** | The author compares design 1 (`round-2.html`) and design 2 (`round-3.html`, six directions) and chooses one design and its directions for web, Android and iPhone; he reads `design-2-meanings.md`. Then `P0-11` round 4: the remaining screens in the chosen design, then Figma; or `P0-06` + `P0-07` (backend scaffold) in parallel. |
+| Waiting for the author | His choice between design 1 and design 2 (and which directions to keep); his reading of the meanings document. |
 
 **At the end of every session:** update the table above, the statuses in §14.1, the change log §19; write or extend
 the session record; commit as the author (§1). Details: `docs/plan/execution-plan.md` §1.
@@ -127,6 +128,7 @@ too long for a store title, the store shows "Tajweed" with the rest as the subti
 | F15 | About | Author name and LinkedIn link; privacy statement; a link to F17. |
 | F17 | Sources | A section listing **every** source the application uses — Quran text and its layout, fonts, audio and timings, tafsir, hadith, adhkar, books, prayer-time method, radio streams, icons, software libraries — each with its owner, link, licence and verification date; built from the register `docs/data-sources/README.md`, so it is never out of step (author, 2026-11-17). |
 | F18 | Appearance | Three colour directions (A emerald and gold, B teal and sand, C mushaf), each with a light and a dark theme; chosen on first launch after the language, changeable in settings; the Quran font is a reader setting (author, 2026-11-17 — §13). A second design, "early Islam", was made on the author's request to compare (round 3); he chooses one design for all clients. |
+| F19 | Why this design | A section inside the application that explains every colour direction, icon and the logo — the ayah (copied, never typed), the hadith reference, a design note — asked by the author, 2026-11-17 (§8.10). |
 | F16 | Quran search | Search for a word with or without tashkeel, by the surah's name, and by the ayah's number (§8.1) — added by the author, 2026-11-17. |
 
 Reference applications to study during design: Hisn Al-Muslim, Nusuk, Ayah, إذاعة القرآن الكريم من القاهرة, Radio Garden.
@@ -509,6 +511,7 @@ Rules:
   `P2-D1`). A country without a verified source falls back to Muslim World League and the screen says so. Web:
   the browser asks for the location (or the user picks a city); the calculation runs in the browser and the
   location is never sent to the backend.
+- **Not to be forgotten (author, 2026-11-17):** `P2-D1` — the default prayer-time method of every country, each with a named official source (the author, 2026-11-17: it may be done at any time, before phase 2 starts). Plan: `docs/plan/execution-plan.md`, `P2-D1`.
 - Background by time of day (Fajr, sunrise, Dhuhr, Asr, Maghrib, Isha) — §13.
 - Qibla: bearing calculated from the location to the Kaaba + the phone's compass, with a calibration hint.
   ⚠ Web on a computer has no compass: it shows the bearing on a map / as degrees.
@@ -565,6 +568,23 @@ one, in all four codebases:
 - ⚠ **Religious content in a new language** (meaning of the ayahs, tafsir, hadith, adhkar) is only a **published
   translation by a named translator with permission** (§6.10) — never a machine or AI translation. Where none
   exists, the screen shows the Arabic with a note. The interface (buttons, menus) can be translated freely.
+
+### 8.10 F19 — Why this design (author, 2026-11-17)
+
+The author asked that every colour, icon and the logo have a reason taken from the Quran, the hadith and the first
+era of Islam, and that the reasons become a section of the application. The reasons are written in
+`docs/design/design-2-meanings.md`; the section follows the rules there:
+
+- a colour is "named after a word" of an ayah — never "the meaning" of an ayah (that is tafsir, §6.10);
+- the ayah is shown whole, from the Quran text the application ships, with its reference; never typed;
+- a hadith is shown by book, number and the grading stated by its source;
+- where a word needs explaining, only the verbatim text of a named, licensed tafsir;
+- every card says "This is a design choice, not an interpretation" in both languages;
+- English shows an ayah's meaning only from a published translation;
+- before release a qualified reviewer reads it (§6.6), or it stays inside the rules above.
+
+Tasks: `P0-16` (the document — done in draft), `P1-D6` (content in both languages), `P1-W9`, `P1-A7`, `P1-I7`
+(the screen).
 
 ## 9. Backend — `tajweed-backend` (structure and conventions)
 
@@ -713,9 +733,12 @@ Agreed for both platforms whatever the option:
   1–2) is kept; the author chooses one design for web, Android and iPhone. `docs/design/prototypes/round-3.html`:
   parchment and ink; the red vowel dots and the verse-end dots of the earliest Quran manuscripts; the palm trunks
   and mud brick of the Prophet's mosque (Sahih al-Bukhari 446); the rings of early coins; Noto Kufi Arabic for
-  headings. Light and dark (one palette, every text pair ≥ 4.5 : 1). Screens: first launch, home, mushaf page in
-  the King Fahd page fonts, prayer times by location, Sources, and the web reader with two pages. Details:
-  `docs/design/README.md`.
+  headings. Screens: first launch, home, mushaf page in the King Fahd page fonts, prayer times by location,
+  Sources, "Why these colours?" (F19 draft), and the web reader with two pages. Details: `docs/design/README.md`.
+- **Round 3, second pass (2026-11-17, the author's request): six colour directions for design 2** — Parchment,
+  Madinah, Makkah, Al-Quds, Gardens, and Mountains (high contrast, ≥ 7 : 1), each in day and night; every text
+  pair checked by `tools/design2_palettes.py` (≥ 4.5 : 1). New section icons, each from the first era. The reason
+  for every colour, icon and the logo: `docs/design/design-2-meanings.md`. Values: `docs/design/tokens-design-2.json`.
 - Screens to design: language choice, colour-direction choice, sources (F17), home, Quran reader (+ ayah actions: play, tafsir, bookmark), player, reciter
   picker, tajweed lesson, radio list and player, prayer times (six backgrounds), adhan settings, Qibla, adhkar list and
   counter, hadith, book reader, settings, about.
@@ -763,11 +786,12 @@ reviewer). Task ids: `P<phase>-<area><n>`, areas **D** data · **B** backend · 
 | P0-08 | Scaffold `tajweed-frontend`: Angular 22, Material, Tailwind, wrappers, language choice, CI | ☐ |
 | P0-09 | Scaffold `tajweed-android`: Kotlin, Compose, both languages, CI | ☐ (needs P0-05) |
 | P0-10 | Scaffold `tajweed-ios`: generated project, SwiftUI, CI on a macOS runner | ☐ |
-| P0-11 | Design: tokens, 2–3 colour directions, HTML prototypes, the author's approval, then Figma | ◐ round 1 (2026-11-17): three directions, all kept; round 2: first launch on one screen, mushaf pages as printed, six fonts, Sources — reviewed; round 3 (2026-11-17): design 2 "early Islam" — ⏸ the author chooses design 1 or design 2; then the remaining screens and Figma |
+| P0-11 | Design: tokens, 2–3 colour directions, HTML prototypes, the author's approval, then Figma | ◐ round 1 (2026-11-17): three directions, all kept; round 2: first launch on one screen, mushaf pages as printed, six fonts, Sources — reviewed; round 3 (2026-11-17): design 2 "early Islam" with six directions and new icons — ⏸ the author chooses design 1 or design 2; then the remaining screens and Figma |
 | P0-12 | Data-source register; choose the Quran text and font; checksums | ◐ text, layout and default font chosen (Tanzil Uthmani; old Madinah 1405H layout from DigitalKhatt; King Fahd page fonts — author, 2026-11-17); quarter at 15:49 settled by the printed copy. Still to do: the register, the 9-ayah glyph table, justification, the move to the backend repository |
 | P0-13 | Permission letters, sent by the author, tracked | ☐ — includes a letter to the King Fahd Complex for its page fonts (author's decision 2026-11-17: use them and ask) |
 | P0-14 | Content pipeline decisions D1, D2; API contract for phase 1 | ☐ |
 | P0-15 | Phase 0 review with the author | ☐ |
+| P0-16 | The reason for every colour, icon and the logo of design 2 (`docs/design/design-2-meanings.md`) — basis of F19 | ◐ 2026-11-17: written; ayahs copied and checked by script; ⏸ the author reads it; ☐ hadith gradings and tafsir quotes copied from their sources |
 
 **Phase 1 — Quran core (F1, F2, F16, F3, F11, F15).**
 
@@ -778,13 +802,14 @@ reviewer). Task ids: `P<phase>-<area><n>`, areas **D** data · **B** backend · 
 | P1-W1 … W8 | Home and language · reader · search · resilient audio engine · recitation modes · reciter picker · About / sources / privacy · tests | ☐ |
 | P1-A1 … A6 | Bundled Quran database · reader · Media3 playback service · modes and picker · About · tests and device checklist | ☐ |
 | P1-I1 … I6 | The same on iPhone, after Android is accepted | ☐ |
+| P1-D6, P1-W9, P1-A7, P1-I7 | F19 "Why this design": content in both languages (§8.10), then the screen on each client | ☐ (after the design is chosen) |
 | P1-Q1 | Eight acceptance checks, tried by hand and recorded | ☐ |
 
 **Phases 2 – 8 and the release track.**
 
 | Tasks | What | Status |
 | --- | --- | --- |
-| P2-D1 … D3, P2-B1, P2-W/A/I-1 … 4, P2-Q1 | Prayer times, adhan, Qibla; times compared with the official calendars | ☐ (muezzin recordings ⏸ permissions) |
+| P2-D1 … D3, P2-B1, P2-W/A/I-1 … 4, P2-Q1 | Prayer times, adhan, Qibla; times compared with the official calendars. **`P2-D1` (the default method per country, each with a named source) may be done at any time — author, 2026-11-17** | ☐ (muezzin recordings ⏸ permissions) |
 | P3-D1, P3-B1, P3-W/A/I-1, P3-Q1 | Radio stations with health checks on the resilient player | ☐ |
 | P4-D1, P4-B1, P4-W/A/I-1, P4-D2, P4-W/A/I-2 | Tafsir per ayah; muallim recitation | ☐ (⏸ tafsir licences) |
 | P5-D1 … D4, P5-B1, P5-W/A/I-1 | Tajweed curriculum | ☐ (explanations ⏸ reviewer or permitted source, §6.10) |
@@ -915,3 +940,4 @@ explicit yes** (it is public); R3 (permanent) and R10 (public) need the author's
 | 2026-11-17 | Seventh update of the day (author's feedback on design round 1): all three colour directions are built, chosen at first launch after the language, each with light and dark (F18, §13); more languages later — German, Italian, Japanese, Chinese (§8.9); the reader reproduces the printed Madinah mushaf page by page and line by line (F2, §8.1 — research: the author's page 545 matches the old Madinah 1405H layout; DigitalKhatt data and fonts are the open candidates); a Sources section listing every source (F17); more Quran fonts to compare. |
 | 2026-11-17 | Eighth update of the day: design round 2 built and checked (`docs/design/`): first-launch screen with language, colour direction and light / dark on one page; mushaf pages exactly as printed; six Quran fonts; Sources screen. The old-Madinah layout (DigitalKhatt) verified against Tanzil — 0 word differences in 6,236 ayahs, 0 page-start differences in 604 pages; page 5 confirmed by the author on his printed copy. King Fahd page fonts used by the author's decision; KFGQPC Hafs 0.09 rejected (missing mark). Open: the quarter sign at 15:49 / 15:50, 9 ayahs in the King Fahd glyph list (§8.1). |
 | 2026-11-17 | Ninth update of the day (author's review of round 2): default Quran font = the King Fahd page fonts (Madinah mushaf 1405H); his printed copy (دار طيبة, Cairo) photographed — pages 1, 2, 263, 264 match the layout, and the ۞ stands before 15:49, so the quarter question is closed; prayer times follow the user's location and country on web and phones (§8.5); design round 3 — a second design, "early Islam", to compare with design 1 (§13). |
+| 2026-11-17 | Tenth update of the day (author's message): design 2 gets six colour directions — Parchment, Madinah, Makkah, Al-Quds, Gardens, Mountains (high contrast) — and new section icons; every colour, icon and the logo is explained in `docs/design/design-2-meanings.md` (ayahs copied and checked by script); new feature F19, the in-app section "Why this design" (§8.10); `P2-D1` recorded as "do not forget" (§0, §8.5). |

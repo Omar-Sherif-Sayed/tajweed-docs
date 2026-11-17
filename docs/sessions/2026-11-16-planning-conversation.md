@@ -649,3 +649,83 @@ I'll append this exchange to the session record and update the plan files togeth
 Now the patch script for all the documents.
 
 No private data in the changes. Now refreshing the private transcript copy and the public conversation copy.
+
+Commit and push.
+
+Pushed. Sending you the new file.
+
+I've built the second design, "early Islam" (صدر الإسلام), as [round-3.html](docs/design/prototypes/round-3.html). The original design stays in [round-2.html](docs/design/prototypes/round-2.html) for comparison. I checked the new one in a browser, committed it and pushed it.
+
+#### Your photos and the font
+
+- **Default font:** the King Fahd page fonts (Madinah mushaf 1405H) are now the default.
+- **Your pages match:** I compared your printed pages 1, 2, 263 and 264 (and 545–546 again) with the layout data, line by line. They are the same, including «٤٧» at the start of line 13 on page 264.
+- **Quarter sign:** your copy has the ۞ before **15:49**, so the layout is right and Tanzil's list is wrong at that one place. The apps will take quarter positions from the layout.
+- **"الرسم العثماني" on the title page:** this names the spelling of the words, not a font. Your copy (printed by دار طيبة, Cairo) follows the same 1405H Madinah layout, and your chosen page fonts are made from that mushaf. So yes, they match your printed copy.
+
+#### Design 2 — early Islam
+
+It is simple: a parchment background and ink-coloured text, with a few small marks. Each element comes from something that survives from the first era:
+
+| Element | Comes from |
+| --- | --- |
+| Parchment and ink | The earliest Quran manuscripts, written on parchment |
+| Red dots (active item, page number) | Early copies marked the vowels with red dots; never used on the Quran text itself |
+| Three-dot divider | Early manuscripts ended each verse with a small group of dots |
+| Palm-trunk band, mud-brick prayer card | The Prophet's mosque: mud-brick walls, palm-frond roof, palm-trunk pillars (Sahih al-Bukhari 446). No arches or domes, since those came later |
+| Ringed logo and prayer dial | Early Islamic coins |
+| Kufic headings | The script of the early manuscripts, using a modern Kufic font (Noto Kufi Arabic) |
+
+- **Themes:** one palette with day and night versions, and every text colour is easy to read on its background.
+- **Screens:** first launch, home, mushaf page, prayer times, Sources, and the web reader showing two pages side by side.
+- **Section 7** of the file lists these sources.
+
+#### Prayer times by location
+
+This was already in the plan and is now written in detail (§8.5):
+
+- **Calculated on the device:** times come from the user's location on the web and the phones, and the location is never sent to our server.
+- **Method by country:**
+  - Egypt uses the Egyptian General Authority of Survey method.
+  - Saudi Arabia uses Umm Al-Qura.
+  - A country with no verified official method, which may include Japan, falls back to Muslim World League, and the screen says so.
+- **Not yet confirmed:** each country's method still needs a named source before it is used; that is a task in the prayer-times phase.
+- **Sample times only:** the times in the prototype are clearly marked "sample", because they are not calculated yet.
+
+Sources:
+- [Sahih al-Bukhari 446 — Dorar](https://dorar.net/h/wVDAbFDs) · [HadeethEnc](https://hadeethenc.com/ar/browse/hadith/65406)
+- [Hijazi script](https://en.wikipedia.org/wiki/Hijazi_script) · [Manuscript Arabe 331](https://www.islamic-awareness.org/quran/text/mss/arabe331)
+- [Abu al-Aswad al-Du'ali](https://al-islam.org/ar/node/39578)
+- [Noto Kufi Arabic licence — Fontsource](https://fontsource.org/fonts/noto-kufi-arabic/about) · [FreshPorts](https://www.freshports.org/x11-fonts/noto-kufi-arabic)
+
+## The author — 2026-11-17 20:29
+
+```text
+* each country’s method still needs a named source before it is used; that is a task in the prayer-times phase., you can do it anytime you we as a planed, write it to not forget it 
+* new design is great, can you add more directions with pallets to it? the current is great but i need more and a contrast one 4 or 5 directions pallets 
+* عصر صدر الإسلام - او بداية الإسلام هل يوجد شرح لكل icon مستخدمة وال log ايضاً والألوان ليدلوا عن عن هذا العصر؟ وال directions ايضاً هل يمكن ان تعبر الوان معينة عن مساجد معينة او المسجد الحرام المسجد الأقصي المسجد النبوي او عن تفاصيل من القرأن الكريم عن شكل الجنات واوصافها او الوان مقتبسة من القرأن؟ هل تفهم عن ماذا أبحث؟ عن شيء لم يفكر فيه الكثر عبر التأمر في القرأن الكريم والأحاديث الدينية - أريد تفسير لكل شيء لماذا أخترته وشرح مفصل , يمكن ايضاً أن نستخدم هذا الشرح ققسم داخل الابليكيشن - يرجي كاتبة هذه التاسك ايضاً
+```
+
+## The agent — 2026-11-17 20:31
+
+I'll treat this as three pieces: a written reminder for the country-method task, more colour directions for design 2, and a reasoned explanation for every colour, icon and logo, recorded as a task for an in-app section. The explanations touch the Quran and hadith, so I'm verifying every reference before using it.
+
+Now the meanings document: the full reasoning for every choice, with what was avoided and why.
+
+The ayah simply wasn't in the list the build copies. Adding 55:76.
+
+The write failed with a Windows "invalid argument" error, likely a brief lock on the file. Retrying.
+
+Built. Now the browser check of all six directions.
+
+Icons read clearly. Now phone 6, the in-app explanation screen, in two directions.
+
+Phone 6 and the high-contrast direction render correctly; 35:27 is shown whole, copied from the file. Now an automatic pass over every direction, theme and page for overflow.
+
+120 combinations checked (6 directions × 2 themes × 2 languages × 5 pages): no line wider than its page, and every verse filled. A last look at the directions and icons sections.
+
+One bug: the colour circles in section 8 collapse to thin lines, because a general text rule overrides their layout. Fixing.
+
+Fixed. The browser check is done; now the documents and the two tasks you asked me to write down.
+
+Now the patch script for this round's records.

@@ -279,6 +279,7 @@ three modes, playback that survives network loss, About page.
 | P1-D2 | Surah metadata (names AR / EN, place of revelation, ayah count), page / juz / hizb / sajda positions. | Totals per surah equal the source; 30 juz; page numbers continuous. |
 | P1-D3 | Search text (§8.1): the everyday-spelling text imported byte for byte beside each ayah; the list of surah names and their common spellings in Arabic and English. | SHA-256 of the source; 6,236 ayahs with the same numbering as the displayed text; a fixed list of test words with their expected number of results. |
 | P1-D4 | Catalogue: reciters, recitations (style, riwayah, completeness), ordered audio sources, ayah timings — only complete Hafs mushafs of the requested reciters (§7.3) plus Sheikh Noreen as "listening only" (R5). | A script requests every surah file of every recitation and records the result and the date; a recitation with a missing file is not published. |
+| P1-D6 | F19 content (§8.10): the design notes in Arabic and English from `docs/design/design-2-meanings.md`, for the chosen design; the hadith gradings copied verbatim from Dorar; the tafsir quotes from a licensed tafsir; the reviewer's check when one exists. | The author reads both languages; every ayah reference resolves to the shipped text. |
 | P1-D5 | About content: author, link, credits and licences of every source used, privacy statement (AR / EN). | The author reads and approves both languages. |
 
 ### Backend (`tajweed-backend`)
@@ -304,6 +305,7 @@ three modes, playback that survives network loss, About page.
 | P1-W5 | Recitation modes (F3): one surah · ayah range · from a start ayah to the end and again from Al-Fatiha without end; the playing ayah is highlighted and scrolled into view; Media Session controls. |
 | P1-W6 | Reciter and style picker; a style appears only where it exists (§7.3); the riwayah is always shown. |
 | P1-W7 | About, sources and credits, privacy policy; "report a mistake" on the reader (F15, §6.9). |
+| P1-W9 | F19 "Why this design" screen (§8.10 of `AGENTS.md`): from About and from the colour choice; one card per direction, icon and the logo; ayahs from the shipped Quran text, never typed. |
 | P1-W8 | Unit tests for the engine (retry order, source switching, endless mode crossing surah 114 → 1) and for search (handling of the typed query, the fixed list of test queries). |
 
 ### Android (`tajweed-android`)
@@ -316,6 +318,7 @@ three modes, playback that survives network loss, About page.
 | P1-A4 | Recitation modes, reciter picker, ayah highlighting. |
 | P1-A5 | About, sources, privacy, report a mistake. |
 | P1-A6 | Unit tests (engine rules, data checks) and a manual device checklist in `docs/quality/`. |
+| P1-A7 | F19 "Why this design" screen, as `P1-W9`. |
 
 ### iPhone (`tajweed-ios`)
 
@@ -342,7 +345,7 @@ path monitor. Started after the Android slice is accepted. Device checks wait fo
 
 | Task | What |
 | --- | --- |
-| P2-D1 | Calculation methods and their parameters from the Adhan library's documentation; the default method per country — ☐ a table with a named official source per country; a country without a verified source falls back to Muslim World League and says so. |
+| P2-D1 | Calculation methods and their parameters from the Adhan library's documentation; the default method per country — ☐ a table with a named official source per country; a country without a verified source falls back to Muslim World League and says so. **The author (2026-11-17): may be done at any time, before phase 2 — do not forget it.** Start with the countries the author named: Egypt, Saudi Arabia, Japan. Output: `docs/data-sources/prayer-methods.md` (country, method, parameters, source link, date checked). |
 | P2-D2 | City search for users who do not share their location — ☐ source and licence of the city list. |
 | P2-D3 | Muezzin recordings (⏸ until a recording with a known origin and permission exists for each one, §7.4): full version and a version under 30 seconds. |
 | P2-B1 | `prayer` module: method metadata, muezzins and their audio sources. |
@@ -431,7 +434,8 @@ path monitor. Started after the Android slice is accepted. Device checks wait fo
 | Confirmation of the application id `io.github.omarsherifsayed.tajweed` | P0-07, P0-09, P0-10 |
 | Choice of the commit e-mail (R10) | P0-03 |
 | Android Studio installed | P0-09 |
-| Colour and screen approval | P0-11 |
+| Colour and screen approval — design 1 or design 2, and which directions | P0-11 |
+| Reading the meanings of design 2 | P0-16, F19 |
 | Choice of Quran text and font | P0-12 |
 | Sending the permission letters | P0-13 |
 | A qualified reviewer | P5-D3, hadith explanations |

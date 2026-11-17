@@ -5,12 +5,14 @@ The design of the three applications (web, Android, iPhone) is made once, here. 
 
 | File | What it is | State |
 | --- | --- | --- |
-| [`prototypes/round-3.html`](prototypes/round-3.html) | **Round 3 (current) — design 2, "early Islam" (صدر الإسلام).** A second, simpler design to compare with design 1: first launch, home, mushaf page (King Fahd page fonts), prayer times by location, Sources, the web reader with two pages, and what the style is made of. One file (1.2 MB). | waiting for the author's choice between design 1 and design 2 |
+| [`prototypes/round-3.html`](prototypes/round-3.html) | **Round 3 (current) — design 2, "early Islam" (صدر الإسلام).** A second, simpler design to compare with design 1, with **six colour directions** (Parchment, Madinah, Makkah, Al-Quds, Gardens, Mountains — high contrast): first launch, home, mushaf page (King Fahd page fonts), prayer times by location, Sources, "Why these colours?" (F19 draft), the web reader with two pages, the directions and the icons with their reasons. One file (1.2 MB). | waiting for the author's choice between design 1 and design 2 |
 | [`prototypes/round-2.html`](prototypes/round-2.html) | **Round 2 — design 1.** First launch on one screen (language, colour direction, light / dark, live example); mushaf pages 1, 2, 5, 545, 546 exactly as printed; six Quran fonts to compare; the Sources screen; a two-page view. One self-contained file (3.1 MB, fonts inside). | reviewed (2026-11-17): first launch accepted, default font chosen — King Fahd page fonts |
 | [`prototypes/colour-directions.html`](prototypes/colour-directions.html) | Round 1: the three colour directions on four screens, with the contrast table. | done — all three directions kept |
+| [`design-2-meanings.md`](design-2-meanings.md) | **Why every colour, icon and the logo of design 2 was chosen** — from the Quran, the hadith and the first era; what was avoided and why; the rules of the in-app section F19. The ayah table is generated. | ⏸ the author reads it |
+| [`tokens-design-2.json`](tokens-design-2.json) | The six directions of design 2, day and night (generated from `prototypes/tools/design2_palettes.py`). | draft |
 | [`tokens.json`](tokens.json) | The colours of the three directions, light and dark. Typography, spacing and the prayer backgrounds follow. | all three directions kept (decision 2026-11-17) |
 | [`prototypes/assets/`](prototypes/assets/) | The untouched source files (Quran text, metadata, page layout, fonts) with checksums, origins and licences. | see its README |
-| [`prototypes/tools/`](prototypes/tools/) | `verify_mushaf_layout.py` (checks the layout against Tanzil), `build_round2.py` (writes the data and fonts into round 2), `build_round3.py` (the same for round 3), `build_quran_sample.py` (round 1), `read_font_licence.py` (prints the licence stored in a font). Nobody types Quran text. | — |
+| [`prototypes/tools/`](prototypes/tools/) | `verify_mushaf_layout.py` (checks the layout against Tanzil), `build_round2.py` (writes the data and fonts into round 2), `build_round3.py` (the same for round 3, plus the six directions, the cited ayahs and the check of every excerpt in `design-2-meanings.md`), `design2_palettes.py` (the directions and their contrast check), `build_quran_sample.py` (round 1), `read_font_licence.py` (prints the licence stored in a font). Nobody types Quran text. | — |
 
 ## Design 2 — "early Islam" (round 3)
 
@@ -26,9 +28,13 @@ beside the existing design, so that one of the two is chosen for web, Android an
 | Rings and a dotted border | early Islamic coins | the logo; the prayer dial |
 | Kufic letters | the script of the early Quran manuscripts | headings, in Noto Kufi Arabic (a modern font, OFL 1.1) |
 
-One palette, light ("day") and dark ("night"); every text / background pair is at least 4.5 : 1 (checked with a
-script; the lowest is 5.2). The Quran page is the same as in design 1: the King Fahd page fonts, one text colour.
-Start state in the address: `round-3.html#dark-en-545` (theme, language, page).
+Six colour directions, each in day and night: Parchment, Madinah, Makkah, Al-Quds, Gardens, and Mountains — high
+contrast. Every text / background pair is at least 4.5 : 1, and 7 : 1 in Mountains (checked by
+`tools/design2_palettes.py` on every build). The reason for each colour and icon: `design-2-meanings.md`. The Quran page is the same as in design 1: the King Fahd page fonts, one text colour.
+Start state in the address: `round-3.html#gardens-dark-en-545` (direction, theme, language, page).
+
+Second pass checked on 2026-11-17: 6 directions × day / night × Arabic / English × 5 pages — no line wider than
+its page; every cited ayah present.
 
 Checked in a browser on 2026-11-17: pages 1, 2, 5, 545, 546 in light / dark and Arabic / English — no line wider
 than its page, no console error; the web reader with the two pages; the surah start pages in the web side list

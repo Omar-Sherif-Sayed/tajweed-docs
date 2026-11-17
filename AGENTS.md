@@ -36,14 +36,14 @@ repository the task touches → (6) the last record in [`docs/sessions/`](docs/s
 | --- | --- |
 | Date | 2026-11-17 |
 | Phase | **0 — Foundations** (§14) |
-| Exists | **On GitHub:** five public repositories under `Omar-Sherif-Sayed`, created 2026-11-17, **still empty there — nothing is pushed yet.** **On this machine:** this documentation repository (parent `AGENTS.md`, `README.md`, the detailed plan, a session record with a conversation copy), and the four application folders, each with one commit: `README.md`, `AGENTS.md`, `LICENSE` (MIT), `.gitignore`. |
+| Exists | **Five public repositories on GitHub, pushed 2026-11-17** (`main` branch): `tajweed-docs` (this one: parent `AGENTS.md`, `README.md`, the detailed plan, a session record with a conversation copy) and the four application repositories, each with `README.md`, `AGENTS.md`, `LICENSE` (MIT), `.gitignore` — no application code. The same five folders exist on this machine. |
 | Does not exist | Any application code, any design, the data-source register. |
-| Last task done | `P0-02` (the author's confirmations). `P0-03` is half done: the repositories are created, the push is blocked — see the next rows. |
-| ⚠ Push is blocked | This machine's Windows certificate store does not trust GitHub's certificate chain (the roots are missing and the automatic root update is disabled by the administrator's policy). Git itself can connect with `-c http.sslBackend=openssl` (certificate checking stays on), but the sign-in helper (Git Credential Manager) cannot, so HTTPS has no way to sign in. **SSH works** (`github.com:22` and `ssh.github.com:443` answer; the host key matches GitHub's published fingerprint). Never switch certificate checking off. **SSH setup (author said yes, 2026-11-17):** the key `~/.ssh/id_ed25519_tajweed` exists (no passphrase, fingerprint `SHA256:EPCRVeCpF+Jvsj40LKpu4Cta+mKF3ivLO8szlC2k/Po`, title on GitHub "Tajweed project - work laptop"); the five local repositories use it through `core.sshCommand` and their remotes are `git@github.com:Omar-Sherif-Sayed/<name>.git`. The key form on GitHub was submitted, and GitHub asked the author to confirm his identity ("Confirm access") — **until he confirms, the key is not registered and `ssh -T git@github.com` answers "Permission denied".** Check with `ssh -i ~/.ssh/id_ed25519_tajweed -o IdentitiesOnly=yes -T git@github.com`; when it greets `Omar-Sherif-Sayed`, push `main` of the five repositories. |
+| Last task done | `P0-03` — repositories created and pushed; every page checked from a browser that is not signed in. `P0-05` — Android Studio, the Android SDK and an emulator are installed. |
+| GitHub access from this machine | **Over SSH only** (the Windows certificate store blocks the HTTPS sign-in, §1). Key `~/.ssh/id_ed25519_tajweed` (no passphrase, fingerprint `SHA256:EPCRVeCpF+Jvsj40LKpu4Cta+mKF3ivLO8szlC2k/Po`), registered in the author's account as "Tajweed project - work laptop" (he confirmed it himself). Each of the five repositories uses it through its local `core.sshCommand`; remotes are `git@github.com:Omar-Sherif-Sayed/<name>.git`. A new clone on this machine needs the same two settings. Test: `ssh -i ~/.ssh/id_ed25519_tajweed -o IdentitiesOnly=yes -T git@github.com`. |
 | Folder name | `C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences` — renamed by the author on 2026-11-17. |
-| GitHub account | `Omar-Sherif-Sayed` (read from the author's Chrome session, 2026-11-17). Remotes are set in all five local repositories (HTTPS URLs; they change to SSH URLs when the key is in place). |
-| **Next task** | Finish `P0-03`: after the author's yes — create the SSH key, register it on GitHub, switch the five remotes to SSH, push `main` of all five, check each repository page. Then `P0-11` (design) and `P0-06` / `P0-07` (backend scaffold). |
-| Waiting for the author | His yes to the SSH key (or his own fix of the certificates through the administrator) · Android Studio: he is reinstalling it through JetBrains Toolbox (the Android SDK folder already exists). |
+| GitHub account | `Omar-Sherif-Sayed` — <https://github.com/Omar-Sherif-Sayed?tab=repositories>. Pushing is allowed for this product (R1); push at the end of every task. |
+| **Next task** | The author chooses what starts first: `P0-11` design (colour directions and the first HTML screens — in this repository) or `P0-06` + `P0-07` (version check and backend scaffold). Small open item: `P0-04`, the licence of the documents in this repository (proposal: CC BY 4.0). Every task starts with plan → questions → the author's answer (§1). |
+| Waiting for the author | Which task starts first · the licence of the documents (`P0-04`). |
 
 **At the end of every session:** update the table above, the statuses in §14.1, the change log §19; write or extend
 the session record; commit as the author (§1). Details: `docs/plan/execution-plan.md` §1.
@@ -71,8 +71,10 @@ The author's own rules — the same in all his projects:
 - **The plan lives in files.** Every decision, every task and its status is written in this repository on the day it
   happens, so that another agent or another model can continue without the conversation (§0).
 - Platform is Windows 11 (PowerShell + Git Bash). Installed (checked 2026-11-17): JDK 25, Node 22, Git, Python 3.13,
-  Docker, the Android SDK (Android Studio Rabbit 2 Patch 1; the author is moving it to JetBrains Toolbox). Not
-  installed: the GitHub CLI (`gh`), the PostgreSQL client.
+  Docker, Android Studio Rabbit 2 Patch 1 with the Android SDK in `%LOCALAPPDATA%\Android\Sdk` (platform
+  `android-37.0`, build-tools `36.0.0`, platform-tools, an emulator image and one virtual phone; `ANDROID_HOME` is
+  not set — the project's `local.properties` points to the SDK). Not installed: the GitHub CLI (`gh`), the
+  PostgreSQL client.
 - ⚠ **Certificates on this machine (checked 2026-11-17).** The Windows certificate store lacks the roots of GitHub's
   certificate chain, and the automatic root update is disabled by policy. Programs that use the Windows store fail on
   `github.com` with "untrusted root" (Git's default `schannel` backend, Git Credential Manager, and probably `gh`).
@@ -663,9 +665,9 @@ reviewer). Task ids: `P<phase>-<area><n>`, areas **D** data · **B** backend · 
 | --- | --- | --- |
 | P0-01 | Documentation repository: this folder, `docs/`, the detailed plan, first session record, first commit | ✔ 2026-11-17 (local; GitHub in P0-03) |
 | P0-02 | The author confirms R1 (create and push), R3 (application id) and R10 (commit e-mail) — §18.2 | ✔ 2026-11-17 |
-| P0-03 | Create the five public GitHub repositories through the author's Chrome session; remotes; first push | ◐ created and remotes set 2026-11-17; **push ⏸** — certificates block HTTPS sign-in, SSH key needs the author's yes (§0) |
+| P0-03 | Create the five public GitHub repositories through the author's Chrome session; remotes; first push | ✔ 2026-11-17 — created, pushed over SSH, pages checked |
 | P0-04 | Licences: MIT for code; the licence of these documents; the content notice | ◐ MIT `LICENSE` and the content notice are in the four application repositories; the licence of the documents is still open |
-| P0-05 | Machine: install Android Studio; confirm Docker runs | ◐ the Android SDK is present; the author is reinstalling Android Studio through JetBrains Toolbox; Docker runs — re-check when P0-09 starts |
+| P0-05 | Machine: install Android Studio; confirm Docker runs | ✔ 2026-11-17 — Android Studio, SDK and an emulator installed; Docker installed (start it before P0-07) |
 | P0-06 | Re-verify every version on scaffold day and write it down | ☐ |
 | P0-07 | Scaffold `tajweed-backend` with CI and `GET /v1/app-info` | ☐ |
 | P0-08 | Scaffold `tajweed-frontend`: Angular 22, Material, Tailwind, wrappers, language choice, CI | ☐ |
@@ -818,3 +820,4 @@ explicit yes** (it is public); R3 (permanent) and R10 (public) need the author's
 | 2026-11-17 | Second update of the day (author's message): the coloured name of Allah is withdrawn — a standard one-colour mushaf with full tashkeel (§8.1, R4 closed); new feature F16 Quran search (word with or without tashkeel, surah name, ayah number) with a separate search text; the name is written with a plain hyphen and the workspace folder is named `Tajweed - The Noble Quran and Its Sciences` (§3); references to the author's other projects removed; the application id formula explained (R3) — the GitHub user name is still needed; Android Studio Rabbit 2 Patch 1 confirmed as the current version. |
 | 2026-11-17 | Third update of the day: the author renamed the workspace folder; GitHub account read from his Chrome session — `Omar-Sherif-Sayed` (§0, §3); application id proposed as `io.github.omarsherifsayed.tajweed`, valid on Java, Android and iPhone (R3 — corrects the earlier "hyphen becomes underscore" note, which Apple does not accept); new point R10, the e-mail carried by the commits; §3 now lists what each repository holds; a conversation copy of the session added to `docs/sessions/`. |
 | 2026-11-17 | Fourth update of the day: the author said yes to creating and pushing (R1), confirmed the application id (R3) and chose his personal address for the commits (R10). The five public repositories were created on GitHub; the four application folders got their first commit (`README.md`, `AGENTS.md`, MIT `LICENSE`, `.gitignore`). **The push did not happen:** the machine's certificate store blocks the HTTPS sign-in (§0, §1); SSH is reachable and is the way forward once the author agrees to an SSH key. |
+| 2026-11-17 | Fifth update of the day: the author agreed to an SSH key and confirmed it on GitHub himself; **all five repositories were pushed** and checked on GitHub (§0); Android Studio and the SDK are installed (P0-05 done). Phase 0 tasks 01, 02, 03 and 05 are done. |

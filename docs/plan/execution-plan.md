@@ -51,8 +51,8 @@ acceptance. Phase 0 tasks are `P0-01` … Release-track tasks are `RT-01` …
 | Docker 29.9.3 | ✔ installed — PostgreSQL for development runs in Docker; integration tests use Testcontainers |
 | Angular CLI | ✔ present (☐ version — use `npx @angular/cli@22` on scaffold day) |
 | PostgreSQL client (`psql`) | not installed — not needed (Docker) |
-| **Android Studio / Android SDK** | ⚠ **not installed yet** — the author is installing Android Studio Rabbit 2 Patch 1 (✔ the current version on developer.android.com, 2026-11-17); needed before `P0-09` |
-| GitHub CLI (`gh`) | not installed — repositories are created through the author's Chrome session |
+| **Android Studio / Android SDK** | ✔ installed 2026-11-17: Android Studio Rabbit 2 Patch 1, SDK platform `android-37.0`, build-tools `36.0.0`, platform-tools, an emulator image and one virtual phone |
+| GitHub CLI (`gh`) | not installed — repositories were created through the author's Chrome session; pushing is done with Git over SSH (project key, `AGENTS.md` §0) |
 | **Certificates** | ⚠ the Windows store does not trust GitHub's certificate chain and the automatic root update is disabled by policy: Git Credential Manager cannot sign in over HTTPS. Git works with `-c http.sslBackend=openssl`; SSH to GitHub works. Use SSH for GitHub; never disable certificate checking (`AGENTS.md` §1) |
 | Mac / Xcode / iPhone | ⚠ none — `AGENTS.md` §11–12 |
 
@@ -81,7 +81,7 @@ they cannot be undone or are public:
   (recommended, because the account hides its address). Decided before the first push; if it changes, the local
   commits are rewritten first.
 
-### P0-03 GitHub repositories (author: explicit yes)
+### P0-03 GitHub repositories ✔ (2026-11-17)
 
 - Account: `Omar-Sherif-Sayed` (read from the author's Chrome session on 2026-11-17; no `tajweed-*` repository
   existed there). The repositories are created in that Chrome session (the Claude in Chrome extension must be
@@ -90,8 +90,8 @@ they cannot be undone or are public:
   `tajweed-frontend`, `tajweed-android`, `tajweed-ios`. Description in English and Arabic; default branch `main`; no
   collaborators (only the author can write).
 - In each local folder: `git remote add origin …`, set `user.name` / `user.email` (§1), push `main`.
-- **State 2026-11-17:** the five repositories are created and the remotes are set. The push is blocked by the
-  machine's certificates (§2). Remaining steps, after the author's yes: create an SSH key used only for this product
+- **Done 2026-11-17:** created, pushed over SSH and checked. How it was done, for the next machine or a new clone —
+  the machine's certificates block the HTTPS sign-in (§2), so: create an SSH key used only for this product
   (`~/.ssh/`, referenced by each repository's `core.sshCommand`, so that other projects on the machine are not
   affected); register its public half in the author's GitHub account (Settings → SSH and GPG keys) through his Chrome
   session; `git remote set-url origin git@github.com:Omar-Sherif-Sayed/<name>.git` in the five folders; push; open

@@ -3,7 +3,8 @@
 **Tajweed** is a free Islamic application for the Quran, its recitation and its sciences — on the web, Android and
 iPhone, in Arabic and English. No advertisements, no registration, no login, no tracking.
 
-> **State (2026-11-17): planning.** There is no application yet. This repository holds the plan.
+> **State (2026-11-17): planning.** There is no application yet. This repository holds the plan; the four
+> application repositories are created and empty.
 
 Author: **Omar Sherif — عمر شريف** · <https://www.linkedin.com/in/omarsherif21/>
 

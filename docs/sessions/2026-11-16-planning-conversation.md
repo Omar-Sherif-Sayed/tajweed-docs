@@ -912,3 +912,62 @@ Dark themes done. Next, which of these languages have published Quran translatio
 Now the browser check: the first-launch screen with the language list, and the new night themes.
 
 Records updated. Committing and pushing.
+
+I improved the night themes of the other eight directions and left Mountains exactly as it is. Your languages, plus nine I recommend, are now in the plan. Both are in [round-3.html](docs/design/prototypes/round-3.html), checked in the browser, committed and pushed.
+
+#### The night themes
+
+When I measured them, four things needed improving:
+
+- **Bright blocks:** in six directions the prayer card was a bright block on a dark screen, which glares at night. It is now a calm mid-dark colour; Lamps, for example, has a deep indigo card instead of a bright gold one.
+- **Over-saturated colours:** the colours in Honey and Lamps were too strong and seemed to vibrate on the dark background. They are softer now.
+- **Near-black backgrounds:** they made the cards hard to tell apart from the screen. Each background is now a deep shade of its direction's own colour, and the cards are a step lighter.
+- **Harsh text:** Makkah's text was too stark at night (17 : 1). Every direction's text now sits between 11 : 1 and 16 : 1, which reads more comfortably and still clears the 4.5 : 1 minimum easily.
+
+These became six night-theme rules, and the build now checks them every time. I also fixed white scrollbars on the night screens and an example card on the first screen that was squeezed flat.
+
+#### Languages
+
+These are the ones you asked for. «الباكستانية» means **Urdu**, the national language of Pakistan, and Hindi appeared twice in your list.
+
+> Russian, Spanish, German, Italian, French, Urdu, Hindi, Korean, Indonesian — plus Japanese and Chinese from before.
+
+I recommend nine more. Many Muslims speak them, and each already has a published translation of the meanings:
+
+> **Turkish, Bengali, Persian, Malay, Swahili, Hausa, Portuguese, Pashto, Uzbek.**
+
+For later, if you want them: Tamil, Bosnian, Albanian, Kurdish, Somali, Amharic, Tagalog and Thai.
+
+What I prepared:
+
+- **A table in `AGENTS.md` §8.9:** each language with its script, its writing direction and the font it needs. Urdu, Persian and Pashto are written right to left, and Urdu needs a Nastaliq font. Hindi, Bengali, Korean, Japanese and Chinese also need their own fonts.
+- **Quran translations:** QuranEnc (quranenc.com), a library of published Quran translations, has one by named translators for every language above. For example: Spanish by Muhammad Isa García, German by Frank Bubenheim and Dr. Nadeem Elyas, French by Rashid Maash, and Portuguese by Dr. Helmi Nasr.
+- **Not confirmed yet:**
+  - Some translator names I could only see in a summary of their page, so they are marked to re-check.
+  - QuranEnc says its translations may be re-published "subject to" its terms, but the link to those terms leads nowhere. So I've planned a permission letter before any translation is shipped.
+- **On the first screen:** the planned languages now appear in their own scripts (Русский, اردو, हिन्दी, 한국어 …) under «لغات قادمة إن شاء الله». In the prototype, only Arabic and English actually switch the screen.
+- **A new language task list, `LANG-01` to `LANG-04`:** your final list of languages and their order, a native speaker to read each language's interface text, each language's font, and the translation permission.
+
+The first release stays Arabic and English, as in your original rule. The other languages come after it.
+
+Source: [QuranEnc — translations by language](https://quranenc.com/en/home)
+
+## The author — 2026-11-18 14:35
+
+```text
+Accept all nine, ok الباكستانية means Urdu and الهندية اتكتبت مرتين اقصدها مره واحده, also you can add another languages that you recommend it (Turkish, Bengali, Persian, Malay, Swahili, Hausa, Portuguese, Pashto, Uzbek.), add all languages in the first screen as a drop down list of anything better as you like
+```
+
+## The agent — 2026-11-18 14:36
+
+Recording it: all nine accepted, «الباكستانية» is Urdu, and Hindi counts once. That makes 22 languages in all. On the first screen a plain dropdown would be hard to use with 22 entries, so I'll build a language button that opens a searchable list. Each language appears in its own script with its Arabic and English names, and the list suggests the phone's own language first.
+
+Patched. Testing the picker in the browser: opening, search, choosing a coming language, and switching to English.
+
+The preview server stopped again. Restarting it.
+
+The sheet opens correctly: "your device's language" first (the browser reports English), then "available now", then "coming". Testing search, a coming language, and switching to English:
+
+Clean: 180 combinations, no console errors. Now recording the accepted 22 languages in the documents.
+
+Records updated. Committing and pushing.

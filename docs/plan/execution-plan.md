@@ -298,7 +298,7 @@ three modes, playback that survives network loss, About page.
 
 | Task | What |
 | --- | --- |
-| P1-W1 | Home and navigation as designed; language choice (F1) complete. |
+| P1-W1 | Home and navigation as designed; language choice (F1) complete — the searchable list of the 22 languages from the language data, Arabic and English selectable, the others marked "coming", the device's language suggested first (`AGENTS.md` §8.9). |
 | P1-W2 | Quran reader: by surah and by page; the index (فهرس) of 114 surahs and 30 juz; each surah's Makki / Madani, number of ayahs and order (§8.1); go to surah / juz / page; font size; light / dark; last read position and bookmarks in browser storage. |
 | P1-W3 | Search (F16): one search box for a word with or without tashkeel, a surah name, or an ayah number; results grouped by surah with the match highlighted (a display layer — the text is not changed), the number of results, and opening the ayah in the reader. |
 | P1-W4 | Audio engine — one global service implementing §8.3: ordered sources, growing retry delay with a cap, switch to the next source, no retry limit, `online` event, resume at the same position, the message «جارٍ إعادة الاتصال…». |
@@ -416,7 +416,7 @@ path monitor. Started after the Android slice is accepted. Device checks wait fo
 
 | Task | What |
 | --- | --- |
-| LANG-01 | The author fixes the list and the order (requested: Russian, Spanish, German, Italian, French, Urdu, Hindi, Korean, Indonesian, Japanese, Chinese; recommended: Turkish, Bengali, Persian, Malay, Swahili, Hausa, Portuguese, Pashto, Uzbek — `AGENTS.md` §8.9). |
+| LANG-01 | ✔ The list (2026-11-18): 22 languages — Arabic, English, Russian, Spanish, German, Italian, French, Urdu, Hindi, Korean, Indonesian, Japanese, Chinese, Turkish, Bengali, Persian, Malay, Swahili, Hausa, Portuguese, Pashto, Uzbek (`AGENTS.md` §8.9). ☐ The order after Arabic and English, decided by the author. |
 | LANG-02 | Per language: the interface strings (`ar` / `en` keys as the reference), read and corrected by a native speaker; the font (licence read and recorded); a right-to-left check for Urdu, Persian and Pashto; a long-text check for German and Russian. |
 | LANG-03 | Per language: the published translation of the meanings, chosen with the author, with written permission from its publisher (QuranEnc's terms page could not be opened on 2026-11-18 → letter in `P0-13`), imported untouched with its checksum like the Quran text. Without permission: the Arabic is shown with a note (§6.10). |
 | LANG-04 | Store listings and the About / Sources / privacy pages in that language. |

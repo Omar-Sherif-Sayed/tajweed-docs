@@ -132,10 +132,29 @@ body[data-cvd="tritanopia"]>:not(.chrome){filter:url(#cvd-tritanopia)}
 .pill[aria-pressed="true"]{border-color:var(--text);box-shadow:inset 0 0 0 1px var(--text)}
 .pill .ic{width:18px;height:18px}
 .setup>*{flex-shrink:0}
-.langs{display:flex;flex-wrap:nowrap;gap:5px;margin-top:-3px;overflow-x:auto;padding-bottom:3px;scrollbar-width:none;white-space:nowrap;align-items:center}
-.langs .lh{font-size:10.5px;color:var(--muted);flex:none}
-.langs span.lg{flex:none}
-.langs span.lg{font-size:11.5px;padding:2px 8px;border-radius:999px;border:1px dashed var(--rule);color:var(--muted)}
+/* the language button and its list */
+.lsel{display:flex;align-items:center;gap:10px;width:100%;padding:10px 12px;border-radius:12px;border:1px solid var(--text);background:var(--surface);color:var(--text);font:inherit;cursor:pointer;text-align:start}
+.lsel .cur{font-weight:700;font-size:15px}
+.lsel .cnt{font-size:11px;color:var(--muted);margin-inline-start:auto}
+.lsel .chev{width:18px;height:18px}
+.lhint{font-size:11px;color:var(--muted);margin-top:-6px}
+.lhint b{color:var(--text)}
+.lsheet{position:absolute;inset:0;background:rgba(0,0,0,.38);display:flex;align-items:flex-end;z-index:5}
+.lsheet[hidden]{display:none}
+.lsheet-in{width:100%;height:84%;border-radius:22px 22px 0 0;display:flex;flex-direction:column;padding:12px 14px 0;box-shadow:0 -8px 24px rgba(0,0,0,.25)}
+.lsh-top{display:flex;align-items:center;justify-content:space-between;padding:2px 2px 8px}
+.lsh-top b{font-size:14px}
+.lsearch{display:flex;align-items:center;gap:8px;border:1px solid var(--border);border-radius:12px;padding:7px 10px;background:var(--surface)}
+.lsearch input{flex:1;border:0;background:transparent;color:var(--text);font:inherit;font-size:14px;outline:none;min-width:0}
+.llist{flex:1;overflow:auto;margin:8px -14px 0;padding:0 14px 14px}
+.llist h5{margin:10px 2px 4px;font-size:11px;color:var(--muted);font-weight:600}
+.lrow{display:flex;align-items:center;gap:10px;width:100%;padding:9px 4px;border:0;border-bottom:1px solid var(--border);background:transparent;color:var(--text);font:inherit;text-align:start;cursor:pointer}
+.lrow .nat{font-weight:700;font-size:15px}
+.lrow .tr{font-size:11.5px;color:var(--muted)}
+.lrow .tag{margin-inline-start:auto;font-size:10px;font-weight:700;padding:1px 7px;border-radius:999px;border:1px solid var(--rule);color:var(--muted);white-space:nowrap}
+.lrow .tag.on{border-color:var(--second);color:var(--second)}
+.lrow[aria-pressed="true"] .nat::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--dot);margin-inline-end:6px;vertical-align:middle}
+.lnote{font-size:11.5px;padding:8px 10px;margin-top:8px;border-radius:10px;background:var(--dotsoft);color:var(--text)}
 .dirs{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
 .dir{border:1px solid var(--border);border-radius:12px;background:var(--surface);padding:7px 4px 6px;display:flex;flex-direction:column;align-items:center;gap:5px;font:inherit;font-size:11px;font-weight:600;color:var(--text);cursor:pointer;text-align:center;line-height:1.25}
 .dir[aria-pressed="true"]{border-color:var(--text);box-shadow:inset 0 0 0 1px var(--text)}
@@ -327,6 +346,8 @@ body[data-theme="dark"] .browser{background:#2b2a28;border-color:#444}
   <symbol id="i-moon" viewBox="0 0 24 24"><path d="M19.5 14.5A8 8 0 0 1 9.5 4.5a8 8 0 1 0 10 10z"/></symbol>
   <symbol id="i-next" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
   <symbol id="i-prev" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.6 3.6 5.4 3.6 8.5s-1.1 5.9-3.6 8.5c-2.5-2.6-3.6-5.4-3.6-8.5S9.5 6.1 12 3.5z"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6.2-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 14.8 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.3"/></symbol>
   <symbol id="i-dots" viewBox="0 0 22 12"><circle cx="7" cy="9" r="1.9" fill="currentColor" stroke="none"/><circle cx="15" cy="9" r="1.9" fill="currentColor" stroke="none"/><circle cx="11" cy="3" r="1.9" fill="currentColor" stroke="none"/></symbol>
   <!-- colour-vision simulation (Machado, Oliveira & Fernandes 2009), generated from tools/design2_palettes.py -->
@@ -356,8 +377,8 @@ body[data-theme="dark"] .browser{background:#2b2a28;border-color:#444}
     <div class="setup">
       <div class="brand"><div class="coin" data-coin="brand"><div class="c-in"><svg style="width:18px;height:10px;color:var(--dot)"><use href="#i-dots"/></svg></div></div><div><div class="wm">تجويد</div><div class="tl" data-ar="القرآن الكريم وعلومه" data-en="The Noble Quran and Its Sciences"></div></div></div>
       <div class="q kufi" data-ar="اللغة · Language" data-en="Language · اللغة"></div>
-      <div class="pills" data-set="lang"><button class="pill" data-v="ar" lang="ar">العربية</button><button class="pill" data-v="en" lang="en">English</button></div>
-      <div class="langs" id="langs"></div>
+      <button class="lsel" id="lsel" type="button" aria-haspopup="dialog"><svg class="ic"><use href="#i-globe"/></svg><span class="cur" id="lsel-cur"></span><span class="cnt" id="lsel-cnt"></span><svg class="ic chev"><use href="#i-down"/></svg></button>
+      <div class="lhint" id="lhint"></div>
       <div class="q kufi" data-ar="الألوان" data-en="Colours"></div>
       <div class="dirs" id="dirs"></div>
       <div class="q kufi" data-ar="المظهر" data-en="Theme"></div>
@@ -369,6 +390,14 @@ body[data-theme="dark"] .browser{background:#2b2a28;border-color:#444}
       </div>
       <button class="start kufi" data-ar="ابدأ" data-en="Start"></button>
       <div class="later" data-ar="يمكن تغيير ذلك لاحقًا من الإعدادات" data-en="You can change this later in Settings"></div>
+    </div>
+    <!-- the language list: opens over the first-launch screen -->
+    <div class="lsheet" id="lsheet" hidden>
+      <div class="lsheet-in parch" role="dialog" aria-modal="true">
+        <div class="lsh-top"><b class="kufi" data-ar="اختر اللغة · Choose language" data-en="Choose language · اختر اللغة"></b><button class="iconbtn" id="lsheet-x" type="button" aria-label="close">✕</button></div>
+        <div class="lsearch"><svg class="ic"><use href="#i-search"/></svg><input id="lsearch" type="search" autocomplete="off"></div>
+        <div class="llist" id="llist"></div>
+      </div>
     </div>
   </div></div>
 
@@ -621,23 +650,91 @@ window.ROUND3 = {"pages": {"1": {"lines": [{"t": "header", "s": 1, "dk": "سُو
     D.directions[id].swatch[body.dataset.theme].slice(0, 3).forEach(function (c) { var i = document.createElement("i"); i.style.background = c; s.appendChild(i); });
     return s;
   }
-  /* Planned languages (AGENTS.md §8.9): shown with their own names; only Arabic and English work in the prototype. */
-  var LANGS = [["ru", "Русский"], ["es", "Español"], ["de", "Deutsch"], ["it", "Italiano"], ["fr", "Français"],
-    ["ur", "اردو"], ["hi", "हिन्दी"], ["ko", "한국어"], ["id", "Bahasa Indonesia"], ["ja", "日本語"], ["zh", "中文"],
-    ["tr", "Türkçe"], ["bn", "বাংলা"], ["fa", "فارسی"], ["ms", "Bahasa Melayu"], ["sw", "Kiswahili"], ["ha", "Hausa"],
-    ["pt", "Português"], ["ps", "پښتو"], ["uz", "Oʻzbekcha"]];
+  /* The 22 languages accepted by the author (AGENTS.md §8.9): code, own name, Arabic name, English name, direction.
+     Only Arabic and English work in this prototype (and in the first release); the others are marked "coming". */
+  var LANGS = [
+    ["ar", "العربية", "العربية", "Arabic", "rtl"], ["en", "English", "الإنجليزية", "English", "ltr"],
+    ["ru", "Русский", "الروسية", "Russian", "ltr"], ["es", "Español", "الإسبانية", "Spanish", "ltr"],
+    ["de", "Deutsch", "الألمانية", "German", "ltr"], ["it", "Italiano", "الإيطالية", "Italian", "ltr"],
+    ["fr", "Français", "الفرنسية", "French", "ltr"], ["ur", "اردو", "الأردية", "Urdu", "rtl"],
+    ["hi", "हिन्दी", "الهندية", "Hindi", "ltr"], ["ko", "한국어", "الكورية", "Korean", "ltr"],
+    ["id", "Bahasa Indonesia", "الإندونيسية", "Indonesian", "ltr"], ["ja", "日本語", "اليابانية", "Japanese", "ltr"],
+    ["zh", "中文", "الصينية", "Chinese", "ltr"], ["tr", "Türkçe", "التركية", "Turkish", "ltr"],
+    ["bn", "বাংলা", "البنغالية", "Bengali", "ltr"], ["fa", "فارسی", "الفارسية", "Persian", "rtl"],
+    ["ms", "Bahasa Melayu", "الملايوية", "Malay", "ltr"], ["sw", "Kiswahili", "السواحيلية", "Swahili", "ltr"],
+    ["ha", "Hausa", "الهوسا", "Hausa", "ltr"], ["pt", "Português", "البرتغالية", "Portuguese", "ltr"],
+    ["ps", "پښتو", "البشتو", "Pashto", "rtl"], ["uz", "Oʻzbekcha", "الأوزبكية", "Uzbek", "ltr"]
+  ];
+  var READY = ["ar", "en"];
+  function lang(code) { return LANGS.filter(function (x) { return x[0] === code; })[0]; }
+  /* the device's own language, suggested first (navigator.languages: nothing leaves the device) */
+  var DEVICE = (function () {
+    var list = (navigator.languages || [navigator.language || ""]).map(function (s) { return String(s).slice(0, 2).toLowerCase(); });
+    for (var i = 0; i < list.length; i++) if (lang(list[i])) return list[i];
+    return null;
+  })();
+  var sheetNote = "";
   function renderLangs() {
-    var host = document.getElementById("langs");
-    host.textContent = "";
-    var h = document.createElement("span"); h.className = "lh";
-    h.textContent = L() === "ar" ? "لغات قادمة إن شاء الله:" : "Languages to come:";
-    host.appendChild(h);
-    LANGS.forEach(function (x) {
-      var s = document.createElement("span"); s.className = "lg"; s.lang = x[0]; s.textContent = x[1];
-      if (["ur", "fa", "ps"].indexOf(x[0]) >= 0) s.dir = "rtl";
-      host.appendChild(s);
-    });
+    var ui = L(), cur = lang(ui);
+    document.getElementById("lsel-cur").textContent = cur[1];
+    document.getElementById("lsel-cnt").textContent = ui === "ar" ? ar(LANGS.length) + " لغة" : LANGS.length + " languages";
+    var hint = document.getElementById("lhint");
+    hint.textContent = "";
+    if (DEVICE) {
+      var d = lang(DEVICE);
+      hint.innerHTML = "<span></span><b></b>";
+      hint.children[0].textContent = (ui === "ar" ? "لغة جهازك: " : "Your device's language: ");
+      hint.children[1].textContent = d[1] + (READY.indexOf(DEVICE) < 0 ? (ui === "ar" ? " — قريبًا" : " — coming") : "");
+    }
+    renderLangList();
   }
+  function renderLangList() {
+    var ui = L(), q = (document.getElementById("lsearch").value || "").trim().toLowerCase();
+    var host = document.getElementById("llist");
+    document.getElementById("lsearch").placeholder = ui === "ar" ? "ابحث: عربي، Deutsch، Urdu…" : "Search: Arabic, Deutsch, اردو…";
+    host.textContent = "";
+    function match(x) { return !q || [x[0], x[1], x[2], x[3]].some(function (s) { return s.toLowerCase().indexOf(q) >= 0; }); }
+    function section(title, items) {
+      if (!items.length) return;
+      var h = document.createElement("h5"); h.textContent = title; host.appendChild(h);
+      items.forEach(function (x) {
+        var b = document.createElement("button");
+        b.type = "button"; b.className = "lrow";
+        b.setAttribute("aria-pressed", String(x[0] === ui));
+        b.innerHTML = "<div><div class='nat'></div><div class='tr'></div></div><span class='tag'></span>";
+        var nat = b.querySelector(".nat"); nat.textContent = x[1]; nat.lang = x[0]; nat.dir = x[4];
+        b.querySelector(".tr").textContent = (ui === "ar" ? x[2] : x[3]) + (x[4] === "rtl" ? (ui === "ar" ? " · من اليمين" : " · right to left") : "");
+        var tag = b.querySelector(".tag"), ready = READY.indexOf(x[0]) >= 0;
+        tag.textContent = ready ? (ui === "ar" ? "متاحة" : "available") : (ui === "ar" ? "قريبًا" : "coming");
+        if (ready) tag.classList.add("on");
+        b.addEventListener("click", function () {
+          if (ready) { sheetNote = ""; closeSheet(); set("lang", x[0]); return; }
+          sheetNote = x[0];
+          renderLangList();
+        });
+        host.appendChild(b);
+      });
+    }
+    var shown = LANGS.filter(match);
+    if (DEVICE && shown.some(function (x) { return x[0] === DEVICE; }) && !q)
+      section(ui === "ar" ? "لغة جهازك" : "Your device's language", [lang(DEVICE)]);
+    section(ui === "ar" ? "متاحة الآن" : "Available now", shown.filter(function (x) { return READY.indexOf(x[0]) >= 0; }));
+    section(ui === "ar" ? "قريبًا إن شاء الله" : "Coming, in sha Allah", shown.filter(function (x) { return READY.indexOf(x[0]) < 0; }));
+    if (!shown.length) { var e = document.createElement("div"); e.className = "lnote"; e.textContent = ui === "ar" ? "لا توجد لغة بهذا الاسم." : "No language by that name."; host.appendChild(e); }
+    if (sheetNote) {
+      var n = document.createElement("div"); n.className = "lnote";
+      n.textContent = (ui === "ar" ? "«" + lang(sheetNote)[1] + "» ستتوفر بعد الإصدار الأول إن شاء الله. حتى ذلك الحين اختر العربية أو English."
+                                    : "“" + lang(sheetNote)[1] + "” comes after the first release, in sha Allah. Until then, choose Arabic or English.");
+      host.insertBefore(n, host.firstChild);
+    }
+  }
+  function openSheet() { var s = document.getElementById("lsheet"); s.hidden = false; renderLangList(); document.getElementById("lsearch").focus(); }
+  function closeSheet() { document.getElementById("lsheet").hidden = true; document.getElementById("lsearch").value = ""; sheetNote = ""; }
+  document.getElementById("lsel").addEventListener("click", openSheet);
+  document.getElementById("lsheet-x").addEventListener("click", closeSheet);
+  document.getElementById("lsheet").addEventListener("click", function (e) { if (e.target.id === "lsheet") closeSheet(); });
+  document.getElementById("lsearch").addEventListener("input", renderLangList);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeSheet(); });
 
   function renderDirs() {
     var host = document.getElementById("dirs"), lang = L();

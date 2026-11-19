@@ -36,6 +36,7 @@ repository the task touches → (6) the last record in [`docs/sessions/`](docs/s
 | --- | --- |
 | Date | 2026-11-19 |
 | Phase | **0 — Foundations** (§14) |
+| Figma | «Tajweed — designs»: https://www.figma.com/design/K5RXq2tO1sVE7RwlJ9dD1L — every design round as a live layer (§13). |
 | Exists | **Five public repositories on GitHub** (`main` branch), the same five folders on this machine. `tajweed-docs` (this one): parent `AGENTS.md`, `README.md`, `LICENSE` (CC BY 4.0), the detailed plan, the session record with a conversation copy, and the design in `docs/design/`: round 1 (colour directions), round 2 (first-launch screen, mushaf pages as printed, six Quran fonts, Sources screen) round 3 (design 2, "early Islam") and **round 4** (design 3, "the first era") with the verified source files and the scripts that check them. The four application repositories: `README.md`, `AGENTS.md`, `LICENSE` (MIT), `.gitignore` — no application code. |
 | Does not exist | Any application code, the register of content sources, the remaining screens. |
 | Last task done | Round 4 (2026-11-19): **design 3, "the first era"** — `docs/design/prototypes/round-4.html`, twelve colour directions (eleven for ordinary sight, the last, Mountains, for low vision and colour blindness), each in day and night with its own landscape; the prayer times on the path of the sun; a new logo; all 22 languages; the reason for every colour and scene with its ayah or hadith in `docs/design/design-3-meanings.md` (§13). Also fixed: rounds 3 and 4 stopped drawing in the 21 languages other than Arabic (a surah name missing from the data). Then (same day, the author's review): the round-4 texts translated into the 20 languages; every cross shape removed from all designs (§8.10); no native readers — mistakes come from users' GitHub reports (§1). |
@@ -44,7 +45,7 @@ repository the task touches → (6) the last record in [`docs/sessions/`](docs/s
 | GitHub account | `Omar-Sherif-Sayed` — <https://github.com/Omar-Sherif-Sayed?tab=repositories>. Pushing is allowed for this product (R1); push at the end of every task. |
 | Do not forget | `P2-D1` — the default prayer-time method of every country, each with a named official source (the author, 2026-11-17: it may be done at any time, before phase 2 starts) · **F19** — the in-app section «لماذا هذا التصميم؟ / Why this design?»: the reason for every colour, icon and the logo (§8.10, `docs/design/design-2-meanings.md` or `design-3-meanings.md`, for the chosen design). |
 | **Next task** | `P0-11`: the author chooses one design — 1 (`round-2.html`), 2 (`round-3.html`) or 3 (`round-4.html`) — for web, Android and iPhone; then the remaining screens in the chosen design (§13), the Figma file, and the scaffolds `P0-06` … `P0-10`. |
-| Waiting for the author | His choice among designs 1, 2 and 3; his reading of the meanings documents (`design-2-meanings.md`, `design-3-meanings.md`); the reports of mistakes that users write on GitHub (issues), which he brings to the agent. |
+| Waiting for the author | His choice among designs 1, 2 and 3; his reading of the meanings documents (`design-2-meanings.md`, `design-3-meanings.md`); the reports of mistakes that users write on GitHub (issues), which he brings to the agent; R11 (the Seerah inside F20?) and R12 (which Companions first) — §18.2. |
 
 **At the end of every session:** update the table above, the statuses in §14.1, the change log §19; write or extend
 the session record; commit as the author (§1). Details: `docs/plan/execution-plan.md` §1.
@@ -131,6 +132,9 @@ too long for a store title, the store shows "Tajweed" with the rest as the subti
 | F18 | Appearance | Three colour directions (A emerald and gold, B teal and sand, C mushaf), each with a light and a dark theme; chosen on first launch after the language, changeable in settings; the Quran font is a reader setting (author, 2026-11-17 — §13). A second design, "early Islam" (round 3), and a third, "the first era" (round 4), were made on the author's request to compare; he chooses one design for all clients. |
 | F19 | Why this design | A section inside the application that explains every colour direction, icon and the logo — the ayah (copied, never typed), the hadith reference, a design note — asked by the author, 2026-11-17 (§8.10). |
 | F16 | Quran search | Search for a word with or without tashkeel, by the surah's name, and by the ayah's number (§8.1) — added by the author, 2026-11-17. |
+| F20 | Stories of the prophets — قصص الأنبياء | The prophets named in the Quran, each with the ayahs about him (copied from the shipped text), the authentic hadiths about him with their grade, and his story verbatim from a named classical source; the Seerah of the Prophet ﷺ is the last and longest story (§8.11) — added by the author, 2026-11-19. |
+| F21 | The Companions — الصحابة | The life of each Companion verbatim from the classical books of the Companions, with the hadiths of his or her virtues and their grade; first the ten promised Paradise and the Mothers of the Believers (§8.11) — added by the author, 2026-11-19. |
+| F22 | The Rightly Guided Caliphs — الخلفاء الراشدون | Abu Bakr, Umar, Uthman and Ali: the caliphate of each — how it began, its events year by year, its end — verbatim from named classical histories, with the hadiths of their virtues (§8.11) — added by the author, 2026-11-19. |
 
 Reference applications to study during design: Hisn Al-Muslim, Nusuk, Ayah, إذاعة القرآن الكريم من القاهرة, Radio Garden.
 
@@ -668,6 +672,46 @@ the rules there:
 Tasks: `P0-16` (the document — done in draft), `P1-D6` (content in both languages), `P1-W9`, `P1-A7`, `P1-I7`
 (the screen).
 
+### 8.11 F20, F21, F22 — Prophets, Companions, Rightly Guided Caliphs (author, 2026-11-19)
+
+The author asked to add the stories of the prophets, the Companions and the Rightly Guided Caliphs, "everything about
+them, from trusted sources", with a section for them — one or three; he thought three is better.
+
+**Decision (agent's recommendation, in line with the author's view): three sections, shown together.** Three sections,
+because the three differ in their sources, their scope and their rules (the prophets' first source is the Quran; the
+Companions are thousands of people; the caliphs are four eras of history), and each can be released on its own when
+its sources are verified. On the home screen they sit side by side under one heading «السِّيَر» (Lives), so the home
+grid stays short; inside, each is its own section with its own index and search. They link to each other: a caliph's
+page in F22 holds his caliphate (the era and its events) and links to his life in F21, so nothing is written twice.
+
+| | F20 — the prophets | F21 — the Companions | F22 — the Rightly Guided Caliphs |
+| --- | --- | --- | --- |
+| Scope | The 25 prophets named in the Quran, in their order in time; the Seerah of the Prophet ﷺ last (☐ R11) | Start: the ten promised Paradise, the Mothers of the Believers, the people of Badr; then more, one source entry at a time (☐ R12) | Abu Bakr, Umar, Uthman, Ali — the caliphate of each |
+| First source | The Quran: the ayahs about each prophet, copied from the shipped text (☐ the list of ayahs per prophet from a named index, never chosen by us) | The hadiths of virtues: Sahih al-Bukhari «كتاب فضائل أصحاب النبي ﷺ», Sahih Muslim «كتاب فضائل الصحابة» (numbers and grades as published) | The hadiths of their virtues (as F21) |
+| The story — ☐ candidates, each edition's rights checked (`P9-D1`) | Ibn Kathir «قصص الأنبياء» (from «البداية والنهاية»), a named verified edition; for the Seerah: Ibn Hisham «السيرة النبوية», Ibn Kathir «السيرة النبوية» | Ibn Hajar «الإصابة في تمييز الصحابة», Ibn al-Athir «أسد الغابة», Ibn Abd al-Barr «الاستيعاب», al-Dhahabi «سير أعلام النبلاء» | al-Suyuti «تاريخ الخلفاء», Ibn Kathir «البداية والنهاية» |
+| Each entry | name, lineage, the ayahs, the hadiths, the story with book · volume · page, places and a timeline where the source gives them | name, lineage, kunya, Islam, hijrah, battles, death — as the source gives them; the hadiths; the life with book · volume · page | start, events by year, end — each with book · volume · page; links to F21 |
+
+Rules (in addition to §6):
+
+1. **Verbatim only** (§6.10): every text is copied from its named edition with book, volume and page; nothing is
+   summarised, retold, merged or written by us or by an AI model. "Everything about them" means everything the
+   chosen sources hold — not what we add.
+2. **Authentic only.** A hadith is shown with the grade its source states. ⚠ The story books contain weak narrations
+   and Israiliyyat; Ibn Kathir often marks them himself. Until a qualified reviewer exists, a narration is shown only
+   with the source's own judgement beside it, or left out; a verified edition (تحقيق) that grades the narrations is
+   preferred (☐ which edition, `P9-D1`).
+3. **No pictures of any prophet or Companion** — no face, figure, silhouette or portrait in any illustration, icon or
+   video; places only, and only as they were in that era (§8.10).
+4. **Honorifics** as the source writes them: ﷺ for the Prophet, «عليه السلام» for the prophets, «رضي الله عنه / عنها /
+   عنهم» for the Companions; in the other languages too, never left out.
+5. **The Companions are spoken of with respect** (the creed of أهل السنة والجماعة). The disputes between Companions
+   (from the killing of Uthman to Siffin) are shown only as the chosen Sunni sources state them, and only after a
+   qualified reviewer signs them (§6.6); until then those chapters stay unpublished.
+6. **Languages:** the Arabic text always; another language only from a published translation by a named translator
+   with permission (§6.10); otherwise the Arabic with a note. The interface is in all 22 languages (§8.9).
+7. Search inside these sections, a "report a mistake" button on every entry (§6.9), and the source of every entry in
+   F17.
+
 ## 9. Backend — `tajweed-backend` (structure and conventions)
 
 The author's usual backend style. The conventions below are the complete list for this product; the repository's
@@ -703,6 +747,9 @@ docs/                api/ (OpenAPI), data-sources/, permissions/, deployment/, q
 | `adhkar` | categories, adhkar, counts, references |
 | `hadith` | collections, books, chapters, hadiths, grades, reference links |
 | `library` | books, volumes, chapters, pages |
+| `prophet` | prophets, their ayah references, hadiths, story chapters with book / volume / page (F20) |
+| `companion` | Companions, groups (the ten, Mothers of the Believers, Badr), hadiths of virtues, life chapters (F21) |
+| `caliph` | the four caliphates, events by year, links to `companion` (F22) |
 | `appinfo` | about / author, content versions, sources and credits |
 
 Conventions: constructor injection with Lombok `@RequiredArgsConstructor` (no `@Autowired`
@@ -725,7 +772,8 @@ The author's usual web style. The conventions below are the complete list for th
 ```
 src/app/
   component/<module>/            pages per feature: quran, recitation, tafsir, tajweed, radio, prayer-times,
-                                 qibla, adhkar, hadith, library, about, onboarding (language choice)
+                                 qibla, adhkar, hadith, library, prophets, companions, caliphs, about,
+                                 onboarding (language choice)
   shared/
     component/general/           our wrappers around the UI library (inputs, buttons, dialogs, drawer, tag, ...)
     component/business/          reusable domain blocks (ayah view, audio player bar, reciter picker, ...)
@@ -794,6 +842,14 @@ Agreed for both platforms whatever the option:
 - **Figma:** possible in two ways — through the author's Chrome session, or through the Figma connector (it mostly
   reads designs). Recommendation: first build the screens as interactive HTML prototypes (real Arabic text, real RTL,
   fast to review and change), agree on colours and layout, then produce the Figma file from the agreed design — §18 Q8.
+- **Figma (author, 2026-11-19: every design in Figma and in this repository, "as you like"):** the file
+  «Tajweed — designs» in the author's Figma account (Starter team) — https://www.figma.com/design/K5RXq2tO1sVE7RwlJ9dD1L — holds every
+  round as a live code layer (the same HTML, clickable: directions, day / night, languages, pages): page 1 round 4,
+  page 2 round 3, page 3 rounds 1 and 2 (the Starter plan allows three pages). Editable Figma frames could not be
+  made from the HTML with the tools available, and the mushaf pages need the King Fahd page fonts, which Figma
+  frames cannot use; the live layer shows them exactly. The HTML in `docs/design/prototypes/` stays the source:
+  after each round, the changed round is imported again. ☐ The preview of each layer is opened once in Figma to
+  confirm it runs.
 - **Decided (2026-11-16):** HTML prototypes first; after the author approves the colours and the layout, the Figma
   file is created in the author's own Figma account through his Chrome session (the account he named for this project).
 - **Round 1 (2026-11-17) — waiting for the author's choice:** `docs/design/prototypes/colour-directions.html`, one
@@ -842,7 +898,7 @@ Agreed for both platforms whatever the option:
   round 3). Reasons: `docs/design/design-3-meanings.md`; values: `docs/design/tokens-design-3.json`.
 - Screens to design: language choice, colour-direction choice, sources (F17), home, Quran reader (+ ayah actions: play, tafsir, bookmark), player, reciter
   picker, tajweed lesson, radio list and player, prayer times (six backgrounds), adhan settings, Qibla, adhkar list and
-  counter, hadith, book reader, settings, about.
+  counter, hadith, book reader, prophets / Companions / caliphs (index, entry, timeline), settings, about.
 
 ## 14. Execution plan
 
@@ -864,6 +920,7 @@ complete; the repository `AGENTS.md` and `README.md` are updated; the author has
 | **6. Adhkar** | F12 with counters and reminders | |
 | **7. Hadith** | F13 in the agreed scope with references | |
 | **8. Books** | F14 reader | |
+| **9. Lives** | F20 prophets · F21 Companions · F22 Rightly Guided Caliphs (§8.11) | |
 | **Release track** (parallel, starts in phase 1) | Hosting, domain, privacy policy, store accounts, Google Play closed test (takes at least 14 days), TestFlight, store listings | Public availability — §15 |
 
 ### 14.1 Task list and status (the only place where status is kept)
@@ -917,6 +974,7 @@ reviewer). Task ids: `P<phase>-<area><n>`, areas **D** data · **B** backend · 
 | P6-D1, P6-B1, P6-W/A/I-1 | Adhkar with counters | ☐ (⏸ right to use the book's text) |
 | P7-D1, P7-D2, P7-B1, P7-W/A/I-1 | Hadith with references | ☐ (⏸ الدرر السنية permission for links / explanations) |
 | P8-D1, P8-B1, P8-W/A/I-1 | Books reader | ☐ (⏸ edition rights) |
+| P9-D1 … D4, P9-B1, P9-W/A/I-1 … 3, P9-Q1 | Prophets, Companions, Rightly Guided Caliphs (§8.11) — added 2026-11-19 | ☐ (⏸ edition rights; the disputes between Companions ⏸ reviewer) |
 | RT-01 … RT-07 | Hosting, domain, deployment, privacy pages, Google Play, App Store, store listings | ☐ (author: accounts, costs, the Mac) |
 | LANG-01 … LANG-04 | The 22 languages (§8.9): ✔ the list (2026-11-18); ✔ all in the first release (2026-11-19); draft interface texts written for the prototype · per language: interface strings translated by the agent and corrected from users' GitHub reports (no native readers — author, 2026-11-19), its font, its RTL / LTR check · the published translation of the meanings with written permission (QuranEnc, `P0-13`) · store listings in that language | ◐ (part of the first release; ⏸ native readers) |
 
@@ -1006,6 +1064,8 @@ explicit yes** (it is public); R3 (permanent) and R10 (public) need the author's
 | R8 | Recommendations in §17. | All accepted except the "later" items. |
 | R9 | A qualified reviewer before phases 5–7 (tajweed, adhkar, hadith) are published. | Those phases are built, but published only inside the limits of §6.10. |
 | R10 | Which e-mail do the commits carry? The author asked for his personal address; his GitHub account hides his address ("Keep my email addresses private" is on), and a pushed commit would show it to everyone, for ever. | ✔ **Decided by the author, 2026-11-17: his personal address** — the one his GitHub account is registered with — in every commit of this product. (The agent had recommended the account's "noreply" address; the author chose otherwise, knowing the address is public in the history.) |
+| R11 | The Seerah of the Prophet ﷺ: the last story of F20, or a fourth section of its own? | In F20, as the last and longest story, with its own chapters (agent's default, 2026-11-19) — ☐ the author confirms. |
+| R12 | How far F21 goes — "everything about them" is thousands of Companions in «الإصابة». | Start with the ten promised Paradise, the Mothers of the Believers and the people of Badr; add more in later releases, each entry verbatim from its source. |
 
 ### 18.3 Original questions (2026-11-16, kept for reference)
 
@@ -1050,3 +1110,4 @@ explicit yes** (it is public); R3 (permanent) and R10 (public) need the author's
 | 2026-11-19 | Fifteenth update (author's message): **all 22 languages are available from the first release** (§1, §2, F1, §8.9); round 3 works in all of them with draft interface texts (checked by the build) and a font, direction and number format per script; round 4 requested — a new design from the time of the Prophet ﷺ, the Companions and the Rightly Guided Caliphs, with many directions from the Quran (§0). |
 | 2026-11-19 | Sixteenth update (author's message): **round 4 — design 3, "the first era"** — twelve directions from the places and moments of the time of the Prophet ﷺ, the Companions and the Rightly Guided Caliphs and from words of the Quran, each in day and night with its own landscape; only the last, Mountains, for low vision and colour blindness; the prayer times on the path of the sun; reasons in `docs/design/design-3-meanings.md` (§13, §8.10). Rounds 3 and 4 fixed in the 21 languages other than Arabic. Next: the author chooses design 1, 2 or 3 (§0). |
 | 2026-11-19 | Seventeenth update (author's message): **no native readers** — the agent translates the interface, users report mistakes on GitHub and the author brings them (§1, §8.9, `LANG-02`); the round-4 texts translated into the 20 languages; **no cross shape anywhere** (a plus sign or a four-armed star — a symbol of Christianity): the star of the Light direction and four icons changed in all designs (§8.10); Mountains keeps its night theme (confirmed). |
+| 2026-11-19 | Eighteenth update (author's message): **three new sections — F20 stories of the prophets, F21 the Companions, F22 the Rightly Guided Caliphs** (§8.11, phase 9, modules `prophet`, `companion`, `caliph`), shown together under «السِّيَر»; verbatim from named classical sources; no pictures of prophets or Companions; R11, R12. All designs are also kept in Figma, beside this repository (§13). |

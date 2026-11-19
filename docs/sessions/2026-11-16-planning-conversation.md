@@ -1120,3 +1120,46 @@ Writing the translation set now (32 texts × 20 languages) as a script that fill
 Formatting matches. Now wiring it into the pages and builds.
 
 Now checking round 4 in the browser in all languages: every new text translated and no errors.
+
+I removed every cross shape from all four designs, translated the new round-4 texts into all 22 languages, and wrote down your decision that users will report language mistakes on GitHub. Everything is committed and pushed.
+
+**1. The cross shape.** The "+" you saw in النور was the star above the lamp in the landscape, drawn as two crossing lines. It is now a round dot with a soft glow. I then checked every icon and drawing in all four designs and found more crossing lines, so I changed those too:
+
+- **Rounds 3 and 4:**
+  - the hand on the Adhkar button had small marks across its fingers; they are removed;
+  - the pillars of the Home icon had rings that crossed them; they are now plain palm trunks;
+  - the language globe had a line through its middle; it now has two lines, one above and one below the middle.
+- **Design 1:** the four-pointed star in the logo is now an eight-pointed star (two squares, like ۞). The "+" on the counter icon is now a round button.
+
+The rule is now written down: no plus sign and no four-armed star in any icon, logo or drawing, because it is a Christian symbol and this is an Islamic application. It is in `AGENTS.md` §8.10 and in both meanings documents.
+
+**2. Languages.** I recorded the new rule: there are no native readers before release. I translate the interface, users report mistakes on GitHub, and you bring them to me to fix. Religious content stays as before: only from published translations, never translated by me.
+
+- Round 4 now has all its texts (the direction names and the design notes) in all 22 languages. Nothing falls back to English any more.
+- The note on the screen now says, in every language: "Interface translation by the project. Found a mistake? Report it on GitHub."
+- I checked all 12 directions, day and night, in the 20 other languages: everything is translated and nothing errors.
+
+**3. Mountains.** Yes, Mountains already has its own night theme, and it stays as it is.
+
+The full applications in all 22 languages come after you choose the design, because the remaining screens are built in the chosen design.
+
+## The author — 2026-11-19 19:09
+
+```text
+* خلي كل التصميمات اللي بتعملها علي Figma وفي docs repo زي الوضع الحالي براحتك يعني 
+* عاوزين نضيف في ال business بتاعنا قصص الأنبياء والصحابة والخلفاء الراشدين بكل شيء عنهم من مصادر موثوقة - ضيفهم وضيف سيكشن ليهم - ممكن تخليه سيكشن واحد او 3 شوف الأفضل وال best practices ايه اعتقد الفصل افضل انهم يكونوا 3
+```
+
+## The agent — 2026-11-19 19:11
+
+Writing the three sections (F20 prophets, F21 Companions, F22 Rightly Guided Caliphs) into AGENTS.md and the plan.
+
+The three sections are written into AGENTS.md (§8.11, features F20–F22, phase 9) and the plan. Now Figma: creating one design file for all the rounds.
+
+Figma accepts a plain HTML page as a live layer. Packing round 4 and uploading it:
+
+Round 4 is in Figma as a live, clickable layer. Now round 3:
+
+Round 3 is in. Last, design 1 (rounds 1 and 2) together on the third page:
+
+All three Figma pages now hold the designs. Recording the Figma link and this message in the documents, then committing:

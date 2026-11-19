@@ -415,6 +415,20 @@ path monitor. Started after the Android slice is accepted. Device checks wait fo
 | P8-B1 | `library` module: books, volumes, chapters, pages; loading by chapter; search. |
 | P8-W/A/I-1 | Reader with contents, page navigation, search, font size, last read position. |
 
+## 11a. Phase 9 — Lives: prophets, Companions, Rightly Guided Caliphs (F20, F21, F22 — author, 2026-11-19)
+
+Rules and sources: `AGENTS.md` §8.11. Three sections, shown together under «السِّيَر».
+
+| Task | What |
+| --- | --- |
+| P9-D1 | Sources: for each candidate book (قصص الأنبياء and السيرة النبوية لابن كثير، سيرة ابن هشام، الإصابة، أسد الغابة، الاستيعاب، سير أعلام النبلاء، تاريخ الخلفاء، البداية والنهاية) choose a verified edition and record its editor, publisher, year, page numbering and rights in the register; permission letters where needed (`P0-13`); prefer an edition that grades the narrations. |
+| P9-D2 | F20: the 25 prophets; the ayahs about each from a named index (copied from the shipped text); the hadiths (Sahih al-Bukhari «كتاب أحاديث الأنبياء» and others) with grade; the story chapters verbatim; the Seerah (R11). |
+| P9-D3 | F21: the first groups (the ten, the Mothers of the Believers, the people of Badr — R12); each entry verbatim with book / volume / page; the hadiths of virtues with grade. |
+| P9-D4 | F22: the four caliphates, events by year, verbatim with references; the chapters on the disputes kept unpublished until a reviewer signs (§8.11 rule 5). |
+| P9-B1 | `prophet`, `companion`, `caliph` modules: lists, entries, chapters, search, links between them. |
+| P9-W/A/I-1 … 3 | One section each: index (with search), entry page (ayahs, hadiths, chapters, references), timeline; the «السِّيَر» group on the home screen; report a mistake; sources in F17. |
+| P9-Q1 | Every text compared with its edition (a sample of pages per book, recorded); no picture of a prophet or Companion; honorifics present in all languages. |
+
 ---
 
 ## 11b. Languages track — part of the first release (author, 2026-11-19) — `LANG-*`

@@ -412,12 +412,12 @@ path monitor. Started after the Android slice is accepted. Device checks wait fo
 
 ---
 
-## 11b. Languages track (after the first release) — `LANG-*`
+## 11b. Languages track — part of the first release (author, 2026-11-19) — `LANG-*`
 
 | Task | What |
 | --- | --- |
-| LANG-01 | ✔ The list (2026-11-18): 22 languages — Arabic, English, Russian, Spanish, German, Italian, French, Urdu, Hindi, Korean, Indonesian, Japanese, Chinese, Turkish, Bengali, Persian, Malay, Swahili, Hausa, Portuguese, Pashto, Uzbek (`AGENTS.md` §8.9). ☐ The order after Arabic and English, decided by the author. |
-| LANG-02 | Per language: the interface strings (`ar` / `en` keys as the reference), read and corrected by a native speaker; the font (licence read and recorded); a right-to-left check for Urdu, Persian and Pashto; a long-text check for German and Russian. |
+| LANG-01 | ✔ The list (2026-11-18): 22 languages (`AGENTS.md` §8.9). ✔ All of them in the first release (2026-11-19). |
+| LANG-02 | Per language: the interface strings (`ar` / `en` keys as the reference; the agent's drafts for the prototype are in `docs/design/prototypes/i18n/`), read and corrected by a native speaker; the font (licence read and recorded); a right-to-left check for Urdu, Persian and Pashto; a long-text check for German and Russian. |
 | LANG-03 | Per language: the published translation of the meanings, chosen with the author, with written permission from its publisher (QuranEnc's terms page could not be opened on 2026-11-18 → letter in `P0-13`), imported untouched with its checksum like the Quran text. Without permission: the Arabic is shown with a note (§6.10). |
 | LANG-04 | Store listings and the About / Sources / privacy pages in that language. |
 

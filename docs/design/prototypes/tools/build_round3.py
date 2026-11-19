@@ -84,6 +84,35 @@ def build_verses():
     return out
 
 
+I18N = os.path.join(HERE, "..", "i18n")
+LANG_CODES = ["ru", "es", "de", "it", "fr", "ur", "hi", "ko", "id", "ja", "zh", "tr", "bn", "fa", "ms", "sw", "ha",
+              "pt", "ps", "uz"]
+SLOT = re.compile(r"\{(\w+)\}")
+
+
+def build_i18n():
+    """The interface texts of the 20 languages after Arabic and English (drafts, AGENTS.md §8.9), each file checked:
+    every key present, no unknown key, and every {slot} the English and Arabic texts share is kept."""
+    keys = json.load(io.open(os.path.join(I18N, "keys.json"), encoding="utf-8"))
+    ids = [k["id"] for k in keys]
+    out = {"en2id": {k["en"]: k["id"] for k in keys}, "tr": {}}
+    for code in LANG_CODES:
+        tr = json.load(io.open(os.path.join(I18N, code + ".json"), encoding="utf-8"))
+        tr.pop("_status", None)
+        missing, extra = [i for i in ids if i not in tr], [i for i in tr if i not in ids]
+        if missing or extra:
+            R2.fail("i18n/%s.json: missing %s, unknown %s" % (code, missing, extra))
+        for k in keys:
+            allowed = set(SLOT.findall(k["en"])) | set(SLOT.findall(k["ar"]))
+            needed = set(SLOT.findall(k["en"])) & set(SLOT.findall(k["ar"])) if k["ar"] else set(SLOT.findall(k["en"]))
+            got = set(SLOT.findall(tr[k["id"]]))
+            if not got <= allowed or not needed <= got:
+                R2.fail("i18n/%s.json %s: slots %s (allowed %s, needed %s)" % (code, k["id"], got, allowed, needed))
+        out["tr"][code] = tr
+    print("i18n: %d keys x %d languages checked" % (len(ids), len(LANG_CODES)))
+    return out
+
+
 def write_doc_block(verses, names):
     path = os.path.join(DESIGN, "design-2-meanings.md")
     text = io.open(path, encoding="utf-8").read()
@@ -136,6 +165,8 @@ def main():
     html = open(PAGE, encoding="utf-8", newline="").read()
     html = R2.replace_block(html, "/*ROUND3-THEMES-BEGIN*/", "/*ROUND3-THEMES-END*/", P.css())
     html = R2.replace_block(html, "<!--ROUND3-CVD-BEGIN-->", "<!--ROUND3-CVD-END-->", P.svg_filters())
+    html = R2.replace_block(html, "/*ROUND3-I18N-BEGIN*/", "/*ROUND3-I18N-END*/",
+                            "window.ROUND3_I18N = " + json.dumps(build_i18n(), ensure_ascii=False) + ";\n")
     open(PAGE, "w", encoding="utf-8", newline="\n").write(html)
     tokens = {"design": "2 — early Islam", "generated_by": "docs/design/prototypes/tools/build_round3.py",
               "meanings": "docs/design/design-2-meanings.md", "roles": P.__doc__.split("Roles")[1].strip(),

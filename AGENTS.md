@@ -34,17 +34,17 @@ repository the task touches → (6) the last record in [`docs/sessions/`](docs/s
 
 | | Current state — **update this table at the end of every session** |
 | --- | --- |
-| Date | 2026-11-18 |
+| Date | 2026-11-19 |
 | Phase | **0 — Foundations** (§14) |
 | Exists | **Five public repositories on GitHub** (`main` branch), the same five folders on this machine. `tajweed-docs` (this one): parent `AGENTS.md`, `README.md`, `LICENSE` (CC BY 4.0), the detailed plan, the session record with a conversation copy, and the design in `docs/design/`: round 1 (colour directions), round 2 (first-launch screen, mushaf pages as printed, six Quran fonts, Sources screen) and **round 3** (design 2, "early Islam") with the verified source files and the scripts that check them. The four application repositories: `README.md`, `AGENTS.md`, `LICENSE` (MIT), `.gitignore` — no application code. |
 | Does not exist | Any application code, the register of content sources, the remaining screens. |
-| Last task done | `P0-11` round 3, third pass (2026-11-18): design 2 has **nine** colour directions (+ Two seas, Lamps, Honey); every direction is checked for colour-blind readers by simulation, and Mountains is the direction for low vision and colour blindness; the reader shows each surah's Makki / Madani, number of ayahs and order; a mushaf index (114 surahs, 30 juz); 30:22 placed beside the language choice after reading its tafsirs. |
+| Last task done | Round 3 (2026-11-19): **all 22 languages work** in the prototype — draft interface texts for 20 languages (`docs/design/prototypes/i18n/`, checked by the build), a font, direction and number format per script; the author decided that all 22 are available from the first release (§1, §8.9). |
 | GitHub access from this machine | **Over SSH only** (the Windows certificate store blocks the HTTPS sign-in, §1). Key `~/.ssh/id_ed25519_tajweed` (no passphrase, fingerprint `SHA256:EPCRVeCpF+Jvsj40LKpu4Cta+mKF3ivLO8szlC2k/Po`), registered in the author's account as "Tajweed project - work laptop" (he confirmed it himself). Each of the five repositories uses it through its local `core.sshCommand`; remotes are `git@github.com:Omar-Sherif-Sayed/<name>.git`. A new clone on this machine needs the same two settings. Test: `ssh -i ~/.ssh/id_ed25519_tajweed -o IdentitiesOnly=yes -T git@github.com`. |
 | Folder name | `C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences` — renamed by the author on 2026-11-17. |
 | GitHub account | `Omar-Sherif-Sayed` — <https://github.com/Omar-Sherif-Sayed?tab=repositories>. Pushing is allowed for this product (R1); push at the end of every task. |
 | Do not forget | `P2-D1` — the default prayer-time method of every country, each with a named official source (the author, 2026-11-17: it may be done at any time, before phase 2 starts) · **F19** — the in-app section «لماذا هذا التصميم؟ / Why this design?»: the reason for every colour, icon and the logo (§8.10, `docs/design/design-2-meanings.md`). |
-| **Next task** | The author compares design 1 (`round-2.html`) and design 2 (`round-3.html`, nine directions) and chooses one design and its directions for web, Android and iPhone; he reads `design-2-meanings.md`. Then `P0-11` round 4: the remaining screens in the chosen design, then Figma; or `P0-06` + `P0-07` (backend scaffold) in parallel. |
-| Waiting for the author | His choice between design 1 and design 2 (and which directions to keep); his reading of the meanings document; the order in which the 20 languages after Arabic and English are added (§8.9). |
+| **Next task** | `P0-11` **round 4** (author, 2026-11-19): round 3 is left as it is; a new design taken from the first era of Islam — the time of the Prophet ﷺ, the Companions and the Rightly Guided Caliphs — for the same product, much better than round 3, with many colour directions drawn from reflection on the Quran and its tafsirs, each with a day and a night theme; only the last direction is for low vision and colour blindness. Then the author chooses among designs 1, 2 and 3 for web, Android and iPhone. |
+| Waiting for the author | His choice of design after round 4; his reading of the meanings document; native speakers for the 20 languages' interface texts (`LANG-02`). |
 
 **At the end of every session:** update the table above, the statuses in §14.1, the change log §19; write or extend
 the session record; commit as the author (§1). Details: `docs/plan/execution-plan.md` §1.
@@ -66,9 +66,9 @@ The author's own rules — the same in all his projects:
   readers), plus this parent file when scope, structure, sources or decisions change.
 - **Document everything.** Documents go in `docs/<kind>/` of the owning repository with an index `docs/README.md`;
   never loose files.
-- **Arabic and English in the first release**, in every client; every user-facing text exists in both. The code is
-  built so that more languages can be added later without changing screens (author, 2026-11-17: German, Italian,
-  Japanese, Chinese) — §8.9.
+- **All 22 languages from the first release** (author, 2026-11-19 — before: Arabic and English first), in every
+  client; every user-facing text exists in all of them, and each language's interface text is read by a native
+  speaker before release. The code is built so that more languages can be added without changing screens — §8.9.
 - **Correct data only** — §6 is binding. When a fact cannot be verified, it is not shipped.
 - **No advertisements, ever** — no ad SDK, no sponsored content, no tracking for marketing (§2).
 - **The plan lives in files.** Every decision, every task and its status is written in this repository on the day it
@@ -103,7 +103,7 @@ too long for a store title, the store shows "Tajweed" with the rest as the subti
 | --- | --- |
 | Free and public | No registration, no login, no accounts, no payments. Preferences live on the device only. |
 | No ads | No advertising of any kind, in any client, at any time. |
-| Languages | **22 languages, accepted by the author on 2026-11-18** (§8.9): Arabic (default, right-to-left) and English in the first release; then Russian, Spanish, German, Italian, French, Urdu, Hindi, Korean, Indonesian, Japanese, Chinese, Turkish, Bengali, Persian, Malay, Swahili, Hausa, Portuguese, Pashto, Uzbek. The user chooses on first launch, from a searchable list, and can change it later. |
+| Languages | **22 languages, all available from the first release** (author, 2026-11-18 and 2026-11-19, §8.9): Arabic (default, right-to-left), English, Russian, Spanish, German, Italian, French, Urdu, Hindi, Korean, Indonesian, Japanese, Chinese, Turkish, Bengali, Persian, Malay, Swahili, Hausa, Portuguese, Pashto, Uzbek. The user chooses on first launch, from a searchable list, and can change it later. |
 | Correct data | Every text, audio link, time and reference comes from a named, verified source (§6, §7). |
 | Author | **Omar Sherif — عمر شريف**, shown on the About page with one link only: `https://www.linkedin.com/in/omarsherif21/` |
 
@@ -111,7 +111,7 @@ too long for a store title, the store shows "Tajweed" with the rest as the subti
 
 | # | Feature | Summary |
 | --- | --- | --- |
-| F1 | Language | Chosen on first launch (mobile and web) from a searchable list of the 22 languages, each written in its own script; the device's language is suggested first. Arabic and English in the first release; the others after it (§8.9, author 2026-11-18). |
+| F1 | Language | Chosen on first launch (mobile and web) from a searchable list of the 22 languages, each written in its own script; the device's language is suggested first. **All 22 are available from the first release** (author, 2026-11-19), each with its own font, direction and number format (§8.9). |
 | F2 | Quran reader | The full Quran text with complete tashkeel, **laid out exactly like the printed Madinah mushaf**: 604 pages of 15 lines, every page starting and every line ending on the same word as the printed copy, surah headers, basmala, juz / hizb / quarter marks in their places — one text colour (§8.1). Each surah shows whether it is Makki or Madani, its number of ayahs and its order; the mushaf has an index (فهرس) of the 114 surahs and 30 juz with their pages (author, 2026-11-18). |
 | F3 | Recitation | Choose a reciter and a recitation style (murattal / mujawwad / muallim). Play a surah, an ayah range, or from a start point to the end of the Quran, then restart from Al-Fatiha, forever. |
 | F4 | Muallim mushaf | Teaching recitation per ayah from a reciter who has one (Al-Husary, Al-Minshawi, Ayman Suwayd). |
@@ -569,12 +569,29 @@ translation of the meanings on QuranEnc. ✔ **The author accepted all nine (202
 confirmed that «الباكستانية» means Urdu, and that Hindi, written twice in his message, is one language. Others on
 QuranEnc, not planned, can be added later: Tamil, Bosnian, Albanian, Kurdish, Somali, Amharic, Tagalog, Thai.
 
+**All 22 available from the first release (author, 2026-11-19: "make all languages available now").** What it
+means, and the conditions that keep it correct:
+
+- The interface works in every language: its texts, its direction (right to left for Arabic, Urdu, Persian, Pashto),
+  its font, and numbers and times in its own format (the platform's locale functions; Persian, Pashto and Bengali
+  use their own digits).
+- **Interface texts:** the agent wrote drafts of all 20 languages for the prototype (`docs/design/prototypes/i18n/`,
+  122 texts each, checked by the build: every key present, every number slot kept). ⚠ They are drafts: each
+  language is read and corrected by a native speaker before release (`LANG-02`); until then the screen says
+  "draft translation". The weakest drafts are Hausa, Pashto, Uzbek and Swahili.
+- **Religious content does not change:** the Quran is always the Arabic text; a meaning in a language is shown only
+  from a published translation by a named translator with permission (QuranEnc, `P0-13`); without it the Arabic is
+  shown with a note (§6.10). Hadith and adhkar texts likewise.
+- **Surah names:** Arabic names for Arabic-script languages, Tanzil's transliteration for the others in the
+  prototype; ☐ a named source for surah names per language (`LANG-02`).
+- The first release is therefore larger: 22 store listings, 22 native readers, more fonts to ship.
+
 **On the first screen (author, 2026-11-18: "a drop-down list or anything better"):** a language button shows the
 current language in its own script and the number of languages; it opens a list over the screen with a search box
 (a language can be found by its own name, its Arabic name, its English name or its code), the device's own language
-first (read on the device, never sent anywhere), then "available now", then "coming". Each row shows the language in
-its own script, its name in the interface language and "right to left" where it applies. Choosing a language that is
-not ready yet says so and keeps the current one. Prototype: `docs/design/prototypes/round-3.html`, phone 1.
+first (read on the device, never sent anywhere), then all 22 languages. Each row shows the language in its own
+script, its name in the interface language and "right to left" where it applies; choosing one switches the whole
+interface at once. Prototype: `docs/design/prototypes/round-3.html`, phone 1.
 
 | Code | Language | Script, direction | Interface font (☐ licence read before use) | Published translation of the meanings — QuranEnc, read 2026-11-18 |
 | --- | --- | --- | --- | --- |
@@ -886,7 +903,7 @@ reviewer). Task ids: `P<phase>-<area><n>`, areas **D** data · **B** backend · 
 | P7-D1, P7-D2, P7-B1, P7-W/A/I-1 | Hadith with references | ☐ (⏸ الدرر السنية permission for links / explanations) |
 | P8-D1, P8-B1, P8-W/A/I-1 | Books reader | ☐ (⏸ edition rights) |
 | RT-01 … RT-07 | Hosting, domain, deployment, privacy pages, Google Play, App Store, store listings | ☐ (author: accounts, costs, the Mac) |
-| LANG-01 … LANG-04 | More languages (§8.9): ✔ the list — 22 languages, accepted 2026-11-18; ☐ the order · per language: interface strings read by a native speaker, its font, its RTL / LTR check · the published translation of the meanings with written permission (QuranEnc, `P0-13`) · store listings in that language | ☐ (after the first release; ⏸ the author's list) |
+| LANG-01 … LANG-04 | The 22 languages (§8.9): ✔ the list (2026-11-18); ✔ all in the first release (2026-11-19); draft interface texts written for the prototype · per language: interface strings read by a native speaker, its font, its RTL / LTR check · the published translation of the meanings with written permission (QuranEnc, `P0-13`) · store listings in that language | ◐ (part of the first release; ⏸ native readers) |
 
 ## 15. Going public — hosting and stores
 
@@ -1015,3 +1032,4 @@ explicit yes** (it is public); R3 (permanent) and R10 (public) need the author's
 | 2026-11-18 | Twelfth update (author's message): **only Mountains** is the direction for colour blindness, weak colour vision and weak sight — renamed «الجبال — لضعف البصر وعمى الألوان»; the colour-blind check applies to it alone; the other directions and their night themes are not built for it (§8.10, §13). |
 | 2026-11-18 | Thirteenth update (author's message): more languages planned — Russian, Spanish, German, Italian, French, Urdu, Hindi, Korean, Indonesian (with Japanese and Chinese), and nine recommended (Turkish, Bengali, Persian, Malay, Swahili, Hausa, Portuguese, Pashto, Uzbek), each with its script, font and published translation (§8.9, tasks `LANG-*`); the night themes of the eight directions other than Mountains reviewed against six rules (§13). |
 | 2026-11-18 | Fourteenth update (author's message): all nine recommended languages accepted — 22 languages in all (Urdu for «الباكستانية», Hindi once); the first screen gets a searchable language list with the device's language first (F1, §2, §8.9). |
+| 2026-11-19 | Fifteenth update (author's message): **all 22 languages are available from the first release** (§1, §2, F1, §8.9); round 3 works in all of them with draft interface texts (checked by the build) and a font, direction and number format per script; round 4 requested — a new design from the time of the Prophet ﷺ, the Companions and the Rightly Guided Caliphs, with many directions from the Quran (§0). |

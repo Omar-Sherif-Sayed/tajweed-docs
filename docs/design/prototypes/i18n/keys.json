@@ -1,0 +1,612 @@
+[
+ {
+  "id": "page_n",
+  "en": "Page {n}",
+  "ar": "الصفحة {n}"
+ },
+ {
+  "id": "juz_n",
+  "en": "Juz {n}",
+  "ar": "الجزء {n}"
+ },
+ {
+  "id": "hizb_n",
+  "en": "Hizb {n}",
+  "ar": "الحزب {n}"
+ },
+ {
+  "id": "surah_line",
+  "en": "{type} · {n} ayahs · surah {k}",
+  "ar": "{type} · آياتها {n} · ترتيبها {k}"
+ },
+ {
+  "id": "index_line",
+  "en": "{type} · {n} ayahs",
+  "ar": "{type} · آياتها {n}"
+ },
+ {
+  "id": "juz_starts",
+  "en": "Starts: {name} {s}:{a}",
+  "ar": "يبدأ: سورة {name} · {a}"
+ },
+ {
+  "id": "n_languages",
+  "en": "{n} languages",
+  "ar": "{n} لغة"
+ },
+ {
+  "id": "device_language",
+  "en": "Your device's language",
+  "ar": "لغة جهازك"
+ },
+ {
+  "id": "all_languages",
+  "en": "All languages",
+  "ar": "كل اللغات"
+ },
+ {
+  "id": "search_languages",
+  "en": "Search: Arabic, Deutsch, اردو…",
+  "ar": "ابحث: عربي، Deutsch، Urdu…"
+ },
+ {
+  "id": "right_to_left",
+  "en": "right to left",
+  "ar": "من اليمين"
+ },
+ {
+  "id": "no_language",
+  "en": "No language by that name.",
+  "ar": "لا توجد لغة بهذا الاسم."
+ },
+ {
+  "id": "verified",
+  "en": "✔ verified",
+  "ar": "✔ تم التحقق"
+ },
+ {
+  "id": "pending",
+  "en": "⏳ check or permission pending",
+  "ar": "⏳ بانتظار التحقق أو الإذن"
+ },
+ {
+  "id": "design_note",
+  "en": "Design note",
+  "ar": "ملاحظة التصميم"
+ },
+ {
+  "id": "from_quran",
+  "en": "From the Noble Quran",
+  "ar": "من القرآن الكريم"
+ },
+ {
+  "id": "from_sunnah",
+  "en": "From the Sunnah",
+  "ar": "من السنة"
+ },
+ {
+  "id": "why_languages",
+  "en": "Why more than one language?",
+  "ar": "لماذا أكثر من لغة؟"
+ },
+ {
+  "id": "note_30_22",
+  "en": "Shown beside the language choice. Its meaning is quoted word for word from a recognised tafsir (☐ al-Tafsir al-Muyassar, after permission) — never in our words.",
+  "ar": "تظهر هذه الآية بجوار اختيار اللغة. ومعناها يُنقل بنصه من تفسير معتمد (☐ التفسير الميسر، بعد الإذن)، لا بكلامنا."
+ },
+ {
+  "id": "disclaimer",
+  "en": "This is a design choice, not an interpretation. The Quran names colours; the exact shades here are our choice.",
+  "ar": "هذا اختيار تصميم، وليس تفسيرًا. القرآن الكريم يذكر أسماء الألوان؛ أما درجاتها هنا فاختيارنا."
+ },
+ {
+  "id": "ayah_note",
+  "en": "The ayahs are shown in Arabic; a meaning in this language is added only from a published translation by a named translator.",
+  "ar": ""
+ },
+ {
+  "id": "draft",
+  "en": "Draft translation — a native speaker will review it before release.",
+  "ar": ""
+ },
+ {
+  "id": "other_scripts",
+  "en": "interface text in other scripts",
+  "ar": "نصوص الواجهة بالخطوط الأخرى"
+ },
+ {
+  "id": "m24",
+  "en": "The Noble Quran and Its Sciences",
+  "ar": "القرآن الكريم وعلومه"
+ },
+ {
+  "id": "m25",
+  "en": "Language · اللغة",
+  "ar": "اللغة · Language"
+ },
+ {
+  "id": "m26",
+  "en": "Colours",
+  "ar": "الألوان"
+ },
+ {
+  "id": "m27",
+  "en": "Theme",
+  "ar": "المظهر"
+ },
+ {
+  "id": "m28",
+  "en": "Day",
+  "ar": "نهاري"
+ },
+ {
+  "id": "m29",
+  "en": "Night",
+  "ar": "ليلي"
+ },
+ {
+  "id": "m30",
+  "en": "Example · Al-Fatihah",
+  "ar": "مثال · سورة الفاتحة"
+ },
+ {
+  "id": "m31",
+  "en": "Asr 3:12 PM · sample",
+  "ar": "العصر ٣:١٢ م · مثال"
+ },
+ {
+  "id": "m32",
+  "en": "Listen",
+  "ar": "استماع"
+ },
+ {
+  "id": "m33",
+  "en": "Start",
+  "ar": "ابدأ"
+ },
+ {
+  "id": "m34",
+  "en": "You can change this later in Settings",
+  "ar": "يمكن تغيير ذلك لاحقًا من الإعدادات"
+ },
+ {
+  "id": "m35",
+  "en": "Choose language · اختر اللغة",
+  "ar": "اختر اللغة · Choose language"
+ },
+ {
+  "id": "m36",
+  "en": "Tajweed",
+  "ar": "تجويد"
+ },
+ {
+  "id": "m37",
+  "en": "Next prayer · Cairo",
+  "ar": "الصلاة القادمة · القاهرة"
+ },
+ {
+  "id": "m38",
+  "en": "Asr",
+  "ar": "العصر"
+ },
+ {
+  "id": "m39",
+  "en": "3:12 PM",
+  "ar": "٣:١٢ م"
+ },
+ {
+  "id": "m40",
+  "en": "sample",
+  "ar": "مثال"
+ },
+ {
+  "id": "m41",
+  "en": "Continue reading",
+  "ar": "تابع القراءة"
+ },
+ {
+  "id": "m42",
+  "en": "Page 5 · Al-Baqarah 25",
+  "ar": "الصفحة ٥ · البقرة ٢٥"
+ },
+ {
+  "id": "m43",
+  "en": "Resume",
+  "ar": "متابعة"
+ },
+ {
+  "id": "m44",
+  "en": "Quran",
+  "ar": "القرآن"
+ },
+ {
+  "id": "m45",
+  "en": "Recitation",
+  "ar": "التلاوة"
+ },
+ {
+  "id": "m46",
+  "en": "Prayer times",
+  "ar": "مواقيت الصلاة"
+ },
+ {
+  "id": "m47",
+  "en": "Qibla",
+  "ar": "القبلة"
+ },
+ {
+  "id": "m48",
+  "en": "Adhkar",
+  "ar": "الأذكار"
+ },
+ {
+  "id": "m49",
+  "en": "Tafsir",
+  "ar": "التفسير"
+ },
+ {
+  "id": "m50",
+  "en": "Hadith",
+  "ar": "الأحاديث"
+ },
+ {
+  "id": "m51",
+  "en": "Books",
+  "ar": "الكتب"
+ },
+ {
+  "id": "m52",
+  "en": "Home",
+  "ar": "الرئيسية"
+ },
+ {
+  "id": "m53",
+  "en": "Prayer",
+  "ar": "الصلاة"
+ },
+ {
+  "id": "m54",
+  "en": "More",
+  "ar": "المزيد"
+ },
+ {
+  "id": "m55",
+  "en": "Font: Madinah mushaf 1405H — King Fahd Complex",
+  "ar": "الخط: مصحف المدينة ١٤٠٥هـ — مجمع الملك فهد"
+ },
+ {
+  "id": "m56",
+  "en": "sample — not real times",
+  "ar": "مثال — ليست أوقاتًا حقيقية"
+ },
+ {
+  "id": "m57",
+  "en": "Cairo, Egypt",
+  "ar": "القاهرة، مصر"
+ },
+ {
+  "id": "m58",
+  "en": "from your current location",
+  "ar": "من موقعك الحالي"
+ },
+ {
+  "id": "m59",
+  "en": "Change",
+  "ar": "تغيير"
+ },
+ {
+  "id": "m60",
+  "en": "Method: ",
+  "ar": "طريقة الحساب: "
+ },
+ {
+  "id": "m61",
+  "en": "Egyptian General Authority of Survey",
+  "ar": "الهيئة المصرية العامة للمساحة"
+ },
+ {
+  "id": "m62",
+  "en": "Next prayer",
+  "ar": "الصلاة القادمة"
+ },
+ {
+  "id": "m63",
+  "en": "in 1 h 24 min",
+  "ar": "بعد ١ س ٢٤ د"
+ },
+ {
+  "id": "m64",
+  "en": "Times are calculated on your device from your location; your location is never sent to a server. The method follows your country automatically, and you can change it.",
+  "ar": "تُحسب الأوقات على جهازك من موقعك، ولا يُرسل موقعك إلى أي خادم. طريقة الحساب تتبع بلدك تلقائيًا، ويمكنك تغييرها."
+ },
+ {
+  "id": "m65",
+  "en": "Sources",
+  "ar": "المصادر"
+ },
+ {
+  "id": "m66",
+  "en": "Everything the app uses, and where it comes from",
+  "ar": "كل ما يستخدمه التطبيق ومن أين جاء"
+ },
+ {
+  "id": "m67",
+  "en": "Why these colours?",
+  "ar": "لماذا هذه الألوان؟"
+ },
+ {
+  "id": "m68",
+  "en": "Index",
+  "ar": "الفهرس"
+ },
+ {
+  "id": "m69",
+  "en": "114 surahs · 30 juz · 604 pages",
+  "ar": "١١٤ سورة · ٣٠ جزءًا · ٦٠٤ صفحات"
+ },
+ {
+  "id": "m70",
+  "en": "Surahs",
+  "ar": "السور"
+ },
+ {
+  "id": "m71",
+  "en": "Juz",
+  "ar": "الأجزاء"
+ },
+ {
+  "id": "m72",
+  "en": "Search a word, a surah or an ayah number",
+  "ar": "ابحث بكلمة أو سورة أو رقم آية"
+ },
+ {
+  "id": "s73",
+  "en": "Makki",
+  "ar": "مكية"
+ },
+ {
+  "id": "s74",
+  "en": "Madani",
+  "ar": "مدنية"
+ },
+ {
+  "id": "s75",
+  "en": "Fajr",
+  "ar": "الفجر"
+ },
+ {
+  "id": "s76",
+  "en": "Sunrise",
+  "ar": "الشروق"
+ },
+ {
+  "id": "s77",
+  "en": "Dhuhr",
+  "ar": "الظهر"
+ },
+ {
+  "id": "s78",
+  "en": "Maghrib",
+  "ar": "المغرب"
+ },
+ {
+  "id": "s79",
+  "en": "Isha",
+  "ar": "العشاء"
+ },
+ {
+  "id": "s80",
+  "en": "The Noble Quran",
+  "ar": "القرآن الكريم"
+ },
+ {
+  "id": "s81",
+  "en": "the Quran text in Uthmani script",
+  "ar": "نص القرآن الكريم بالرسم العثماني"
+ },
+ {
+  "id": "s82",
+  "en": "where each page, juz, hizb and quarter starts",
+  "ar": "بداية كل صفحة وجزء وحزب وربع"
+ },
+ {
+  "id": "s83",
+  "en": "the words of every printed line",
+  "ar": "ترتيب الكلمات في أسطر الصفحات كالمصحف المطبوع"
+ },
+ {
+  "id": "s84",
+  "en": "Quran font",
+  "ar": "خط المصحف"
+ },
+ {
+  "id": "s85",
+  "en": "the printed mushaf's word shapes",
+  "ar": "أشكال كلمات المصحف المطبوع"
+ },
+ {
+  "id": "s86",
+  "en": "Interface fonts",
+  "ar": "خطوط الواجهة"
+ },
+ {
+  "id": "s87",
+  "en": "headings — a Kufic font",
+  "ar": "العناوين — خط كوفي"
+ },
+ {
+  "id": "s88",
+  "en": "Arabic interface text",
+  "ar": "النصوص العربية في الواجهة"
+ },
+ {
+  "id": "s89",
+  "en": "English interface text",
+  "ar": "النصوص الإنجليزية في الواجهة"
+ },
+ {
+  "id": "s90",
+  "en": "Being checked — not used yet",
+  "ar": "قيد التحقق — لم تُستخدم بعد"
+ },
+ {
+  "id": "s91",
+  "en": "recitations, ayah timings, radio",
+  "ar": "التلاوات وتوقيت الآيات والإذاعات"
+ },
+ {
+  "id": "s92",
+  "en": "prayer times calculated on the device",
+  "ar": "حساب مواقيت الصلاة على الجهاز"
+ },
+ {
+  "id": "s93",
+  "en": "hadith grading and links",
+  "ar": "تخريج الأحاديث وروابطها"
+ },
+ {
+  "id": "s94",
+  "en": "The parchment of the earliest Quran manuscripts, brown-black ink, and red dots like the vowel dots of the first copies.",
+  "ar": "لون الرَّقّ الذي كُتبت عليه أقدم المصاحف، وحبر بنيّ داكن، ونقاط حمراء كنقاط الشكل في المصاحف الأولى."
+ },
+ {
+  "id": "s95",
+  "en": "The first mosque of the Prophet ﷺ: mud brick, palm trunks and fronds, the sand of Madinah, the colour of dates.",
+  "ar": "ألوان المسجد النبوي الأول: الطوب اللَّبِن، وجذوع النخل وجريده، ورمل المدينة، ولون التمر."
+ },
+ {
+  "id": "s96",
+  "en": "Sahih al-Bukhari 446",
+  "ar": "صحيح البخاري ٤٤٦"
+ },
+ {
+  "id": "s97",
+  "en": "how the mosque was built in the Prophet's time",
+  "ar": "وصف بناء المسجد في عهد النبي ﷺ"
+ },
+ {
+  "id": "s98",
+  "en": "White as milk and black as the Stone, and the colours of the mountains of Makkah.",
+  "ar": "أبيض كاللبن وأسود كالحجر، وألوان جبال مكة."
+ },
+ {
+  "id": "s99",
+  "en": "Sunan al-Tirmidhi 877",
+  "ar": "سنن الترمذي ٨٧٧"
+ },
+ {
+  "id": "s100",
+  "en": "the Black Stone — ☐ grading to be copied from Dorar",
+  "ar": "الحجر الأسود — ☐ الحكم يُنقل من الدرر السنية"
+ },
+ {
+  "id": "s101",
+  "en": "The pale stone of Jerusalem, the olive, and its oil in lamplight.",
+  "ar": "حجر القدس الفاتح، والزيتون، ولون زيته في ضوء المصباح."
+ },
+ {
+  "id": "s102",
+  "en": "Colours named after words in the Quran's descriptions of Paradise: deep green, green, fine silk, gold, pearl, silver.",
+  "ar": "ألوان سُمّيت بكلمات وردت في وصف الجنة: الأخضر الداكن، والأخضر، والسندس، والذهب، واللؤلؤ، والفضة."
+ },
+ {
+  "id": "s103",
+  "en": "The blue of the sea, and the pearl and coral that come out of the two seas.",
+  "ar": "زُرقة البحر، ولون اللؤلؤ والمرجان اللذين يخرجان من البحرين."
+ },
+ {
+  "id": "s104",
+  "en": "The night sky adorned with lamps, and the light of the lamp and the shining moon. Made to be at its best at night.",
+  "ar": "سماء الليل وقد زُيّنت بالمصابيح، وضوء السراج والقمر المنير. صُمّم ليكون أجمل في الوضع الليلي."
+ },
+ {
+  "id": "s105",
+  "en": "The colours of honey, which comes from the bees in varying colours, and the green of the trees where they make their homes.",
+  "ar": "ألوان العسل الذي يخرج من بطون النحل مختلفًا ألوانه، وخضرة الشجر الذي تتخذ منه بيوتها."
+ },
+ {
+  "id": "s106",
+  "en": "White, red and intense black — three colours from one ayah, at the highest contrast, for sunlight and weak eyesight.",
+  "ar": "أبيض وأحمر وأسود شديد السواد — ثلاثة ألوان من آية واحدة، بأعلى تباين للقراءة في الشمس ولضعاف البصر."
+ },
+ {
+  "id": "s107",
+  "en": "background",
+  "ar": "الخلفية"
+ },
+ {
+  "id": "s108",
+  "en": "ink",
+  "ar": "الحبر"
+ },
+ {
+  "id": "s109",
+  "en": "text",
+  "ar": "النص"
+ },
+ {
+  "id": "s110",
+  "en": "dots",
+  "ar": "النقاط"
+ },
+ {
+  "id": "s111",
+  "en": "prayer",
+  "ar": "الصلاة"
+ },
+ {
+  "id": "s112",
+  "en": "card",
+  "ar": "البطاقة"
+ },
+ {
+  "id": "s113",
+  "en": "buttons",
+  "ar": "الأزرار"
+ },
+ {
+  "id": "dir_parchment",
+  "en": "Parchment",
+  "ar": "الرَّقّ"
+ },
+ {
+  "id": "dir_madinah",
+  "en": "Madinah",
+  "ar": "المدينة"
+ },
+ {
+  "id": "dir_makkah",
+  "en": "Makkah",
+  "ar": "مكة"
+ },
+ {
+  "id": "dir_quds",
+  "en": "Al-Quds",
+  "ar": "القدس"
+ },
+ {
+  "id": "dir_gardens",
+  "en": "Gardens",
+  "ar": "الجنّات"
+ },
+ {
+  "id": "dir_seas",
+  "en": "Two seas",
+  "ar": "البحران"
+ },
+ {
+  "id": "dir_lamps",
+  "en": "Lamps",
+  "ar": "المصابيح"
+ },
+ {
+  "id": "dir_honey",
+  "en": "Honey",
+  "ar": "النحل"
+ },
+ {
+  "id": "dir_mountains",
+  "en": "Mountains — for low vision and colour blindness",
+  "ar": "الجبال — لضعف البصر وعمى الألوان"
+ }
+]

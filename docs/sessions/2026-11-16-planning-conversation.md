@@ -971,3 +971,60 @@ The sheet opens correctly: "your device's language" first (the browser reports E
 Clean: 180 combinations, no console errors. Now recording the accepted 22 languages in the documents.
 
 Records updated. Committing and pushing.
+
+The 22 languages are recorded as accepted, and the first screen now has a searchable language list instead of a plain dropdown. It's checked in the browser, committed and pushed.
+
+**The languages:** Arabic, English, Russian, Spanish, German, Italian, French, Urdu, Hindi, Korean, Indonesian, Japanese, Chinese, Turkish, Bengali, Persian, Malay, Swahili, Hausa, Portuguese, Pashto and Uzbek. «الباكستانية» is recorded as Urdu, and Hindi counts once.
+
+**On the first screen ([round-3.html](docs/design/prototypes/round-3.html), phone 1):** a single language button shows the current language in its own script and "22 لغة". Tapping it opens a list over the screen:
+
+- **Search box:** finds a language by its own name (Deutsch), its Arabic name (الألمانية), its English name (German) or its code.
+- **Your device's language first:** the phone or browser reports it, and it is never sent anywhere.
+- **Then "متاحة الآن" (available now):** Arabic and English, which are selectable.
+- **Then «قريبًا إن شاء الله» (coming):** the other 20 languages, each written in its own script (Русский، اردو، हिन्दी، 한국어 …). Its name is also shown in the interface language, with "من اليمين" (right to left) for Arabic, Urdu, Persian and Pashto.
+- **Choosing a coming language:** a short note says it arrives after the first release, and the app stays in the current language.
+
+The first release is still Arabic and English. The other 20 come after it, in an order you'll decide later.
+
+## The author — 2026-11-19 16:49
+
+```text
+I need to make all languages available now, not device languages only
+```
+
+## The agent — 2026-11-19 16:50
+
+You want all 22 languages selectable now, not only Arabic and English. This changes two things:
+
+- **The prototype:** every language must actually switch the screens, with its own script, direction and font.
+- **The plan:** until now the first release was Arabic and English only, so the release scope changes too.
+
+First, an inventory of every interface text in round 3, to see what must be translated.
+
+67 texts are in the page markup and about 35 more in the scripts, plus the screen data (prayer names, sources, design notes). Listing them all:
+
+Every Arabic/English pair in the scripts follows one pattern, so a script can collect the keys. I'll add the handful of texts that hold numbers as templates with `{n}` slots by hand.
+
+Second batch: Urdu, Hindi, Korean, Indonesian, Japanese.
+
+Third batch: Chinese, Turkish, Bengali, Persian, Malay.
+
+Last batch: Swahili, Hausa, Portuguese, Pashto, Uzbek. These five are where my drafts are least reliable, so native review matters most here.
+
+The shell mangled two escapes again, as before. Fixing those two lines directly:
+
+All 20 languages pass: every key present, every number slot kept. Now the page code. First the exact current text of the functions I'll change:
+
+Writing the refactor as one checked patch. Every replacement must match exactly once, or nothing is written.
+
+All replacements applied and the build passes. Now testing every language in the browser, starting with errors and layout across all 22:
+
+Urdu renders in Nastaliq with the draft note showing. One small fix: "3:12 PM" reads backwards inside right-to-left Urdu text, so the Urdu sample time becomes 15:12. Now Japanese:
+
+Japanese works too: the interface switches and the mushaf page stays Arabic as printed. Recording the decision, then commit and push.
+
+My patch split one rule across a whole-line replacement and a second edit, so the second edit found nothing. Nothing was written. Replacing the three lines as one block:
+
+The shell is mangling escapes again. Editing the patch file directly instead:
+
+Records updated. Committing and pushing the language work:

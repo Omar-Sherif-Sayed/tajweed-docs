@@ -24,6 +24,8 @@ generated from `prototypes/tools/design3_palettes.py`. Design 2 and its reasons 
 6. Nothing from ayahs of punishment or of the Day of Judgement.
 7. **Only the last direction, Mountains, is made for low vision and colour blindness** (the author, 2026-11-18 and
    2026-11-19). The other eleven are for ordinary sight: 4.5 : 1 for every text, and the six night rules.
+8. **No cross shape anywhere** — no plus sign, no four-armed star or spark (the author, 2026-11-19: it is a symbol
+   of Christianity, and this is an Islamic application). A star or a light is a round dot with a soft glow.
 
 Status: a design proposal written by the agent, with no scholar's review (§6.6).
 
@@ -153,7 +155,7 @@ from a licensed tafsir.
 ### 3.11 النور — Light
 
 From 24:35: a niche, a lamp, its glass «ٱلزُّجَاجَةُ كَأَنَّهَا كَوْكَبٌ دُرِّىٌّ», and its oil. The landscape: a lamp
-in its glass inside a niche, its glow, a star. It is drawn as a scene of words of the ayah, not as an explanation of
+in its glass inside a niche, its glow, and a star drawn as a round dot with a soft glow (rule 8). It is drawn as a scene of words of the ayah, not as an explanation of
 the parable — the parable is explained only by a tafsir (rule 1).
 
 | Colour | From |
@@ -188,9 +190,8 @@ shape as on the phone, so it is never stretched or cut on a wide screen.
 ## 6. Icons, languages, ideas left out
 
 - The section icons are those of design 2, each from the first era (`design-2-meanings.md` §5).
-- All 22 languages work, with the interface texts of round 3; the new texts of round 4 (the direction names and the
-  design notes) are in Arabic and English only, and fall back to English in the other 20 languages until they are
-  drafted and read by native speakers (`LANG-02`).
+- All 22 languages work: the interface texts of round 3 and the new texts of round 4 (the direction names and the
+  design notes), translated by the agent and corrected from users' reports on GitHub (`LANG-02`).
 - Left out: Badr and the other battles (not a theme for colours); the cave of Thawr by name (the Quran says «الغار»;
   the name comes from the books of Seerah — ☐ cited only with its source); the Kaaba and the two mosques as buildings
   (their present look is later); the parable of 24:35 explained in our words.

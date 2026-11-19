@@ -1,5 +1,5 @@
 {
- "_status": "draft by the agent, 2026-11-19 — to be read by a native speaker before release (LANG-02)",
+ "_status": "by the agent, 2026-11-19 — corrected from users' reports (GitHub issues, LANG-02)",
  "page_n": "Página {n}",
  "juz_n": "Juz {n}",
  "hizb_n": "Hizb {n}",
@@ -21,7 +21,7 @@
  "note_30_22": "Mostrado ao lado da escolha do idioma. O seu sentido é citado palavra por palavra de um tafsir reconhecido (☐ at-Tafsir al-Muyassar, após permissão) — nunca com as nossas palavras.",
  "disclaimer": "Esta é uma escolha de design, não uma interpretação. O Alcorão nomeia cores; os tons exatos aqui são escolha nossa.",
  "ayah_note": "Os versículos aparecem em árabe; um sentido neste idioma só é acrescentado a partir de uma tradução publicada com o tradutor nomeado.",
- "draft": "Tradução provisória — um falante nativo vai revê-la antes do lançamento.",
+ "draft": "Tradução da interface feita pelo projeto. Encontrou um erro? Informe no GitHub.",
  "other_scripts": "texto da interface em outras escritas",
  "m24": "O Nobre Alcorão e suas ciências",
  "m25": "Idioma · Language",

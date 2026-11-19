@@ -229,6 +229,7 @@ sections each come from something of the first era:
 | 67:5 for the Lamps direction | It ends with a mention of punishment (rule 7); 41:12 and 25:61 are used instead. |
 | The green dome | 1253 AH — not of the first era (3.2). |
 | Domes, pointed arches, minarets, star patterns | They developed after the first era; the first mosque had none of them. |
+| Any cross shape — a plus sign, a four-armed star or spark | A symbol of Christianity; this is an Islamic application (the author, 2026-11-19). Stars and lights are round dots. |
 | The black and gold kiswa | Its present look is from much later periods (3.3). |
 | The golden Dome of the Rock | The building is from 72 AH, but the gold covering is modern (3.4). |
 | 55:58 (ruby and coral) | It describes people (3.5). |

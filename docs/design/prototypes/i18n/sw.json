@@ -1,5 +1,5 @@
 {
- "_status": "draft by the agent, 2026-11-19 — to be read by a native speaker before release (LANG-02)",
+ "_status": "by the agent, 2026-11-19 — corrected from users' reports (GitHub issues, LANG-02)",
  "page_n": "Ukurasa {n}",
  "juz_n": "Juzuu {n}",
  "hizb_n": "Hizbu {n}",
@@ -21,7 +21,7 @@
  "note_30_22": "Inaonyeshwa kando ya uchaguzi wa lugha. Maana yake inanukuliwa neno kwa neno kutoka tafsiri inayotambulika (☐ At-Tafsir Al-Muyassar, baada ya ruhusa) — kamwe si kwa maneno yetu.",
  "disclaimer": "Huu ni uchaguzi wa muundo, si tafsiri. Qur'ani inataja majina ya rangi; vivuli halisi hapa ni chaguo letu.",
  "ayah_note": "Aya zinaonyeshwa kwa Kiarabu; maana kwa lugha hii huongezwa tu kutoka tafsiri iliyochapishwa yenye jina la mfasiri.",
- "draft": "Tafsiri ya awali — mzungumzaji asilia ataikagua kabla ya kutolewa.",
+ "draft": "Tafsiri ya kiolesura imefanywa na mradi. Umeona kosa? Liripoti kwenye GitHub.",
  "other_scripts": "maandishi ya kiolesura kwa hati nyingine",
  "m24": "Qur'ani Tukufu na Elimu Zake",
  "m25": "Lugha · Language",

@@ -1,5 +1,5 @@
 {
- "_status": "draft by the agent, 2026-11-19 — to be read by a native speaker before release (LANG-02)",
+ "_status": "by the agent, 2026-11-19 — corrected from users' reports (GitHub issues, LANG-02)",
  "page_n": "{n}쪽",
  "juz_n": "주즈 {n}",
  "hizb_n": "히즙 {n}",
@@ -21,7 +21,7 @@
  "note_30_22": "언어 선택 옆에 표시됩니다. 그 의미는 공인된 타프시르에서 그대로 인용합니다(☐ 앗타프시르 알무야사르, 허가 후). 결코 우리의 말로 쓰지 않습니다.",
  "disclaimer": "이것은 디자인 선택이지 해석이 아닙니다. 꾸란은 색의 이름을 말하며, 여기의 정확한 색조는 우리의 선택입니다.",
  "ayah_note": "구절은 아랍어로 표시됩니다. 이 언어의 의미는 번역자가 명시된 출판 번역에서만 추가됩니다.",
- "draft": "초벌 번역 — 출시 전에 원어민이 검토합니다.",
+ "draft": "인터페이스 번역은 프로젝트가 했습니다. 오류를 발견하셨나요? GitHub에 알려 주세요.",
  "other_scripts": "다른 문자의 인터페이스 텍스트",
  "m24": "고귀한 꾸란과 그 학문",
  "m25": "언어 · Language",

@@ -90,18 +90,19 @@ LANG_CODES = ["ru", "es", "de", "it", "fr", "ur", "hi", "ko", "id", "ja", "zh", 
 SLOT = re.compile(r"\{(\w+)\}")
 
 
-def build_i18n():
-    """The interface texts of the 20 languages after Arabic and English (drafts, AGENTS.md §8.9), each file checked:
-    every key present, no unknown key, and every {slot} the English and Arabic texts share is kept."""
-    keys = json.load(io.open(os.path.join(I18N, "keys.json"), encoding="utf-8"))
+def build_i18n(keys_file="keys.json", folder=""):
+    """The interface texts of the 20 languages after Arabic and English (by the agent, AGENTS.md §8.9), each file
+    checked: every key present, no unknown key, and every {slot} the English and Arabic texts share is kept.
+    `keys_file` / `folder` select another set (round 4: keys-round4.json and round4/)."""
+    keys = json.load(io.open(os.path.join(I18N, keys_file), encoding="utf-8"))
     ids = [k["id"] for k in keys]
     out = {"en2id": {k["en"]: k["id"] for k in keys}, "tr": {}}
     for code in LANG_CODES:
-        tr = json.load(io.open(os.path.join(I18N, code + ".json"), encoding="utf-8"))
+        tr = json.load(io.open(os.path.join(I18N, folder, code + ".json"), encoding="utf-8"))
         tr.pop("_status", None)
         missing, extra = [i for i in ids if i not in tr], [i for i in tr if i not in ids]
         if missing or extra:
-            R2.fail("i18n/%s.json: missing %s, unknown %s" % (code, missing, extra))
+            R2.fail("i18n/%s%s.json: missing %s, unknown %s" % (folder and folder + "/", code, missing, extra))
         for k in keys:
             allowed = set(SLOT.findall(k["en"])) | set(SLOT.findall(k["ar"]))
             needed = set(SLOT.findall(k["en"])) & set(SLOT.findall(k["ar"])) if k["ar"] else set(SLOT.findall(k["en"]))
@@ -109,7 +110,7 @@ def build_i18n():
             if not got <= allowed or not needed <= got:
                 R2.fail("i18n/%s.json %s: slots %s (allowed %s, needed %s)" % (code, k["id"], got, allowed, needed))
         out["tr"][code] = tr
-    print("i18n: %d keys x %d languages checked" % (len(ids), len(LANG_CODES)))
+    print("i18n %s: %d keys x %d languages checked" % (keys_file, len(ids), len(LANG_CODES)))
     return out
 
 

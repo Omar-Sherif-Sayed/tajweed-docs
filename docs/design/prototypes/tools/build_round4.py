@@ -101,8 +101,14 @@ def main():
     html = open(PAGE, encoding="utf-8", newline="").read()
     html = R2.replace_block(html, "/*ROUND4-THEMES-BEGIN*/", "/*ROUND4-THEMES-END*/", P3.css())
     html = R2.replace_block(html, "<!--ROUND4-CVD-BEGIN-->", "<!--ROUND4-CVD-END-->", P2.svg_filters())
+    i18n, extra = B3.build_i18n(), B3.build_i18n("keys-round4.json", "round4")   # round 3's texts, then round 4's
+    if set(i18n["en2id"].values()) & set(extra["en2id"].values()):
+        R2.fail("i18n: an id of keys-round4.json is already in keys.json")
+    i18n["en2id"].update(extra["en2id"])
+    for code in i18n["tr"]:
+        i18n["tr"][code].update(extra["tr"][code])
     html = R2.replace_block(html, "/*ROUND4-I18N-BEGIN*/", "/*ROUND4-I18N-END*/",
-                            "window.ROUND4_I18N = " + json.dumps(B3.build_i18n(), ensure_ascii=False) + ";\n")
+                            "window.ROUND4_I18N = " + json.dumps(i18n, ensure_ascii=False) + ";\n")
     open(PAGE, "w", encoding="utf-8", newline="\n").write(html)
     tokens = {"design": "3 — the first era (round 4)", "generated_by": "docs/design/prototypes/tools/build_round4.py",
               "meanings": "docs/design/design-3-meanings.md",

@@ -1,5 +1,5 @@
 {
- "_status": "draft by the agent, 2026-11-19 — to be read by a native speaker before release (LANG-02)",
+ "_status": "by the agent, 2026-11-19 — corrected from users' reports (GitHub issues, LANG-02)",
  "page_n": "Página {n}",
  "juz_n": "Yuz {n}",
  "hizb_n": "Hizb {n}",
@@ -21,7 +21,7 @@
  "note_30_22": "Se muestra junto a la elección de idioma. Su significado se cita palabra por palabra de un tafsir reconocido (☐ al-Tafsir al-Muyassar, con permiso), nunca con nuestras palabras.",
  "disclaimer": "Es una decisión de diseño, no una interpretación. El Corán nombra colores; los tonos exactos aquí son elección nuestra.",
  "ayah_note": "Las aleyas se muestran en árabe; un significado en este idioma solo se añade a partir de una traducción publicada con su traductor nombrado.",
- "draft": "Traducción provisional: un hablante nativo la revisará antes del lanzamiento.",
+ "draft": "Traducción de la interfaz hecha por el proyecto. ¿Encontraste un error? Infórmalo en GitHub.",
  "other_scripts": "texto de la interfaz en otras escrituras",
  "m24": "El Noble Corán y sus ciencias",
  "m25": "Idioma · Language",

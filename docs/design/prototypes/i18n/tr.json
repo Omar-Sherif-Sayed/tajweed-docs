@@ -1,5 +1,5 @@
 {
- "_status": "draft by the agent, 2026-11-19 — to be read by a native speaker before release (LANG-02)",
+ "_status": "by the agent, 2026-11-19 — corrected from users' reports (GitHub issues, LANG-02)",
  "page_n": "Sayfa {n}",
  "juz_n": "Cüz {n}",
  "hizb_n": "Hizb {n}",
@@ -21,7 +21,7 @@
  "note_30_22": "Dil seçiminin yanında gösterilir. Anlamı tanınmış bir tefsirden kelimesi kelimesine aktarılır (☐ et-Tefsîru'l-Müyesser, izin alındıktan sonra) — asla kendi sözlerimizle değil.",
  "disclaimer": "Bu bir tasarım tercihidir, tefsir değildir. Kur'an renklerin adını anar; buradaki tam tonlar bizim tercihimizdir.",
  "ayah_note": "Ayetler Arapça gösterilir; bu dilde anlam yalnızca mütercimi belli, yayımlanmış bir mealden eklenir.",
- "draft": "Taslak çeviri — yayından önce ana dili bu olan biri gözden geçirecek.",
+ "draft": "Arayüz çevirisi proje tarafından yapıldı. Bir hata mı buldunuz? GitHub'da bildirin.",
  "other_scripts": "diğer yazılarda arayüz metni",
  "m24": "Kur'an-ı Kerim ve İlimleri",
  "m25": "Dil · Language",

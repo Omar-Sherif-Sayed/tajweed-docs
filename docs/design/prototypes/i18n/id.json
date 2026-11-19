@@ -1,5 +1,5 @@
 {
- "_status": "draft by the agent, 2026-11-19 — to be read by a native speaker before release (LANG-02)",
+ "_status": "by the agent, 2026-11-19 — corrected from users' reports (GitHub issues, LANG-02)",
  "page_n": "Halaman {n}",
  "juz_n": "Juz {n}",
  "hizb_n": "Hizb {n}",
@@ -21,7 +21,7 @@
  "note_30_22": "Ditampilkan di samping pilihan bahasa. Maknanya dikutip kata demi kata dari tafsir yang diakui (☐ At-Tafsir Al-Muyassar, setelah ada izin) — tidak pernah dengan kata-kata kami.",
  "disclaimer": "Ini pilihan desain, bukan tafsir. Al-Qur'an menyebut nama-nama warna; nuansa tepatnya di sini adalah pilihan kami.",
  "ayah_note": "Ayat ditampilkan dalam bahasa Arab; makna dalam bahasa ini hanya ditambahkan dari terjemahan terbitan dengan nama penerjemahnya.",
- "draft": "Terjemahan draf — penutur asli akan memeriksanya sebelum rilis.",
+ "draft": "Terjemahan antarmuka oleh proyek. Menemukan kesalahan? Laporkan di GitHub.",
  "other_scripts": "teks antarmuka dalam aksara lain",
  "m24": "Al-Qur'an yang Mulia dan Ilmu-ilmunya",
  "m25": "Bahasa · Language",

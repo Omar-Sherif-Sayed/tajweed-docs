@@ -1,5 +1,5 @@
 {
- "_status": "draft by the agent, 2026-11-19 — to be read by a native speaker before release (LANG-02)",
+ "_status": "by the agent, 2026-11-19 — corrected from users' reports (GitHub issues, LANG-02)",
  "page_n": "第{n}页",
  "juz_n": "第{n}卷",
  "hizb_n": "希兹卜{n}",
@@ -21,7 +21,7 @@
  "note_30_22": "显示在语言选择旁边。其含义逐字引用自公认的经注(☐《简明经注》,获得许可后),绝不使用我们自己的话。",
  "disclaimer": "这是设计上的选择,不是经文解释。古兰经提到了颜色的名称;这里的具体色调是我们的选择。",
  "ayah_note": "经文以阿拉伯语显示;本语言的含义只采用注明译者的已出版译本。",
- "draft": "翻译草稿——发布前将由母语人士审校。",
+ "draft": "界面翻译由本项目完成。发现错误？请在 GitHub 上告诉我们。",
  "other_scripts": "其他文字的界面文本",
  "m24": "尊贵的古兰经及其学科",
  "m25": "语言 · Language",

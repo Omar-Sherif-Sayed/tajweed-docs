@@ -47,7 +47,7 @@ TEMPLATES = [  # id, English, Arabic — {name} slots are filled by the page
      "هذا اختيار تصميم، وليس تفسيرًا. القرآن الكريم يذكر أسماء الألوان؛ أما درجاتها هنا فاختيارنا."),
     ("ayah_note", "The ayahs are shown in Arabic; a meaning in this language is added only from a published "
                   "translation by a named translator.", ""),
-    ("draft", "Draft translation — a native speaker will review it before release.", ""),
+    ("draft", "Interface translation by the project. Found a mistake? Report it on GitHub.", ""),
     ("other_scripts", "interface text in other scripts", "نصوص الواجهة بالخطوط الأخرى"),
 ]
 

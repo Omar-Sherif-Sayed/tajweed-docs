@@ -13,7 +13,7 @@ The design of the three applications (web, Android, iPhone) is made once, here. 
 | [`tokens-design-2.json`](tokens-design-2.json) | The nine directions of design 2, day and night (generated from `prototypes/tools/design2_palettes.py`). | draft |
 | [`design-3-meanings.md`](design-3-meanings.md) | **Why every colour, landscape and mark of design 3 was chosen** — each direction from a place or a moment of the first era or from words of the Quran, with its ayah or hadith reference; what was left out and why. The ayah table is generated. | ⏸ the author reads it |
 | [`tokens-design-3.json`](tokens-design-3.json) | The twelve directions of design 3, day and night, with the landscape colours (generated from `prototypes/tools/design3_palettes.py`). | draft |
-| [`prototypes/i18n/`](prototypes/i18n/) | The interface texts of rounds 3 and 4: `keys.json` (122 texts, English and Arabic) and one file per language for the other 20 — **drafts by the agent**, to be read by native speakers (`LANG-02`). Checked by `build_round3.py`. | drafts |
+| [`prototypes/i18n/`](prototypes/i18n/) | The interface texts of rounds 3 and 4: `keys.json` (122 texts, English and Arabic) and one file per language for the other 20; `keys-round4.json` and `round4/` for the 31 texts round 4 added — **translations by the agent**, corrected from users' reports on GitHub (no native readers, the author's decision 2026-11-19; `LANG-02`). Written by `tools/write_round4_i18n.py` (round 4) and checked by the builds. | by the agent |
 | [`tokens.json`](tokens.json) | The colours of the three directions, light and dark. Typography, spacing and the prayer backgrounds follow. | all three directions kept (decision 2026-11-17) |
 | [`prototypes/assets/`](prototypes/assets/) | The untouched source files (Quran text, metadata, page layout, fonts) with checksums, origins and licences. | see its README |
 | [`prototypes/tools/`](prototypes/tools/) | `verify_mushaf_layout.py` (checks the layout against Tanzil), `build_round2.py` (writes the data and fonts into round 2), `build_round3.py` (the same for round 3, plus the six directions, the cited ayahs and the check of every excerpt in `design-2-meanings.md`), `design2_palettes.py` (the directions and their contrast check), `build_round4.py` and `design3_palettes.py` (the same for round 4 — twelve directions, the cited ayahs, the excerpts of `design-3-meanings.md`), `build_quran_sample.py` (round 1), `read_font_licence.py` (prints the licence stored in a font). Nobody types Quran text. | — |
@@ -35,8 +35,10 @@ each with a day and a night theme; only the last direction is for low vision and
   simulated for the three kinds of colour blindness, and the interface texts of the 20 other languages.
 - **New in the screens:** the prayer times on the path of the sun (the day runs in the reading direction), the logo
   as an arc of light over the horizon, Amiri headings, grain only in the first direction.
-- The new texts of round 4 (direction names, design notes) are in Arabic and English; the other 20 languages show
-  them in English until they are drafted and read by native speakers (`LANG-02`).
+- The new texts of round 4 (direction names, design notes) are translated into all 20 other languages.
+- **No cross shape anywhere** (the author, 2026-11-19): the star of the Light direction is a round dot; the knuckle
+  marks of the dhikr hand, the rings across the pillars of the home icon, the equator of the language globe (all in
+  rounds 3 and 4) and the four-armed star and the plus of the counter (design 1) were changed.
 
 Start state in the address: `round-4.html#taybah-dark-ar-5` (direction, theme, language, page).
 

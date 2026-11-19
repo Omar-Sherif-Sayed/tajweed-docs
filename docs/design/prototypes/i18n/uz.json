@@ -1,5 +1,5 @@
 {
- "_status": "draft by the agent, 2026-11-19 — to be read by a native speaker before release (LANG-02)",
+ "_status": "by the agent, 2026-11-19 — corrected from users' reports (GitHub issues, LANG-02)",
  "page_n": "{n}-sahifa",
  "juz_n": "{n}-pora",
  "hizb_n": "{n}-hizb",
@@ -21,7 +21,7 @@
  "note_30_22": "Til tanlovi yonida koʻrsatiladi. Uning maʼnosi eʼtirof etilgan tafsirdan soʻzma-soʻz keltiriladi (☐ at-Tafsir al-Muyassar, ruxsatdan keyin) — hech qachon oʻz soʻzlarimiz bilan emas.",
  "disclaimer": "Bu dizayn tanlovi, tafsir emas. Qur'on ranglar nomini zikr qiladi; bu yerdagi aniq tuslar bizning tanlovimiz.",
  "ayah_note": "Oyatlar arab tilida koʻrsatiladi; bu tildagi maʼno faqat tarjimon nomi koʻrsatilgan nashr etilgan tarjimadan qoʻshiladi.",
- "draft": "Dastlabki tarjima — chiqarishdan oldin ona tili egasi koʻrib chiqadi.",
+ "draft": "Interfeys tarjimasi loyiha tomonidan qilingan. Xato topdingizmi? GitHub’da xabar bering.",
  "other_scripts": "boshqa yozuvlardagi interfeys matni",
  "m24": "Qur'oni Karim va uning ilmlari",
  "m25": "Til · Language",

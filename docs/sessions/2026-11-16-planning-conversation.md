@@ -1060,3 +1060,63 @@ Now the session record.
 Adding the round-4 section to the session record.
 
 Regenerating the conversation copy and refreshing the private transcript snapshot.
+
+Committing as the author and pushing over SSH.
+
+Round 4 is done: design 3, "the first era", in [round-4.html](docs/design/prototypes/round-4.html). Round 3 is unchanged. Everything is committed and pushed to GitHub.
+
+**The twelve directions.** Each one has a day theme, a night theme and its own landscape drawn in its own colours. You see the landscape on the home screen, beside the surah list on the web reader, and small on the first-launch cards.
+
+| # | Direction | Taken from |
+| --- | --- | --- |
+| 1 | الصُّحُف — The first sheets | the palm stalks and white stones the Quran was first gathered from (al-Bukhari 4986), and 96:4 |
+| 2 | حِراء — Hira | the first revelation (al-Bukhari 3, 96:1–4) |
+| 3 | الغار — The Cave | the Hijrah (9:40) |
+| 4 | طَيْبَة — Taybah | the palms of Madinah (Muslim 1385, 50:10) |
+| 5 | أُحُد — Uhud | the mountain (al-Bukhari 4084) |
+| 6 | أفلا ينظرون — Look at the camels | camels, sky, mountains and earth (88:17–20) |
+| 7 | الفجر — Dawn | 89:1 and 81:18 |
+| 8 | الضحى — The forenoon | 93:1; its night theme is "the night when it is still" (93:2) |
+| 9 | الغيث — Rain | the earth turning green (22:63) |
+| 10 | الجنّتان — The two gardens | deep green and pomegranate (55:64, 55:68) |
+| 11 | النور — Light | the lamp in its glass (24:35) |
+| 12 | الجبال — Mountains | 35:27; the only direction for low vision and colour blindness, at 7 : 1 or more, also as seen with the three kinds of colour blindness |
+
+**New in this design:**
+- The prayer times sit on the path of the sun. The day runs right to left in Arabic, Urdu, Persian and Pashto.
+- A new logo: an arc of light rising over the horizon.
+- Headings are in the Amiri font.
+- The reason for every colour and scene, with its ayah or hadith, is in [design-3-meanings.md](docs/design/design-3-meanings.md).
+
+**Checks:** every ayah is copied from the Tanzil file by the build, never typed. I opened every combination of direction, theme and language (528 in all), and every screen drew with no errors.
+
+**Bug fixed in round 3 as well:** my previous commit had broken both rounds 3 and 4 in the 21 languages other than Arabic. Part of the page stopped drawing because one surah name was missing from the data. Both rounds now draw fully in all 22 languages.
+
+**Still open:**
+- The new texts of round 4 (the direction names and the design notes) are in Arabic and English only. The other 20 languages show them in English until drafts are written and read by native speakers.
+- I asked before whether Mountains should have its own night theme; I still need your answer.
+
+The three designs to compare are [round-2.html](docs/design/prototypes/round-2.html), [round-3.html](docs/design/prototypes/round-3.html) and [round-4.html](docs/design/prototypes/round-4.html).
+
+## The author — 2026-11-19 18:30
+
+```text
+* I am not have 20 men with 20 language to review, but i will get the github comments if anything is wrong and bring it to you, any issue in the system also any wrong type, for you we will build a full all with all languages 
+* I think that you did it, Mountains has a night theme now
+* in direction النور the log contain (+) i don't need that لانها ترمز للمسيحية وهذا ابليكيشن إسلامي , يرجي تغيير اللوجو او تغيير هذا الحرف  
+* Great Job, Keep Going
+```
+
+## The agent — 2026-11-19 18:31
+
+Removed the cross-shaped star from the Light landscape and a plus sign from the counter icon in design 1; now writing the "no cross shapes" rule into the documents.
+
+Icons in all four designs checked: no cross shapes left. Next: translating the new round-4 texts (direction names and design notes) into the 20 other languages, so nothing falls back to English.
+
+Let me list exactly which texts in round 4 have no translation yet.
+
+Writing the translation set now (32 texts × 20 languages) as a script that fills the language files.
+
+Formatting matches. Now wiring it into the pages and builds.
+
+Now checking round 4 in the browser in all languages: every new text translated and no errors.

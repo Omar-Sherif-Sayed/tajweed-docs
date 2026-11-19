@@ -1,0 +1,157 @@
+[
+ {
+  "id": "r4_head",
+  "en": "Arabic headings",
+  "ar": "العناوين العربية"
+ },
+ {
+  "id": "r4_suhuf",
+  "en": "The colours of what the Quran was first gathered from: palm stalks and thin white stones, with dark ink. The calmest direction for long reading.",
+  "ar": "ألوان ما جُمع عليه القرآن أول مرة: العُسُب — جريد النخل — واللِّخاف — الحجارة البيض الرقيقة — بحبرٍ داكن. أهدأ اتجاه للقراءة الطويلة."
+ },
+ {
+  "id": "r4_b4986",
+  "en": "Sahih al-Bukhari 4986",
+  "ar": "صحيح البخاري ٤٩٨٦"
+ },
+ {
+  "id": "r4_b4986t",
+  "en": "the gathering of the Quran in the time of Abu Bakr",
+  "ar": "جمع القرآن في عهد أبي بكر رضي الله عنه"
+ },
+ {
+  "id": "r4_hira",
+  "en": "The dark rock of the mountain, and the first light of morning at the cave where the revelation began.",
+  "ar": "صخر الجبل الداكن، وأول ضوء الصبح عند الغار الذي بدأ فيه الوحي."
+ },
+ {
+  "id": "r4_b3",
+  "en": "Sahih al-Bukhari 3",
+  "ar": "صحيح البخاري ٣"
+ },
+ {
+  "id": "r4_b3t",
+  "en": "the beginning of the revelation in the cave of Hira",
+  "ar": "بدء الوحي في غار حراء"
+ },
+ {
+  "id": "r4_ghar",
+  "en": "The night of the Hijrah in the desert: rock and sand, and a deep blue night sky above the cave.",
+  "ar": "ليل الهجرة في الصحراء: صخر ورمل، وسماء ليل عميقة الزرقة فوق الغار."
+ },
+ {
+  "id": "r4_taybah",
+  "en": "Taybah — a name of Madinah: its tall palms, its dates, its first mud houses.",
+  "ar": "طابة — من أسماء المدينة: نخيلها الباسقات، وتمرها، وبيوتها الطينية الأولى."
+ },
+ {
+  "id": "r4_m1385",
+  "en": "Sahih Muslim 1385",
+  "ar": "صحيح مسلم ١٣٨٥"
+ },
+ {
+  "id": "r4_m1385t",
+  "en": "Madinah named Taba",
+  "ar": "تسمية المدينة طابة"
+ },
+ {
+  "id": "r4_uhud",
+  "en": "The red rock of Mount Uhud under the sky of Madinah.",
+  "ar": "حُمرة صخر جبل أحد تحت سماء المدينة."
+ },
+ {
+  "id": "r4_b4084",
+  "en": "Sahih al-Bukhari 4084",
+  "ar": "صحيح البخاري ٤٠٨٤"
+ },
+ {
+  "id": "r4_b4084t",
+  "en": "Mount Uhud",
+  "ar": "جبل أحد"
+ },
+ {
+  "id": "r4_ibil",
+  "en": "Four colours from four consecutive ayahs: the camels, the sky, the mountains, the earth.",
+  "ar": "أربعة ألوان من أربع آيات متتالية: الإبل، والسماء، والجبال، والأرض."
+ },
+ {
+  "id": "r4_fajr",
+  "en": "The hour of dawn: the indigo of the last of the night, and the rose of the first light.",
+  "ar": "ساعة الفجر: نيلي آخر الليل، ووردي أول الضوء."
+ },
+ {
+  "id": "r4_duha",
+  "en": "Two oaths, two themes: the day theme from the first ayah, the night theme from the second.",
+  "ar": "اتجاه بقسَمين: الوضع النهاري من الآية الأولى، والليلي من الآية الثانية."
+ },
+ {
+  "id": "r4_ghaith",
+  "en": "Rain and the green earth after it: the blue-grey of the clouds, the green of the grass.",
+  "ar": "المطر والأرض الخضراء بعده: رمادي الغيم المائل للزرقة، وخضرة العشب."
+ },
+ {
+  "id": "r4_jannatan",
+  "en": "Deep green, the red of pomegranates and the green of palms — words from the description of the two gardens.",
+  "ar": "أخضر داكن، وحمرة الرمان، وخضرة النخل — كلمات من وصف الجنتين."
+ },
+ {
+  "id": "r4_nur",
+  "en": "A lamp's light in its glass, its oil, and a shining star — words from the ayah of light.",
+  "ar": "ضوء المصباح في زجاجته، وزيته، ونجم لامع — كلمات من آية النور."
+ },
+ {
+  "id": "dir_suhuf",
+  "en": "The first sheets",
+  "ar": "الصُّحُف"
+ },
+ {
+  "id": "dir_hira",
+  "en": "Hira",
+  "ar": "حِراء"
+ },
+ {
+  "id": "dir_ghar",
+  "en": "The Cave",
+  "ar": "الغار"
+ },
+ {
+  "id": "dir_taybah",
+  "en": "Taybah",
+  "ar": "طابة"
+ },
+ {
+  "id": "dir_uhud",
+  "en": "Uhud",
+  "ar": "أُحُد"
+ },
+ {
+  "id": "dir_ibil",
+  "en": "Look at the camels",
+  "ar": "أفلا ينظرون"
+ },
+ {
+  "id": "dir_fajr",
+  "en": "Dawn",
+  "ar": "الفجر"
+ },
+ {
+  "id": "dir_duha",
+  "en": "Forenoon",
+  "ar": "الضحى"
+ },
+ {
+  "id": "dir_ghaith",
+  "en": "Rain",
+  "ar": "الغيث"
+ },
+ {
+  "id": "dir_jannatan",
+  "en": "The two gardens",
+  "ar": "الجنّتان"
+ },
+ {
+  "id": "dir_nur",
+  "en": "Light",
+  "ar": "النور"
+ }
+]

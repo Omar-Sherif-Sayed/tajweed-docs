@@ -38,13 +38,13 @@ repository the task touches → (6) the last record in [`docs/sessions/`](docs/s
 | Phase | **0 — Foundations** (§14) |
 | Exists | **Five public repositories on GitHub** (`main` branch), the same five folders on this machine. `tajweed-docs` (this one): parent `AGENTS.md`, `README.md`, `LICENSE` (CC BY 4.0), the detailed plan, the session record with a conversation copy, and the design in `docs/design/`: round 1 (colour directions), round 2 (first-launch screen, mushaf pages as printed, six Quran fonts, Sources screen) round 3 (design 2, "early Islam") and **round 4** (design 3, "the first era") with the verified source files and the scripts that check them. The four application repositories: `README.md`, `AGENTS.md`, `LICENSE` (MIT), `.gitignore` — no application code. |
 | Does not exist | Any application code, the register of content sources, the remaining screens. |
-| Last task done | Round 4 (2026-11-19): **design 3, "the first era"** — `docs/design/prototypes/round-4.html`, twelve colour directions (eleven for ordinary sight, the last, Mountains, for low vision and colour blindness), each in day and night with its own landscape; the prayer times on the path of the sun; a new logo; all 22 languages; the reason for every colour and scene with its ayah or hadith in `docs/design/design-3-meanings.md` (§13). Also fixed: rounds 3 and 4 stopped drawing in the 21 languages other than Arabic (a surah name missing from the data). |
+| Last task done | Round 4 (2026-11-19): **design 3, "the first era"** — `docs/design/prototypes/round-4.html`, twelve colour directions (eleven for ordinary sight, the last, Mountains, for low vision and colour blindness), each in day and night with its own landscape; the prayer times on the path of the sun; a new logo; all 22 languages; the reason for every colour and scene with its ayah or hadith in `docs/design/design-3-meanings.md` (§13). Also fixed: rounds 3 and 4 stopped drawing in the 21 languages other than Arabic (a surah name missing from the data). Then (same day, the author's review): the round-4 texts translated into the 20 languages; every cross shape removed from all designs (§8.10); no native readers — mistakes come from users' GitHub reports (§1). |
 | GitHub access from this machine | **Over SSH only** (the Windows certificate store blocks the HTTPS sign-in, §1). Key `~/.ssh/id_ed25519_tajweed` (no passphrase, fingerprint `SHA256:EPCRVeCpF+Jvsj40LKpu4Cta+mKF3ivLO8szlC2k/Po`), registered in the author's account as "Tajweed project - work laptop" (he confirmed it himself). Each of the five repositories uses it through its local `core.sshCommand`; remotes are `git@github.com:Omar-Sherif-Sayed/<name>.git`. A new clone on this machine needs the same two settings. Test: `ssh -i ~/.ssh/id_ed25519_tajweed -o IdentitiesOnly=yes -T git@github.com`. |
 | Folder name | `C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences` — renamed by the author on 2026-11-17. |
 | GitHub account | `Omar-Sherif-Sayed` — <https://github.com/Omar-Sherif-Sayed?tab=repositories>. Pushing is allowed for this product (R1); push at the end of every task. |
 | Do not forget | `P2-D1` — the default prayer-time method of every country, each with a named official source (the author, 2026-11-17: it may be done at any time, before phase 2 starts) · **F19** — the in-app section «لماذا هذا التصميم؟ / Why this design?»: the reason for every colour, icon and the logo (§8.10, `docs/design/design-2-meanings.md` or `design-3-meanings.md`, for the chosen design). |
 | **Next task** | `P0-11`: the author chooses one design — 1 (`round-2.html`), 2 (`round-3.html`) or 3 (`round-4.html`) — for web, Android and iPhone; then the remaining screens in the chosen design (§13), the Figma file, and the scaffolds `P0-06` … `P0-10`. |
-| Waiting for the author | His choice among designs 1, 2 and 3; his reading of the meanings documents (`design-2-meanings.md`, `design-3-meanings.md`); whether Mountains keeps a night theme of its own; native speakers for the 20 languages' interface texts (`LANG-02`). |
+| Waiting for the author | His choice among designs 1, 2 and 3; his reading of the meanings documents (`design-2-meanings.md`, `design-3-meanings.md`); the reports of mistakes that users write on GitHub (issues), which he brings to the agent. |
 
 **At the end of every session:** update the table above, the statuses in §14.1, the change log §19; write or extend
 the session record; commit as the author (§1). Details: `docs/plan/execution-plan.md` §1.
@@ -67,8 +67,9 @@ The author's own rules — the same in all his projects:
 - **Document everything.** Documents go in `docs/<kind>/` of the owning repository with an index `docs/README.md`;
   never loose files.
 - **All 22 languages from the first release** (author, 2026-11-19 — before: Arabic and English first), in every
-  client; every user-facing text exists in all of them, and each language's interface text is read by a native
-  speaker before release. The code is built so that more languages can be added without changing screens — §8.9.
+  client; every user-facing text exists in all of them. The interface texts are translated by the agent; there
+  are no native readers (author, 2026-11-19): users report mistakes on GitHub, the author brings them to the agent,
+  and they are corrected. Religious content is never translated by us (§6.10). The code is built so that more languages can be added without changing screens — §8.9.
 - **Correct data only** — §6 is binding. When a fact cannot be verified, it is not shipped.
 - **No advertisements, ever** — no ad SDK, no sponsored content, no tracking for marketing (§2).
 - **The plan lives in files.** Every decision, every task and its status is written in this repository on the day it
@@ -576,15 +577,16 @@ means, and the conditions that keep it correct:
   its font, and numbers and times in its own format (the platform's locale functions; Persian, Pashto and Bengali
   use their own digits).
 - **Interface texts:** the agent wrote drafts of all 20 languages for the prototype (`docs/design/prototypes/i18n/`,
-  122 texts each, checked by the build: every key present, every number slot kept). ⚠ They are drafts: each
-  language is read and corrected by a native speaker before release (`LANG-02`); until then the screen says
-  "draft translation". The weakest drafts are Hausa, Pashto, Uzbek and Swahili.
+  153 texts each with round 4, checked by the build: every key present, every number slot kept). **No native
+  readers** (author, 2026-11-19): the screen says "Interface translation by the project. Found a mistake? Report it
+  on GitHub."; the author collects the reports (GitHub issues) and the agent corrects them (`LANG-02`). The texts
+  most likely to need corrections are Hausa, Pashto, Uzbek and Swahili.
 - **Religious content does not change:** the Quran is always the Arabic text; a meaning in a language is shown only
   from a published translation by a named translator with permission (QuranEnc, `P0-13`); without it the Arabic is
   shown with a note (§6.10). Hadith and adhkar texts likewise.
 - **Surah names:** Arabic names for Arabic-script languages, Tanzil's transliteration for the others in the
   prototype; ☐ a named source for surah names per language (`LANG-02`).
-- The first release is therefore larger: 22 store listings, 22 native readers, more fonts to ship.
+- The first release is therefore larger: 22 store listings and more fonts to ship.
 
 **On the first screen (author, 2026-11-18: "a drop-down list or anything better"):** a language button shows the
 current language in its own script and the number of languages; it opens a list over the screen with a search box
@@ -633,7 +635,8 @@ What this means from day one, in all four codebases:
 - The language list is data (code, native name, direction, font), so adding a language does not change screens.
 - Four of the planned languages are written right to left (Arabic, Urdu, Persian, Pashto); Urdu needs a Nastaliq
   font. Hindi, Bengali, Korean, Japanese and Chinese need their own fonts.
-- Every language's interface text is read by a native speaker before it ships (`LANG-*` tasks, §14.1).
+- Every language's interface text is translated by the agent and corrected from users' reports on GitHub (`LANG-*`
+  tasks, §14.1; author, 2026-11-19 — no native readers).
 - Backend: `Accept-Language` decides the language of messages and of names that exist in that language; content
   tables keep one row per language.
 - ⚠ **Religious content in a new language** (meaning of the ayahs, tafsir, hadith, adhkar) is only a **published
@@ -652,6 +655,8 @@ the rules there:
 - a hadith is shown by book, number and the grading stated by its source;
 - where a word needs explaining, only the verbatim text of a named, licensed tafsir;
 - every card says "This is a design choice, not an interpretation" in both languages;
+- **no cross shape anywhere** — no plus sign, no four-armed star or spark, in any icon, logo or drawing (author,
+  2026-11-19: it is a symbol of Christianity, and this is an Islamic application); a star is a round dot;
 - 30:22 (the languages of people) is shown beside the language choice only — after reading its tafsirs, its
   colours are people's colours, so it is not used for the colour directions (author's request, 2026-11-18);
 - **only Mountains** («الجبال — لضعف البصر وعمى الألوان») is made for readers with colour blindness or weak sight —
@@ -913,7 +918,7 @@ reviewer). Task ids: `P<phase>-<area><n>`, areas **D** data · **B** backend · 
 | P7-D1, P7-D2, P7-B1, P7-W/A/I-1 | Hadith with references | ☐ (⏸ الدرر السنية permission for links / explanations) |
 | P8-D1, P8-B1, P8-W/A/I-1 | Books reader | ☐ (⏸ edition rights) |
 | RT-01 … RT-07 | Hosting, domain, deployment, privacy pages, Google Play, App Store, store listings | ☐ (author: accounts, costs, the Mac) |
-| LANG-01 … LANG-04 | The 22 languages (§8.9): ✔ the list (2026-11-18); ✔ all in the first release (2026-11-19); draft interface texts written for the prototype · per language: interface strings read by a native speaker, its font, its RTL / LTR check · the published translation of the meanings with written permission (QuranEnc, `P0-13`) · store listings in that language | ◐ (part of the first release; ⏸ native readers) |
+| LANG-01 … LANG-04 | The 22 languages (§8.9): ✔ the list (2026-11-18); ✔ all in the first release (2026-11-19); draft interface texts written for the prototype · per language: interface strings translated by the agent and corrected from users' GitHub reports (no native readers — author, 2026-11-19), its font, its RTL / LTR check · the published translation of the meanings with written permission (QuranEnc, `P0-13`) · store listings in that language | ◐ (part of the first release; ⏸ native readers) |
 
 ## 15. Going public — hosting and stores
 
@@ -1044,3 +1049,4 @@ explicit yes** (it is public); R3 (permanent) and R10 (public) need the author's
 | 2026-11-18 | Fourteenth update (author's message): all nine recommended languages accepted — 22 languages in all (Urdu for «الباكستانية», Hindi once); the first screen gets a searchable language list with the device's language first (F1, §2, §8.9). |
 | 2026-11-19 | Fifteenth update (author's message): **all 22 languages are available from the first release** (§1, §2, F1, §8.9); round 3 works in all of them with draft interface texts (checked by the build) and a font, direction and number format per script; round 4 requested — a new design from the time of the Prophet ﷺ, the Companions and the Rightly Guided Caliphs, with many directions from the Quran (§0). |
 | 2026-11-19 | Sixteenth update (author's message): **round 4 — design 3, "the first era"** — twelve directions from the places and moments of the time of the Prophet ﷺ, the Companions and the Rightly Guided Caliphs and from words of the Quran, each in day and night with its own landscape; only the last, Mountains, for low vision and colour blindness; the prayer times on the path of the sun; reasons in `docs/design/design-3-meanings.md` (§13, §8.10). Rounds 3 and 4 fixed in the 21 languages other than Arabic. Next: the author chooses design 1, 2 or 3 (§0). |
+| 2026-11-19 | Seventeenth update (author's message): **no native readers** — the agent translates the interface, users report mistakes on GitHub and the author brings them (§1, §8.9, `LANG-02`); the round-4 texts translated into the 20 languages; **no cross shape anywhere** (a plus sign or a four-armed star — a symbol of Christianity): the star of the Light direction and four icons changed in all designs (§8.10); Mountains keeps its night theme (confirmed). |

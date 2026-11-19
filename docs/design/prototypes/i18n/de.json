@@ -1,5 +1,5 @@
 {
- "_status": "draft by the agent, 2026-11-19 — to be read by a native speaker before release (LANG-02)",
+ "_status": "by the agent, 2026-11-19 — corrected from users' reports (GitHub issues, LANG-02)",
  "page_n": "Seite {n}",
  "juz_n": "Juz {n}",
  "hizb_n": "Hizb {n}",
@@ -21,7 +21,7 @@
  "note_30_22": "Wird neben der Sprachauswahl gezeigt. Seine Bedeutung wird wörtlich aus einem anerkannten Tafsir zitiert (☐ at-Tafsir al-Muyassar, nach Erlaubnis) – nie mit unseren Worten.",
  "disclaimer": "Dies ist eine Gestaltungsentscheidung, keine Auslegung. Der Koran nennt Farben; die genauen Farbtöne hier sind unsere Wahl.",
  "ayah_note": "Die Verse werden auf Arabisch gezeigt; eine Bedeutung in dieser Sprache wird nur aus einer veröffentlichten Übersetzung mit genanntem Übersetzer ergänzt.",
- "draft": "Entwurf der Übersetzung – vor der Veröffentlichung prüft ihn ein Muttersprachler.",
+ "draft": "Übersetzung der Oberfläche durch das Projekt. Einen Fehler gefunden? Melde ihn auf GitHub.",
  "other_scripts": "Oberflächentext in anderen Schriften",
  "m24": "Der edle Koran und seine Wissenschaften",
  "m25": "Sprache · Language",

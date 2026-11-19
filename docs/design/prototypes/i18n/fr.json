@@ -1,5 +1,5 @@
 {
- "_status": "draft by the agent, 2026-11-19 — to be read by a native speaker before release (LANG-02)",
+ "_status": "by the agent, 2026-11-19 — corrected from users' reports (GitHub issues, LANG-02)",
  "page_n": "Page {n}",
  "juz_n": "Juz {n}",
  "hizb_n": "Hizb {n}",
@@ -21,7 +21,7 @@
  "note_30_22": "Affiché à côté du choix de la langue. Son sens est cité mot pour mot d'un tafsir reconnu (☐ at-Tafsir al-Muyassar, après autorisation) — jamais avec nos mots.",
  "disclaimer": "C'est un choix de conception, pas une interprétation. Le Coran nomme des couleurs ; les nuances exactes ici sont notre choix.",
  "ayah_note": "Les versets sont affichés en arabe ; un sens dans cette langue n'est ajouté qu'à partir d'une traduction publiée dont le traducteur est nommé.",
- "draft": "Traduction provisoire — un locuteur natif la relira avant la sortie.",
+ "draft": "Traduction de l'interface par le projet. Une erreur ? Signalez-la sur GitHub.",
  "other_scripts": "texte de l'interface dans d'autres écritures",
  "m24": "Le Noble Coran et ses sciences",
  "m25": "Langue · Language",

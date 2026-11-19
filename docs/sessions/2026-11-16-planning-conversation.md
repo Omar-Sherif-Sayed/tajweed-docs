@@ -1163,3 +1163,115 @@ Round 4 is in Figma as a live, clickable layer. Now round 3:
 Round 3 is in. Last, design 1 (rounds 1 and 2) together on the third page:
 
 All three Figma pages now hold the designs. Recording the Figma link and this message in the documents, then committing:
+
+I added the three sections to the plan and put all the designs into your Figma account. Everything is committed and pushed. I haven't opened the designs inside Figma to check that they run.
+
+#### 1. The new sections: three, as you thought
+
+There are three sections, because each has its own sources, size and rules:
+- **The prophets:** the first source is the Quran itself.
+- **The Companions:** there are thousands of them.
+- **The caliphs:** four periods of history.
+
+So each can be released on its own once its sources are checked. On the home screen they sit side by side under one heading, «السِّيَر», so the home screen doesn't fill up.
+
+| Section | What it holds | Candidate sources (the edition of each book still to be chosen and its rights checked) |
+| --- | --- | --- |
+| **F20 Stories of the prophets** | The 25 prophets named in the Quran, each with the ayahs about him, the authentic hadiths with their grade, and his story | قصص الأنبياء and السيرة النبوية by Ibn Kathir, and Ibn Hisham's Seerah |
+| **F21 The Companions** | The life of each Companion and the hadiths of their virtues | الإصابة، أسد الغابة، الاستيعاب، سير أعلام النبلاء |
+| **F22 The Rightly Guided Caliphs** | The caliphate of Abu Bakr, Umar, Uthman and Ali: how it began, its events year by year, and its end. It links to each one's life in the Companions section, so nothing is written twice. | تاريخ الخلفاء للسيوطي، البداية والنهاية |
+
+**Rules for these sections:**
+- **Copied word for word:** every text comes from its book with volume and page. Nothing is summarised or written by us. "Everything about them" means everything those books hold.
+- **Weak narrations:** these books contain weak narrations and Israiliyyat. A narration is shown only with the book's own judgement on it, or left out, and an edition that grades the narrations is preferred.
+- **No pictures:** no picture of any prophet or Companion — no face or figure. Places only.
+- **Honorifics:** ﷺ, «عليه السلام» and «رضي الله عنه» are always written, in every language.
+- **The disputes between the Companions:** from the killing of Uthman to Siffin, these chapters stay unpublished until a qualified scholar reviews them.
+
+All of this is in [AGENTS.md](AGENTS.md) §8.11, and the tasks are phase 9 in [execution-plan.md](docs/plan/execution-plan.md).
+
+How many Companions to start with (R12): by default, the ten promised Paradise, the Mothers of the Believers and the people of Badr, then more in later releases. If you want a different start, tell me.
+
+#### 2. Figma
+
+The file **«Tajweed — designs»** is in your account: [open it in Figma](https://www.figma.com/design/K5RXq2tO1sVE7RwlJ9dD1L).
+
+| Page | Holds |
+| --- | --- |
+| 1 | Round 4 (design 3) |
+| 2 | Round 3 (design 2) |
+| 3 | Rounds 1 and 2 (design 1) |
+
+- **Live pages, not editable shapes.** Each design is the same HTML page running inside Figma, so you can click it: directions, day and night, languages and pages. I couldn't make editable Figma shapes from the HTML with the tools I have. The mushaf pages also need the King Fahd fonts, which a normal Figma drawing can't use; the live page shows them exactly.
+- **Three pages only.** Your free Figma plan allows three pages per file, so rounds 1 and 2 share the third page.
+- **Not checked yet.** I couldn't open the designs inside Figma to see them running. Open each page once and click the layer to start it; tell me if one doesn't run.
+- **The source stays here.** The HTML files in the docs repository are still the original. After each new round I'll send the changed design to Figma again.
+
+## The author — 2026-11-19 20:20
+
+```text
+* ما كنتش أقصد أنك ترفع all rounds ل figma كنت اقصد ان ال logo وأي تصميم مستخدم في ال  design rounds تعمله ب figma لو وتعمله save معانا بال docs لأستخدامة بأي وقت
+* colour-directions and round-2 هما نفس الشيء - خليهم ملف واحد up to date وخلي كل round named right with it is file - فمثلاً design 1 round 1 في ملف round 1 وهذكا علشان مايبقاش في لغبطة 
+* اللغات في i18n خليها بال rounds منظبمة زي round 4 عني أنقل القديم في المكان الصحيح بتاعه حسب ال round كنوع من انواع النظام في الشغل 
+* حالياً فين ال 3 new sections مش شايفهم في ال rounds
+```
+
+## The agent — 2026-11-19 20:31
+
+Renaming the files now so that round N = design N, and moving the language files into one folder per round.
+
+Noted. I'll keep the memory files where they are and keep an up-to-date copy in the docs repository, committed and pushed with every commit. Let me look at them first, since the repository is public.
+
+You've hit your 5-hour limit · resets 1am (Asia/Riyadh)
+
+## The author — 2026-11-19 22:01
+
+```text
+I hit my usage limit while you were working, but it has reset now. Please continue from where you left off.
+```
+
+## The agent — 2026-11-19 22:03
+
+Now the translations of design 1's 31 new texts into the 20 languages. The other 50 texts reuse round 2's translations automatically.
+
+Next, the prophets, Companions and caliphs screens: one shared builder that writes the same screens into all three designs, each in that design's own colours.
+
+All three designs now have the Lives screens. Checking them in the browser.
+
+No errors in any of the 22 languages in the three pages. The words that stay English in some languages (Tafsir, Qibla, Mushaf, Radio) are the same words in those languages. Now a visual check.
+
+Design 1 looks right. Now design 3 at night in English, with the caliphs tab open:
+
+Everything fits now in all three designs, including Urdu, which needs the most height. A last look at design 3:
+
+The tab is showing a cached copy (the old title is still there). Reloading:
+
+All three designs pass in the browser. Next, Figma: the logos, icons and landscapes as real shapes, with SVG copies in the repository. First, how the page draws its landscapes and logos:
+
+111 SVG files are exported. Now importing them into Figma:
+
+You chose to delete the live pages, so I'm removing those three layers, renaming the pages to designs 1–3 and putting them in order:
+
+The plugin can't download files, so the SVGs go into the Figma calls directly. A script builds those calls, each under Figma's 50 KB limit:
+
+Design 1's code is ready. Reading it and sending it to Figma:
+
+The rows were clipped: a container kept a fixed 10px height. Fixing it in place:
+
+Design 1 is in Figma as editable vectors. I'm fixing the generator so designs 2 and 3 import correctly the first time:
+
+Design 2 is in. For design 3, the 24 landscapes are produced in Figma by the page's own `scene()` code, the same function the SVG files came from, so nothing is redrawn:
+
+All three Figma pages are filled. A quick check of design 2:
+
+Figma now holds every logo, icon, drawing and landscape of the three designs as editable vectors, with each design's colours. Next, the documents.
+
+Rewriting the top of the design README for the new names, the elements, Figma and the Lives screens:
+
+The shell rejected that inline script, so I'm saving it as a file first:
+
+Now `AGENTS.md`, the plan, the READMEs and the session record. First, the exact current text of the lines to change:
+
+Now the elements README and the session record:
+
+Writing the elements README and the session record section:

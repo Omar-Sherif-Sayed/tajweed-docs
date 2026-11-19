@@ -1,6 +1,6 @@
 {
-  "design": "3 — the first era (round 4)",
-  "generated_by": "docs/design/prototypes/tools/build_round4.py",
+  "design": "3 — the first era (round 3)",
+  "generated_by": "docs/design/prototypes/tools/build_round3.py",
   "meanings": "docs/design/design-3-meanings.md",
   "directions": {
     "suhuf": {

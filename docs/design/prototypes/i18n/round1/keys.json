@@ -1,0 +1,407 @@
+[
+ {
+  "id": "m24",
+  "en": "The Noble Quran and Its Sciences",
+  "ar": "القرآن الكريم وعلومه"
+ },
+ {
+  "id": "m25",
+  "en": "Language · اللغة",
+  "ar": "اللغة · Language"
+ },
+ {
+  "id": "m26",
+  "en": "Colours",
+  "ar": "الألوان"
+ },
+ {
+  "id": "r1_dir_a",
+  "en": "Emerald & gold",
+  "ar": "زمردي وذهبي"
+ },
+ {
+  "id": "r1_dir_b",
+  "en": "Teal & sand",
+  "ar": "أزرق مخضرّ ورملي"
+ },
+ {
+  "id": "r1_dir_c",
+  "en": "Mushaf",
+  "ar": "المصحف"
+ },
+ {
+  "id": "m27",
+  "en": "Theme",
+  "ar": "المظهر"
+ },
+ {
+  "id": "r1_light",
+  "en": "Light",
+  "ar": "فاتح"
+ },
+ {
+  "id": "r1_dark",
+  "en": "Dark",
+  "ar": "داكن"
+ },
+ {
+  "id": "r1_example",
+  "en": "Example",
+  "ar": "مثال"
+ },
+ {
+  "id": "m38",
+  "en": "Asr",
+  "ar": "العصر"
+ },
+ {
+  "id": "m32",
+  "en": "Listen",
+  "ar": "استماع"
+ },
+ {
+  "id": "m33",
+  "en": "Start",
+  "ar": "ابدأ"
+ },
+ {
+  "id": "r1_later",
+  "en": "All of this can be changed later in Settings",
+  "ar": "يمكن تغيير كل ذلك لاحقًا من الإعدادات"
+ },
+ {
+  "id": "m35",
+  "en": "Choose language · اختر اللغة",
+  "ar": "اختر اللغة · Choose language"
+ },
+ {
+  "id": "m36",
+  "en": "Tajweed",
+  "ar": "تجويد"
+ },
+ {
+  "id": "m62",
+  "en": "Next prayer",
+  "ar": "الصلاة القادمة"
+ },
+ {
+  "id": "m63",
+  "en": "in 1 h 24 min",
+  "ar": "بعد ١ س ٢٤ د"
+ },
+ {
+  "id": "m41",
+  "en": "Continue reading",
+  "ar": "تابع القراءة"
+ },
+ {
+  "id": "m42",
+  "en": "Page 5 · Al-Baqarah 25",
+  "ar": "الصفحة ٥ · البقرة ٢٥"
+ },
+ {
+  "id": "m43",
+  "en": "Resume",
+  "ar": "متابعة"
+ },
+ {
+  "id": "m44",
+  "en": "Quran",
+  "ar": "القرآن"
+ },
+ {
+  "id": "m45",
+  "en": "Recitation",
+  "ar": "التلاوة"
+ },
+ {
+  "id": "m49",
+  "en": "Tafsir",
+  "ar": "التفسير"
+ },
+ {
+  "id": "m46",
+  "en": "Prayer times",
+  "ar": "مواقيت الصلاة"
+ },
+ {
+  "id": "m47",
+  "en": "Qibla",
+  "ar": "القبلة"
+ },
+ {
+  "id": "r1_radio",
+  "en": "Radio",
+  "ar": "الإذاعة"
+ },
+ {
+  "id": "m48",
+  "en": "Adhkar",
+  "ar": "الأذكار"
+ },
+ {
+  "id": "m50",
+  "en": "Hadith",
+  "ar": "الأحاديث"
+ },
+ {
+  "id": "m51",
+  "en": "Books",
+  "ar": "الكتب"
+ },
+ {
+  "id": "m65",
+  "en": "Sources",
+  "ar": "المصادر"
+ },
+ {
+  "id": "m52",
+  "en": "Home",
+  "ar": "الرئيسية"
+ },
+ {
+  "id": "m53",
+  "en": "Prayer",
+  "ar": "الصلاة"
+ },
+ {
+  "id": "m54",
+  "en": "More",
+  "ar": "المزيد"
+ },
+ {
+  "id": "r1_bookmark",
+  "en": "Bookmark",
+  "ar": "حفظ"
+ },
+ {
+  "id": "r1_minshawi",
+  "en": "Muhammad Siddiq Al-Minshawi",
+  "ar": "محمد صديق المنشاوي"
+ },
+ {
+  "id": "r1_reconnect",
+  "en": "Reconnecting… playback will resume by itself",
+  "ar": "جارٍ إعادة الاتصال… ستُستكمل التلاوة تلقائيًا"
+ },
+ {
+  "id": "r1_murattal",
+  "en": "Murattal",
+  "ar": "مرتل"
+ },
+ {
+  "id": "r1_hafs",
+  "en": "Hafs from Asim",
+  "ar": "حفص عن عاصم"
+ },
+ {
+  "id": "r1_surah",
+  "en": "Surah",
+  "ar": "سورة"
+ },
+ {
+  "id": "r1_range",
+  "en": "Ayah range",
+  "ar": "آيات محددة"
+ },
+ {
+  "id": "r1_noend",
+  "en": "Without end",
+  "ar": "بلا توقف"
+ },
+ {
+  "id": "r1_noend_note",
+  "en": "Without end: to the end of the Quran, then again from Al-Fatihah",
+  "ar": "بلا توقف: حتى آخر المصحف ثم من الفاتحة من جديد"
+ },
+ {
+  "id": "m66",
+  "en": "Everything the app uses, and where it comes from",
+  "ar": "كل ما يستخدمه التطبيق ومن أين جاء"
+ },
+ {
+  "id": "r1_f_qcf",
+  "en": "Madinah mushaf 1405H (page fonts)",
+  "ar": "خط مصحف المدينة ١٤٠٥هـ (صفحات)"
+ },
+ {
+  "id": "r1_f_hafs",
+  "en": "KFGQPC Uthmanic Script HAFS",
+  "ar": "خط حفص العثماني — مجمع الملك فهد"
+ },
+ {
+  "id": "r1_f_dkold",
+  "en": "DigitalKhatt Old Madina",
+  "ar": "الخط الرقمي — مصحف المدينة القديم"
+ },
+ {
+  "id": "r1_f_dknew",
+  "en": "DigitalKhatt New Madina",
+  "ar": "الخط الرقمي — مصحف المدينة الجديد"
+ },
+ {
+  "id": "r1_f_amiri",
+  "en": "Amiri Quran",
+  "ar": "أميري قرآن"
+ },
+ {
+  "id": "r1_f_sch",
+  "en": "Scheherazade New",
+  "ar": "شهرزاد الجديد"
+ },
+ {
+  "id": "s80",
+  "en": "The Noble Quran",
+  "ar": "القرآن الكريم"
+ },
+ {
+  "id": "s81",
+  "en": "the Quran text in Uthmani script",
+  "ar": "نص القرآن الكريم بالرسم العثماني"
+ },
+ {
+  "id": "s82",
+  "en": "where each page, juz, hizb and quarter starts",
+  "ar": "بداية كل صفحة وجزء وحزب وربع"
+ },
+ {
+  "id": "s83",
+  "en": "the words of every printed line",
+  "ar": "ترتيب الكلمات في أسطر الصفحات كالمصحف المطبوع"
+ },
+ {
+  "id": "r1_fonts",
+  "en": "Quran fonts",
+  "ar": "خطوط المصحف"
+ },
+ {
+  "id": "s85",
+  "en": "the printed mushaf's word shapes",
+  "ar": "أشكال كلمات المصحف المطبوع"
+ },
+ {
+  "id": "r1_u_hafs",
+  "en": "Uthmanic Hafs font",
+  "ar": "خط حفص العثماني"
+ },
+ {
+  "id": "r1_u_dk",
+  "en": "two digital Madinah fonts",
+  "ar": "خطان رقميان لمصحف المدينة"
+ },
+ {
+  "id": "s84",
+  "en": "Quran font",
+  "ar": "خط قرآني"
+ },
+ {
+  "id": "s86",
+  "en": "Interface fonts",
+  "ar": "خطوط الواجهة"
+ },
+ {
+  "id": "s88",
+  "en": "Arabic interface text",
+  "ar": "النصوص العربية في الواجهة"
+ },
+ {
+  "id": "s89",
+  "en": "English interface text",
+  "ar": "النصوص الإنجليزية في الواجهة"
+ },
+ {
+  "id": "r1_u_ui",
+  "en": "interface text of the other languages",
+  "ar": "خطوط اللغات الأخرى في الواجهة"
+ },
+ {
+  "id": "s90",
+  "en": "Being checked — not used yet",
+  "ar": "قيد التحقق — لم تُستخدم بعد"
+ },
+ {
+  "id": "s91",
+  "en": "recitations, ayah timings, radio",
+  "ar": "التلاوات وتوقيت الآيات والإذاعات"
+ },
+ {
+  "id": "r1_u_ayah",
+  "en": "one audio file per ayah",
+  "ar": "ملفات صوت لكل آية"
+ },
+ {
+  "id": "s93",
+  "en": "hadith grading and links",
+  "ar": "تخريج الأحاديث وروابطها"
+ },
+ {
+  "id": "verified",
+  "en": "✔ verified",
+  "ar": "✔ تم التحقق"
+ },
+ {
+  "id": "r1_pending",
+  "en": "⏳ permission pending",
+  "ar": "⏳ بانتظار الإذن"
+ },
+ {
+  "id": "juz_n",
+  "en": "Juz {n}",
+  "ar": "الجزء {n}"
+ },
+ {
+  "id": "hizb_n",
+  "en": "Hizb {n}",
+  "ar": "الحزب {n}"
+ },
+ {
+  "id": "draft",
+  "en": "Interface translation by the project. Found a mistake? Report it on GitHub.",
+  "ar": ""
+ },
+ {
+  "id": "r1_pos",
+  "en": "{name} · Ayah {n} of {k}",
+  "ar": "سورة {name} · الآية {n} من {k}"
+ },
+ {
+  "id": "n_languages",
+  "en": "{n} languages",
+  "ar": "{n} لغة"
+ },
+ {
+  "id": "device_language",
+  "en": "Your device's language",
+  "ar": "لغة جهازك"
+ },
+ {
+  "id": "search_languages",
+  "en": "Search: Arabic, Deutsch, اردو…",
+  "ar": "ابحث: عربي، Deutsch، Urdu…"
+ },
+ {
+  "id": "right_to_left",
+  "en": "right to left",
+  "ar": "من اليمين"
+ },
+ {
+  "id": "all_languages",
+  "en": "All languages",
+  "ar": "كل اللغات"
+ },
+ {
+  "id": "no_language",
+  "en": "No language by that name.",
+  "ar": "لا توجد لغة بهذا الاسم."
+ },
+ {
+  "id": "page_n",
+  "en": "Page {n}",
+  "ar": "الصفحة {n}"
+ },
+ {
+  "id": "r1_ayahs",
+  "en": "{n} ayahs",
+  "ar": "آياتها {n}"
+ }
+]

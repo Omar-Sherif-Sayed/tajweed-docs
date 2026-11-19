@@ -5,7 +5,7 @@ directions, the logo and the icons. He asked that the choices come from reflecti
 first era of Islam, and that the explanation can later become a section inside the application. This document is that
 explanation. The section in the application is feature **F19** (parent `AGENTS.md` §2, §8.10).
 
-Prototype: [`prototypes/round-3.html`](prototypes/round-3.html). Colour values: [`tokens-design-2.json`](tokens-design-2.json),
+Prototype: [`prototypes/round-2.html`](prototypes/round-2.html). Colour values: [`tokens-design-2.json`](tokens-design-2.json),
 generated from `prototypes/tools/design2_palettes.py`.
 
 ## 1. The rules this explanation follows
@@ -19,7 +19,7 @@ that its scholars did not give it.
 2. **The Quran gives words, not shades.** Where a verse names a colour, the exact shade (its hex value) is a design
    choice, and the in-app section says so.
 3. **Ayahs are copied, never typed.** Every ayah in this document and in the prototype is copied whole from the
-   verified Tanzil file by `tools/build_round3.py`, which also checks that the ayah contains the word it is cited
+   verified Tanzil file by `tools/build_round2.py`, which also checks that the ayah contains the word it is cited
    for (the table in section 8).
 4. **Meanings of words come from a named tafsir, quoted verbatim.** Where a word needs explaining (for example
    «مدهامتان»), the in-app section shows the explanation of a published tafsir, word for word, with its name. This
@@ -252,7 +252,7 @@ A draft of one card is phone 6 in the prototype.
 ## 8. The ayahs cited (generated — do not edit by hand)
 
 <!--AYAHS-BEGIN-->
-| Reference | Ayah — copied whole from the Tanzil file by `tools/build_round3.py` |
+| Reference | Ayah — copied whole from the Tanzil file by `tools/build_round2.py` |
 | --- | --- |
 | Al-Baqara 2:144 (البقرة) | قَدْ نَرَىٰ تَقَلُّبَ وَجْهِكَ فِى ٱلسَّمَآءِ ۖ فَلَنُوَلِّيَنَّكَ قِبْلَةً تَرْضَىٰهَا ۚ فَوَلِّ وَجْهَكَ شَطْرَ ٱلْمَسْجِدِ ٱلْحَرَامِ ۚ وَحَيْثُ مَا كُنتُمْ فَوَلُّوا۟ وُجُوهَكُمْ شَطْرَهُۥ ۗ وَإِنَّ ٱلَّذِينَ أُوتُوا۟ ٱلْكِتَـٰبَ لَيَعْلَمُونَ أَنَّهُ ٱلْحَقُّ مِن رَّبِّهِمْ ۗ وَمَا ٱللَّهُ بِغَـٰفِلٍ عَمَّا يَعْمَلُونَ |
 | Aal-i-Imraan 3:96 (آل عمران) | إِنَّ أَوَّلَ بَيْتٍ وُضِعَ لِلنَّاسِ لَلَّذِى بِبَكَّةَ مُبَارَكًا وَهُدًى لِّلْعَـٰلَمِينَ |

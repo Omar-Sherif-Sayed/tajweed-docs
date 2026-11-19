@@ -203,6 +203,12 @@ Done when: the CI build and tests are green. ⚠ "Runs on a device" is **not** c
 5. After approval: the Figma file in the author's account, through his Chrome session.
 6. ☐ Fonts: the licence of each font is checked and recorded before it is used (Quran font: `P0-12`).
 
+**State 2026-11-19, evening (the author's review):** one file per design, round N = design N — design 1
+`round-1.html` (the two passes merged, now in 22 languages), design 2 `round-2.html`, design 3 `round-3.html`; the
+Lives screens (F20–F22) in all three; the elements of each design (logo, icons, drawings, landscapes, colours) in
+Figma as editable vectors and in `docs/design/elements/` as SVG. Still waiting for the author's choice.
+The two states below keep the file names of their day.
+
 **State 2026-11-19 (round 4):** three designs to choose from — design 1 (`round-2.html`), design 2 (`round-3.html`,
 kept as it is) and design 3 (`round-4.html`, "the first era": twelve directions, each in day and night with its own
 landscape, the prayer times on the path of the sun, all 22 languages; the reasons in `docs/design/design-3-meanings.md`).

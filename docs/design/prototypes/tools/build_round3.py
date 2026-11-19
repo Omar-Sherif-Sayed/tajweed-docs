@@ -1,15 +1,10 @@
-"""Build `round-3.html` (design 2, "early Islam") and its generated companions from the verified source files.
+"""Build `round-3.html` (design 3, "the first era") and its generated companions from the verified source files.
 
-Same checks as round 2 (`build_round2.py`): checksums, the layout read as plain text, every word and every King Fahd
-glyph cross-checked against the Tanzil text. Round 3 uses only the default Quran font chosen by the author on
-2026-11-17 — the King Fahd Complex page fonts (Madinah mushaf, 1405H). The basmala line is drawn, as in round 2, with
-the KFGQPC Hafs font (it has no U+06DF, which the basmala does not use).
-
-It also writes:
-  - the colour directions of design 2 (design2_palettes.py) as CSS into round-3.html, after the contrast check, and
-    as docs/design/tokens-design-2.json;
-  - the ayahs cited in docs/design/design-2-meanings.md, copied whole from the Tanzil file (never typed), into
-    round-3.html and into that document; each one is checked to contain the word it is cited for.
+Design 3 (first built as "round 4", renamed round 3 on 2026-11-19) was asked by the author on 2026-11-19: a new design from the time of the Prophet ﷺ, the Companions and the
+Rightly Guided Caliphs, with many colour directions drawn from reflection on the Quran. It reuses every check of
+rounds 1 and 2: checksums, the layout read as plain text, every word and King Fahd glyph cross-checked against Tanzil,
+every cited ayah copied whole from Tanzil and checked to contain its word, every Quran excerpt in the meanings document
+checked word for word, the colour checks (design3_palettes.py) and the interface texts of the 20 other languages.
 
 Usage: python -I build_round3.py
 """
@@ -18,132 +13,74 @@ import json
 import os
 import re
 import sys
+import xml.etree.ElementTree as ET
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-import build_round2 as R2  # noqa: E402  (our own scripts beside this one)
-import design2_palettes as P  # noqa: E402
-import verify_mushaf_layout as V  # noqa: E402
+import build_round1 as R1  # noqa: E402  (our own scripts beside this one)
+import build_round2 as B2  # noqa: E402
+import design2_palettes as P2  # noqa: E402
+import design3_palettes as P3  # noqa: E402
 
 PAGE = os.path.join(HERE, "..", "round-3.html")
 DESIGN = os.path.join(HERE, "..", "..")
-PAGES = [1, 2, 5, 545, 546]
-SOURCES = ["tanzil/quran-uthmani.txt", "tanzil/quran-data.xml", "digitalkhatt/quran_text_old_madinah.ts",
-           "kfgqpc/UthmanicHafs1 Ver09.otf", "kfgqpc/mushaf.txt"] + ["kfgqpc/QCF_P%03d.TTF" % p for p in PAGES]
-FONTS = {"KFGQPC Hafs": ("kfgqpc/UthmanicHafs1 Ver09.otf", "opentype")}
-for _p in PAGES:
-    FONTS["QCF P%03d" % _p] = ("kfgqpc/QCF_P%03d.TTF" % _p, "truetype")
+DOC = os.path.join(DESIGN, "design-3-meanings.md")
+PAGES = B2.PAGES
 
-# Ayahs cited in the meanings document: reference -> the word (letters only, as compared by V.skeleton) that the
-# citation is about. The build stops if the ayah does not contain it.
+# Ayahs cited for design 3: reference -> the word (letters as compared by the skeleton) the citation is about.
 VERSES = {
-    "35:27": "الونها", "35:28": "الونه",         # the variety of colours (the small alef is a mark, so not compared)
-    "52:2": "مسطور", "52:3": "رق",               # parchment
-    "50:10": "النخل",                            # Madinah: the palm trees
-    "3:96": "ببكة",                              # Makkah
-    "17:1": "الاقصا", "95:1": "الزيتون", "24:35": "زيتونة",   # Al-Quds: al-Aqsa, the olive
-    "55:64": "مدهامتان", "55:76": "خضر", "18:31": "خضرا", "76:21": "خضر", "35:33": "لولوا",  # gardens
-    "2:144": "قبلة", "7:204": "فاستمعوا", "73:4": "ترتيلا", "96:4": "بالقلم",  # icons
-    "30:22": "السنتكم",                          # languages: the F19 card for the language choice
-    "55:19": "البحرين", "55:22": "المرجان",      # two seas: pearl and coral
-    "41:12": "مصبيح", "25:61": "سرجا",           # lamps: the night sky
-    "16:68": "النحل", "16:69": "الونه",          # honey
+    "96:1": "اقرا", "96:2": "علق", "96:3": "الاكرم",                     # Hira: the first revelation
+    "96:4": "بالقلم",                                                     # the first sheets: writing
+    "9:40": "الغار",                                                      # the Cave: the Hijrah
+    "50:10": "النخل",                                                     # Taybah: the palms
+    "88:17": "الابل", "88:18": "السما", "88:19": "الجبال", "88:20": "الارض",  # look at the camels
+    "89:1": "الفجر", "81:18": "الصبح",                                    # dawn
+    "93:1": "الضحي", "93:2": "سجي",                                       # forenoon and the still night (ى is compared as ي)
+    "22:63": "مخضرة",                                                     # rain
+    "55:64": "مدهامتان", "55:68": "رمان",                                  # the two gardens
+    "24:35": "زجاجة",                                                     # light
+    "35:27": "غرابيب",                                                    # mountains (high contrast)
+    "30:22": "السنتكم",                                                   # the language choice
 }
-TASHKEEL = re.compile("[ً-ْٰ]")
 
 
 def check_doc_excerpts(verses):
-    """Every vowelled «excerpt» in the meanings document must be an exact part of one of the cited ayahs."""
-    text = io.open(os.path.join(DESIGN, "design-2-meanings.md"), encoding="utf-8").read()
+    text = io.open(DOC, encoding="utf-8").read()
     text = text.split("<!--AYAHS-BEGIN-->")[0] + text.split("<!--AYAHS-END-->")[1]
-    excerpts = [e for e in re.findall("«([^»]+)»", text) if TASHKEEL.search(e)]
+    excerpts = [e for e in re.findall("«([^»]+)»", text) if B2.TASHKEEL.search(e)]
     for e in excerpts:
         if not any(e in v for v in verses.values()):
-            R2.fail("excerpt in design-2-meanings.md is not part of a cited ayah: %s" % e)
-    print("excerpts: %d in design-2-meanings.md, each found word for word in a cited ayah" % len(excerpts))
-
-
-def ayah_text(tanzil, key):
-    """The ayah exactly as in the Tanzil file, without the basmala Tanzil writes before ayah 1."""
-    text = tanzil[key]
-    if key[1] == 1 and key[0] not in (1, 9):
-        text = " ".join(text.split(" ")[4:])
-    return text
-
-
-def build_verses():
-    tanzil = V.parse_tanzil(os.path.join(R2.ASSETS, "tanzil/quran-uthmani.txt"))
-    out = {}
-    for ref, word in VERSES.items():
-        key = tuple(int(x) for x in ref.split(":"))
-        text = ayah_text(tanzil, key)
-        if not any(word == V.skeleton(t) or (len(word) > 2 and word in V.skeleton(t)) for t in text.split(" ")):
-            R2.fail("ayah %s does not contain %s" % (ref, word))
-        out[ref] = text
-    print("verses: %d copied from Tanzil and checked" % len(out))
-    return out
-
-
-I18N = os.path.join(HERE, "..", "i18n")
-LANG_CODES = ["ru", "es", "de", "it", "fr", "ur", "hi", "ko", "id", "ja", "zh", "tr", "bn", "fa", "ms", "sw", "ha",
-              "pt", "ps", "uz"]
-SLOT = re.compile(r"\{(\w+)\}")
-
-
-def build_i18n(keys_file="keys.json", folder=""):
-    """The interface texts of the 20 languages after Arabic and English (by the agent, AGENTS.md §8.9), each file
-    checked: every key present, no unknown key, and every {slot} the English and Arabic texts share is kept.
-    `keys_file` / `folder` select another set (round 4: keys-round4.json and round4/)."""
-    keys = json.load(io.open(os.path.join(I18N, keys_file), encoding="utf-8"))
-    ids = [k["id"] for k in keys]
-    out = {"en2id": {k["en"]: k["id"] for k in keys}, "tr": {}}
-    for code in LANG_CODES:
-        tr = json.load(io.open(os.path.join(I18N, folder, code + ".json"), encoding="utf-8"))
-        tr.pop("_status", None)
-        missing, extra = [i for i in ids if i not in tr], [i for i in tr if i not in ids]
-        if missing or extra:
-            R2.fail("i18n/%s%s.json: missing %s, unknown %s" % (folder and folder + "/", code, missing, extra))
-        for k in keys:
-            allowed = set(SLOT.findall(k["en"])) | set(SLOT.findall(k["ar"]))
-            needed = set(SLOT.findall(k["en"])) & set(SLOT.findall(k["ar"])) if k["ar"] else set(SLOT.findall(k["en"]))
-            got = set(SLOT.findall(tr[k["id"]]))
-            if not got <= allowed or not needed <= got:
-                R2.fail("i18n/%s.json %s: slots %s (allowed %s, needed %s)" % (code, k["id"], got, allowed, needed))
-        out["tr"][code] = tr
-    print("i18n %s: %d keys x %d languages checked" % (keys_file, len(ids), len(LANG_CODES)))
-    return out
+            R1.fail("excerpt in design-3-meanings.md is not part of a cited ayah: %s" % e)
+    print("excerpts: %d in design-3-meanings.md, each found word for word in a cited ayah" % len(excerpts))
 
 
 def write_doc_block(verses, names):
-    path = os.path.join(DESIGN, "design-2-meanings.md")
-    text = io.open(path, encoding="utf-8").read()
+    text = io.open(DOC, encoding="utf-8").read()
     rows = ["| Reference | Ayah — copied whole from the Tanzil file by `tools/build_round3.py` |", "| --- | --- |"]
     for ref in sorted(verses, key=lambda r: tuple(int(x) for x in r.split(":"))):
         s = int(ref.split(":")[0])
         rows.append("| %s %s (%s) | %s |" % (names[s]["en"], ref, names[s]["ar"], verses[ref]))
-    text = R2.replace_block(text, "<!--AYAHS-BEGIN-->", "<!--AYAHS-END-->", "\n".join(rows) + "\n")
-    io.open(path, "w", encoding="utf-8", newline="\n").write(text)
-    print("written design-2-meanings.md (ayah table)")
+    text = R1.replace_block(text, "<!--AYAHS-BEGIN-->", "<!--AYAHS-END-->", "\n".join(rows) + "\n")
+    io.open(DOC, "w", encoding="utf-8", newline="\n").write(text)
+    print("written design-3-meanings.md (ayah table)")
 
 
 def main():
     sys.stdout.reconfigure(encoding="utf-8")
-    lowest, failures = P.check()
+    lowest, failures = P3.check()
     if failures:
-        R2.fail("contrast: " + "; ".join(failures))
-    print("contrast: %d palettes pass" % len(lowest))
-    R2.check_sources({rel: R2.SHA256[rel] for rel in SOURCES})
-    data = R2.build_data(PAGES)
-    import xml.etree.ElementTree as ET
-    root = ET.parse(os.path.join(R2.ASSETS, "tanzil/quran-data.xml")).getroot()
+        R1.fail("colours: " + "; ".join(failures))
+    print("colours: %d palettes pass" % len(lowest))
+    R1.check_sources({rel: R1.SHA256[rel] for rel in B2.SOURCES})
+    data = R1.build_data(PAGES)
+    root = ET.parse(os.path.join(R1.ASSETS, "tanzil/quran-data.xml")).getroot()
     names = {int(s.get("index")): {"ar": s.get("name"), "en": s.get("tname")} for s in root.iter("sura")}
-    verses = build_verses()
+    B2.VERSES = VERSES
+    verses = B2.build_verses()
+    check_doc_excerpts(verses)
     data["verses"] = verses
     for ref in verses:
-        s = ref.split(":")[0]
-        data["names"][s] = names[int(s)]
-    # The index (فهرس) and the surah details, from Tanzil's metadata: the first page of every surah and juz is the
-    # page whose first ayah is the last one not after it (page starts were verified against the layout: 0 differences).
+        data["names"][ref.split(":")[0]] = names[int(ref.split(":")[0])]
     page_starts = [(int(x.get("index")), (int(x.get("sura")), int(x.get("aya")))) for x in root.iter("page")]
 
     def page_of(key):
@@ -151,33 +88,36 @@ def main():
 
     data["surahs"] = [{"n": int(s.get("index")), "ar": s.get("name"), "en": s.get("tname"),
                        "type": {"Meccan": "makki", "Medinan": "madani"}[s.get("type")],
-                       "ayas": int(s.get("ayas")), "page": page_of((int(s.get("index")), 1))}
-                      for s in root.iter("sura")]
+                       "ayas": int(s.get("ayas")), "page": page_of((int(s.get("index")), 1))} for s in root.iter("sura")]
     data["juzs"] = [{"n": int(j.get("index")), "s": int(j.get("sura")), "a": int(j.get("aya")),
                      "page": page_of((int(j.get("sura")), int(j.get("aya"))))} for j in root.find("juzs")]
     if len(data["surahs"]) != 114 or sum(s["ayas"] for s in data["surahs"]) != 6236 or len(data["juzs"]) != 30:
-        R2.fail("metadata counts")
-    print("index: 114 surahs (6,236 ayahs), 30 juz")
-    data["directions"] = {k: {"name": d["name"], "min": d["min"],
+        R1.fail("metadata counts")
+    data["directions"] = {k: {"name": d["name"], "min": d["min"], "light": d["light"], "dark": d["dark"],
                               "swatch": {t: [d[t]["primary"], d[t]["dot"], d[t]["second"], d[t]["bg"]]
                                          for t in ("light", "dark")}}
-                          for k, d in P.DIRECTIONS.items()}
-    R2.embed(PAGE, "ROUND3", data, FONTS)
+                          for k, d in P3.DIRECTIONS.items()}
+    R1.embed(PAGE, "ROUND3", data, B2.FONTS)
     html = open(PAGE, encoding="utf-8", newline="").read()
-    html = R2.replace_block(html, "/*ROUND3-THEMES-BEGIN*/", "/*ROUND3-THEMES-END*/", P.css())
-    html = R2.replace_block(html, "<!--ROUND3-CVD-BEGIN-->", "<!--ROUND3-CVD-END-->", P.svg_filters())
-    html = R2.replace_block(html, "/*ROUND3-I18N-BEGIN*/", "/*ROUND3-I18N-END*/",
-                            "window.ROUND3_I18N = " + json.dumps(build_i18n(), ensure_ascii=False) + ";\n")
+    html = R1.replace_block(html, "/*ROUND3-THEMES-BEGIN*/", "/*ROUND3-THEMES-END*/", P3.css())
+    html = R1.replace_block(html, "<!--ROUND3-CVD-BEGIN-->", "<!--ROUND3-CVD-END-->", P2.svg_filters())
+    i18n, extra = B2.build_i18n("round2"), B2.build_i18n("round3")   # design 2's texts, then design 3's own
+    if set(i18n["en2id"].values()) & set(extra["en2id"].values()):
+        R1.fail("i18n: an id of i18n/round3 is already in i18n/round2")
+    i18n["en2id"].update(extra["en2id"])
+    for code in i18n["tr"]:
+        i18n["tr"][code].update(extra["tr"][code])
+    html = R1.replace_block(html, "/*ROUND3-I18N-BEGIN*/", "/*ROUND3-I18N-END*/",
+                            "window.ROUND3_I18N = " + json.dumps(i18n, ensure_ascii=False) + ";\n")
     open(PAGE, "w", encoding="utf-8", newline="\n").write(html)
-    tokens = {"design": "2 — early Islam", "generated_by": "docs/design/prototypes/tools/build_round3.py",
-              "meanings": "docs/design/design-2-meanings.md", "roles": P.__doc__.split("Roles")[1].strip(),
+    tokens = {"design": "3 — the first era (round 3)", "generated_by": "docs/design/prototypes/tools/build_round3.py",
+              "meanings": "docs/design/design-3-meanings.md",
               "directions": {k: {"name": d["name"], "minimum_contrast": d["min"], "light": d["light"],
-                                 "dark": d["dark"]} for k, d in P.DIRECTIONS.items()}}
-    with io.open(os.path.join(DESIGN, "tokens-design-2.json"), "w", encoding="utf-8", newline="\n") as f:
+                                 "dark": d["dark"]} for k, d in P3.DIRECTIONS.items()}}
+    with io.open(os.path.join(DESIGN, "tokens-design-3.json"), "w", encoding="utf-8", newline="\n") as f:
         json.dump(tokens, f, ensure_ascii=False, indent=2)
         f.write("\n")
-    print("written tokens-design-2.json")
-    check_doc_excerpts(verses)
+    print("written tokens-design-3.json")
     write_doc_block(verses, names)
 
 

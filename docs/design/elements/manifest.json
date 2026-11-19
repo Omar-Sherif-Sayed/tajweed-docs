@@ -1,0 +1,446 @@
+[
+ {
+  "file": "design-1/icons/book.svg",
+  "bytes": 297
+ },
+ {
+  "file": "design-1/icons/head.svg",
+  "bytes": 287
+ },
+ {
+  "file": "design-1/icons/wave.svg",
+  "bytes": 234
+ },
+ {
+  "file": "design-1/icons/doc.svg",
+  "bytes": 247
+ },
+ {
+  "file": "design-1/icons/radio.svg",
+  "bytes": 290
+ },
+ {
+  "file": "design-1/icons/clock.svg",
+  "bytes": 243
+ },
+ {
+  "file": "design-1/icons/compass.svg",
+  "bytes": 251
+ },
+ {
+  "file": "design-1/icons/count.svg",
+  "bytes": 290
+ },
+ {
+  "file": "design-1/icons/quote.svg",
+  "bytes": 244
+ },
+ {
+  "file": "design-1/icons/books.svg",
+  "bytes": 256
+ },
+ {
+  "file": "design-1/icons/list.svg",
+  "bytes": 314
+ },
+ {
+  "file": "design-1/icons/search.svg",
+  "bytes": 241
+ },
+ {
+  "file": "design-1/icons/mark.svg",
+  "bytes": 219
+ },
+ {
+  "file": "design-1/icons/home.svg",
+  "bytes": 224
+ },
+ {
+  "file": "design-1/icons/more.svg",
+  "bytes": 282
+ },
+ {
+  "file": "design-1/icons/sun.svg",
+  "bytes": 333
+ },
+ {
+  "file": "design-1/icons/moon.svg",
+  "bytes": 241
+ },
+ {
+  "file": "design-1/icons/next.svg",
+  "bytes": 208
+ },
+ {
+  "file": "design-1/icons/prev.svg",
+  "bytes": 209
+ },
+ {
+  "file": "design-1/icons/globe.svg",
+  "bytes": 345
+ },
+ {
+  "file": "design-1/icons/down.svg",
+  "bytes": 208
+ },
+ {
+  "file": "design-1/icons/play.svg",
+  "bytes": 143
+ },
+ {
+  "file": "design-1/icons/pause.svg",
+  "bytes": 163
+ },
+ {
+  "file": "design-1/icons/skipn.svg",
+  "bytes": 154
+ },
+ {
+  "file": "design-1/icons/skipp.svg",
+  "bytes": 155
+ },
+ {
+  "file": "design-1/icons/repeat.svg",
+  "bytes": 261
+ },
+ {
+  "file": "design-1/icons/sync.svg",
+  "bytes": 281
+ },
+ {
+  "file": "design-1/logo.svg",
+  "bytes": 452
+ },
+ {
+  "file": "design-1/icons/lv-prophets.svg",
+  "bytes": 372
+ },
+ {
+  "file": "design-1/icons/lv-companions.svg",
+  "bytes": 336
+ },
+ {
+  "file": "design-1/icons/lv-caliphs.svg",
+  "bytes": 273
+ },
+ {
+  "file": "design-2/icons/home.svg",
+  "bytes": 406
+ },
+ {
+  "file": "design-2/icons/book.svg",
+  "bytes": 341
+ },
+ {
+  "file": "design-2/icons/ear.svg",
+  "bytes": 346
+ },
+ {
+  "file": "design-2/icons/madd.svg",
+  "bytes": 245
+ },
+ {
+  "file": "design-2/icons/shadow.svg",
+  "bytes": 343
+ },
+ {
+  "file": "design-2/icons/kaaba.svg",
+  "bytes": 272
+ },
+ {
+  "file": "design-2/icons/hand.svg",
+  "bytes": 318
+ },
+ {
+  "file": "design-2/icons/sheet.svg",
+  "bytes": 299
+ },
+ {
+  "file": "design-2/icons/tafsir.svg",
+  "bytes": 313
+ },
+ {
+  "file": "design-2/icons/qalam.svg",
+  "bytes": 292
+ },
+ {
+  "file": "design-2/icons/chain.svg",
+  "bytes": 316
+ },
+ {
+  "file": "design-2/icons/radio.svg",
+  "bytes": 290
+ },
+ {
+  "file": "design-2/icons/search.svg",
+  "bytes": 241
+ },
+ {
+  "file": "design-2/icons/mark.svg",
+  "bytes": 219
+ },
+ {
+  "file": "design-2/icons/more.svg",
+  "bytes": 282
+ },
+ {
+  "file": "design-2/icons/sun.svg",
+  "bytes": 333
+ },
+ {
+  "file": "design-2/icons/moon.svg",
+  "bytes": 241
+ },
+ {
+  "file": "design-2/icons/next.svg",
+  "bytes": 208
+ },
+ {
+  "file": "design-2/icons/prev.svg",
+  "bytes": 209
+ },
+ {
+  "file": "design-2/icons/globe.svg",
+  "bytes": 345
+ },
+ {
+  "file": "design-2/icons/down.svg",
+  "bytes": 208
+ },
+ {
+  "file": "design-2/icons/pin.svg",
+  "bytes": 296
+ },
+ {
+  "file": "design-2/icons/dots.svg",
+  "bytes": 366
+ },
+ {
+  "file": "design-2/icons/lv-prophets.svg",
+  "bytes": 372
+ },
+ {
+  "file": "design-2/icons/lv-companions.svg",
+  "bytes": 336
+ },
+ {
+  "file": "design-2/icons/lv-caliphs.svg",
+  "bytes": 273
+ },
+ {
+  "file": "design-2/logo.svg",
+  "bytes": 2478
+ },
+ {
+  "file": "design-2/prayer-dial.svg",
+  "bytes": 3625
+ },
+ {
+  "file": "design-2/colonnade.svg",
+  "bytes": 8539
+ },
+ {
+  "file": "design-3/icons/home.svg",
+  "bytes": 406
+ },
+ {
+  "file": "design-3/icons/book.svg",
+  "bytes": 341
+ },
+ {
+  "file": "design-3/icons/ear.svg",
+  "bytes": 346
+ },
+ {
+  "file": "design-3/icons/madd.svg",
+  "bytes": 245
+ },
+ {
+  "file": "design-3/icons/shadow.svg",
+  "bytes": 343
+ },
+ {
+  "file": "design-3/icons/kaaba.svg",
+  "bytes": 272
+ },
+ {
+  "file": "design-3/icons/hand.svg",
+  "bytes": 318
+ },
+ {
+  "file": "design-3/icons/sheet.svg",
+  "bytes": 299
+ },
+ {
+  "file": "design-3/icons/tafsir.svg",
+  "bytes": 313
+ },
+ {
+  "file": "design-3/icons/qalam.svg",
+  "bytes": 292
+ },
+ {
+  "file": "design-3/icons/chain.svg",
+  "bytes": 316
+ },
+ {
+  "file": "design-3/icons/radio.svg",
+  "bytes": 290
+ },
+ {
+  "file": "design-3/icons/search.svg",
+  "bytes": 241
+ },
+ {
+  "file": "design-3/icons/mark.svg",
+  "bytes": 219
+ },
+ {
+  "file": "design-3/icons/more.svg",
+  "bytes": 282
+ },
+ {
+  "file": "design-3/icons/sun.svg",
+  "bytes": 333
+ },
+ {
+  "file": "design-3/icons/moon.svg",
+  "bytes": 241
+ },
+ {
+  "file": "design-3/icons/next.svg",
+  "bytes": 208
+ },
+ {
+  "file": "design-3/icons/prev.svg",
+  "bytes": 209
+ },
+ {
+  "file": "design-3/icons/globe.svg",
+  "bytes": 345
+ },
+ {
+  "file": "design-3/icons/down.svg",
+  "bytes": 208
+ },
+ {
+  "file": "design-3/icons/pin.svg",
+  "bytes": 296
+ },
+ {
+  "file": "design-3/icons/dots.svg",
+  "bytes": 366
+ },
+ {
+  "file": "design-3/icons/lv-prophets.svg",
+  "bytes": 372
+ },
+ {
+  "file": "design-3/icons/lv-companions.svg",
+  "bytes": 336
+ },
+ {
+  "file": "design-3/icons/lv-caliphs.svg",
+  "bytes": 273
+ },
+ {
+  "file": "design-3/logo.svg",
+  "bytes": 864
+ },
+ {
+  "file": "design-3/landscapes/suhuf-day.svg",
+  "bytes": 878
+ },
+ {
+  "file": "design-3/landscapes/suhuf-night.svg",
+  "bytes": 1630
+ },
+ {
+  "file": "design-3/landscapes/hira-day.svg",
+  "bytes": 444
+ },
+ {
+  "file": "design-3/landscapes/hira-night.svg",
+  "bytes": 1196
+ },
+ {
+  "file": "design-3/landscapes/ghar-day.svg",
+  "bytes": 454
+ },
+ {
+  "file": "design-3/landscapes/ghar-night.svg",
+  "bytes": 1206
+ },
+ {
+  "file": "design-3/landscapes/taybah-day.svg",
+  "bytes": 5092
+ },
+ {
+  "file": "design-3/landscapes/taybah-night.svg",
+  "bytes": 5844
+ },
+ {
+  "file": "design-3/landscapes/uhud-day.svg",
+  "bytes": 456
+ },
+ {
+  "file": "design-3/landscapes/uhud-night.svg",
+  "bytes": 1208
+ },
+ {
+  "file": "design-3/landscapes/ibil-day.svg",
+  "bytes": 774
+ },
+ {
+  "file": "design-3/landscapes/ibil-night.svg",
+  "bytes": 1526
+ },
+ {
+  "file": "design-3/landscapes/fajr-day.svg",
+  "bytes": 603
+ },
+ {
+  "file": "design-3/landscapes/fajr-night.svg",
+  "bytes": 2107
+ },
+ {
+  "file": "design-3/landscapes/duha-day.svg",
+  "bytes": 1124
+ },
+ {
+  "file": "design-3/landscapes/duha-night.svg",
+  "bytes": 1125
+ },
+ {
+  "file": "design-3/landscapes/ghaith-day.svg",
+  "bytes": 2335
+ },
+ {
+  "file": "design-3/landscapes/ghaith-night.svg",
+  "bytes": 3087
+ },
+ {
+  "file": "design-3/landscapes/jannatan-day.svg",
+  "bytes": 2141
+ },
+ {
+  "file": "design-3/landscapes/jannatan-night.svg",
+  "bytes": 2893
+ },
+ {
+  "file": "design-3/landscapes/nur-day.svg",
+  "bytes": 707
+ },
+ {
+  "file": "design-3/landscapes/nur-night.svg",
+  "bytes": 707
+ },
+ {
+  "file": "design-3/landscapes/mountains-day.svg",
+  "bytes": 422
+ },
+ {
+  "file": "design-3/landscapes/mountains-night.svg",
+  "bytes": 422
+ }
+]

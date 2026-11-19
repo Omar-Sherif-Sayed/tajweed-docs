@@ -1,9 +1,9 @@
-"""Collect every interface text of round-3.html into i18n/keys.json: an id, the English text and the Arabic text.
+"""Collect every interface text of round-2.html into i18n/round2/keys.json: an id, the English text and the Arabic text.
 
 Sources: the data-en / data-ar attributes of the page, every { ar: "…", en: "…" } pair in its script, the names of
 the colour directions (design2_palettes.py), and the templates below (texts that hold numbers or names). Times are not
 collected: they are written by each language's own clock format. The other languages translate this file
-(i18n/<code>.json, same ids); build_round3.py checks them.
+(i18n/round2/<code>.json, same ids); build_round2.py checks them.
 
 Usage: python -I extract_i18n_keys.py
 """
@@ -17,8 +17,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import design2_palettes as P  # noqa: E402
 
-PAGE = os.path.join(HERE, "..", "round-3.html")
-OUT = os.path.join(HERE, "..", "i18n", "keys.json")
+PAGE = os.path.join(HERE, "..", "round-2.html")
+OUT = os.path.join(HERE, "..", "i18n", "round2", "keys.json")
 
 TEMPLATES = [  # id, English, Arabic — {name} slots are filled by the page
     ("page_n", "Page {n}", "الصفحة {n}"),
@@ -67,7 +67,7 @@ def main():
         add(kid, en, ar)
     for m in re.finditer(r'data-ar="([^"]*)" data-en="([^"]*)"', html):
         add("m%02d" % (len(keys) + 1), m.group(2), m.group(1))
-    script = html.split("/*ROUND3-DATA-END*/")[1]
+    script = html.split("/*ROUND2-DATA-END*/")[1]
     for m in re.finditer(r'ar: "([^"]*)", en: "([^"]*)"', script):
         en = m.group(2)
         if re.fullmatch(r"\d{1,2}:\d{2} [AP]M", en):
@@ -79,7 +79,7 @@ def main():
     with io.open(OUT, "w", encoding="utf-8", newline="\n") as f:
         json.dump(keys, f, ensure_ascii=False, indent=1)
         f.write("\n")
-    print("%d keys -> i18n/keys.json" % len(keys))
+    print("%d keys -> i18n/round2/keys.json" % len(keys))
     for k in keys:
         print("%-16s %s" % (k["id"], k["en"]))
 

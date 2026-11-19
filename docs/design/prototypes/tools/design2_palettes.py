@@ -1,6 +1,6 @@
 """The colour directions of design 2 ("early Islam"), with their contrast check.
 
-One place for the values: build_round3.py writes them into round-3.html (CSS) and docs/design/tokens-design-2.json.
+One place for the values: build_round2.py writes them into round-2.html (CSS) and docs/design/tokens-design-2.json.
 Why each colour was chosen: docs/design/design-2-meanings.md.
 
 Roles (the same in every direction):

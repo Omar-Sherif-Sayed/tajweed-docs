@@ -1,0 +1,1 @@
+- [Tajweed working agreement](tajweed-working-agreement.md) — plan-ask-code, accuracy rules, commits as him, memory copy in docs/memory with every commit, design rules

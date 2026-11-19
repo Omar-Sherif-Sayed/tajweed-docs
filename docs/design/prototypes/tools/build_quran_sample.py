@@ -12,7 +12,7 @@ import os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SOURCE = os.path.join(HERE, "..", "assets", "tanzil", "quran-uthmani.txt")
-TARGET_PAGES = ["colour-directions.html"]
+TARGET_PAGES = ["round-1.html"]   # design 1: the reading view by surah
 
 # SHA-256 of the file downloaded from tanzil.net on 2026-11-17 (see assets/tanzil/README.md).
 EXPECTED_SHA256 = "6933e133dd56db778c801bf738848454e43648105a151e8d84d86a7cae39ec5f"

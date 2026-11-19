@@ -1,0 +1,142 @@
+[
+ {
+  "id": "lv_group",
+  "en": "Lives",
+  "ar": "السِّيَر"
+ },
+ {
+  "id": "lv_sub",
+  "en": "Prophets · Companions · Caliphs",
+  "ar": "الأنبياء · الصحابة · الخلفاء"
+ },
+ {
+  "id": "lv_prophets",
+  "en": "Prophets",
+  "ar": "الأنبياء"
+ },
+ {
+  "id": "lv_companions",
+  "en": "Companions",
+  "ar": "الصحابة"
+ },
+ {
+  "id": "lv_caliphs",
+  "en": "Rightly Guided Caliphs",
+  "ar": "الخلفاء الراشدون"
+ },
+ {
+  "id": "lv_p_note",
+  "en": "The 25 prophets named in the Quran. The full list and its order come from the source book.",
+  "ar": "الأنبياء الخمسة والعشرون المذكورون في القرآن. القائمة كاملة وترتيبها من كتاب المصدر."
+ },
+ {
+  "id": "lv_seerah",
+  "en": "The Seerah — the last and longest story",
+  "ar": "السيرة النبوية — آخر القصص وأطولها"
+ },
+ {
+  "id": "lv_more",
+  "en": "… and the others, from the source book",
+  "ar": "… وسائرهم من كتاب المصدر"
+ },
+ {
+  "id": "lv_g_ten",
+  "en": "The ten promised Paradise",
+  "ar": "العشرة المبشَّرون بالجنة"
+ },
+ {
+  "id": "lv_g_mothers",
+  "en": "The Mothers of the Believers",
+  "ar": "أمهات المؤمنين"
+ },
+ {
+  "id": "lv_g_badr",
+  "en": "The people of Badr",
+  "ar": "أهل بدر"
+ },
+ {
+  "id": "lv_c_note",
+  "en": "Each life verbatim from the books of the Companions, with book, volume and page.",
+  "ar": "كل سيرة بنصها من كتب الصحابة، بالكتاب والجزء والصفحة."
+ },
+ {
+  "id": "lv_c_src",
+  "en": "al-Isabah · Usd al-Ghabah · al-Isti'ab · Siyar A'lam al-Nubala'",
+  "ar": "الإصابة · أسد الغابة · الاستيعاب · سير أعلام النبلاء"
+ },
+ {
+  "id": "lv_k_note",
+  "en": "Their caliphates in order. Dates and events verbatim from the history books.",
+  "ar": "خلافاتهم بترتيبها. التواريخ والأحداث بنصها من كتب التاريخ."
+ },
+ {
+  "id": "lv_k_src",
+  "en": "Tarikh al-Khulafa' (al-Suyuti) · al-Bidayah wa al-Nihayah (Ibn Kathir)",
+  "ar": "تاريخ الخلفاء للسيوطي · البداية والنهاية لابن كثير"
+ },
+ {
+  "id": "lv_k_years",
+  "en": "Beginning · events by year · end — from the source",
+  "ar": "البداية · الأحداث سنة بسنة · النهاية — من المصدر"
+ },
+ {
+  "id": "lv_k_life",
+  "en": "His life",
+  "ar": "سيرته"
+ },
+ {
+  "id": "lv_entry_sub",
+  "en": "Prophets · sample entry",
+  "ar": "الأنبياء · مثال لصفحة"
+ },
+ {
+  "id": "lv_from_quran",
+  "en": "From the Quran",
+  "ar": "من القرآن"
+ },
+ {
+  "id": "lv_ayah_note",
+  "en": "Sample for the design. The ayahs of each prophet come from a named index, not chosen by us.",
+  "ar": "مثال للتصميم. آيات كل نبي من فهرس مسمّى، لا نختارها نحن."
+ },
+ {
+  "id": "lv_from_sunnah",
+  "en": "From the Sunnah",
+  "ar": "من السنة"
+ },
+ {
+  "id": "lv_hadith_ph",
+  "en": "An authentic hadith — its text, number and grade exactly as in its source.",
+  "ar": "حديث صحيح — نصه ورقمه ودرجته كما في مصدره."
+ },
+ {
+  "id": "lv_story",
+  "en": "His story",
+  "ar": "قصته"
+ },
+ {
+  "id": "lv_story_ph",
+  "en": "The story verbatim from Qisas al-Anbiya' by Ibn Kathir — volume · page.",
+  "ar": "القصة بنصها من «قصص الأنبياء» لابن كثير — الجزء · الصفحة."
+ },
+ {
+  "id": "lv_report",
+  "en": "Report a mistake",
+  "ar": "أبلغ عن خطأ"
+ },
+ {
+  "id": "lv_nopic",
+  "en": "No picture of any prophet or Companion — places only.",
+  "ar": "لا صورة لنبي ولا لصحابي — الأماكن فقط."
+ },
+ {
+  "id": "lv_ref",
+  "en": "{name} {s}:{a}",
+  "ar": "سورة {name} · {a}"
+ },
+ {
+  "id": "lv_search",
+  "en": "Search a name",
+  "ar": "ابحث باسم"
+ }
+]

@@ -9,7 +9,8 @@ Rule: no loose files — every document is in `docs/<kind>/` and listed here.
 | [`sessions/`](sessions/) | The session memory: one record per working session (the author's messages, what was done, decisions, sources) and a conversation copy beside it. | [2026-11-16 planning — record](sessions/2026-11-16-planning.md) · [conversation copy](sessions/2026-11-16-planning-conversation.md) |
 | `data-sources/` | The register of every content source: owner, URL, licence, checksum, verification date. | task P0-12 |
 | `permissions/` | Permission letters (Arabic / English), the answers, and the status table. | task P0-13 |
-| [`design/`](design/) | [`README.md`](design/README.md), `tokens.json`, HTML prototypes (`prototypes/`), later screenshots and the link to the Figma file. | round 1: [colour directions](design/prototypes/colour-directions.html), waiting for the author's choice |
+| [`design/`](design/) | [`README.md`](design/README.md), `tokens.json`, HTML prototypes (`prototypes/`), later screenshots and the link to the Figma file. | three designs — [design 1](design/prototypes/round-1.html), [design 2](design/prototypes/round-2.html), [design 3](design/prototypes/round-3.html); elements in [`design/elements/`](design/elements/); waiting for the author's choice |
+| [`memory/`](memory/) | A copy of the agent's memory (the author's rule, 2026-11-20): refreshed by `sync_memory.py` and committed with every commit; private facts removed. | [README](memory/README.md) |
 | `deployment/` | Step-by-step guides: hosting, domain, Google Play, App Store. | release track |
 | `quality/` | Checklists used across the applications (acceptance runs, iPhone test sessions on the Mac). | from phase 1 |
 

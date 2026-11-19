@@ -1,11 +1,11 @@
 # Design 3 — "the first era": why every colour, landscape and mark was chosen
 
-The author asked on 2026-11-19 for round 4: a new design for the same application, taken from the beginning of
+The author asked on 2026-11-19 for a fourth round (design 3, now `round-3.html`): a new design for the same application, taken from the beginning of
 Islam — the time of the Prophet ﷺ, the Companions and the Rightly Guided Caliphs, "the best eras of Islam" — much
-better than round 3, with many colour directions drawn from reflection on the meanings and tafsirs of the Quran, each
+better than design 2, with many colour directions drawn from reflection on the meanings and tafsirs of the Quran, each
 with a day and a night theme; only the last direction is for low vision and colour blindness.
 
-Prototype: [`prototypes/round-4.html`](prototypes/round-4.html). Colours: [`tokens-design-3.json`](tokens-design-3.json),
+Prototype: [`prototypes/round-3.html`](prototypes/round-3.html). Colours: [`tokens-design-3.json`](tokens-design-3.json),
 generated from `prototypes/tools/design3_palettes.py`. Design 2 and its reasons stay in
 [`design-2-meanings.md`](design-2-meanings.md).
 
@@ -31,7 +31,7 @@ Status: a design proposal written by the agent, with no scholar's review (§6.6)
 
 ## 2. What is new in design 3
 
-| | Design 2 (round 3) | Design 3 (round 4) |
+| | Design 2 (round 2) | Design 3 (round 3) |
 | --- | --- | --- |
 | Idea | the materials of the first manuscripts | the **places and moments** of the first era, and what the Quran asks us to look at |
 | Each direction | a palette | a palette **and its own landscape**, drawn in that palette, on the home screen, on the web reader and in miniature on the first-launch cards |
@@ -190,7 +190,7 @@ shape as on the phone, so it is never stretched or cut on a wide screen.
 ## 6. Icons, languages, ideas left out
 
 - The section icons are those of design 2, each from the first era (`design-2-meanings.md` §5).
-- All 22 languages work: the interface texts of round 3 and the new texts of round 4 (the direction names and the
+- All 22 languages work: the interface texts of design 2 and the new texts of design 3 (the direction names and the
   design notes), translated by the agent and corrected from users' reports on GitHub (`LANG-02`).
 - Left out: Badr and the other battles (not a theme for colours); the cave of Thawr by name (the Quran says «الغار»;
   the name comes from the books of Seerah — ☐ cited only with its source); the Kaaba and the two mosques as buildings
@@ -199,7 +199,7 @@ shape as on the phone, so it is never stretched or cut on a wide screen.
 ## 7. The ayahs cited (generated — do not edit by hand)
 
 <!--AYAHS-BEGIN-->
-| Reference | Ayah — copied whole from the Tanzil file by `tools/build_round4.py` |
+| Reference | Ayah — copied whole from the Tanzil file by `tools/build_round3.py` |
 | --- | --- |
 | At-Tawba 9:40 (التوبة) | إِلَّا تَنصُرُوهُ فَقَدْ نَصَرَهُ ٱللَّهُ إِذْ أَخْرَجَهُ ٱلَّذِينَ كَفَرُوا۟ ثَانِىَ ٱثْنَيْنِ إِذْ هُمَا فِى ٱلْغَارِ إِذْ يَقُولُ لِصَـٰحِبِهِۦ لَا تَحْزَنْ إِنَّ ٱللَّهَ مَعَنَا ۖ فَأَنزَلَ ٱللَّهُ سَكِينَتَهُۥ عَلَيْهِ وَأَيَّدَهُۥ بِجُنُودٍ لَّمْ تَرَوْهَا وَجَعَلَ كَلِمَةَ ٱلَّذِينَ كَفَرُوا۟ ٱلسُّفْلَىٰ ۗ وَكَلِمَةُ ٱللَّهِ هِىَ ٱلْعُلْيَا ۗ وَٱللَّهُ عَزِيزٌ حَكِيمٌ |
 | Al-Hajj 22:63 (الحج) | أَلَمْ تَرَ أَنَّ ٱللَّهَ أَنزَلَ مِنَ ٱلسَّمَآءِ مَآءً فَتُصْبِحُ ٱلْأَرْضُ مُخْضَرَّةً ۗ إِنَّ ٱللَّهَ لَطِيفٌ خَبِيرٌ |

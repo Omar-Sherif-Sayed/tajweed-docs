@@ -1,12 +1,12 @@
-"""Write the interface texts that round 4 added (direction names and design notes) for the 20 languages after Arabic
+"""Write the interface texts that design 3 (round 3) added (direction names and design notes) for the 20 languages after Arabic
 and English, and the new wording of the translation note (the author, 2026-11-19: no native readers before release;
 mistakes are reported by users on GitHub and corrected).
 
-Writes i18n/keys-round4.json (id, English, Arabic — the English and Arabic are read from round-4.html, so they cannot
-drift), i18n/round4/<code>.json, and replaces the "draft" text in i18n/keys.json and i18n/<code>.json.
-build_round4.py checks every file (every key present, nothing unknown). Translations by the agent.
+Writes i18n/round3/keys.json (id, English, Arabic — the English and Arabic are read from round-3.html, so they cannot
+drift), i18n/round3/<code>.json, and replaces the "draft" text in i18n/round2/keys.json and i18n/round2/<code>.json.
+build_round3.py checks every file (every key present, nothing unknown). Translations by the agent.
 
-Usage: python -I write_round4_i18n.py
+Usage: python -I write_round3_i18n.py
 """
 import io
 import json
@@ -16,14 +16,14 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 I18N = os.path.join(HERE, "..", "i18n")
-PAGE = os.path.join(HERE, "..", "round-4.html")
+PAGE = os.path.join(HERE, "..", "round-3.html")
 sys.path.insert(0, HERE)
 import design3_palettes as P3  # noqa: E402
 
 STATUS = "by the agent, 2026-11-19 — corrected from users' reports (GitHub issues, LANG-02)"
 DRAFT_EN = "Interface translation by the project. Found a mistake? Report it on GitHub."
 
-# English texts of round 4 in the order of the lists below; the Arabic comes from the page.
+# English texts of design 3 in the order of the lists below; the Arabic comes from the page.
 NOTES = [
     ("r4_head", "Arabic headings"),
     ("r4_suhuf", "The colours of what the Quran was first gathered from: palm stalks and thin white stones, with dark ink. The calmest direction for long reading."),
@@ -416,35 +416,35 @@ T = {
 def main():
     sys.stdout.reconfigure(encoding="utf-8")
     html = io.open(PAGE, encoding="utf-8").read()
-    script = html.split("/*ROUND4-DATA-END*/")[1]
+    script = html.split("/*ROUND3-DATA-END*/")[1]
     ar_of = {m.group(2): m.group(1) for m in re.finditer(r'ar: "([^"]*)", en: "([^"]*)"', script)}
     keys = []
     for kid, en in NOTES:
         if en not in ar_of:
-            raise SystemExit("not in round-4.html: " + en)
+            raise SystemExit("not in round-3.html: " + en)
         keys.append({"id": kid, "en": en, "ar": ar_of[en]})
     for d in DIRS:
         keys.append({"id": "dir_" + d, "en": P3.DIRECTIONS[d]["name"]["en"], "ar": P3.DIRECTIONS[d]["name"]["ar"]})
-    with io.open(os.path.join(I18N, "keys-round4.json"), "w", encoding="utf-8", newline="\n") as f:
+    with io.open(os.path.join(I18N, "round3", "keys.json"), "w", encoding="utf-8", newline="\n") as f:
         json.dump(keys, f, ensure_ascii=False, indent=1)
         f.write("\n")
-    os.makedirs(os.path.join(I18N, "round4"), exist_ok=True)
+    os.makedirs(os.path.join(I18N, "round3"), exist_ok=True)
     for code, texts in T.items():
         if len(texts) != 1 + len(keys):
             raise SystemExit("%s: %d texts, %d expected" % (code, len(texts), 1 + len(keys)))
         out = {"_status": STATUS}
         out.update({k["id"]: t for k, t in zip(keys, texts[1:])})
-        with io.open(os.path.join(I18N, "round4", code + ".json"), "w", encoding="utf-8", newline="\n") as f:
+        with io.open(os.path.join(I18N, "round3", code + ".json"), "w", encoding="utf-8", newline="\n") as f:
             json.dump(out, f, ensure_ascii=False, indent=1)
             f.write("\n")
-        base_path = os.path.join(I18N, code + ".json")
+        base_path = os.path.join(I18N, "round2", code + ".json")
         base = json.load(io.open(base_path, encoding="utf-8"))
         base["_status"] = STATUS
         base["draft"] = texts[0]
         with io.open(base_path, "w", encoding="utf-8", newline="\n") as f:
             json.dump(base, f, ensure_ascii=False, indent=1)
             f.write("\n")
-    kpath = os.path.join(I18N, "keys.json")
+    kpath = os.path.join(I18N, "round2", "keys.json")
     base_keys = json.load(io.open(kpath, encoding="utf-8"))
     for k in base_keys:
         if k["id"] == "draft":
@@ -452,7 +452,7 @@ def main():
     with io.open(kpath, "w", encoding="utf-8", newline="\n") as f:
         json.dump(base_keys, f, ensure_ascii=False, indent=1)
         f.write("\n")
-    print("%d round-4 keys x %d languages written; the translation note replaced" % (len(keys), len(T)))
+    print("%d round-3 keys x %d languages written; the translation note replaced" % (len(keys), len(T)))
 
 
 if __name__ == "__main__":

@@ -32,7 +32,8 @@ yet.
 | [`docs/plan/execution-plan.md`](docs/plan/execution-plan.md) | Every task in detail |
 | [`docs/README.md`](docs/README.md) | Index of all documents |
 | [`docs/sessions/`](docs/sessions/) | What happened in each working session |
-| [`docs/design/`](docs/design/) | The designs — start with `prototypes/colour-directions.html` |
+| [`docs/design/`](docs/design/) | The designs — three, one file each: `prototypes/round-1.html` (design 1), `round-2.html` (design 2), `round-3.html` (design 3); their elements as SVG in `elements/` and in Figma |
+| [`docs/memory/`](docs/memory/) | A copy of the agent's memory, updated with every commit |
 
 ## Planned features
 

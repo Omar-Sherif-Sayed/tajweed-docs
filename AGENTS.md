@@ -34,20 +34,21 @@ repository the task touches → (6) the last record in [`docs/sessions/`](docs/s
 
 | | Current state — **update this table at the end of every session** |
 | --- | --- |
-| Date | 2026-11-19 |
+| Date | 2026-11-20 |
 | Phase | **0 — Foundations** (§14) |
-| Figma | «Tajweed — designs»: https://www.figma.com/design/K5RXq2tO1sVE7RwlJ9dD1L — every design round as a live layer (§13). |
-| Exists | **Five public repositories on GitHub** (`main` branch), the same five folders on this machine. `tajweed-docs` (this one): parent `AGENTS.md`, `README.md`, `LICENSE` (CC BY 4.0), the detailed plan, the session record with a conversation copy, and the design in `docs/design/`: round 1 (colour directions), round 2 (first-launch screen, mushaf pages as printed, six Quran fonts, Sources screen) round 3 (design 2, "early Islam") and **round 4** (design 3, "the first era") with the verified source files and the scripts that check them. The four application repositories: `README.md`, `AGENTS.md`, `LICENSE` (MIT), `.gitignore` — no application code. |
+| Figma | «Tajweed — designs»: https://www.figma.com/design/K5RXq2tO1sVE7RwlJ9dD1L — one page per design with its logo, icons, drawings / landscapes (editable vectors) and colours; SVG copies in `docs/design/elements/` (§13). |
+| Exists | **Five public repositories on GitHub** (`main` branch), the same five folders on this machine. `tajweed-docs` (this one): parent `AGENTS.md`, `README.md`, `LICENSE` (CC BY 4.0), the detailed plan, the session record with a conversation copy, the copy of the agent's memory (`docs/memory/`), and the design in `docs/design/`: **one file per design — `prototypes/round-1.html` (design 1), `round-2.html` (design 2, "early Islam"), `round-3.html` (design 3, "the first era")** — each in all 22 languages and with the Lives screens; the interface texts in `prototypes/i18n/round1`, `round2`, `round3`, `lives`; the design elements as SVG in `elements/`; the meanings documents; the verified source files and the scripts that check them. The four application repositories: `README.md`, `AGENTS.md`, `LICENSE` (MIT), `.gitignore` — no application code. |
 | Does not exist | Any application code, the register of content sources, the remaining screens. |
-| Last task done | Round 4 (2026-11-19): **design 3, "the first era"** — `docs/design/prototypes/round-4.html`, twelve colour directions (eleven for ordinary sight, the last, Mountains, for low vision and colour blindness), each in day and night with its own landscape; the prayer times on the path of the sun; a new logo; all 22 languages; the reason for every colour and scene with its ayah or hadith in `docs/design/design-3-meanings.md` (§13). Also fixed: rounds 3 and 4 stopped drawing in the 21 languages other than Arabic (a surah name missing from the data). Then (same day, the author's review): the round-4 texts translated into the 20 languages; every cross shape removed from all designs (§8.10); no native readers — mistakes come from users' GitHub reports (§1). |
+| Last task done | 2026-11-19/20 (the author's review): **design 1 is one up-to-date file and round N = design N** (`round-1.html` … `round-3.html`; old names in §13); design 1 in all 22 languages; i18n in one folder per round; **the Lives screens (F20, F21, F22) in all three designs** — a group «السِّيَر» on the home screen, an index / groups / timeline screen and a sample entry, names only where beyond doubt, everything else a placeholder naming its source (§8.11); **Figma holds the design elements** (logos, icons, drawings, 24 landscapes, colours) as editable vectors, with the SVG files in `docs/design/elements/`; **the agent's memory is copied into `docs/memory/` with every commit** (§1). |
 | GitHub access from this machine | **Over SSH only** (the Windows certificate store blocks the HTTPS sign-in, §1). Key `~/.ssh/id_ed25519_tajweed` (no passphrase, fingerprint `SHA256:EPCRVeCpF+Jvsj40LKpu4Cta+mKF3ivLO8szlC2k/Po`), registered in the author's account as "Tajweed project - work laptop" (he confirmed it himself). Each of the five repositories uses it through its local `core.sshCommand`; remotes are `git@github.com:Omar-Sherif-Sayed/<name>.git`. A new clone on this machine needs the same two settings. Test: `ssh -i ~/.ssh/id_ed25519_tajweed -o IdentitiesOnly=yes -T git@github.com`. |
 | Folder name | `C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences` — renamed by the author on 2026-11-17. |
 | GitHub account | `Omar-Sherif-Sayed` — <https://github.com/Omar-Sherif-Sayed?tab=repositories>. Pushing is allowed for this product (R1); push at the end of every task. |
 | Do not forget | `P2-D1` — the default prayer-time method of every country, each with a named official source (the author, 2026-11-17: it may be done at any time, before phase 2 starts) · **F19** — the in-app section «لماذا هذا التصميم؟ / Why this design?»: the reason for every colour, icon and the logo (§8.10, `docs/design/design-2-meanings.md` or `design-3-meanings.md`, for the chosen design). |
-| **Next task** | `P0-11`: the author chooses one design — 1 (`round-2.html`), 2 (`round-3.html`) or 3 (`round-4.html`) — for web, Android and iPhone; then the remaining screens in the chosen design (§13), the Figma file, and the scaffolds `P0-06` … `P0-10`. |
+| **Next task** | `P0-11`: the author chooses one design — 1 (`round-1.html`), 2 (`round-2.html`) or 3 (`round-3.html`) — for web, Android and iPhone; then the remaining screens in the chosen design (§13), its elements in Figma, and the scaffolds `P0-06` … `P0-10`. |
 | Waiting for the author | His choice among designs 1, 2 and 3; his reading of the meanings documents (`design-2-meanings.md`, `design-3-meanings.md`); the reports of mistakes that users write on GitHub (issues), which he brings to the agent; R11 (the Seerah inside F20?) and R12 (which Companions first) — §18.2. |
 
-**At the end of every session:** update the table above, the statuses in §14.1, the change log §19; write or extend
+**At the end of every session:** update the table above, the statuses in §14.1, the change log §19; refresh the memory
+copy (`python -I docs/memory/sync_memory.py`, §1); write or extend
 the session record; commit as the author (§1). Details: `docs/plan/execution-plan.md` §1.
 
 ---
@@ -56,6 +57,13 @@ the session record; commit as the author (§1). Details: `docs/plan/execution-pl
 
 The author's own rules — the same in all his projects:
 
+- **The agent's memory is copied into this repository with every commit (author, 2026-11-20).** The memory stays
+  where it is (the agent's folder for this workspace under `~/.claude/projects/`); `docs/memory/sync_memory.py`
+  copies it to `docs/memory/copy/`, removing the author's e-mail and the name of his other project (this
+  repository is public), and the copy is committed and pushed with every commit — the pre-commit hook of this
+  repository runs the script, and the agent runs it by hand before committing. Every agent and model follows this
+  from its first commit, in every session. If the memory folder is wiped, it is restored from the copy
+  (`docs/memory/README.md`).
 - **Plan, ask, then code.** Restate every task as an ordered plan, list what is unclear, and wait for the author's
   answer before editing code. A database change lists the exact tables / columns first.
 - **Commits (author, 2026-11-16):** the agent may commit. The commit author is always **Omar Sherif** with the author's
@@ -597,7 +605,7 @@ current language in its own script and the number of languages; it opens a list 
 (a language can be found by its own name, its Arabic name, its English name or its code), the device's own language
 first (read on the device, never sent anywhere), then all 22 languages. Each row shows the language in its own
 script, its name in the interface language and "right to left" where it applies; choosing one switches the whole
-interface at once. Prototype: `docs/design/prototypes/round-3.html`, phone 1.
+interface at once. Prototypes: phone 1 of each design (`docs/design/prototypes/round-1.html` … `round-3.html`).
 
 | Code | Language | Script, direction | Interface font (☐ licence read before use) | Published translation of the meanings — QuranEnc, read 2026-11-18 |
 | --- | --- | --- | --- | --- |
@@ -842,14 +850,19 @@ Agreed for both platforms whatever the option:
 - **Figma:** possible in two ways — through the author's Chrome session, or through the Figma connector (it mostly
   reads designs). Recommendation: first build the screens as interactive HTML prototypes (real Arabic text, real RTL,
   fast to review and change), agree on colours and layout, then produce the Figma file from the agreed design — §18 Q8.
-- **Figma (author, 2026-11-19: every design in Figma and in this repository, "as you like"):** the file
-  «Tajweed — designs» in the author's Figma account (Starter team) — https://www.figma.com/design/K5RXq2tO1sVE7RwlJ9dD1L — holds every
-  round as a live code layer (the same HTML, clickable: directions, day / night, languages, pages): page 1 round 4,
-  page 2 round 3, page 3 rounds 1 and 2 (the Starter plan allows three pages). Editable Figma frames could not be
-  made from the HTML with the tools available, and the mushaf pages need the King Fahd page fonts, which Figma
-  frames cannot use; the live layer shows them exactly. The HTML in `docs/design/prototypes/` stays the source:
-  after each round, the changed round is imported again. ☐ The preview of each layer is opened once in Figma to
-  confirm it runs.
+- **Figma (author, 2026-11-19, corrected the same day):** Figma holds the **design elements** — the logo, every
+  icon and every drawing of each design (design 2's colonnade and prayer dial, design 3's 24 landscapes) as
+  editable vectors, and the colours of every direction, day and night — not the whole rounds (the author: «ما كنتش
+  أقصد أنك ترفع all rounds»). The file «Tajweed — designs» (Starter team, three pages: Design 1, Design 2, Design 3) —
+  https://www.figma.com/design/K5RXq2tO1sVE7RwlJ9dD1L. The same elements are kept as SVG in `docs/design/elements/` (exported from the pages by
+  `tools/export_elements.py`, nothing redrawn by hand) and are the source; `tools/figma_import_code.py` writes the
+  Figma import code from them. The full screens stay in the HTML prototypes (the mushaf pages need the King Fahd
+  page fonts, which Figma cannot use). The three live layers of the morning of 2026-11-19 were deleted.
+- **Names (the author, 2026-11-19): round N = design N**, one up-to-date file per design: `round-1.html` = design 1
+  (formerly `colour-directions.html` and `round-2.html`, now merged), `round-2.html` = design 2 (formerly
+  `round-3.html`), `round-3.html` = design 3 (formerly `round-4.html`); the interface texts in
+  `prototypes/i18n/round<N>/` (and `lives/` for the Lives screens shared by the three). The bullets below keep the
+  names of their day.
 - **Decided (2026-11-16):** HTML prototypes first; after the author approves the colours and the layout, the Figma
   file is created in the author's own Figma account through his Chrome session (the account he named for this project).
 - **Round 1 (2026-11-17) — waiting for the author's choice:** `docs/design/prototypes/colour-directions.html`, one
@@ -894,8 +907,18 @@ Agreed for both platforms whatever the option:
   (al-Bukhari 4084), "look at the camels" (88:17–20), dawn (89:1, 81:18), the forenoon and the still night (93:1–2),
   rain (22:63), the two gardens (55:64, 55:68), light (24:35) and, last, Mountains (35:27) — **the only one for low
   vision and colour blindness**. The prayer times stand on the path of the sun; the logo is an arc of light over the
-  horizon; headings in Amiri. Checked by `tools/build_round4.py` and `tools/design3_palettes.py` (the same checks as
-  round 3). Reasons: `docs/design/design-3-meanings.md`; values: `docs/design/tokens-design-3.json`.
+  horizon; headings in Amiri. Checked by `tools/build_round4.py` (now `build_round3.py`) and `tools/design3_palettes.py`
+  (the same checks as round 3). Reasons: `docs/design/design-3-meanings.md`; values: `docs/design/tokens-design-3.json`.
+- **2026-11-19 (the author's review): design 1 in one file, all 22 languages, and the Lives screens in all three
+  designs.** Design 1 brings together the first pass (the by-surah reading view, the player, the palette table) and
+  the second (first launch, mushaf pages, six fonts, Sources) and gets the searchable list of the 22 languages. The
+  Lives screens (F20, F21, F22 — §8.11) are written into the three pages by `tools/build_lives.py`: a group «السِّيَر»
+  on the home screen; a screen with three tabs — the prophets (Adam, Nuh, Ibrahim, Musa, Isa, and Muhammad ﷺ last
+  with the Seerah), the Companions (the ten promised Paradise, the Mothers of the Believers, the people of Badr) and
+  the Rightly Guided Caliphs on a timeline; and a sample entry (Nuh عليه السلام, 71:1 copied from Tanzil and checked).
+  Names only where beyond doubt; every list, story, hadith, date and event a dashed placeholder naming its source
+  book; honorifics in Arabic in every language; no picture of a prophet or Companion; icons without a person or a
+  cross (a line of descent, 3:34; a palm of Madinah; the steps of a minbar).
 - Screens to design: language choice, colour-direction choice, sources (F17), home, Quran reader (+ ayah actions: play, tafsir, bookmark), player, reciter
   picker, tajweed lesson, radio list and player, prayer times (six backgrounds), adhan settings, Qibla, adhkar list and
   counter, hadith, book reader, prophets / Companions / caliphs (index, entry, timeline), settings, about.
@@ -944,7 +967,7 @@ reviewer). Task ids: `P<phase>-<area><n>`, areas **D** data · **B** backend · 
 | P0-08 | Scaffold `tajweed-frontend`: Angular 22, Material, Tailwind, wrappers, language choice, CI | ☐ |
 | P0-09 | Scaffold `tajweed-android`: Kotlin, Compose, both languages, CI | ☐ (needs P0-05) |
 | P0-10 | Scaffold `tajweed-ios`: generated project, SwiftUI, CI on a macOS runner | ☐ |
-| P0-11 | Design: tokens, 2–3 colour directions, HTML prototypes, the author's approval, then Figma | ◐ round 1 (2026-11-17): three directions, all kept; round 2: first launch on one screen, mushaf pages as printed, six fonts, Sources — reviewed; round 3 (2026-11-17/18): design 2 "early Islam" with nine directions, colour-vision check, new icons, surah details and index; round 4 (2026-11-19): design 3 "the first era" with twelve directions, each with its landscape, in all 22 languages — ⏸ the author chooses design 1, 2 or 3; then the remaining screens and Figma |
+| P0-11 | Design: tokens, 2–3 colour directions, HTML prototypes, the author's approval, then Figma | ◐ three designs, one file each (round N = design N, 2026-11-19): design 1 (three directions; reviewed 2026-11-17), design 2 "early Islam" (nine directions, colour-vision check, index), design 3 "the first era" (twelve directions with landscapes) — all in 22 languages, all with the Lives screens; the elements of the three in Figma and as SVG — ⏸ the author chooses design 1, 2 or 3; then the remaining screens |
 | P0-12 | Data-source register; choose the Quran text and font; checksums | ◐ text, layout and default font chosen (Tanzil Uthmani; old Madinah 1405H layout from DigitalKhatt; King Fahd page fonts — author, 2026-11-17); quarter at 15:49 settled by the printed copy. Still to do: the register, the 9-ayah glyph table, justification, Makki / Madani compared with the printed index, the move to the backend repository |
 | P0-13 | Permission letters, sent by the author, tracked | ☐ — includes a letter to the King Fahd Complex for its page fonts (author's decision 2026-11-17: use them and ask) |
 | P0-14 | Content pipeline decisions D1, D2; API contract for phase 1 | ☐ |
@@ -1111,3 +1134,4 @@ explicit yes** (it is public); R3 (permanent) and R10 (public) need the author's
 | 2026-11-19 | Sixteenth update (author's message): **round 4 — design 3, "the first era"** — twelve directions from the places and moments of the time of the Prophet ﷺ, the Companions and the Rightly Guided Caliphs and from words of the Quran, each in day and night with its own landscape; only the last, Mountains, for low vision and colour blindness; the prayer times on the path of the sun; reasons in `docs/design/design-3-meanings.md` (§13, §8.10). Rounds 3 and 4 fixed in the 21 languages other than Arabic. Next: the author chooses design 1, 2 or 3 (§0). |
 | 2026-11-19 | Seventeenth update (author's message): **no native readers** — the agent translates the interface, users report mistakes on GitHub and the author brings them (§1, §8.9, `LANG-02`); the round-4 texts translated into the 20 languages; **no cross shape anywhere** (a plus sign or a four-armed star — a symbol of Christianity): the star of the Light direction and four icons changed in all designs (§8.10); Mountains keeps its night theme (confirmed). |
 | 2026-11-19 | Eighteenth update (author's message): **three new sections — F20 stories of the prophets, F21 the Companions, F22 the Rightly Guided Caliphs** (§8.11, phase 9, modules `prophet`, `companion`, `caliph`), shown together under «السِّيَر»; verbatim from named classical sources; no pictures of prophets or Companions; R11, R12. All designs are also kept in Figma, beside this repository (§13). |
+| 2026-11-20 | Nineteenth update (the author's review of 2026-11-19): **round N = design N** — design 1 in one up-to-date file (`round-1.html`, formerly `colour-directions.html` + `round-2.html`), design 2 `round-2.html`, design 3 `round-3.html`; i18n in one folder per round; design 1 in all 22 languages; **the Lives screens (F20, F21, F22) in all three designs** (§13, §8.11); **Figma holds the design elements** (logos, icons, drawings, landscapes, colours) as editable vectors, with SVG copies in `docs/design/elements/` — the live layers removed; **the agent's memory is copied into `docs/memory/` with every commit** (§1). |

@@ -1,10 +1,10 @@
-"""The colour directions of design 3 (round 4, "the first era": the time of the Prophet ﷺ, the Companions and the
+"""The colour directions of design 3 (round 3, "the first era": the time of the Prophet ﷺ, the Companions and the
 Rightly Guided Caliphs), with their checks.
 
 Same roles and rules as design 2 (design2_palettes.py): every text / background pair 4.5 : 1 with normal colour
 vision; the night themes follow the six night rules; the last direction, Mountains, is the only one made for low
 vision and colour blindness (7 : 1, also as simulated for the three kinds of colour blindness — the author's
-decision of 2026-11-18, repeated for round 4 on 2026-11-19).
+decision of 2026-11-18, repeated for design 3 on 2026-11-19).
 Extra roles for the landscape drawn in each direction (decoration, no text on them): sky, far, near, glow.
 Why each colour was chosen: docs/design/design-3-meanings.md.
 """

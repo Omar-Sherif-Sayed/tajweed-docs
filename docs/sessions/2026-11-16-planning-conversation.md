@@ -1028,3 +1028,35 @@ My patch split one rule across a whole-line replacement and a second edit, so th
 The shell is mangling escapes again. Editing the patch file directly instead:
 
 Records updated. Committing and pushing the language work:
+
+Three fixes: two light accents a shade too pale against their soft backgrounds, two night backgrounds too dark, and one over-saturated Light accent.
+
+Round 4 is assembled. Before the first build: Suhuf cites 96:4 («علّم بالقلم»), so it joins the build's ayah list. Then the meanings document, which the build checks:
+
+Round 4 builds: 20 ayahs copied and checked, all 13 Quran excerpts in the document exact, 24 palettes passing, 22 languages. Now the browser:
+
+Now the full loop over the 12 directions × 2 themes × 22 languages, with an error listener and checks that every section rendered.
+
+Checking the round-4 screens visually now (all 528 combinations of direction, theme and language already render with no errors); next I update the documents and commit.
+
+The web reader's wide banner crops the landscape badly (only the camel's legs show), so I'm fixing how the scenes scale on wide screens.
+
+The web banner now shows the whole landscape; I'm making sure the joins between its copies leave no visible line, then I'll update the documents.
+
+Nearly done with the visual check: the banner joins are now placed on whole screen pixels; confirming on screen, then docs and commit.
+
+The mirrored copies repeat the sun and moon, so I'm switching the wide banner to a single centred landscape that fades into the sky at both sides.
+
+The web reader now shows its landscape as a card above the surah list. Re-running the full check, then the documents and the commit.
+
+Updating the documents now (design index, AGENTS.md, plan, session record), then I commit and push.
+
+Now the design index.
+
+Writing the AGENTS.md updates (state table, F18, §8.10, §13, task status, change log).
+
+Now the session record.
+
+Adding the round-4 section to the session record.
+
+Regenerating the conversation copy and refreshing the private transcript snapshot.

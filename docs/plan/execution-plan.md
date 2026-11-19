@@ -203,6 +203,11 @@ Done when: the CI build and tests are green. ⚠ "Runs on a device" is **not** c
 5. After approval: the Figma file in the author's account, through his Chrome session.
 6. ☐ Fonts: the licence of each font is checked and recorded before it is used (Quran font: `P0-12`).
 
+**State 2026-11-19 (round 4):** three designs to choose from — design 1 (`round-2.html`), design 2 (`round-3.html`,
+kept as it is) and design 3 (`round-4.html`, "the first era": twelve directions, each in day and night with its own
+landscape, the prayer times on the path of the sun, all 22 languages; the reasons in `docs/design/design-3-meanings.md`).
+Waiting for the author's choice for web, Android and iPhone.
+
 **State 2026-11-17 (round 3):** two designs to choose from — design 1 (`round-2.html`, three colour directions;
 reviewed by the author, default Quran font chosen) and design 2 (`round-3.html`, "early Islam": parchment and
 ink, first launch, home, mushaf page, prayer times by location, Sources, web reader). Waiting for the author's
@@ -279,7 +284,7 @@ three modes, playback that survives network loss, About page.
 | P1-D2 | Surah metadata (names AR / EN, place of revelation, ayah count), page / juz / hizb / sajda positions. | Totals per surah equal the source; 30 juz; page numbers continuous. |
 | P1-D3 | Search text (§8.1): the everyday-spelling text imported byte for byte beside each ayah; the list of surah names and their common spellings in Arabic and English. | SHA-256 of the source; 6,236 ayahs with the same numbering as the displayed text; a fixed list of test words with their expected number of results. |
 | P1-D4 | Catalogue: reciters, recitations (style, riwayah, completeness), ordered audio sources, ayah timings — only complete Hafs mushafs of the requested reciters (§7.3) plus Sheikh Noreen as "listening only" (R5). | A script requests every surah file of every recitation and records the result and the date; a recitation with a missing file is not published. |
-| P1-D6 | F19 content (§8.10): the design notes in Arabic and English from `docs/design/design-2-meanings.md`, for the chosen design; the hadith gradings copied verbatim from Dorar; the tafsir quotes from a licensed tafsir; the reviewer's check when one exists. | The author reads both languages; every ayah reference resolves to the shipped text. |
+| P1-D6 | F19 content (§8.10): the design notes in Arabic and English from the meanings document of the chosen design (`docs/design/design-2-meanings.md` or `design-3-meanings.md`); the hadith gradings copied verbatim from Dorar; the tafsir quotes from a licensed tafsir; the reviewer's check when one exists. | The author reads both languages; every ayah reference resolves to the shipped text. |
 | P1-D5 | About content: author, link, credits and licences of every source used, privacy statement (AR / EN). | The author reads and approves both languages. |
 
 ### Backend (`tajweed-backend`)

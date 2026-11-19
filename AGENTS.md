@@ -36,15 +36,15 @@ repository the task touches → (6) the last record in [`docs/sessions/`](docs/s
 | --- | --- |
 | Date | 2026-11-19 |
 | Phase | **0 — Foundations** (§14) |
-| Exists | **Five public repositories on GitHub** (`main` branch), the same five folders on this machine. `tajweed-docs` (this one): parent `AGENTS.md`, `README.md`, `LICENSE` (CC BY 4.0), the detailed plan, the session record with a conversation copy, and the design in `docs/design/`: round 1 (colour directions), round 2 (first-launch screen, mushaf pages as printed, six Quran fonts, Sources screen) and **round 3** (design 2, "early Islam") with the verified source files and the scripts that check them. The four application repositories: `README.md`, `AGENTS.md`, `LICENSE` (MIT), `.gitignore` — no application code. |
+| Exists | **Five public repositories on GitHub** (`main` branch), the same five folders on this machine. `tajweed-docs` (this one): parent `AGENTS.md`, `README.md`, `LICENSE` (CC BY 4.0), the detailed plan, the session record with a conversation copy, and the design in `docs/design/`: round 1 (colour directions), round 2 (first-launch screen, mushaf pages as printed, six Quran fonts, Sources screen) round 3 (design 2, "early Islam") and **round 4** (design 3, "the first era") with the verified source files and the scripts that check them. The four application repositories: `README.md`, `AGENTS.md`, `LICENSE` (MIT), `.gitignore` — no application code. |
 | Does not exist | Any application code, the register of content sources, the remaining screens. |
-| Last task done | Round 3 (2026-11-19): **all 22 languages work** in the prototype — draft interface texts for 20 languages (`docs/design/prototypes/i18n/`, checked by the build), a font, direction and number format per script; the author decided that all 22 are available from the first release (§1, §8.9). |
+| Last task done | Round 4 (2026-11-19): **design 3, "the first era"** — `docs/design/prototypes/round-4.html`, twelve colour directions (eleven for ordinary sight, the last, Mountains, for low vision and colour blindness), each in day and night with its own landscape; the prayer times on the path of the sun; a new logo; all 22 languages; the reason for every colour and scene with its ayah or hadith in `docs/design/design-3-meanings.md` (§13). Also fixed: rounds 3 and 4 stopped drawing in the 21 languages other than Arabic (a surah name missing from the data). |
 | GitHub access from this machine | **Over SSH only** (the Windows certificate store blocks the HTTPS sign-in, §1). Key `~/.ssh/id_ed25519_tajweed` (no passphrase, fingerprint `SHA256:EPCRVeCpF+Jvsj40LKpu4Cta+mKF3ivLO8szlC2k/Po`), registered in the author's account as "Tajweed project - work laptop" (he confirmed it himself). Each of the five repositories uses it through its local `core.sshCommand`; remotes are `git@github.com:Omar-Sherif-Sayed/<name>.git`. A new clone on this machine needs the same two settings. Test: `ssh -i ~/.ssh/id_ed25519_tajweed -o IdentitiesOnly=yes -T git@github.com`. |
 | Folder name | `C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences` — renamed by the author on 2026-11-17. |
 | GitHub account | `Omar-Sherif-Sayed` — <https://github.com/Omar-Sherif-Sayed?tab=repositories>. Pushing is allowed for this product (R1); push at the end of every task. |
-| Do not forget | `P2-D1` — the default prayer-time method of every country, each with a named official source (the author, 2026-11-17: it may be done at any time, before phase 2 starts) · **F19** — the in-app section «لماذا هذا التصميم؟ / Why this design?»: the reason for every colour, icon and the logo (§8.10, `docs/design/design-2-meanings.md`). |
-| **Next task** | `P0-11` **round 4** (author, 2026-11-19): round 3 is left as it is; a new design taken from the first era of Islam — the time of the Prophet ﷺ, the Companions and the Rightly Guided Caliphs — for the same product, much better than round 3, with many colour directions drawn from reflection on the Quran and its tafsirs, each with a day and a night theme; only the last direction is for low vision and colour blindness. Then the author chooses among designs 1, 2 and 3 for web, Android and iPhone. |
-| Waiting for the author | His choice of design after round 4; his reading of the meanings document; native speakers for the 20 languages' interface texts (`LANG-02`). |
+| Do not forget | `P2-D1` — the default prayer-time method of every country, each with a named official source (the author, 2026-11-17: it may be done at any time, before phase 2 starts) · **F19** — the in-app section «لماذا هذا التصميم؟ / Why this design?»: the reason for every colour, icon and the logo (§8.10, `docs/design/design-2-meanings.md` or `design-3-meanings.md`, for the chosen design). |
+| **Next task** | `P0-11`: the author chooses one design — 1 (`round-2.html`), 2 (`round-3.html`) or 3 (`round-4.html`) — for web, Android and iPhone; then the remaining screens in the chosen design (§13), the Figma file, and the scaffolds `P0-06` … `P0-10`. |
+| Waiting for the author | His choice among designs 1, 2 and 3; his reading of the meanings documents (`design-2-meanings.md`, `design-3-meanings.md`); whether Mountains keeps a night theme of its own; native speakers for the 20 languages' interface texts (`LANG-02`). |
 
 **At the end of every session:** update the table above, the statuses in §14.1, the change log §19; write or extend
 the session record; commit as the author (§1). Details: `docs/plan/execution-plan.md` §1.
@@ -127,7 +127,7 @@ too long for a store title, the store shows "Tajweed" with the rest as the subti
 | F14 | Books | Religious books (الأم للشافعي، صحيح البخاري، صحيح مسلم). |
 | F15 | About | Author name and LinkedIn link; privacy statement; a link to F17. |
 | F17 | Sources | A section listing **every** source the application uses — Quran text and its layout, fonts, audio and timings, tafsir, hadith, adhkar, books, prayer-time method, radio streams, icons, software libraries — each with its owner, link, licence and verification date; built from the register `docs/data-sources/README.md`, so it is never out of step (author, 2026-11-17). |
-| F18 | Appearance | Three colour directions (A emerald and gold, B teal and sand, C mushaf), each with a light and a dark theme; chosen on first launch after the language, changeable in settings; the Quran font is a reader setting (author, 2026-11-17 — §13). A second design, "early Islam", was made on the author's request to compare (round 3); he chooses one design for all clients. |
+| F18 | Appearance | Three colour directions (A emerald and gold, B teal and sand, C mushaf), each with a light and a dark theme; chosen on first launch after the language, changeable in settings; the Quran font is a reader setting (author, 2026-11-17 — §13). A second design, "early Islam" (round 3), and a third, "the first era" (round 4), were made on the author's request to compare; he chooses one design for all clients. |
 | F19 | Why this design | A section inside the application that explains every colour direction, icon and the logo — the ayah (copied, never typed), the hadith reference, a design note — asked by the author, 2026-11-17 (§8.10). |
 | F16 | Quran search | Search for a word with or without tashkeel, by the surah's name, and by the ayah's number (§8.1) — added by the author, 2026-11-17. |
 
@@ -644,7 +644,8 @@ What this means from day one, in all four codebases:
 
 The author asked that every colour, icon and the logo have a reason taken from the Quran, the hadith and the first
 era of Islam, and that the reasons become a section of the application. The reasons are written in
-`docs/design/design-2-meanings.md`; the section follows the rules there:
+`docs/design/design-2-meanings.md` (design 2) and `docs/design/design-3-meanings.md` (design 3); the section follows
+the rules there:
 
 - a colour is "named after a word" of an ayah — never "the meaning" of an ayah (that is tafsir, §6.10);
 - the ayah is shown whole, from the Quran text the application ships, with its reference; never typed;
@@ -825,6 +826,15 @@ Agreed for both platforms whatever the option:
   cards lighter step by step; the mushaf page a little lighter than the background; soft body text (11 – 16 : 1);
   calm accents (saturation ≤ 0.65); no bright block — the prayer card mid-dark (L* 20 – 42). Mountains stays as it
   is (black and white at full strength). The first-launch screen lists the planned languages by their own names.
+- **Round 4 (2026-11-19) — design 3, "the first era" (عصر النبي ﷺ والصحابة والخلفاء الراشدين), on the author's
+  request:** round 3 is kept as it is; `docs/design/prototypes/round-4.html` is a new design for the same screens.
+  Twelve directions, each in day and night and each with its own landscape (home screen, web reader, first-launch
+  cards): the first sheets (al-Bukhari 4986), Hira (al-Bukhari 3; 96:1–4), the Cave (9:40), Taybah (50:10), Uhud
+  (al-Bukhari 4084), "look at the camels" (88:17–20), dawn (89:1, 81:18), the forenoon and the still night (93:1–2),
+  rain (22:63), the two gardens (55:64, 55:68), light (24:35) and, last, Mountains (35:27) — **the only one for low
+  vision and colour blindness**. The prayer times stand on the path of the sun; the logo is an arc of light over the
+  horizon; headings in Amiri. Checked by `tools/build_round4.py` and `tools/design3_palettes.py` (the same checks as
+  round 3). Reasons: `docs/design/design-3-meanings.md`; values: `docs/design/tokens-design-3.json`.
 - Screens to design: language choice, colour-direction choice, sources (F17), home, Quran reader (+ ayah actions: play, tafsir, bookmark), player, reciter
   picker, tajweed lesson, radio list and player, prayer times (six backgrounds), adhan settings, Qibla, adhkar list and
   counter, hadith, book reader, settings, about.
@@ -872,12 +882,12 @@ reviewer). Task ids: `P<phase>-<area><n>`, areas **D** data · **B** backend · 
 | P0-08 | Scaffold `tajweed-frontend`: Angular 22, Material, Tailwind, wrappers, language choice, CI | ☐ |
 | P0-09 | Scaffold `tajweed-android`: Kotlin, Compose, both languages, CI | ☐ (needs P0-05) |
 | P0-10 | Scaffold `tajweed-ios`: generated project, SwiftUI, CI on a macOS runner | ☐ |
-| P0-11 | Design: tokens, 2–3 colour directions, HTML prototypes, the author's approval, then Figma | ◐ round 1 (2026-11-17): three directions, all kept; round 2: first launch on one screen, mushaf pages as printed, six fonts, Sources — reviewed; round 3 (2026-11-17/18): design 2 "early Islam" with nine directions, colour-vision check, new icons, surah details and index — ⏸ the author chooses design 1 or design 2; then the remaining screens and Figma |
+| P0-11 | Design: tokens, 2–3 colour directions, HTML prototypes, the author's approval, then Figma | ◐ round 1 (2026-11-17): three directions, all kept; round 2: first launch on one screen, mushaf pages as printed, six fonts, Sources — reviewed; round 3 (2026-11-17/18): design 2 "early Islam" with nine directions, colour-vision check, new icons, surah details and index; round 4 (2026-11-19): design 3 "the first era" with twelve directions, each with its landscape, in all 22 languages — ⏸ the author chooses design 1, 2 or 3; then the remaining screens and Figma |
 | P0-12 | Data-source register; choose the Quran text and font; checksums | ◐ text, layout and default font chosen (Tanzil Uthmani; old Madinah 1405H layout from DigitalKhatt; King Fahd page fonts — author, 2026-11-17); quarter at 15:49 settled by the printed copy. Still to do: the register, the 9-ayah glyph table, justification, Makki / Madani compared with the printed index, the move to the backend repository |
 | P0-13 | Permission letters, sent by the author, tracked | ☐ — includes a letter to the King Fahd Complex for its page fonts (author's decision 2026-11-17: use them and ask) |
 | P0-14 | Content pipeline decisions D1, D2; API contract for phase 1 | ☐ |
 | P0-15 | Phase 0 review with the author | ☐ |
-| P0-16 | The reason for every colour, icon and the logo of design 2 (`docs/design/design-2-meanings.md`) — basis of F19 | ◐ 2026-11-17: written; ayahs copied and checked by script; ⏸ the author reads it; ☐ hadith gradings and tafsir quotes copied from their sources |
+| P0-16 | The reason for every colour, icon and the logo of design 2 (`docs/design/design-2-meanings.md`) and design 3 (`design-3-meanings.md`) — basis of F19 | ◐ 2026-11-17: written; 2026-11-19: design 3 written; ayahs copied and checked by script; ⏸ the author reads it; ☐ hadith gradings and tafsir quotes copied from their sources |
 
 **Phase 1 — Quran core (F1, F2, F16, F3, F11, F15).**
 
@@ -1033,3 +1043,4 @@ explicit yes** (it is public); R3 (permanent) and R10 (public) need the author's
 | 2026-11-18 | Thirteenth update (author's message): more languages planned — Russian, Spanish, German, Italian, French, Urdu, Hindi, Korean, Indonesian (with Japanese and Chinese), and nine recommended (Turkish, Bengali, Persian, Malay, Swahili, Hausa, Portuguese, Pashto, Uzbek), each with its script, font and published translation (§8.9, tasks `LANG-*`); the night themes of the eight directions other than Mountains reviewed against six rules (§13). |
 | 2026-11-18 | Fourteenth update (author's message): all nine recommended languages accepted — 22 languages in all (Urdu for «الباكستانية», Hindi once); the first screen gets a searchable language list with the device's language first (F1, §2, §8.9). |
 | 2026-11-19 | Fifteenth update (author's message): **all 22 languages are available from the first release** (§1, §2, F1, §8.9); round 3 works in all of them with draft interface texts (checked by the build) and a font, direction and number format per script; round 4 requested — a new design from the time of the Prophet ﷺ, the Companions and the Rightly Guided Caliphs, with many directions from the Quran (§0). |
+| 2026-11-19 | Sixteenth update (author's message): **round 4 — design 3, "the first era"** — twelve directions from the places and moments of the time of the Prophet ﷺ, the Companions and the Rightly Guided Caliphs and from words of the Quran, each in day and night with its own landscape; only the last, Mountains, for low vision and colour blindness; the prayer times on the path of the sun; reasons in `docs/design/design-3-meanings.md` (§13, §8.10). Rounds 3 and 4 fixed in the 21 languages other than Arabic. Next: the author chooses design 1, 2 or 3 (§0). |

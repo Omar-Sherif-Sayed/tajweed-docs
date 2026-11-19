@@ -538,7 +538,7 @@ window.ROUND3 = {"pages": {"1": {"lines": [{"t": "header", "s": 1, "dk": "سُو
     try { return new Intl.NumberFormat(loc(lang), { useGrouping: false }).format(Number(n)); } catch (e) { return String(n); }
   }
   /* surah names: Arabic for Arabic-script languages, Tanzil's transliteration for the others (☐ names per language) */
-  function sname(s, lang) { var o = D.names[s]; return RTL.indexOf(lang || L()) >= 0 ? o.ar : o.en; }
+  function sname(s, lang) { var o = D.surahs[Number(s) - 1]; return RTL.indexOf(lang || L()) >= 0 ? o.ar : o.en; }
   function dirName(id, lang) { return TR(D.directions[id].name, null, lang); }
 
   var QUARTER = ["", "¼ ", "½ ", "¾ "];

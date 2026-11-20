@@ -2061,7 +2061,5 @@ i selected also last 2 features (موسوعة الأخلاق والسلوك) and
 for your info what I accepted (أقرّ بالاطلاع على [شروط الاستخدام](https://dorar.net/api-services/terms) والالتزام بها. *)
 I will accept these terms and conditions: 
 
-<pasted_content id="ba78">
-[Dorar's API terms, pasted by the author — not copied here; they are published at https://dorar.net/api-services/terms and summarised as binding rules in AGENTS.md §8.14]
-</pasted_content id="ba78">
+[pasted text — not copied here]
 ```

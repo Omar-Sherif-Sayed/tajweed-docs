@@ -73,6 +73,16 @@ the Quran Foundation Content APIs (Ibn Kathir, al-Tabari, al-Qurtubi, al-Baghawi
 allowed with a weekly sync; developers@quran.com). Recorded R11, R12, F51 and the accuracy rule; letters 09 – 11
 drafted; the list of scholars and their books proposed in the answer, for the author's approval.
 
+## 2026-11-21 — the author's seventh message: the scholars approved; the home order; the Sources screen
+
+```text
+1- موافق - وزد في الكتب مثل الداء والدواء لأبن القيم - ممكن ان يتم ترتيب العلماء بالعام الذي ولدوا فيه أو بالمجموعة (أول صف في ال table اللي انت كاتبة)
+2- الأسماء مع كذا feature تانية خليهم فوق السير مع الراديو والباقي - يعني خلي السير أخر شيء فين design بتاع كل ال features ممكن تعمله في design 3
+3- اعملي table فيه أسم كل ملف وأبعته لمين بالظبط في الحاجات اللي ناقصة - وماتنساش تعمل update لصفحة المصادر (اضف ما تم التحقق منه او ما ننتظر التحقق منه)
+```
+
+Built in design 3 only, by a new script `tools/build_design3.py` (texts in `i18n/design3/`, 22 languages): the home screen (the Names of Allah, the names of the Prophet ﷺ, memorisation, «كل الأقسام» above the Lives; the Lives last with the scholars); «كل الأقسام» — every feature F1 – F51 marked drawn / inside another screen / to come, which answers «فين design بتاع كل ال features»; the 53 scholars by group or by time; one scholar (Ibn al-Qayyim); the library of 65 books with «الداء والدواء»; the Sources screen with four states. **Ordering by birth year:** the year of birth of several scholars is not recorded (e.g. Ibn Hisham, al-Qurtubi) and differs between sources for others (e.g. Muslim), while the year of death is recorded for all — so «حسب الزمن» orders by death; every year is copied from the biographies before the order is final (`P9-D5`). The table of letters still to send was given in the answer (09 HadeethEnc, 10 sunnah.com, 11 the Quran Foundation; 07 mp3quran optional).
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)

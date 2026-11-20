@@ -390,6 +390,7 @@ shape as on the phone, so it is never stretched or cut on a wide screen.
 ## 6. Icons, languages, ideas left out
 
 - The section icons are those of design 2, each from the first era (`design-2-meanings.md` §5).
+- Five icons of 2026-11-21 are plain shapes with no claim of meaning: a name plate (the Names of Allah), a round plate (the names of the Prophet ﷺ), a book with a returning arrow (memorisation — repetition), a list (all sections), a stack of books (the scholars). No person, no cross.
 - All 22 languages work: the interface texts of design 2 and the new texts of design 3 (the direction names and the
   design notes), translated by the agent and corrected from users' reports on GitHub (`LANG-02`).
 - Left out: Badr and the other battles (not a theme for colours); the cave of Thawr by name (the Quran says «الغار»;

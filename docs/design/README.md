@@ -23,7 +23,7 @@ the same file (its history is in git). The first names, used in the session reco
 | [`prototypes/i18n/`](prototypes/i18n/) | The interface texts of the 20 languages after Arabic and English, **one folder per round**: `round1/` (design 1, 81 texts), `round2/` (design 2, 122 texts), `round3/` (the 53 texts design 3 adds to design 2's), `lives/` (the 28 texts of the Lives screens) and `extras/` (the 74 texts of the screens of 2026-11-20), the last two shared by the three designs. Each folder: `keys.json` (id, English, Arabic) and one file per language. **Translations by the agent**, corrected from users' reports on GitHub (no native readers, the author's decision 2026-11-19; `LANG-02`). Written by `tools/write_round1_i18n.py`, `write_round3_i18n.py`, `write_lives_i18n.py`, `write_extras_i18n.py` (design 2's keys by `extract_i18n_keys.py`), checked by `tools/i18n_check.py` in every build. | by the agent |
 | [`tokens.json`](tokens.json) | The colours of design 1's three directions, light and dark. | all three directions kept (decision 2026-11-17) |
 | [`prototypes/assets/`](prototypes/assets/) | The untouched source files (Quran text, metadata, page layout, fonts) with checksums, origins and licences. | see its README |
-| [`prototypes/tools/`](prototypes/tools/) | `verify_mushaf_layout.py` (checks the layout against Tanzil); `build_round1.py`, `build_round2.py`, `build_round3.py` (each writes its page's data, fonts, colours and texts, after every check); `build_lives.py` (the Lives screens into the three pages); `build_extras.py` (the screens of 2026-11-20 and the day / night switch); `build_quran_sample.py` (the ayahs of design 1's reading view); `design2_palettes.py`, `design3_palettes.py` (the directions and their checks); `i18n_check.py`; `export_elements.py`, `figma_import_code.py`; `read_font_licence.py`. Build order: `build_round1.py`, `build_round2.py`, `build_round3.py`, then `build_lives.py`, `build_extras.py` and `export_elements.py`. Nobody types Quran text. | — |
+| [`prototypes/tools/`](prototypes/tools/) | `verify_mushaf_layout.py` (checks the layout against Tanzil); `build_round1.py`, `build_round2.py`, `build_round3.py` (each writes its page's data, fonts, colours and texts, after every check); `build_lives.py` (the Lives screens into the three pages); `build_extras.py` (the screens of 2026-11-20 and the day / night switch); `build_design3.py` (design 3 only, 2026-11-21: the home order, «كل الأقسام», the scholars, the library, the Sources screen; texts by `write_design3_i18n.py` in `i18n/design3/`); `build_quran_sample.py` (the ayahs of design 1's reading view); `design2_palettes.py`, `design3_palettes.py` (the directions and their checks); `i18n_check.py`; `export_elements.py`, `figma_import_code.py`; `read_font_licence.py`. Build order: `build_round1.py`, `build_round2.py`, `build_round3.py`, then `build_lives.py`, `build_extras.py`, `build_design3.py` and `export_elements.py`. Nobody types Quran text. | — |
 
 ## Design 3 — "the first era" (round 3)
 
@@ -175,6 +175,15 @@ A start state can be given in the address: `round-1.html#c-dark-en-qcf-545` (dir
 - The three pages in all 22 languages: no error, no empty text, every home screen fits; the Names of Allah (14 names
   from 59:22–24, al-Rahman with 1:3 and 59:22) and the names of the Prophet ﷺ (8 from the two Sahihs) in the three.
 - ☐ Figma: not updated — the Starter plan's limit of tool calls.
+
+## Checked on 2026-11-21 (design 3 only: home, all sections, scholars, library, Sources)
+
+- The home screen: 16 tiles (the Names of Allah, the names of the Prophet ﷺ, memorisation and «كل الأقسام» added beside the radio and the rest) and the Lives last with four parts — it fits the phone in Arabic.
+- «كل الأقسام»: F1 – F51 exactly once (checked by the script), the Lives the last group; a drawn section opens its screen.
+- The scholars: 53, each once in the group order and once in the time order (checked by the script); the order by time follows the year of death and is a draft until every year is copied from the biographies (`P9-D5`). No date and no biography is typed: the sample entry shows placeholders naming its sources.
+- The library: 65 books, every author one of the 53 (or named, for «تحفة الأطفال»); «الداء والدواء» present.
+- The Sources screen: 25 sources — 11 verified, 7 letters sent, 3 letters ready, 4 to check.
+- All 22 languages, day and night: no error; designs 1 and 2 unchanged by the build.
 
 ## Next
 

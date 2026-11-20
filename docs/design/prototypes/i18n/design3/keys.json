@@ -1,0 +1,667 @@
+[
+ {
+  "id": "d3_all",
+  "en": "All sections",
+  "ar": "كل الأقسام"
+ },
+ {
+  "id": "d3_scholars",
+  "en": "Scholars",
+  "ar": "العلماء"
+ },
+ {
+  "id": "d3_lv_sub",
+  "en": "Prophets · Companions · Caliphs · Scholars",
+  "ar": "الأنبياء · الصحابة · الخلفاء · العلماء"
+ },
+ {
+  "id": "d3_all_sub",
+  "en": "{n} sections, by group",
+  "ar": "{n} قسمًا في مجموعات"
+ },
+ {
+  "id": "d3_st_drawn",
+  "en": "✔ screen drawn",
+  "ar": "✔ مرسومة"
+ },
+ {
+  "id": "d3_st_part",
+  "en": "◐ inside another screen",
+  "ar": "◐ داخل شاشة أخرى"
+ },
+ {
+  "id": "d3_st_todo",
+  "en": "☐ screen to come",
+  "ar": "☐ لم تُرسم بعد"
+ },
+ {
+  "id": "d3_st_beh",
+  "en": "how playback behaves — no screen of its own",
+  "ar": "طريقة عمل التشغيل — بلا شاشة خاصة"
+ },
+ {
+  "id": "d3_tap_open",
+  "en": "Tap a drawn section to go to its screen.",
+  "ar": "المس قسمًا مرسومًا للانتقال إلى شاشته."
+ },
+ {
+  "id": "d3_g_quran",
+  "en": "The Noble Quran",
+  "ar": "القرآن الكريم"
+ },
+ {
+  "id": "d3_g_listen",
+  "en": "Listening",
+  "ar": "الاستماع"
+ },
+ {
+  "id": "d3_g_hifz",
+  "en": "Memorisation and daily portion",
+  "ar": "الحفظ والورد"
+ },
+ {
+  "id": "d3_g_prayer",
+  "en": "Prayer and time",
+  "ar": "الصلاة والوقت"
+ },
+ {
+  "id": "d3_g_dhikr",
+  "en": "Dhikr and dua",
+  "ar": "الذكر والدعاء"
+ },
+ {
+  "id": "d3_g_know",
+  "en": "Knowledge",
+  "ar": "العلم"
+ },
+ {
+  "id": "d3_g_guides",
+  "en": "Guides and tools",
+  "ar": "الأدلة والأدوات"
+ },
+ {
+  "id": "d3_g_app",
+  "en": "The app and your devices",
+  "ar": "التطبيق وأجهزتك"
+ },
+ {
+  "id": "d3_g_lives",
+  "en": "Lives",
+  "ar": "السِّيَر"
+ },
+ {
+  "id": "f1",
+  "en": "Language",
+  "ar": "اللغة"
+ },
+ {
+  "id": "f2",
+  "en": "Mushaf reader",
+  "ar": "المصحف"
+ },
+ {
+  "id": "f3",
+  "en": "Recitation",
+  "ar": "التلاوة"
+ },
+ {
+  "id": "f4",
+  "en": "Muallim mushaf",
+  "ar": "المصحف المعلم"
+ },
+ {
+  "id": "f5",
+  "en": "Tafsir",
+  "ar": "التفسير"
+ },
+ {
+  "id": "f6",
+  "en": "Tajweed",
+  "ar": "التجويد"
+ },
+ {
+  "id": "f7",
+  "en": "Radio",
+  "ar": "الإذاعة"
+ },
+ {
+  "id": "f8",
+  "en": "Prayer times",
+  "ar": "مواقيت الصلاة"
+ },
+ {
+  "id": "f9",
+  "en": "Adhan",
+  "ar": "الأذان"
+ },
+ {
+  "id": "f10",
+  "en": "Qibla",
+  "ar": "القبلة"
+ },
+ {
+  "id": "f11",
+  "en": "Uninterrupted playback",
+  "ar": "التشغيل دون انقطاع"
+ },
+ {
+  "id": "f12",
+  "en": "Adhkar",
+  "ar": "الأذكار"
+ },
+ {
+  "id": "f13",
+  "en": "Hadith",
+  "ar": "الأحاديث"
+ },
+ {
+  "id": "f14",
+  "en": "Books",
+  "ar": "الكتب"
+ },
+ {
+  "id": "f15",
+  "en": "About",
+  "ar": "عن التطبيق"
+ },
+ {
+  "id": "f16",
+  "en": "Quran search",
+  "ar": "البحث في القرآن"
+ },
+ {
+  "id": "f17",
+  "en": "Sources",
+  "ar": "المصادر"
+ },
+ {
+  "id": "f18",
+  "en": "Appearance",
+  "ar": "المظهر"
+ },
+ {
+  "id": "f19",
+  "en": "Why this design?",
+  "ar": "لماذا هذا التصميم؟"
+ },
+ {
+  "id": "f20",
+  "en": "Prophets",
+  "ar": "الأنبياء"
+ },
+ {
+  "id": "f21",
+  "en": "Companions",
+  "ar": "الصحابة"
+ },
+ {
+  "id": "f22",
+  "en": "Rightly Guided Caliphs",
+  "ar": "الخلفاء الراشدون"
+ },
+ {
+  "id": "f23",
+  "en": "Duas",
+  "ar": "الأدعية"
+ },
+ {
+  "id": "f24",
+  "en": "Misbaha",
+  "ar": "المسبحة"
+ },
+ {
+  "id": "f25",
+  "en": "Ayah markers",
+  "ar": "الفواصل"
+ },
+ {
+  "id": "f26",
+  "en": "Ayah actions",
+  "ar": "أوامر الآية"
+ },
+ {
+  "id": "f27",
+  "en": "Hijri calendar",
+  "ar": "التقويم الهجري"
+ },
+ {
+  "id": "f28",
+  "en": "Download for offline listening",
+  "ar": "الاستماع دون إنترنت"
+ },
+ {
+  "id": "f29",
+  "en": "Virtues",
+  "ar": "الفضائل"
+ },
+ {
+  "id": "f30",
+  "en": "Memorisation",
+  "ar": "الحفظ"
+ },
+ {
+  "id": "f31",
+  "en": "Khatma and daily portion",
+  "ar": "الختمة والورد"
+ },
+ {
+  "id": "f32",
+  "en": "My notes",
+  "ar": "ملاحظاتي"
+ },
+ {
+  "id": "f33",
+  "en": "Share an ayah",
+  "ar": "مشاركة آية"
+ },
+ {
+  "id": "f34",
+  "en": "Word meanings and occasions of revelation",
+  "ar": "معاني الكلمات وأسباب النزول"
+ },
+ {
+  "id": "f35",
+  "en": "Blessed days",
+  "ar": "الأيام الفاضلة"
+ },
+ {
+  "id": "f36",
+  "en": "The last third of the night",
+  "ar": "الثلث الأخير من الليل"
+ },
+ {
+  "id": "f37",
+  "en": "Prayer and fasting tracker",
+  "ar": "متابعة الصلاة والصيام"
+ },
+ {
+  "id": "f38",
+  "en": "Ruqyah",
+  "ar": "الرقية الشرعية"
+ },
+ {
+  "id": "f39",
+  "en": "The Names of Allah",
+  "ar": "أسماء الله الحسنى"
+ },
+ {
+  "id": "f40",
+  "en": "Guides: wudu, prayer, Hajj, Umrah",
+  "ar": "أدلة الوضوء والصلاة والحج والعمرة"
+ },
+ {
+  "id": "f41",
+  "en": "Kids",
+  "ar": "الأطفال"
+ },
+ {
+  "id": "f42",
+  "en": "Zakat calculator",
+  "ar": "حاسبة الزكاة"
+ },
+ {
+  "id": "f43",
+  "en": "Home-screen widgets",
+  "ar": "أدوات الشاشة الرئيسية"
+ },
+ {
+  "id": "f44",
+  "en": "Watch",
+  "ar": "الساعة الذكية"
+ },
+ {
+  "id": "f45",
+  "en": "Car",
+  "ar": "السيارة"
+ },
+ {
+  "id": "f46",
+  "en": "Nearby mosques",
+  "ar": "المساجد القريبة"
+ },
+ {
+  "id": "f47",
+  "en": "Settings file",
+  "ar": "ملف الإعدادات"
+ },
+ {
+  "id": "f48",
+  "en": "Names of the Prophet ﷺ",
+  "ar": "أسماء النبي ﷺ"
+ },
+ {
+  "id": "f49",
+  "en": "Ethics and conduct",
+  "ar": "الأخلاق والسلوك"
+ },
+ {
+  "id": "f50",
+  "en": "Islamic manners",
+  "ar": "الآداب الشرعية"
+ },
+ {
+  "id": "f51",
+  "en": "The scholars of Islam",
+  "ar": "علماء المسلمين"
+ },
+ {
+  "id": "d3_sch_sub",
+  "en": "{n} scholars · their lives from the books of biographies",
+  "ar": "{n} عالمًا · سيرهم من كتب التراجم"
+ },
+ {
+  "id": "d3_by_group",
+  "en": "By group",
+  "ar": "حسب المجموعة"
+ },
+ {
+  "id": "d3_by_time",
+  "en": "By time",
+  "ar": "حسب الزمن"
+ },
+ {
+  "id": "d3_time_note",
+  "en": "In order of death: the year of birth is not recorded for some scholars and differs between sources for others, while the year of death is recorded for all. Every date is copied from the books of biographies.",
+  "ar": "مرتّبون بسنة الوفاة؛ لأن سنة المولد غير مذكورة لبعضهم ومختلَف فيها عند آخرين، أما سنة الوفاة فمذكورة لهم جميعًا. كل تاريخ يُنقل من كتب التراجم."
+ },
+ {
+  "id": "d3_date_ph",
+  "en": "dates: copied from the book of biographies",
+  "ar": "التواريخ: تُنقل من كتاب التراجم"
+ },
+ {
+  "id": "d3_sg_imams",
+  "en": "The imams of the four schools",
+  "ar": "أئمة المذاهب الأربعة"
+ },
+ {
+  "id": "d3_sg_salaf",
+  "en": "The early generations (Salaf)",
+  "ar": "أعلام السلف"
+ },
+ {
+  "id": "d3_sg_hadith",
+  "en": "The imams of hadith",
+  "ar": "أئمة الحديث"
+ },
+ {
+  "id": "d3_sg_huffaz",
+  "en": "Hadith masters and commentators",
+  "ar": "الحفّاظ والشُّرّاح"
+ },
+ {
+  "id": "d3_sg_tafsir",
+  "en": "Commentators of the Quran",
+  "ar": "المفسرون"
+ },
+ {
+  "id": "d3_sg_aqeeda",
+  "en": "Creed and fiqh",
+  "ar": "العقيدة والفقه"
+ },
+ {
+  "id": "d3_sg_seerah",
+  "en": "Seerah and history",
+  "ar": "السيرة والتاريخ"
+ },
+ {
+  "id": "d3_sg_qiraat",
+  "en": "Recitations and tajweed",
+  "ar": "القراءات والتجويد"
+ },
+ {
+  "id": "d3_sg_recent",
+  "en": "Recent scholars",
+  "ar": "المعاصرون"
+ },
+ {
+  "id": "d3_entry_sub",
+  "en": "Scholars · sample entry",
+  "ar": "العلماء · مثال لصفحة عالم"
+ },
+ {
+  "id": "d3_birth_death",
+  "en": "Birth and death",
+  "ar": "المولد والوفاة"
+ },
+ {
+  "id": "d3_life_from",
+  "en": "His life, word for word from:",
+  "ar": "سيرته بنصها من:"
+ },
+ {
+  "id": "d3_life_ph",
+  "en": "The text, with book · volume · page — copied when the edition is chosen.",
+  "ar": "النص مع الكتاب والجزء والصفحة — يُنقل بعد اختيار الطبعة."
+ },
+ {
+  "id": "d3_his_books",
+  "en": "His books in the library",
+  "ar": "كتبه في المكتبة"
+ },
+ {
+  "id": "d3_report",
+  "en": "Report a mistake",
+  "ar": "أبلغ عن خطأ"
+ },
+ {
+  "id": "d3_books_sub",
+  "en": "{n} books · each from a chosen edition",
+  "ar": "{n} كتابًا · كلٌّ من طبعة مختارة"
+ },
+ {
+  "id": "d3_edition_ph",
+  "en": "Edition: to be chosen, with its rights",
+  "ar": "الطبعة: تُختار وتُطلب حقوقها"
+ },
+ {
+  "id": "d3_bc_aqeeda",
+  "en": "Creed",
+  "ar": "العقيدة"
+ },
+ {
+  "id": "d3_bc_fiqh",
+  "en": "Fiqh",
+  "ar": "الفقه"
+ },
+ {
+  "id": "d3_bc_seerah",
+  "en": "Seerah, history and biographies",
+  "ar": "السيرة والتاريخ والتراجم"
+ },
+ {
+  "id": "d3_bc_heart",
+  "en": "Purification of the heart",
+  "ar": "الرقائق والسلوك"
+ },
+ {
+  "id": "d3_s_ok",
+  "en": "✔ verified",
+  "ar": "✔ تم التحقق"
+ },
+ {
+  "id": "d3_s_sent",
+  "en": "✉ letter sent — waiting for the answer",
+  "ar": "✉ أُرسلت الرسالة — بانتظار الرد"
+ },
+ {
+  "id": "d3_s_ready",
+  "en": "✎ letter ready — to be sent",
+  "ar": "✎ الرسالة جاهزة — لم تُرسل بعد"
+ },
+ {
+  "id": "d3_s_check",
+  "en": "⏳ to be checked",
+  "ar": "⏳ لم يُتحقق منه بعد"
+ },
+ {
+  "id": "d3_s_sum",
+  "en": "{a} verified · {b} waiting for an answer · {c} to send · {d} to check",
+  "ar": "{a} تم التحقق · {b} بانتظار الرد · {c} للإرسال · {d} للتحقق"
+ },
+ {
+  "id": "d3_s_nouse",
+  "en": "Nothing is used before it is verified.",
+  "ar": "لا يُستخدم شيء قبل التحقق منه."
+ },
+ {
+  "id": "d3_sg_audio",
+  "en": "Recitations, timings and radio",
+  "ar": "التلاوات والتوقيت والإذاعة"
+ },
+ {
+  "id": "d3_sg_tafsirs",
+  "en": "Tafsir and translations of the meanings",
+  "ar": "التفسير وترجمات المعاني"
+ },
+ {
+  "id": "d3_sg_adhkar",
+  "en": "Adhkar and the Names of Allah",
+  "ar": "الأذكار وأسماء الله الحسنى"
+ },
+ {
+  "id": "d3_sg_books",
+  "en": "Books and the Lives",
+  "ar": "الكتب والسِّيَر"
+ },
+ {
+  "id": "d3_sg_prayer",
+  "en": "Prayer times, adhan and map",
+  "ar": "المواقيت والأذان والخريطة"
+ },
+ {
+  "id": "s81",
+  "en": "the Quran text in Uthmani script",
+  "ar": "نص القرآن الكريم بالرسم العثماني"
+ },
+ {
+  "id": "s82",
+  "en": "where each page, juz, hizb and quarter starts",
+  "ar": "بداية كل صفحة وجزء وحزب وربع"
+ },
+ {
+  "id": "s83",
+  "en": "the words of every printed line",
+  "ar": "ترتيب الكلمات في أسطر الصفحات كالمصحف المطبوع"
+ },
+ {
+  "id": "s84",
+  "en": "Quran font",
+  "ar": "خط المصحف"
+ },
+ {
+  "id": "s85",
+  "en": "the printed mushaf's word shapes",
+  "ar": "أشكال كلمات المصحف المطبوع"
+ },
+ {
+  "id": "s86",
+  "en": "Interface fonts",
+  "ar": "خطوط الواجهة"
+ },
+ {
+  "id": "s87",
+  "en": "headings — a Kufic font",
+  "ar": "العناوين — خط كوفي"
+ },
+ {
+  "id": "s88",
+  "en": "Arabic interface text",
+  "ar": "النصوص العربية في الواجهة"
+ },
+ {
+  "id": "s89",
+  "en": "English interface text",
+  "ar": "النصوص الإنجليزية في الواجهة"
+ },
+ {
+  "id": "r4_head",
+  "en": "Arabic headings",
+  "ar": "العناوين العربية"
+ },
+ {
+  "id": "other_scripts",
+  "en": "interface text in other scripts",
+  "ar": "نصوص الواجهة بالخطوط الأخرى"
+ },
+ {
+  "id": "s91",
+  "en": "recitations, ayah timings, radio",
+  "ar": "التلاوات وتوقيت الآيات والإذاعات"
+ },
+ {
+  "id": "s92",
+  "en": "prayer times calculated on the device",
+  "ar": "حساب مواقيت الصلاة على الجهاز"
+ },
+ {
+  "id": "u_dk_font",
+  "en": "the mushaf font if permission is not given — the same layout",
+  "ar": "خط المصحف البديل إن لم يُؤذن — بالترتيب نفسه"
+ },
+ {
+  "id": "u_everyayah",
+  "en": "one audio file for each ayah",
+  "ar": "ملف صوتي لكل آية"
+ },
+ {
+  "id": "u_quranenc",
+  "en": "translations of the meanings and tafsirs",
+  "ar": "ترجمات معاني القرآن والتفاسير"
+ },
+ {
+  "id": "u_qf",
+  "en": "Ibn Kathir, al-Tabari, al-Qurtubi, al-Baghawi and other tafsirs",
+  "ar": "تفسير ابن كثير والطبري والقرطبي والبغوي وغيرها"
+ },
+ {
+  "id": "u_sunnah",
+  "en": "the complete hadith collections",
+  "ar": "كتب الحديث كاملة"
+ },
+ {
+  "id": "u_hadeethenc",
+  "en": "hadiths with their grade, explanation and translations",
+  "ar": "أحاديث بدرجتها وشرحها وترجماتها"
+ },
+ {
+  "id": "u_dorar",
+  "en": "every scholar's ruling on a hadith — seven encyclopedias, online",
+  "ar": "أحكام العلماء على الحديث — سبع موسوعات، مع الإنترنت"
+ },
+ {
+  "id": "u_hisn",
+  "en": "the adhkar and duas",
+  "ar": "الأذكار والأدعية"
+ },
+ {
+  "id": "u_uthaymeen",
+  "en": "the list of the Names of Allah and their evidence",
+  "ar": "قائمة أسماء الله الحسنى وأدلتها"
+ },
+ {
+  "id": "u_badr",
+  "en": "explanations of the Names of Allah",
+  "ar": "شرح أسماء الله الحسنى"
+ },
+ {
+  "id": "u_editions",
+  "en": "the edition of every book of the library and of the Lives",
+  "ar": "طبعة كل كتاب في المكتبة والسِّيَر"
+ },
+ {
+  "id": "u_muezzin",
+  "en": "the adhan recordings",
+  "ar": "تسجيلات الأذان"
+ },
+ {
+  "id": "u_radio",
+  "en": "each station's own published stream",
+  "ar": "البث الذي تنشره كل إذاعة بنفسها"
+ },
+ {
+  "id": "u_osm",
+  "en": "the map of nearby mosques",
+  "ar": "خريطة المساجد القريبة"
+ }
+]

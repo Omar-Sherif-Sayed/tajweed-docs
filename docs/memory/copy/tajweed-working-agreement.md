@@ -4,7 +4,7 @@ description: "How Omar wants agents to work on the Tajweed product (plan-ask-cod
 metadata:
   node_type: memory
   type: feedback
-  modified: 2026-11-20T21:37:49.809Z
+  modified: 2026-11-20T22:11:50.121Z
   originSessionId: 4f32e8cc-e0b3-4843-a4c0-dae31d57f095
 ---
 
@@ -70,7 +70,11 @@ from named established Sunni sources; never author, paraphrase or machine-transl
 2026-11-21: «تحري دائماً أن تأتي بأفضل المصادر التي تروي قصصهم الحقيقية - تحري الدقة في كل شيء» — always search for the
 best source yourself (he asked me to research and bring data "from the best place" rather than leave him lost); explain
 source questions to him in Arabic when he asks. Seerah = last story of F20; all Companions with all their stories;
-new Lives part: the scholars of Islam (F51) and their books in F14 — list awaits his approval.
+new Lives part: the scholars of Islam (F51) and their books in F14 — the list of 53 approved 2026-11-21 (he added
+«الداء والدواء»); scholars shown by group or by time (by death year — birth years are missing or disputed for some,
+so I told him and ordered by death). Home order he wants: the Names and other sections above «السِّيَر», the Lives
+always last. Design-3-only work goes in `tools/build_design3.py` (texts `i18n/design3/`); it also owns the Sources
+screen (four states: verified / letter sent / letter ready / to check) — update it whenever a source's status changes.
 
 **Why:** it is a religious (Quran) application; a wrong text, reference or time is unacceptable to him.
 

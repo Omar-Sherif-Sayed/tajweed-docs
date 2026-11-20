@@ -2063,3 +2063,61 @@ I will accept these terms and conditions:
 
 [pasted text — not copied here]
 ```
+
+## The agent — 2026-11-20 16:45
+
+The conversation copy would now contain Dorar's full terms (your pasted text), and that is their copyrighted text in a public repository. I'm replacing it there with a link.
+
+The script that builds the conversation copy would put the paste back the next time it runs. Fixing it so pasted blocks are always left out.
+
+Done, and committed and pushed. We're now waiting for Dorar to send the API key.
+
+**Two new features:**
+- **F49 — الأخلاق والسلوك** (ethics and conduct), from Dorar's موسوعة الأخلاق والسلوك.
+- **F50 — الآداب الشرعية** (Islamic manners), from Dorar's موسوعة الآداب الشرعية.
+
+Each subject is shown exactly as Dorar publishes it, with its title, «الدرر السنية» and a clickable link. Both work online only. They are in `AGENTS.md` and in the plan as task `P10-W/A/I-11`.
+
+**All seven encyclopedias, and which features use them** (now in `AGENTS.md` §8.14):
+
+| Encyclopedia | Features |
+| --- | --- |
+| الحديثية | Hadith (F13), virtues (F29), the Islamic days (F35), the Prophet's ﷺ names (F48) |
+| التفسير | Tafsir (F5), word meanings (F34) |
+| العقدية | The Names of Allah (F39) |
+| الفقهية | The guides (F40), Zakat (F42) |
+| الأخلاق والسلوك | F49 |
+| الآداب الشرعية | F50 |
+| التاريخية | The prophets, Companions and caliphs (F20–F22) |
+
+**The terms you accepted are now binding rules for the code** (`AGENTS.md` §8.14):
+1. «الدرر السنية» and a clickable link appear on every text from them.
+2. Nothing is changed or shortened, and a hadith is never shown without its ruling.
+3. **The key stays on our server only.** All four of our repositories are public, so the key must never be put in the code or inside an app; it lives in a server setting.
+4. No bulk download or full copy of their data.
+5. Their texts are cached for at most 24 hours, and deleted at once if the service ends.
+6. At most 60 requests a minute; the server queues and caches so users never go over.
+7. A test version goes to Dorar two weeks before publishing.
+8. A leaked key is reported to them within 24 hours.
+9. When there is no internet, every Dorar screen says so clearly.
+
+The code that talks to Dorar is a new task, `P7-B2`, with a backend module named `dorar`.
+
+**One thing I changed:** the record of our conversation in the repository had copied the full text of Dorar's terms that you pasted. That is their text, and the repository is public, so I replaced it with a link to their terms page. I also changed the script that builds that record so anything pasted is always left out. Your own words stay as they are.
+
+**Waiting:** the API key from Dorar, and answers to the seven letters. Forward each reply to me when it arrives.
+
+## The author — 2026-11-20 21:33
+
+```text
+* حالياً عاوز أضيف في السير - علماء المسلمين وأضيف فيهم أبن القيم و أبن كثير والبخاري ومسلم وهكذا (أعرض عليا كل أسماء العلماء ) - وأضيف كتبهم في قسم الكتب ( مثل زاد المعاد لأبن القيم وهكذا)
+* بالنسبة للنقط اللي فوق The hadith books (al-Bukhari, Muslim, the Forty Nawawi) و . Tafsirs not on QuranEnc ممكن تشرحهملهم بالعربي علشان حاسس إني تاييه - يعني فاهم انك مش عارف تجيب البيانات دي منين - ممكن تبحث وتجيب البيانات من أفضل مكان 
+* Point 7: (R11, the Seerah) تمام خلي قصة سيدنا محمد أخر قصة في قصص الأنبياء - شايف ان ده مكانها الصحيح 
+* Point 7: R12, the Companions الصحابة (وليسوا الإصابة)تمام اللي جبتهم ولكن أريد كرهم جميعاً كلهم بكل قصصهم 
+* أسماء الله الحسني وأسماء النبي مش موجودين في ال main page - مكانهم فين؟
+* تحري دائماً أن تأتي بأفضل المصادر التي تروي قصصهم الحقيقية - تحري الدقة في كل شيء
+```
+
+## The agent — 2026-11-20 21:34
+
+HadeethEnc's API is documented on Postman. Calling it directly to see what one hadith record contains.

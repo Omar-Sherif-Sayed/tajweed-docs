@@ -4,7 +4,7 @@ description: "How Omar wants agents to work on the Tajweed product (plan-ask-cod
 metadata:
   node_type: memory
   type: feedback
-  modified: 2026-11-20T12:24:13.482Z
+  modified: 2026-11-20T21:37:49.809Z
   originSessionId: 4f32e8cc-e0b3-4843-a4c0-dae31d57f095
 ---
 
@@ -66,6 +66,11 @@ inheritance calculator. Every logo / icon / picture at best quality: SVG masters
 He has no qualified religious reviewer and wants content "100% sure", for أهل السنة: publish only verbatim content
 from named established Sunni sources; never author, paraphrase or machine-translate religious text. He withdrew the
 "name of Allah in red" idea on 2026-11-17: a standard mushaf with full tashkeel plus search.
+
+2026-11-21: «تحري دائماً أن تأتي بأفضل المصادر التي تروي قصصهم الحقيقية - تحري الدقة في كل شيء» — always search for the
+best source yourself (he asked me to research and bring data "from the best place" rather than leave him lost); explain
+source questions to him in Arabic when he asks. Seerah = last story of F20; all Companions with all their stories;
+new Lives part: the scholars of Islam (F51) and their books in F14 — list awaits his approval.
 
 **Why:** it is a religious (Quran) application; a wrong text, reference or time is unacceptable to him.
 

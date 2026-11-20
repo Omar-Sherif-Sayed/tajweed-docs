@@ -12,6 +12,9 @@ Drafted by the agent; **sent by the author** from his own e-mail or the owner's 
 | 6 | مؤسسة الدرر السنية | support@dorar.net | [06-dorar.md](06-dorar.md) | ⏸ sent 2026-11-20 (question 2 reworded) |
 | 7 | موقع mp3quran.net | — contact form only | [07-mp3quran.md](07-mp3quran.md) | ⚠ the form fails (2026-11-20) — optional, the site's terms already allow use |
 | 8 | EveryAyah.com (support through the Quran.com help centre) | — help-centre form | [08-everyayah.md](08-everyayah.md) | ⏸ sent 2026-11-20 — Quran.com help-centre request #20971, open |
+| 9 | موسوعة الأحاديث النبوية HadeethEnc.com | info@hadeethenc.com | [09-hadeethenc.md](09-hadeethenc.md) | ☐ to send |
+| 10 | Sunnah.com — request for API access | — GitHub issue | [10-sunnah-com.md](10-sunnah-com.md) | ☐ to send |
+| 11 | Quran Foundation — Content APIs (Quran.com) | developers@quran.com (questions) · registration in the Developer Console | [11-quran-foundation.md](11-quran-foundation.md) | ☐ to send |
 
 **Not drafted yet** — the owner depends on an edition not chosen yet: the tafsir editions not on QuranEnc, the hadith
 editions (`P7-D1`), the books of F14 and F20 – F22 (`P8-D1`, `P9-D1`), al-Sa'di's explanation of the Names (its edition),

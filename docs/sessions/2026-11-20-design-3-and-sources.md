@@ -59,6 +59,20 @@ aadab, «so we can add them to our plan and features»), accepted the terms and 
 Recorded: F49 ethics and conduct, F50 Islamic manners; the accepted terms as binding rules (`AGENTS.md` §8.14); the
 `dorar` backend module and task `P7-B2`. The terms are cited by link and summarised in the rules, not copied.
 
+## 2026-11-21 — the author's sixth message: scholars, sources, R11, R12, the Names on the home screen
+
+The author asked: a fourth part of «السِّيَر» for the scholars of Islam (Ibn al-Qayyim, Ibn Kathir, al-Bukhari, Muslim
+…), with all their names shown to him first, and their books in F14; the hadith and tafsir sources explained in
+Arabic and researched "from the best place"; R11 — the Seerah is the last story of the prophets; R12 — all the
+Companions with all their stories; where the Names of Allah and of the Prophet ﷺ are on the home screen; and «تحري
+دائماً أن تأتي بأفضل المصادر … تحري الدقة في كل شيء».
+
+The agent checked the sources: sunnah.com (complete collections; API key by a GitHub issue; offline dump not yet),
+HadeethEnc.com (about 4,000 hadiths with grade, explanation, references and translations; open API; info@hadeethenc.com),
+the Quran Foundation Content APIs (Ibn Kathir, al-Tabari, al-Qurtubi, al-Baghawi, al-Sa'di, al-Muyassar, al-Wasit; offline
+allowed with a weekly sync; developers@quran.com). Recorded R11, R12, F51 and the accuracy rule; letters 09 – 11
+drafted; the list of scholars and their books proposed in the answer, for the author's approval.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)
@@ -67,5 +81,8 @@ Recorded: F49 ethics and conduct, F50 Islamic manners; the accepted terms as bin
 - https://dorar.net/article/389 · https://dorar.net/api-services · https://dorar.net/api-services/terms
 - https://qurancomplex.gov.sa/
 - https://play.google.com/store/apps/details?id=com.arabiait.hisnmuslim
+- https://hadeethenc.com/ar/home · https://hadeethenc.com/api/v1/hadeeths/one/?language=ar&id=2962 · https://hadeethenc.com/ar/home/contact
+- https://sunnah.com/developers · https://github.com/sunnah-com/api
+- https://api-docs.quran.foundation/ · https://api-docs.quran.foundation/docs/connected-apps/ · https://api.quran.com/api/v4/resources/tafsirs
 - https://quranenc.com/api/v1/translations/list · https://quranenc.com/ar/browse/arabic_saadi (and the other Arabic keys)
 - https://quranenc.com/ar/home/contact_us · https://binothaimeen.net/ · https://al-badr.net/contact · https://www.mp3quran.net/ar/contact-us · https://everyayah.com/ · https://binwahaf.com/ · https://apps.apple.com/app/id1439791907 · https://hisn-almuslim.com/

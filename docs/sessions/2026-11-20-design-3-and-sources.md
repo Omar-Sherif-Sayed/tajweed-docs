@@ -37,6 +37,14 @@ are open to all, even for commercial use), EveryAyah (Quran.com's help centre). 
 Sa'id al-Qahtani, died in 2018; his official site binwahaf.com publishes no address; the app he certified gives
 hisn-almuslim.com — the letter asks them who holds the rights now.
 
+## The author's third message — what was sent, Hisn al-Muslim, what is left
+
+Sent by the author on 2026-11-20: King Fahd Complex, QuranEnc, Ibn Uthaymeen Foundation (e-mail); Sheikh al-Badr (his
+site's form confirmed it); EveryAyah (Quran.com help centre, request #20971, open). mp3quran's form returned an error
+each time — optional, since its pages already allow use. The agent reworded question 2 of the Dorar letter (the hadith
+texts come from our own edition offline; only a link to Dorar is asked for) and found the Hisn al-Muslim address:
+info@hisn-almuslim.com, the support address of the app the Sheikh certified, on its Google Play listing.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)
@@ -44,4 +52,5 @@ hisn-almuslim.com — the letter asks them who holds the rights now.
 - https://mp3quran.net/ar/privacy
 - https://dorar.net/article/389 · https://dorar.net/api-services · https://dorar.net/api-services/terms
 - https://qurancomplex.gov.sa/
+- https://play.google.com/store/apps/details?id=com.arabiait.hisnmuslim
 - https://quranenc.com/ar/home/contact_us · https://binothaimeen.net/ · https://al-badr.net/contact · https://www.mp3quran.net/ar/contact-us · https://everyayah.com/ · https://binwahaf.com/ · https://apps.apple.com/app/id1439791907 · https://hisn-almuslim.com/

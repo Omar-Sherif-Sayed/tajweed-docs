@@ -1799,3 +1799,82 @@ binwahaf.com shows no address on its home page. Reading its footer in the browse
 binwahaf.com publishes no address and no contact page, only "all rights reserved". One more search for the company behind the certified app.
 
 Eight letters written. Updating the tracker and `AGENTS.md`, then commit and push.
+
+The eight letters are written and pushed. Each one has its address or form, the subject, and the full text in Arabic with English below it; send both in one message. They are in [docs/permissions/letters/](docs/permissions/letters/README.md), one file per letter. Every address came from the owner's own site today. I didn't send anything: the letters go from your own email or through the owner's form.
+
+**By email (4):**
+
+| # | To | Address | Subject | Letter |
+| --- | --- | --- | --- | --- |
+| 1 | King Fahd Complex (page fonts) | <e-mail> | طلب إذن باستخدام خطوط صفحات مصحف المدينة (١٤٠٥هـ) في تطبيق مجاني | [01-king-fahd-complex.md](docs/permissions/letters/01-king-fahd-complex.md) |
+| 2 | QuranEnc (translations of the meanings and tafsirs) | <e-mail> | طلب إذن باستخدام ترجمات معاني القرآن والتفاسير في تطبيق مجاني | [02-quranenc.md](docs/permissions/letters/02-quranenc.md) |
+| 3 | Ibn Uthaymeen Foundation (the list of the Names of Allah) | <e-mail> | طلب إذن بنقل أسماء الله الحسنى وأدلتها من «القواعد المثلى» في تطبيق مجاني | [03-ibn-uthaymeen-foundation.md](docs/permissions/letters/03-ibn-uthaymeen-foundation.md) |
+| 6 | Dorar (hadith grading) | <e-mail> | طلب الوصول إلى واجهة الموسوعة الحديثية لتطبيق مجاني | [06-dorar.md](docs/permissions/letters/06-dorar.md) |
+
+**Through a contact form, because these sites publish no email address (3):**
+- **Sheikh al-Badr's site:** the form at al-badr.net/contact. Letter: [05-al-badr.md](docs/permissions/letters/05-al-badr.md).
+- **mp3quran:** the form at mp3quran.net/ar/contact-us. Letter: [07-mp3quran.md](docs/permissions/letters/07-mp3quran.md). This one is only a courtesy note: their contact page already says their rights are open to everyone, "even for commercial use". It asks them to confirm one thing, offline downloads.
+- **EveryAyah:** its "Contact Us" leads to the Quran.com help centre, quran.zendesk.com. Letter: [08-everyayah.md](docs/permissions/letters/08-everyayah.md).
+
+**Hisn al-Muslim, the hard one (1):** [04-hisn-almuslim.md](docs/permissions/letters/04-hisn-almuslim.md)
+- The author, Sheikh Sa'id al-Qahtani, died in 2018 (sources below). His official site, binwahaf.com, publishes no address.
+- The app he certified, "Hisn AlMuslim" on the App Store, gives hisn-almuslim.com as its contact. Send it through that app's contact screen; the letter also asks them who holds the rights now.
+- This letter covers both his books we need: Hisn al-Muslim and his explanation of the Names of Allah.
+
+**Two things to know before sending:**
+- **Dorar:** their formal route is the access-request form at dorar.net/api-services, which they review on a working test version. So the email introduces the project now and asks whether to apply now or once our backend exists.
+- **Letters not written yet:** the tafsir editions not on QuranEnc, the hadith editions, the books, al-Sa'di's explanation of the Names, the classical lists of the Prophet's ﷺ names, and the muezzin recordings. Each owner depends on which edition we choose, so those letters come once the edition is chosen. The Quran Foundation API needs a sign-up on its site, not a letter.
+
+**When a reply comes:** forward it to me or save it in `docs/permissions/answers/`, and I'll update the status table.
+
+Sources for Hisn al-Muslim:
+- [Sa'id bin Ali bin Wahf Al-Qahtani — Wikipedia](https://en.wikipedia.org/wiki/Sa%27id_bin_Ali_bin_Wahf_Al-Qahtani)
+- [حصن المسلم — المعرفة](https://www.marefa.org/%D8%AD%D8%B5%D9%86_%D8%A7%D9%84%D9%85%D8%B3%D9%84%D9%85)
+- [The certified app on the App Store](https://apps.apple.com/app/id1439791907)
+- [justuseapp contact page](https://justuseapp.com/en/app/597494181/كتاب-حصن-المسلم/contact)
+
+## The author — 2026-11-20 15:16
+
+```text
+تم ارسال هذه الأيميلات 
+01-king-fahd-complex.md
+02-quranenc.md
+03-ibn-uthaymeen-foundation.md
+أريد أن افهم لماذا في هذا الأيميل 06-dorar.md يوجد هذا السؤال؟ (وهل يجوز عرض الرابط المرجعي فقط (دون نص الحديث) في وضع عدم الاتصال بالإنترنت؟)
+الا نستطيع عرض نص الحديث دون وجود انترنت؟
+```
+
+## The agent — 2026-11-20 15:17
+
+سجّلتُ الرسائل الثلاث (مجمع الملك فهد، QuranEnc، مؤسسة ابن عثيمين) على أنها أُرسلت اليوم وننتظر الرد، ورفعتُ التعديل.
+
+**الجواب المختصر: نعم، نستطيع عرض نص الحديث دون إنترنت، لكن من نسختنا نحن، لا من الدرر.**
+
+**لماذا كتبتُ هذا السؤال؟** شروط واجهة الدرر البرمجية تمنع ثلاثة أشياء:
+- تنزيل قاعدة بياناتهم أو تخزينها كاملة؛
+- الاحتفاظ بنتائجهم أكثر من ٢٤ إلى ٤٨ ساعة؛
+- وضع مفتاح الواجهة داخل التطبيق، فيجب أن يمر كل طلب عبر خادمنا.
+
+فكل ما يأتي من الدرر يحتاج إلى إنترنت، ويشمل ذلك نص الحديث كما في موسوعتهم وخلاصة الحكم التي جمعوها. وتشترط الدرر أيضًا ألا يُعرض متن الحديث من موسوعتهم دون خلاصة الحكم المرافقة له. لذلك سألتُ: إذا انقطع الإنترنت، هل يجوز أن يبقى على الأقل الرابط إلى صفحة الحديث عندهم؟
+
+**لكن نص الحديث نفسه ليس ملكًا للدرر.** أحاديث صحيح البخاري وصحيح مسلم والأربعين النووية ستأتي من نسخة رقمية موثّقة نختارها (المهمة `P7-D1`)، ونضعها داخل التطبيق، فتعمل دون إنترنت كالمصحف تمامًا، ومعها رقم الحديث ومصدره ودرجته كما تذكرها تلك النسخة. أما دور الدرر فمحصور في ميزتين تعملان عند الاتصال: التحقق الحي من الحكم، والرابط إلى شرح الحديث وتخريجه في موسوعتهم.
+
+| | دون إنترنت | مع الإنترنت |
+| --- | --- | --- |
+| نص الحديث ورقمه ومصدره ودرجته | ✔ من نسختنا المضمّنة في التطبيق | ✔ |
+| حكم المحدّث وروابط الشرح من الدرر | ✗ (إلا نتيجة طُلبت خلال آخر ٤٨ ساعة) | ✔ عبر خادمنا |
+
+صياغة السؤال في الرسالة توحي بأننا لا نملك النص دون إنترنت، وهذا غير صحيح. والأوضح أن نقول: "دون إنترنت يعرض التطبيق الحديث من نسختنا مع مصدره، فهل يجوز أن نضع بجانبه رابط صفحته في موقعكم، دون أي بيانات من واجهتكم، ليتحقق المستخدم من الحكم عند الاتصال؟" رسالة الدرر لم تُرسل بعد، فيمكنني تعديلها قبل أن ترسلها.
+
+## The author — 2026-11-20 15:54
+
+```text
+* 05-al-badr.md. is done also with message after sending (شكرا! تم إرسال البريد الإلكتروني الخاص بك بنجاح. سوف نتصل بك في أقرب وقت ممكن)
+* 07-mp3quran.md always page return this error message after submitting (عذرًا! حدث خطأ أثناء إرسال رسالتك. يرجى المحاولة مرة أخرى.)
+* 08-everyayah.md give me this toast message (Check your email to verify your address. Once verified, your request will be submitted (automatically).) and i go to my email and cliecked the url sent to me and create a password then go to (https://quran.zendesk.com/hc/en-us/requests/20971) to find my request with status open 
+* update رسالة ال درر 
+* what should i do with 04-hisn-almuslim.md 
+* what left to do now? what missing?
+
+[1 photo(s) attached — kept privately, not in this repository]
+```

@@ -3,8 +3,8 @@
 | | |
 | --- | --- |
 | **To** | أصحاب حقوق كتب الشيخ سعيد بن علي بن وهف القحطاني رحمه الله (حصن المسلم) |
-| **Address** | — no published e-mail found (2026-11-20) |
-| **How to send** | Send through the official channels: the Sheikh's official site binwahaf.com publishes no address; the app the Sheikh certified (App Store: «حصن المسلم | Hisn AlMuslim», by Arabia For Information Technology) gives hisn-almuslim.com as its contact — use its contact screen, or ask its team who holds the rights now |
+| **Address** | info@hisn-almuslim.com |
+| **How to send** | E-mail — the support address of the Hisn al-Muslim app that the Sheikh certified (Google Play: «حصن المسلم» by Arabia For Information & Technology, `com.arabiait.hisnmuslim`, read 2026-11-20). The letter asks them who holds the rights now. |
 | **Subject** | طلب إذن بنقل «حصن المسلم» و«شرح أسماء الله الحسنى» في تطبيق مجاني — Permission request: Hisn al-Muslim and Sharh Asma' Allah al-Husna |
 
 ---

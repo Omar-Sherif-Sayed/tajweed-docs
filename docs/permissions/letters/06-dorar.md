@@ -21,7 +21,9 @@
 
 وطريقة الاستخدام كما تشترطون: الاستدعاء من خادمنا فقط ولا يوضع المفتاح في التطبيقات، والتخزين المؤقت لا يتجاوز ٤٨ ساعة، وعدم السحب الجماعي، وذكر «الدرر السنية» مع رابط ظاهر قابل للنقر تحت كل نتيجة، وعدم فصل الحكم عن الحديث أو تعديله، وإتاحة بيئة تجريبية لمراجعتكم قبل النشر.
 
-ونرجو إفادتنا: هل نقدّم طلب الوصول الآن أم بعد اكتمال البيئة التجريبية؟ وهل يجوز عرض الرابط المرجعي فقط (دون نص الحديث) في وضع عدم الاتصال بالإنترنت؟
+ونرجو إفادتنا بأمرين:
+١. هل نقدّم طلب الوصول الآن، أم بعد اكتمال البيئة التجريبية؟
+٢. نصوص الأحاديث في التطبيق مأخوذة من نسخة موثّقة من كتب الحديث (كصحيح البخاري وصحيح مسلم) نضمّنها في التطبيق، فتُعرض دون إنترنت برقمها ومصدرها، ولا نخزّن شيئًا من بيانات واجهتكم. فهل يجوز أن نضع بجانب الحديث في هذه الحالة رابطًا إلى صفحته في موقعكم فقط، ليفتحه المستخدم عند الاتصال ويطّلع على الحكم والشرح عندكم؟
 
 وجزاكم الله خيرًا،
 عمر شريف
@@ -41,7 +43,9 @@ We have read the terms of use of your API and accept all of them. We wish to use
 
 We will use it exactly as your terms require: called from our server only, the key never placed in the apps; caching for no more than 48 hours; no bulk download; "Dorar al-Saniyyah" shown with a visible, clickable link under every result; the grading never separated from the hadith or changed; and a test environment for your review before we publish.
 
-Could you tell us: should we submit the access request now, or once the test environment is ready? And may we show only the reference link (without the hadith text) when the user is offline?
+Could you tell us two things:
+1. Should we submit the access request now, or once the test environment is ready?
+2. The hadith texts in the application come from a verified edition of the hadith books (such as Sahih al-Bukhari and Sahih Muslim) that we include in the application, so they are shown offline with their number and source, and we store none of your API's data. In that case, may we put beside a hadith only a link to its page on your site, which the user opens when online to read the ruling and the explanation there?
 
 With thanks,
 Omar Sherif

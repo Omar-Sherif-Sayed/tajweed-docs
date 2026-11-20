@@ -203,6 +203,10 @@ Done when: the CI build and tests are green. ⚠ "Runs on a device" is **not** c
 5. After approval: the Figma file in the author's account, through his Chrome session.
 6. ☐ Fonts: the licence of each font is checked and recorded before it is used (Quran font: `P0-12`).
 
+**State 2026-11-20, fourth message — design 3 chosen** (the author: «خلينا نعتمد في الكود علي التصميم رقم 3 وسيب
+التصاميم الأخري ماتمسحهاش»). All further design work is on `round-3.html`; designs 1 and 2 stay in the repository
+unchanged. Remaining: the screens not yet drawn (§13 "Screens to design"), the Figma elements of design 3, `P0-17`.
+
 **State 2026-11-20, third message:** design 3 checked against the tafsirs of every ayah (al-Sa'di, Ibn Kathir)
 and the hadith numbers on sunnah.com; five landscapes corrected and five Paradise directions added (28 in all); the
 Names of Allah and the names of the Prophet ﷺ screens in the three designs; the asset quality rule (`P0-17`). ☐ Figma:
@@ -532,7 +536,8 @@ notifies (author, 2026-11-20).
 | Confirmation of the application id `io.github.omarsherifsayed.tajweed` | P0-07, P0-09, P0-10 |
 | Choice of the commit e-mail (R10) | P0-03 |
 | Android Studio installed | P0-09 |
-| Colour and screen approval — design 1, 2 or 3 | P0-11 |
+| ✔ Design 3 chosen (2026-11-20) | P0-11 |
+| Which permission letters to draft first, and sending them (`docs/permissions/README.md`) | P0-13 |
 | Figma (agent): the colour rows of ten directions and the new and changed landscapes of design 3, after the Starter plan's limit resets | P0-11 |
 | Reading the meanings of design 2 | P0-16, F19 |
 | Choice of Quran text and font | P0-12 |

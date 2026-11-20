@@ -4,7 +4,7 @@ description: "How Omar wants agents to work on the Tajweed product (plan-ask-cod
 metadata:
   node_type: memory
   type: feedback
-  modified: 2026-11-20T11:32:27.286Z
+  modified: 2026-11-20T12:24:13.482Z
   originSessionId: 4f32e8cc-e0b3-4843-a4c0-dae31d57f095
 ---
 
@@ -44,7 +44,10 @@ wiped, restore it from `docs/memory/` (then put back the two removed facts from 
 Design rules (2026-11-19, 2026-11-20): no cross shape anywhere (no plus sign, no four-armed star) — a symbol of Christianity;
 no pictures of prophets or Companions; only the Mountains direction is for low vision / colour blindness. Prototype
 files: round N = design N (`round-1.html` design 1 … `round-3.html` design 3), i18n in `i18n/round<N>/`. New screens go into all three designs while he has not chosen one (his answer, 2026-11-20).
-Design 3 has 28 directions (2026-11-20); design sources are the Quran and authentic Sunnah only, and every
+**Design 3 (`round-3.html`) is the chosen design (2026-11-20)** — all work goes there; designs 1 and 2 are
+kept, never deleted, never changed. Sources are tracked in `docs/permissions/README.md` (read licence / letter drafted
+by me and sent by him / content check); Dorar now has API terms (server-side key, ≤48 h cache, review before
+publishing). Design 3 has 28 directions (2026-11-20); design sources are the Quran and authentic Sunnah only, and every
 drawing must follow the ayah's authentic tafsirs (he asked; check al-Sa'di and Ibn Kathir — quran.ksu.edu.sa works
 with curl — and hadith numbers on sunnah.com via the browser pane, since curl gets 403); Paradise may be drawn from its
 descriptions, but never a person, face, clothing on a body, a cup, or the unseen (e.g. Sidrat al-Muntaha); earlier landscapes are kept (Figma «Earlier landscapes», `elements/design-3/landscapes-earlier/`),

@@ -1649,3 +1649,85 @@ Now Figma, starting with one small call to see if the plan's limit has reset: th
 Figma's limit hasn't reset yet. The new and changed drawings are saved as SVG in the repository and recorded as pending in `AGENTS.md`. Now the documents.
 
 Now the plan, the design READMEs and the session record.
+
+Now the memory, then commit and push.
+
+All five points are done and pushed. The screens are in all three designs and in all 22 languages. Figma could not be updated because its free plan's call limit hasn't reset.
+
+**The tafsirs (your main point)**
+I read each design-3 direction's ayah in al-Sa'di and Ibn Kathir, read your Paradise examples the same way, and checked every hadith number on sunnah.com. Most drawings already matched the tafsirs. Five did not, and are now redrawn:
+- **The good tree (14:24):** al-Bukhari 4698 records the Prophet ﷺ saying «هي النخلة», and al-Sa'di and Ibn Kathir agree. It is now a palm, with its roots deep and its dates.
+- **The shade (25:45):** both tafsirs say this is the time between dawn and sunrise. My drawing showed long shadows from a low sun, which was wrong. Now the whole land is in soft shade and the sun is just rising.
+- **Al-Asr (103:1):** al-Sa'di explains it as time, night and day, and Ibn Kathir gives that as the better-known view. My earlier "the time of the Asr prayer" was wrong and is withdrawn. The drawing now shows day turning into night.
+- **Two Gardens (55:62):** al-Bukhari 4878 says these two gardens are "of silver, their vessels and what is in them". Al-Sa'di explains «نضاختان» as gushing. I added silver domes and two springs rising in arcs.
+- **Al-Kawthar:** al-Bukhari 4964 describes its banks as domes of hollow pearl. Ibn Kathir's narrations add that it flows without a dug channel and its pebbles are pearls; al-Sa'di says its water is whiter than milk. It is now drawn that way.
+
+The ships (55:24) are also larger, since al-Sa'di says they are as big as mountains.
+
+**Five new Paradise directions** bring design 3 to 28:
+
+| Direction | Source |
+| --- | --- |
+| Extended shade | 56:28–30, with al-Bukhari 4881: the tree whose shade a rider crosses in a hundred years |
+| The rivers | 47:15 |
+| Lofty dwellings | 39:20 |
+| Fruit hanging near | 69:23, 76:14 |
+| Tents of a single hollow pearl | al-Bukhari 4879, Muslim 2838 |
+
+None of them shows a person, a face, clothing, a cup or the unseen, so Sidrat al-Muntaha (53:14) is left out. The colour of the river of drink in 47:15 is not described in the tafsirs I read, so it is a design choice, and the document says so.
+
+All 32 earlier drawings are kept in `docs/design/elements/design-3/landscapes-earlier/`. The full review is in `design-3-meanings.md` §3.0.
+
+**The Names of Allah:** the screens are in all three designs.
+- The list holds 14 names, taken from the Quran text of 59:22–24.
+- Each name shows its evidence; al-Rahman shows 1:3 and 59:22.
+- Then three explanations, each under its book, in your order:
+  1. Ibn Uthaymeen's list with al-Sa'di's explanation.
+  2. Al-Qahtani.
+  3. Al-Badr.
+- The explanation texts are placeholders until we have each book's text and permission to use it.
+
+**The Prophet's ﷺ names:**
+- The authentic hadiths come first: al-Bukhari 3532 and Muslim 2354 and 2355, eight names. For al-Mahi and al-Hashir, the meaning is in the hadith's own words.
+- Then a section for the long classical lists, such as al-Suyuti and Ibn al-Qayyim.
+- Every name has its source and meaning. Where its evidence is weak or disputed, the screen says so and quotes the scholar.
+- The full list of 200+ is planned with its book editions to be checked, task `P10-D1`.
+
+**No inheritance calculator:** recorded as your decision.
+
+**Quality:** the rule is now in `AGENTS.md` and the plan, as task `P0-17`.
+- Every logo, icon and picture is kept as SVG in the docs repository. SVG stays sharp at any size, and the apps will use it directly.
+- PNG only where a store requires it, exported from the SVG at full size.
+- The full export set is made once you choose a design.
+
+**Checks:**
+- All three pages in all 22 languages: no errors, no missing text, every home screen fits.
+- The 28 colour directions pass the contrast and night checks.
+- The 38 Quran excerpts in the meanings document match the verified text word for word.
+
+**Figma, still pending:** the colour rows for ten directions, the 22 new and redrawn landscapes, and copies of the earlier drawings. Everything is saved in the repository and listed in `AGENTS.md`, ready to add once the limit resets.
+
+Still waiting for your answers on R11 (is the Seerah the last story of the prophets section?) and R12 (which Companions come first).
+
+## The author — 2026-11-20 12:19
+
+```text
+* كل شيء تمام حالياً - خلينا نعتمد في الكود علي التصميم رقم 3 وسيب التصاميم الأخري ماتمسحهاش ولكن هايكون شغلنا كله علي التصمرم رقم 3 وأي تحديث او شغل هايكون عليه إن شاء الله 
+* خلينا نشوف المصادر - في حاجات كاتب عليها (⏳ بانتظار التحقق أو الإذن) دي هاتتحقق منها ازاي او هاتاخد تالأذن إزاي إننا نستخدم الأشياء دي؟
+```
+
+## The agent — 2026-11-20 12:20
+
+The Sources screen of design 3 marks five items as waiting. Before answering how each gets settled, I'm checking what each source's own files and terms say today; some only need reading.
+
+mp3quran's privacy page has a copyright paragraph, and the King Fahd Complex site lists contact details and an open-data link. Reading both in full.
+
+Dorar's page offers its search service "to site owners" without written terms; its footer links to a newer API page. Checking that one.
+
+New since November 16: Dorar now has an API page with written terms of use («شروط الاستخدام») and an access-request form («طلب الوصول»). Reading the terms.
+
+Dorar's terms change the plan for hadith (summary below). Now I'm recording all of this in the documents. First, where the Sources list is generated.
+
+The list sits directly in each page. Since design 3 is now the working design, I'm updating only `round-3.html` and leaving the other two as they are.
+
+Now the session record (this is a new working session), the memory, then commit and push.

@@ -1878,3 +1878,62 @@ Sources for Hisn al-Muslim:
 
 [1 photo(s) attached — kept privately, not in this repository]
 ```
+
+## The agent — 2026-11-20 15:57
+
+Five letters are now recorded as sent and waiting for answers: King Fahd Complex, QuranEnc, Ibn Uthaymeen Foundation, al-Badr, and EveryAyah (request #20971 on Quran.com, status open). Everything is committed and pushed.
+
+**mp3quran:** the form failing isn't a problem. Their contact page already says «حقوق الموقع متاحة للجميع حتى ولو كانت لإغراض تجارية» (the site's rights are open to everyone, even for commercial use), so their permission is already on record. The letter only asked them to confirm offline downloads. If you want to try again later: the English form at mp3quran.net/eng/contact-us, or a message to [x.com/mp3quran](https://x.com/mp3quran) or [facebook.com/MP3Quran](https://www.facebook.com/MP3Quran).
+
+**Dorar, letter updated:** question 2 now says clearly that our hadith texts come from our own verified edition and are shown offline with their number and source. It then asks only whether we may put a link to the hadith's page on their site beside it. The file is [06-dorar.md](docs/permissions/letters/06-dorar.md). Send it to <e-mail> with the same subject.
+
+**Hisn al-Muslim:** I found the address. The app the Sheikh certified («حصن المسلم» by Arabia For Information & Technology, which describes itself as «معتمد للشيخ سعيد بن علي القحطاني رحمه الله») lists **<e-mail>** as its support email on Google Play. Send them [04-hisn-almuslim.md](docs/permissions/letters/04-hisn-almuslim.md) as it is. It asks for permission, and if they don't hold the rights, who does now. The same company also makes the official Ibn Uthaymeen app, so they may be able to help with that too.
+
+**Left for you:**
+1. Send two letters: Hisn al-Muslim and Dorar.
+2. Forward any answer to me, or save it in `docs/permissions/answers/`. Nothing is used until its answer arrives.
+
+**Letters I can't write yet:** each owner depends on which edition we choose:
+- the hadith books (al-Bukhari, Muslim, the Forty);
+- tafsirs not on QuranEnc;
+- the books of F14 and the Lives;
+- al-Sa'di's explanation of the Names of Allah;
+- the classical lists of the Prophet's ﷺ names;
+- the muezzin recordings.
+
+The Quran Foundation API is a sign-up on their site, not a letter, and is only needed if QuranEnc isn't enough.
+
+**The rest of the project, in order:**
+1. **The remaining screens in design 3:** reciter picker, tajweed lesson, radio, prayer times with the six backgrounds, Qibla, hadith, book reader, settings, About.
+2. **Figma:** the colour rows and landscapes still missing on Starter. That plan seems to allow only a few calls a month, so at some point you may want to upgrade for this.
+3. **P0-12, the sources register:** fill it in, the glyph table for the 9 ayahs, check Makki / Madani against your printed copy.
+4. **P0-06 … P0-10:** check the versions, then scaffold the four projects. This is where coding starts, with the backend first.
+5. **P2-D1:** the default prayer-time method of each country, with its official source. It can be done at any time.
+6. **P0-17:** exports at the best quality for design 3.
+7. Still waiting for your answers on R11 (is the Seerah the last story of the prophets section?) and R12 (which Companions first).
+
+## The author — 2026-11-20 16:11
+
+```text
+* 04-hisn-almuslim.md email sent
+* 06-dorar.md email sent 
+
+
+Letters I can’t write yet:
+
+* the hadith books (al-Bukhari, Muslim, the Forty), will get it from all and mention everyone say what 
+* tafsirs not on QuranEnc; what is the diff?
+* the books of F14 and the Lives; -> please descript 
+* al-Sa’di’s explanation of the Names of Allah; and the classical lists of the Prophet’s ﷺ names; the muezzin recordings. -> what is the problem?
+
+
+point number 7 also need description 
+
+let me know what is left
+```
+
+## The agent — 2026-11-20 16:12
+
+QuranEnc carries six Arabic works, plus al-Mukhtasar in about 30 languages. Ibn Kathir, al-Tabari, al-Baghawi and al-Qurtubi are not there. Getting the exact titles of three of the six.
+
+QuranEnc's Arabic works are al-Mukhtasar, al-Muyassar, al-Sa'di and three more, including a book of word meanings. Recording that, and your rule for hadith gradings, then commit and push.

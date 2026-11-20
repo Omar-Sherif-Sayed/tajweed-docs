@@ -45,6 +45,13 @@ each time — optional, since its pages already allow use. The agent reworded qu
 texts come from our own edition offline; only a link to Dorar is asked for) and found the Hisn al-Muslim address:
 info@hisn-almuslim.com, the support address of the app the Sheikh certified, on its Google Play listing.
 
+## The author's fourth message — the last two letters sent; the letters not yet written
+
+Hisn al-Muslim and Dorar sent (2026-11-20): seven letters out. On the hadith gradings the author said «will get it
+from all and mention everyone say what» — recorded in F13: every scholar's ruling with its source. QuranEnc's Arabic
+tafsirs checked: al-Mukhtasar, al-Muyassar, al-Sa'di, and three more; Ibn Kathir, al-Tabari, al-Baghawi and al-Qurtubi
+are not there. The agent explained why the other letters wait for a chosen edition, and R11 / R12.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)
@@ -53,4 +60,5 @@ info@hisn-almuslim.com, the support address of the app the Sheikh certified, on 
 - https://dorar.net/article/389 · https://dorar.net/api-services · https://dorar.net/api-services/terms
 - https://qurancomplex.gov.sa/
 - https://play.google.com/store/apps/details?id=com.arabiait.hisnmuslim
+- https://quranenc.com/api/v1/translations/list · https://quranenc.com/ar/browse/arabic_saadi (and the other Arabic keys)
 - https://quranenc.com/ar/home/contact_us · https://binothaimeen.net/ · https://al-badr.net/contact · https://www.mp3quran.net/ar/contact-us · https://everyayah.com/ · https://binwahaf.com/ · https://apps.apple.com/app/id1439791907 · https://hisn-almuslim.com/

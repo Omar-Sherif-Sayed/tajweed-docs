@@ -1731,3 +1731,71 @@ Dorar's terms change the plan for hadith (summary below). Now I'm recording all 
 The list sits directly in each page. Since design 3 is now the working design, I'm updating only `round-3.html` and leaving the other two as they are.
 
 Now the session record (this is a new working session), the memory, then commit and push.
+
+This session's log continues the earlier one, so its copy would repeat it. Instead I'm refreshing the existing conversation copy and dropping the duplicate.
+
+Design 3 is now the design for web, Android and iPhone. Designs 1 and 2 stay in the repository, unchanged and never deleted; every new screen and fix goes into design 3 only. This is recorded in `AGENTS.md`, the plan and my memory, and is committed and pushed.
+
+#### How a source gets cleared
+
+Each source is cleared in one of three ways:
+
+1. **Read its licence:** when the owner publishes a licence file or terms page, I read it on the owner's own site and record the link, the date and the exact clause.
+2. **Ask in writing:** when there is no licence, "all rights reserved", or terms that need an agreement. I draft the letter in Arabic and English. **You send it** from your own email, or fill in the owner's form, because I don't send messages on your behalf. The reply is saved in the repository.
+3. **Check the content itself:** even with a clear licence, every religious text is compared by script with its source. You check samples against your printed copy, and a qualified reviewer checks too, once we have one.
+
+#### The five sources marked "⏳ pending" in design 3
+
+I checked them again today on their owners' sites:
+
+| Source | Result |
+| --- | --- |
+| Noto fonts and Vazirmatn | ✔ Licence files read: OFL 1.1, a free font licence |
+| The prayer-time library, Adhan | ✔ Licence files of all three editions (web, Android, iPhone): MIT |
+| mp3quran.net | ✔ Its own page says: «جميع الحقوق متاحة للجميع و يحق لأي زائر أو مطور استخدام اي مادة أو رابط من الموقع». I still advise a short courtesy letter about offline downloads, since the recordings themselves belong to the reciters. |
+| Dorar (الدرر السنية) | ⏸ **New since we last checked:** written API terms and an access-request form (details below). |
+| King Fahd Complex page fonts | ☐ Still «جميع الحقوق محفوظة», and the downloads still say «قريباً». A letter is needed, to <e-mail>. Until they answer, the fallback is the DigitalKhatt Old Madina font, which has the same page layout and an open licence. |
+
+Design 3's Sources screen now shows these results.
+
+**Dorar's terms** require us to:
+- show «الدرر السنية» with a clickable link on every text;
+- never change or shorten a hadith's grade, or show the hadith without it;
+- never download the whole database, and keep a cache for at most 24–48 hours;
+- keep the access key on our server only, never inside the apps;
+- stay under 60 requests a minute;
+- give Dorar a test version to review before we publish.
+
+This means Dorar can be a live grading lookup through our backend, which fits our design, but not our hadith database and not available offline. So the hadith texts themselves must come from a verified edition of the hadith books. You would fill in their access request once the backend exists.
+
+#### Everything else still waiting
+
+`docs/permissions/README.md` now lists every source the app will need, not only those five: how each is cleared, who does it, and where it stands. The ones that need a letter are:
+- QuranEnc, for the translations of the meanings and the tafsirs;
+- Hisn al-Muslim;
+- the book editions;
+- the books on the Names of Allah and the Prophet's ﷺ names;
+- EveryAyah;
+- the muezzin recordings.
+
+An old book, such as Ibn Kathir's tafsir, is free in itself, but a modern edited edition can have its own rights. So each edition we use must be cleared separately.
+
+## The author — 2026-11-20 14:43
+
+```text
+Give me all email required to send it with email and subject and content to send it
+```
+
+## The agent — 2026-11-20 14:45
+
+Sa'id al-Qahtani, the author of Hisn al-Muslim, died in 2018, so the letter has to go to whoever holds the rights now. Looking for the official app or publisher with a contact address.
+
+The App Store has an app described as "the only application certified by Sheikh Sa'id al-Qahtani", by Arabia For Information Technology. Reading its listing for a contact address.
+
+The listing points to the Sheikh's own official site, www.binwahaf.com, and to hisn-almuslim.com. Checking both for a contact address.
+
+binwahaf.com shows no address on its home page. Reading its footer in the browser for a contact link.
+
+binwahaf.com publishes no address and no contact page, only "all rights reserved". One more search for the company behind the certified app.
+
+Eight letters written. Updating the tracker and `AGENTS.md`, then commit and push.

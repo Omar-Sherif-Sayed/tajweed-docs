@@ -27,6 +27,16 @@ Continues `2026-11-16-planning.md` (§1 – §23). Conversation copy: the end of
 4. Design 3's Sources screen updated: mp3quran and Adhan shown as verified, the font row cleared, Dorar pointing to its
    API page.
 
+## The author's second message — "Give me all email required to send it with email and subject and content"
+
+The agent looked for each owner's contact on its own site and wrote eight letters in `docs/permissions/letters/`
+(recipient, how to send, subject, Arabic and English text). Addresses found: info@qurancomplex.gov.sa,
+info@quranenc.com (decoded from the site's protected link), info@binothaimeen.com, support@dorar.net (with Dorar's
+access-request form). Forms only: al-Badr (al-badr.net/contact), mp3quran (contact-us; its page also says its rights
+are open to all, even for commercial use), EveryAyah (Quran.com's help centre). Hisn al-Muslim: the author, Sheikh
+Sa'id al-Qahtani, died in 2018; his official site binwahaf.com publishes no address; the app he certified gives
+hisn-almuslim.com — the letter asks them who holds the rights now.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)
@@ -34,3 +44,4 @@ Continues `2026-11-16-planning.md` (§1 – §23). Conversation copy: the end of
 - https://mp3quran.net/ar/privacy
 - https://dorar.net/article/389 · https://dorar.net/api-services · https://dorar.net/api-services/terms
 - https://qurancomplex.gov.sa/
+- https://quranenc.com/ar/home/contact_us · https://binothaimeen.net/ · https://al-badr.net/contact · https://www.mp3quran.net/ar/contact-us · https://everyayah.com/ · https://binwahaf.com/ · https://apps.apple.com/app/id1439791907 · https://hisn-almuslim.com/

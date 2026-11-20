@@ -44,5 +44,7 @@ on a website is not the same as free to copy into an application (§7.5).
 
 ## Folders
 
-- `letters/` — the drafts, one file per owner, Arabic and English (written when the author asks for them).
+- [`letters/`](letters/README.md) — **eight letters ready to send (2026-11-20)**: King Fahd Complex, QuranEnc, the Ibn
+  Uthaymeen Foundation, the rights holders of Hisn al-Muslim, Sheikh al-Badr, Dorar, mp3quran, EveryAyah — each with its
+  verified address or form, subject and text in Arabic and English.
 - `answers/` — each answer as received, with its date (the author forwards it or saves it).

@@ -124,6 +124,22 @@
   "bytes": 273
  },
  {
+  "file": "design-1/icons/ex-misbaha.svg",
+  "bytes": 507
+ },
+ {
+  "file": "design-1/icons/ex-dua.svg",
+  "bytes": 378
+ },
+ {
+  "file": "design-1/icons/ex-pin.svg",
+  "bytes": 296
+ },
+ {
+  "file": "design-1/icons/ex-cal.svg",
+  "bytes": 339
+ },
+ {
   "file": "design-2/icons/home.svg",
   "bytes": 406
  },
@@ -226,6 +242,22 @@
  {
   "file": "design-2/icons/lv-caliphs.svg",
   "bytes": 273
+ },
+ {
+  "file": "design-2/icons/ex-misbaha.svg",
+  "bytes": 507
+ },
+ {
+  "file": "design-2/icons/ex-dua.svg",
+  "bytes": 378
+ },
+ {
+  "file": "design-2/icons/ex-pin.svg",
+  "bytes": 296
+ },
+ {
+  "file": "design-2/icons/ex-cal.svg",
+  "bytes": 339
  },
  {
   "file": "design-2/logo.svg",
@@ -344,6 +376,22 @@
   "bytes": 273
  },
  {
+  "file": "design-3/icons/ex-misbaha.svg",
+  "bytes": 507
+ },
+ {
+  "file": "design-3/icons/ex-dua.svg",
+  "bytes": 378
+ },
+ {
+  "file": "design-3/icons/ex-pin.svg",
+  "bytes": 296
+ },
+ {
+  "file": "design-3/icons/ex-cal.svg",
+  "bytes": 339
+ },
+ {
   "file": "design-3/logo.svg",
   "bytes": 864
  },
@@ -421,11 +469,59 @@
  },
  {
   "file": "design-3/landscapes/jannatan-day.svg",
-  "bytes": 2141
+  "bytes": 4127
  },
  {
   "file": "design-3/landscapes/jannatan-night.svg",
-  "bytes": 2893
+  "bytes": 4879
+ },
+ {
+  "file": "design-3/landscapes/tin-day.svg",
+  "bytes": 1809
+ },
+ {
+  "file": "design-3/landscapes/tin-night.svg",
+  "bytes": 2561
+ },
+ {
+  "file": "design-3/landscapes/kawthar-day.svg",
+  "bytes": 1351
+ },
+ {
+  "file": "design-3/landscapes/kawthar-night.svg",
+  "bytes": 2103
+ },
+ {
+  "file": "design-3/landscapes/qamar-day.svg",
+  "bytes": 434
+ },
+ {
+  "file": "design-3/landscapes/qamar-night.svg",
+  "bytes": 1187
+ },
+ {
+  "file": "design-3/landscapes/dhariyat-day.svg",
+  "bytes": 1142
+ },
+ {
+  "file": "design-3/landscapes/dhariyat-night.svg",
+  "bytes": 1894
+ },
+ {
+  "file": "design-3/landscapes/zar-day.svg",
+  "bytes": 7264
+ },
+ {
+  "file": "design-3/landscapes/zar-night.svg",
+  "bytes": 8016
+ },
+ {
+  "file": "design-3/landscapes/mara-day.svg",
+  "bytes": 1731
+ },
+ {
+  "file": "design-3/landscapes/mara-night.svg",
+  "bytes": 2483
  },
  {
   "file": "design-3/landscapes/nur-day.svg",

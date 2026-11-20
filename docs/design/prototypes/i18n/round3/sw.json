@@ -30,5 +30,17 @@
  "dir_duha": "Dhuha",
  "dir_ghaith": "Mvua",
  "dir_jannatan": "Bustani mbili",
- "dir_nur": "Nuru"
+ "dir_nur": "Nuru",
+ "r4_tin": "Kijani cha mzeituni na zambarau ya tini — kutoka aya ya kwanza ya Sura At-Tin.",
+ "r4_kawthar": "Kwa jina la Al-Kawthar, aya ya kwanza ya sura yake: rangi za maji matamu.",
+ "r4_qamar": "Viapo viwili: mandhari ya mchana kutoka jua, ya usiku kutoka mwezi — aya mbili za kwanza za Sura Ash-Shams.",
+ "r4_dhariyat": "Matuta ya mchanga na mistari ya upepo — kutoka aya ya kwanza ya Sura Adh-Dhariyat.",
+ "r4_zar": "Kijani cha machipukizi na dhahabu ya masuke — kutoka aya ya mwisho ya Sura Al-Fath.",
+ "r4_mara": "Maneno mawili ya rangi katika Sura Al-A'la: malisho ya kijani mchana, rangi nyeusi usiku.",
+ "dir_tin": "Tini na mzeituni",
+ "dir_kawthar": "Al-Kawthar",
+ "dir_qamar": "Jua na mwezi",
+ "dir_dhariyat": "Pepo zinazotawanya",
+ "dir_zar": "Mmea",
+ "dir_mara": "Malisho"
 }

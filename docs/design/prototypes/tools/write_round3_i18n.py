@@ -413,6 +413,162 @@ T = {
 }
 
 
+# Six directions added on 2026-11-20 (the author asked for more directions from reflection on the Quran).
+NOTES2 = [
+    ("r4_tin", "The green of the olive and the purple of the fig — from the first ayah of Surah al-Tin."),
+    ("r4_kawthar", "Named after al-Kawthar, the first ayah of its surah: the colours of fresh water."),
+    ("r4_qamar", "Two oaths: the day theme from the sun, the night theme from the moon — the first two ayahs of Surah al-Shams."),
+    ("r4_dhariyat", "Sand dunes and the lines of the wind — from the first ayah of Surah al-Dhariyat."),
+    ("r4_zar", "The green of young shoots and the gold of the ears — from the last ayah of Surah al-Fath."),
+    ("r4_mara", "Two colour words in Surah al-A'la: the green pasture by day, the dark colour by night."),
+]
+DIRS2 = ["tin", "kawthar", "qamar", "dhariyat", "zar", "mara"]
+
+# Per language: the 6 notes above, then the 6 direction names.
+T2 = {
+ "ru": ["Зелень оливы и пурпур инжира — из первого аята суры «Смоковница».",
+        "По имени аль-Каусар, первого аята его суры: цвета пресной воды.",
+        "Две клятвы: дневная тема — от солнца, ночная — от луны; первые два аята суры «Солнце».",
+        "Песчаные дюны и линии ветра — из первого аята суры «Рассеивающие».",
+        "Зелень молодых всходов и золото колосьев — из последнего аята суры «Победа».",
+        "Два слова о цвете в суре «Высочайший»: зелёное пастбище днём, тёмный цвет ночью.",
+        "Смоковница и олива", "Аль-Каусар", "Солнце и луна", "Рассеивающие ветры", "Посев", "Пастбище"],
+ "es": ["El verde del olivo y el púrpura del higo — de la primera aleya de la sura del Higo.",
+        "Por al-Kawzar, la primera aleya de su sura: los colores del agua dulce.",
+        "Dos juramentos: el tema de día viene del sol y el de noche de la luna — las dos primeras aleyas de la sura del Sol.",
+        "Dunas de arena y las líneas del viento — de la primera aleya de la sura de los que Esparcen.",
+        "El verde de los brotes y el oro de las espigas — de la última aleya de la sura de la Victoria.",
+        "Dos palabras de color en la sura del Altísimo: el pasto verde de día y el color oscuro de noche.",
+        "El higo y el olivo", "Al-Kawzar", "El sol y la luna", "Los vientos que esparcen", "El sembrado", "El pasto"],
+ "de": ["Das Grün der Olive und das Purpur der Feige – aus dem ersten Vers der Sure „Die Feige“.",
+        "Nach al-Kauthar, dem ersten Vers seiner Sure: die Farben des süßen Wassers.",
+        "Zwei Schwüre: das Tagesthema von der Sonne, das Nachtthema vom Mond – die ersten zwei Verse der Sure „Die Sonne“.",
+        "Sanddünen und die Linien des Windes – aus dem ersten Vers der Sure „Die Aufwirbelnden“.",
+        "Das Grün junger Triebe und das Gold der Ähren – aus dem letzten Vers der Sure „Der Sieg“.",
+        "Zwei Farbwörter in der Sure „Der Höchste“: die grüne Weide am Tag, die dunkle Farbe in der Nacht.",
+        "Die Feige und die Olive", "Al-Kauthar", "Die Sonne und der Mond", "Die aufwirbelnden Winde", "Die Saat", "Die Weide"],
+ "it": ["Il verde dell'ulivo e il porpora del fico — dal primo versetto della sura del Fico.",
+        "Da al-Kawthar, il primo versetto della sua sura: i colori dell'acqua dolce.",
+        "Due giuramenti: il tema del giorno dal sole, quello della notte dalla luna — i primi due versetti della sura del Sole.",
+        "Dune di sabbia e le linee del vento — dal primo versetto della sura di Quelli che spargono.",
+        "Il verde dei germogli e l'oro delle spighe — dall'ultimo versetto della sura della Vittoria.",
+        "Due parole di colore nella sura dell'Altissimo: il pascolo verde di giorno, il colore scuro di notte.",
+        "Il fico e l'ulivo", "Al-Kawthar", "Il sole e la luna", "I venti che spargono", "Il seminato", "Il pascolo"],
+ "fr": ["Le vert de l'olivier et le pourpre de la figue — du premier verset de la sourate du Figuier.",
+        "D'après al-Kawthar, premier verset de sa sourate : les couleurs de l'eau douce.",
+        "Deux serments : le thème du jour vient du soleil, celui de la nuit de la lune — les deux premiers versets de la sourate du Soleil.",
+        "Des dunes de sable et les lignes du vent — du premier verset de la sourate Qui éparpillent.",
+        "Le vert des jeunes pousses et l'or des épis — du dernier verset de la sourate de la Victoire.",
+        "Deux mots de couleur dans la sourate du Très-Haut : le pâturage vert le jour, la couleur sombre la nuit.",
+        "La figue et l'olive", "Al-Kawthar", "Le soleil et la lune", "Les vents qui éparpillent", "La semence", "Le pâturage"],
+ "ur": ["زیتون کی سبزی اور انجیر کا ارغوانی رنگ — سورۃ التین کی پہلی آیت سے۔",
+        "الکوثر کے نام پر، اپنی سورت کی پہلی آیت: میٹھے پانی کے رنگ۔",
+        "دو قسمیں: دن کی تھیم سورج سے، رات کی تھیم چاند سے — سورۃ الشمس کی پہلی دو آیات۔",
+        "ریت کے ٹیلے اور ہوا کی لکیریں — سورۃ الذاریات کی پہلی آیت سے۔",
+        "نئی کونپلوں کی سبزی اور بالیوں کا سنہرا رنگ — سورۃ الفتح کی آخری آیت سے۔",
+        "سورۃ الاعلیٰ میں رنگ کے دو لفظ: دن میں ہری چراگاہ، رات میں گہرا رنگ۔",
+        "التین والزیتون", "الکوثر", "سورج اور چاند", "الذاریات", "کھیتی", "چراگاہ"],
+ "hi": ["ज़ैतून का हरा और अंजीर का बैंगनी — सूरह अत-तीन की पहली आयत से।",
+        "अल-कौसर के नाम पर, उसकी सूरह की पहली आयत: मीठे पानी के रंग।",
+        "दो क़समें: दिन की थीम सूरज से, रात की थीम चाँद से — सूरह अश-शम्स की पहली दो आयतें।",
+        "रेत के टीले और हवा की रेखाएँ — सूरह अज़-ज़ारियात की पहली आयत से।",
+        "नई कोंपलों का हरा और बालियों का सुनहरा — सूरह अल-फ़त्ह की आख़िरी आयत से।",
+        "सूरह अल-आला में रंग के दो शब्द: दिन में हरी चरागाह, रात में गहरा रंग।",
+        "अंजीर और ज़ैतून", "अल-कौसर", "सूरज और चाँद", "बिखेरने वाली हवाएँ", "खेती", "चरागाह"],
+ "ko": ["올리브의 초록과 무화과의 자주 — 앗티인 장 첫 아야에서.",
+        "알카우사르, 그 장의 첫 아야에서: 맑은 물의 색.",
+        "두 맹세: 낮 테마는 태양에서, 밤 테마는 달에서 — 앗샴스 장의 첫 두 아야.",
+        "모래 언덕과 바람의 선 — 앗자리야트 장 첫 아야에서.",
+        "새싹의 초록과 이삭의 금빛 — 알파트흐 장의 마지막 아야에서.",
+        "알아을라 장의 색을 뜻하는 두 단어: 낮에는 푸른 목초지, 밤에는 어두운 색.",
+        "무화과와 올리브", "알카우사르", "태양과 달", "흩뿌리는 바람", "농작물", "목초지"],
+ "id": ["Hijau zaitun dan ungu buah tin — dari ayat pertama Surah At-Tin.",
+        "Dinamai Al-Kautsar, ayat pertama suratnya: warna-warna air tawar.",
+        "Dua sumpah: tema siang dari matahari, tema malam dari bulan — dua ayat pertama Surah Asy-Syams.",
+        "Bukit pasir dan garis-garis angin — dari ayat pertama Surah Adz-Dzariyat.",
+        "Hijau tunas muda dan emas bulir — dari ayat terakhir Surah Al-Fath.",
+        "Dua kata warna dalam Surah Al-A'la: padang rumput hijau di siang hari, warna gelap di malam hari.",
+        "Tin dan zaitun", "Al-Kautsar", "Matahari dan bulan", "Angin yang menerbangkan", "Tanaman", "Padang rumput"],
+ "ja": ["オリーブの緑とイチジクの紫 — ティーン章の最初の節から。",
+        "アル＝カウサル、その章の最初の節から：清らかな水の色。",
+        "二つの誓い：昼のテーマは太陽から、夜のテーマは月から — シャムス章の最初の二節。",
+        "砂丘と風の線 — ザーリヤート章の最初の節から。",
+        "若芽の緑と穂の金 — ファトフ章の最後の節から。",
+        "アアラー章の色を表す二つの言葉：昼は緑の牧草地、夜は暗い色。",
+        "イチジクとオリーブ", "アル＝カウサル", "太陽と月", "まき散らす風", "作物", "牧草地"],
+ "zh": ["橄榄的绿与无花果的紫——出自无花果章第一节。",
+        "以考赛尔命名，即该章第一节：清水的颜色。",
+        "两个誓言：白天主题来自太阳，夜间主题来自月亮——太阳章的前两节。",
+        "沙丘与风的纹路——出自播种者章第一节。",
+        "嫩芽的绿与麦穗的金——出自胜利章最后一节。",
+        "至尊章中的两个颜色词：白天是青翠的牧场，夜晚是暗色。",
+        "无花果与橄榄", "考赛尔", "太阳与月亮", "播种的风", "庄稼", "牧场"],
+ "tr": ["Zeytinin yeşili ve incirin moru — Tîn suresinin ilk ayetinden.",
+        "Suresinin ilk ayetindeki el-Kevser'den adını alır: tatlı suyun renkleri.",
+        "İki yemin: gündüz teması güneşten, gece teması aydan — Şems suresinin ilk iki ayeti.",
+        "Kum tepeleri ve rüzgârın çizgileri — Zâriyât suresinin ilk ayetinden.",
+        "Taze filizlerin yeşili ve başakların altını — Fetih suresinin son ayetinden.",
+        "A'lâ suresinde iki renk kelimesi: gündüz yeşil mera, gece koyu renk.",
+        "İncir ve zeytin", "el-Kevser", "Güneş ve ay", "Savuran rüzgârlar", "Ekin", "Mera"],
+ "bn": ["জলপাইয়ের সবুজ আর ডুমুরের বেগুনি — সূরা আত-তীনের প্রথম আয়াত থেকে।",
+        "আল-কাওসারের নামে, তার সূরার প্রথম আয়াত: মিঠা পানির রং।",
+        "দুটি শপথ: দিনের থিম সূর্য থেকে, রাতের থিম চাঁদ থেকে — সূরা আশ-শামসের প্রথম দুই আয়াত।",
+        "বালির টিলা আর বাতাসের রেখা — সূরা আয-যারিয়াতের প্রথম আয়াত থেকে।",
+        "কচি চারার সবুজ আর শীষের সোনালি — সূরা আল-ফাতহের শেষ আয়াত থেকে।",
+        "সূরা আল-আলায় রঙের দুটি শব্দ: দিনে সবুজ চারণভূমি, রাতে গাঢ় রং।",
+        "ডুমুর ও জলপাই", "আল-কাওসার", "সূর্য ও চাঁদ", "বিক্ষিপ্তকারী বাতাস", "শস্য", "চারণভূমি"],
+ "fa": ["سبزی زیتون و ارغوانی انجیر — از نخستین آیهٔ سورهٔ تین.",
+        "به نام کوثر، نخستین آیهٔ سوره‌اش: رنگ‌های آب گوارا.",
+        "دو سوگند: حالت روز از خورشید، حالت شب از ماه — دو آیهٔ نخست سورهٔ شمس.",
+        "تپه‌های شن و خطوط باد — از نخستین آیهٔ سورهٔ ذاریات.",
+        "سبزی جوانه‌های نو و طلایی خوشه‌ها — از آخرین آیهٔ سورهٔ فتح.",
+        "دو واژهٔ رنگ در سورهٔ اعلی: چراگاه سبز در روز، رنگ تیره در شب.",
+        "تین و زیتون", "کوثر", "خورشید و ماه", "ذاریات", "کشت", "چراگاه"],
+ "ms": ["Hijau zaitun dan ungu buah tin — daripada ayat pertama Surah at-Tin.",
+        "Dinamakan sempena al-Kauthar, ayat pertama surahnya: warna air tawar.",
+        "Dua sumpah: tema siang daripada matahari, tema malam daripada bulan — dua ayat pertama Surah asy-Syams.",
+        "Bukit pasir dan garis-garis angin — daripada ayat pertama Surah adz-Dzariyat.",
+        "Hijau pucuk muda dan emas tangkai bijian — daripada ayat terakhir Surah al-Fath.",
+        "Dua kata warna dalam Surah al-A'la: padang ragut hijau pada siang hari, warna gelap pada malam hari.",
+        "Tin dan zaitun", "Al-Kauthar", "Matahari dan bulan", "Angin yang menerbangkan", "Tanaman", "Padang ragut"],
+ "sw": ["Kijani cha mzeituni na zambarau ya tini — kutoka aya ya kwanza ya Sura At-Tin.",
+        "Kwa jina la Al-Kawthar, aya ya kwanza ya sura yake: rangi za maji matamu.",
+        "Viapo viwili: mandhari ya mchana kutoka jua, ya usiku kutoka mwezi — aya mbili za kwanza za Sura Ash-Shams.",
+        "Matuta ya mchanga na mistari ya upepo — kutoka aya ya kwanza ya Sura Adh-Dhariyat.",
+        "Kijani cha machipukizi na dhahabu ya masuke — kutoka aya ya mwisho ya Sura Al-Fath.",
+        "Maneno mawili ya rangi katika Sura Al-A'la: malisho ya kijani mchana, rangi nyeusi usiku.",
+        "Tini na mzeituni", "Al-Kawthar", "Jua na mwezi", "Pepo zinazotawanya", "Mmea", "Malisho"],
+ "ha": ["Koren zaitun da shunayyar ɓaure — daga aya ta farko ta Suratut Tin.",
+        "Da sunan Al-Kausar, aya ta farko ta surarsa: launukan ruwa mai daɗi.",
+        "Rantsuwa biyu: jigon rana daga rana, jigon dare daga wata — ayoyi biyu na farko na Suratush Shams.",
+        "Tuddan yashi da layukan iska — daga aya ta farko ta Suratuz Zariyat.",
+        "Koren tsiro da zinariyar zangarniya — daga aya ta ƙarshe ta Suratul Fath.",
+        "Kalmomi biyu na launi a Suratul A'la: makiyaya kore da rana, launi mai duhu da dare.",
+        "Ɓaure da zaitun", "Al-Kausar", "Rana da wata", "Iskokin da ke watsawa", "Shuka", "Makiyaya"],
+ "pt": ["O verde da oliveira e o púrpura do figo — do primeiro versículo da surata do Figo.",
+        "Por al-Kawthar, o primeiro versículo da sua surata: as cores da água doce.",
+        "Dois juramentos: o tema do dia vem do sol e o da noite vem da lua — os dois primeiros versículos da surata do Sol.",
+        "Dunas de areia e as linhas do vento — do primeiro versículo da surata dos que Dispersam.",
+        "O verde dos rebentos e o ouro das espigas — do último versículo da surata da Vitória.",
+        "Duas palavras de cor na surata do Altíssimo: o pasto verde de dia e a cor escura à noite.",
+        "O figo e a oliveira", "Al-Kawthar", "O sol e a lua", "Os ventos que dispersam", "A sementeira", "O pasto"],
+ "ps": ["د زیتون شنه رنګ او د انځر ارغواني رنګ — د سورة التين له لومړي آیت څخه.",
+        "د الکوثر په نوم، د خپلې سورت لومړی آیت: د خوږو اوبو رنګونه.",
+        "دوه قسمونه: د ورځې بڼه له لمر څخه، د شپې بڼه له سپوږمۍ څخه — د سورة الشمس لومړني دوه آیتونه.",
+        "د شګو غونډۍ او د باد کرښې — د سورة الذاريات له لومړي آیت څخه.",
+        "د نویو غوټیو شنه رنګ او د وږو طلایي رنګ — د سورة الفتح له وروستي آیت څخه.",
+        "په سورة الأعلى کې د رنګ دوه کلمې: د ورځې شنه څړځای، د شپې تیاره رنګ.",
+        "انځر او زیتون", "الکوثر", "لمر او سپوږمۍ", "الذاريات", "کښت", "څړځای"],
+ "uz": ["Zaytunning yashili va anjirning binafsha rangi — Tiyn surasining birinchi oyatidan.",
+        "Al-Kavsar nomidan, surasining birinchi oyati: chuchuk suvning ranglari.",
+        "Ikki qasam: kunduzgi mavzu quyoshdan, tungi mavzu oydan — Shams surasining dastlabki ikki oyati.",
+        "Qum tepalari va shamol chiziqlari — Zoriyot surasining birinchi oyatidan.",
+        "Yosh nihollarning yashili va boshoqlarning oltin rangi — Fath surasining oxirgi oyatidan.",
+        "Aʼlo surasidagi ikki rang soʻzi: kunduzi yashil yaylov, kechasi qoramtir rang.",
+        "Anjir va zaytun", "Al-Kavsar", "Quyosh va oy", "Sochuvchi shamollar", "Ekin", "Yaylov"],
+}
+
+
 def main():
     sys.stdout.reconfigure(encoding="utf-8")
     html = io.open(PAGE, encoding="utf-8").read()
@@ -425,11 +581,18 @@ def main():
         keys.append({"id": kid, "en": en, "ar": ar_of[en]})
     for d in DIRS:
         keys.append({"id": "dir_" + d, "en": P3.DIRECTIONS[d]["name"]["en"], "ar": P3.DIRECTIONS[d]["name"]["ar"]})
+    for kid, en in NOTES2:
+        if en not in ar_of:
+            raise SystemExit("not in round-3.html: " + en)
+        keys.append({"id": kid, "en": en, "ar": ar_of[en]})
+    for d in DIRS2:
+        keys.append({"id": "dir_" + d, "en": P3.DIRECTIONS[d]["name"]["en"], "ar": P3.DIRECTIONS[d]["name"]["ar"]})
     with io.open(os.path.join(I18N, "round3", "keys.json"), "w", encoding="utf-8", newline="\n") as f:
         json.dump(keys, f, ensure_ascii=False, indent=1)
         f.write("\n")
     os.makedirs(os.path.join(I18N, "round3"), exist_ok=True)
     for code, texts in T.items():
+        texts = texts + T2[code]
         if len(texts) != 1 + len(keys):
             raise SystemExit("%s: %d texts, %d expected" % (code, len(texts), 1 + len(keys)))
         out = {"_status": STATUS}

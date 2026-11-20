@@ -103,7 +103,7 @@ def landscapes():
     js = code + "\nvar job = " + json.dumps(job) + ", out = {};\n" + \
         "Object.keys(job).forEach(function (k) { out[k + '-day'] = scene(k, job[k].light, false); out[k + '-night'] = scene(k, job[k].dark, true); });\n" + \
         "process.stdout.write(JSON.stringify(out));\n"
-    res = subprocess.run(["node", "-e", js], capture_output=True, text=True, encoding="utf-8", check=True)
+    res = subprocess.run(["node", "-"], input=js, capture_output=True, text=True, encoding="utf-8", check=True)   # stdin: the script is long
     return json.loads(res.stdout)
 
 

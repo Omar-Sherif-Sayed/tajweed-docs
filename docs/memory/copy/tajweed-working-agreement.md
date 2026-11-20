@@ -4,7 +4,7 @@ description: "How Omar wants agents to work on the Tajweed product (plan-ask-cod
 metadata:
   node_type: memory
   type: feedback
-  modified: 2026-11-19T20:39:43.085Z
+  modified: 2026-11-20T20:39:43.085Z
   originSessionId: 4f32e8cc-e0b3-4843-a4c0-dae31d57f095
 ---
 
@@ -41,9 +41,11 @@ which removes his e-mail and the other project's name (public repository) and fa
 pre-commit hook in `tajweed-docs` runs it automatically; still run it by hand before every commit. If this folder is
 wiped, restore it from `docs/memory/` (then put back the two removed facts from `session-notes.md`).
 
-Design rules (2026-11-19): no cross shape anywhere (no plus sign, no four-armed star) — a symbol of Christianity;
+Design rules (2026-11-19, 2026-11-20): no cross shape anywhere (no plus sign, no four-armed star) — a symbol of Christianity;
 no pictures of prophets or Companions; only the Mountains direction is for low vision / colour blindness. Prototype
-files: round N = design N (`round-1.html` design 1 … `round-3.html` design 3), i18n in `i18n/round<N>/`. Figma holds
+files: round N = design N (`round-1.html` design 1 … `round-3.html` design 3), i18n in `i18n/round<N>/`. New screens go into all three designs while he has not chosen one (his answer, 2026-11-20).
+Design 3 has 18 directions (six added 2026-11-20). The look of the ayah markers (ribbon or tint) waits for
+his choice — he asked to see both. The day / night choice is one switch beside the directions. Figma holds
 the design elements (logos, icons, landscapes) as editable shapes, with SVG copies in the docs repository — not the
 whole rounds.
 

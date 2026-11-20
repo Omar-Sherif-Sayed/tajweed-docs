@@ -1,0 +1,252 @@
+[
+ {
+  "id": "ex_misbaha",
+  "en": "Misbaha",
+  "ar": "المسبحة"
+ },
+ {
+  "id": "ex_tap",
+  "en": "Tap the ring to count",
+  "ar": "المس الدائرة للعدّ"
+ },
+ {
+  "id": "ex_free",
+  "en": "Open",
+  "ar": "مفتوح"
+ },
+ {
+  "id": "ex_target",
+  "en": "Count",
+  "ar": "العدد"
+ },
+ {
+  "id": "ex_today_total",
+  "en": "Today {n}",
+  "ar": "اليوم {n}"
+ },
+ {
+  "id": "ex_round",
+  "en": "Rounds {n}",
+  "ar": "الدورات {n}"
+ },
+ {
+  "id": "ex_reset",
+  "en": "Reset",
+  "ar": "تصفير"
+ },
+ {
+  "id": "ex_vibrate",
+  "en": "A short vibration at the end of each round.",
+  "ar": "اهتزاز قصير عند تمام كل دورة."
+ },
+ {
+  "id": "ex_m_note",
+  "en": "The words of each dhikr and how many times it is said come from authentic hadiths, with their reference.",
+  "ar": "ألفاظ كل ذكر وعدد مراته من الأحاديث الصحيحة بمصادرها."
+ },
+ {
+  "id": "ex_adhkar",
+  "en": "Adhkar",
+  "ar": "الأذكار"
+ },
+ {
+  "id": "ex_morning",
+  "en": "Morning",
+  "ar": "الصباح"
+ },
+ {
+  "id": "ex_evening",
+  "en": "Evening",
+  "ar": "المساء"
+ },
+ {
+  "id": "ex_progress",
+  "en": "Dhikr {n} of {k}",
+  "ar": "الذكر {n} من {k}"
+ },
+ {
+  "id": "ex_sample_count",
+  "en": "sample counts",
+  "ar": "أعداد للمثال"
+ },
+ {
+  "id": "ex_ph_dhikr",
+  "en": "The dhikr verbatim from Hisn al-Muslim, with its number and reference.",
+  "ar": "نص الذكر من «حصن المسلم» برقمه ومصدره."
+ },
+ {
+  "id": "ex_times",
+  "en": "Count: {n}",
+  "ar": "العدد: {n}"
+ },
+ {
+  "id": "ex_tap_count",
+  "en": "Tap to count",
+  "ar": "المس للعدّ"
+ },
+ {
+  "id": "ex_next_auto",
+  "en": "When the count is done, the next dhikr opens by itself.",
+  "ar": "عند تمام العدد يُفتح الذكر التالي تلقائيًا."
+ },
+ {
+  "id": "ex_duas",
+  "en": "Duas",
+  "ar": "الأدعية"
+ },
+ {
+  "id": "ex_from_quran",
+  "en": "From the Quran",
+  "ar": "من القرآن"
+ },
+ {
+  "id": "ex_from_sunnah",
+  "en": "From the Sunnah",
+  "ar": "من السنة"
+ },
+ {
+  "id": "ex_dua_ph",
+  "en": "A dua from the Sunnah — its text, reference and grade as in its source.",
+  "ar": "دعاء من السنة — نصه ومصدره ودرجته كما في مصدره."
+ },
+ {
+  "id": "ex_virtue",
+  "en": "Virtue",
+  "ar": "الفضل"
+ },
+ {
+  "id": "ex_virtue_ph",
+  "en": "Only authentic hadiths, verbatim with their grade; weak narrations are left out.",
+  "ar": "الأحاديث الصحيحة فقط بنصها ودرجتها، ولا تُذكر الروايات الضعيفة."
+ },
+ {
+  "id": "ex_markers",
+  "en": "Ayah markers",
+  "ar": "فواصل الآيات"
+ },
+ {
+  "id": "ex_m_local",
+  "en": "Saved on your device only",
+  "ar": "محفوظة على جهازك فقط"
+ },
+ {
+  "id": "ex_ribbon",
+  "en": "Ribbon",
+  "ar": "شريط"
+ },
+ {
+  "id": "ex_tint",
+  "en": "Tint",
+  "ar": "تظليل"
+ },
+ {
+  "id": "ex_compare",
+  "en": "Style",
+  "ar": "الشكل"
+ },
+ {
+  "id": "ex_m_review",
+  "en": "Review",
+  "ar": "للمراجعة"
+ },
+ {
+  "id": "ex_m_memo",
+  "en": "Memorise",
+  "ar": "للحفظ"
+ },
+ {
+  "id": "ex_m_reflect",
+  "en": "Reflect",
+  "ar": "للتدبر"
+ },
+ {
+  "id": "ex_actions_t",
+  "en": "Ayah actions",
+  "ar": "خيارات الآية"
+ },
+ {
+  "id": "ex_add_marker",
+  "en": "Add a marker",
+  "ar": "إضافة فاصل"
+ },
+ {
+  "id": "ex_listen",
+  "en": "Listen",
+  "ar": "الاستماع"
+ },
+ {
+  "id": "ex_reciter",
+  "en": "Reciter",
+  "ar": "القارئ"
+ },
+ {
+  "id": "ex_range",
+  "en": "Ayahs {a} – {b}",
+  "ar": "الآيات {a} – {b}"
+ },
+ {
+  "id": "ex_repeat",
+  "en": "Repeat × {n}",
+  "ar": "التكرار × {n}"
+ },
+ {
+  "id": "ex_play",
+  "en": "Play",
+  "ar": "تشغيل"
+ },
+ {
+  "id": "ex_tafsirs",
+  "en": "Tafsirs",
+  "ar": "التفاسير"
+ },
+ {
+  "id": "ex_tafsir_ph",
+  "en": "Each tafsir is shown from its book once its licence is confirmed.",
+  "ar": "يُعرض كل تفسير من كتابه بعد التأكد من ترخيصه."
+ },
+ {
+  "id": "ex_download",
+  "en": "Download for offline listening",
+  "ar": "تنزيل للاستماع دون إنترنت"
+ },
+ {
+  "id": "ex_dl_note",
+  "en": "Only where the recitation's source allows downloading.",
+  "ar": "فقط حيث يسمح مصدر التلاوة بالتنزيل."
+ },
+ {
+  "id": "ex_hijri",
+  "en": "Hijri calendar",
+  "ar": "التقويم الهجري"
+ },
+ {
+  "id": "ex_hijri_s",
+  "en": "Hijri date",
+  "ar": "التاريخ الهجري"
+ },
+ {
+  "id": "ex_local_time",
+  "en": "The time where you are",
+  "ar": "الوقت حيث أنت"
+ },
+ {
+  "id": "ex_location",
+  "en": "Cairo, Egypt — sample",
+  "ar": "القاهرة، مصر — مثال"
+ },
+ {
+  "id": "ex_adjust",
+  "en": "Adjustment: {n}",
+  "ar": "الضبط: {n}"
+ },
+ {
+  "id": "ex_cal_note",
+  "en": "Umm al-Qura calendar. Adjust it by a day or two to match your country's announcement.",
+  "ar": "تقويم أم القرى. اضبطه بيوم أو يومين ليوافق إعلان بلدك."
+ },
+ {
+  "id": "ex_night",
+  "en": "Night theme",
+  "ar": "الوضع الليلي"
+ }
+]

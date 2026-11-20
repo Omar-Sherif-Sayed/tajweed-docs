@@ -40,7 +40,7 @@ Status: a design proposal written by the agent, with no scholar's review (§6.6)
 | Logo | coin rings | **an arc of light rising over the horizon** |
 | Texture | parchment grain everywhere | grain only in the first direction, the sheets; the others are clean |
 
-## 3. The twelve directions
+## 3. The eighteen directions (twelve on 2026-11-19, six more on 2026-11-20)
 
 Each has a day and a night theme. The night themes follow the six night rules (deep tinted background, cards
 lighter step by step, the mushaf page a little lighter, soft text 11 – 16 : 1, calm accents, no bright block).
@@ -142,15 +142,16 @@ high sun with rays) and its **night theme** is the still night (a small, calm li
 
 ### 3.10 الجنّتان — The two gardens
 
-«مُدْهَآمَّتَانِ» (55:64) and «فِيهِمَا فَـٰكِهَةٌ وَنَخْلٌ وَرُمَّانٌ» (55:68). The landscape: trees on two hills, a palm, and
-pomegranates. ☐ The tafsir of «مدهامتان» (a green so deep it nears black, al-Tafsir al-Muyassar) is quoted in F19 only
-from a licensed tafsir.
+«مُدْهَآمَّتَانِ» (55:64), «نَضَّاخَتَانِ» (55:66) and «وَرُمَّانٌ» (55:68). **Redrawn on 2026-11-20** (the author asked for a better picture): two gardens on two hills, their trees dense
+and deep green (55:64), the two springs running between them to the front (55:66), pomegranates on the trees and
+palms (55:68). ☐ The tafsir of «مدهامتان» is quoted in F19 only from a licensed tafsir.
 
 | Colour | From |
 | --- | --- |
 | Deep green `#14402C` (buttons) | 55:64 |
 | Pomegranate red `#9A2B39` (dots) | the pomegranates of 55:68 |
 | Palm green `#2F6B44` | the palms of 55:68 |
+| The springs, in the sky colour of the direction | 55:66 |
 
 ### 3.11 النور — Light
 
@@ -168,6 +169,65 @@ the parable — the parable is explained only by a tafsir (rule 1).
 Unchanged from design 2: white, red and intense black streaks from one ayah, 35:27. At least 7 : 1 everywhere and as
 simulated for protanopia, deuteranopia and tritanopia (8.4 : 1 or more). The landscape: two black mountains with a
 white and a red streak — drawn at full strength, with no texture.
+
+### 3.13 التين والزيتون — The fig and the olive (2026-11-20)
+
+From «وَٱلتِّينِ» (95:1): the two trees the surah opens with. The landscape: an olive tree with narrow leaves on the left, a fig tree
+with its purple fruit on the right, on low hills.
+
+| Colour | From |
+| --- | --- |
+| Olive green `#3F4A1E` (buttons) | the olive |
+| Fig purple `#6E2E55` (dots) | the fig |
+
+### 3.14 الكوثر — Al-Kawthar (2026-11-20)
+
+Named after the word «ٱلْكَوْثَرَ» (108:1). The colours of fresh water; the landscape: a river running from the horizon to the front.
+What al-Kawthar is, is said only by a hadith or a tafsir with its source (F19 rules) — the design takes the word, not
+an explanation.
+
+| Colour | From |
+| --- | --- |
+| Deep water blue `#1D4E6B` (buttons) | water |
+| Gold `#7A5A14` (dots) | light on the water |
+
+### 3.15 الشمس والقمر — The sun and the moon (2026-11-20)
+
+Two oaths, like the forenoon (§3.8): «وَٱلشَّمْسِ» (91:1) and «وَٱلْقَمَرِ» (91:2). The day theme shows the sun, the night theme the full moon (a round
+disc — no cross, no star shape).
+
+| Colour | From |
+| --- | --- |
+| Night indigo `#2E3157` (buttons) | the sky |
+| Sun gold `#F6E2A6` (day landscape), moon silver `#D9DCEB` (night landscape) | 91:1, 91:2 |
+
+### 3.16 الذاريات — The scattering winds (2026-11-20)
+
+From «وَٱلذَّٰرِيَـٰتِ» (51:1). The landscape: sand dunes, the lines of the wind above them, and sand blown off a crest.
+
+| Colour | From |
+| --- | --- |
+| Ochre `#6A4416` (buttons) | sand |
+| Rust `#8A3F1E` (dots) | the dunes at sunset |
+
+### 3.17 الزرع — The crop (2026-11-20)
+
+From the word «كَزَرْعٍ» (48:29) in the last ayah of Surah al-Fath. The landscape: young stalks with their ears of grain and their
+shoots. The ayah is long; it is shown whole in F19, and the design takes only the word.
+
+| Colour | From |
+| --- | --- |
+| Shoot green `#2E5422` (buttons) | the shoots |
+| Grain gold `#7A5A0E` (dots), `#EED9A0` (the ears) | the ears of grain |
+
+### 3.18 المرعى — The pasture (2026-11-20)
+
+Two words of colour: «ٱلْمَرْعَىٰ» (87:4) and «أَحْوَىٰ» (87:5). The day theme is the green pasture, the night theme the dark colour.
+
+| Colour | From |
+| --- | --- |
+| Pasture green `#3B4F2E` (buttons) | 87:4 |
+| The dark night theme (background `#171A12`) | 87:5 |
 
 ## 4. The logo
 
@@ -206,21 +266,30 @@ shape as on the phone, so it is never stretched or cut on a wide screen.
 | An-Noor 24:35 (النور) | ٱللَّهُ نُورُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ مَثَلُ نُورِهِۦ كَمِشْكَوٰةٍ فِيهَا مِصْبَاحٌ ۖ ٱلْمِصْبَاحُ فِى زُجَاجَةٍ ۖ ٱلزُّجَاجَةُ كَأَنَّهَا كَوْكَبٌ دُرِّىٌّ يُوقَدُ مِن شَجَرَةٍ مُّبَـٰرَكَةٍ زَيْتُونَةٍ لَّا شَرْقِيَّةٍ وَلَا غَرْبِيَّةٍ يَكَادُ زَيْتُهَا يُضِىٓءُ وَلَوْ لَمْ تَمْسَسْهُ نَارٌ ۚ نُّورٌ عَلَىٰ نُورٍ ۗ يَهْدِى ٱللَّهُ لِنُورِهِۦ مَن يَشَآءُ ۚ وَيَضْرِبُ ٱللَّهُ ٱلْأَمْثَـٰلَ لِلنَّاسِ ۗ وَٱللَّهُ بِكُلِّ شَىْءٍ عَلِيمٌ |
 | Ar-Room 30:22 (الروم) | وَمِنْ ءَايَـٰتِهِۦ خَلْقُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَٱخْتِلَـٰفُ أَلْسِنَتِكُمْ وَأَلْوَٰنِكُمْ ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍ لِّلْعَـٰلِمِينَ |
 | Faatir 35:27 (فاطر) | أَلَمْ تَرَ أَنَّ ٱللَّهَ أَنزَلَ مِنَ ٱلسَّمَآءِ مَآءً فَأَخْرَجْنَا بِهِۦ ثَمَرَٰتٍ مُّخْتَلِفًا أَلْوَٰنُهَا ۚ وَمِنَ ٱلْجِبَالِ جُدَدٌۢ بِيضٌ وَحُمْرٌ مُّخْتَلِفٌ أَلْوَٰنُهَا وَغَرَابِيبُ سُودٌ |
+| Al-Fath 48:29 (الفتح) | مُّحَمَّدٌ رَّسُولُ ٱللَّهِ ۚ وَٱلَّذِينَ مَعَهُۥٓ أَشِدَّآءُ عَلَى ٱلْكُفَّارِ رُحَمَآءُ بَيْنَهُمْ ۖ تَرَىٰهُمْ رُكَّعًا سُجَّدًا يَبْتَغُونَ فَضْلًا مِّنَ ٱللَّهِ وَرِضْوَٰنًا ۖ سِيمَاهُمْ فِى وُجُوهِهِم مِّنْ أَثَرِ ٱلسُّجُودِ ۚ ذَٰلِكَ مَثَلُهُمْ فِى ٱلتَّوْرَىٰةِ ۚ وَمَثَلُهُمْ فِى ٱلْإِنجِيلِ كَزَرْعٍ أَخْرَجَ شَطْـَٔهُۥ فَـَٔازَرَهُۥ فَٱسْتَغْلَظَ فَٱسْتَوَىٰ عَلَىٰ سُوقِهِۦ يُعْجِبُ ٱلزُّرَّاعَ لِيَغِيظَ بِهِمُ ٱلْكُفَّارَ ۗ وَعَدَ ٱللَّهُ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ مِنْهُم مَّغْفِرَةً وَأَجْرًا عَظِيمًۢا |
 | Qaaf 50:10 (ق) | وَٱلنَّخْلَ بَاسِقَـٰتٍ لَّهَا طَلْعٌ نَّضِيدٌ |
+| Adh-Dhaariyat 51:1 (الذاريات) | وَٱلذَّٰرِيَـٰتِ ذَرْوًا |
 | Ar-Rahmaan 55:64 (الرحمن) | مُدْهَآمَّتَانِ |
+| Ar-Rahmaan 55:66 (الرحمن) | فِيهِمَا عَيْنَانِ نَضَّاخَتَانِ |
 | Ar-Rahmaan 55:68 (الرحمن) | فِيهِمَا فَـٰكِهَةٌ وَنَخْلٌ وَرُمَّانٌ |
 | At-Takwir 81:18 (التكوير) | وَٱلصُّبْحِ إِذَا تَنَفَّسَ |
+| Al-A'laa 87:4 (الأعلى) | وَٱلَّذِىٓ أَخْرَجَ ٱلْمَرْعَىٰ |
+| Al-A'laa 87:5 (الأعلى) | فَجَعَلَهُۥ غُثَآءً أَحْوَىٰ |
 | Al-Ghaashiya 88:17 (الغاشية) | أَفَلَا يَنظُرُونَ إِلَى ٱلْإِبِلِ كَيْفَ خُلِقَتْ |
 | Al-Ghaashiya 88:18 (الغاشية) | وَإِلَى ٱلسَّمَآءِ كَيْفَ رُفِعَتْ |
 | Al-Ghaashiya 88:19 (الغاشية) | وَإِلَى ٱلْجِبَالِ كَيْفَ نُصِبَتْ |
 | Al-Ghaashiya 88:20 (الغاشية) | وَإِلَى ٱلْأَرْضِ كَيْفَ سُطِحَتْ |
 | Al-Fajr 89:1 (الفجر) | وَٱلْفَجْرِ |
+| Ash-Shams 91:1 (الشمس) | وَٱلشَّمْسِ وَضُحَىٰهَا |
+| Ash-Shams 91:2 (الشمس) | وَٱلْقَمَرِ إِذَا تَلَىٰهَا |
 | Ad-Dhuhaa 93:1 (الضحى) | وَٱلضُّحَىٰ |
 | Ad-Dhuhaa 93:2 (الضحى) | وَٱلَّيْلِ إِذَا سَجَىٰ |
+| At-Tin 95:1 (التين) | وَٱلتِّينِ وَٱلزَّيْتُونِ |
 | Al-Alaq 96:1 (العلق) | ٱقْرَأْ بِٱسْمِ رَبِّكَ ٱلَّذِى خَلَقَ |
 | Al-Alaq 96:2 (العلق) | خَلَقَ ٱلْإِنسَـٰنَ مِنْ عَلَقٍ |
 | Al-Alaq 96:3 (العلق) | ٱقْرَأْ وَرَبُّكَ ٱلْأَكْرَمُ |
 | Al-Alaq 96:4 (العلق) | ٱلَّذِى عَلَّمَ بِٱلْقَلَمِ |
+| Al-Kawthar 108:1 (الكوثر) | إِنَّآ أَعْطَيْنَـٰكَ ٱلْكَوْثَرَ |
 <!--AYAHS-END-->
 
 ## 8. Sources checked on 2026-11-19

@@ -153,5 +153,65 @@
   "id": "dir_nur",
   "en": "Light",
   "ar": "النور"
+ },
+ {
+  "id": "r4_tin",
+  "en": "The green of the olive and the purple of the fig — from the first ayah of Surah al-Tin.",
+  "ar": "خضرة الزيتون وأرجوانية التين — من أول آية في سورة التين."
+ },
+ {
+  "id": "r4_kawthar",
+  "en": "Named after al-Kawthar, the first ayah of its surah: the colours of fresh water.",
+  "ar": "باسم الكوثر في أول آية من سورته: ألوان الماء العذب."
+ },
+ {
+  "id": "r4_qamar",
+  "en": "Two oaths: the day theme from the sun, the night theme from the moon — the first two ayahs of Surah al-Shams.",
+  "ar": "قسَمان: الوضع النهاري من الشمس، والليلي من القمر — الآيتان الأوليان من سورة الشمس."
+ },
+ {
+  "id": "r4_dhariyat",
+  "en": "Sand dunes and the lines of the wind — from the first ayah of Surah al-Dhariyat.",
+  "ar": "كثبان الرمل وخطوط الريح — من أول آية في سورة الذاريات."
+ },
+ {
+  "id": "r4_zar",
+  "en": "The green of young shoots and the gold of the ears — from the last ayah of Surah al-Fath.",
+  "ar": "خضرة النبت الصغير وذهب السنابل — من آخر آية في سورة الفتح."
+ },
+ {
+  "id": "r4_mara",
+  "en": "Two colour words in Surah al-A'la: the green pasture by day, the dark colour by night.",
+  "ar": "كلمتان من الألوان في سورة الأعلى: المرعى الأخضر نهارًا، واللون الداكن ليلًا."
+ },
+ {
+  "id": "dir_tin",
+  "en": "The fig and the olive",
+  "ar": "التين والزيتون"
+ },
+ {
+  "id": "dir_kawthar",
+  "en": "Al-Kawthar",
+  "ar": "الكوثر"
+ },
+ {
+  "id": "dir_qamar",
+  "en": "The sun and the moon",
+  "ar": "الشمس والقمر"
+ },
+ {
+  "id": "dir_dhariyat",
+  "en": "The scattering winds",
+  "ar": "الذاريات"
+ },
+ {
+  "id": "dir_zar",
+  "en": "The crop",
+  "ar": "الزرع"
+ },
+ {
+  "id": "dir_mara",
+  "en": "The pasture",
+  "ar": "المرعى"
  }
 ]

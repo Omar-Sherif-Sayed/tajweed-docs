@@ -1275,3 +1275,133 @@ Now `AGENTS.md`, the plan, the READMEs and the session record. First, the exact 
 Now the elements README and the session record:
 
 Writing the elements README and the session record section:
+
+Everything is written. A final full rebuild, to prove the build chain runs in order from scratch:
+
+All five builds pass in order. A last browser pass over the rebuilt pages:
+
+One overflow left: design 3's home screen in Russian is 18px too tall. Tightening the spacing of the Lives group:
+
+Every home screen now fits in all 22 languages, with no errors. Committing and pushing; the pre-commit hook refreshes the memory copy:
+
+I did all four points and the memory rule. Everything is committed and pushed to `tajweed-docs`.
+
+**1. One file per design, round N = design N**
+- [round-1.html](docs/design/prototypes/round-1.html) is design 1. The old `colour-directions.html` and `round-2.html` are now this one up-to-date file. It keeps the reading view by surah, the player and the colour table from the first, and the first launch, mushaf pages, six fonts and Sources from the second.
+- [round-2.html](docs/design/prototypes/round-2.html) is design 2 (it was `round-3.html`).
+- [round-3.html](docs/design/prototypes/round-3.html) is design 3 (it was `round-4.html`).
+- Design 1 now works in all 22 languages, with the same searchable language list as the other two designs.
+
+**2. Languages in one folder per round**
+- `i18n/round1/` is new. 31 of its texts are new translations; the other 50 are shared with design 2.
+- `i18n/round2/` holds the files that were loose at the top of `i18n/`.
+- `i18n/round3/` holds what was `round4/` and `keys-round4.json`.
+- `i18n/lives/` holds the texts of the new sections, which are the same in all three designs.
+
+**3. The three new sections, in all three designs**
+- **Home screen:** a group «السِّيَر» with الأنبياء, الصحابة and الخلفاء الراشدون.
+- **A section screen with three tabs:**
+  - the prophets;
+  - the Companions (the ten promised Paradise, the Mothers of the Believers, the people of Badr);
+  - the caliphs, on a timeline.
+- **A sample page for one prophet:** نوح عليه السلام, with ayah 71:1 copied from Tanzil and checked by script.
+- **What is shown and what is not:**
+  - Only names that are beyond doubt are shown.
+  - Every story, hadith, date and event is a dashed placeholder that names its source book, because no edition has been chosen yet and I don't write religious text myself.
+  - Honorifics are always written in Arabic, in every language.
+  - There is no picture of any prophet or Companion, and no cross shape in the new icons.
+- I checked all three designs in the browser in all 22 languages: no errors. I fixed two problems I found: an honorific was touching the name before it, and the home screen of design 3 was too tall in Russian.
+
+**4. Figma**
+- I deleted the three live pages, as you chose.
+- [Figma](https://www.figma.com/design/K5RXq2tO1sVE7RwlJ9dD1L) now has one page per design. Each holds its logo, icons and drawings as editable shapes:
+  - design 2: the palm-trunk band from the home screen and the prayer-time dial;
+  - design 3: its 24 landscapes.
+- Each page also has the colours of every direction, day and night.
+- The same 111 elements are saved as SVG files in [docs/design/elements/](docs/design/elements/README.md), taken from the pages themselves rather than redrawn. The SVG files are the source; after a design changes, a script prepares the Figma import again.
+
+**5. The memory rule**
+- Your memory files stay where they are. On every commit, a copy is saved in [docs/memory/](docs/memory/README.md) and pushed with the commit. A hook does this automatically, and the rule is written in `AGENTS.md` §1, so the next session follows it from its first commit.
+- I also updated the memory itself, which still said "Arabic and English only".
+- The repository is public, so the copy leaves out two things your own rules keep private: your e-mail address, and the name of your other project. Neither appears in the copy.
+
+Still waiting for you: which design to use (1, 2 or 3), whether the Seerah is the last story of the prophets section (R11), and which Companions come first (R12; the default is the ten, the Mothers of the Believers and the people of Badr).
+
+## The author — 2026-11-20 00:05
+
+```text
+* عاوز ازود في ال business قسم للأدعية وقسم للتسبيح أسمة مسبحة مثلاً وكذلك الأذكار لو مثلاً اذكار الصباح فيها حاجه تتقال 3 مرات او 100 مره يكون في counter او مسبحة بشكل كويس
+* زي أبليكيشن Ayah عاوز اضيف فواصل علي اي آيه ال user يحددها ممكن يخليها فاصل بأكثر من لون زي فاصل أحمر فاصل اخضر وهكذا 
+* وهكذا لو حدد آية معينة ممكن يختار قارئ معين يقرأها أو تفسير الأية او الأيات من كذا لكذا ويشوف كل التفسيرات 
+* ممكن تغير تصميم ال direction اللي أسمة جنتان الصورة, استخدم صورة افضل من كده 
+* المظهر بدل ما يكون بشكل 2 buttons خليه switch button في اي مكان في الصفحة مع الأختيارت بتاعت ال directions 
+* ممكن تتدبر أكثر في القرأن وتطلع direction اكثر 
+* عرض التقويم الهجري بالأبليكيشن والساعة الحالية حسب اللوكيشن
+* خلي في قابلية أن المستخدم ممكن يحمل السورة او الأية صوت شيخ معين لو حابب بعد كده يسمعة لو ماعندوش أنترنت 
+* أضافة فضل الصلاة من الأحاديث النبوة وهكذا فضل السور والأيات من الأحاديث النبوية الصحيحة في كل شيء
+* حدث ال plan و AGENTS.md file في الأخر
+```
+
+## The agent — 2026-11-20 00:19
+
+Adding the six new directions. Each is named after a word of the Quran, and the checker tests its contrast and night rules:
+
+One failure: the Pasture night background is too close to black. Lightening it a step:
+
+All 18 directions pass. Now the landscapes and the notes for each direction in the design 3 page. Finding where the page lists the directions:
+
+The notes for each direction are translated through design 3's i18n. Next, the structure of the reasons document, so the six new directions follow the same pattern:
+
+Now the notes for each new direction (shown on the "Why these colours?" screen) and the direction list:
+
+Now the build: the new ayahs it must copy from Tanzil and check, each against the word it is cited for:
+
+Now the translations of the six new direction names and notes, added to design 3's language files:
+
+Every new ayah was copied from Tanzil and passed its check. Now the reasons document. The quoted words are taken from the copied ayahs by script, never typed:
+
+The reasons document passes its check (22 excerpts, each found word for word in its ayah). Now a look at the seven new landscapes, day and night:
+
+The preview server had stopped; restarting it.
+
+Most look right. Two need work: the springs between the two gardens barely show, and the al-Kawthar river reads as a blob. A closer look at the Two Gardens:
+
+The Two Gardens works now. The river still bulges near the horizon; smoothing it into an even widening curve:
+
+Fixing one detail before the texts: design 1 has no location-pin icon, so the builder brings its own:
+
+Now the 50 interface texts of the new screens, in all 22 languages:
+
+All three pages are built. Checking them in the browser (errors, every language, and whether the home screens still fit):
+
+Misbaha, adhkar and duas look right in Arabic. The markers, actions and Hijri screens, in English:
+
+The Fatiha page in the markers screen breaks: my class names `.ay` and `.q` collide with existing styles in designs 2 and 3. Renaming them:
+
+The Hijri calendar works. The Fatiha text in the markers screen still doesn't wrap; checking which style stops it:
+
+A style from the page sets `white-space: nowrap` on it. Setting it explicitly:
+
+Both marker styles render: ribbons with a small mark by the ayah number on the left, a soft tint on the right. Now the day/night switch on design 1's first launch, and design 1's home:
+
+The switch sits beside «الألوان», and the three new tiles are on the home screen. Now the full build chain in order, then the SVG files:
+
+Node's command line got too long with 18 directions; passing the script on standard input instead:
+
+Quick recheck of the three pages after the full rebuild:
+
+You've hit your 5-hour limit · resets 6am (Asia/Riyadh)
+
+## The author — 2026-11-20 08:03
+
+```text
+Try again
+```
+
+## The agent — 2026-11-20 08:03
+
+The last Figma step reported success, so first I'll check that it really landed:
+
+Writing all the document updates in one script:
+
+Now the session record and the memory (a new rule: the marker look waits for the author; design 3 has 18 directions):

@@ -37,7 +37,13 @@ VERSES = {
     "89:1": "الفجر", "81:18": "الصبح",                                    # dawn
     "93:1": "الضحي", "93:2": "سجي",                                       # forenoon and the still night (ى is compared as ي)
     "22:63": "مخضرة",                                                     # rain
-    "55:64": "مدهامتان", "55:68": "رمان",                                  # the two gardens
+    "55:64": "مدهامتان", "55:66": "نضاختان", "55:68": "رمان",              # the two gardens (55:66 since 2026-11-20)
+    "95:1": "التين",                                                      # the fig and the olive (2026-11-20)
+    "108:1": "الكوثر",                                                    # al-Kawthar
+    "91:1": "الشمس", "91:2": "القمر",                                     # the sun and the moon
+    "51:1": "الذريت",                                                     # the scattering winds (dagger alefs are marks)
+    "48:29": "كزرع",                                                      # the crop
+    "87:4": "المرعي", "87:5": "احوي",                                     # the pasture (ى is compared as ي)
     "24:35": "زجاجة",                                                     # light
     "35:27": "غرابيب",                                                    # mountains (high contrast)
     "30:22": "السنتكم",                                                   # the language choice

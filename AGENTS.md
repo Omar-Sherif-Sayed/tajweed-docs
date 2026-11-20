@@ -39,13 +39,13 @@ repository the task touches → (6) the last record in [`docs/sessions/`](docs/s
 | Figma | «Tajweed — designs»: https://www.figma.com/design/K5RXq2tO1sVE7RwlJ9dD1L — one page per design with its logo, icons, drawings / landscapes (editable vectors) and colours; SVG copies in `docs/design/elements/` (§13). |
 | Exists | **Five public repositories on GitHub** (`main` branch), the same five folders on this machine. `tajweed-docs` (this one): parent `AGENTS.md`, `README.md`, `LICENSE` (CC BY 4.0), the detailed plan, the session record with a conversation copy, the copy of the agent's memory (`docs/memory/`), and the design in `docs/design/`: **one file per design — `prototypes/round-1.html` (design 1), `round-2.html` (design 2, "early Islam"), `round-3.html` (design 3, "the first era")** — each in all 22 languages and with the Lives screens; the interface texts in `prototypes/i18n/round1`, `round2`, `round3`, `lives`; the design elements as SVG in `elements/`; the meanings documents; the verified source files and the scripts that check them. The four application repositories: `README.md`, `AGENTS.md`, `LICENSE` (MIT), `.gitignore` — no application code. |
 | Does not exist | Any application code, the register of content sources, the remaining screens. |
-| Last task done | 2026-11-19/20 (the author's review): **design 1 is one up-to-date file and round N = design N** (`round-1.html` … `round-3.html`; old names in §13); design 1 in all 22 languages; i18n in one folder per round; **the Lives screens (F20, F21, F22) in all three designs** — a group «السِّيَر» on the home screen, an index / groups / timeline screen and a sample entry, names only where beyond doubt, everything else a placeholder naming its source (§8.11); **Figma holds the design elements** (logos, icons, drawings, 24 landscapes, colours) as editable vectors, with the SVG files in `docs/design/elements/`; **the agent's memory is copied into `docs/memory/` with every commit** (§1). |
+| Last task done | 2026-11-20 (the author's message): **seven new features F23 – F29** (duas, misbaha and the adhkar counter, coloured ayah markers, actions on an ayah or a range, Hijri date and clock, offline listening, virtues — §2, §8.12) and **their screens in all three designs**; the ayah markers in two styles for the author to choose; **the day / night choice is now one switch beside the colour directions**; design 3: **a new Two Gardens landscape and six new directions** (the fig and the olive, al-Kawthar, the sun and the moon, the scattering winds, the crop, the pasture — 18 in all); all of it in 22 languages and in Figma. |
 | GitHub access from this machine | **Over SSH only** (the Windows certificate store blocks the HTTPS sign-in, §1). Key `~/.ssh/id_ed25519_tajweed` (no passphrase, fingerprint `SHA256:EPCRVeCpF+Jvsj40LKpu4Cta+mKF3ivLO8szlC2k/Po`), registered in the author's account as "Tajweed project - work laptop" (he confirmed it himself). Each of the five repositories uses it through its local `core.sshCommand`; remotes are `git@github.com:Omar-Sherif-Sayed/<name>.git`. A new clone on this machine needs the same two settings. Test: `ssh -i ~/.ssh/id_ed25519_tajweed -o IdentitiesOnly=yes -T git@github.com`. |
 | Folder name | `C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences` — renamed by the author on 2026-11-17. |
 | GitHub account | `Omar-Sherif-Sayed` — <https://github.com/Omar-Sherif-Sayed?tab=repositories>. Pushing is allowed for this product (R1); push at the end of every task. |
 | Do not forget | `P2-D1` — the default prayer-time method of every country, each with a named official source (the author, 2026-11-17: it may be done at any time, before phase 2 starts) · **F19** — the in-app section «لماذا هذا التصميم؟ / Why this design?»: the reason for every colour, icon and the logo (§8.10, `docs/design/design-2-meanings.md` or `design-3-meanings.md`, for the chosen design). |
 | **Next task** | `P0-11`: the author chooses one design — 1 (`round-1.html`), 2 (`round-2.html`) or 3 (`round-3.html`) — for web, Android and iPhone; then the remaining screens in the chosen design (§13), its elements in Figma, and the scaffolds `P0-06` … `P0-10`. |
-| Waiting for the author | His choice among designs 1, 2 and 3; his reading of the meanings documents (`design-2-meanings.md`, `design-3-meanings.md`); the reports of mistakes that users write on GitHub (issues), which he brings to the agent; R11 (the Seerah inside F20?) and R12 (which Companions first) — §18.2. |
+| Waiting for the author | His choice among designs 1, 2 and 3; **the look of the ayah markers — ribbon or tint** (F25); his reading of the meanings documents (`design-2-meanings.md`, `design-3-meanings.md`); the reports of mistakes that users write on GitHub (issues), which he brings to the agent; R11 (the Seerah inside F20?) and R12 (which Companions first) — §18.2. |
 
 **At the end of every session:** update the table above, the statuses in §14.1, the change log §19; refresh the memory
 copy (`python -I docs/memory/sync_memory.py`, §1); write or extend
@@ -139,6 +139,13 @@ too long for a store title, the store shows "Tajweed" with the rest as the subti
 | F17 | Sources | A section listing **every** source the application uses — Quran text and its layout, fonts, audio and timings, tafsir, hadith, adhkar, books, prayer-time method, radio streams, icons, software libraries — each with its owner, link, licence and verification date; built from the register `docs/data-sources/README.md`, so it is never out of step (author, 2026-11-17). |
 | F18 | Appearance | Three colour directions (A emerald and gold, B teal and sand, C mushaf), each with a light and a dark theme; chosen on first launch after the language, changeable in settings; the Quran font is a reader setting (author, 2026-11-17 — §13). A second design, "early Islam" (round 3), and a third, "the first era" (round 4), were made on the author's request to compare; he chooses one design for all clients. |
 | F19 | Why this design | A section inside the application that explains every colour direction, icon and the logo — the ayah (copied, never typed), the hadith reference, a design note — asked by the author, 2026-11-17 (§8.10). |
+| F23 | Duas — الأدعية | Duas from the Quran (copied from the shipped text, with surah and ayah) and from the authentic Sunnah (verbatim, with collection, number and grade), grouped by occasion (§8.12) — added by the author, 2026-11-20. |
+| F24 | Misbaha — المسبحة | A tasbeeh counter: choose a dhikr, a count (33, 100 or open), tap to count, a short vibration at the end of a round, rounds and the day's total on the device (§8.12) — added by the author, 2026-11-20. The adhkar (F12) get the same counter: it counts down each dhikr's number (3, 100, …) and opens the next dhikr by itself. |
+| F25 | Ayah markers — فواصل | Like the Ayah application: the user puts coloured markers (red, green, blue, gold …, each with a name) on any ayah; several at once; saved on the device only; the Quran text keeps one colour (§8.12) — added by the author, 2026-11-20. ☐ The look — a ribbon with a small mark beside the ayah number, or a light tint behind the ayah — is the author's choice after seeing both. |
+| F26 | Ayah and range actions | Select an ayah or a range (from … to …): add a marker; listen in a reciter of the user's choice, with repeat; read **all** the tafsirs of the selection; download; its virtue if one exists (§8.12) — added by the author, 2026-11-20. |
+| F27 | Hijri date and clock | The Hijri date (Umm al-Qura calendar, with a setting of −2 … +2 days to match the country's announcement — the author's choice, 2026-11-20) and the current time for the user's location, on a calendar screen and beside the prayer times (§8.12). |
+| F28 | Offline listening | Download a surah or a range in a chosen reciter's voice and listen without internet — only where the source allows downloading (§7.5); otherwise the reciter is streaming only, and the screen says so (§8.12) — added by the author, 2026-11-20. |
+| F29 | Virtues — الفضائل | The virtue of prayer, of surahs and of ayahs (and of every other subject the sources cover), **only from authentic hadiths**, verbatim with collection, number and the grade stated by the source; weak and fabricated narrations — common in this subject — are left out (§8.12) — added by the author, 2026-11-20. |
 | F16 | Quran search | Search for a word with or without tashkeel, by the surah's name, and by the ayah's number (§8.1) — added by the author, 2026-11-17. |
 | F20 | Stories of the prophets — قصص الأنبياء | The prophets named in the Quran, each with the ayahs about him (copied from the shipped text), the authentic hadiths about him with their grade, and his story verbatim from a named classical source; the Seerah of the Prophet ﷺ is the last and longest story (§8.11) — added by the author, 2026-11-19. |
 | F21 | The Companions — الصحابة | The life of each Companion verbatim from the classical books of the Companions, with the hadiths of his or her virtues and their grade; first the ten promised Paradise and the Mothers of the Believers (§8.11) — added by the author, 2026-11-19. |
@@ -720,6 +727,25 @@ Rules (in addition to §6):
 7. Search inside these sections, a "report a mistake" button on every entry (§6.9), and the source of every entry in
    F17.
 
+### 8.12 F23 – F29 — Duas, misbaha, ayah markers, ayah actions, Hijri date, offline listening, virtues (author, 2026-11-20)
+
+The author asked (2026-11-20) for: a duas section; a misbaha and a good counter for the adhkar that are said 3 or
+100 times; coloured markers on any ayah like the Ayah application; choosing a reciter for a chosen ayah or range and
+seeing all its tafsirs; the Hijri calendar and the time for the location; downloading a recitation to listen without
+internet; and the virtues of prayer, surahs and ayahs from authentic hadiths "in everything".
+
+| Feature | Data and its source | Where it is kept | Rules |
+| --- | --- | --- | --- |
+| F23 Duas | Quran duas: the shipped Quran text (surah, ayah); Sunnah duas: a named collection (☐ حصن المسلم and the two Sahihs, with the rights of the edition, `P6-D1`) | backend `dua` module | §6.10: verbatim, with reference and grade; never translated by us |
+| F24 Misbaha, F12 counter | the words of each dhikr and its count from authentic hadiths with their reference (`P6-D1`) | the counts and rounds on the device only | the words are not written by us; the misbaha shows them as the source writes them |
+| F25 Ayah markers | — | the device only (no account) | a display layer (§6.3); the Quran text keeps one colour (§8.1); the look is chosen by the author (ribbon or tint) |
+| F26 Ayah and range actions | reciters and their per-ayah audio (§7.3); the tafsirs we have the right to show (§7.2, `P4-D1`) | — | a tafsir appears only after its licence is confirmed; a reciter only where his recitation exists |
+| F27 Hijri date and clock | the Umm al-Qura calendar of the platform (Android, iOS and the browser all have it) and the device's time zone | the adjustment on the device | the screen names the calendar; ⚠ the Hijri month can differ by a day from a country's announcement — hence the adjustment |
+| F28 Offline listening | the audio sources (§7.3) | the device's storage | ⚠ downloading is a copy: allowed only where the source's terms or a written permission allow it (§7.5, `P0-13`); otherwise streaming only |
+| F29 Virtues | authentic hadiths only, with collection, number and the source's grade (Sahih al-Bukhari, Sahih Muslim; others only when graded sahih or hasan by a named source) | backend `hadith` module, linked to a surah, an ayah or a subject | ⚠ many narrations about the virtues of surahs are weak or fabricated: nothing without a stated authentic grade (§6.10) |
+
+The screens of all seven are in the three design prototypes (§13, 2026-11-20).
+
 ## 9. Backend — `tajweed-backend` (structure and conventions)
 
 The author's usual backend style. The conventions below are the complete list for this product; the repository's
@@ -753,7 +779,8 @@ docs/                api/ (OpenAPI), data-sources/, permissions/, deployment/, q
 | `radio` | stations, streams, health checks |
 | `prayer` | calculation-method metadata, muezzins, adhan audio sources |
 | `adhkar` | categories, adhkar, counts, references |
-| `hadith` | collections, books, chapters, hadiths, grades, reference links |
+| `dua` | duas from the Quran (ayah references) and from the Sunnah (verbatim, collection, number, grade), occasions (F23) |
+| `hadith` | collections, books, chapters, hadiths, grades, reference links; virtues linked to a surah, an ayah or a subject (F29) |
 | `library` | books, volumes, chapters, pages |
 | `prophet` | prophets, their ayah references, hadiths, story chapters with book / volume / page (F20) |
 | `companion` | Companions, groups (the ten, Mothers of the Believers, Badr), hadiths of virtues, life chapters (F21) |
@@ -780,7 +807,7 @@ The author's usual web style. The conventions below are the complete list for th
 ```
 src/app/
   component/<module>/            pages per feature: quran, recitation, tafsir, tajweed, radio, prayer-times,
-                                 qibla, adhkar, hadith, library, prophets, companions, caliphs, about,
+                                 qibla, adhkar, misbaha, duas, hijri-calendar, hadith, library, prophets, companions, caliphs, about,
                                  onboarding (language choice)
   shared/
     component/general/           our wrappers around the UI library (inputs, buttons, dialogs, drawer, tag, ...)
@@ -919,7 +946,20 @@ Agreed for both platforms whatever the option:
   Names only where beyond doubt; every list, story, hadith, date and event a dashed placeholder naming its source
   book; honorifics in Arabic in every language; no picture of a prophet or Companion; icons without a person or a
   cross (a line of descent, 3:34; a palm of Madinah; the steps of a minbar).
-- Screens to design: language choice, colour-direction choice, sources (F17), home, Quran reader (+ ayah actions: play, tafsir, bookmark), player, reciter
+- **2026-11-20 (the author's message): new screens in all three designs, the day / night switch, six more
+  directions for design 3.** `tools/build_extras.py` writes into the three pages: three home tiles (misbaha, duas,
+  Hijri date); the misbaha (a ring of 33 beads, the count, 33 / 100 / open, rounds and the day's total); the adhkar
+  with a counter that counts down and opens the next dhikr; the duas (three Quran duas copied from Tanzil, the
+  Sunnah duas as placeholders); the ayah markers on Al-Fatihah in **two styles to compare — a ribbon with a small
+  mark beside the ayah number, or a light tint**; the actions on an ayah or a range (marker colours, reciter, range,
+  repeat, all tafsirs, download, virtue); the Hijri calendar (Umm al-Qura, −2 … +2 days) with the device's time.
+  The light / dark choice is **one switch beside the colour directions** on the first launch (the two buttons are
+  gone). Design 3: the Two Gardens landscape redrawn (dense deep-green trees, pomegranates and palms, the two
+  springs of 55:66 between the gardens) and **six new directions** — the fig and the olive (95:1), al-Kawthar (108:1),
+  the sun and the moon (91:1–2), the scattering winds (51:1), the crop (48:29), the pasture (87:4–5) — each with
+  its landscape, its ayahs copied and checked, its contrast and night rules checked; 18 directions in all, Mountains
+  still the only one for low vision and colour blindness. Reasons: `design-3-meanings.md` §3.10, §3.13 – §3.18.
+- Screens to design: language choice, colour-direction choice, sources (F17), home, Quran reader (+ ayah actions: play, tafsir, bookmark, coloured markers), player, misbaha, duas, Hijri calendar, reciter
   picker, tajweed lesson, radio list and player, prayer times (six backgrounds), adhan settings, Qibla, adhkar list and
   counter, hadith, book reader, prophets / Companions / caliphs (index, entry, timeline), settings, about.
 
@@ -944,6 +984,7 @@ complete; the repository `AGENTS.md` and `README.md` are updated; the author has
 | **7. Hadith** | F13 in the agreed scope with references | |
 | **8. Books** | F14 reader | |
 | **9. Lives** | F20 prophets · F21 Companions · F22 Rightly Guided Caliphs (§8.11) | |
+| (added to phases 1, 2, 6, 7 — 2026-11-20) | F25 markers, F26 ayah actions, F28 offline listening (phase 1) · F27 Hijri date and clock (phase 2) · F23 duas, F24 misbaha (phase 6) · F29 virtues (phase 7) — §8.12 | |
 | **Release track** (parallel, starts in phase 1) | Hosting, domain, privacy policy, store accounts, Google Play closed test (takes at least 14 days), TestFlight, store listings | Public availability — §15 |
 
 ### 14.1 Task list and status (the only place where status is kept)
@@ -967,7 +1008,7 @@ reviewer). Task ids: `P<phase>-<area><n>`, areas **D** data · **B** backend · 
 | P0-08 | Scaffold `tajweed-frontend`: Angular 22, Material, Tailwind, wrappers, language choice, CI | ☐ |
 | P0-09 | Scaffold `tajweed-android`: Kotlin, Compose, both languages, CI | ☐ (needs P0-05) |
 | P0-10 | Scaffold `tajweed-ios`: generated project, SwiftUI, CI on a macOS runner | ☐ |
-| P0-11 | Design: tokens, 2–3 colour directions, HTML prototypes, the author's approval, then Figma | ◐ three designs, one file each (round N = design N, 2026-11-19): design 1 (three directions; reviewed 2026-11-17), design 2 "early Islam" (nine directions, colour-vision check, index), design 3 "the first era" (twelve directions with landscapes) — all in 22 languages, all with the Lives screens; the elements of the three in Figma and as SVG — ⏸ the author chooses design 1, 2 or 3; then the remaining screens |
+| P0-11 | Design: tokens, 2–3 colour directions, HTML prototypes, the author's approval, then Figma | ◐ three designs, one file each (round N = design N, 2026-11-19): design 1 (three directions; reviewed 2026-11-17), design 2 "early Islam" (nine directions, colour-vision check, index), design 3 "the first era" (eighteen directions with landscapes, 2026-11-20); the screens of F23 – F29 and the day / night switch in all three (2026-11-20) — all in 22 languages, all with the Lives screens; the elements of the three in Figma and as SVG — ⏸ the author chooses design 1, 2 or 3; then the remaining screens |
 | P0-12 | Data-source register; choose the Quran text and font; checksums | ◐ text, layout and default font chosen (Tanzil Uthmani; old Madinah 1405H layout from DigitalKhatt; King Fahd page fonts — author, 2026-11-17); quarter at 15:49 settled by the printed copy. Still to do: the register, the 9-ayah glyph table, justification, Makki / Madani compared with the printed index, the move to the backend repository |
 | P0-13 | Permission letters, sent by the author, tracked | ☐ — includes a letter to the King Fahd Complex for its page fonts (author's decision 2026-11-17: use them and ask) |
 | P0-14 | Content pipeline decisions D1, D2; API contract for phase 1 | ☐ |
@@ -998,6 +1039,10 @@ reviewer). Task ids: `P<phase>-<area><n>`, areas **D** data · **B** backend · 
 | P7-D1, P7-D2, P7-B1, P7-W/A/I-1 | Hadith with references | ☐ (⏸ الدرر السنية permission for links / explanations) |
 | P8-D1, P8-B1, P8-W/A/I-1 | Books reader | ☐ (⏸ edition rights) |
 | P9-D1 … D4, P9-B1, P9-W/A/I-1 … 3, P9-Q1 | Prophets, Companions, Rightly Guided Caliphs (§8.11) — added 2026-11-19 | ☐ (⏸ edition rights; the disputes between Companions ⏸ reviewer) |
+| P1-W10 … 12, P1-A8 … 10, P1-I8 … 10 | F25 ayah markers, F26 actions on an ayah or a range (reciter, repeat, download), F28 offline listening (§8.12) — added 2026-11-20 | ☐ (F25 look ⏸ the author; F28 ⏸ download permission per source) |
+| P2-D4, P2-W/A/I-5 | F27 Hijri date (Umm al-Qura + adjustment) and the clock for the location (§8.12) — added 2026-11-20 | ☐ |
+| P6-D2, P6-B2, P6-W/A/I-2 … 3 | F23 duas, F24 misbaha (§8.12) — added 2026-11-20 | ☐ (Sunnah duas ⏸ edition rights, `P6-D1`) |
+| P7-D3, P7-W/A/I-2 | F29 virtues from authentic hadiths, linked to prayer, surahs, ayahs and other subjects (§8.12) — added 2026-11-20 | ☐ (⏸ the hadith edition, `P7-D1`) |
 | RT-01 … RT-07 | Hosting, domain, deployment, privacy pages, Google Play, App Store, store listings | ☐ (author: accounts, costs, the Mac) |
 | LANG-01 … LANG-04 | The 22 languages (§8.9): ✔ the list (2026-11-18); ✔ all in the first release (2026-11-19); draft interface texts written for the prototype · per language: interface strings translated by the agent and corrected from users' GitHub reports (no native readers — author, 2026-11-19), its font, its RTL / LTR check · the published translation of the meanings with written permission (QuranEnc, `P0-13`) · store listings in that language | ◐ (part of the first release; ⏸ native readers) |
 
@@ -1135,3 +1180,4 @@ explicit yes** (it is public); R3 (permanent) and R10 (public) need the author's
 | 2026-11-19 | Seventeenth update (author's message): **no native readers** — the agent translates the interface, users report mistakes on GitHub and the author brings them (§1, §8.9, `LANG-02`); the round-4 texts translated into the 20 languages; **no cross shape anywhere** (a plus sign or a four-armed star — a symbol of Christianity): the star of the Light direction and four icons changed in all designs (§8.10); Mountains keeps its night theme (confirmed). |
 | 2026-11-19 | Eighteenth update (author's message): **three new sections — F20 stories of the prophets, F21 the Companions, F22 the Rightly Guided Caliphs** (§8.11, phase 9, modules `prophet`, `companion`, `caliph`), shown together under «السِّيَر»; verbatim from named classical sources; no pictures of prophets or Companions; R11, R12. All designs are also kept in Figma, beside this repository (§13). |
 | 2026-11-20 | Nineteenth update (the author's review of 2026-11-19): **round N = design N** — design 1 in one up-to-date file (`round-1.html`, formerly `colour-directions.html` + `round-2.html`), design 2 `round-2.html`, design 3 `round-3.html`; i18n in one folder per round; design 1 in all 22 languages; **the Lives screens (F20, F21, F22) in all three designs** (§13, §8.11); **Figma holds the design elements** (logos, icons, drawings, landscapes, colours) as editable vectors, with SVG copies in `docs/design/elements/` — the live layers removed; **the agent's memory is copied into `docs/memory/` with every commit** (§1). |
+| 2026-11-20 | Twentieth update (author's message): **seven new features — F23 duas, F24 misbaha (and a counter on the adhkar), F25 coloured ayah markers, F26 actions on an ayah or a range (reciter, all tafsirs), F27 Hijri date and clock (Umm al-Qura + adjustment), F28 offline listening (only where the source allows), F29 virtues from authentic hadiths** (§2, §8.12, modules `dua` and `hadith`, tasks in §14.1); their screens in all three designs; the ayah markers in two looks for the author to choose; the day / night switch beside the colour directions; design 3: the Two Gardens redrawn and six new directions (18 in all) (§13). |

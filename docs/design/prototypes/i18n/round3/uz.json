@@ -30,5 +30,17 @@
  "dir_duha": "Zuho",
  "dir_ghaith": "Yomgʻir",
  "dir_jannatan": "Ikki bogʻ",
- "dir_nur": "Nur"
+ "dir_nur": "Nur",
+ "r4_tin": "Zaytunning yashili va anjirning binafsha rangi — Tiyn surasining birinchi oyatidan.",
+ "r4_kawthar": "Al-Kavsar nomidan, surasining birinchi oyati: chuchuk suvning ranglari.",
+ "r4_qamar": "Ikki qasam: kunduzgi mavzu quyoshdan, tungi mavzu oydan — Shams surasining dastlabki ikki oyati.",
+ "r4_dhariyat": "Qum tepalari va shamol chiziqlari — Zoriyot surasining birinchi oyatidan.",
+ "r4_zar": "Yosh nihollarning yashili va boshoqlarning oltin rangi — Fath surasining oxirgi oyatidan.",
+ "r4_mara": "Aʼlo surasidagi ikki rang soʻzi: kunduzi yashil yaylov, kechasi qoramtir rang.",
+ "dir_tin": "Anjir va zaytun",
+ "dir_kawthar": "Al-Kavsar",
+ "dir_qamar": "Quyosh va oy",
+ "dir_dhariyat": "Sochuvchi shamollar",
+ "dir_zar": "Ekin",
+ "dir_mara": "Yaylov"
 }

@@ -203,6 +203,10 @@ Done when: the CI build and tests are green. ⚠ "Runs on a device" is **not** c
 5. After approval: the Figma file in the author's account, through his Chrome session.
 6. ☐ Fonts: the licence of each font is checked and recorded before it is used (Quran font: `P0-12`).
 
+**State 2026-11-20:** the screens of F23 – F29 (misbaha, adhkar counter, duas, ayah markers in two looks, ayah
+actions, Hijri calendar) and the day / night switch in all three designs; design 3 with 18 directions and a new Two
+Gardens landscape. Waiting for the author's choice of design and of the marker look.
+
 **State 2026-11-19, evening (the author's review):** one file per design, round N = design N — design 1
 `round-1.html` (the two passes merged, now in 22 languages), design 2 `round-2.html`, design 3 `round-3.html`; the
 Lives screens (F20–F22) in all three; the elements of each design (logo, icons, drawings, landscapes, colours) in
@@ -317,6 +321,9 @@ three modes, playback that survives network loss, About page.
 | P1-W6 | Reciter and style picker; a style appears only where it exists (§7.3); the riwayah is always shown. |
 | P1-W7 | About, sources and credits, privacy policy; "report a mistake" on the reader (F15, §6.9). |
 | P1-W9 | F19 "Why this design" screen (§8.10 of `AGENTS.md`): from About and from the colour choice; one card per direction, icon and the logo; ayahs from the shipped Quran text, never typed. |
+| P1-W10 | F25 ayah markers: colours and names chosen by the user, several at once, saved in the browser; the look chosen by the author (ribbon or tint, `AGENTS.md` §8.12); the Quran text keeps one colour. |
+| P1-W11 | F26 actions on an ayah or a range: from … to, marker, play in a chosen reciter with repeat, all the tafsirs of the selection (as their licences allow, `P4-D1`), virtue (`P7-D3`). |
+| P1-W12 | F28 download for offline listening where the source allows it (the web keeps files in the browser's storage; the phones in the app's storage); a reciter without permission shows streaming only. |
 | P1-W8 | Unit tests for the engine (retry order, source switching, endless mode crossing surah 114 → 1) and for search (handling of the typed query, the fixed list of test queries). |
 
 ### Android (`tajweed-android`)
@@ -358,6 +365,7 @@ path monitor. Started after the Android slice is accepted. Device checks wait fo
 | --- | --- |
 | P2-D1 | Calculation methods and their parameters from the Adhan library's documentation; the default method per country — ☐ a table with a named official source per country; a country without a verified source falls back to Muslim World League and says so. **The author (2026-11-17): may be done at any time, before phase 2 — do not forget it.** Start with the countries the author named: Egypt, Saudi Arabia, Japan. Output: `docs/data-sources/prayer-methods.md` (country, method, parameters, source link, date checked). |
 | P2-D2 | City search for users who do not share their location — ☐ source and licence of the city list. |
+| P2-D4 | F27: the Hijri date from the platform's Umm al-Qura calendar with a −2 … +2 day setting; the time zone of the location; the screen names the calendar. |
 | P2-D3 | Muezzin recordings (⏸ until a recording with a known origin and permission exists for each one, §7.4): full version and a version under 30 seconds. |
 | P2-B1 | `prayer` module: method metadata, muezzins and their audio sources. |
 | P2-W/A/I-1 | Prayer times screen: today's times, the next prayer with a countdown, the Hijri date (from the platform's Umm al-Qura calendar, with a note that the local sighting can differ by a day), the six backgrounds. |
@@ -402,6 +410,10 @@ path monitor. Started after the Android slice is accepted. Device checks wait fo
 | --- | --- |
 | P6-D1 | حصن المسلم: right to use the text (publisher / author's foundation) — ☐; text, repeat count, reference and virtue exactly as in the book, checked item by item against the printed book by the author. English: the published translation only. |
 | P6-B1 | `adhkar` module: categories, adhkar, counts, references. |
+| P6-D2 | F23 duas: the Quran duas as ayah references into the shipped text; the Sunnah duas verbatim from a named collection with number and grade (rights with `P6-D1`). |
+| P6-B2 | `dua` module: occasions, duas, references. |
+| P6-W/A/I-2 | F24 misbaha: choose a dhikr and a count (33, 100, open), tap to count, vibration at the end of a round, rounds and the day's total on the device. |
+| P6-W/A/I-3 | F23 duas screen: from the Quran / from the Sunnah, by occasion, each with its reference. |
 | P6-W/A/I-1 | Categories, the dhikr page with a tap counter that follows the repeat count, favourites, optional morning / evening reminders (phones). |
 
 ## 10. Phase 7 — Hadith (F13)
@@ -411,6 +423,8 @@ path monitor. Started after the Android slice is accepted. Device checks wait fo
 | P7-D1 | الأربعون النووية, then صحيح البخاري and صحيح مسلم: a verified digital edition with its numbering stated; each hadith with collection, book, chapter, number, grade as stated by the source. |
 | P7-D2 | The link of each hadith to its page on الدرر السنية (⏸ their permission, `P0-13`); the explanation is linked, not copied, unless they permit. |
 | P7-B1 | `hadith` module: collections, books, chapters, hadiths, search. |
+| P7-D3 | F29 virtues: the authentic hadiths about the virtue of prayer, of surahs, of ayahs and of other subjects, each linked to its subject, verbatim with collection, number and the source's grade; weak and fabricated narrations left out. |
+| P7-W/A/I-2 | Virtues shown where their subject is: on a surah's page, an ayah's actions, the prayer screen, a dhikr. |
 | P7-W/A/I-1 | Browse by collection / book / chapter, search, the hadith page with its reference, grade and link, share as text with the reference, report a mistake. |
 
 ## 11. Phase 8 — Books (F14)

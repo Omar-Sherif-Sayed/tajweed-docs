@@ -6,9 +6,9 @@ used at any time").
 
 | Folder | Holds |
 | --- | --- |
-| `design-1/` | `logo.svg` (the eight-pointed star — two squares, never a cross shape) and `icons/` (30 icons) |
-| `design-2/` | `logo.svg` (the coin medallion), `prayer-dial.svg`, `colonnade.svg` (palm trunks under a roof of palm fronds) and `icons/` (26) |
-| `design-3/` | `logo.svg` (an arc of light over the horizon), `landscapes/` (24: each of the twelve directions, day and night) and `icons/` (26) |
+| `design-1/` | `logo.svg` (the eight-pointed star — two squares, never a cross shape) and `icons/` (34 icons) |
+| `design-2/` | `logo.svg` (the coin medallion), `prayer-dial.svg`, `colonnade.svg` (palm trunks under a roof of palm fronds) and `icons/` (30) |
+| `design-3/` | `logo.svg` (an arc of light over the horizon), `landscapes/` (36: each of the eighteen directions, day and night) and `icons/` (30) |
 | `manifest.json` | Every file with its size |
 
 - **Made by** [`../prototypes/tools/export_elements.py`](../prototypes/tools/export_elements.py) from the pages

@@ -1937,3 +1937,131 @@ let me know what is left
 QuranEnc carries six Arabic works, plus al-Mukhtasar in about 30 languages. Ibn Kathir, al-Tabari, al-Baghawi and al-Qurtubi are not there. Getting the exact titles of three of the six.
 
 QuranEnc's Arabic works are al-Mukhtasar, al-Muyassar, al-Sa'di and three more, including a book of word meanings. Recording that, and your rule for hadith gradings, then commit and push.
+
+Seven letters are now recorded as sent and waiting for answers: King Fahd Complex, QuranEnc, Ibn Uthaymeen Foundation, al-Badr, EveryAyah, Hisn al-Muslim and Dorar. Committed and pushed.
+
+#### Why some letters can't be written yet
+
+The issue is the same for almost all of them. The author of an old book is in the public domain: al-Bukhari, Ibn Kathir and al-Suyuti died centuries ago. But we never copy from the author. **We copy from a printed or digital edition**, and every edition was prepared by a modern scholar (تحقيق) and a publisher. They checked the manuscripts, fixed the text, numbered it and added footnotes, and they own that work. So a letter goes to an edition's owner, and we must first choose which edition.
+
+**1. The hadith books (al-Bukhari, Muslim, the Forty Nawawi)**
+- **Your rule, now recorded:** every scholar's ruling is shown, each with who said it and where, and we never choose one ourselves.
+  - Online, through Dorar: their encyclopedia lists the rulings of different scholars, and their terms require the ruling to stay with the hadith.
+  - Offline: the rulings printed in the edition we ship.
+- **What is still missing:** the edition for the hadith text itself. The text is nearly the same in every edition, but **the numbering is not**; a hadith can be 3532 in one and a different number in another. For example, sunnah.com uses one numbering for al-Bukhari, and older printed editions use others. We need one digital edition with a clear numbering and permission to ship it.
+
+**2. Tafsirs not on QuranEnc**
+- I checked QuranEnc today. It has these Arabic works, all covered by the letter you sent them:
+  - al-Mukhtasar, which also exists in about 30 languages;
+  - al-Muyassar;
+  - al-Sa'di;
+  - three more, including a book of word meanings that we could use for F34.
+- **Not on QuranEnc:** Ibn Kathir, al-Tabari, al-Baghawi, al-Qurtubi. These need a separate digital edition and a separate permission, either from the Quran Foundation API or from a publisher.
+- The difference is only where the text comes from, not its value.
+
+**3. The books of F14 and the Lives sections**
+- **F14 Books:** al-Shafi'i's «الأم», Sahih al-Bukhari, Sahih Muslim.
+- **The Lives:**
+
+  | Section | Books |
+  | --- | --- |
+  | The prophets | Ibn Kathir's «قصص الأنبياء» |
+  | The Seerah | Ibn Hisham's «السيرة النبوية» |
+  | The Companions | «الإصابة» by Ibn Hajar, «أسد الغابة», «الاستيعاب», «سير أعلام النبلاء» |
+  | The caliphs | al-Suyuti's «تاريخ الخلفاء» and Ibn Kathir's «البداية والنهاية» |
+
+- Each of these has several editions. For example, «سير أعلام النبلاء» edited by Shu'ayb al-Arna'ut (Mu'assasat al-Risala) is not the same as other printings.
+- We choose one edition per book, then write to its publisher.
+
+**4. Al-Sa'di's explanation of the Names, and the classical lists of the Prophet's ﷺ names**
+- **Al-Sa'di's explanation** appears in some printings at the end of his tafsir, and as a separate edited treatise («تفسير أسماء الله الحسنى»). If it is inside his tafsir on QuranEnc, the letter you sent covers it. If not, we need the publisher of the separate treatise.
+- **The classical lists of the Prophet's ﷺ names** are the same case: al-Suyuti's «الرياض الأنيقة» and Ibn al-Qayyim's «زاد المعاد» each exist in several edited editions.
+
+**5. The muezzin recordings**
+
+The problem here isn't a book, it's a sound file. Each of the six muezzins you asked for (al-Minshawi, Abdul Basit, al-Husary, Muhammad Rifat, Ali Ahmed Mulla, al-Daghriri) has many recordings on the internet. Usually nobody says where a recording came from: Egyptian Radio, the authority of the Two Holy Mosques, a record company or the family. We need, for each muezzin, a clean recording whose origin we know, plus a short version under 30 seconds for iPhone, and then a letter to that owner. Until that is found, no adhan sound can be used.
+
+#### Point 7: R11 and R12
+
+- **R11, the Seerah:** should the life of the Prophet ﷺ be the last and longest story inside "Stories of the Prophets", or a separate fourth section? My default is inside the stories, as the last one, with its own chapters.
+- **R12, the Companions:** «الإصابة» alone has thousands of Companions, too many for the first release. My default is to start with:
+  - the ten promised Paradise;
+  - the Mothers of the Believers;
+  - the people of Badr.
+
+  Then add more in later versions.
+- If you don't object, both defaults stay in effect.
+
+#### What is left
+
+1. **Waiting:** the answers to the seven letters. Forward each one to me when it arrives.
+2. **Editions:** choose one edition for each book (hadith, tafsirs not on QuranEnc, the books, the Lives, al-Sa'di, the Prophet's ﷺ names). The next letters go to those editions' owners.
+3. **The muezzin recordings:** a search for the origin of each one.
+4. **Design 3:** the remaining screens, then Figma when its limit resets, then exports at the best quality (P0-17).
+5. **The sources register (P0-12)**, and the default prayer-time method for each country (P2-D1).
+6. **Start coding:** check the versions, then build the four projects, beginning with the backend.
+
+## The author — 2026-11-20 16:34
+
+```text
+dorar ارسلي رابط صفحة علي الأيكميل بعد ما أرسلتة اكتب فيها الطلب 
+الغرض من استخدام الخدمة * و إتاحة الوصول لمراجعة العمل قبل نشره *
+string length is 255 characters only in both, let me know what should i write in these fields
+وكمان شوف الموسوعات دي كلها هل نقدر نستخدمهم في الأبليكيشن ولا لا
+
+[1 photo(s) attached — kept privately, not in this repository]
+```
+
+## The agent — 2026-11-20 16:34
+
+Both texts fit (216 and 196 characters). Recording the recommended encyclopedias in the tracker, then commit and push.
+
+Here are both fields, each under 255 characters, ready to paste:
+
+**الغرض من استخدام الخدمة** (216 characters):
+
+```text
+تطبيق «تجويد - القرآن الكريم وعلومه» للويب وأندرويد وآيفون، مجاني بلا إعلانات ولا حسابات، مفتوح المصدر. نعرض أحكام الأحاديث وروابطها لديكم، ونصوص الموسوعات المختارة كما هي بمصدرها ورابطها، عبر خادمنا فقط ووفق شروطكم.
+```
+
+**إتاحة الوصول لمراجعة العمل قبل نشره** (196 characters):
+
+```text
+نرسل لكم قبل النشر بأسبوعين على الأقل رابط نسخة الويب التجريبية ونسخة أندرويد تجريبية، وحسابًا للمراجعة إن احتجتم، ونعدّل كل ما تطلبون قبل النشر. والكود مفتوح للاطلاع: github.com/Omar-Sherif-Sayed
+```
+
+The second text is a commitment: two weeks before publishing we send them a test version, and we change whatever they ask. Change the period if two weeks doesn't suit you.
+
+**The encyclopedias: tick only five, not all seven.** The form itself says to choose what you actually need, and each encyclopedia is granted separately.
+
+| Encyclopedia | Tick it? | Used for |
+| --- | --- | --- |
+| الموسوعة الحديثية | ✔ | Hadith (F13), virtues (F29), the Islamic days (F35): each scholar's ruling with its source, as you decided |
+| موسوعة التفسير | ✔ | Tafsir (F5) and word meanings (F34) |
+| الموسوعة العقدية | ✔ | The Names of Allah (F39) |
+| الموسوعة الفقهية | ✔ | The wudu, prayer, Hajj and Umrah guides (F40), and Zakat (F42) |
+| الموسوعة التاريخية | ✔ | The prophets, Companions and caliphs (F20–F22) |
+| موسوعة الأخلاق والسلوك | ✗ | No feature uses it yet |
+| موسوعة الآداب الشرعية | ✗ | No feature uses it yet |
+
+We can add the last two later if a feature needs them. Asking only for what we use makes the request more convincing.
+
+**Yes, we can use them, but under Dorar's terms:**
+- **Online only, through our server:** whatever comes from Dorar can't be stored for more than 48 hours or shown without internet. It is an extra source beside our own offline content, not a replacement for it.
+- **Their name and a clickable link on every text**, with the text unchanged and never shown as a fatwa from Dorar.
+- **A hadith's ruling is never separated from it.**
+
+Once you've sent the form, tell me so I can mark it as submitted. The ✔ / ✗ recommendation is recorded in `docs/permissions/README.md`, committed and pushed.
+
+## The author — 2026-11-20 16:43
+
+```text
+i selected also last 2 features (موسوعة الأخلاق والسلوك) and (موسوعة الآداب الشرعية) so we can add them to our plan and features and selected all and submitted the request 
+
+for your info what I accepted (أقرّ بالاطلاع على [شروط الاستخدام](https://dorar.net/api-services/terms) والالتزام بها. *)
+I will accept these terms and conditions: 
+
+<pasted_content id="ba78">
+[Dorar's API terms, pasted by the author — not copied here; they are published at https://dorar.net/api-services/terms and summarised as binding rules in AGENTS.md §8.14]
+</pasted_content id="ba78">
+```

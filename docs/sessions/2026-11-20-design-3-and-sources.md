@@ -52,6 +52,13 @@ from all and mention everyone say what» — recorded in F13: every scholar's ru
 tafsirs checked: al-Mukhtasar, al-Muyassar, al-Sa'di, and three more; Ibn Kathir, al-Tabari, al-Baghawi and al-Qurtubi
 are not there. The agent explained why the other letters wait for a chosen edition, and R11 / R12.
 
+## The author's fifth message — Dorar's access request submitted
+
+The author filled Dorar's form with the two texts the agent wrote, selected **all seven encyclopedias** (also akhlaq and
+aadab, «so we can add them to our plan and features»), accepted the terms and submitted the request (2026-11-20).
+Recorded: F49 ethics and conduct, F50 Islamic manners; the accepted terms as binding rules (`AGENTS.md` §8.14); the
+`dorar` backend module and task `P7-B2`. The terms are cited by link and summarised in the rules, not copied.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)

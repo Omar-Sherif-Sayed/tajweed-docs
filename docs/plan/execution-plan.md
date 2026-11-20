@@ -455,6 +455,7 @@ path monitor. Started after the Android slice is accepted. Device checks wait fo
 | P7-D1 | الأربعون النووية, then صحيح البخاري and صحيح مسلم: a verified digital edition with its numbering stated; each hadith with collection, book, chapter, number, grade as stated by the source. |
 | P7-D2 | The link of each hadith to its page on الدرر السنية (⏸ their permission, `P0-13`); the explanation is linked, not copied, unless they permit. |
 | P7-B1 | `hadith` module: collections, books, chapters, hadiths, search. |
+| P7-B2 | The Dorar client (`dorar` module): the API key from the environment only (never in a repository or an app), HTTPS, a 24-hour cache with regular refresh and full deletion if the key ends, a limiter for 60 requests a minute, attribution and the `url` link kept on every result, ruling never separated from the hadith; a checklist review against `AGENTS.md` §8.14 before any release; the test environment given to Dorar two weeks before publishing. ⏸ Dorar's key (requested 2026-11-20). |
 | P7-D3 | F29 virtues: the authentic hadiths about the virtue of prayer, of surahs, of ayahs and of other subjects, each linked to its subject, verbatim with collection, number and the source's grade; weak and fabricated narrations left out. |
 | P7-W/A/I-2 | Virtues shown where their subject is: on a surah's page, an ayah's actions, the prayer screen, a dhikr. |
 | P7-W/A/I-1 | Browse by collection / book / chapter, search, the hadith page with its reference, grade and link, share as text with the reference, report a mistake. |
@@ -501,6 +502,7 @@ notifies (author, 2026-11-20).
 | P10-W/A/I-8 | F42 Zakat calculator: the nisab and the rules from a named fatwa body, the user enters the prices or a named price source is used; no inheritance calculator. |
 | P10-A/I-9 | F43 home-screen widgets (prayer times, Hijri date, an ayah of the day), F44 Wear OS / Apple Watch (prayer times, misbaha), F45 Android Auto / CarPlay (recitation and radio). |
 | P10-W/A/I-10 | F46 nearby mosques on an OpenStreetMap map (ODbL, credited in F17; the location stays on the device); F47 save all settings, markers, notes and progress to a file and load them on another device. |
+| P10-W/A/I-11 | F49 ethics and conduct, F50 Islamic manners — from Dorar's encyclopedias through the backend (`P7-B2`): browse and search, each subject verbatim with «الدرر السنية» and its link; a clear "needs an internet connection" state. |
 | P10-Q1 | Every text compared with its book; the Zakat results compared with worked examples published by the chosen fatwa body. |
 
 ---

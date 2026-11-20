@@ -45,7 +45,7 @@ repository the task touches → (6) the last record in [`docs/sessions/`](docs/s
 | GitHub account | `Omar-Sherif-Sayed` — <https://github.com/Omar-Sherif-Sayed?tab=repositories>. Pushing is allowed for this product (R1); push at the end of every task. |
 | Do not forget | `P2-D1` — the default prayer-time method of every country, each with a named official source (the author, 2026-11-17: it may be done at any time, before phase 2 starts) · **F19** — the in-app section «لماذا هذا التصميم؟ / Why this design?»: the reason for every colour, icon and the logo (§8.10, `docs/design/design-2-meanings.md` or `design-3-meanings.md`, for the chosen design). |
 | **Next task** | Design 3 (`round-3.html`) is chosen (author, 2026-11-20). Next: the remaining screens in design 3 (§13), its elements in Figma (when the plan's limit resets), the asset exports `P0-17`, the permission letters `P0-13` (drafted by the agent, sent by the author — `docs/permissions/`), and the scaffolds `P0-06` … `P0-10`. |
-| Waiting for the author | **The answers to the seven letters sent on 2026-11-20** (`docs/permissions/letters/`) and saving the answers in `docs/permissions/answers/`; his reading of the meanings documents (`design-2-meanings.md`, `design-3-meanings.md`); the reports of mistakes that users write on GitHub (issues), which he brings to the agent; R11 (the Seerah inside F20?) and R12 (which Companions first) — §18.2. ☐ For the agent, once Figma's Starter-plan limit of tool calls resets: design 3's colour rows of the ten directions added on 2026-11-20 (values in `docs/design/tokens-design-3.json`), the 22 new and changed landscapes and the 12 earlier ones to «Earlier landscapes» (all in `docs/design/elements/design-3/`). |
+| Waiting for the author | **The answers to the seven letters sent on 2026-11-20, and Dorar's API key** (access request submitted 2026-11-20 for all seven encyclopedias) (`docs/permissions/letters/`) and saving the answers in `docs/permissions/answers/`; his reading of the meanings documents (`design-2-meanings.md`, `design-3-meanings.md`); the reports of mistakes that users write on GitHub (issues), which he brings to the agent; R11 (the Seerah inside F20?) and R12 (which Companions first) — §18.2. ☐ For the agent, once Figma's Starter-plan limit of tool calls resets: design 3's colour rows of the ten directions added on 2026-11-20 (values in `docs/design/tokens-design-3.json`), the 22 new and changed landscapes and the 12 earlier ones to «Earlier landscapes» (all in `docs/design/elements/design-3/`). |
 
 **At the end of every session:** update the table above, the statuses in §14.1, the change log §19; refresh the memory
 copy (`python -I docs/memory/sync_memory.py`, §1); write or extend
@@ -166,6 +166,8 @@ too long for a store title, the store shows "Tajweed" with the rest as the subti
 | F46 | Nearby mosques | On an OpenStreetMap map (ODbL licence, credited in F17); the location stays on the device. |
 | F47 | Settings file | Save all settings, markers, notes and progress to a file and load them on another device — there are no accounts. |
 | F48 | Names of the Prophet ﷺ — أسماء النبي ﷺ | The authentic hadiths first (Sahih al-Bukhari 3532, Sahih Muslim 2354, 2355 — checked 2026-11-20), then **the long classical lists (200 names or more)**, each name with its source and its meaning as the source gives it; **where its evidence is weak or disputed, the screen says so**, quoting the scholar who says it (author, 2026-11-20; §8.13). |
+| F49 | Ethics and conduct — الأخلاق والسلوك | From Dorar's encyclopedia «موسوعة الأخلاق والسلوك»: each subject verbatim with its title, «الدرر السنية» and its clickable link; online only (§8.14) — added by the author, 2026-11-20. |
+| F50 | Islamic manners — الآداب الشرعية | From Dorar's encyclopedia «موسوعة الآداب الشرعية»: each subject verbatim with its title, «الدرر السنية» and its clickable link; online only (§8.14) — added by the author, 2026-11-20. |
 | F16 | Quran search | Search for a word with or without tashkeel, by the surah's name, and by the ayah's number (§8.1) — added by the author, 2026-11-17. |
 | F20 | Stories of the prophets — قصص الأنبياء | The prophets named in the Quran, each with the ayahs about him (copied from the shipped text), the authentic hadiths about him with their grade, and his story verbatim from a named classical source; the Seerah of the Prophet ﷺ is the last and longest story (§8.11) — added by the author, 2026-11-19. |
 | F21 | The Companions — الصحابة | The life of each Companion verbatim from the classical books of the Companions, with the hadiths of his or her virtues and their grade; first the ten promised Paradise and the Mothers of the Believers (§8.11) — added by the author, 2026-11-19. |
@@ -792,6 +794,45 @@ and set one rule: **no notification except the adhan** (§2).
 much longer than the phase-1 release planned before (§16). Content that cannot be verified or licensed by then is
 left out of the release (§6), not shipped half-checked.
 
+### 8.14 Dorar's encyclopedias — the access request and the terms the author accepted (2026-11-20)
+
+The author submitted Dorar's API access request on 2026-11-20 for **all seven encyclopedias** and accepted its terms
+(`https://dorar.net/api-services/terms`, as published that day). ⏸ The key has not arrived yet. What each one serves:
+
+| Dorar encyclopedia (endpoint) | Features | Role |
+| --- | --- | --- |
+| الموسوعة الحديثية (`/api/v1/hadith/search`) | F13, F29, F35, F48 | every scholar's ruling on a hadith, with its source and link (F13 rule) |
+| موسوعة التفسير (`/api/v1/tafseer/search`) | F5, F34 | tafsir, word meanings, benefits — beside the tafsirs we ship |
+| الموسوعة العقدية (`/api/v1/aqeeda/search`) | F39 | the Names of Allah and their meanings, as Dorar publishes them |
+| الموسوعة الفقهية (`/api/v1/feqhia/search`) | F40, F42 | the rulings of wudu, prayer, Hajj, Umrah, Zakat |
+| موسوعة الأخلاق والسلوك (`/api/v1/alakhlaq/search`) | **F49** | the whole section |
+| موسوعة الآداب الشرعية (`/api/v1/aadab/search`) | **F50** | the whole section |
+| الموسوعة التاريخية (`/api/v1/history/search`) | F20 – F22 | events by year, with links |
+
+**Binding rules from the accepted terms** — every client and the backend follow them; a review against this list is
+part of the task that builds the Dorar client (`P7-B2`):
+
+1. **Attribution:** «الدرر السنية» named on every text from the API, and the `url` field shown as a visible, clickable
+   link.
+2. **Nothing changed:** a ruling is never reworded, shortened or inferred; a hadith's text is never shown without the
+   ruling that comes with it; nothing is presented as Dorar's own fatwa or preference — "copied from the encyclopedia".
+3. **Online only, through our backend:** the API key lives only on our server, in an environment variable or secret —
+   **never in any repository (all four are public), never in an app**; every call over HTTPS (TLS 1.2 at least).
+4. **No bulk copy:** no scraping, bulk download, rebuilding or full storage of their database; no re-publishing, no
+   sub-API for others; use only inside this application.
+5. **Cache at most 24 hours** (their limit is 24 – 48), for speed only; refreshed regularly so corrections appear;
+   **everything deleted at once** if the key is revoked or the service ends. The phones show Dorar content only while
+   online (a cached answer up to 24 hours old may be shown offline); the offline content comes from the editions we ship.
+6. **Rate:** at most 60 requests a minute for the whole application — the backend queues and caches so users never
+   exceed it.
+7. **Review before publishing:** a test environment (web link and Android test build) is given to Dorar before any
+   public release that uses their content — the author committed to two weeks ahead.
+8. **A leaked key or a security hole is reported to Dorar within 24 hours** (support@dorar.net), and the key replaced.
+9. Content: the application must contain nothing against the Sharia or the laws of Saudi Arabia, nothing that invites
+   fitnah — already the product's rules; and Dorar's free content is never sold or put behind a fee (the app is free).
+10. The service is "as is" and may change or stop: every Dorar screen degrades gracefully ("this part needs an internet
+    connection" / "the source is unavailable"), and no feature depends on Dorar alone for its offline core.
+
 ## 9. Backend — `tajweed-backend` (structure and conventions)
 
 The author's usual backend style. The conventions below are the complete list for this product; the repository's
@@ -834,6 +875,7 @@ docs/                api/ (OpenAPI), data-sources/, permissions/, deployment/, q
 | `study` | word meanings and asbab al-nuzul per ayah, with their books (F34) |
 | `worship` | the calendar of Islamic days with their hadiths (F35), ruqyah (F38), the Names of Allah with their evidence and explanations by book (F39), the names of the Prophet ﷺ with source, meaning and grade note (F48) |
 | `guide` | the wudu, prayer, Hajj and Umrah guides and the kids lessons (F40, F41), the Zakat rules and their fatwa source (F42) |
+| `dorar` | the client of Dorar's API (all seven encyclopedias): key from the environment, 24-hour cache, 60-per-minute limiter, attribution and link fields kept — the rules of §8.14 (F49, F50 and the Dorar parts of other features) |
 | `appinfo` | about / author, content versions, sources and credits |
 
 Conventions: constructor injection with Lombok `@RequiredArgsConstructor` (no `@Autowired`
@@ -1072,7 +1114,7 @@ complete; the repository `AGENTS.md` and `README.md` are updated; the author has
 | **8. Books** | F14 reader | |
 | **9. Lives** | F20 prophets · F21 Companions · F22 Rightly Guided Caliphs (§8.11) | |
 | (added to phases 1, 2, 6, 7 — 2026-11-20) | F25 markers, F26 ayah actions, F28 offline listening (phase 1) · F27 Hijri date and clock (phase 2) · F23 duas, F24 misbaha (phase 6) · F29 virtues (phase 7) — §8.12 | |
-| **10. Study, worship tools, guides, device** | F30 – F47 (§8.13) — added by the author, 2026-11-20 | |
+| **10. Study, worship tools, guides, device** | F30 – F50 (§8.13, §8.14) — added by the author, 2026-11-20 | |
 | **Release track** (parallel, starts in phase 1) | Hosting, domain, privacy policy, store accounts, Google Play closed test (takes at least 14 days), TestFlight, store listings | Public availability — §15 |
 
 ### 14.1 Task list and status (the only place where status is kept)
@@ -1131,8 +1173,9 @@ reviewer). Task ids: `P<phase>-<area><n>`, areas **D** data · **B** backend · 
 | P1-W10 … 12, P1-A8 … 10, P1-I8 … 10 | F25 ayah markers, F26 actions on an ayah or a range (reciter, repeat, download), F28 offline listening (§8.12) — added 2026-11-20 | ☐ (F25 look decided: the tint with the ayah number; F28 ⏸ download permission per source) |
 | P2-D4, P2-W/A/I-5 | F27 Hijri date (Umm al-Qura + adjustment) and the clock for the location (§8.12) — added 2026-11-20 | ☐ |
 | P6-D2, P6-B2, P6-W/A/I-2 … 3 | F23 duas, F24 misbaha (§8.12) — added 2026-11-20 | ☐ (Sunnah duas ⏸ edition rights, `P6-D1`) |
+| P7-B2 | The Dorar client (`dorar` module) under the binding rules of §8.14 — added 2026-11-20 | ☐ (⏸ Dorar's key; request submitted 2026-11-20) |
 | P7-D3, P7-W/A/I-2 | F29 virtues from authentic hadiths, linked to prayer, surahs, ayahs and other subjects (§8.12) — added 2026-11-20 | ☐ (⏸ the hadith edition, `P7-D1`) |
-| P10-D1, P10-W/A/I-1 … 10, P10-Q1 | F30 – F47: hifz, khatma, notes, share, word meanings and asbab al-nuzul, Islamic days, the last third of the night, tracker, ruqyah, the Names of Allah (three explanations by book), the names of the Prophet ﷺ (F48), guides, kids, Zakat, widgets, watch, car, mosques map, settings file (§8.13) — added 2026-11-20 | ☐ (⏸ the rights of each book; F33 ⏸ the font's permission) |
+| P10-D1, P10-W/A/I-1 … 10, P10-Q1 | F30 – F47: hifz, khatma, notes, share, word meanings and asbab al-nuzul, Islamic days, the last third of the night, tracker, ruqyah, the Names of Allah (three explanations by book), the names of the Prophet ﷺ (F48), guides, kids, Zakat, widgets, watch, car, mosques map, settings file , F49 ethics and conduct, F50 Islamic manners (§8.13, §8.14) — added 2026-11-20 | ☐ (⏸ the rights of each book; F33 ⏸ the font's permission) |
 | RT-01 … RT-07 | Hosting, domain, deployment, privacy pages, Google Play, App Store, store listings | ☐ (author: accounts, costs, the Mac) |
 | LANG-01 … LANG-04 | The 22 languages (§8.9): ✔ the list (2026-11-18); ✔ all in the first release (2026-11-19); draft interface texts written for the prototype · per language: interface strings translated by the agent and corrected from users' GitHub reports (no native readers — author, 2026-11-19), its font, its RTL / LTR check · the published translation of the meanings with written permission (QuranEnc, `P0-13`) · store listings in that language | ◐ (part of the first release; ⏸ native readers) |
 
@@ -1277,3 +1320,4 @@ explicit yes** (it is public); R3 (permanent) and R10 (public) need the author's
 | 2026-11-20 | Twenty-third update (the author's fourth message): **design 3 chosen** for all clients, designs 1 and 2 kept but no longer changed (§13, P0-11); the pending sources re-checked — fonts (OFL) and the Adhan library (MIT) cleared, mp3quran's rights clause and **Dorar's new API terms** recorded (§7.1); the permissions tracker `docs/permissions/README.md` (P0-13). |
 | 2026-11-20 | Twenty-fourth update: eight permission letters written, each with its verified address or form, subject and Arabic / English text (`docs/permissions/letters/`, P0-13). |
 | 2026-11-20 | Twenty-fifth update: seven permission letters sent by the author (King Fahd Complex, QuranEnc, Ibn Uthaymeen Foundation, al-Badr, EveryAyah, Hisn al-Muslim, Dorar); QuranEnc's tafsirs listed (`docs/permissions/README.md`); F13 — every scholar's ruling shown with its source (author). |
+| 2026-11-20 | Twenty-sixth update: the author submitted Dorar's API access request for all seven encyclopedias and accepted its terms — the binding rules in §8.14, module `dorar`, task `P7-B2`; **F49 ethics and conduct and F50 Islamic manners** added from Dorar's encyclopedias (online only). |

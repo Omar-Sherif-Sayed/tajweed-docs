@@ -50,21 +50,6 @@
   "ar": "الأذكار"
  },
  {
-  "id": "ex_morning",
-  "en": "Morning",
-  "ar": "الصباح"
- },
- {
-  "id": "ex_evening",
-  "en": "Evening",
-  "ar": "المساء"
- },
- {
-  "id": "ex_progress",
-  "en": "Dhikr {n} of {k}",
-  "ar": "الذكر {n} من {k}"
- },
- {
   "id": "ex_sample_count",
   "en": "sample counts",
   "ar": "أعداد للمثال"
@@ -128,21 +113,6 @@
   "id": "ex_m_local",
   "en": "Saved on your device only",
   "ar": "محفوظة على جهازك فقط"
- },
- {
-  "id": "ex_ribbon",
-  "en": "Ribbon",
-  "ar": "شريط"
- },
- {
-  "id": "ex_tint",
-  "en": "Tint",
-  "ar": "تظليل"
- },
- {
-  "id": "ex_compare",
-  "en": "Style",
-  "ar": "الشكل"
  },
  {
   "id": "ex_m_review",
@@ -248,5 +218,155 @@
   "id": "ex_night",
   "en": "Night theme",
   "ar": "الوضع الليلي"
+ },
+ {
+  "id": "ex_radio",
+  "en": "Radio",
+  "ar": "الإذاعة"
+ },
+ {
+  "id": "ex_all_adhkar",
+  "en": "All adhkar",
+  "ar": "جميع الأذكار"
+ },
+ {
+  "id": "ex_fadl",
+  "en": "The virtue of dhikr",
+  "ar": "فضل الذكر"
+ },
+ {
+  "id": "ex_c_wake",
+  "en": "On waking up",
+  "ar": "عند الاستيقاظ من النوم"
+ },
+ {
+  "id": "ex_c_garment",
+  "en": "On wearing a garment",
+  "ar": "عند لبس الثوب"
+ },
+ {
+  "id": "ex_c_toilet",
+  "en": "Entering the toilet",
+  "ar": "عند دخول الخلاء"
+ },
+ {
+  "id": "ex_c_wudu",
+  "en": "Before wudu",
+  "ar": "قبل الوضوء"
+ },
+ {
+  "id": "ex_c_out",
+  "en": "Leaving home",
+  "ar": "عند الخروج من المنزل"
+ },
+ {
+  "id": "ex_c_mosque",
+  "en": "Entering the mosque",
+  "ar": "عند دخول المسجد"
+ },
+ {
+  "id": "ex_c_morning",
+  "en": "Morning adhkar",
+  "ar": "أذكار الصباح"
+ },
+ {
+  "id": "ex_c_evening",
+  "en": "Evening adhkar",
+  "ar": "أذكار المساء"
+ },
+ {
+  "id": "ex_c_sleep",
+  "en": "Before sleep",
+  "ar": "عند النوم"
+ },
+ {
+  "id": "ex_c_travel",
+  "en": "Travel",
+  "ar": "السفر"
+ },
+ {
+  "id": "ex_ch_note",
+  "en": "Sample chapters: the chapters, their order and their numbers come from the book (Hisn al-Muslim).",
+  "ar": "فصول للمثال: الفصول وترتيبها وأرقامها من الكتاب («حصن المسلم»)."
+ },
+ {
+  "id": "ex_say_times",
+  "en": "Times: {n}",
+  "ar": "عدد المرات: {n}"
+ },
+ {
+  "id": "ex_src_ph",
+  "en": "Its source (book and number), as the book gives it.",
+  "ar": "مصدره (الكتاب والرقم) كما في الكتاب."
+ },
+ {
+  "id": "ex_cats",
+  "en": "Categories",
+  "ar": "التصنيفات"
+ },
+ {
+  "id": "ex_cat_forgive",
+  "en": "Forgiveness",
+  "ar": "الاستغفار"
+ },
+ {
+  "id": "ex_cat_parents",
+  "en": "Parents",
+  "ar": "الوالدان"
+ },
+ {
+  "id": "ex_cat_children",
+  "en": "Children and family",
+  "ar": "الذرية والأهل"
+ },
+ {
+  "id": "ex_cat_guidance",
+  "en": "Guidance and steadfastness",
+  "ar": "الهداية والثبات"
+ },
+ {
+  "id": "ex_cat_both",
+  "en": "This world and the Hereafter",
+  "ar": "الدنيا والآخرة"
+ },
+ {
+  "id": "ex_cat_provision",
+  "en": "Provision",
+  "ar": "الرزق"
+ },
+ {
+  "id": "ex_cat_distress",
+  "en": "Worry and distress",
+  "ar": "الهم والكرب"
+ },
+ {
+  "id": "ex_cat_illness",
+  "en": "Illness",
+  "ar": "المرض"
+ },
+ {
+  "id": "ex_also_in",
+  "en": "Also in: {c}",
+  "ar": "أيضًا في: {c}"
+ },
+ {
+  "id": "ex_cat_note",
+  "en": "Sample: the categories and the place of each dua follow the chapters of a named book; a dua can be in more than one.",
+  "ar": "مثال: التصنيفات وموضع كل دعاء فيها من فصول كتاب مسمّى؛ وقد يتكرر الدعاء في أكثر من تصنيف."
+ },
+ {
+  "id": "ex_tint_note",
+  "en": "The colour covers the ayah and its number.",
+  "ar": "يشمل اللون الآية ورقمها."
+ },
+ {
+  "id": "ex_open_cal",
+  "en": "Open the Hijri calendar",
+  "ar": "فتح التقويم الهجري"
+ },
+ {
+  "id": "ex_q_ph",
+  "en": "Its duas from the Quran, as the book lists them.",
+  "ar": "أدعيته من القرآن كما يذكرها الكتاب."
  }
 ]

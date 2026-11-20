@@ -569,6 +569,141 @@ T2 = {
 }
 
 
+# Five directions from the Quran only (the author's second message of 2026-11-20).
+NOTES3 = [
+    ("r4_shajara", "A good tree, its root firm and its branches in the sky — words of Surah Ibrahim: the green of its leaves, the brown of its roots."),
+    ("r4_tayr", "The birds above them, in Surah al-Mulk: the blue of the sky over open land."),
+    ("r4_zill", "The shade extended, and the sun its guide — Surah al-Furqan: the gold of a low sun and long shadows."),
+    ("r4_fulk", "The ships raised up in the sea like mountains — Surah al-Rahman: the blue of the sea, sails tall as mountains."),
+    ("r4_asr", "Named after al-Asr, the first ayah of its surah; the warm colours of the time of the Asr prayer — a design choice."),
+]
+DIRS3 = ["shajara", "tayr", "zill", "fulk", "asr"]
+
+# Per language: the 5 notes above, then the 5 direction names.
+T3 = {
+ "ru": ["Благое дерево, корни его прочны, а ветви — в небе: слова суры «Ибрахим»; зелень листвы и коричневый цвет корней.",
+        "Птицы над ними — из суры «Власть»: синева неба над открытой землёй.",
+        "Простёртая тень и солнце — указатель на неё: сура «Различение»; золото низкого солнца и длинные тени.",
+        "Корабли, воздвигнутые в море, подобно горам: сура «Милостивый»; синева моря и паруса высотой с горы.",
+        "Названо по слову аль-Аср, первому аяту суры; тёплые цвета времени послеполуденной молитвы — выбор дизайна.",
+        "Благое дерево", "Птицы", "Тень", "Корабли", "Аль-Аср"],
+ "es": ["Un árbol bueno, de raíz firme y ramas en el cielo — palabras de la sura de Ibrahim: el verde de sus hojas, el pardo de sus raíces.",
+        "Las aves sobre ellos, en la sura del Dominio: el azul del cielo sobre la tierra abierta.",
+        "La sombra extendida y el sol como guía — sura del Criterio: el oro de un sol bajo y las sombras largas.",
+        "Las naves alzadas en el mar como montañas — sura del Misericordioso: el azul del mar y velas altas como montañas.",
+        "Por al-Asr, la primera aleya de su sura; los colores cálidos de la hora de la oración del asr — una elección de diseño.",
+        "El árbol bueno", "Las aves", "La sombra", "Las naves", "Al-Asr"],
+ "de": ["Ein guter Baum, seine Wurzel fest, seine Zweige im Himmel – Worte der Sure Ibrahim: das Grün der Blätter, das Braun der Wurzeln.",
+        "Die Vögel über ihnen, in der Sure „Die Herrschaft“: das Blau des Himmels über offenem Land.",
+        "Der ausgedehnte Schatten und die Sonne als Wegweiser – Sure „Die Unterscheidung“: das Gold einer tiefen Sonne, lange Schatten.",
+        "Die Schiffe, im Meer aufragend wie Berge – Sure „Der Allerbarmer“: das Blau des Meeres, Segel hoch wie Berge.",
+        "Nach al-Asr, dem ersten Vers seiner Sure; die warmen Farben der Zeit des Asr-Gebets – eine Gestaltungsentscheidung.",
+        "Der gute Baum", "Die Vögel", "Der Schatten", "Die Schiffe", "Al-Asr"],
+ "it": ["Un albero buono, radice salda e rami nel cielo — parole della sura di Abramo: il verde delle foglie, il bruno delle radici.",
+        "Gli uccelli sopra di loro, nella sura della Sovranità: l'azzurro del cielo sulla terra aperta.",
+        "L'ombra distesa e il sole come guida — sura del Discrimine: l'oro di un sole basso e le ombre lunghe.",
+        "Le navi innalzate sul mare come montagne — sura del Compassionevole: l'azzurro del mare e vele alte come montagne.",
+        "Da al-Asr, il primo versetto della sua sura; i colori caldi dell'ora della preghiera dell'asr — una scelta di design.",
+        "L'albero buono", "Gli uccelli", "L'ombra", "Le navi", "Al-Asr"],
+ "fr": ["Un bon arbre, sa racine ferme et ses branches dans le ciel — paroles de la sourate Ibrahim : le vert des feuilles, le brun des racines.",
+        "Les oiseaux au-dessus d'eux, dans la sourate de la Royauté : le bleu du ciel sur la terre ouverte.",
+        "L'ombre étendue et le soleil pour guide — sourate du Discernement : l'or d'un soleil bas et les longues ombres.",
+        "Les navires dressés sur la mer comme des montagnes — sourate du Tout Miséricordieux : le bleu de la mer, des voiles hautes comme des montagnes.",
+        "D'après al-Asr, le premier verset de sa sourate ; les couleurs chaudes de l'heure de la prière de l'asr — un choix de design.",
+        "Le bon arbre", "Les oiseaux", "L'ombre", "Les navires", "Al-Asr"],
+ "ur": ["پاکیزہ درخت، جس کی جڑ مضبوط اور شاخیں آسمان میں — سورۂ ابراہیم کے الفاظ: پتوں کی سبزی اور جڑوں کا بھورا رنگ۔",
+        "ان کے اوپر پرندے — سورۂ ملک سے: کھلی زمین پر آسمان کی نیلاہٹ۔",
+        "پھیلا ہوا سایہ اور سورج اس کا رہنما — سورۂ فرقان: نیچے سورج کا سنہرا رنگ اور لمبے سائے۔",
+        "سمندر میں پہاڑوں کی طرح اونچے جہاز — سورۂ رحمٰن: سمندر کی نیلاہٹ اور پہاڑوں جیسے بلند بادبان۔",
+        "العصر کے نام پر، اپنی سورت کی پہلی آیت؛ نمازِ عصر کے وقت کے گرم رنگ — ڈیزائن کا انتخاب۔",
+        "پاکیزہ درخت", "پرندے", "سایہ", "جہاز", "العصر"],
+ "hi": ["पाक पेड़, जिसकी जड़ मज़बूत और शाखाएँ आसमान में — सूरह इब्राहीम के शब्द: पत्तों का हरा और जड़ों का भूरा।",
+        "उनके ऊपर पक्षी — सूरह मुल्क से: खुली ज़मीन पर आसमान का नीला।",
+        "फैली हुई छाया और सूरज उसका मार्गदर्शक — सूरह फ़ुरक़ान: नीचे सूरज का सुनहरा और लंबी छायाएँ।",
+        "समुद्र में पहाड़ों जैसे ऊँचे जहाज़ — सूरह रहमान: समुद्र का नीला और पहाड़ों जैसे ऊँचे पाल।",
+        "अल-अस्र के नाम पर, अपनी सूरह की पहली आयत; अस्र की नमाज़ के समय के गर्म रंग — डिज़ाइन का चुनाव।",
+        "पाक पेड़", "पक्षी", "छाया", "जहाज़", "अल-अस्र"],
+ "ko": ["좋은 나무, 뿌리는 단단하고 가지는 하늘에 — 이브라힘 장의 말씀: 잎의 초록과 뿌리의 갈색.",
+        "그들 위의 새들 — 물크 장에서: 열린 땅 위 하늘의 파랑.",
+        "늘어난 그늘과 그 길잡이인 태양 — 푸르깐 장: 낮은 해의 금빛과 긴 그림자.",
+        "바다에 산처럼 솟은 배들 — 라흐만 장: 바다의 파랑과 산처럼 높은 돛.",
+        "그 장의 첫 아야 알아스르에서 이름을 땄습니다. 아스르 예배 시간의 따뜻한 색 — 디자인 선택.",
+        "좋은 나무", "새들", "그늘", "배들", "알아스르"],
+ "id": ["Pohon yang baik, akarnya kokoh dan cabangnya di langit — kata-kata Surah Ibrahim: hijau daunnya, cokelat akarnya.",
+        "Burung-burung di atas mereka, dalam Surah Al-Mulk: biru langit di atas tanah terbuka.",
+        "Bayang-bayang yang dipanjangkan dan matahari sebagai petunjuknya — Surah Al-Furqan: emas matahari rendah dan bayang-bayang panjang.",
+        "Kapal-kapal yang tinggi di laut seperti gunung — Surah Ar-Rahman: biru laut dan layar setinggi gunung.",
+        "Dinamai Al-'Ashr, ayat pertama surahnya; warna hangat waktu salat Asar — pilihan desain.",
+        "Pohon yang baik", "Burung-burung", "Bayang-bayang", "Kapal-kapal", "Al-'Ashr"],
+ "ja": ["良い木、その根は堅く枝は天に — イブラーヒーム章の言葉：葉の緑と根の茶色。",
+        "彼らの上の鳥 — 大権章より：開けた大地の上の空の青。",
+        "広げられた陰と、その導きとしての太陽 — 識別章：低い太陽の金色と長い影。",
+        "海に山のようにそびえる船 — 慈悲あまねく御方章：海の青と山のように高い帆。",
+        "その章の最初のアーヤ「アル・アスル」にちなむ。アスルの礼拝の時刻の温かな色 — デザイン上の選択。",
+        "良い木", "鳥", "陰", "船", "アル・アスル"],
+ "zh": ["一棵佳树，根柢坚固，枝条参天——《易卜拉欣章》的词句：叶子的绿与树根的棕。",
+        "他们上空的鸟——出自《国权章》：开阔大地上空的蓝。",
+        "延伸的阴影，以太阳为其指引——《准则章》：低垂太阳的金色与长长的影子。",
+        "在海上高耸如山的船只——《至仁主章》：海的蓝与高如山的帆。",
+        "以该章首节的“阿斯尔”命名；晡礼时分的温暖色彩——设计选择。",
+        "佳树", "鸟", "阴影", "船只", "阿斯尔"],
+ "tr": ["Güzel bir ağaç, kökü sağlam, dalları gökte — İbrahim suresinin sözleri: yaprakların yeşili, köklerin kahverengisi.",
+        "Üstlerindeki kuşlar, Mülk suresinde: açık arazinin üzerinde göğün mavisi.",
+        "Uzatılan gölge ve ona kılavuz kılınan güneş — Furkan suresi: alçak güneşin altını ve uzun gölgeler.",
+        "Denizde dağlar gibi yükselen gemiler — Rahman suresi: denizin mavisi, dağlar kadar yüksek yelkenler.",
+        "Suresinin ilk ayeti el-Asr'dan adını alır; ikindi namazı vaktinin sıcak renkleri — bir tasarım tercihi.",
+        "Güzel ağaç", "Kuşlar", "Gölge", "Gemiler", "el-Asr"],
+ "bn": ["একটি পবিত্র গাছ, যার মূল দৃঢ় আর শাখা আকাশে — সূরা ইবরাহীমের শব্দ: পাতার সবুজ আর শিকড়ের বাদামি।",
+        "তাদের উপরে পাখি — সূরা মুলক থেকে: খোলা ভূমির উপর আকাশের নীল।",
+        "প্রসারিত ছায়া আর সূর্য তার পথপ্রদর্শক — সূরা ফুরকান: নিচু সূর্যের সোনালি আর দীর্ঘ ছায়া।",
+        "সমুদ্রে পাহাড়ের মতো উঁচু জাহাজ — সূরা আর-রহমান: সমুদ্রের নীল আর পাহাড়ের মতো উঁচু পাল।",
+        "আল-আসর নামে, সূরাটির প্রথম আয়াত; আসরের নামাজের সময়ের উষ্ণ রং — নকশার পছন্দ।",
+        "পবিত্র গাছ", "পাখি", "ছায়া", "জাহাজ", "আল-আসর"],
+ "fa": ["درختی پاک، ریشه‌اش استوار و شاخه‌اش در آسمان — کلماتی از سورهٔ ابراهیم: سبزی برگ‌ها و قهوه‌ای ریشه‌ها.",
+        "پرندگان بالای سرشان — از سورهٔ مُلک: آبی آسمان بر فراز زمین باز.",
+        "سایهٔ گسترده و خورشید راهنمای آن — سورهٔ فرقان: طلایی خورشید پایین و سایه‌های بلند.",
+        "کشتی‌های برافراشته در دریا همچون کوه‌ها — سورهٔ الرحمن: آبی دریا و بادبان‌هایی بلند چون کوه.",
+        "به نام «العصر»، نخستین آیهٔ سوره‌اش؛ رنگ‌های گرم وقت نماز عصر — انتخابی در طراحی.",
+        "درخت پاک", "پرندگان", "سایه", "کشتی‌ها", "العصر"],
+ "ms": ["Pohon yang baik, akarnya teguh dan dahannya di langit — kata-kata Surah Ibrahim: hijau daunnya, perang akarnya.",
+        "Burung-burung di atas mereka, dalam Surah al-Mulk: biru langit di atas tanah lapang.",
+        "Bayang-bayang yang dipanjangkan dan matahari sebagai penunjuknya — Surah al-Furqan: emas matahari rendah dan bayang-bayang panjang.",
+        "Kapal-kapal yang tinggi di laut seperti gunung — Surah ar-Rahman: biru laut dan layar setinggi gunung.",
+        "Dinamakan al-'Asr, ayat pertama surahnya; warna hangat waktu solat Asar — pilihan reka bentuk.",
+        "Pohon yang baik", "Burung-burung", "Bayang-bayang", "Kapal-kapal", "Al-'Asr"],
+ "sw": ["Mti mzuri, mzizi wake imara na matawi yake mbinguni — maneno ya Surat Ibrahim: kijani cha majani, kahawia ya mizizi.",
+        "Ndege juu yao, katika Surat Al-Mulk: buluu ya anga juu ya ardhi wazi.",
+        "Kivuli kilichorefushwa na jua kama kiongozi wake — Surat Al-Furqan: dhahabu ya jua la chini na vivuli virefu.",
+        "Merikebu zilizoinuka baharini kama milima — Surat Ar-Rahman: buluu ya bahari na matanga marefu kama milima.",
+        "Kwa jina la Al-Asr, aya ya kwanza ya sura yake; rangi za joto za wakati wa swala ya Alasiri — uchaguzi wa muundo.",
+        "Mti mzuri", "Ndege", "Kivuli", "Merikebu", "Al-Asr"],
+ "ha": ["Itace mai kyau, saiwarsa tabbatacciya, rassansa a sama — kalmomin Suratul Ibrahim: koren ganyayyaki, ruwan kasan saiwoyi.",
+        "Tsuntsaye a samansu, a Suratul Mulk: shuɗin sama a kan fili.",
+        "Inuwar da aka shimfiɗa, rana kuma mai nuni gare ta — Suratul Furƙan: zinariyar rana mai faɗuwa da dogayen inuwoyi.",
+        "Jiragen ruwa da aka ɗaga a teku kamar duwatsu — Suratur Rahman: shuɗin teku da filafilai masu tsayi kamar duwatsu.",
+        "Da sunan Al-Asr, ayar farko ta surarta; launuka masu ɗumi na lokacin sallar La'asar — zaɓin zane.",
+        "Itace mai kyau", "Tsuntsaye", "Inuwa", "Jiragen ruwa", "Al-Asr"],
+ "pt": ["Uma árvore boa, de raiz firme e ramos no céu — palavras da surata de Abraão: o verde das folhas, o castanho das raízes.",
+        "As aves acima deles, na surata da Soberania: o azul do céu sobre a terra aberta.",
+        "A sombra estendida e o sol como seu guia — surata do Critério: o ouro de um sol baixo e as sombras longas.",
+        "Os navios erguidos no mar como montanhas — surata do Misericordioso: o azul do mar e velas altas como montanhas.",
+        "Por al-Asr, o primeiro versículo da sua surata; as cores quentes da hora da oração do asr — uma escolha de design.",
+        "A árvore boa", "As aves", "A sombra", "Os navios", "Al-Asr"],
+ "ps": ["یوه پاکه ونه، چې رېښه یې ټینګه او ښاخونه یې په آسمان کې دي — د سورة ابراهیم کلمې: د پاڼو شنه او د رېښو نسواري رنګ.",
+        "د دوی پر سر مرغان — له سورة الملک څخه: پر خلاصې ځمکې د آسمان شین رنګ.",
+        "غځول شوی سیوری او لمر یې لارښود — سورة الفرقان: د ټیټ لمر سرو زرو رنګ او اوږده سیوري.",
+        "په سمندر کې د غرونو په څېر لوړې بېړۍ — سورة الرحمن: د سمندر شین رنګ او د غرونو په څېر لوړې بادبانې.",
+        "د «العصر» په نوم، د خپلې سورت لومړی آیت؛ د مازدیګر د لمانځه د وخت تود رنګونه — د ډیزاین انتخاب.",
+        "پاکه ونه", "مرغان", "سیوری", "بېړۍ", "العصر"],
+ "uz": ["Yaxshi daraxt, ildizi mustahkam, shoxlari osmonda — Ibrohim surasi soʻzlari: barglarning yashili, ildizlarning jigarrangi.",
+        "Ularning ustidagi qushlar, Mulk surasida: ochiq yer uzra osmonning moviyligi.",
+        "Choʻzilgan soya va unga dalil qilingan quyosh — Furqon surasi: past quyoshning oltini va uzun soyalar.",
+        "Dengizda togʻlardek koʻtarilgan kemalar — Rahmon surasi: dengizning moviyligi va togʻdek baland yelkanlar.",
+        "Surasining birinchi oyati al-Asr nomi bilan; asr namozi vaqtining iliq ranglari — dizayn tanlovi.",
+        "Yaxshi daraxt", "Qushlar", "Soya", "Kemalar", "Al-Asr"],
+}
+
+
 def main():
     sys.stdout.reconfigure(encoding="utf-8")
     html = io.open(PAGE, encoding="utf-8").read()
@@ -587,12 +722,18 @@ def main():
         keys.append({"id": kid, "en": en, "ar": ar_of[en]})
     for d in DIRS2:
         keys.append({"id": "dir_" + d, "en": P3.DIRECTIONS[d]["name"]["en"], "ar": P3.DIRECTIONS[d]["name"]["ar"]})
+    for kid, en in NOTES3:
+        if en not in ar_of:
+            raise SystemExit("not in round-3.html: " + en)
+        keys.append({"id": kid, "en": en, "ar": ar_of[en]})
+    for d in DIRS3:
+        keys.append({"id": "dir_" + d, "en": P3.DIRECTIONS[d]["name"]["en"], "ar": P3.DIRECTIONS[d]["name"]["ar"]})
     with io.open(os.path.join(I18N, "round3", "keys.json"), "w", encoding="utf-8", newline="\n") as f:
         json.dump(keys, f, ensure_ascii=False, indent=1)
         f.write("\n")
     os.makedirs(os.path.join(I18N, "round3"), exist_ok=True)
     for code, texts in T.items():
-        texts = texts + T2[code]
+        texts = texts + T2[code] + T3[code]
         if len(texts) != 1 + len(keys):
             raise SystemExit("%s: %d texts, %d expected" % (code, len(texts), 1 + len(keys)))
         out = {"_status": STATUS}

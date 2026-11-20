@@ -413,11 +413,11 @@
  },
  {
   "file": "design-3/landscapes/ghar-day.svg",
-  "bytes": 454
+  "bytes": 2193
  },
  {
   "file": "design-3/landscapes/ghar-night.svg",
-  "bytes": 1206
+  "bytes": 2708
  },
  {
   "file": "design-3/landscapes/taybah-day.svg",
@@ -429,35 +429,35 @@
  },
  {
   "file": "design-3/landscapes/uhud-day.svg",
-  "bytes": 456
+  "bytes": 4273
  },
  {
   "file": "design-3/landscapes/uhud-night.svg",
-  "bytes": 1208
+  "bytes": 4790
  },
  {
   "file": "design-3/landscapes/ibil-day.svg",
-  "bytes": 774
+  "bytes": 2598
  },
  {
   "file": "design-3/landscapes/ibil-night.svg",
-  "bytes": 1526
+  "bytes": 2999
  },
  {
   "file": "design-3/landscapes/fajr-day.svg",
-  "bytes": 603
+  "bytes": 4059
  },
  {
   "file": "design-3/landscapes/fajr-night.svg",
-  "bytes": 2107
+  "bytes": 4811
  },
  {
   "file": "design-3/landscapes/duha-day.svg",
-  "bytes": 1124
+  "bytes": 3931
  },
  {
   "file": "design-3/landscapes/duha-night.svg",
-  "bytes": 1125
+  "bytes": 4606
  },
  {
   "file": "design-3/landscapes/ghaith-day.svg",
@@ -485,27 +485,27 @@
  },
  {
   "file": "design-3/landscapes/kawthar-day.svg",
-  "bytes": 1351
+  "bytes": 2567
  },
  {
   "file": "design-3/landscapes/kawthar-night.svg",
-  "bytes": 2103
+  "bytes": 3079
  },
  {
   "file": "design-3/landscapes/qamar-day.svg",
-  "bytes": 434
+  "bytes": 1516
  },
  {
   "file": "design-3/landscapes/qamar-night.svg",
-  "bytes": 1187
+  "bytes": 2262
  },
  {
   "file": "design-3/landscapes/dhariyat-day.svg",
-  "bytes": 1142
+  "bytes": 2911
  },
  {
   "file": "design-3/landscapes/dhariyat-night.svg",
-  "bytes": 1894
+  "bytes": 3428
  },
  {
   "file": "design-3/landscapes/zar-day.svg",
@@ -517,19 +517,59 @@
  },
  {
   "file": "design-3/landscapes/mara-day.svg",
-  "bytes": 1731
+  "bytes": 4539
  },
  {
   "file": "design-3/landscapes/mara-night.svg",
-  "bytes": 2483
+  "bytes": 5054
+ },
+ {
+  "file": "design-3/landscapes/shajara-day.svg",
+  "bytes": 2789
+ },
+ {
+  "file": "design-3/landscapes/shajara-night.svg",
+  "bytes": 3615
+ },
+ {
+  "file": "design-3/landscapes/tayr-day.svg",
+  "bytes": 3271
+ },
+ {
+  "file": "design-3/landscapes/tayr-night.svg",
+  "bytes": 3786
+ },
+ {
+  "file": "design-3/landscapes/zill-day.svg",
+  "bytes": 2933
+ },
+ {
+  "file": "design-3/landscapes/zill-night.svg",
+  "bytes": 3685
+ },
+ {
+  "file": "design-3/landscapes/fulk-day.svg",
+  "bytes": 2446
+ },
+ {
+  "file": "design-3/landscapes/fulk-night.svg",
+  "bytes": 2963
+ },
+ {
+  "file": "design-3/landscapes/asr-day.svg",
+  "bytes": 3211
+ },
+ {
+  "file": "design-3/landscapes/asr-night.svg",
+  "bytes": 3725
  },
  {
   "file": "design-3/landscapes/nur-day.svg",
-  "bytes": 707
+  "bytes": 7469
  },
  {
   "file": "design-3/landscapes/nur-night.svg",
-  "bytes": 707
+  "bytes": 7469
  },
  {
   "file": "design-3/landscapes/mountains-day.svg",

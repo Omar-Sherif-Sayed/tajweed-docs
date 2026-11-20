@@ -7,14 +7,24 @@ listening, and the virtues (فضائل) from authentic hadiths; and the light / 
 colour directions. They are the same screens in every design, drawn with each design's own colours, so they are
 written once, here, between marker comments in round-1.html, round-2.html and round-3.html:
 
-  - home: three tiles (misbaha, duas, Hijri calendar) added to the section grid;
+  - home: the misbaha and duas tiles (and, in designs 2 and 3, the radio tile again); the Hijri date and the time
+    at the top of the home screen, opening the calendar;
   - first launch: the day / night switch beside the colour directions (the two buttons removed);
-  - six phones: misbaha, adhkar with counter, duas, ayah markers (ribbon and tint, to compare), ayah actions,
-    Hijri calendar and clock.
+  - seven phones: misbaha; all the adhkar chapters (as in Hisn al-Muslim, «فضل الذكر» first); one dhikr with its count,
+    its source and a counter at the bottom right; duas by category; ayah markers (the tint, with the ayah number);
+    ayah actions; Hijri calendar and clock.
+
+The author's second message of 2026-11-20 changed: the ribbon look of the markers removed (the tint covers the ayah
+and its number); the Hijri date and the time on the home screen too (its tile removed); the adhkar like the Hisn
+al-Muslim application he sent (screenshots); the duas grouped by category — the categories and the place of each dua
+follow the chapters of a named book, and a dua may be in more than one; the radio tile back in designs 2 and 3.
 
 What is real and what is a placeholder (AGENTS.md §6.10):
-  - The ayahs (Al-Fatihah for the markers and the actions; 2:201, 3:8 and 25:74 for the duas from the Quran) are
-    copied whole from the Tanzil file (checksum checked) and each is checked to contain the word it is cited for.
+  - The ayahs (Al-Fatihah for the markers and the actions; the duas from the Quran; Ayat al-Kursi and the last three
+    surahs on the dhikr page) are copied whole from the Tanzil file (checksum checked) and each is checked to contain
+    the word it is cited for. The basmala before a surah is Tanzil's own text, shown on its own line.
+  - The chapter names of the adhkar and the categories of the duas are interface labels for the example, marked as
+    samples; the real chapters, their order and the place of each dua come from the book.
   - The misbaha shows the four words of tasbeeh without vowels, as labels; the words of each dhikr and its count,
     every dhikr of the adhkar, every dua of the Sunnah, every tafsir text and every virtue are dashed placeholders
     naming their source — nothing religious is written by us.
@@ -38,10 +48,20 @@ import verify_mushaf_layout as V  # noqa: E402
 
 PAGES = {"round-1.html": "phone screen", "round-2.html": "phone parch screen", "round-3.html": "phone parch screen"}
 FATIHA = [(1, n) for n in range(1, 8)]
-DUAS = {"2:201": "حسنة", "3:8": "تزغ", "25:74": "قرة"}   # ayah -> a word it must contain
+DUAS = {"2:201": "حسنة", "3:8": "تزغ", "25:74": "قرة", "7:23": "ظلمنا", "71:28": "ولولدي", "17:24": "ارحمهما",
+        "14:40": "ذريتي"}                                # ayah -> a word it must contain
+# the duas by category — a sample: the real categories and places come from the chapters of a named book
+CATS = [("ex_cat_parents", ["17:24", "71:28"]), ("ex_cat_forgive", ["7:23", "71:28"]),
+        ("ex_cat_children", ["25:74", "14:40"]), ("ex_cat_guidance", ["3:8"]), ("ex_cat_both", ["2:201"]),
+        ("ex_cat_provision", []), ("ex_cat_distress", []), ("ex_c_travel", []), ("ex_cat_illness", [])]
+# the adhkar: sample chapters (after «فضل الذكر»), and the morning adhkar as pages — Ayat al-Kursi, the last three
+# surahs (copied from Tanzil), then dhikrs from the book as placeholders; the counts are marked as samples
+CHAPTERS = ["ex_c_wake", "ex_c_garment", "ex_c_toilet", "ex_c_wudu", "ex_c_out", "ex_c_mosque", "ex_c_morning",
+            "ex_c_evening", "ex_c_sleep", "ex_c_travel"]
+MORNING = [(1, [(2, 255, 255, "كرسيه")]), (3, [(112, 1, 4, "احد"), (113, 1, 5, "الفلق"), (114, 1, 6, "الناس")]),
+           (1, None), (3, None), (100, None)]
 MARKED = {2: "green", 5: "red", 7: "blue"}               # the sample markers on Al-Fatihah
 DHIKR = ["سبحان الله", "الحمد لله", "الله أكبر", "لا إله إلا الله"]
-ADHKAR = [1, 3, 1, 3, 7, 100]                             # sample counts, marked as samples on the screen
 RECITERS = [("محمد صديق المنشاوي", "Muhammad Siddiq al-Minshawi"), ("محمود خليل الحصري", "Mahmoud Khalil al-Husary"),
             ("عبد الباسط عبد الصمد", "Abdul Basit Abdul Samad"), ("محمد محمود الطبلاوي", "Muhammad Mahmoud al-Tablawi")]
 TAFSIRS = [("التفسير الميسر", "al-Tafsir al-Muyassar"), ("تفسير السعدي", "Tafsir al-Sa'di"),
@@ -99,10 +119,34 @@ CSS = """/* the day / night switch, beside the colour directions (the author, 20
 .ex-ring .c span{font-size:12px;color:var(--muted)}
 .ex-ring.pulse{animation:expulse .35s}
 @keyframes expulse{50%{transform:scale(.97)}}
-/* adhkar counter */
-.ex-count{width:128px;height:128px;border-radius:50%;margin:2px auto;border:0;background:var(--primary);color:var(--lv-on,var(--onprimary));display:flex;flex-direction:column;align-items:center;justify-content:center;font:inherit;cursor:pointer;box-shadow:0 0 0 7px var(--lv-soft,var(--surface2))}
-.ex-count b{font-size:38px;line-height:1.1}
-.ex-count span{font-size:11px;opacity:.9}
+/* the adhkar, as in the Hisn al-Muslim application: all chapters, then one dhikr per page with a counter */
+.ex-chap{display:flex;flex-direction:column}
+.ex-chap .row{display:flex;align-items:center;gap:8px;padding:11px 4px;border-bottom:1px solid var(--border);font-size:13.5px;cursor:pointer}
+.ex-chap .row .n{color:var(--muted);font-variant-numeric:tabular-nums;min-width:22px}
+.ex-chap .row.fadl{font-weight:700;color:var(--primary)}
+.ex-pdots{display:flex;justify-content:center;align-items:center;gap:6px;padding:2px 0}
+.ex-pdots i{width:6px;height:6px;border-radius:50%;background:var(--border)}
+.ex-pdots i.on{width:10px;height:10px;background:var(--primary)}
+.ex-zk{direction:rtl;font-family:"Amiri Quran",serif;font-size:18px;line-height:2.15;color:var(--ink);text-align:justify;text-align-last:right}
+.ex-zk .bs{display:block;text-align:center;text-align-last:center}
+.ex-zk .sr{display:block;text-align:center;text-align-last:center;font-family:"Amiri","IBM Plex Sans Arabic",serif;font-size:12.5px;color:var(--muted);line-height:1.6;margin:0 0 6px}
+.ex-zk .ex-n,.ex-ayah .ex-n{font-size:.85em;padding:0 2px;color:var(--muted);white-space:nowrap}
+.ex-zfoot{border-top:1px solid var(--border);padding-top:6px;font-size:11.5px;color:var(--muted);line-height:1.6}
+.ex-nav{display:flex;align-items:center;justify-content:center;gap:14px;font-size:12px;color:var(--muted)}
+.ex-nav button{width:30px;height:30px;border-radius:50%;border:1px solid var(--border);background:var(--surface);color:var(--text);font:inherit;cursor:pointer}
+.lives.extras{position:relative}
+.extras .ex-body.pad{padding-bottom:96px}
+.extras .ex-tap{position:absolute;right:18px;bottom:24px;width:66px;height:66px;border-radius:50%;border:0;background:var(--primary);color:var(--lv-on,var(--onprimary));font:inherit;font-size:22px;font-weight:700;cursor:pointer;box-shadow:0 3px 12px rgba(0,0,0,.28);display:grid;place-items:center;z-index:2}
+.extras .ex-tap.pulse{animation:expulse .3s}
+/* home: the Hijri date and the time, at the top; a tap opens the calendar */
+.ex-now{display:flex;flex-direction:column;align-items:end;justify-content:center;gap:1px;margin-inline-start:auto;margin-inline-end:8px;cursor:pointer;min-width:0;text-align:end;line-height:1.3}
+.hello .ex-now{margin-inline-end:0}
+.ex-now b{font-size:15px;color:var(--primary);font-variant-numeric:tabular-nums;white-space:nowrap}
+.ex-now span{display:flex;align-items:center;gap:3px;font-size:10.5px;color:var(--muted);white-space:nowrap;max-width:150px;overflow:hidden}
+.ex-now .ic{width:12px;height:12px;flex:none}
+.ex-now em{font-style:normal}
+/* duas by category */
+.ex-sec{font-size:12px;font-weight:700;color:var(--lv-accent,var(--dot))}
 .ex-list{display:flex;flex-direction:column;gap:5px}
 .ex-li{display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:10px;background:var(--surface);border:1px solid var(--border);font-size:12px}
 .ex-li.on{border-color:var(--primary)}
@@ -116,8 +160,6 @@ CSS = """/* the day / night switch, beside the colour directions (the author, 20
 .ex-page .ex-q{white-space:normal;font-family:"Amiri Quran",serif;font-size:19px;line-height:2.25;text-align:justify;text-align-last:center}
 .ex-page .ex-n{font-size:.85em;padding:0 2px;color:var(--muted);white-space:nowrap}
 .ex-page .ex-a.tint{border-radius:6px;box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:2px 0}
-.ex-page .mk{display:inline-block;width:7px;height:11px;margin:0 2px;vertical-align:middle;clip-path:polygon(0 0,100% 0,100% 100%,50% 72%,0 100%)}
-.ex-page .rib{position:absolute;top:-2px;width:11px;height:30px;clip-path:polygon(0 0,100% 0,100% 100%,50% 80%,0 100%)}
 .ex-dot{width:12px;height:12px;border-radius:50%;flex:none}
 .ex-dots{display:flex;gap:10px}
 .ex-dots button{width:26px;height:26px;border-radius:50%;border:2px solid var(--surface);box-shadow:0 0 0 1px var(--border);cursor:pointer}
@@ -147,9 +189,10 @@ def phones(phone):
     out = [ICONS]
     for cap, title, sub, ident, icon in [
         ("New 2026-11-20 · Misbaha (F24)", "ex_misbaha", " data-ex='ex_tap'", "ex-misbaha", "i-ex-misbaha"),
-        ("New · Adhkar with a counter (F12)", "ex_adhkar", "", "ex-adhkar", "i-ex-misbaha"),
-        ("New · Duas (F23)", "ex_duas", "", "ex-duas", "i-ex-dua"),
-        ("New · Coloured ayah markers (F25) — two styles to compare", "ex_markers", " data-ex='ex_m_local'", "ex-markers", "i-mark"),
+        ("Changed · All the adhkar, as in Hisn al-Muslim (F12)", "ex_all_adhkar", " data-ex='ex_adhkar'", "ex-adhkar-list", "i-search"),
+        ("Changed · One dhikr: its count, its source, the counter at the bottom right (F12, F24)", "ex_c_morning", " id='ex-dz-sub'", "ex-adhkar", "i-mark"),
+        ("Changed · Duas by category (F23)", "ex_duas", " data-ex='ex_cats'", "ex-duas", "i-ex-dua"),
+        ("Changed · Coloured ayah markers (F25) — the tint, with the ayah number", "ex_markers", " data-ex='ex_m_local'", "ex-markers", "i-mark"),
         ("New · Actions on an ayah or a range (F26, F28, F29)", "ex_actions_t", " id='ex-act-sub'", "ex-actions", "i-mark"),
         ("New · Hijri calendar and the time (F27)", "ex_hijri", " data-ex='ex_local_time'", "ex-hijri", "i-ex-cal"),
     ]:
@@ -162,7 +205,7 @@ JS = r"""window.EXTRAS = (function () {
   var D = %(data)s;
   var RTL = ["ar", "ur", "fa", "ps"], DIG = "٠١٢٣٤٥٦٧٨٩", cur = "ar", tick = null;
   var COL = { red: "#C0392B", green: "#2E8B57", blue: "#2F6FB0", gold: "#B8860B" };
-  var st = { dhikr: 0, count: 0, target: 33, total: 0, rounds: 0, list: "m", item: 0, done: 0, style: "ribbon", tab: "q", adj: 0 };
+  var st = { dhikr: 0, count: 0, target: 33, total: 0, rounds: 0, page: 0, done: 0, cat: "ex_cat_parents", adj: 0 };
   function T(id, vars) {
     var e = D.t[id], s = e[cur] || e.en;
     return vars ? s.replace(/\{(\w+)\}/g, function (m, k) { return vars[k] != null ? vars[k] : m; }) : s;
@@ -170,6 +213,7 @@ JS = r"""window.EXTRAS = (function () {
   function tag(cal) {
     var u = [];
     if (cal) u.push("ca-" + cal);
+    if (cur === "ar") u.push("nu-arab");   /* Arabic-Indic digits, as everywhere else in Arabic */
     if (cur === "ps") u.push("nu-arabext");
     return ({ zh: "zh-CN" }[cur] || cur) + (u.length ? "-u-" + u.join("-") : "");
   }
@@ -189,6 +233,14 @@ JS = r"""window.EXTRAS = (function () {
   function svgIcon(id) { var s = document.createElementNS("http://www.w3.org/2000/svg", "svg"); s.setAttribute("class", "ic"); s.innerHTML = "<use href='#" + id + "'/>"; return s; }
   function host(id) { var h = document.getElementById(id); h.textContent = ""; return h; }
   function ref(s, a, name) { return cur === "ar" ? "سورة " + name[0] + " · " + num(a) : (RTL.indexOf(cur) >= 0 ? name[0] : name[1]) + " " + num(s) + ":" + num(a); }
+  function sref(s, a, b, name) {   /* a surah or a range of it */
+    if (a === b) return ref(s, a, name);
+    return cur === "ar" ? "سورة " + name[0] + " · " + num(a) + " – " + num(b) : (RTL.indexOf(cur) >= 0 ? name[0] : name[1]) + " " + num(s) + ":" + num(a) + "–" + num(b);
+  }
+  function arnum(n) { return String(n).replace(/[0-9]/g, function (d) { return DIG[d]; }); }
+  function ayahRun(box, ayahs) {   /* the ayahs as Tanzil gives them, each followed by its number */
+    ayahs.forEach(function (a) { box.appendChild(document.createTextNode(a.t + " ")); box.appendChild(el("span", "ex-n", "۝" + arnum(a.n))); box.appendChild(document.createTextNode(" ")); });
+  }
 
   /* ---- the home tiles and the day / night switch (once) ---- */
   function init() {
@@ -196,12 +248,21 @@ JS = r"""window.EXTRAS = (function () {
     if (grid && !grid.querySelector("[data-ex-tile]")) {
       var d1 = !!grid.querySelector(".ib");
       if (!d1) grid.classList.add("g4");
-      [["misbaha", "i-ex-misbaha", "ex_misbaha"], ["duas", "i-ex-dua", "ex_duas"], ["hijri", "i-ex-cal", "ex_hijri_s"]].forEach(function (x) {
-        var t = el("div", "tile" + (d1 ? " alt" : " g")); t.dataset.exTile = x[0];
+      var tiles = [["misbaha", "i-ex-misbaha", "ex_misbaha"], ["duas", "i-ex-dua", "ex_duas"]];
+      if (!d1) tiles.push(["radio", "i-radio", "ex_radio"]);   /* designs 2 and 3: the radio tile again (2026-11-20) */
+      tiles.forEach(function (x) {
+        var t = el("div", "tile" + (d1 ? " alt" : x[0] === "radio" ? "" : " g")); t.dataset.exTile = x[0];
         t.innerHTML = d1 ? "<div class='ib'><svg class='ic'><use href='#" + x[1] + "'/></svg></div><span></span>" : "<svg class='ic'><use href='#" + x[1] + "'/></svg><span></span>";
         t.querySelector("span").dataset.ex = x[2];
         grid.appendChild(t);
       });
+    }
+    if (home && !home.querySelector(".ex-now")) {   /* the Hijri date and the time at the top of the home screen */
+      var now = el("div", "ex-now"); now.setAttribute("role", "button");
+      now.innerHTML = "<b></b><span><svg class='ic'><use href='#i-ex-cal'/></svg><em></em></span>";
+      now.addEventListener("click", function () { var c = document.getElementById("ex-hijri"); if (c) c.scrollIntoView({ behavior: "smooth", block: "center" }); });
+      var hello = home.querySelector(".hello"), bar = home.querySelector(".topbar");
+      if (hello) hello.appendChild(now); else if (bar) bar.insertBefore(now, bar.querySelector(".iconbtn"));
     }
     document.querySelectorAll(".tsw").forEach(function (b) {
       if (b.dataset.on) return;
@@ -244,74 +305,93 @@ JS = r"""window.EXTRAS = (function () {
     h.appendChild(el("div", "ex-ph", T("ex_m_note")));
   }
 
-  /* ---- adhkar with a counter: the count goes down; at zero the next dhikr opens ---- */
-  function adhkar() {
-    var h = host("ex-adhkar"), list = D.adhkar, it = Math.min(st.item, list.length - 1);
-    var seg = el("div", "ex-seg");
-    [["m", "ex_morning"], ["e", "ex_evening"]].forEach(function (x) { seg.appendChild(btn("", T(x[1]), function () { st.list = x[0]; st.item = 0; st.done = 0; adhkar(); }, st.list === x[0])); });
-    h.appendChild(seg);
+  /* ---- the adhkar, as in the Hisn al-Muslim application: all chapters, «فضل الذكر» first ---- */
+  function chapters() {
+    var h = host("ex-adhkar-list"), box = el("div", "ex-chap");
+    var f = el("div", "row fadl"); f.appendChild(el("span", "grow", T("ex_fadl"))); box.appendChild(f);
+    D.chapters.forEach(function (k, i) {
+      var r = el("div", "row"); r.appendChild(el("span", "n", num(i + 1) + " -")); r.appendChild(el("span", "grow", T(k)));
+      if (k === "ex_c_morning") r.addEventListener("click", function () { st.page = 0; st.done = 0; dhikrPage(); document.getElementById("ex-adhkar").scrollIntoView({ behavior: "smooth", block: "center" }); });
+      box.appendChild(r);
+    });
+    h.appendChild(box);
+    h.appendChild(el("div", "ex-ph", T("ex_ch_note")));
+  }
+
+  /* ---- one dhikr per page: the text, how many times, its source; the counter at the bottom right ---- */
+  function dhikrPage() {
+    var h = host("ex-adhkar"), pages = D.morning, p = pages[st.page], phone = h.parentNode;
+    h.classList.add("pad");
+    document.getElementById("ex-dz-sub").textContent = T("ex_sample_count");
+    var dots = el("div", "ex-pdots"); pages.forEach(function (x, i) { dots.appendChild(el("i", i === st.page ? "on" : "")); }); h.appendChild(dots);
     var card = el("div", "ex-card");
-    var top = el("div", "ex-row"); top.appendChild(el("b", "grow", T("ex_progress", { n: num(it + 1), k: num(list.length) })));
-    top.appendChild(el("span", "ex-tag", T("ex_sample_count"))); card.appendChild(top);
-    card.appendChild(el("div", "ex-ph", T("ex_ph_dhikr")));
-    card.appendChild(el("div", "ex-note", T("ex_times", { n: num(list[it]) })));
-    h.appendChild(card);
-    var c = btn("ex-count", null, function () {
-      st.done++;
-      if (st.done >= list[it]) { st.done = 0; st.item = (it + 1) %% list.length; }
-      adhkar();
-    });
-    c.innerHTML = "<b></b><span></span>";
-    c.querySelector("b").textContent = num(list[it] - st.done);
-    c.querySelector("span").textContent = T("ex_tap_count");
-    h.appendChild(c);
-    h.appendChild(el("div", "ex-note", T("ex_next_auto")));
-    var ul = el("div", "ex-list");
-    list.forEach(function (n, i) {
-      var li = el("div", "ex-li" + (i === it ? " on" : i < it ? " done" : ""));
-      li.appendChild(el("span", "k", num(i + 1))); li.appendChild(el("span", "grow", "—"));
-      li.appendChild(el("span", "ex-tag", "× " + num(n))); ul.appendChild(li);
-    });
-    h.appendChild(ul);
-  }
-
-  /* ---- duas: from the Quran (copied from Tanzil) and from the Sunnah (from their sources) ---- */
-  function duas() {
-    var h = host("ex-duas"), seg = el("div", "ex-seg");
-    [["q", "ex_from_quran"], ["s", "ex_from_sunnah"]].forEach(function (x) { seg.appendChild(btn("", T(x[1]), function () { st.tab = x[0]; duas(); }, st.tab === x[0])); });
-    h.appendChild(seg);
-    if (st.tab === "q") {
-      D.duas.forEach(function (d) {
-        var c = el("div", "ex-card"); c.appendChild(el("div", "ex-ayah", d.text));   /* the ayah exactly as in Tanzil */
-        c.appendChild(el("div", "ex-ref", ref(d.s, d.a, d.name))); h.appendChild(c);
+    if (p.q) {
+      var z = el("div", "ex-zk"); z.lang = "ar";
+      p.q.forEach(function (s) {
+        if (s.bs) z.appendChild(el("span", "bs", s.bs));          /* the basmala, as Tanzil writes it before the surah */
+        var run = el("span"); ayahRun(run, s.ayahs); z.appendChild(run);
+        z.appendChild(el("span", "sr", sref(s.s, s.ayahs[0].n, s.ayahs[s.ayahs.length - 1].n, s.name)));
       });
+      card.appendChild(z);
     } else {
-      for (var i = 0; i < 3; i++) { var c = el("div", "ex-card"); c.appendChild(el("div", "ex-ph", T("ex_dua_ph"))); h.appendChild(c); }
+      card.appendChild(el("div", "ex-ph", T("ex_ph_dhikr")));
     }
-    var v = el("div", "ex-card"); v.appendChild(el("h4", null, T("ex_virtue"))); v.appendChild(el("div", "ex-ph", T("ex_virtue_ph"))); h.appendChild(v);
+    var times = el("div", "ex-row"); times.appendChild(el("b", "grow", T("ex_say_times", { n: num(p.n) })));
+    times.appendChild(el("span", "ex-tag", T("ex_sample_count"))); card.appendChild(times);
+    if (!p.q) card.appendChild(el("div", "ex-zfoot", "(١) " + T("ex_src_ph")));
+    h.appendChild(card);
+    var nav = el("div", "ex-nav");
+    var rtl = RTL.indexOf(cur) >= 0;   /* the arrows point the way the page turns */
+    nav.appendChild(btn("", rtl ? "›" : "‹", function () { st.page = (st.page + pages.length - 1) %% pages.length; st.done = 0; dhikrPage(); }));
+    nav.appendChild(el("span", "", num(st.page + 1) + " / " + num(pages.length)));
+    nav.appendChild(btn("", rtl ? "‹" : "›", function () { st.page = (st.page + 1) %% pages.length; st.done = 0; dhikrPage(); }));
+    h.appendChild(nav);
+    h.appendChild(el("div", "ex-note", T("ex_next_auto")));
+    var old = phone.querySelector(".ex-tap"); if (old) old.remove();
+    var c = btn("ex-tap", num(p.n - st.done), function () {   /* bottom right, as the author asked */
+      st.done++;
+      if (st.done >= p.n) { st.done = 0; st.page = (st.page + 1) %% pages.length; }
+      dhikrPage();
+      var n = document.querySelector("#ex-adhkar").parentNode.querySelector(".ex-tap"); n.classList.add("pulse");
+    });
+    c.setAttribute("aria-label", T("ex_tap_count"));
+    phone.appendChild(c);
   }
 
-  /* ---- coloured ayah markers on Al-Fatihah, in two styles to compare ---- */
-  function fatihaPage(style) {
-    var p = el("div", "ex-page"); p.appendChild(el("div", "sh", "سورة " + D.fatiha.name[0]));
-    var q = el("div", "ex-q"), ribs = 0;
-    D.fatiha.ayahs.forEach(function (a) {
-      var span = el("span", "ex-a", a.t), m = D.marked[a.n];
-      if (m && style === "tint") { span.className = "ex-a tint"; span.style.background = COL[m] + "2E"; }
-      q.appendChild(span); q.appendChild(document.createTextNode(" "));
-      if (m && style === "ribbon") { var mk = el("span", "mk"); mk.style.background = COL[m]; q.appendChild(mk); }
-      q.appendChild(el("span", "ex-n", "۝" + String(a.n).replace(/[0-9]/g, function (d) { return DIG[d]; })));
-      q.appendChild(document.createTextNode(" "));
-      if (m && style === "ribbon") { var r = el("span", "rib"); r.style.background = COL[m]; r.style.left = (14 + 16 * ribs++) + "px"; p.appendChild(r); }
+  /* ---- duas by category: the Quran duas (copied from Tanzil) and the Sunnah duas of each; a dua may repeat ---- */
+  function duas() {
+    var h = host("ex-duas"), chips = el("div", "ex-chips");
+    D.cats.forEach(function (c) { chips.appendChild(btn("ex-chip", T(c[0]), function () { st.cat = c[0]; duas(); }, st.cat === c[0])); });
+    h.appendChild(chips);
+    var cat = D.cats.filter(function (c) { return c[0] === st.cat; })[0];
+    h.appendChild(el("div", "ex-sec", T("ex_from_quran")));
+    if (!cat[1].length) h.appendChild(el("div", "ex-ph", T("ex_q_ph")));
+    cat[1].forEach(function (k) {
+      var d = D.duas[k], c = el("div", "ex-card"), a = el("div", "ex-ayah");
+      ayahRun(a, [{ n: d.a, t: d.text }]); c.appendChild(a);                       /* the ayah exactly as in Tanzil */
+      var r = el("div", "ex-row"); r.appendChild(el("span", "grow ex-ref", ref(d.s, d.a, d.name)));
+      var also = D.cats.filter(function (o) { return o[0] !== st.cat && o[1].indexOf(k) >= 0; }).map(function (o) { return T(o[0]); });
+      if (also.length) r.appendChild(el("span", "ex-tag", T("ex_also_in", { c: also.join("، ") })));
+      c.appendChild(r); h.appendChild(c);
     });
-    p.appendChild(q);
-    return p;
+    h.appendChild(el("div", "ex-sec", T("ex_from_sunnah")));
+    for (var i = 0; i < 2; i++) { var c = el("div", "ex-card"); c.appendChild(el("div", "ex-ph", T("ex_dua_ph"))); h.appendChild(c); }
+    h.appendChild(el("div", "ex-ph", T("ex_cat_note")));
   }
+
+  /* ---- coloured ayah markers on Al-Fatihah: a light tint over the ayah and its number ---- */
   function markers() {
-    var h = host("ex-markers"), seg = el("div", "ex-seg");
-    [["ribbon", "ex_ribbon"], ["tint", "ex_tint"]].forEach(function (x) { seg.appendChild(btn("", T(x[1]), function () { st.style = x[0]; markers(); }, st.style === x[0])); });
-    var row = el("div", "ex-row"); row.appendChild(el("span", "", T("ex_compare"))); seg.style.flex = "1"; row.appendChild(seg); h.appendChild(row);
-    h.appendChild(fatihaPage(st.style));
+    var h = host("ex-markers"), p = el("div", "ex-page"), q = el("div", "ex-q");
+    p.appendChild(el("div", "sh", "سورة " + D.fatiha.name[0]));
+    D.fatiha.ayahs.forEach(function (a) {
+      var m = D.marked[a.n], span = el("span", m ? "ex-a tint" : "ex-a"), n = el("span", "ex-n", "۝" + arnum(a.n));
+      span.appendChild(document.createTextNode(a.t + " "));
+      if (m) { span.style.background = COL[m] + "2E"; n.style.color = COL[m]; n.style.fontWeight = "700"; }
+      span.appendChild(n);
+      q.appendChild(span); q.appendChild(document.createTextNode(" "));
+    });
+    p.appendChild(q); h.appendChild(p);
+    h.appendChild(el("div", "ex-note", T("ex_tint_note")));
     var ul = el("div", "ex-list");
     [[2, "green", "ex_m_review"], [5, "red", "ex_m_memo"], [7, "blue", "ex_m_reflect"]].forEach(function (x) {
       var li = el("div", "ex-li"), d = el("span", "ex-dot"); d.style.background = COL[x[1]];
@@ -356,6 +436,15 @@ JS = r"""window.EXTRAS = (function () {
     return o;
   }
   function fmt(d, opts, cal) { try { return new Intl.DateTimeFormat(tag(cal), opts).format(d); } catch (e) { return ""; } }
+  function upd() {   /* the clock of the calendar screen and of the home screen */
+    var now = new Date(), t = fmt(now, { hour: "numeric", minute: "2-digit" }), c = document.getElementById("ex-clock");
+    if (c) c.textContent = t;
+    document.querySelectorAll(".ex-now").forEach(function (e) {
+      e.querySelector("b").textContent = t;
+      e.querySelector("em").textContent = fmt(new Date(now.getTime() + st.adj * 864e5), { day: "numeric", month: "long", year: "numeric" }, "islamic-umalqura");
+      e.setAttribute("aria-label", T("ex_open_cal")); e.title = T("ex_open_cal");
+    });
+  }
   function hijri() {
     var h = host("ex-hijri"), now = new Date(), base = new Date(now.getTime() + st.adj * 864e5);
     var loc = el("div", "ex-pick"); loc.appendChild(svgIcon("i-ex-pin")); loc.lastChild.style.marginInlineStart = "0"; loc.appendChild(el("span", "", T("ex_location"))); h.appendChild(loc);
@@ -382,7 +471,6 @@ JS = r"""window.EXTRAS = (function () {
     adj.appendChild(btn("", "+", function () { if (st.adj < 2) { st.adj++; hijri(); } }));
     h.appendChild(adj);
     h.appendChild(el("div", "ex-note", T("ex_cal_note")));
-    function upd() { var c = document.getElementById("ex-clock"); if (c) c.textContent = fmt(new Date(), { hour: "numeric", minute: "2-digit" }); }
     upd();
     if (!tick) tick = setInterval(upd, 15000);
   }
@@ -395,7 +483,7 @@ JS = r"""window.EXTRAS = (function () {
       b.setAttribute("aria-checked", String(document.body.dataset.theme === "dark"));
       b.setAttribute("aria-label", T("ex_night"));
     });
-    misbaha(); adhkar(); duas(); markers(); actions(); hijri();
+    misbaha(); chapters(); dhikrPage(); duas(); markers(); actions(); hijri();
   }
   return { render: render };
 })();
@@ -450,19 +538,35 @@ def main():
         if key[1] == 1 and key[0] not in (1, 9):
             text = " ".join(text.split(" ")[4:])   # Tanzil writes the basmala before ayah 1; it is not part of the ayah
         return text
+    def contains(key, word):
+        if not any(word == V.skeleton(w) or (len(word) > 2 and word in V.skeleton(w)) for w in ayah(key).split(" ")):
+            R1.fail("ayah %d:%d does not contain %s" % (key[0], key[1], word))
     fatiha = [{"n": a, "t": ayah((s, a))} for s, a in FATIHA]
-    duas = []
+    duas = {}
     for refkey, word in DUAS.items():
         s, a = (int(x) for x in refkey.split(":"))
-        text = ayah((s, a))
-        if not any(word == V.skeleton(w) or (len(word) > 2 and word in V.skeleton(w)) for w in text.split(" ")):
-            R1.fail("ayah %s does not contain %s" % (refkey, word))
-        duas.append({"s": s, "a": a, "text": text, "name": names[s]})
+        contains((s, a), word)
+        duas[refkey] = {"s": s, "a": a, "text": ayah((s, a)), "name": names[s]}
+    for _, refs in CATS:
+        for r in refs:
+            if r not in duas:
+                R1.fail("category dua %s is not in DUAS" % r)
+    morning = []
+    for count, surahs in MORNING:
+        page = {"n": count}
+        if surahs:
+            page["q"] = []
+            for s, a1, a2, word in surahs:
+                contains((s, a2 if s == 2 else a1), word)
+                basmala = " ".join(tanzil[(s, 1)].split(" ")[:4]) if a1 == 1 else None   # Tanzil's own basmala line
+                page["q"].append({"s": s, "name": names[s], "bs": basmala,
+                                  "ayahs": [{"n": a, "t": ayah((s, a))} for a in range(a1, a2 + 1)]})
+        morning.append(page)
     i18n = I.build_i18n("extras")
     keys = json.load(io.open(os.path.join(I.I18N, "extras", "keys.json"), encoding="utf-8"))
     texts = {k["id"]: dict({"ar": k["ar"], "en": k["en"]}, **{c: i18n["tr"][c][k["id"]] for c in I.LANG_CODES}) for k in keys}
     data = {"t": texts, "fatiha": {"name": names[1], "ayahs": fatiha}, "marked": MARKED, "duas": duas, "dhikr": DHIKR,
-            "adhkar": ADHKAR, "reciters": RECITERS, "tafsirs": TAFSIRS}
+            "cats": CATS, "chapters": CHAPTERS, "morning": morning, "reciters": RECITERS, "tafsirs": TAFSIRS}
     js = JS % {"data": json.dumps(data, ensure_ascii=False)}
     for page, phone in PAGES.items():
         path = os.path.join(HERE, "..", page)
@@ -472,7 +576,7 @@ def main():
         html = R1.replace_block(html, "/*EXTRAS-JS-BEGIN*/", "/*EXTRAS-JS-END*/", js)
         open(path, "w", encoding="utf-8", newline="\n").write(html)
         print("written the new screens into %s" % page)
-    print("ayahs copied from Tanzil and checked: Al-Fatihah 1-7, %s" % ", ".join(DUAS))
+    print("ayahs copied from Tanzil and checked: Al-Fatihah 1-7, %s, 2:255, 112, 113, 114" % ", ".join(DUAS))
 
 
 if __name__ == "__main__":

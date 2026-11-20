@@ -40,7 +40,13 @@ Status: a design proposal written by the agent, with no scholar's review (§6.6)
 | Logo | coin rings | **an arc of light rising over the horizon** |
 | Texture | parchment grain everywhere | grain only in the first direction, the sheets; the others are clean |
 
-## 3. The eighteen directions (twelve on 2026-11-19, six more on 2026-11-20)
+## 3. The twenty-three directions (twelve on 2026-11-19, six and then five more on 2026-11-20)
+
+The five added on the author's second message of 2026-11-20 (§3.19 – §3.23) come **from the Quran only** — he asked
+that the sources be the Quran and the authentic Sunnah. The same day he asked for better pictures: ten landscapes were
+**redrawn** with layers, light and more detail — the Cave, Uhud, look at the camels, dawn, the forenoon, al-Kawthar, the
+sun and the moon, the scattering winds, the pasture and light. The earlier drawings are kept, in Figma («Earlier
+landscapes») and in `elements/design-3/landscapes-earlier/`.
 
 Each has a day and a night theme. The night themes follow the six night rules (deep tinted background, cards
 lighter step by step, the mushaf page a little lighter, soft text 11 – 16 : 1, calm accents, no bright block).
@@ -101,7 +107,7 @@ No ayah is cited for this direction.
 ### 3.6 أفلا ينظرون — Look at the camels
 
 Four consecutive ayahs ask us to look: «أَفَلَا يَنظُرُونَ إِلَى ٱلْإِبِلِ كَيْفَ خُلِقَتْ» (88:17), then at the sky, the
-mountains and the earth (88:18–20). The landscape draws exactly these four: a camel, the sky, the mountains, the
+mountains and the earth (88:18–20). The landscape draws exactly these four: camels walking, the raised sky, the mountains set up, the
 flat earth.
 
 | Colour | From |
@@ -124,7 +130,7 @@ where the night ends.
 ### 3.8 الضحى — The forenoon and the still night
 
 «وَٱلضُّحَىٰ» (93:1) and «وَٱلَّيْلِ إِذَا سَجَىٰ» (93:2): two oaths, so this direction's **day theme** is the forenoon (a
-high sun with rays) and its **night theme** is the still night (a small, calm light, no rays).
+high sun in its glow) and its **night theme** is the still night (a small, calm light, no rays).
 
 | Colour | From |
 | --- | --- |
@@ -229,6 +235,58 @@ Two words of colour: «ٱلْمَرْعَىٰ» (87:4) and «أَحْوَىٰ» 
 | Pasture green `#3B4F2E` (buttons) | 87:4 |
 | The dark night theme (background `#171A12`) | 87:5 |
 
+### 3.19 الشجرة الطيبة — The good tree (second message of 2026-11-20)
+
+From «كَشَجَرَةٍ طَيِّبَةٍ أَصْلُهَا ثَابِتٌ وَفَرْعُهَا فِى ٱلسَّمَآءِ» (14:24) and «تُؤْتِىٓ أُكُلَهَا» (14:25). The landscape: one tree, its roots spread deep in the earth below the ground line,
+its trunk rising and its branches reaching the top of the sky, with fruit on them. The parable itself is explained only by
+a tafsir with its source (rule 1); the design takes the words.
+
+| Colour | From |
+| --- | --- |
+| Leaf green `#2D4A1E` (buttons), `#365524` (card) | the tree |
+| Root brown `#7A4E1E` (dots) | the root, firm in the earth |
+
+### 3.20 الطير — The birds (second message of 2026-11-20)
+
+From «ٱلطَّيْرِ فَوْقَهُمْ صَـٰٓفَّـٰتٍ وَيَقْبِضْنَ» (67:19). The landscape: birds over open land, most with their wings spread, some with their wings
+drawn in — the two words of the ayah.
+
+| Colour | From |
+| --- | --- |
+| Sky blue `#1D5E6B` (buttons), `#246E7C` (card) | the sky above them |
+| `#7A4614` (dots) | the land below |
+
+### 3.21 الظل — The shade (second message of 2026-11-20)
+
+From «كَيْفَ مَدَّ ٱلظِّلَّ» and «جَعَلْنَا ٱلشَّمْسَ عَلَيْهِ دَلِيلًا» (25:45). The landscape: a low sun at the horizon and the long shadows of two palms and a rock
+stretched over the plain.
+
+| Colour | From |
+| --- | --- |
+| Shade brown `#5C5310` (buttons), `#7E6D0E` (card) | the shade |
+| Low-sun gold `#716005` (dots) | the sun |
+
+### 3.22 الجوار المنشآت — The ships (second message of 2026-11-20)
+
+From «ٱلْجَوَارِ ٱلْمُنشَـَٔاتُ فِى ٱلْبَحْرِ كَٱلْأَعْلَـٰمِ» (55:24). The landscape: ships with tall sails on the sea, and mountains on the horizon beside them. The sails are
+lateen sails on a slanting yard, so no mast and yard ever make a cross (rule 8).
+
+| Colour | From |
+| --- | --- |
+| Sea blue `#1D376B` (buttons), `#24427C` (card) | the sea |
+| `#646310` (dots) | the sails in the light |
+
+### 3.23 العصر — Al-Asr (second message of 2026-11-20)
+
+Named after the word «وَٱلْعَصْرِ» (103:1). The tafsirs differ on what al-Asr is; the design does not choose — it takes the
+word as a name, and its colours are the warm light of the time of the Asr prayer, a design choice stated as such in F19.
+The landscape: warm hills, palms and their shadows, the sun past its height.
+
+| Colour | From |
+| --- | --- |
+| Warm brown `#5C3510` (buttons), `#7E410E` (card) | the light of that hour |
+| `#8A4106` (dots) | the sun |
+
 ## 4. The logo
 
 An arc of light rising over a horizon, inside a ring, with five short rays, and two lines of writing below the
@@ -262,16 +320,21 @@ shape as on the phone, so it is never stretched or cut on a wide screen.
 | Reference | Ayah — copied whole from the Tanzil file by `tools/build_round3.py` |
 | --- | --- |
 | At-Tawba 9:40 (التوبة) | إِلَّا تَنصُرُوهُ فَقَدْ نَصَرَهُ ٱللَّهُ إِذْ أَخْرَجَهُ ٱلَّذِينَ كَفَرُوا۟ ثَانِىَ ٱثْنَيْنِ إِذْ هُمَا فِى ٱلْغَارِ إِذْ يَقُولُ لِصَـٰحِبِهِۦ لَا تَحْزَنْ إِنَّ ٱللَّهَ مَعَنَا ۖ فَأَنزَلَ ٱللَّهُ سَكِينَتَهُۥ عَلَيْهِ وَأَيَّدَهُۥ بِجُنُودٍ لَّمْ تَرَوْهَا وَجَعَلَ كَلِمَةَ ٱلَّذِينَ كَفَرُوا۟ ٱلسُّفْلَىٰ ۗ وَكَلِمَةُ ٱللَّهِ هِىَ ٱلْعُلْيَا ۗ وَٱللَّهُ عَزِيزٌ حَكِيمٌ |
+| Ibrahim 14:24 (ابراهيم) | أَلَمْ تَرَ كَيْفَ ضَرَبَ ٱللَّهُ مَثَلًا كَلِمَةً طَيِّبَةً كَشَجَرَةٍ طَيِّبَةٍ أَصْلُهَا ثَابِتٌ وَفَرْعُهَا فِى ٱلسَّمَآءِ |
+| Ibrahim 14:25 (ابراهيم) | تُؤْتِىٓ أُكُلَهَا كُلَّ حِينٍۭ بِإِذْنِ رَبِّهَا ۗ وَيَضْرِبُ ٱللَّهُ ٱلْأَمْثَالَ لِلنَّاسِ لَعَلَّهُمْ يَتَذَكَّرُونَ |
 | Al-Hajj 22:63 (الحج) | أَلَمْ تَرَ أَنَّ ٱللَّهَ أَنزَلَ مِنَ ٱلسَّمَآءِ مَآءً فَتُصْبِحُ ٱلْأَرْضُ مُخْضَرَّةً ۗ إِنَّ ٱللَّهَ لَطِيفٌ خَبِيرٌ |
 | An-Noor 24:35 (النور) | ٱللَّهُ نُورُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ مَثَلُ نُورِهِۦ كَمِشْكَوٰةٍ فِيهَا مِصْبَاحٌ ۖ ٱلْمِصْبَاحُ فِى زُجَاجَةٍ ۖ ٱلزُّجَاجَةُ كَأَنَّهَا كَوْكَبٌ دُرِّىٌّ يُوقَدُ مِن شَجَرَةٍ مُّبَـٰرَكَةٍ زَيْتُونَةٍ لَّا شَرْقِيَّةٍ وَلَا غَرْبِيَّةٍ يَكَادُ زَيْتُهَا يُضِىٓءُ وَلَوْ لَمْ تَمْسَسْهُ نَارٌ ۚ نُّورٌ عَلَىٰ نُورٍ ۗ يَهْدِى ٱللَّهُ لِنُورِهِۦ مَن يَشَآءُ ۚ وَيَضْرِبُ ٱللَّهُ ٱلْأَمْثَـٰلَ لِلنَّاسِ ۗ وَٱللَّهُ بِكُلِّ شَىْءٍ عَلِيمٌ |
+| Al-Furqaan 25:45 (الفرقان) | أَلَمْ تَرَ إِلَىٰ رَبِّكَ كَيْفَ مَدَّ ٱلظِّلَّ وَلَوْ شَآءَ لَجَعَلَهُۥ سَاكِنًا ثُمَّ جَعَلْنَا ٱلشَّمْسَ عَلَيْهِ دَلِيلًا |
 | Ar-Room 30:22 (الروم) | وَمِنْ ءَايَـٰتِهِۦ خَلْقُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَٱخْتِلَـٰفُ أَلْسِنَتِكُمْ وَأَلْوَٰنِكُمْ ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍ لِّلْعَـٰلِمِينَ |
 | Faatir 35:27 (فاطر) | أَلَمْ تَرَ أَنَّ ٱللَّهَ أَنزَلَ مِنَ ٱلسَّمَآءِ مَآءً فَأَخْرَجْنَا بِهِۦ ثَمَرَٰتٍ مُّخْتَلِفًا أَلْوَٰنُهَا ۚ وَمِنَ ٱلْجِبَالِ جُدَدٌۢ بِيضٌ وَحُمْرٌ مُّخْتَلِفٌ أَلْوَٰنُهَا وَغَرَابِيبُ سُودٌ |
 | Al-Fath 48:29 (الفتح) | مُّحَمَّدٌ رَّسُولُ ٱللَّهِ ۚ وَٱلَّذِينَ مَعَهُۥٓ أَشِدَّآءُ عَلَى ٱلْكُفَّارِ رُحَمَآءُ بَيْنَهُمْ ۖ تَرَىٰهُمْ رُكَّعًا سُجَّدًا يَبْتَغُونَ فَضْلًا مِّنَ ٱللَّهِ وَرِضْوَٰنًا ۖ سِيمَاهُمْ فِى وُجُوهِهِم مِّنْ أَثَرِ ٱلسُّجُودِ ۚ ذَٰلِكَ مَثَلُهُمْ فِى ٱلتَّوْرَىٰةِ ۚ وَمَثَلُهُمْ فِى ٱلْإِنجِيلِ كَزَرْعٍ أَخْرَجَ شَطْـَٔهُۥ فَـَٔازَرَهُۥ فَٱسْتَغْلَظَ فَٱسْتَوَىٰ عَلَىٰ سُوقِهِۦ يُعْجِبُ ٱلزُّرَّاعَ لِيَغِيظَ بِهِمُ ٱلْكُفَّارَ ۗ وَعَدَ ٱللَّهُ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ مِنْهُم مَّغْفِرَةً وَأَجْرًا عَظِيمًۢا |
 | Qaaf 50:10 (ق) | وَٱلنَّخْلَ بَاسِقَـٰتٍ لَّهَا طَلْعٌ نَّضِيدٌ |
 | Adh-Dhaariyat 51:1 (الذاريات) | وَٱلذَّٰرِيَـٰتِ ذَرْوًا |
+| Ar-Rahmaan 55:24 (الرحمن) | وَلَهُ ٱلْجَوَارِ ٱلْمُنشَـَٔاتُ فِى ٱلْبَحْرِ كَٱلْأَعْلَـٰمِ |
 | Ar-Rahmaan 55:64 (الرحمن) | مُدْهَآمَّتَانِ |
 | Ar-Rahmaan 55:66 (الرحمن) | فِيهِمَا عَيْنَانِ نَضَّاخَتَانِ |
 | Ar-Rahmaan 55:68 (الرحمن) | فِيهِمَا فَـٰكِهَةٌ وَنَخْلٌ وَرُمَّانٌ |
+| Al-Mulk 67:19 (الملك) | أَوَلَمْ يَرَوْا۟ إِلَى ٱلطَّيْرِ فَوْقَهُمْ صَـٰٓفَّـٰتٍ وَيَقْبِضْنَ ۚ مَا يُمْسِكُهُنَّ إِلَّا ٱلرَّحْمَـٰنُ ۚ إِنَّهُۥ بِكُلِّ شَىْءٍۭ بَصِيرٌ |
 | At-Takwir 81:18 (التكوير) | وَٱلصُّبْحِ إِذَا تَنَفَّسَ |
 | Al-A'laa 87:4 (الأعلى) | وَٱلَّذِىٓ أَخْرَجَ ٱلْمَرْعَىٰ |
 | Al-A'laa 87:5 (الأعلى) | فَجَعَلَهُۥ غُثَآءً أَحْوَىٰ |
@@ -289,6 +352,7 @@ shape as on the phone, so it is never stretched or cut on a wide screen.
 | Al-Alaq 96:2 (العلق) | خَلَقَ ٱلْإِنسَـٰنَ مِنْ عَلَقٍ |
 | Al-Alaq 96:3 (العلق) | ٱقْرَأْ وَرَبُّكَ ٱلْأَكْرَمُ |
 | Al-Alaq 96:4 (العلق) | ٱلَّذِى عَلَّمَ بِٱلْقَلَمِ |
+| Al-Asr 103:1 (العصر) | وَٱلْعَصْرِ |
 | Al-Kawthar 108:1 (الكوثر) | إِنَّآ أَعْطَيْنَـٰكَ ٱلْكَوْثَرَ |
 <!--AYAHS-END-->
 

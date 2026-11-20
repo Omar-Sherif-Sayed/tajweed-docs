@@ -1405,3 +1405,147 @@ The last Figma step reported success, so first I'll check that it really landed:
 Writing all the document updates in one script:
 
 Now the session record and the memory (a new rule: the marker look waits for the author; design 3 has 18 directions):
+
+No private text in any public file. Committing and pushing:
+
+Your last Figma step had actually gone through, so instead of running it again I checked the page and finished the rest of the task. All ten points are done, and everything is committed and pushed.
+
+**New sections, in `AGENTS.md` (§2, §8.12) and the plan:**
+- **F23 Duas:**
+  - Duas from the Quran, copied from the Tanzil text the app uses.
+  - Duas from the Sunnah, word for word with their source and grade.
+- **F24 Misbaha:**
+  - Choose a dhikr, then 33, 100 or no limit.
+  - Tap to count, with a short vibration at the end of each round.
+  - The adhkar get the same counter: it counts down each dhikr's number (3, 100…) and opens the next dhikr by itself.
+- **F25 Coloured ayah markers (فواصل):** red, green, blue… each with a name, saved on the device only. The Quran text keeps one colour.
+- **F26 Actions on an ayah or a range:**
+  - add a marker;
+  - listen in the reciter you choose, with repeat;
+  - read all the tafsirs of the selection;
+  - download it;
+  - read its virtue, where one exists.
+- **F27 Hijri date and clock:** Umm al-Qura calendar with a −2 … +2 day adjustment, plus the time where the user is.
+- **F28 Offline listening:** only where the recitation's source allows downloading. Otherwise that reciter streams only, and the screen says so.
+- **F29 Virtues (فضائل):** authentic hadiths only, word for word with their grade. Many narrations about the virtues of surahs are weak or fabricated, so they are left out.
+
+**In all three designs:**
+- New home tiles for the misbaha, the duas and the Hijri date.
+- A screen for each of the seven features.
+- The day / night choice is now one switch beside the colour directions; the two buttons are gone.
+- The markers screen shows both looks so you can choose:
+  - a coloured ribbon with a small mark beside the ayah number;
+  - a light tint behind the ayah.
+
+**Design 3:**
+- The Two Gardens landscape is redrawn: dense deep-green trees, pomegranates, palms, and the two springs of 55:66 between the gardens.
+- Six new directions, each with its own landscape, day and night:
+  - the fig and the olive (95:1);
+  - al-Kawthar (108:1);
+  - the sun and the moon (91:1–2);
+  - the scattering winds (51:1);
+  - the crop (48:29);
+  - the pasture (87:4–5).
+- That makes 18 directions; Mountains is still the only one for low vision and colour blindness.
+- The reasons for each new direction are in `design-3-meanings.md`. Every quoted Quran word was taken from the copied ayah by script, not typed.
+
+**Checked:**
+- The three pages in all 22 languages: no errors, no missing text, and every home screen fits.
+- The new colours pass the contrast and night checks.
+- Figma has the new icons in all three designs, and design 3's new landscapes and colours.
+
+All the new texts are translated into the 22 languages. As placeholders that name their source, like the Lives screens:
+- the dhikr texts;
+- the Sunnah duas;
+- the tafsir texts;
+- the virtues.
+
+The prayer screen doesn't show the Hijri date and clock yet; for now they are on their own calendar screen.
+
+Still waiting for you: which design to use (1, 2 or 3), R11 (whether the Seerah is the last story of the prophets section) and R12 (which Companions come first).
+
+## The author — 2026-11-20 09:40
+
+```text
+* احذف فواصل الآيات شريط - فواصل الآيات تظليل كويسة ولكن خلي معها رقم الآيه وليست الآيه فقط بدون رقمها
+* تمام اه التاريخ الهجري يكون ليه screen ده شيء كويس بس أنا عاوزة يكون موجود بردو هو والساعه في ال main page 
+* بالنسبة للأذكار فعاوز فيها كل الأذكار وليس الصباح والمساء فقط, بص في ال attachments ده ابليكيشن حصن المسلم النسخة اللي اقصدها, بيبقي فيها كل الأذكار وبدايتها فضل الذكر, وبيجيب كل ذكر وهو عبادة عن ايه وايه كام وسورة ايه ولو حديث بيجيب مصدره وفيه مسبحة من تحت علي اليمين في الذكر نفسة
+* مش شايف لوجو الراديو, انت شيلتة؟ لو شيلتة ضيفة لو موجود عرفني بأسم ايه
+* هل في أي افكار تاني تقدر تشوفها ك directions؟ افكار من القرأن الكريم والسنة البنوية وتدبرهم زي اللي فاتوا, وبالنسبة للتصاميم ال landscapes دي أفضل شيء تقدر تقدمه كتخيل عن معني الأيات؟ ولا نقدر نقدم أشياء أجمل؟ فيها حاجات حلوه اوي ما شاء الله بس مش كلها , راجعهم تاني
+* هل نقدر نعمل categorization للأدعية؟ ونحط في كل category الادعية الخاصة به من القرأن والأدعية الخاصة به من السنة؟
+* أنت ايه رأيك؟ لو ده أبليكيشن إسلامي شامل يغني عن استخدام اي ابليكيشن أخر, ماعادا نسك لان نسك في فيه حجز حج وعمرة وروضة وده شيء مش هانقدر نقدمة, ايه ال features او الخدمات اللي نقدر نقدمها, عاوز اعمل الأبليكيشن من اول release يكون كامل شامل بكل ال features اللي نقدر نعملها ونفكر فيها
+
+[3 photo(s) attached — kept privately, not in this repository]
+```
+
+## The agent — 2026-11-20 09:43
+
+I've finished looking. Some decisions are yours, so I'll ask them now in one set.
+
+Your answers settle almost everything. One point is still unclear before I start.
+
+Now I'm working on the home screens, finding a spot for the Hijri date and the clock that doesn't push anything off the screen.
+
+Next: the new interface texts in 22 languages (Hisn al-Muslim-style adhkar, duas by category, radio, the date on the home screen).
+
+Texts are written and checked: 74 keys in each of the 20 languages. Now the screens themselves.
+
+Now the build script: docstring, data, CSS and phones.
+
+Now the adhkar, duas and markers functions.
+
+The build runs. Now I'm checking the screens in the browser.
+
+The home date and clock work, with Arabic digits. Now I'm checking the adhkar, duas and markers screens.
+
+I'm checking design 1's home screen with the new date and clock.
+
+Design 1 works too. Next, the landscapes: redrawing the ten weak ones and adding the five new directions. First, the drawing code.
+
+Five new palettes are in. Four colours fail contrast by a hair, so I'm darkening them, then I'll draw the landscapes.
+
+All palettes pass, the five new ones included. I'm saving copies of the ten current drawings before replacing them.
+
+Now I'm drawing the landscapes: ten redrawn and five new, in the page's own drawing code.
+
+Fifteen drawings are in. Now I'm wiring the five new directions into the page: their ayahs, their reasons and their names in 22 languages.
+
+Now the names and notes of the five new directions in 20 languages.
+
+Everything survived the rebuild, and there are 23 directions. Now a sheet of all 23 landscapes, day and night, to look at.
+
+The river still reads as a mound, so I'm drawing it as a light, winding river between green banks.
+
+The river reads right now. Next, the reasons for the five new directions in `design-3-meanings.md`.
+
+The build checked 29 Quran excerpts word for word against the source. Two older lines now describe the drawings wrongly, so I'm correcting them.
+
+Now the whole build chain, then a check of all three pages in all 22 languages.
+
+Designs 2 and 3 check clean in all 22 languages. Now design 1.
+
+Design 1 fits too; Russian is the tightest. Now Figma: I'll keep the old landscapes in an "Earlier landscapes" section and add the new ones.
+
+Earlier landscapes section is in Figma. Now importing the new drawings in batches.
+
+Sending every drawing to Figma as plain SVG text would be very large, so I'm compressing it first and unpacking it inside Figma. First I'm removing a doubled layer of stars from the night skies.
+
+Compressed from 110 KB to 20 KB, so it fits in one call. Checking that it unpacks byte for byte before sending.
+
+To guard against a copying error, each drawing gets a checksum that Figma verifies before placing it.
+
+All 30 drawings matched their checksums; the Landscapes section now holds 46 (23 directions, day and night). Next, the colour rows for the five new directions.
+
+Now the plan edits.
+
+Now `AGENTS.md`. First, the exact lines to change.
+
+Writing the `AGENTS.md` changes now.
+
+The shell couldn't parse the inline script, so I'm writing it to a file instead.
+
+Part two: design notes, phases, task statuses, risks and the change log.
+
+Now the design READMEs.
+
+Now the session record, the conversation copy and the memory.

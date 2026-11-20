@@ -203,6 +203,14 @@ Done when: the CI build and tests are green. ⚠ "Runs on a device" is **not** c
 5. After approval: the Figma file in the author's account, through his Chrome session.
 6. ☐ Fonts: the licence of each font is checked and recorded before it is used (Quran font: `P0-12`).
 
+**State 2026-11-20, second message:** the author chose the **tint** look for the ayah markers (with the ayah number
+inside the tint; the ribbon removed); the Hijri date and the time on the home screen too; the adhkar like the Hisn
+al-Muslim application (all chapters, «فضل الذكر» first, one dhikr per page with its count, its source and a counter at
+the bottom right); the duas by category (the chapters of a named book; a dua may repeat); the radio tile back in
+designs 2 and 3; design 3: ten landscapes redrawn and five new directions from the Quran only (23 in all). Figma: the
+landscapes updated and the earlier ones kept; ☐ the colour rows of the five new directions (the Figma Starter plan's
+limit of tool calls was reached — values in `tokens-design-3.json`). Waiting for the author's choice of design.
+
 **State 2026-11-20:** the screens of F23 – F29 (misbaha, adhkar counter, duas, ayah markers in two looks, ayah
 actions, Hijri calendar) and the day / night switch in all three designs; design 3 with 18 directions and a new Two
 Gardens landscape. Waiting for the author's choice of design and of the marker look.
@@ -283,7 +291,11 @@ Then phase 1 starts.
 
 ## 4. Phase 1 — Quran core (F1, F2, F16, F3, F11, F15)
 
-Goal: the first usable release on web and Android — read the Quran with full tashkeel, search it, listen to a reciter in
+**The first public release (author, 2026-11-20):** complete — every feature of `AGENTS.md` §2 that can be built
+with verified, licensed content. The phases below are the order of building, not separate releases; content that
+cannot be verified or licensed by then is left out (§6), and added in a later version when it can.
+
+Goal of phase 1: the first usable build on web and Android — read the Quran with full tashkeel, search it, listen to a reciter in
 three modes, playback that survives network loss, About page.
 
 ### Data
@@ -321,7 +333,7 @@ three modes, playback that survives network loss, About page.
 | P1-W6 | Reciter and style picker; a style appears only where it exists (§7.3); the riwayah is always shown. |
 | P1-W7 | About, sources and credits, privacy policy; "report a mistake" on the reader (F15, §6.9). |
 | P1-W9 | F19 "Why this design" screen (§8.10 of `AGENTS.md`): from About and from the colour choice; one card per direction, icon and the logo; ayahs from the shipped Quran text, never typed. |
-| P1-W10 | F25 ayah markers: colours and names chosen by the user, several at once, saved in the browser; the look chosen by the author (ribbon or tint, `AGENTS.md` §8.12); the Quran text keeps one colour. |
+| P1-W10 | F25 ayah markers: colours and names chosen by the user, several at once, saved in the browser; the look: a light tint over the ayah **and its number**, the number in the marker's colour (author, 2026-11-20); the Quran text keeps one colour. |
 | P1-W11 | F26 actions on an ayah or a range: from … to, marker, play in a chosen reciter with repeat, all the tafsirs of the selection (as their licences allow, `P4-D1`), virtue (`P7-D3`). |
 | P1-W12 | F28 download for offline listening where the source allows it (the web keeps files in the browser's storage; the phones in the app's storage); a reciter without permission shows streaming only. |
 | P1-W8 | Unit tests for the engine (retry order, source switching, endless mode crossing surah 114 → 1) and for search (handling of the typed query, the fixed list of test queries). |
@@ -365,7 +377,7 @@ path monitor. Started after the Android slice is accepted. Device checks wait fo
 | --- | --- |
 | P2-D1 | Calculation methods and their parameters from the Adhan library's documentation; the default method per country — ☐ a table with a named official source per country; a country without a verified source falls back to Muslim World League and says so. **The author (2026-11-17): may be done at any time, before phase 2 — do not forget it.** Start with the countries the author named: Egypt, Saudi Arabia, Japan. Output: `docs/data-sources/prayer-methods.md` (country, method, parameters, source link, date checked). |
 | P2-D2 | City search for users who do not share their location — ☐ source and licence of the city list. |
-| P2-D4 | F27: the Hijri date from the platform's Umm al-Qura calendar with a −2 … +2 day setting; the time zone of the location; the screen names the calendar. |
+| P2-D4 | F27: the Hijri date from the platform's Umm al-Qura calendar with a −2 … +2 day setting; the time zone of the location; the screen names the calendar. Shown on its own screen **and at the top of the home screen** with the time (author, 2026-11-20). |
 | P2-D3 | Muezzin recordings (⏸ until a recording with a known origin and permission exists for each one, §7.4): full version and a version under 30 seconds. |
 | P2-B1 | `prayer` module: method metadata, muezzins and their audio sources. |
 | P2-W/A/I-1 | Prayer times screen: today's times, the next prayer with a countdown, the Hijri date (from the platform's Umm al-Qura calendar, with a note that the local sighting can differ by a day), the six backgrounds. |
@@ -413,8 +425,8 @@ path monitor. Started after the Android slice is accepted. Device checks wait fo
 | P6-D2 | F23 duas: the Quran duas as ayah references into the shipped text; the Sunnah duas verbatim from a named collection with number and grade (rights with `P6-D1`). |
 | P6-B2 | `dua` module: occasions, duas, references. |
 | P6-W/A/I-2 | F24 misbaha: choose a dhikr and a count (33, 100, open), tap to count, vibration at the end of a round, rounds and the day's total on the device. |
-| P6-W/A/I-3 | F23 duas screen: from the Quran / from the Sunnah, by occasion, each with its reference. |
-| P6-W/A/I-1 | Categories, the dhikr page with a tap counter that follows the repeat count, favourites, optional morning / evening reminders (phones). |
+| P6-W/A/I-3 | F23 duas by category: each category holds its Quran duas and its Sunnah duas; the categories and the place of each dua follow the chapters of a named book (author, 2026-11-20), and a dua can be in more than one category; each with its reference. |
+| P6-W/A/I-1 | Like the Hisn al-Muslim application (author, 2026-11-20): all the chapters of the book, «فضل الذكر» first, numbered as in the book; one dhikr per page — its text, how many times, its source (the surah and ayah for a Quran text, the book and number for a hadith); a counter at the bottom right that counts down and opens the next dhikr; favourites. **No reminders** — the only notification of the application is the adhan (`AGENTS.md` §2). |
 
 ## 10. Phase 7 — Hadith (F13)
 
@@ -451,7 +463,29 @@ Rules and sources: `AGENTS.md` §8.11. Three sections, shown together under «ا
 
 ---
 
-## 11b. Languages track — part of the first release (author, 2026-11-19) — `LANG-*`
+## 11b. Phase 10 — Study, worship tools, guides, device (F30 – F47 — author, 2026-11-20)
+
+Part of the first release. Rules and sources: `AGENTS.md` §8.13. **No notification** in any of them — only the adhan
+notifies (author, 2026-11-20).
+
+| Task | What |
+| --- | --- |
+| P10-D1 | Sources and rights: word meanings (a named «غريب القرآن» book), asbab al-nuzul (al-Wahidi or another named book), ruqyah (a named book), the Names of Allah (a named scholar's list with the evidence of each name), the guides — wudu, prayer, Hajj and Umrah (a named book), the Zakat rules (a named fatwa body), the calendar of Islamic days (each day with its authentic hadith). Each in the register; permission letters in `P0-13`. |
+| P10-W/A/I-1 | F30 Hifz: choose a range, repeat it, hide words to test yourself, a review schedule; progress on the device. |
+| P10-W/A/I-2 | F31 Khatma / wird: split the Quran over a number of days, today's portion, progress — no reminder. |
+| P10-W/A/I-3 | F32 personal notes on an ayah (device only, in the settings file of F47); F33 share an ayah as an image (the shipped text and font, with its reference — ⏸ the font's permission, `P0-13`). |
+| P10-W/A/I-4 | F34 word meanings and asbab al-nuzul in the ayah actions, from their books (⏸ rights). |
+| P10-W/A/I-5 | F35 calendar of Islamic days, F36 the last third of the night on the prayer screen, F37 a private prayer and fasting tracker. |
+| P10-W/A/I-6 | F38 ruqyah, F39 the Names of Allah — verbatim from their books. |
+| P10-W/A/I-7 | F40 guides (wudu, prayer, Hajj and Umrah — text only, no pictures of people), F41 kids (short surahs with repetition in a muallim recitation, the Arabic letters). |
+| P10-W/A/I-8 | F42 Zakat calculator: the nisab and the rules from a named fatwa body, the user enters the prices or a named price source is used; no inheritance calculator. |
+| P10-A/I-9 | F43 home-screen widgets (prayer times, Hijri date, an ayah of the day), F44 Wear OS / Apple Watch (prayer times, misbaha), F45 Android Auto / CarPlay (recitation and radio). |
+| P10-W/A/I-10 | F46 nearby mosques on an OpenStreetMap map (ODbL, credited in F17; the location stays on the device); F47 save all settings, markers, notes and progress to a file and load them on another device. |
+| P10-Q1 | Every text compared with its book; the Zakat results compared with worked examples published by the chosen fatwa body. |
+
+---
+
+## 11c. Languages track — part of the first release (author, 2026-11-19) — `LANG-*`
 
 | Task | What |
 | --- | --- |
@@ -482,7 +516,8 @@ Rules and sources: `AGENTS.md` §8.11. Three sections, shown together under «ا
 | Confirmation of the application id `io.github.omarsherifsayed.tajweed` | P0-07, P0-09, P0-10 |
 | Choice of the commit e-mail (R10) | P0-03 |
 | Android Studio installed | P0-09 |
-| Colour and screen approval — design 1 or design 2, and which directions | P0-11 |
+| Colour and screen approval — design 1, 2 or 3 | P0-11 |
+| The colour rows of design 3's five new directions in Figma, after the Starter plan's limit resets | P0-11 |
 | Reading the meanings of design 2 | P0-16, F19 |
 | Choice of Quran text and font | P0-12 |
 | Sending the permission letters | P0-13 |

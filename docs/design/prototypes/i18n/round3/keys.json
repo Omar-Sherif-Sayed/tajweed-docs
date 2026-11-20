@@ -213,5 +213,55 @@
   "id": "dir_mara",
   "en": "The pasture",
   "ar": "المرعى"
+ },
+ {
+  "id": "r4_shajara",
+  "en": "A good tree, its root firm and its branches in the sky — words of Surah Ibrahim: the green of its leaves, the brown of its roots.",
+  "ar": "شجرة طيبة أصلها ثابت وفرعها في السماء — كلمات من سورة إبراهيم: خضرة الورق وسمرة الجذور."
+ },
+ {
+  "id": "r4_tayr",
+  "en": "The birds above them, in Surah al-Mulk: the blue of the sky over open land.",
+  "ar": "الطير فوقهم — من سورة الملك: زرقة السماء فوق الأرض المفتوحة."
+ },
+ {
+  "id": "r4_zill",
+  "en": "The shade extended, and the sun its guide — Surah al-Furqan: the gold of a low sun and long shadows.",
+  "ar": "مدّ الظل وجعل الشمس عليه دليلًا — من سورة الفرقان: ذهب الشمس المنخفضة والظلال الطويلة."
+ },
+ {
+  "id": "r4_fulk",
+  "en": "The ships raised up in the sea like mountains — Surah al-Rahman: the blue of the sea, sails tall as mountains.",
+  "ar": "الجوار المنشآت في البحر كالأعلام — من سورة الرحمن: زرقة البحر وأشرعة عالية كالجبال."
+ },
+ {
+  "id": "r4_asr",
+  "en": "Named after al-Asr, the first ayah of its surah; the warm colours of the time of the Asr prayer — a design choice.",
+  "ar": "باسم العصر، أول آية من سورته؛ ألوان دافئة من وقت صلاة العصر — اختيار تصميم."
+ },
+ {
+  "id": "dir_shajara",
+  "en": "The good tree",
+  "ar": "الشجرة الطيبة"
+ },
+ {
+  "id": "dir_tayr",
+  "en": "The birds",
+  "ar": "الطير"
+ },
+ {
+  "id": "dir_zill",
+  "en": "The shade",
+  "ar": "الظل"
+ },
+ {
+  "id": "dir_fulk",
+  "en": "The ships",
+  "ar": "الجوار المنشآت"
+ },
+ {
+  "id": "dir_asr",
+  "en": "Al-Asr",
+  "ar": "العصر"
  }
 ]

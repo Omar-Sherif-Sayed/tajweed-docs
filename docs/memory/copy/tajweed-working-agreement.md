@@ -4,7 +4,7 @@ description: "How Omar wants agents to work on the Tajweed product (plan-ask-cod
 metadata:
   node_type: memory
   type: feedback
-  modified: 2026-11-20T20:39:43.085Z
+  modified: 2026-11-20T10:29:20.085Z
   originSessionId: 4f32e8cc-e0b3-4843-a4c0-dae31d57f095
 ---
 
@@ -44,10 +44,16 @@ wiped, restore it from `docs/memory/` (then put back the two removed facts from 
 Design rules (2026-11-19, 2026-11-20): no cross shape anywhere (no plus sign, no four-armed star) — a symbol of Christianity;
 no pictures of prophets or Companions; only the Mountains direction is for low vision / colour blindness. Prototype
 files: round N = design N (`round-1.html` design 1 … `round-3.html` design 3), i18n in `i18n/round<N>/`. New screens go into all three designs while he has not chosen one (his answer, 2026-11-20).
-Design 3 has 18 directions (six added 2026-11-20). The look of the ayah markers (ribbon or tint) waits for
-his choice — he asked to see both. The day / night choice is one switch beside the directions. Figma holds
-the design elements (logos, icons, landscapes) as editable shapes, with SVG copies in the docs repository — not the
-whole rounds.
+Design 3 has 23 directions (six, then five more from the Quran only, 2026-11-20); design sources are the Quran
+and authentic Sunnah only; earlier landscapes are kept (Figma «Earlier landscapes», `elements/design-3/landscapes-earlier/`),
+never deleted. Ayah markers: the tint over the ayah and its number (his choice; ribbon removed). The day / night choice
+is one switch beside the directions. Figma holds the design elements (logos, icons, landscapes) as editable shapes,
+with SVG copies in the docs repository — not the whole rounds. Figma is on the Starter plan: its MCP tool-call limit
+can run out mid-task; send large SVG batches compressed with a checksum per file.
+
+Product rules added 2026-11-20 (second message): **the only notification is the adhan** (user picks the muezzin,
+full / short / none) — never propose reminders; the first release must be complete (F1 – F47, phases are build order
+only); he wants to hear any further feature ideas at any time.
 
 He has no qualified religious reviewer and wants content "100% sure", for أهل السنة: publish only verbatim content
 from named established Sunni sources; never author, paraphrase or machine-translate religious text. He withdrew the

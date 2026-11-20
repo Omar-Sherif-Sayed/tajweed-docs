@@ -469,11 +469,11 @@
  },
  {
   "file": "design-3/landscapes/jannatan-day.svg",
-  "bytes": 4127
+  "bytes": 5858
  },
  {
   "file": "design-3/landscapes/jannatan-night.svg",
-  "bytes": 4879
+  "bytes": 6610
  },
  {
   "file": "design-3/landscapes/tin-day.svg",
@@ -485,11 +485,11 @@
  },
  {
   "file": "design-3/landscapes/kawthar-day.svg",
-  "bytes": 2567
+  "bytes": 5031
  },
  {
   "file": "design-3/landscapes/kawthar-night.svg",
-  "bytes": 3079
+  "bytes": 5543
  },
  {
   "file": "design-3/landscapes/qamar-day.svg",
@@ -525,11 +525,11 @@
  },
  {
   "file": "design-3/landscapes/shajara-day.svg",
-  "bytes": 2789
+  "bytes": 5043
  },
  {
   "file": "design-3/landscapes/shajara-night.svg",
-  "bytes": 3615
+  "bytes": 5869
  },
  {
   "file": "design-3/landscapes/tayr-day.svg",
@@ -541,27 +541,67 @@
  },
  {
   "file": "design-3/landscapes/zill-day.svg",
-  "bytes": 2933
+  "bytes": 2779
  },
  {
   "file": "design-3/landscapes/zill-night.svg",
-  "bytes": 3685
+  "bytes": 3531
  },
  {
   "file": "design-3/landscapes/fulk-day.svg",
-  "bytes": 2446
+  "bytes": 2449
  },
  {
   "file": "design-3/landscapes/fulk-night.svg",
-  "bytes": 2963
+  "bytes": 2966
  },
  {
   "file": "design-3/landscapes/asr-day.svg",
-  "bytes": 3211
+  "bytes": 3352
  },
  {
   "file": "design-3/landscapes/asr-night.svg",
-  "bytes": 3725
+  "bytes": 3352
+ },
+ {
+  "file": "design-3/landscapes/mamdud-day.svg",
+  "bytes": 4238
+ },
+ {
+  "file": "design-3/landscapes/mamdud-night.svg",
+  "bytes": 4990
+ },
+ {
+  "file": "design-3/landscapes/anhar-day.svg",
+  "bytes": 1356
+ },
+ {
+  "file": "design-3/landscapes/anhar-night.svg",
+  "bytes": 2108
+ },
+ {
+  "file": "design-3/landscapes/ghuraf-day.svg",
+  "bytes": 3739
+ },
+ {
+  "file": "design-3/landscapes/ghuraf-night.svg",
+  "bytes": 4491
+ },
+ {
+  "file": "design-3/landscapes/qutuf-day.svg",
+  "bytes": 7575
+ },
+ {
+  "file": "design-3/landscapes/qutuf-night.svg",
+  "bytes": 8327
+ },
+ {
+  "file": "design-3/landscapes/khiyam-day.svg",
+  "bytes": 5322
+ },
+ {
+  "file": "design-3/landscapes/khiyam-night.svg",
+  "bytes": 6074
  },
  {
   "file": "design-3/landscapes/nur-day.svg",

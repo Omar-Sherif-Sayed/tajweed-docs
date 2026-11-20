@@ -73,5 +73,17 @@
  "ex_cat_note": "Mfano: makundi na mahali pa kila dua yanafuata sura za kitabu kilichotajwa; dua moja inaweza kuwa katika zaidi ya kundi moja.",
  "ex_tint_note": "Rangi inafunika aya na nambari yake.",
  "ex_open_cal": "Fungua kalenda ya Hijria",
- "ex_q_ph": "Dua zake kutoka Qurani, kama kitabu kinavyozitaja."
+ "ex_q_ph": "Dua zake kutoka Qurani, kama kitabu kinavyozitaja.",
+ "ex_n_allah": "Majina Mazuri ya Allah",
+ "ex_n_note": "Mfano: majina haya ni maneno ya 59:22–24 yaliyonakiliwa kutoka maandishi ya Qurani. Orodha kamili, mpangilio wake na dalili ya kila jina vinatoka kwenye kitabu kilichotajwa; kila maelezo yananukuliwa pamoja na chanzo chake.",
+ "ex_n_evidence": "Dalili yake",
+ "ex_n_expl": "Maelezo {n}",
+ "ex_n_expl_ph": "Maelezo yaliyonakiliwa neno kwa neno kutoka kitabu hiki, pamoja na juzuu na ukurasa.",
+ "ex_n_list": "Orodha na mpangilio wake",
+ "ex_p_names": "Majina ya Mtume ﷺ",
+ "ex_p_note": "Kwanza hadithi sahihi, kisha orodha ndefu za vitabu vya wanazuoni — kila jina na chanzo na maana yake; dalili yake ikiwa dhaifu au yenye utata, inasemwa.",
+ "ex_p_meaning": "Maana yake, katika hadithi yenyewe",
+ "ex_p_more": "Majina zaidi kutoka vitabu vya wanazuoni (karibu 200 au zaidi), kila moja na chanzo chake",
+ "ex_p_doubt": "Dalili dhaifu au yenye utata — maneno ya mwanazuoni yananukuliwa kutoka kitabu chake",
+ "ex_p_ph": "Jina, maana yake na chanzo chake, kutoka kitabu"
 }

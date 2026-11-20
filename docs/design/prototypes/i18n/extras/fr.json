@@ -73,5 +73,17 @@
  "ex_cat_note": "Exemple : les catégories et la place de chaque invocation suivent les chapitres d'un livre nommé ; une invocation peut figurer dans plusieurs.",
  "ex_tint_note": "La couleur couvre le verset et son numéro.",
  "ex_open_cal": "Ouvrir le calendrier de l'hégire",
- "ex_q_ph": "Ses invocations du Coran, telles que le livre les cite."
+ "ex_q_ph": "Ses invocations du Coran, telles que le livre les cite.",
+ "ex_n_allah": "Les Noms d'Allah",
+ "ex_n_note": "Exemple : ces noms sont des mots de 59:22–24 copiés du texte du Coran. La liste complète, son ordre et la preuve de chaque nom viennent d'un livre nommé ; chaque explication est citée avec sa source.",
+ "ex_n_evidence": "Sa preuve",
+ "ex_n_expl": "Explication {n}",
+ "ex_n_expl_ph": "L'explication copiée mot pour mot de ce livre, avec tome et page.",
+ "ex_n_list": "La liste et son ordre",
+ "ex_p_names": "Les noms du Prophète ﷺ",
+ "ex_p_note": "D'abord les hadiths authentiques, puis les listes plus longues des livres des savants — chaque nom avec sa source et son sens ; si sa preuve est faible ou discutée, l'écran le dit.",
+ "ex_p_meaning": "Son sens, dans le hadith lui-même",
+ "ex_p_more": "D'autres noms des livres des savants (environ 200 ou plus), chacun avec sa source",
+ "ex_p_doubt": "Preuve faible ou discutée — les mots du savant cités de son livre",
+ "ex_p_ph": "Le nom, son sens et sa source, du livre"
 }

@@ -1549,3 +1549,103 @@ Part two: design notes, phases, task statuses, risks and the change log.
 Now the design READMEs.
 
 Now the session record, the conversation copy and the memory.
+
+Now the memory file.
+
+Clean: no private names in the files. Committing as the author and pushing.
+
+All seven points are done and pushed. The new screens are in all three designs and in all 22 languages. One Figma step is left, explained at the end.
+
+**Your questions**
+- **The radio icon:** I removed it by mistake. When I redrew the icons of designs 2 and 3 on 2026-11-17, the radio tile dropped off their home screens. The icon itself is still there, named `i-radio`. The tile is back now. Design 1 always had it.
+- **Landscapes:** they weren't the best I could do. I redrew ten of them with layers of hills, sky gradients, glow and more detail: the Cave, Uhud, the camels, dawn, the forenoon, al-Kawthar, the sun and the moon, the scattering winds, the pasture, and light.
+  - The camels now walk as a caravan. Al-Kawthar is a river winding toward you between green banks. Light has an olive branch beside the lamp.
+  - The old drawings are kept, as you asked: in Figma in a section called "Earlier landscapes", and as files in `elements/design-3/landscapes-earlier/`.
+  - A drawing can't show "the meaning" of an ayah, because that is tafsir. Each landscape draws the things a word of the ayah names. Two Gardens and al-Kawthar are things of Paradise, so their pictures are ordinary earthly gardens and rivers, not a claim of what Paradise looks like.
+- **More directions:** five new ones, from the Quran only. Design 3 now has 23.
+
+  | Direction | Ayah |
+  | --- | --- |
+  | The good tree | 14:24–25 |
+  | The birds | 67:19 |
+  | The shade | 25:45 |
+  | The ships | 55:24 |
+  | Al-Asr | 103:1 |
+
+  - The ships have slanted triangular sails, so no mast and yard ever form a cross.
+  - Al-Asr takes only the word as its name, because the tafsirs differ on its meaning. Its colours are those of the time of the Asr prayer, and the screen says that is a design choice.
+  - Every new palette passes the contrast and night checks. Mountains is still the only direction for low vision and colour blindness.
+- **Duas by category:** done. Each category shows its duas from the Quran and from the Sunnah. A dua that belongs to two categories appears in both, marked "also in". As you chose, the real categories will follow the chapters of a named book; the ones on screen now are samples.
+- **A complete app:** I added 18 features, F30–F47, to `AGENTS.md` and the plan:
+  - **Quran study:** memorisation, a khatma planner, private notes, sharing an ayah, and word meanings and reasons of revelation from named books.
+  - **Worship tools:** a calendar of Islamic days, the last third of the night, a private prayer and fasting tracker, ruqyah, and the Names of Allah.
+  - **Guides and kids:** wudu, prayer, and Hajj and Umrah guides; a kids section; a Zakat calculator.
+  - **Device:** home-screen widgets, watch, car, a nearby-mosques map, and a settings file to move everything to a new phone.
+  - The plan now says the first public release includes everything that can be built with checked content. The phases are only the building order.
+
+  Two cautions:
+  - I left out an inheritance calculator; it needs a scholar.
+  - The well-known list of the 99 Names comes from a hadith in al-Tirmidhi that many scholars grade weak. So the list must come from a named scholar's book, with the evidence for each name.
+
+  One real cost: 47 features on three platforms means the first release will take much longer than the earlier plan.
+- **Notifications:** now a written rule. The adhan is the only notification; you choose the muezzin, the full or short adhan, or none for each prayer. I removed the morning and evening reminders that were in the plan.
+
+**Your other changes**
+- **Ayah markers:** only the tint remains. It covers the ayah and its number, and the number takes the marker's colour.
+- **Hijri date and time:** they now sit at the top of the home screen, and tapping them opens the calendar. I removed the Hijri tile, since the home screen now leads to the calendar.
+- **Adhkar:** like the Hisn al-Muslim app you sent.
+  - A list of every chapter, with «فضل الذكر» first.
+  - Then one dhikr per page with how many times to say it, its source, and a counter at the bottom right that counts down and moves to the next one.
+  - Ayat al-Kursi and the last three surahs are copied from the verified Quran text, with their surah names. The other adhkar texts, the chapter names and the counts are clearly marked samples until we have the book's text and the right to use it.
+
+**Checks:** I checked all three pages in all 22 languages: no errors, no missing text, and every home screen fits. The tightest is design 1 in Russian, with 15 px to spare. Every Quran text on the new screens was copied from the source and checked word by word.
+
+**One thing not finished:** Figma has the 30 new and redrawn landscapes, and the old ones are kept. But the colour rows for the five new directions are missing, because Figma's free (Starter) plan ran out of tool calls. Their colours are saved in `docs/design/tokens-design-3.json`, so adding them is one call once the limit resets.
+
+I'm still waiting on R11 (is the Seerah the last story of the prophets section?) and R12 (which Companions come first).
+
+## The author — 2026-11-20 10:56
+
+```text
+* يمكنك ان تضيف اسماء الله الحسني بماعنيها وذكر المصدر
+* يمكنك ان تضيف اسماء الرسول صلي الله عليه وسلم بمعانيها مع ذكر المصدر 
+* تمام لا نحتاج حاسبة المواريث فهي صعبة وتحتاج باحث ديني 
+* محتاج في التصميم عند عمل الأبليكيشنز يكون كل لوجود او icon او صورة او اي شبء بأفضل quality ممكنة - ممكن تعملهم save معانا في doc repo زي ما أنت عامل حالياً يكون كويس جداً 
+* في نقطة حابب أكلمك فيها (A drawing can’t show “the meaning” of an ayah, because that is tafsir. Each landscape draws the things a word of the ayah names. Two Gardens and al-Kawthar are things of Paradise, so their pictures are ordinary earthly gardens and rivers, not a claim of what Paradise looks like.) حالياً أنا فاهمك انت صح بنسبة كبيرة بس خلينا نعتمد علي الآية وتفاسيرها الصحيحة وبالنسبة لشكل الجنة اكيد ماحدش يعرفة بس اوصافها كثيرة موجودة في القرأن الكريم, ممكن تشوف كل اوصافها ولو عاوز تعدل حاجه عدلها, هاعطيك أمثلة -> ((سورة الحديد: 21) , (سورة الواقعة: 30), (سورة النجم: 14), (سورة محمد: 15) , (سورة الواقعة: 21، 32–33؛ سورة الرعد: 35), (سورة الزمر: 20), (سورة الرحمن: 54؛ سورة الواقعة: 34)., (سورة الكهف: 31؛ سورة فاطر: 33؛ سورة الإنسان: 21), (سورة الطور: 23؛ سورة فاطر: 35؛ سورة القيامة: 22–23)) - حالياً معاك أسم السور وأرقام الأيات وهذه أمثلة تقدر تشوفها وتشوف تفاسيرها وتقارن مع الموجود حالياً وهكذا في باقي ال directions لو في اي شيء غير مفهوم ليك تقدر تبحق عنه وعن تفسيرة واماكنة بالقرأن الكريم بدقة
+```
+
+## The agent — 2026-11-20 11:08
+
+Your answers set the scope. Before drawing anything I'm checking the sources: the tafsirs of every direction's ayah, the hadiths, and where the books on the Names are published.
+
+The tafsir site is reachable and its pages parse cleanly. Next I'm collecting every ayah the designs cite, plus your Paradise examples.
+
+Al-Muyassar's pages have a different layout, so I'm working from al-Sa'di and Ibn Kathir. Reading al-Sa'di on every direction's ayah first.
+
+Now Ibn Kathir on the key points: the long shade (56:30), al-Kawthar, the two gardens, the good tree, and al-Asr.
+
+Ibn Kathir names the collections but not the hadith numbers. I'll try to confirm the numbers on sunnah.com in the browser.
+
+Confirmed: al-Bukhari 4964. Checking the other numbers the same way.
+
+Now palettes for the five new directions, with the contrast checks.
+
+All palettes pass. Now each direction's reason, names and notes in 22 languages, with the five corrected notes citing their tafsir.
+
+Every cited word is in its ayah. Now the texts in 20 languages.
+
+Built cleanly: 63 texts in each language, Quran excerpts checked. Now a look at the eleven new and redrawn drawings, day and night.
+
+Now the three new phones in the build script: the Names of Allah list, one name with its evidence and explanations, and the Prophet's ﷺ names.
+
+All 38 excerpts check out word for word. Confirming the two hadith quotes came out as quotation marks, not escape codes.
+
+Quotes are correct. Now the full build chain, then the check of all three pages in 22 languages.
+
+Design 3 is clean in all 22 languages, with 28 directions. Now designs 1 and 2.
+
+Now Figma, starting with one small call to see if the plan's limit has reset: the colour rows still missing from last time.
+
+Figma's limit hasn't reset yet. The new and changed drawings are saved as SVG in the repository and recorded as pending in `AGENTS.md`. Now the documents.
+
+Now the plan, the design READMEs and the session record.

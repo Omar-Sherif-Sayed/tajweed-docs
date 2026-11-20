@@ -8,7 +8,7 @@ used at any time").
 | --- | --- |
 | `design-1/` | `logo.svg` (the eight-pointed star — two squares, never a cross shape) and `icons/` (34 icons) |
 | `design-2/` | `logo.svg` (the coin medallion), `prayer-dial.svg`, `colonnade.svg` (palm trunks under a roof of palm fronds) and `icons/` (30) |
-| `design-3/` | `logo.svg` (an arc of light over the horizon), `landscapes/` (46: each of the 23 directions, day and night), `landscapes-earlier/` (the 20 drawings replaced on 2026-11-20, kept at the author's request) and `icons/` (30) |
+| `design-3/` | `logo.svg` (an arc of light over the horizon), `landscapes/` (56: each of the 28 directions, day and night), `landscapes-earlier/` (the 32 drawings replaced on 2026-11-20, kept at the author's request) and `icons/` (30) |
 | `manifest.json` | Every file with its size |
 
 - **Made by** [`../prototypes/tools/export_elements.py`](../prototypes/tools/export_elements.py) from the pages
@@ -23,4 +23,6 @@ used at any time").
   imports them. These SVG files are the source.
 - **Rules kept in every element** (`AGENTS.md` §8.10, §8.11): no cross shape (no plus sign, no four-armed star); no
   picture of any prophet or Companion; no word of the Quran inside a logo.
+- **Quality (the author, 2026-11-20):** these SVG files are the masters — vectors, sharp at any size. The apps use
+  them as vectors; store PNGs are exported from them at full size for the chosen design (`P0-17`).
 - Licence: CC BY 4.0, as the rest of this repository (`LICENSE`).

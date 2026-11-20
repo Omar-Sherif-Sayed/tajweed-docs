@@ -58,6 +58,22 @@ CATS = [("ex_cat_parents", ["17:24", "71:28"]), ("ex_cat_forgive", ["7:23", "71:
 # surahs (copied from Tanzil), then dhikrs from the book as placeholders; the counts are marked as samples
 CHAPTERS = ["ex_c_wake", "ex_c_garment", "ex_c_toilet", "ex_c_wudu", "ex_c_out", "ex_c_mosque", "ex_c_morning",
             "ex_c_evening", "ex_c_sleep", "ex_c_travel"]
+# The Names of Allah (the author, 2026-11-20): sample names = words of 59:22-24 copied from Tanzil (surah, ayah, word index);
+# the entry al-Rahman with its evidence 1:3 and 59:22; the explanations from three books, in the author's order, as placeholders.
+NAMES = [(59, 22, 13), (59, 22, 14), (59, 23, 7), (59, 23, 8), (59, 23, 9), (59, 23, 10), (59, 23, 11), (59, 23, 12),
+         (59, 23, 13), (59, 23, 14), (59, 24, 2), (59, 24, 3), (59, 24, 4), (59, 24, 19)]
+NAME_EVIDENCE = [(1, 3), (59, 22)]
+NAME_BOOKS = [("القواعد المثلى — محمد بن صالح العثيمين (القائمة والدليل) · تفسير أسماء الله الحسنى — عبد الرحمن السعدي (الشرح)",
+               "al-Qawa'id al-Muthla — Ibn Uthaymeen (list and evidence) · Tafsir Asma' Allah al-Husna — al-Sa'di (explanation)"),
+              ("شرح أسماء الله الحسنى في ضوء الكتاب والسنة — سعيد بن علي بن وهف القحطاني", "Sharh Asma' Allah al-Husna — Sa'id al-Qahtani"),
+              ("فقه الأسماء الحسنى — عبد الرزاق البدر", "Fiqh al-Asma' al-Husna — Abd al-Razzaq al-Badr")]
+# The names of the Prophet (the author, 2026-11-20): first the authentic hadiths, checked on sunnah.com on 2026-11-20;
+# the meanings of al-Mahi and al-Hashir are the words of al-Bukhari 3532 itself, copied as published there.
+PNAMES = [("محمد", "Muhammad", "B"), ("أحمد", "Ahmad", "B"), ("الماحي", "al-Mahi", "B", "الَّذِي يَمْحُو اللَّهُ بِي الْكُفْرَ"),
+          ("الحاشر", "al-Hashir", "B", "الَّذِي يُحْشَرُ النَّاسُ عَلَى قَدَمِي"), ("العاقب", "al-'Aqib", "B"),
+          ("المقفّي", "al-Muqaffi", "M"), ("نبي التوبة", "the Prophet of repentance", "M"), ("نبي الرحمة", "the Prophet of mercy", "M")]
+PSOURCES = {"B": ("صحيح البخاري ٣٥٣٢ · صحيح مسلم ٢٣٥٤", "Sahih al-Bukhari 3532 · Sahih Muslim 2354"), "M": ("صحيح مسلم ٢٣٥٥", "Sahih Muslim 2355")}
+PBOOKS = [("الرياض الأنيقة في شرح أسماء خير الخليقة — السيوطي", "al-Riyad al-Aniqa — al-Suyuti"), ("زاد المعاد — ابن القيم", "Zad al-Ma'ad — Ibn al-Qayyim")]
 MORNING = [(1, [(2, 255, 255, "كرسيه")]), (3, [(112, 1, 4, "احد"), (113, 1, 5, "الفلق"), (114, 1, 6, "الناس")]),
            (1, None), (3, None), (100, None)]
 MARKED = {2: "green", 5: "red", 7: "blue"}               # the sample markers on Al-Fatihah
@@ -145,6 +161,18 @@ CSS = """/* the day / night switch, beside the colour directions (the author, 20
 .ex-now span{display:flex;align-items:center;gap:3px;font-size:10.5px;color:var(--muted);white-space:nowrap;max-width:150px;overflow:hidden}
 .ex-now .ic{width:12px;height:12px;flex:none}
 .ex-now em{font-style:normal}
+/* the Names of Allah and the names of the Prophet (2026-11-20) */
+.ex-names{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.ex-names .nm{border:1px solid var(--border);background:var(--surface);border-radius:10px;padding:8px 4px;text-align:center;font-family:"Amiri Quran",serif;font-size:17px;color:var(--ink);direction:rtl;cursor:pointer;line-height:1.8}
+.ex-names .nm small{display:block;font-family:inherit;font-size:9.5px;color:var(--muted);line-height:1.2}
+.ex-names .nm.on{border-color:var(--primary);box-shadow:0 0 0 1px var(--primary)}
+.ex-big{text-align:center;font-family:"Amiri Quran",serif;font-size:34px;line-height:1.7;color:var(--primary);direction:rtl}
+.ex-src{font-size:10.5px;color:var(--muted);border-top:1px dashed var(--border);padding-top:5px;line-height:1.5}
+.ex-pn{display:flex;align-items:flex-start;gap:8px;padding:8px 10px;border-radius:10px;background:var(--surface);border:1px solid var(--border)}
+.ex-pn .n{font-family:"Amiri","IBM Plex Sans Arabic",serif;font-size:17px;font-weight:700;color:var(--primary);min-width:76px;direction:rtl}
+.ex-pn .m{font-size:11.5px;color:var(--text);line-height:1.5}
+.ex-pn .m q{font-family:"Amiri","IBM Plex Sans Arabic",serif;font-size:14px;quotes:"«" "»"}
+.ex-warn{border-color:var(--dot);background:var(--lv-soft,var(--surface2))}
 /* duas by category */
 .ex-sec{font-size:12px;font-weight:700;color:var(--lv-accent,var(--dot))}
 .ex-list{display:flex;flex-direction:column;gap:5px}
@@ -195,6 +223,9 @@ def phones(phone):
         ("Changed · Coloured ayah markers (F25) — the tint, with the ayah number", "ex_markers", " data-ex='ex_m_local'", "ex-markers", "i-mark"),
         ("New · Actions on an ayah or a range (F26, F28, F29)", "ex_actions_t", " id='ex-act-sub'", "ex-actions", "i-mark"),
         ("New · Hijri calendar and the time (F27)", "ex_hijri", " data-ex='ex_local_time'", "ex-hijri", "i-ex-cal"),
+        ("New · The Names of Allah (F39)", "ex_n_allah", " data-ex='ex_n_list'", "ex-names", "i-search"),
+        ("New · One name: its evidence and its explanations, each with its source (F39)", "ex_n_allah", " id='ex-name-sub'", "ex-name", "i-mark"),
+        ("New · The names of the Prophet ﷺ (F48)", "ex_p_names", "", "ex-pnames", "i-search"),
     ]:
         out.append(PHONE % {"cap": cap, "phone": phone, "title": title, "sub": sub, "id": ident,
                             "icon": "<svg class='ic' style='color:var(--primary)'><use href='#%s'/></svg>" % icon})
@@ -429,6 +460,53 @@ JS = r"""window.EXTRAS = (function () {
     var c5 = el("div", "ex-card"); c5.appendChild(el("h4", null, T("ex_virtue"))); c5.appendChild(el("div", "ex-ph", T("ex_virtue_ph"))); h.appendChild(c5);
   }
 
+  /* ---- the Names of Allah: the list (words of 59:22-24 from Tanzil), then one name with its evidence and three explanations ---- */
+  function names() {
+    var h = host("ex-names"), g = el("div", "ex-names");
+    D.names.forEach(function (n, i) {
+      var b = el("div", "nm" + (i === 0 ? " on" : ""), n.w); b.lang = "ar";
+      var r = el("small", null, num(n.a)); r.textContent = (RTL.indexOf(cur) >= 0 ? n.name[0] : n.name[1]) + " " + num(n.s) + ":" + num(n.a);
+      b.appendChild(r);
+      b.addEventListener("click", function () { document.getElementById("ex-name").scrollIntoView({ behavior: "smooth", block: "center" }); });
+      g.appendChild(b);
+    });
+    h.appendChild(g);
+    h.appendChild(el("div", "ex-ph", T("ex_n_note")));
+    var src = el("div", "ex-src", T("ex_n_list") + ": " + nm(D.nameBooks[0]).split(" · ")[0]); h.appendChild(src);
+  }
+  function nameEntry() {
+    var h = host("ex-name"), n = D.names[0];
+    document.getElementById("ex-name-sub").textContent = RTL.indexOf(cur) >= 0 ? n.name[0] + " " + num(n.s) + ":" + num(n.a) : n.name[1] + " " + num(n.s) + ":" + num(n.a);
+    var big = el("div", "ex-big", n.w); big.lang = "ar"; h.appendChild(big);
+    var ev = el("div", "ex-card"); ev.appendChild(el("h4", null, T("ex_n_evidence")));
+    D.nameEvidence.forEach(function (d) { var a = el("div", "ex-ayah"); ayahRun(a, [{ n: d.a, t: d.text }]); ev.appendChild(a); ev.appendChild(el("div", "ex-ref", ref(d.s, d.a, d.name))); });
+    h.appendChild(ev);
+    D.nameBooks.forEach(function (b, i) {   /* in the author's order: (1) Ibn Uthaymeen and al-Sa'di, (2) al-Qahtani, (3) al-Badr */
+      var c = el("div", "ex-card"); c.appendChild(el("h4", null, T("ex_n_expl", { n: num(i + 1) })));
+      c.appendChild(el("div", "ex-ph", T("ex_n_expl_ph")));
+      c.appendChild(el("div", "ex-src", nm(b)));
+      h.appendChild(c);
+    });
+  }
+  /* ---- the names of the Prophet: authentic hadiths first (checked), then the scholars' longer lists ---- */
+  function pnames() {
+    var h = host("ex-pnames");
+    h.appendChild(el("div", "ex-note", T("ex_p_note")));
+    D.pnames.forEach(function (p) {
+      var r = el("div", "ex-pn"), n = el("span", "n", p[0]); n.lang = "ar"; r.appendChild(n);
+      var m = el("div", "m");
+      if (RTL.indexOf(cur) < 0) m.appendChild(el("div", null, p[1]));
+      if (p[3]) { var q = el("div"); q.appendChild(el("span", "ex-ref", T("ex_p_meaning") + ": ")); var qq = el("q", null, p[3]); qq.lang = "ar"; q.appendChild(qq); m.appendChild(q); }
+      m.appendChild(el("div", "ex-ref", nm(D.psources[p[2]])));
+      r.appendChild(m); h.appendChild(r);
+    });
+    var more = el("div", "ex-card"); more.appendChild(el("h4", null, T("ex_p_more")));
+    more.appendChild(el("div", "ex-ph", T("ex_p_ph")));
+    var w = el("div", "ex-pn ex-warn"); w.appendChild(el("span", "n", "—")); w.appendChild(el("div", "m", T("ex_p_doubt"))); more.appendChild(w);
+    more.appendChild(el("div", "ex-src", D.pbooks.map(nm).join(" · ")));
+    h.appendChild(more);
+  }
+
   /* ---- the Hijri calendar (Umm al-Qura, with the user's adjustment) and the time of the device ---- */
   function parts(d, cal) {
     var o = {};
@@ -483,7 +561,7 @@ JS = r"""window.EXTRAS = (function () {
       b.setAttribute("aria-checked", String(document.body.dataset.theme === "dark"));
       b.setAttribute("aria-label", T("ex_night"));
     });
-    misbaha(); chapters(); dhikrPage(); duas(); markers(); actions(); hijri();
+    misbaha(); chapters(); dhikrPage(); duas(); markers(); actions(); hijri(); names(); nameEntry(); pnames();
   }
   return { render: render };
 })();
@@ -562,11 +640,23 @@ def main():
                 page["q"].append({"s": s, "name": names[s], "bs": basmala,
                                   "ayahs": [{"n": a, "t": ayah((s, a))} for a in range(a1, a2 + 1)]})
         morning.append(page)
+    names_out = []
+    for s, a, i in NAMES:
+        w = tanzil[(s, a)].split(" ")[i]
+        if not V.skeleton(w).startswith("ال"):
+            R1.fail("%d:%d word %d is not a name: %s" % (s, a, i, w))
+        names_out.append({"w": w, "s": s, "a": a, "name": names[s]})
+    evidence = []
+    for s, a in NAME_EVIDENCE:
+        contains((s, a), "الرحمن")
+        evidence.append({"s": s, "a": a, "text": ayah((s, a)), "name": names[s]})
     i18n = I.build_i18n("extras")
     keys = json.load(io.open(os.path.join(I.I18N, "extras", "keys.json"), encoding="utf-8"))
     texts = {k["id"]: dict({"ar": k["ar"], "en": k["en"]}, **{c: i18n["tr"][c][k["id"]] for c in I.LANG_CODES}) for k in keys}
     data = {"t": texts, "fatiha": {"name": names[1], "ayahs": fatiha}, "marked": MARKED, "duas": duas, "dhikr": DHIKR,
-            "cats": CATS, "chapters": CHAPTERS, "morning": morning, "reciters": RECITERS, "tafsirs": TAFSIRS}
+            "cats": CATS, "chapters": CHAPTERS, "morning": morning, "reciters": RECITERS, "tafsirs": TAFSIRS,
+            "names": names_out, "nameEvidence": evidence, "nameBooks": NAME_BOOKS, "pnames": PNAMES, "psources": PSOURCES,
+            "pbooks": PBOOKS}
     js = JS % {"data": json.dumps(data, ensure_ascii=False)}
     for page, phone in PAGES.items():
         path = os.path.join(HERE, "..", page)

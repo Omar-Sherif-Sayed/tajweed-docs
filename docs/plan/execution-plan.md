@@ -203,6 +203,11 @@ Done when: the CI build and tests are green. ⚠ "Runs on a device" is **not** c
 5. After approval: the Figma file in the author's account, through his Chrome session.
 6. ☐ Fonts: the licence of each font is checked and recorded before it is used (Quran font: `P0-12`).
 
+**State 2026-11-20, third message:** design 3 checked against the tafsirs of every ayah (al-Sa'di, Ibn Kathir)
+and the hadith numbers on sunnah.com; five landscapes corrected and five Paradise directions added (28 in all); the
+Names of Allah and the names of the Prophet ﷺ screens in the three designs; the asset quality rule (`P0-17`). ☐ Figma:
+the colour rows of ten directions and the new and changed landscapes wait for the Starter plan's limit to reset.
+
 **State 2026-11-20, second message:** the author chose the **tint** look for the ayah markers (with the ayah number
 inside the tint; the ribbon removed); the Hijri date and the time on the home screen too; the adhkar like the Hisn
 al-Muslim application (all chapters, «فضل الذكر» first, one dhikr per page with its count, its source and a counter at
@@ -234,6 +239,17 @@ directions on four screens, with real Quran text copied by `prototypes/tools/bui
 choosing. Remaining: steps 3 to 6 in the chosen direction.
 
 Done when: the author has approved the colours and the key screens, and the tokens file is final for phase 1.
+
+### P0-17 Asset exports at the best quality (after the design is chosen)
+
+The author (2026-11-20): every logo, icon and picture at the best possible quality, saved in the docs repository.
+1. Masters: the SVG files in `docs/design/elements/` (vectors — sharp at any size).
+2. Android: vector drawables made from the masters; the adaptive launcher icon (foreground and background layers).
+3. iPhone: vector assets (SVG or PDF) in the asset catalogue; the app icon at 1024 × 1024.
+4. Web: SVG used directly; the favicon set.
+5. Stores: Google Play icon 512 × 512, feature graphic 1024 × 500, App Store icon 1024 × 1024 — PNG exported from the
+   masters at full size, never enlarged from a small image.
+6. All of it saved under `docs/design/elements/<design>/exports/`, listed in `manifest.json`.
 
 ### P0-12 Data-source register and the Quran text
 
@@ -470,13 +486,13 @@ notifies (author, 2026-11-20).
 
 | Task | What |
 | --- | --- |
-| P10-D1 | Sources and rights: word meanings (a named «غريب القرآن» book), asbab al-nuzul (al-Wahidi or another named book), ruqyah (a named book), the Names of Allah (a named scholar's list with the evidence of each name), the guides — wudu, prayer, Hajj and Umrah (a named book), the Zakat rules (a named fatwa body), the calendar of Islamic days (each day with its authentic hadith). Each in the register; permission letters in `P0-13`. |
+| P10-D1 | Sources and rights (also: the three books of F39 and the classical lists of F48 — al-Suyuti «الرياض الأنيقة», Ibn al-Qayyim «زاد المعاد» and others): word meanings (a named «غريب القرآن» book), asbab al-nuzul (al-Wahidi or another named book), ruqyah (a named book), the Names of Allah (a named scholar's list with the evidence of each name), the guides — wudu, prayer, Hajj and Umrah (a named book), the Zakat rules (a named fatwa body), the calendar of Islamic days (each day with its authentic hadith). Each in the register; permission letters in `P0-13`. |
 | P10-W/A/I-1 | F30 Hifz: choose a range, repeat it, hide words to test yourself, a review schedule; progress on the device. |
 | P10-W/A/I-2 | F31 Khatma / wird: split the Quran over a number of days, today's portion, progress — no reminder. |
 | P10-W/A/I-3 | F32 personal notes on an ayah (device only, in the settings file of F47); F33 share an ayah as an image (the shipped text and font, with its reference — ⏸ the font's permission, `P0-13`). |
 | P10-W/A/I-4 | F34 word meanings and asbab al-nuzul in the ayah actions, from their books (⏸ rights). |
 | P10-W/A/I-5 | F35 calendar of Islamic days, F36 the last third of the night on the prayer screen, F37 a private prayer and fasting tracker. |
-| P10-W/A/I-6 | F38 ruqyah, F39 the Names of Allah — verbatim from their books. |
+| P10-W/A/I-6 | F38 ruqyah; F39 the Names of Allah — each name with its evidence and three explanations, each under its book, in the author's order (Ibn Uthaymeen's list with al-Sa'di's explanation; al-Qahtani; al-Badr); F48 the names of the Prophet ﷺ — the authentic hadiths first (al-Bukhari 3532, Muslim 2354, 2355), then the classical lists of 200 names or more, each with source and meaning, a note where the evidence is weak or disputed (quoting the scholar). All verbatim. |
 | P10-W/A/I-7 | F40 guides (wudu, prayer, Hajj and Umrah — text only, no pictures of people), F41 kids (short surahs with repetition in a muallim recitation, the Arabic letters). |
 | P10-W/A/I-8 | F42 Zakat calculator: the nisab and the rules from a named fatwa body, the user enters the prices or a named price source is used; no inheritance calculator. |
 | P10-A/I-9 | F43 home-screen widgets (prayer times, Hijri date, an ayah of the day), F44 Wear OS / Apple Watch (prayer times, misbaha), F45 Android Auto / CarPlay (recitation and radio). |
@@ -517,7 +533,7 @@ notifies (author, 2026-11-20).
 | Choice of the commit e-mail (R10) | P0-03 |
 | Android Studio installed | P0-09 |
 | Colour and screen approval — design 1, 2 or 3 | P0-11 |
-| The colour rows of design 3's five new directions in Figma, after the Starter plan's limit resets | P0-11 |
+| Figma (agent): the colour rows of ten directions and the new and changed landscapes of design 3, after the Starter plan's limit resets | P0-11 |
 | Reading the meanings of design 2 | P0-16, F19 |
 | Choice of Quran text and font | P0-12 |
 | Sending the permission letters | P0-13 |

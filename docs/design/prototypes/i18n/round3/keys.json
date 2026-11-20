@@ -91,8 +91,8 @@
  },
  {
   "id": "r4_jannatan",
-  "en": "Deep green, the red of pomegranates and the green of palms — words from the description of the two gardens.",
-  "ar": "أخضر داكن، وحمرة الرمان، وخضرة النخل — كلمات من وصف الجنتين."
+  "en": "Two gardens of silver, their vessels and all in them (Sahih al-Bukhari 4878): deep green, two gushing springs, palms and pomegranates.",
+  "ar": "جنتان من فضة آنيتهما وما فيهما (صحيح البخاري ٤٨٧٨): خضرة داكنة، وعينان فوّارتان، ونخل ورمان."
  },
  {
   "id": "r4_nur",
@@ -161,8 +161,8 @@
  },
  {
   "id": "r4_kawthar",
-  "en": "Named after al-Kawthar, the first ayah of its surah: the colours of fresh water.",
-  "ar": "باسم الكوثر في أول آية من سورته: ألوان الماء العذب."
+  "en": "A river whose banks are domes of hollow pearl (Sahih al-Bukhari 4964), its water whiter than milk.",
+  "ar": "نهر حافتاه قباب اللؤلؤ المجوّف (صحيح البخاري ٤٩٦٤)، ماؤه أشد بياضًا من اللبن."
  },
  {
   "id": "r4_qamar",
@@ -216,8 +216,8 @@
  },
  {
   "id": "r4_shajara",
-  "en": "A good tree, its root firm and its branches in the sky — words of Surah Ibrahim: the green of its leaves, the brown of its roots.",
-  "ar": "شجرة طيبة أصلها ثابت وفرعها في السماء — كلمات من سورة إبراهيم: خضرة الورق وسمرة الجذور."
+  "en": "The good tree is the palm (Sahih al-Bukhari 4698; al-Sa'di, Ibn Kathir): its root firm, its branches in the sky, its fruit in every season.",
+  "ar": "الشجرة الطيبة هي النخلة (صحيح البخاري ٤٦٩٨؛ السعدي، ابن كثير): أصلها ثابت وفرعها في السماء، وثمرها كل حين."
  },
  {
   "id": "r4_tayr",
@@ -226,8 +226,8 @@
  },
  {
   "id": "r4_zill",
-  "en": "The shade extended, and the sun its guide — Surah al-Furqan: the gold of a low sun and long shadows.",
-  "ar": "مدّ الظل وجعل الشمس عليه دليلًا — من سورة الفرقان: ذهب الشمس المنخفضة والظلال الطويلة."
+  "en": "The extended shade: the time between dawn and sunrise (Ibn Kathir, al-Sa'di), with the sun as its guide.",
+  "ar": "مدّ الظل: ما بين طلوع الفجر وطلوع الشمس (ابن كثير، السعدي)، والشمس عليه دليل."
  },
  {
   "id": "r4_fulk",
@@ -236,8 +236,8 @@
  },
  {
   "id": "r4_asr",
-  "en": "Named after al-Asr, the first ayah of its surah; the warm colours of the time of the Asr prayer — a design choice.",
-  "ar": "باسم العصر، أول آية من سورته؛ ألوان دافئة من وقت صلاة العصر — اختيار تصميم."
+  "en": "Al-Asr: time — the night and the day (al-Sa'di, Ibn Kathir): the day passing into night.",
+  "ar": "العصر: الزمان — الليل والنهار (السعدي، ابن كثير): النهار يمضي إلى الليل."
  },
  {
   "id": "dir_shajara",
@@ -263,5 +263,55 @@
   "id": "dir_asr",
   "en": "Al-Asr",
   "ar": "العصر"
+ },
+ {
+  "id": "r4_mamdud",
+  "en": "Thornless lote trees, layered talh, an extended shade (56:28–30); a tree whose shade a rider crosses in a hundred years (Sahih al-Bukhari 4881).",
+  "ar": "سدر مخضود وطلح منضود وظل ممدود (الواقعة ٢٨–٣٠)، وشجرة يسير الراكب في ظلها مائة عام (صحيح البخاري ٤٨٨١)."
+ },
+ {
+  "id": "r4_anhar",
+  "en": "The four rivers of 47:15: water, milk, drink and honey, flowing from on high.",
+  "ar": "الأنهار الأربعة في سورة محمد ١٥: الماء واللبن والخمر والعسل، تجري من عُلوّ."
+ },
+ {
+  "id": "r4_ghuraf",
+  "en": "Dwellings built one above another, rivers flowing beneath (39:20).",
+  "ar": "غرف من فوقها غرف مبنية تجري من تحتها الأنهار (الزمر ٢٠)."
+ },
+ {
+  "id": "r4_qutuf",
+  "en": "Clusters of fruit hanging near (69:23, 76:14).",
+  "ar": "قطوفها دانية (الحاقة ٢٣؛ الإنسان ١٤)."
+ },
+ {
+  "id": "r4_khiyam",
+  "en": "A tent of a single hollow pearl (Sahih al-Bukhari 4879, Muslim 2838); the word al-khiyam (55:72).",
+  "ar": "خيمة من لؤلؤة واحدة مجوّفة (صحيح البخاري ٤٨٧٩، صحيح مسلم ٢٨٣٨)، وكلمة «الخيام» (الرحمن ٧٢)."
+ },
+ {
+  "id": "dir_mamdud",
+  "en": "Extended shade",
+  "ar": "ظل ممدود"
+ },
+ {
+  "id": "dir_anhar",
+  "en": "The rivers",
+  "ar": "الأنهار"
+ },
+ {
+  "id": "dir_ghuraf",
+  "en": "Lofty dwellings",
+  "ar": "الغرف"
+ },
+ {
+  "id": "dir_qutuf",
+  "en": "Fruit hanging near",
+  "ar": "قطوفها دانية"
+ },
+ {
+  "id": "dir_khiyam",
+  "en": "The tents",
+  "ar": "الخيام"
  }
 ]

@@ -73,5 +73,17 @@
  "ex_cat_note": "Misali: rukunai da wurin kowace addu'a suna bin babukan wani littafi mai suna; addu'a ɗaya na iya kasancewa a rukuni fiye da ɗaya.",
  "ex_tint_note": "Launin yana rufe aya da lambarta.",
  "ex_open_cal": "Buɗe kalandar Hijira",
- "ex_q_ph": "Addu'o'insa daga Alƙur'ani, kamar yadda littafin ya kawo su."
+ "ex_q_ph": "Addu'o'insa daga Alƙur'ani, kamar yadda littafin ya kawo su.",
+ "ex_n_allah": "Kyawawan Sunayen Allah",
+ "ex_n_note": "Misali: waɗannan sunaye kalmomi ne na 59:22–24 da aka kwafa daga rubutun Alƙur'ani. Cikakken jerin, tsarinsa da hujjar kowane suna daga wani littafi mai suna suke; kowane bayani ana kawo shi da tushensa.",
+ "ex_n_evidence": "Hujjarsa",
+ "ex_n_expl": "Bayani {n}",
+ "ex_n_expl_ph": "Bayanin da aka kwafa kalma da kalma daga wannan littafi, da juzu'i da shafi.",
+ "ex_n_list": "Jerin da tsarinsa",
+ "ex_p_names": "Sunayen Annabi ﷺ",
+ "ex_p_note": "Hadisai ingantattu da farko, sannan dogayen jerin littattafan malamai — kowane suna da tushensa da ma'anarsa; idan hujjarsa rarrauna ce ko akwai saɓani, za a faɗa.",
+ "ex_p_meaning": "Ma'anarsa, a cikin hadisin kansa",
+ "ex_p_more": "Ƙarin sunaye daga littattafan malamai (kusan 200 ko fiye), kowanne da tushensa",
+ "ex_p_doubt": "Hujja rarrauna ko akwai saɓani — ana kawo maganar malamin daga littafinsa",
+ "ex_p_ph": "Sunan, ma'anarsa da tushensa, daga littafi"
 }

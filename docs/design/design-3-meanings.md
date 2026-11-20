@@ -40,7 +40,7 @@ Status: a design proposal written by the agent, with no scholar's review (§6.6)
 | Logo | coin rings | **an arc of light rising over the horizon** |
 | Texture | parchment grain everywhere | grain only in the first direction, the sheets; the others are clean |
 
-## 3. The twenty-three directions (twelve on 2026-11-19, six and then five more on 2026-11-20)
+## 3. The twenty-eight directions (twelve on 2026-11-19, then six, five and five more on 2026-11-20)
 
 The five added on the author's second message of 2026-11-20 (§3.19 – §3.23) come **from the Quran only** — he asked
 that the sources be the Quran and the authentic Sunnah. The same day he asked for better pictures: ten landscapes were
@@ -50,6 +50,23 @@ landscapes») and in `elements/design-3/landscapes-earlier/`.
 
 Each has a day and a night theme. The night themes follow the six night rules (deep tinted background, cards
 lighter step by step, the mushaf page a little lighter, soft text 11 – 16 : 1, calm accents, no bright block).
+
+### 3.0 Every direction checked against its ayah's tafsir (the author's request, 2026-11-20)
+
+The author asked that each direction rest on its ayah **and its authentic tafsirs**, and that the descriptions of
+Paradise in the Quran be used. Every ayah was read in **tafsir al-Sa'di** and **tafsir Ibn Kathir** (the texts of
+quran.ksu.edu.sa, read on 2026-11-20); every hadith number below was checked on sunnah.com the same day. The
+tafsirs are cited, not quoted here; in the application only the verbatim text of a licensed tafsir is shown (§1).
+
+| Direction | What the tafsirs say | Drawing |
+| --- | --- | --- |
+| The first sheets, Hira, the Cave, Taybah, Uhud, the camels, dawn, the forenoon, rain, the fig and the olive, the sun and the moon, the winds, the crop, the pasture, the birds, light, mountains | the drawing agrees with al-Sa'di and Ibn Kathir (e.g. 87:5 «أحوى»: black, dry; 67:19: wings spread for flight, drawn in to land; 25:61 lamps; 51:1 the winds) | kept |
+| Two Gardens (55:62 – 68) | the two gardens below are of silver, their vessels and what is in them (al-Bukhari 4878, cited by Ibn Kathir); «نضاختان» gushing (al-Sa'di) | **redrawn**: silver domes, two gushing springs |
+| Al-Kawthar (108:1) | a river whose banks are domes of hollow pearl (al-Bukhari 4964); it runs without a dug channel, its pebbles pearls (Ibn Kathir); its water whiter than milk (al-Sa'di) | **redrawn**: a white river level with the land, pearl domes on its banks |
+| The good tree (14:24) | it is the palm (al-Bukhari 4698 and 61; al-Sa'di; Ibn Kathir from Ibn Mas'ud and Anas) | **redrawn** as a palm |
+| The shade (25:45) | the time between dawn and sunrise (Ibn Kathir from Ibn Abbas and others; al-Sa'di) | **redrawn**: soft shade over all, the sun just rising |
+| Al-Asr (103:1) | time — the night and the day (al-Sa'di); the time in which people's deeds happen, the better-known view (Ibn Kathir) | **redrawn**: the day passing into night; the earlier note ("the afternoon") withdrawn |
+| The ships (55:24) | so great they are like the mountains (al-Sa'di) | ships enlarged |
 
 ### 3.1 الصُّحُف — The first sheets (the default for reading)
 
@@ -148,9 +165,10 @@ high sun in its glow) and its **night theme** is the still night (a small, calm 
 
 ### 3.10 الجنّتان — The two gardens
 
-«مُدْهَآمَّتَانِ» (55:64), «نَضَّاخَتَانِ» (55:66) and «وَرُمَّانٌ» (55:68). **Redrawn on 2026-11-20** (the author asked for a better picture): two gardens on two hills, their trees dense
-and deep green (55:64), the two springs running between them to the front (55:66), pomegranates on the trees and
-palms (55:68). ☐ The tafsir of «مدهامتان» is quoted in F19 only from a licensed tafsir.
+«مُدْهَآمَّتَانِ» (55:64), «نَضَّاخَتَانِ» (55:66) and «وَرُمَّانٌ» (55:68). **Redrawn twice on 2026-11-20** — the second time after the tafsirs (§3.0), with «وَمِن دُونِهِمَا جَنَّتَانِ» (55:62): these two gardens are
+"of silver, their vessels and what is in them" (Sahih al-Bukhari 4878); "mudhammatan" — dark from the depth of their
+green, "naddakhatan" — gushing (al-Sa'di). The landscape: two gardens of dense deep-green trees with silver domes, two
+springs rising in arcs between them, palms and pomegranates.
 
 | Colour | From |
 | --- | --- |
@@ -188,9 +206,10 @@ with its purple fruit on the right, on low hills.
 
 ### 3.14 الكوثر — Al-Kawthar (2026-11-20)
 
-Named after the word «ٱلْكَوْثَرَ» (108:1). The colours of fresh water; the landscape: a river running from the horizon to the front.
-What al-Kawthar is, is said only by a hadith or a tafsir with its source (F19 rules) — the design takes the word, not
-an explanation.
+Named after the word «ٱلْكَوْثَرَ» (108:1). **Redrawn after the tafsirs (§3.0):** "I came upon a river whose banks were domes of hollow pearl … this is
+al-Kawthar" (Sahih al-Bukhari 4964); it runs without a dug channel and its pebbles are pearls (the hadith of Anas cited
+by Ibn Kathir); its water is whiter than milk (al-Sa'di). The landscape: a white river winding toward us, level with the
+land, its pebbles pearls, domes of pearl along both banks.
 
 | Colour | From |
 | --- | --- |
@@ -238,8 +257,9 @@ Two words of colour: «ٱلْمَرْعَىٰ» (87:4) and «أَحْوَىٰ» 
 ### 3.19 الشجرة الطيبة — The good tree (second message of 2026-11-20)
 
 From «كَشَجَرَةٍ طَيِّبَةٍ أَصْلُهَا ثَابِتٌ وَفَرْعُهَا فِى ٱلسَّمَآءِ» (14:24) and «تُؤْتِىٓ أُكُلَهَا» (14:25). The landscape: one tree, its roots spread deep in the earth below the ground line,
-its trunk rising and its branches reaching the top of the sky, with fruit on them. The parable itself is explained only by
-a tafsir with its source (rule 1); the design takes the words.
+its trunk rising and its branches reaching the top of the sky, with fruit on them. **Corrected after the tafsirs
+(§3.0):** the good tree is the palm — the Prophet ﷺ said “it is the palm” (Sahih al-Bukhari 4698, in the tafsir of 14:24;
+also 61), as al-Sa'di and Ibn Kathir say; it is now drawn as a palm with its roots spread deep and its dates.
 
 | Colour | From |
 | --- | --- |
@@ -259,7 +279,9 @@ drawn in — the two words of the ayah.
 ### 3.21 الظل — The shade (second message of 2026-11-20)
 
 From «كَيْفَ مَدَّ ٱلظِّلَّ» and «جَعَلْنَا ٱلشَّمْسَ عَلَيْهِ دَلِيلًا» (25:45). The landscape: a low sun at the horizon and the long shadows of two palms and a rock
-stretched over the plain.
+stretched over the plain. **Corrected after the tafsirs (§3.0):** the extended shade is the time between dawn and sunrise
+(Ibn Kathir, from Ibn Abbas and others; al-Sa'di) — the landscape now shows the whole land in soft shade and the sun only
+beginning to rise, its guide.
 
 | Colour | From |
 | --- | --- |
@@ -278,14 +300,74 @@ lateen sails on a slanting yard, so no mast and yard ever make a cross (rule 8).
 
 ### 3.23 العصر — Al-Asr (second message of 2026-11-20)
 
-Named after the word «وَٱلْعَصْرِ» (103:1). The tafsirs differ on what al-Asr is; the design does not choose — it takes the
-word as a name, and its colours are the warm light of the time of the Asr prayer, a design choice stated as such in F19.
-The landscape: warm hills, palms and their shadows, the sun past its height.
+Named after the word «وَٱلْعَصْرِ» (103:1). **Corrected after the tafsirs (§3.0):** al-Sa'di explains al-Asr as time —
+the night and the day; Ibn Kathir gives as the better-known view the time in which the deeds of people happen, and
+mentions the afternoon as a second view. The first note (the time of the Asr prayer) is withdrawn. The landscape: the
+sky passing from day on one side to night on the other, over warm hills and palms.
 
 | Colour | From |
 | --- | --- |
 | Warm brown `#5C3510` (buttons), `#7E410E` (card) | the light of that hour |
 | `#8A4106` (dots) | the sun |
+
+### 3.24 ظل ممدود — The extended shade (Paradise, 2026-11-20)
+
+«سِدْرٍ مَّخْضُودٍ», «وَطَلْحٍ مَّنضُودٍ» and «وَظِلٍّ مَّمْدُودٍ» (56:28–30). Al-Sa'di: lote trees whose thorns are taken away, talh whose branches are set with fruit; on
+56:30 Ibn Kathir cites "In Paradise is a tree in whose shade a rider travels a hundred years without crossing it; recite
+if you wish: ‘and an extended shade’" (Sahih al-Bukhari 4881; also 3251). The landscape: one vast canopy whose shade covers the
+whole land, thornless lote trees, talh with rows of fruit, poured water (56:31). No rider is drawn.
+
+| Colour | From |
+| --- | --- |
+| Shade green `#144035` (buttons), `#1E5240` (card) | the extended shade |
+| `#9A332B` (dots) | the fruit |
+
+### 3.25 الأنهار — The rivers (Paradise, 2026-11-20)
+
+«فِيهَآ» (47:15): rivers of water that does not change, of milk whose taste does not change, of a drink delightful to those who
+drink, and of pure honey. Al-Sa'di (on 13:35): the rivers run without a channel; Ibn Kathir (on 47:15) cites "from it
+[al-Firdaws] the rivers of Paradise burst forth". The landscape: four streams side by side flowing down from a height,
+level with the land. The colour of the river of drink is a design choice — the sources read do not describe it.
+
+| Colour | From |
+| --- | --- |
+| `#1D626B` (buttons), `#24727C` (card) | water |
+| `#7A4014` (dots) | honey |
+
+### 3.26 الغرف — Lofty dwellings (Paradise, 2026-11-20)
+
+«غُرَفٌ مِّن فَوْقِهَا غُرَفٌ مَّبْنِيَّةٌ تَجْرِى» (39:20). Al-Sa'di: high, adorned dwellings, so clear that their outside is seen from their inside, seen from afar
+like a bright star on the horizon, built one above another, of gold and silver; Ibn Kathir: high palaces, storey above
+storey. The landscape: four storeys of gold and silver, see-through, a star-like light above them, a river beneath.
+Windows are arches only, so no window makes a cross.
+
+| Colour | From |
+| --- | --- |
+| `#4A3A12` (buttons), `#5A4718` (card) | gold |
+| `#86610E` (dots) | the light |
+
+### 3.27 قطوفها دانية — Fruit hanging near (Paradise, 2026-11-20)
+
+«قُطُوفُهَا دَانِيَةٌ» (69:23) and «قُطُوفُهَا تَذْلِيلًا» (76:14). Al-Sa'di: its fruit near and easy to reach, standing, sitting or reclining. The landscape:
+fruit trees whose branches bow so their clusters hang near the ground, their shade close.
+
+| Colour | From |
+| --- | --- |
+| `#254A1E` (buttons), `#2D5524` (card) | the trees |
+| `#6E2E30` (dots) | the fruit |
+
+### 3.28 الخيام — The tents (Paradise, 2026-11-20)
+
+"In Paradise there is a tent of a single hollow pearl, sixty miles wide" (Sahih al-Bukhari 4879; Sahih Muslim 2838); the
+word «ٱلْخِيَامِ» (55:72). The landscape: domed tents with the sheen of pearl, in a garden. Tents only — no person is drawn.
+
+| Colour | From |
+| --- | --- |
+| Pearl lilac `#201D6B` (buttons), `#27247C` (card) | the pearl |
+| `#4A6A10` (dots) | the garden |
+
+**Never drawn in any direction** (the author, 2026-11-20): a person, a face, clothing on a body, a cup, or the unseen
+(for example Sidrat al-Muntaha, 53:14).
 
 ## 4. The logo
 
@@ -327,14 +409,23 @@ shape as on the phone, so it is never stretched or cut on a wide screen.
 | Al-Furqaan 25:45 (الفرقان) | أَلَمْ تَرَ إِلَىٰ رَبِّكَ كَيْفَ مَدَّ ٱلظِّلَّ وَلَوْ شَآءَ لَجَعَلَهُۥ سَاكِنًا ثُمَّ جَعَلْنَا ٱلشَّمْسَ عَلَيْهِ دَلِيلًا |
 | Ar-Room 30:22 (الروم) | وَمِنْ ءَايَـٰتِهِۦ خَلْقُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ وَٱخْتِلَـٰفُ أَلْسِنَتِكُمْ وَأَلْوَٰنِكُمْ ۚ إِنَّ فِى ذَٰلِكَ لَـَٔايَـٰتٍ لِّلْعَـٰلِمِينَ |
 | Faatir 35:27 (فاطر) | أَلَمْ تَرَ أَنَّ ٱللَّهَ أَنزَلَ مِنَ ٱلسَّمَآءِ مَآءً فَأَخْرَجْنَا بِهِۦ ثَمَرَٰتٍ مُّخْتَلِفًا أَلْوَٰنُهَا ۚ وَمِنَ ٱلْجِبَالِ جُدَدٌۢ بِيضٌ وَحُمْرٌ مُّخْتَلِفٌ أَلْوَٰنُهَا وَغَرَابِيبُ سُودٌ |
+| Az-Zumar 39:20 (الزمر) | لَـٰكِنِ ٱلَّذِينَ ٱتَّقَوْا۟ رَبَّهُمْ لَهُمْ غُرَفٌ مِّن فَوْقِهَا غُرَفٌ مَّبْنِيَّةٌ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ ۖ وَعْدَ ٱللَّهِ ۖ لَا يُخْلِفُ ٱللَّهُ ٱلْمِيعَادَ |
+| Muhammad 47:15 (محمد) | مَّثَلُ ٱلْجَنَّةِ ٱلَّتِى وُعِدَ ٱلْمُتَّقُونَ ۖ فِيهَآ أَنْهَـٰرٌ مِّن مَّآءٍ غَيْرِ ءَاسِنٍ وَأَنْهَـٰرٌ مِّن لَّبَنٍ لَّمْ يَتَغَيَّرْ طَعْمُهُۥ وَأَنْهَـٰرٌ مِّنْ خَمْرٍ لَّذَّةٍ لِّلشَّـٰرِبِينَ وَأَنْهَـٰرٌ مِّنْ عَسَلٍ مُّصَفًّى ۖ وَلَهُمْ فِيهَا مِن كُلِّ ٱلثَّمَرَٰتِ وَمَغْفِرَةٌ مِّن رَّبِّهِمْ ۖ كَمَنْ هُوَ خَـٰلِدٌ فِى ٱلنَّارِ وَسُقُوا۟ مَآءً حَمِيمًا فَقَطَّعَ أَمْعَآءَهُمْ |
 | Al-Fath 48:29 (الفتح) | مُّحَمَّدٌ رَّسُولُ ٱللَّهِ ۚ وَٱلَّذِينَ مَعَهُۥٓ أَشِدَّآءُ عَلَى ٱلْكُفَّارِ رُحَمَآءُ بَيْنَهُمْ ۖ تَرَىٰهُمْ رُكَّعًا سُجَّدًا يَبْتَغُونَ فَضْلًا مِّنَ ٱللَّهِ وَرِضْوَٰنًا ۖ سِيمَاهُمْ فِى وُجُوهِهِم مِّنْ أَثَرِ ٱلسُّجُودِ ۚ ذَٰلِكَ مَثَلُهُمْ فِى ٱلتَّوْرَىٰةِ ۚ وَمَثَلُهُمْ فِى ٱلْإِنجِيلِ كَزَرْعٍ أَخْرَجَ شَطْـَٔهُۥ فَـَٔازَرَهُۥ فَٱسْتَغْلَظَ فَٱسْتَوَىٰ عَلَىٰ سُوقِهِۦ يُعْجِبُ ٱلزُّرَّاعَ لِيَغِيظَ بِهِمُ ٱلْكُفَّارَ ۗ وَعَدَ ٱللَّهُ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ مِنْهُم مَّغْفِرَةً وَأَجْرًا عَظِيمًۢا |
 | Qaaf 50:10 (ق) | وَٱلنَّخْلَ بَاسِقَـٰتٍ لَّهَا طَلْعٌ نَّضِيدٌ |
 | Adh-Dhaariyat 51:1 (الذاريات) | وَٱلذَّٰرِيَـٰتِ ذَرْوًا |
 | Ar-Rahmaan 55:24 (الرحمن) | وَلَهُ ٱلْجَوَارِ ٱلْمُنشَـَٔاتُ فِى ٱلْبَحْرِ كَٱلْأَعْلَـٰمِ |
+| Ar-Rahmaan 55:62 (الرحمن) | وَمِن دُونِهِمَا جَنَّتَانِ |
 | Ar-Rahmaan 55:64 (الرحمن) | مُدْهَآمَّتَانِ |
 | Ar-Rahmaan 55:66 (الرحمن) | فِيهِمَا عَيْنَانِ نَضَّاخَتَانِ |
 | Ar-Rahmaan 55:68 (الرحمن) | فِيهِمَا فَـٰكِهَةٌ وَنَخْلٌ وَرُمَّانٌ |
+| Ar-Rahmaan 55:72 (الرحمن) | حُورٌ مَّقْصُورَٰتٌ فِى ٱلْخِيَامِ |
+| Al-Waaqia 56:28 (الواقعة) | فِى سِدْرٍ مَّخْضُودٍ |
+| Al-Waaqia 56:29 (الواقعة) | وَطَلْحٍ مَّنضُودٍ |
+| Al-Waaqia 56:30 (الواقعة) | وَظِلٍّ مَّمْدُودٍ |
 | Al-Mulk 67:19 (الملك) | أَوَلَمْ يَرَوْا۟ إِلَى ٱلطَّيْرِ فَوْقَهُمْ صَـٰٓفَّـٰتٍ وَيَقْبِضْنَ ۚ مَا يُمْسِكُهُنَّ إِلَّا ٱلرَّحْمَـٰنُ ۚ إِنَّهُۥ بِكُلِّ شَىْءٍۭ بَصِيرٌ |
+| Al-Haaqqa 69:23 (الحاقة) | قُطُوفُهَا دَانِيَةٌ |
+| Al-Insaan 76:14 (الانسان) | وَدَانِيَةً عَلَيْهِمْ ظِلَـٰلُهَا وَذُلِّلَتْ قُطُوفُهَا تَذْلِيلًا |
 | At-Takwir 81:18 (التكوير) | وَٱلصُّبْحِ إِذَا تَنَفَّسَ |
 | Al-A'laa 87:4 (الأعلى) | وَٱلَّذِىٓ أَخْرَجَ ٱلْمَرْعَىٰ |
 | Al-A'laa 87:5 (الأعلى) | فَجَعَلَهُۥ غُثَآءً أَحْوَىٰ |

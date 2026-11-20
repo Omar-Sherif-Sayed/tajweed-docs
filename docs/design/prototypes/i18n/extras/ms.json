@@ -73,5 +73,17 @@
  "ex_cat_note": "Contoh: kategori dan tempat setiap doa mengikut bab kitab yang dinamakan; satu doa boleh berada dalam lebih daripada satu kategori.",
  "ex_tint_note": "Warna meliputi ayat dan nombornya.",
  "ex_open_cal": "Buka kalendar Hijrah",
- "ex_q_ph": "Doa-doanya daripada al-Quran, seperti yang disebut kitab."
+ "ex_q_ph": "Doa-doanya daripada al-Quran, seperti yang disebut kitab.",
+ "ex_n_allah": "Asmaul Husna",
+ "ex_n_note": "Contoh: nama-nama ini ialah perkataan daripada 59:22–24 yang disalin daripada teks al-Quran. Senarai penuh, susunannya dan dalil setiap nama daripada kitab yang dinamakan; setiap huraian dipetik bersama sumbernya.",
+ "ex_n_evidence": "Dalilnya",
+ "ex_n_expl": "Huraian {n}",
+ "ex_n_expl_ph": "Huraian yang disalin kata demi kata daripada kitab ini, dengan jilid dan halaman.",
+ "ex_n_list": "Senarai dan susunannya",
+ "ex_p_names": "Nama-nama Nabi ﷺ",
+ "ex_p_note": "Hadis-hadis sahih dahulu, kemudian senarai yang lebih panjang daripada kitab ulama — setiap nama dengan sumber dan maknanya; jika dalilnya lemah atau dipertikaikan, dinyatakan.",
+ "ex_p_meaning": "Maknanya, dalam hadis itu sendiri",
+ "ex_p_more": "Nama-nama lain daripada kitab ulama (kira-kira 200 atau lebih), setiap satu dengan sumbernya",
+ "ex_p_doubt": "Dalil lemah atau dipertikaikan — kata-kata ulama dipetik daripada kitabnya",
+ "ex_p_ph": "Nama, makna dan sumbernya, daripada kitab"
 }

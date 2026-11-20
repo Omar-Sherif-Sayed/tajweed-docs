@@ -73,5 +73,17 @@
  "ex_cat_note": "Örnek: kategoriler ve her duanın yeri adı verilen bir kitabın bölümlerine göredir; bir dua birden fazla kategoride olabilir.",
  "ex_tint_note": "Renk ayeti ve numarasını kapsar.",
  "ex_open_cal": "Hicri takvimi aç",
- "ex_q_ph": "Bu kategorinin Kur'an'dan duaları, kitaptaki gibi."
+ "ex_q_ph": "Bu kategorinin Kur'an'dan duaları, kitaptaki gibi.",
+ "ex_n_allah": "Allah'ın Güzel İsimleri",
+ "ex_n_note": "Örnek: bu isimler, Kur'an metninden kopyalanan 59:22–24'ün kelimeleridir. Tam liste, sırası ve her ismin delili adı verilen bir kitaptan gelir; her açıklama kaynağıyla aktarılır.",
+ "ex_n_evidence": "Delili",
+ "ex_n_expl": "Açıklama {n}",
+ "ex_n_expl_ph": "Bu kitaptan kelimesi kelimesine aktarılan açıklama, cilt ve sayfasıyla.",
+ "ex_n_list": "Liste ve sırası",
+ "ex_p_names": "Peygamber'in ﷺ isimleri",
+ "ex_p_note": "Önce sahih hadisler, sonra âlimlerin kitaplarındaki daha uzun listeler — her isim kaynağı ve anlamıyla; delili zayıf veya tartışmalıysa belirtilir.",
+ "ex_p_meaning": "Anlamı, hadisin kendisinde",
+ "ex_p_more": "Âlimlerin kitaplarından daha fazla isim (yaklaşık 200 veya daha fazla), her biri kaynağıyla",
+ "ex_p_doubt": "Delil zayıf veya tartışmalı — âlimin sözleri kitabından aktarılır",
+ "ex_p_ph": "İsim, anlamı ve kaynağı, kitaptan"
 }

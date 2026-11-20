@@ -73,5 +73,17 @@
  "ex_cat_note": "Beispiel: die Kategorien und die Zuordnung jedes Bittgebets folgen den Kapiteln eines genannten Buches; ein Bittgebet kann in mehreren stehen.",
  "ex_tint_note": "Die Farbe umfasst den Vers und seine Nummer.",
  "ex_open_cal": "Hidschri-Kalender öffnen",
- "ex_q_ph": "Ihre Bittgebete aus dem Koran, wie das Buch sie nennt."
+ "ex_q_ph": "Ihre Bittgebete aus dem Koran, wie das Buch sie nennt.",
+ "ex_n_allah": "Die Namen Allahs",
+ "ex_n_note": "Beispiel: diese Namen sind Wörter aus 59:22–24, kopiert aus dem Korantext. Die vollständige Liste, ihre Reihenfolge und der Beleg jedes Namens stammen aus einem genannten Buch; jede Erklärung wird mit ihrer Quelle zitiert.",
+ "ex_n_evidence": "Sein Beleg",
+ "ex_n_expl": "Erklärung {n}",
+ "ex_n_expl_ph": "Die Erklärung Wort für Wort aus diesem Buch, mit Band und Seite.",
+ "ex_n_list": "Die Liste und ihre Reihenfolge",
+ "ex_p_names": "Die Namen des Propheten ﷺ",
+ "ex_p_note": "Zuerst die authentischen Hadithe, dann die längeren Listen aus den Büchern der Gelehrten – jeder Name mit Quelle und Bedeutung; ist sein Beleg schwach oder umstritten, wird es gesagt.",
+ "ex_p_meaning": "Seine Bedeutung, im Hadith selbst",
+ "ex_p_more": "Weitere Namen aus den Büchern der Gelehrten (etwa 200 oder mehr), jeder mit Quelle",
+ "ex_p_doubt": "Beleg schwach oder umstritten – die Worte des Gelehrten aus seinem Buch zitiert",
+ "ex_p_ph": "Der Name, seine Bedeutung und Quelle, aus dem Buch"
 }

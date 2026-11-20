@@ -73,5 +73,17 @@
  "ex_cat_note": "Esempio: le categorie e la posizione di ogni supplica seguono i capitoli di un libro indicato; una supplica può stare in più di una.",
  "ex_tint_note": "Il colore copre il versetto e il suo numero.",
  "ex_open_cal": "Apri il calendario dell'Egira",
- "ex_q_ph": "Le sue suppliche dal Corano, come le riporta il libro."
+ "ex_q_ph": "Le sue suppliche dal Corano, come le riporta il libro.",
+ "ex_n_allah": "I Nomi di Allah",
+ "ex_n_note": "Esempio: questi nomi sono parole di 59:22–24 copiate dal testo del Corano. La lista completa, il suo ordine e la prova di ogni nome vengono da un libro indicato; ogni spiegazione è citata con la sua fonte.",
+ "ex_n_evidence": "La sua prova",
+ "ex_n_expl": "Spiegazione {n}",
+ "ex_n_expl_ph": "La spiegazione copiata parola per parola da questo libro, con volume e pagina.",
+ "ex_n_list": "La lista e il suo ordine",
+ "ex_p_names": "I nomi del Profeta ﷺ",
+ "ex_p_note": "Prima gli hadith autentici, poi le liste più lunghe dei libri dei sapienti — ogni nome con la sua fonte e il suo significato; se la prova è debole o discussa, è detto.",
+ "ex_p_meaning": "Il suo significato, nell'hadith stesso",
+ "ex_p_more": "Altri nomi dai libri dei sapienti (circa 200 o più), ognuno con la sua fonte",
+ "ex_p_doubt": "Prova debole o discussa — le parole del sapiente citate dal suo libro",
+ "ex_p_ph": "Il nome, il significato e la fonte, dal libro"
 }

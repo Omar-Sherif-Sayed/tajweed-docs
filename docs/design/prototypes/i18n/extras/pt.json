@@ -73,5 +73,17 @@
  "ex_cat_note": "Exemplo: as categorias e o lugar de cada súplica seguem os capítulos de um livro nomeado; uma súplica pode estar em mais de uma.",
  "ex_tint_note": "A cor cobre o versículo e o seu número.",
  "ex_open_cal": "Abrir o calendário da Hégira",
- "ex_q_ph": "As suas súplicas do Alcorão, como o livro as cita."
+ "ex_q_ph": "As suas súplicas do Alcorão, como o livro as cita.",
+ "ex_n_allah": "Os Nomes de Allah",
+ "ex_n_note": "Exemplo: estes nomes são palavras de 59:22–24 copiadas do texto do Alcorão. A lista completa, a sua ordem e a prova de cada nome vêm de um livro nomeado; cada explicação é citada com a sua fonte.",
+ "ex_n_evidence": "A sua prova",
+ "ex_n_expl": "Explicação {n}",
+ "ex_n_expl_ph": "A explicação copiada palavra por palavra deste livro, com volume e página.",
+ "ex_n_list": "A lista e a sua ordem",
+ "ex_p_names": "Os nomes do Profeta ﷺ",
+ "ex_p_note": "Primeiro os hadiths autênticos, depois as listas mais longas dos livros dos sábios — cada nome com a sua fonte e o seu sentido; se a prova for fraca ou discutida, isso é dito.",
+ "ex_p_meaning": "O seu sentido, no próprio hadith",
+ "ex_p_more": "Mais nomes dos livros dos sábios (cerca de 200 ou mais), cada um com a sua fonte",
+ "ex_p_doubt": "Prova fraca ou discutida — as palavras do sábio citadas do seu livro",
+ "ex_p_ph": "O nome, o seu sentido e a sua fonte, do livro"
 }

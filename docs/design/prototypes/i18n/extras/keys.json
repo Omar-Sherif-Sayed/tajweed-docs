@@ -368,5 +368,65 @@
   "id": "ex_q_ph",
   "en": "Its duas from the Quran, as the book lists them.",
   "ar": "أدعيته من القرآن كما يذكرها الكتاب."
+ },
+ {
+  "id": "ex_n_allah",
+  "en": "The Names of Allah",
+  "ar": "أسماء الله الحسنى"
+ },
+ {
+  "id": "ex_n_note",
+  "en": "Sample: these names are words of 59:22–24 copied from the Quran text. The full list, its order and the evidence of each name come from a named book; every explanation is quoted with its source.",
+  "ar": "مثال: هذه الأسماء كلمات من سورة الحشر ٢٢–٢٤ منقولة من نص القرآن. القائمة كاملة وترتيبها ودليل كل اسم من كتاب مسمّى، وكل شرح منقول بمصدره."
+ },
+ {
+  "id": "ex_n_evidence",
+  "en": "Its evidence",
+  "ar": "دليله"
+ },
+ {
+  "id": "ex_n_expl",
+  "en": "Explanation {n}",
+  "ar": "الشرح {n}"
+ },
+ {
+  "id": "ex_n_expl_ph",
+  "en": "The explanation copied word for word from this book, with volume and page.",
+  "ar": "الشرح منقول بنصه من هذا الكتاب، بالجزء والصفحة."
+ },
+ {
+  "id": "ex_n_list",
+  "en": "The list and its order",
+  "ar": "القائمة وترتيبها"
+ },
+ {
+  "id": "ex_p_names",
+  "en": "Names of the Prophet ﷺ",
+  "ar": "أسماء النبي ﷺ"
+ },
+ {
+  "id": "ex_p_note",
+  "en": "The authentic hadiths first, then the longer lists of the scholars' books — each name with its source and meaning; where its evidence is weak or disputed, the screen says so.",
+  "ar": "من الأحاديث الصحيحة أولًا، ثم القوائم الأطول في كتب العلماء — كل اسم بمصدره ومعناه، وإن كان في دليله ضعف أو خلاف ذُكر ذلك."
+ },
+ {
+  "id": "ex_p_meaning",
+  "en": "Its meaning, in the hadith itself",
+  "ar": "معناه في نص الحديث"
+ },
+ {
+  "id": "ex_p_more",
+  "en": "More names from the scholars' books (about 200 or more), each with its source",
+  "ar": "أسماء أخرى من كتب العلماء (نحو مئتين أو أكثر) بمصادرها"
+ },
+ {
+  "id": "ex_p_doubt",
+  "en": "Evidence weak or disputed — the scholar's words are quoted from his book",
+  "ar": "في دليله ضعف أو خلاف — يُنقل كلام العالم من كتابه"
+ },
+ {
+  "id": "ex_p_ph",
+  "en": "The name, its meaning and its source, from the book",
+  "ar": "الاسم ومعناه ومصدره من الكتاب"
  }
 ]

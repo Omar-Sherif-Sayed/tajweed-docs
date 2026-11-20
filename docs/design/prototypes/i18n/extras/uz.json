@@ -73,5 +73,17 @@
  "ex_cat_note": "Namuna: turkumlar va har bir duoning oʻrni nomi aytilgan kitob boblariga koʻra; bir duo bir nechta turkumda boʻlishi mumkin.",
  "ex_tint_note": "Rang oyat va uning raqamini qoplaydi.",
  "ex_open_cal": "Hijriy taqvimni ochish",
- "ex_q_ph": "Bu turkumning Qurʼondan duolari, kitobdagidek."
+ "ex_q_ph": "Bu turkumning Qurʼondan duolari, kitobdagidek.",
+ "ex_n_allah": "Allohning go'zal ismlari",
+ "ex_n_note": "Namuna: bu ismlar Qurʼon matnidan koʻchirilgan 59:22–24 soʻzlaridir. Toʻliq roʻyxat, tartibi va har bir ismning dalili nomi aytilgan kitobdan; har bir sharh manbasi bilan keltiriladi.",
+ "ex_n_evidence": "Uning dalili",
+ "ex_n_expl": "Sharh {n}",
+ "ex_n_expl_ph": "Bu kitobdan soʻzma-soʻz koʻchirilgan sharh, jild va sahifasi bilan.",
+ "ex_n_list": "Roʻyxat va tartibi",
+ "ex_p_names": "Paygʻambar ﷺ ismlari",
+ "ex_p_note": "Avval sahih hadislar, soʻng olimlar kitoblaridagi uzunroq roʻyxatlar — har bir ism manbasi va maʼnosi bilan; dalili zaif yoki bahsli boʻlsa, aytiladi.",
+ "ex_p_meaning": "Maʼnosi, hadisning oʻzida",
+ "ex_p_more": "Olimlar kitoblaridan yana ismlar (taxminan 200 yoki koʻproq), har biri manbasi bilan",
+ "ex_p_doubt": "Dalil zaif yoki bahsli — olimning soʻzi kitobidan keltiriladi",
+ "ex_p_ph": "Ism, maʼnosi va manbasi, kitobdan"
 }

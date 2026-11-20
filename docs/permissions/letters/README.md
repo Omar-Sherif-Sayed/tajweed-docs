@@ -2,16 +2,16 @@
 
 Drafted by the agent; **sent by the author** from his own e-mail or the owner's form (`../README.md`). Each file: recipient, how to send, subject, then the letter in Arabic and in English (send both in one message). When an answer comes, save it in `../answers/` and update the status table in `../README.md`.
 
-| # | To | Address / channel | File |
-| --- | --- | --- | --- |
-| 1 | مجمع الملك فهد لطباعة المصحف الشريف — King Fahd Glorious Quran Printing Complex | info@qurancomplex.gov.sa | [01-king-fahd-complex.md](01-king-fahd-complex.md) |
-| 2 | موسوعة القرآن الكريم QuranEnc.com | info@quranenc.com | [02-quranenc.md](02-quranenc.md) |
-| 3 | مؤسسة الشيخ محمد بن صالح العثيمين الخيرية | info@binothaimeen.com | [03-ibn-uthaymeen-foundation.md](03-ibn-uthaymeen-foundation.md) |
-| 4 | أصحاب حقوق كتب الشيخ سعيد بن علي بن وهف القحطاني رحمه الله (حصن المسلم) | — no published e-mail found (2026-11-20) | [04-hisn-almuslim.md](04-hisn-almuslim.md) |
-| 5 | موقع الشيخ عبد الرزاق بن عبد المحسن البدر | — contact form only | [05-al-badr.md](05-al-badr.md) |
-| 6 | مؤسسة الدرر السنية | support@dorar.net | [06-dorar.md](06-dorar.md) |
-| 7 | موقع mp3quran.net | — contact form only | [07-mp3quran.md](07-mp3quran.md) |
-| 8 | EveryAyah.com (support through the Quran.com help centre) | — help-centre form | [08-everyayah.md](08-everyayah.md) |
+| # | To | Address / channel | File | Status |
+| --- | --- | --- | --- | --- |
+| 1 | مجمع الملك فهد لطباعة المصحف الشريف — King Fahd Glorious Quran Printing Complex | info@qurancomplex.gov.sa | [01-king-fahd-complex.md](01-king-fahd-complex.md) | ⏸ sent 2026-11-20 |
+| 2 | موسوعة القرآن الكريم QuranEnc.com | info@quranenc.com | [02-quranenc.md](02-quranenc.md) | ⏸ sent 2026-11-20 |
+| 3 | مؤسسة الشيخ محمد بن صالح العثيمين الخيرية | info@binothaimeen.com | [03-ibn-uthaymeen-foundation.md](03-ibn-uthaymeen-foundation.md) | ⏸ sent 2026-11-20 |
+| 4 | أصحاب حقوق كتب الشيخ سعيد بن علي بن وهف القحطاني رحمه الله (حصن المسلم) | — no published e-mail found (2026-11-20) | [04-hisn-almuslim.md](04-hisn-almuslim.md) | ☐ not sent |
+| 5 | موقع الشيخ عبد الرزاق بن عبد المحسن البدر | — contact form only | [05-al-badr.md](05-al-badr.md) | ☐ not sent |
+| 6 | مؤسسة الدرر السنية | support@dorar.net | [06-dorar.md](06-dorar.md) | ☐ not sent |
+| 7 | موقع mp3quran.net | — contact form only | [07-mp3quran.md](07-mp3quran.md) | ☐ not sent |
+| 8 | EveryAyah.com (support through the Quran.com help centre) | — help-centre form | [08-everyayah.md](08-everyayah.md) | ☐ not sent |
 
 **Not drafted yet** — the owner depends on an edition not chosen yet: the tafsir editions not on QuranEnc, the hadith
 editions (`P7-D1`), the books of F14 and F20 – F22 (`P8-D1`, `P9-D1`), al-Sa'di's explanation of the Names (its edition),

@@ -4,7 +4,7 @@ description: "How Omar wants agents to work on the Tajweed product (plan-ask-cod
 metadata:
   node_type: memory
   type: feedback
-  modified: 2026-11-21T00:33:39.576Z
+  modified: 2026-11-21T14:05:02.988Z
   originSessionId: 4f32e8cc-e0b3-4843-a4c0-dae31d57f095
 ---
 
@@ -79,6 +79,8 @@ screen (four states: verified / letter sent / letter ready / to check) — updat
 `i18n/design3-screens/`); 48 of 51 features drawn. Maps and diagrams too: streets only at T-junctions, never a
 four-way crossing (cross rule). When an API secret is involved (e.g. Quran Foundation client secret, shown once), he
 creates the app himself and keeps the secret — I give exact settings, I don't create it or see the secret.
+Quran Foundation terms (read 2026-11-21): their content in a public repo = redistribution → never commit it; only
+Content Sync (≤7-day refresh) for stored copies; app needs a public Privacy Policy per their requirements.
 
 **Why:** it is a religious (Quran) application; a wrong text, reference or time is unacceptable to him.
 

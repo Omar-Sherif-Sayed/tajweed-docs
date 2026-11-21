@@ -123,7 +123,8 @@ the Adhan library (Kotlin, Swift, JavaScript editions).
 
 ### P0-07 Backend scaffold — `tajweed-backend`
 
-Follows `AGENTS.md` §9.
+Follows `AGENTS.md` §9. **The detailed plan (2026-11-21): [`backend-plan.md`](backend-plan.md)** — it replaces the
+versions and the library choices below (Spring Boot 4.2.0, springdoc for OpenAPI, Bucket4j for rate limiting).
 
 1. Generate with Spring Initializr: Gradle (Groovy DSL), Java 25, Spring Boot 4.1.x; dependencies: Web, Validation,
    Data JPA, Flyway, PostgreSQL driver, Actuator, Cache, Lombok. Base package: R3.

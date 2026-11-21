@@ -102,6 +102,15 @@ The author sent a screenshot of the «Create app» form (the redirect URI is req
 
 The author created the app (screenshots of its overview: server app, active, two environments, 89 pre-live and 12 production permissions) and asked whether anything there is needed. The agent read the Developer Privacy Policy Packet and the FAQ and recorded what is used and when (`docs/permissions/README.md`): the credentials go into the backend's environment at `P0-07`; the tafsir scope checked before production; Social login, Webhooks, Connected Apps and the SDKs not used; the privacy policy needs a public e-mail and postal address — the author's decision before release.
 
+## 2026-11-21 — the author's eleventh message: design 3 approved; the backend plan
+
+```text
+راجعت الصميم رقم 3 والدنيا تمام
+حالياً لو هانبدأ في مشروع ال backend ايه ال plan وال tools وال libraries اللي شايفها هانستخدمها وال structure اللي هايقوم عليه ال spring boot project - يعني لو هانبدأ فيه دلوقتي هاتعمله ازاي تفصيلياً
+```
+
+Design 3 recorded as approved (P0-11). The agent checked today's versions on Maven Central (Spring Boot 4.2.0 of 2026-11-19 and 4.1.3; the libraries Boot manages; springdoc 3.2.1, ShedLock 7.11.0, Bucket4j 8.22.0, WireMock 3.13.2, ArchUnit 1.5.1), postgresql.org (19.0 new, 18.7) and Docker Hub, and wrote `docs/plan/backend-plan.md` with five decisions for the author (B1 – B5). No code written — the author answers first.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)
@@ -114,5 +123,6 @@ The author created the app (screenshots of its overview: server app, active, two
 - https://sunnah.com/developers · https://github.com/sunnah-com/api
 - https://api-docs.quran.foundation/ · https://api-docs.quran.foundation/docs/connected-apps/ · https://api.quran.com/api/v4/resources/tafsirs
 - https://quranenc.com/api/v1/translations/list · https://quranenc.com/ar/browse/arabic_saadi (and the other Arabic keys)
+- https://repo1.maven.org/maven2/ (metadata of Spring Boot and each library) · https://www.postgresql.org/versions.json · https://services.gradle.org/versions/current
 - https://api-docs.quran.foundation/legal/developer-privacy/ · https://api-docs.quran.foundation/docs/tutorials/faq/ · https://api-docs.quran.foundation/legal/developer-terms/ · https://api-docs.quran.foundation/docs/quickstart/ · https://www.mp3quran.net/api/v3/radios?language=ar (and language=eng)
 - https://quranenc.com/ar/home/contact_us · https://binothaimeen.net/ · https://al-badr.net/contact · https://www.mp3quran.net/ar/contact-us · https://everyayah.com/ · https://binwahaf.com/ · https://apps.apple.com/app/id1439791907 · https://hisn-almuslim.com/

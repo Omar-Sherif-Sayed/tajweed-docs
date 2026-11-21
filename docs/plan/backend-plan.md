@@ -7,6 +7,8 @@ Quran Foundation terms (§7.1).
 
 ## 1. Decisions for the author (the agent's recommendation first)
 
+**✔ All five approved by the author on 2026-11-21** («ok for all, don't forget to document everything, also javadoc on the code everywhere, to be readable in the future»). The scaffold was built the same day; what changed while building it is in §12.
+
 | # | Question | Recommendation | Why |
 | --- | --- | --- | --- |
 | B1 | Spring Boot **4.2.0** (released 2026-11-19) or **4.1.3**? | **4.2.0** | The newest line gets the longest support; a new project starts there. If a library we need does not work with it on scaffold day (springdoc is the one to watch), fall back to 4.1.3 and write why. |
@@ -231,3 +233,13 @@ the author's approval (`AGENTS.md` §1).
 - Flyway 12.11 must list PostgreSQL 18 as supported (it warns otherwise).
 - The machine's certificate store (§1): Maven Central and Gradle's services answered today; Docker Hub must answer
   for `postgres:18` — if any host fails, it is reported, never worked around by disabling certificate checks.
+
+## 12. As built (2026-11-21) — what differs from the plan above
+
+- **Javadoc everywhere** (the author's new rule): Checkstyle 14.4.0 with Javadoc rules only (`config/checkstyle/checkstyle.xml`) and the Javadoc tool with `-Xdoclint:all,-missing -Werror` fail the build on a missing or broken comment; every package has a `package-info.java`.
+- **Added with their first use, not now:** ShedLock (first scheduler), WireMock and the HTTP interface clients (first external API). Nothing unused is in the build.
+- **Database settings:** Spring's standard `SPRING_DATASOURCE_URL / _USERNAME / _PASSWORD` instead of `DB_*`; locally nothing is set — `spring-boot-docker-compose` starts `compose.yaml` and connects.
+- **Mockito's agent** is given to the test JVM up front (`-javaagent`), as JDK 21+ deprecates loading it at run time.
+- **The OpenAPI document stays on in production** (`API_DOCS_ENABLED`, default `true`): it is the public contract.
+- **CI actions** at their latest major tags of the day: checkout v7, setup-java v6, gradle/actions v6, upload-artifact v7.
+- Result: 42 tests (39 unit, 3 integration on PostgreSQL 18); `bootRun` checked; the backend's own `AGENTS.md` holds the versions, structure and conventions with examples.

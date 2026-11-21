@@ -121,7 +121,9 @@ For each project, open the official page, record version + date in that reposito
 Angular Material · Tailwind CSS · Kotlin · Android Gradle Plugin · Compose BOM · Media3 · Xcode / Swift ·
 the Adhan library (Kotlin, Swift, JavaScript editions).
 
-### P0-07 Backend scaffold — `tajweed-backend`
+### P0-07 Backend scaffold — `tajweed-backend` ✔ 2026-11-21
+
+**Done** — as `backend-plan.md` §10 and §12 describe; the code's own documentation is `tajweed-backend/AGENTS.md`.
 
 Follows `AGENTS.md` §9. **The detailed plan (2026-11-21): [`backend-plan.md`](backend-plan.md)** — it replaces the
 versions and the library choices below (Spring Boot 4.2.0, springdoc for OpenAPI, Bucket4j for rate limiting).

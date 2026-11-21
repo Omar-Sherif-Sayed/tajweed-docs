@@ -111,6 +111,14 @@ The author created the app (screenshots of its overview: server app, active, two
 
 Design 3 recorded as approved (P0-11). The agent checked today's versions on Maven Central (Spring Boot 4.2.0 of 2026-11-19 and 4.1.3; the libraries Boot manages; springdoc 3.2.1, ShedLock 7.11.0, Bucket4j 8.22.0, WireMock 3.13.2, ArchUnit 1.5.1), postgresql.org (19.0 new, 18.7) and Docker Hub, and wrote `docs/plan/backend-plan.md` with five decisions for the author (B1 – B5). No code written — the author answers first.
 
+## 2026-11-21 — the author's twelfth message: the backend plan approved; Javadoc everywhere
+
+```text
+ok for all, don't forget to document everything, also javadoc on the code everywhere, to be readable in the feature
+```
+
+B1 – B5 approved. The agent scaffolded `tajweed-backend` (`P0-06` backend part, `P0-07`): Spring Initializr (Boot 4.2.0, Java 25), then the shared layer, `GET /v1/app-info`, 22 message files, the Flyway baseline, `compose.yaml`, `Dockerfile`, CI, and Javadoc on everything — enforced by Checkstyle (Javadoc rules only; a probe class without comments failed the build as it should) and the Javadoc tool. Problems met and fixed: Checkstyle 14 no longer has `JavadocStyle` (replaced by `SummaryJavadoc`) and `MissingJavadocMethod` takes `scope`; the `Vary` header holds several values (test corrected); Mockito's agent loaded at run time (now given up front). Result: 42 tests green (39 unit, 3 integration on PostgreSQL 18), `bootRun` answered in Urdu and French and returned `304` for a repeated request. The latest action versions were read over SSH (`git ls-remote`), because api.github.com fails on this machine's certificate store (§1).
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)

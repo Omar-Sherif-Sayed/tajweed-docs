@@ -243,3 +243,99 @@ the author's approval (`AGENTS.md` §1).
 - **The OpenAPI document stays on in production** (`API_DOCS_ENABLED`, default `true`): it is the public contract.
 - **CI actions** at their latest major tags of the day: checkout v7, setup-java v6, gradle/actions v6, upload-artifact v7.
 - Result: 42 tests (39 unit, 3 integration on PostgreSQL 18); `bootRun` checked; the backend's own `AGENTS.md` holds the versions, structure and conventions with examples.
+
+## 13. The `reciter` module (P1-D4, P1-B3, P1-B6) — proposal of 2026-11-22, waiting for the author
+
+The author: «Yes, reciters next» (2026-11-22). Nothing is built before his answers to the questions at the end.
+
+### 13.1 What the sources hold today (read 2026-11-22)
+
+mp3quran.net API v3 (`/reciters`, `/moshaf`, `/riwayat`, `/ayat_timing/reads`, `/ayat_timing?surah=&read=`) and
+EveryAyah's own list (`everyayah.com/data/recitations.js`). A "moshaf" is one recitation: a reciter, a riwayah, a
+style, a folder of surah files `NNN.mp3` and the list of surahs it holds. mp3quran's timings are given per moshaf
+(`read` = the moshaf id), in milliseconds, one row per ayah plus a row «ayah 0» for what is recited before ayah 1
+(the isti'adha and basmala).
+
+| Reciter (§7.3) | mp3quran moshaf (id · surahs) | mp3quran timings | EveryAyah (one file per ayah) |
+| --- | --- | --- | --- |
+| محمد صديق المنشاوي | مرتل 112 · 114 · مجود 113 · 114 · معلم 114 · 114 · (a 1967 recording 10924 · 110) | **مرتل only** | Murattal 128 · Mujawwad 64 / 192 |
+| محمود خليل الحصري | مرتل 118 · 114 · مجود 119 · 114 · (Warsh 120, al-Duri 269, Qalun 270) | مرتل, مجود (and the three other riwayat) | 64 / 128 · Mujawwad 64 / 128 · **Muallim 128** |
+| عبد الباسط عبد الصمد | مرتل 53 · 114 · مجود 51 · 114 · (Warsh 52) | مرتل, مجود | Murattal 64 / 192 · Mujawwad 128 |
+| محمد محمود الطبلاوي | مرتل 106 · 114 · مجود 10912 · 114 | **مرتل only** | 64 / 128 |
+| ماهر المعيقلي | مرتل 102 · 114 · مجود 133 · 114 · معلم 103 · **38** | **مجود only** | 64 / 128 |
+| ياسر الدوسري | مرتل 92 · 114 | ✔ | 128 |
+| عبد الرحمن السديس | مرتل 54 · 114 | ✔ | 64 / 192 |
+| سعود الشريم | مرتل 31 · 114 | ✔ | 64 / 128 |
+| نورين محمد صديق | الدوري عن أبي عمرو 138 · 114 | — | — |
+| فارس عباد | مرتل 81 · 114 | ✔ | 64 |
+| سعد الغامدي | مرتل 30 · 114 | ✔ | 40 |
+| علي بن عبد الرحمن الحذيفي | حفص 74 · 114 · (Qalun 75, Shu'bah 305) | حفص (and the other two) | 32 / 64 / 128 |
+| أيمن رشدي سويد | معلم 10925 · 114 (on `server15`, not the CDN) | — | 64 |
+
+Two corrections to §7.3 of the parent `AGENTS.md`, from these lists: mp3quran's timings exist for some styles only
+(Minshawi and al-Tablawi: murattal only; al-Muaiqli: mujawwad only); Ayman Suwayd has no timings. An audio file
+answered `200 audio/mpeg` from both hosts (checked on one file each).
+
+### 13.2 Proposed tables (migration 1.3.0, written into `tajweed-backend/docs/database/README.md` first)
+
+| Table | Columns |
+| --- | --- |
+| `reciter` | `pk_id` smallint · `name_ar` · `name_en` (mp3quran's own names) · `mp3quran_id` (unique) · audit |
+| `recitation` | `pk_id` · `reciter_id` → `reciter` · `style` (`MURATTAL` / `MUJAWWAD` / `MUALLIM`) · `riwayah` (`HAFS_AN_ASIM`, `AL_DURI_AN_ABI_AMR`, …) · `listening_only` (true when the riwayah is not Hafs: never shown over the Hafs text, §6.7, R5) · `mp3quran_moshaf_id` (unique) · `surah_count` · audit |
+| `recitation_surah` | `pk_id` · `recitation_id` · `surah_id` → `surah` (unique together) — which surahs a recitation has (al-Muaiqli's muallim: 38) |
+| `audio_source` | `pk_id` · `recitation_id` · `priority` (1, 2, … — the order the players try, F11) · `kind` (`SURAH_FILE` / `AYAH_FILE`) · `provider` (`MP3QURAN` / `EVERYAYAH`) · `url_template` (e.g. `…/r1/{surah:3}.mp3`, `…/{surah:3}{ayah:3}.mp3`) · `bitrate_kbps` · `download_allowed` (F28: false until the source allows it in writing) · `status` (`OK` / `FAILING`) · `last_checked_at` · `consecutive_failures` · audit |
+| `ayah_timing` | `pk_id` · `recitation_id` · `surah_id` · `ayah_number` (0 = before ayah 1) · `start_ms` · `end_ms` (unique: recitation, surah, ayah) — about 6,350 rows per timed recitation |
+| `shedlock` | ShedLock's own table, so that the health check runs once even with two instances |
+
+### 13.3 How the data enters (§8 of this plan)
+
+- The catalogue (reciters, recitations, surah lists, sources) is a **reviewed data file** in `content/mp3quran/`
+  (the two API answers as received, checksummed) plus our own selection file (which moshafs, which EveryAyah folders,
+  in which order) — imported by a Java migration that checks every count (114 surahs where complete, the surah list
+  equal to `surah_total`).
+- The timings: the raw answers of `/ayat_timing` kept as received (about 1.3 MB per recitation; about 17 MB for the
+  thirteen timed Hafs recitations), checksummed; the import checks that every surah has one row per ayah of the Tanzil
+  count (plus ayah 0), that times only increase, and that no gap or overlap exceeds a set limit.
+- **A verification script** (P1-D4) requests every surah file of every recitation once (`HEAD`, about 2,300
+  requests to mp3quran's CDN) and the first and last ayah of every surah on EveryAyah; a recitation with a missing
+  file is not published. The result and the date go into `docs/data-sources/`.
+- Audio is never copied: the apps stream from the sources (§5).
+
+### 13.4 Endpoints and the health check
+
+`GET /v1/reciters` (with their recitations) · `GET /v1/reciters/{id}` · `GET /v1/recitations/{id}` (surahs, sources in
+order with their status) · `GET /v1/recitations/{id}/surahs/{n}/timings`. The health check (ShedLock 7.11.0, checked
+2026-11-21) sends one `HEAD` a day to a sample file of every source and marks it `FAILING` after three failures in a
+row; the clients try the sources in order anyway (F11), so a wrong mark never stops playback.
+
+### 13.5 The author's answers (2026-11-22)
+
+| Question | Answer |
+| --- | --- |
+| Download from mp3quran and keep the files in `tajweed-backend` | **Yes, all of it**: the catalogue, the ayah timings of the 13 timed Hafs recitations, and one check of every surah file. |
+| EveryAyah, which has not answered its letter yet | **Include it now, streaming only** (downloads off, credited); **what depends on their answer continues after it** — downloading (F28) and anything their terms may limit. Recorded in `docs/permissions/README.md`. |
+| The other riwayat of the requested reciters (al-Husary: Warsh, Qalun, al-Duri; Ali al-Hudhaifi: Qalun, Shu'bah; Abdul Basit: Warsh) | **Include them all**, and with every recitation **say clearly which riwayah it is**, Hafs or another. They are listening only (§6.7): the text the application shows is Hafs. |
+| The incomplete Hafs recitations (al-Muaiqli's muallim, 38 surahs; al-Minshawi's 1967 recording, 110 surahs) | **Both**, each showing which surahs it has. |
+
+What follows from the answers: 27 mp3quran recitations of 13 reciters; EveryAyah's Hafs folders of the same reciters
+(its Warsh folder of Abdul Basit is left out — EveryAyah lists it with 47 files missing, and its numbering would not be
+the Hafs one). A riwayah is shown with its full name as mp3quran writes it («ورش عن نافع»), its rawi and its qari taken
+from that name, and «للاستماع فقط — النص المعروض برواية حفص عن عاصم» when it is not Hafs; ☐ a longer description of each
+riwayah only from a named book. Timings are imported for the Hafs recitations only — another riwayah counts the
+ayahs differently, so its timings would not match the Hafs ayah numbers.
+
+### 13.6 As built (2026-11-22)
+
+- **37 recitations**: the 27 mp3quran moshafs of the answers, and 10 EveryAyah folders as their own recitations,
+  labelled «(ملف لكل آية)». Five EveryAyah folders are not separate recitations but **fallbacks** after an mp3quran
+  file, because a measurement showed they are the same recording (the method and the figures:
+  `tajweed-backend/docs/data-sources/README.md`). «Hudhaify» on EveryAyah is left out: its identity cannot be
+  measured, since Ali al-Hudhaifi's mp3quran timings cannot be trusted.
+- **Timings**: 12 of the 13 timed Hafs moshafs, 74,977 rows. Left out with their reasons
+  (`content/reviewed/timing-exclusions.csv`): Ali al-Hudhaifi's whole set (112 of 114 surahs miss their last ayah)
+  and 7 single surahs. The rule: ayahs 1 to the Tanzil count, «ayah 0» optional (only some recitations have it).
+- **Audio check**: 8,926 `HEAD` requests (every mp3quran surah file; the first and last ayah of every surah of 25
+  EveryAyah folders) — all `200 audio/mpeg`. A Python thread pool was used: Git Bash cannot fork that many processes.
+- Changes from §13.2: `recitation.provider` added; the health state is a separate table `audio_source_check` (the
+  content tables stay read-only); `download_allowed` is false everywhere until an owner allows downloads in writing.
+- **Size**: the timing files are 19.9 MB (1,482 files) — more than the 17 MB estimated.

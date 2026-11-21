@@ -131,6 +131,27 @@ Yes, download both
 
 The agent downloaded Tanzil «Simple» and «Simple (Clean)» (version 1.1) from tanzil.net, recorded their SHA-256, and checked them: the same 6,236 ayahs in the same order as the Uthmani text; Tanzil kept the pause marks, ۞ and ۩ although the download options asked for none — the files are kept as received and the search ignores those signs. The rules of the search were fixed and written (§8.1 rule 3) and implemented in one Java function; an independent Python implementation computed ten reference queries (for example «الصبر» 4 ayahs, «الله» 1,842, «مُحَمَّدٌ» with tashkeel 2), and the Java tests give the same. The backend got the table `ayah_search_text` (migrations 1.2.0 / 1.2.1, the same checks as the Quran import) and `GET /v1/quran-search`: words with or without tashkeel (paged, counted by surah, with the words to highlight where the two spellings have the same words), surah names in Arabic and Latin, and references such as `2:255` or «البقرة 255». 75 tests green. Still to do in `P1-D3`: the common spellings of the surah names from a named source.
 
+## 2026-11-22 — the author's fifteenth message: «Yes, reciters next»
+
+```text
+Yes, reciters next
+```
+
+The agent read mp3quran's API (reciters, moshaf, riwayat, timing reads, one timing sample) and EveryAyah's list, wrote
+the proposal (`docs/plan/backend-plan.md` §13) and asked four questions. The author's answers: download everything
+from mp3quran; EveryAyah now, streaming only, «and continue the task after them answers, save that»; the other
+riwayat «Include them all, وكمان مع كل رواية وضح هي ايه سواء حفص او غيرها»; both incomplete recitations.
+
+Built: the `reciter` module (migrations 1.3.0 / 1.3.1, four endpoints, the daily health check). Found and handled:
+mp3quran's timings exist for some styles only (§7.3 corrected); Ali al-Hudhaifi's timings miss the last ayah in 112
+of 114 surahs and were left out whole; 7 other surahs left out with reasons. A measurement decided which EveryAyah
+folders are the same recording as an mp3quran recitation — the last ayah of every surah, file length against
+mp3quran's timing; same recording when 90 % agree within 5 % (controls between different reciters: 15 – 23 %):
+al-Minshawi murattal 99 %, al-Husary murattal 100 / 98 %, Abdul Basit murattal 100 %, al-Tablawi murattal 100 %,
+al-Shuraim 95 / 94 % — attached as fallbacks; al-Husary mujawwad 51 %, Abdul Basit mujawwad 88.5 %, al-Muaiqli 27 %
+(against his mujawwad), Yasser al-Dosari 56 %, al-Sudais 39 – 43 %, Fares Abbad 27 % — their own recitations; «Ghamadi»
+75 % against Saad al-Ghamdi — his own recitation; «Hudhaify» — not measurable, left out. 90 tests green.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)
@@ -144,6 +165,7 @@ The agent downloaded Tanzil «Simple» and «Simple (Clean)» (version 1.1) from
 - https://api-docs.quran.foundation/ · https://api-docs.quran.foundation/docs/connected-apps/ · https://api.quran.com/api/v4/resources/tafsirs
 - https://quranenc.com/api/v1/translations/list · https://quranenc.com/ar/browse/arabic_saadi (and the other Arabic keys)
 - https://tanzil.net/download/ (the Simple and Simple Clean text types, 2026-11-21)
+- https://www.mp3quran.net/api/v3/reciters (ar, eng), /moshaf, /riwayat (ar, eng), /languages, /ayat_timing/reads, /ayat_timing · https://everyayah.com/data/recitations.js · https://everyayah.com/recitations_ayat.html (2026-11-22)
 - https://repo1.maven.org/maven2/ (metadata of Spring Boot and each library) · https://www.postgresql.org/versions.json · https://services.gradle.org/versions/current
 - https://api-docs.quran.foundation/legal/developer-privacy/ · https://api-docs.quran.foundation/docs/tutorials/faq/ · https://api-docs.quran.foundation/legal/developer-terms/ · https://api-docs.quran.foundation/docs/quickstart/ · https://www.mp3quran.net/api/v3/radios?language=ar (and language=eng)
 - https://quranenc.com/ar/home/contact_us · https://binothaimeen.net/ · https://al-badr.net/contact · https://www.mp3quran.net/ar/contact-us · https://everyayah.com/ · https://binwahaf.com/ · https://apps.apple.com/app/id1439791907 · https://hisn-almuslim.com/

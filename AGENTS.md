@@ -1150,7 +1150,7 @@ reviewer). Task ids: `P<phase>-<area><n>`, areas **D** data · **B** backend · 
 | P0-04 | Licences: MIT for code; the licence of these documents; the content notice | ✔ 2026-11-17 — MIT in the four application repositories; CC BY 4.0 for the documents and designs here (`LICENSE`); third-party content keeps its own licence (`README.md`) |
 | P0-05 | Machine: install Android Studio; confirm Docker runs | ✔ 2026-11-17 — Android Studio, SDK and an emulator installed; Docker installed (start it before P0-07) |
 | P0-06 | Re-verify every version on scaffold day and write it down | ◐ backend ✔ 2026-11-21 (`tajweed-backend/AGENTS.md`); web, Android, iPhone on their scaffold days |
-| P0-07 | Scaffold `tajweed-backend` with CI and `GET /v1/app-info` | ✔ 2026-11-21 — 42 tests green, run locally; ☐ the first CI run on GitHub checked |
+| P0-07 | Scaffold `tajweed-backend` with CI and `GET /v1/app-info` | ✔ 2026-11-21 — 42 tests green, run locally; CI green on GitHub (run #2) |
 | P0-08 | Scaffold `tajweed-frontend`: Angular 22, Material, Tailwind, wrappers, language choice, CI | ☐ |
 | P0-09 | Scaffold `tajweed-android`: Kotlin, Compose, both languages, CI | ☐ (needs P0-05) |
 | P0-10 | Scaffold `tajweed-ios`: generated project, SwiftUI, CI on a macOS runner | ☐ |

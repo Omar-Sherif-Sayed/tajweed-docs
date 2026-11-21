@@ -119,6 +119,10 @@ ok for all, don't forget to document everything, also javadoc on the code everyw
 
 B1 – B5 approved. The agent scaffolded `tajweed-backend` (`P0-06` backend part, `P0-07`): Spring Initializr (Boot 4.2.0, Java 25), then the shared layer, `GET /v1/app-info`, 22 message files, the Flyway baseline, `compose.yaml`, `Dockerfile`, CI, and Javadoc on everything — enforced by Checkstyle (Javadoc rules only; a probe class without comments failed the build as it should) and the Javadoc tool. Problems met and fixed: Checkstyle 14 no longer has `JavadocStyle` (replaced by `SummaryJavadoc`) and `MissingJavadocMethod` takes `scope`; the `Vary` header holds several values (test corrected); Mockito's agent loaded at run time (now given up front). Result: 42 tests green (39 unit, 3 integration on PostgreSQL 18), `bootRun` answered in Urdu and French and returned `304` for a repeated request. The latest action versions were read over SSH (`git ls-remote`), because api.github.com fails on this machine's certificate store (§1).
 
+## 2026-11-21 — the author's thirteenth message: «Start doing everything related to the backend project»
+
+The agent read it as a go-ahead for the backend's phase 1 and built the `quran` module: the verified Tanzil files moved from the design assets into `tajweed-backend` (checksums equal), the tables written first in `docs/database/README.md` (the author may still change them — no deployed database has them), a Flyway Java import that checks the SHA-256 of every file and every count before writing, the endpoints, and 57 tests (every stored ayah compared with the file). Found while checking: Tanzil writes the basmala of 95:1 and 97:1 with a shadda («بِّسْمِ») — kept as written, recognised by its letters, noted for `P0-12`; the quarter at 15:49 applied from a reviewed correction file with its evidence. Not done, waiting: the search text needs Tanzil's «Simple» files — downloading them is the author's decision.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)

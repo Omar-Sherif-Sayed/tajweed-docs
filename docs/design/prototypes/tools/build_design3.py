@@ -128,20 +128,23 @@ BOOKS = [   # Arabic title, transliteration, category index, author (a scholar i
 # ---- all sections: every feature by group, the Lives last (the author, 2026-11-21) ----
 # status: d = drawn in design 3, p = inside another screen, t = to come, b = behaviour without a screen
 FEATURE_GROUPS = [
-    ("d3_g_quran", [("f2", "d", "reader-page"), ("f16", "t"), ("f5", "p", "ex-actions"), ("f6", "t"), ("f25", "d", "ex-markers"),
-                    ("f26", "d", "ex-actions"), ("f33", "t"), ("f34", "t")]),
-    ("d3_g_listen", [("f3", "p", "ex-actions"), ("f4", "t"), ("f7", "t"), ("f28", "p", "ex-actions"), ("f11", "b")]),
-    ("d3_g_hifz", [("f30", "t"), ("f31", "t"), ("f32", "t")]),
-    ("d3_g_prayer", [("f8", "d", "times"), ("f9", "t"), ("f10", "t"), ("f27", "d", "ex-hijri"), ("f36", "t"), ("f35", "t"),
-                     ("f37", "t"), ("f46", "t")]),
-    ("d3_g_dhikr", [("f12", "d", "ex-adhkar-list"), ("f24", "d", "ex-misbaha"), ("f23", "d", "ex-duas"), ("f38", "t")]),
-    ("d3_g_know", [("f13", "t"), ("f29", "p", "ex-actions"), ("f14", "d", "d3-books"), ("f39", "d", "ex-names"),
-                   ("f48", "d", "ex-pnames"), ("f49", "t"), ("f50", "t")]),
-    ("d3_g_guides", [("f40", "t"), ("f41", "t"), ("f42", "t")]),
-    ("d3_g_app", [("f1", "d", "lsel"), ("f18", "d", "dirs"), ("f43", "t"), ("f44", "t"), ("f45", "t"), ("f47", "t"),
-                  ("f17", "d", "sources"), ("f19", "d", "why"), ("f15", "t")]),
+    ("d3_g_quran", [("f2", "d", "reader-page"), ("f16", "d", "d3-search"), ("f5", "d", "d3-tafsir"), ("f6", "d", "d3-tajweed"),
+                    ("f25", "d", "ex-markers"), ("f26", "d", "ex-actions"), ("f33", "d", "d3-share"), ("f34", "d", "d3-words")]),
+    ("d3_g_listen", [("f3", "d", "d3-player"), ("f4", "d", "d3-reciters"), ("f7", "d", "d3-radio"), ("f28", "p", "ex-actions"),
+                     ("f11", "b", "d3-player")]),
+    ("d3_g_hifz", [("f30", "d", "d3-hifz"), ("f31", "d", "d3-khatma"), ("f32", "d", "d3-notes")]),
+    ("d3_g_prayer", [("f8", "d", "times"), ("f9", "d", "d3-adhan"), ("f10", "d", "d3-qibla"), ("f27", "d", "ex-hijri"),
+                     ("f36", "d", "d3-night"), ("f35", "d", "d3-days"), ("f37", "d", "d3-tracker"), ("f46", "d", "d3-mosques")]),
+    ("d3_g_dhikr", [("f12", "d", "ex-adhkar-list"), ("f24", "d", "ex-misbaha"), ("f23", "d", "ex-duas"), ("f38", "d", "d3-ruqyah")]),
+    ("d3_g_know", [("f13", "d", "d3-hadith"), ("f29", "d", "d3-virtues"), ("f14", "d", "d3-books"), ("f39", "d", "ex-names"),
+                   ("f48", "d", "ex-pnames"), ("f49", "d", "d3-akhlaq"), ("f50", "d", "d3-akhlaq")]),
+    ("d3_g_guides", [("f40", "d", "d3-guides"), ("f41", "d", "d3-kids"), ("f42", "d", "d3-zakat")]),
+    ("d3_g_app", [("f1", "d", "lsel"), ("f18", "d", "dirs"), ("f43", "d", "d3-devices"), ("f44", "d", "d3-devices"),
+                  ("f45", "d", "d3-devices"), ("f47", "p", "d3-settings"), ("f17", "d", "sources"), ("f19", "d", "why"),
+                  ("f15", "d", "d3-about")]),
     ("d3_g_lives", [("f20", "d", "lv-list"), ("f21", "d", "lv-list"), ("f22", "d", "lv-list"), ("f51", "d", "d3-scholars")]),
 ]
+
 
 # ---- the Sources screen (F17): the state of every source on 2026-11-21 (docs/permissions/README.md) ----
 # s: 1 verified · 2 letter sent, waiting · 3 letter ready, to send · 0 to check
@@ -161,8 +164,8 @@ SOURCES = [
                      ("Radio stations", "u_radio", "—", 0, "—")]),
     ("d3_sg_tafsirs", [("QuranEnc", "u_quranenc", "—", 2, "quranenc.com"),
                        ("Quran Foundation — Content APIs", "u_qf", "Developer terms", 3, "api-docs.quran.foundation")]),
-    ("f13", [("sunnah.com", "u_sunnah", "API key", 3, "sunnah.com/developers"),
-             ("HadeethEnc — موسوعة الأحاديث النبوية", "u_hadeethenc", "—", 3, "hadeethenc.com"),
+    ("f13", [("sunnah.com", "u_sunnah", "API key", 2, "sunnah.com/developers"),
+             ("HadeethEnc — موسوعة الأحاديث النبوية", "u_hadeethenc", "—", 2, "hadeethenc.com"),
              ("الدرر السنية — Dorar", "u_dorar", "API terms", 2, "dorar.net/api-services")]),
     ("d3_sg_adhkar", [("حصن المسلم — Hisn al-Muslim", "u_hisn", "© edition", 2, "hisn-almuslim.com"),
                       ("مؤسسة الشيخ ابن عثيمين — Ibn Uthaymeen Foundation", "u_uthaymeen", "© edition", 2, "binothaimeen.net"),
@@ -269,7 +272,7 @@ JS = r"""window.D3 = (function () {
     var body = ph.querySelector(".body");
     if (body) body.classList.add("d3-home");
     if (!grid.querySelector("[data-d3]")) {
-      [["f39", "i-d3-names", "ex-names"], ["f48", "i-d3-pnames", "ex-pnames"], ["f30", "i-d3-hifz", "d3-all"], ["d3_all", "i-d3-all", "d3-all"]].forEach(function (x) {
+      [["f39", "i-d3-names", "ex-names"], ["f48", "i-d3-pnames", "ex-pnames"], ["f30", "i-d3-hifz", "d3-hifz"], ["d3_all", "i-d3-all", "d3-all"]].forEach(function (x) {
         var t = el("div", "tile"); t.dataset.d3 = x[0]; t.setAttribute("role", "button");
         t.innerHTML = "<svg class='ic'><use href='#" + x[1] + "'/></svg><span></span>";
         t.addEventListener("click", function () { go(x[2]); });

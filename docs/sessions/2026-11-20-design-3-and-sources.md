@@ -83,6 +83,17 @@ drafted; the list of scholars and their books proposed in the answer, for the au
 
 Built in design 3 only, by a new script `tools/build_design3.py` (texts in `i18n/design3/`, 22 languages): the home screen (the Names of Allah, the names of the Prophet ﷺ, memorisation, «كل الأقسام» above the Lives; the Lives last with the scholars); «كل الأقسام» — every feature F1 – F51 marked drawn / inside another screen / to come, which answers «فين design بتاع كل ال features»; the 53 scholars by group or by time; one scholar (Ibn al-Qayyim); the library of 65 books with «الداء والدواء»; the Sources screen with four states. **Ordering by birth year:** the year of birth of several scholars is not recorded (e.g. Ibn Hisham, al-Qurtubi) and differs between sources for others (e.g. Muslim), while the year of death is recorded for all — so «حسب الزمن» orders by death; every year is copied from the biographies before the order is final (`P9-D5`). The table of letters still to send was given in the answer (09 HadeethEnc, 10 sunnah.com, 11 the Quran Foundation; 07 mp3quran optional).
 
+## 2026-11-21 — the author's eighth message: every remaining screen; letters 09 – 11
+
+```text
+* الأقتراحات يمكنك عملها الأن, اوافق عليها كلها, اعملها كلها في تصميم 3
+* 09-hadeethenc.md  - أرسلت الأيميل
+* 10-sunnah-com.md - قمت بإنشاء issue (https://github.com/sunnah-com/api/issues/4480) with status open
+* 11-quran-foundation.md - سجلت بالأيميل الخاص بي <e-mail> حالياً مافيش option غير create app وانا لسه مافيش callback url علشان لسه ماعملتش ال application ولا ال apis (https://dev-console.quran.foundation/projects/new) - لو كريتة أنت فأنا عاوزة بالأسم الكامل (Tajweed - The Noble Quran and Its Sciences)
+```
+
+Drawn in design 3 only: 28 screens in six batches (`tools/build_design3_screens.py`, texts in `i18n/design3-screens/`, 22 languages); «كل الأقسام» now shows 48 of 51 features drawn. Letters recorded (`docs/permissions/`). **The Quran Foundation app:** its quickstart (read 2026-11-21) says a backend app uses the Client Credentials grant — a callback URL belongs to sign-in flows only, so none is needed; the client secret is shown once; new apps start in pre-live (surahs 1 – 2). The agent did not create the app: the secret must stay with the author (later the backend's environment), never in a chat or a repository — the author creates it with the full name and these settings.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)
@@ -95,4 +106,5 @@ Built in design 3 only, by a new script `tools/build_design3.py` (texts in `i18n
 - https://sunnah.com/developers · https://github.com/sunnah-com/api
 - https://api-docs.quran.foundation/ · https://api-docs.quran.foundation/docs/connected-apps/ · https://api.quran.com/api/v4/resources/tafsirs
 - https://quranenc.com/api/v1/translations/list · https://quranenc.com/ar/browse/arabic_saadi (and the other Arabic keys)
+- https://api-docs.quran.foundation/docs/quickstart/ · https://www.mp3quran.net/api/v3/radios?language=ar (and language=eng)
 - https://quranenc.com/ar/home/contact_us · https://binothaimeen.net/ · https://al-badr.net/contact · https://www.mp3quran.net/ar/contact-us · https://everyayah.com/ · https://binwahaf.com/ · https://apps.apple.com/app/id1439791907 · https://hisn-almuslim.com/

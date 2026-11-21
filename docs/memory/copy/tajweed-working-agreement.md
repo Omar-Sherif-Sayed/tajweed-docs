@@ -4,7 +4,7 @@ description: "How Omar wants agents to work on the Tajweed product (plan-ask-cod
 metadata:
   node_type: memory
   type: feedback
-  modified: 2026-11-20T22:11:50.121Z
+  modified: 2026-11-21T00:33:39.576Z
   originSessionId: 4f32e8cc-e0b3-4843-a4c0-dae31d57f095
 ---
 
@@ -75,6 +75,10 @@ new Lives part: the scholars of Islam (F51) and their books in F14 — the list 
 so I told him and ordered by death). Home order he wants: the Names and other sections above «السِّيَر», the Lives
 always last. Design-3-only work goes in `tools/build_design3.py` (texts `i18n/design3/`); it also owns the Sources
 screen (four states: verified / letter sent / letter ready / to check) — update it whenever a source's status changes.
+2026-11-21: he approved and I drew every remaining screen (28, `tools/build_design3_screens.py`, texts
+`i18n/design3-screens/`); 48 of 51 features drawn. Maps and diagrams too: streets only at T-junctions, never a
+four-way crossing (cross rule). When an API secret is involved (e.g. Quran Foundation client secret, shown once), he
+creates the app himself and keeps the secret — I give exact settings, I don't create it or see the secret.
 
 **Why:** it is a religious (Quran) application; a wrong text, reference or time is unacceptable to him.
 

@@ -1,0 +1,822 @@
+[
+ {
+  "id": "g_sample",
+  "en": "Sample — not real data",
+  "ar": "مثال — ليست بيانات حقيقية"
+ },
+ {
+  "id": "g_device",
+  "en": "Saved on your device only",
+  "ar": "محفوظة على جهازك فقط"
+ },
+ {
+  "id": "g_online",
+  "en": "Needs an internet connection",
+  "ar": "يحتاج إلى اتصال بالإنترنت"
+ },
+ {
+  "id": "g_ph",
+  "en": "Copied word for word from its source once it is cleared.",
+  "ar": "يُنقل بنصه من مصدره بعد التحقق منه."
+ },
+ {
+  "id": "g_from",
+  "en": "From: {src}",
+  "ar": "من: {src}"
+ },
+ {
+  "id": "g_noremind",
+  "en": "No reminder — the only notification is the adhan.",
+  "ar": "بلا تذكير — الإشعار الوحيد هو الأذان."
+ },
+ {
+  "id": "g_dorar",
+  "en": "From «الدرر السنية» — the link opens the source page.",
+  "ar": "من «الدرر السنية» — الرابط يفتح صفحة المصدر."
+ },
+ {
+  "id": "g_play",
+  "en": "Play",
+  "ar": "تشغيل"
+ },
+ {
+  "id": "g_reciter",
+  "en": "Reciter",
+  "ar": "القارئ"
+ },
+ {
+  "id": "g_report",
+  "en": "Report a mistake",
+  "ar": "أبلغ عن خطأ"
+ },
+ {
+  "id": "g_next",
+  "en": "Next prayer",
+  "ar": "الصلاة القادمة"
+ },
+ {
+  "id": "pr_fajr",
+  "en": "Fajr",
+  "ar": "الفجر"
+ },
+ {
+  "id": "pr_sunrise",
+  "en": "Sunrise",
+  "ar": "الشروق"
+ },
+ {
+  "id": "pr_dhuhr",
+  "en": "Dhuhr",
+  "ar": "الظهر"
+ },
+ {
+  "id": "pr_asr",
+  "en": "Asr",
+  "ar": "العصر"
+ },
+ {
+  "id": "pr_maghrib",
+  "en": "Maghrib",
+  "ar": "المغرب"
+ },
+ {
+  "id": "pr_isha",
+  "en": "Isha",
+  "ar": "العشاء"
+ },
+ {
+  "id": "t_f3",
+  "en": "Recitation",
+  "ar": "التلاوة"
+ },
+ {
+  "id": "t_f5",
+  "en": "Tafsir",
+  "ar": "التفسير"
+ },
+ {
+  "id": "t_f6",
+  "en": "Tajweed",
+  "ar": "التجويد"
+ },
+ {
+  "id": "t_f7",
+  "en": "Radio",
+  "ar": "الإذاعة"
+ },
+ {
+  "id": "t_f9",
+  "en": "Adhan",
+  "ar": "الأذان"
+ },
+ {
+  "id": "t_f10",
+  "en": "Qibla",
+  "ar": "القبلة"
+ },
+ {
+  "id": "t_f13",
+  "en": "Hadith",
+  "ar": "الأحاديث"
+ },
+ {
+  "id": "t_f15",
+  "en": "About",
+  "ar": "عن التطبيق"
+ },
+ {
+  "id": "t_f16",
+  "en": "Quran search",
+  "ar": "البحث في القرآن"
+ },
+ {
+  "id": "t_f29",
+  "en": "Virtues",
+  "ar": "الفضائل"
+ },
+ {
+  "id": "t_f30",
+  "en": "Memorisation",
+  "ar": "الحفظ"
+ },
+ {
+  "id": "t_f31",
+  "en": "Khatma and daily portion",
+  "ar": "الختمة والورد"
+ },
+ {
+  "id": "t_f32",
+  "en": "My notes",
+  "ar": "ملاحظاتي"
+ },
+ {
+  "id": "t_f33",
+  "en": "Share an ayah",
+  "ar": "مشاركة آية"
+ },
+ {
+  "id": "t_f34",
+  "en": "Word meanings and occasions of revelation",
+  "ar": "معاني الكلمات وأسباب النزول"
+ },
+ {
+  "id": "t_f35",
+  "en": "Blessed days",
+  "ar": "الأيام الفاضلة"
+ },
+ {
+  "id": "t_f36",
+  "en": "The last third of the night",
+  "ar": "الثلث الأخير من الليل"
+ },
+ {
+  "id": "t_f37",
+  "en": "Prayer and fasting tracker",
+  "ar": "متابعة الصلاة والصيام"
+ },
+ {
+  "id": "t_f38",
+  "en": "Ruqyah",
+  "ar": "الرقية الشرعية"
+ },
+ {
+  "id": "t_f40",
+  "en": "Guides: wudu, prayer, Hajj, Umrah",
+  "ar": "أدلة الوضوء والصلاة والحج والعمرة"
+ },
+ {
+  "id": "t_f41",
+  "en": "Kids",
+  "ar": "الأطفال"
+ },
+ {
+  "id": "t_f42",
+  "en": "Zakat calculator",
+  "ar": "حاسبة الزكاة"
+ },
+ {
+  "id": "t_f43",
+  "en": "Home-screen widgets",
+  "ar": "أدوات الشاشة الرئيسية"
+ },
+ {
+  "id": "t_f44",
+  "en": "Watch",
+  "ar": "الساعة الذكية"
+ },
+ {
+  "id": "t_f45",
+  "en": "Car",
+  "ar": "السيارة"
+ },
+ {
+  "id": "t_f46",
+  "en": "Nearby mosques",
+  "ar": "المساجد القريبة"
+ },
+ {
+  "id": "t_f47",
+  "en": "Settings file",
+  "ar": "ملف الإعدادات"
+ },
+ {
+  "id": "t_f49",
+  "en": "Ethics and conduct",
+  "ar": "الأخلاق والسلوك"
+ },
+ {
+  "id": "t_f50",
+  "en": "Islamic manners",
+  "ar": "الآداب الشرعية"
+ },
+ {
+  "id": "t_f1",
+  "en": "Language",
+  "ar": "اللغة"
+ },
+ {
+  "id": "t_f18",
+  "en": "Appearance",
+  "ar": "المظهر"
+ },
+ {
+  "id": "t_f17",
+  "en": "Sources",
+  "ar": "المصادر"
+ },
+ {
+  "id": "t_f19",
+  "en": "Why this design?",
+  "ar": "لماذا هذا التصميم؟"
+ },
+ {
+  "id": "st_font",
+  "en": "Quran font",
+  "ar": "خط المصحف"
+ },
+ {
+  "id": "ab_draft",
+  "en": "Interface translation by the project. Found a mistake? Report it on GitHub.",
+  "ar": "نصوص الواجهة من ترجمة المشروع. وجدت خطأ؟ أبلغ عنه على GitHub."
+ },
+ {
+  "id": "p_choose",
+  "en": "Choose a reciter",
+  "ar": "اختر القارئ"
+ },
+ {
+  "id": "p_complete",
+  "en": "Only complete recitations are shown.",
+  "ar": "تُعرض التلاوات الكاملة فقط."
+ },
+ {
+  "id": "p_murattal",
+  "en": "Murattal",
+  "ar": "مرتّل"
+ },
+ {
+  "id": "p_mujawwad",
+  "en": "Mujawwad",
+  "ar": "مجوّد"
+ },
+ {
+  "id": "p_muallim",
+  "en": "Muallim",
+  "ar": "معلّم"
+ },
+ {
+  "id": "p_surahs",
+  "en": "{n} surahs",
+  "ar": "{n} سورة"
+ },
+ {
+  "id": "p_ayahfiles",
+  "en": "per ayah",
+  "ar": "لكل آية"
+ },
+ {
+  "id": "p_riwayah",
+  "en": "Riwayah of al-Duri from Abu Amr — listening only; the Hafs text is not shown with it.",
+  "ar": "رواية الدوري عن أبي عمرو — للاستماع فقط، ولا يُعرض معها نص حفص."
+ },
+ {
+  "id": "p_now",
+  "en": "Now playing",
+  "ar": "يُتلى الآن"
+ },
+ {
+  "id": "p_m_surah",
+  "en": "One surah",
+  "ar": "سورة واحدة"
+ },
+ {
+  "id": "p_m_range",
+  "en": "A range",
+  "ar": "مقطع من الآيات"
+ },
+ {
+  "id": "p_m_endless",
+  "en": "To the end, then from Al-Fatihah again",
+  "ar": "حتى آخر المصحف ثم من الفاتحة من جديد"
+ },
+ {
+  "id": "p_reconnect",
+  "en": "Reconnecting…",
+  "ar": "جارٍ إعادة الاتصال…"
+ },
+ {
+  "id": "p_reconnect_note",
+  "en": "The connection dropped: the same source is tried again, then the next one, without end — nothing for you to do.",
+  "ar": "انقطع الاتصال: نعيد المحاولة مع المصدر نفسه ثم التالي، بلا توقف — دون أي خطوة منك."
+ },
+ {
+  "id": "s_k_word",
+  "en": "A word, with or without tashkeel",
+  "ar": "كلمة، بالتشكيل أو بدونه"
+ },
+ {
+  "id": "s_k_surah",
+  "en": "A surah's name or number",
+  "ar": "اسم السورة أو رقمها"
+ },
+ {
+  "id": "s_k_ayah",
+  "en": "An ayah's number, e.g. 2:255",
+  "ar": "رقم الآية، مثل ٢:٢٥٥"
+ },
+ {
+  "id": "s_results",
+  "en": "{n} results",
+  "ar": "{n} نتيجة"
+ },
+ {
+  "id": "s_note",
+  "en": "Sample results found by script in the Uthmani text; the app searches a separate verified search text.",
+  "ar": "نتائج مثال وجدها برنامج في النص العثماني؛ والتطبيق يبحث في نص بحث موثّق منفصل."
+ },
+ {
+  "id": "t_all",
+  "en": "All the tafsirs of this ayah",
+  "ar": "كل تفاسير هذه الآية"
+ },
+ {
+  "id": "tj_lessons",
+  "en": "Lessons",
+  "ar": "الدروس"
+ },
+ {
+  "id": "tj_letters",
+  "en": "Its letters",
+  "ar": "حروفه"
+ },
+ {
+  "id": "tj_memory",
+  "en": "The phrase that gathers its letters",
+  "ar": "الكلمة الجامعة لحروفه"
+ },
+ {
+  "id": "tj_examples",
+  "en": "Examples from the Quran, with audio",
+  "ar": "أمثلة من القرآن مع الصوت"
+ },
+ {
+  "id": "tj_review",
+  "en": "The explanation is shown after a qualified teacher signs it.",
+  "ar": "يُعرض الشرح بعد مراجعة معلّم مُجاز."
+ },
+ {
+  "id": "r_live",
+  "en": "Live",
+  "ar": "مباشر"
+ },
+ {
+  "id": "r_hidden",
+  "en": "Not answering — hidden until it is back",
+  "ar": "لا تستجيب — مخفية حتى تعود"
+ },
+ {
+  "id": "r_list",
+  "en": "Only streams that the broadcaster itself publishes.",
+  "ar": "البث الذي تنشره الإذاعة بنفسها فقط."
+ },
+ {
+  "id": "a_full",
+  "en": "Full adhan",
+  "ar": "الأذان كاملًا"
+ },
+ {
+  "id": "a_short",
+  "en": "Short adhan",
+  "ar": "أذان قصير"
+ },
+ {
+  "id": "a_none",
+  "en": "No adhan",
+  "ar": "بلا أذان"
+ },
+ {
+  "id": "a_muezzin",
+  "en": "Muezzin",
+  "ar": "المؤذن"
+ },
+ {
+  "id": "a_no_rec",
+  "en": "No muezzin yet: each one is added after its recording and its permission are checked.",
+  "ar": "لا مؤذن بعد: يُضاف كل مؤذن بعد التحقق من تسجيله وإذنه."
+ },
+ {
+  "id": "a_ios",
+  "en": "iPhone: a short adhan (under 30 seconds) while the app is closed; the full adhan when you open it.",
+  "ar": "آيفون: أذان قصير (أقل من ٣٠ ثانية) والتطبيق مغلق، والأذان كاملًا عند فتحه."
+ },
+ {
+  "id": "a_web",
+  "en": "Web: only while the page is open.",
+  "ar": "الويب: والصفحة مفتوحة فقط."
+ },
+ {
+  "id": "q_deg",
+  "en": "{d}° from north",
+  "ar": "{d}° من الشمال"
+ },
+ {
+  "id": "q_calib",
+  "en": "Move the phone slowly in a figure-of-eight to calibrate the compass.",
+  "ar": "حرّك الهاتف ببطء على شكل الرقم ٨ لمعايرة البوصلة."
+ },
+ {
+  "id": "q_web",
+  "en": "On a computer there is no compass: the direction is shown in degrees.",
+  "ar": "لا بوصلة في الحاسوب: يُعرض الاتجاه بالدرجات."
+ },
+ {
+  "id": "q_calc",
+  "en": "Calculated on your device, from your location to the Kaaba.",
+  "ar": "يُحسب على جهازك، من موقعك إلى الكعبة."
+ },
+ {
+  "id": "n_from",
+  "en": "From Maghrib ({a}) to Fajr ({b})",
+  "ar": "من المغرب ({a}) إلى الفجر ({b})"
+ },
+ {
+  "id": "n_starts",
+  "en": "The last third begins at",
+  "ar": "يبدأ الثلث الأخير الساعة"
+ },
+ {
+  "id": "n_hadith",
+  "en": "The hadith of the descent — copied from its source, with its reference.",
+  "ar": "حديث النزول — يُنقل من مصدره مع تخريجه."
+ },
+ {
+  "id": "dy_ramadan",
+  "en": "Ramadan",
+  "ar": "رمضان"
+ },
+ {
+  "id": "dy_fitr",
+  "en": "Eid al-Fitr",
+  "ar": "عيد الفطر"
+ },
+ {
+  "id": "dy_adha",
+  "en": "Eid al-Adha",
+  "ar": "عيد الأضحى"
+ },
+ {
+  "id": "dy_arafah",
+  "en": "The day of Arafah",
+  "ar": "يوم عرفة"
+ },
+ {
+  "id": "dy_ashura",
+  "en": "Ashura",
+  "ar": "عاشوراء"
+ },
+ {
+  "id": "dy_white",
+  "en": "The white days",
+  "ar": "الأيام البيض"
+ },
+ {
+  "id": "dy_monthu",
+  "en": "Mondays and Thursdays",
+  "ar": "الاثنين والخميس"
+ },
+ {
+  "id": "dy_every",
+  "en": "Every week",
+  "ar": "كل أسبوع"
+ },
+ {
+  "id": "dy_month",
+  "en": "13 – 15 of every Hijri month",
+  "ar": "١٣ – ١٥ من كل شهر هجري"
+ },
+ {
+  "id": "dy_hadith",
+  "en": "Its authentic hadith with its grade — copied from the source.",
+  "ar": "حديثه الصحيح بدرجته — يُنقل من المصدر."
+ },
+ {
+  "id": "tr_fast",
+  "en": "Fasting",
+  "ar": "الصيام"
+ },
+ {
+  "id": "m_loc",
+  "en": "Your location stays on your device.",
+  "ar": "يبقى موقعك على جهازك."
+ },
+ {
+  "id": "m_name",
+  "en": "A mosque from the map",
+  "ar": "مسجد من الخريطة"
+ },
+ {
+  "id": "h_rulings",
+  "en": "Every scholar's ruling — who said it, and where",
+  "ar": "حكم كل عالم — من قاله وأين"
+ },
+ {
+  "id": "h_ruling_ph",
+  "en": "the ruling · the scholar · the book",
+  "ar": "الحكم · العالم · الكتاب"
+ },
+ {
+  "id": "h_offline",
+  "en": "Offline: the rulings printed in the edition we ship.",
+  "ar": "دون إنترنت: الأحكام المطبوعة في الطبعة التي نضمّنها."
+ },
+ {
+  "id": "h_explain",
+  "en": "Explanation",
+  "ar": "الشرح"
+ },
+ {
+  "id": "h_text",
+  "en": "The hadith",
+  "ar": "نص الحديث"
+ },
+ {
+  "id": "v_only",
+  "en": "Only authentic hadiths, with collection, number and grade; weak and fabricated narrations are left out.",
+  "ar": "الأحاديث الصحيحة فقط، بمصدرها ورقمها ودرجتها؛ ويُترك الضعيف والموضوع."
+ },
+ {
+  "id": "v_prayer",
+  "en": "Prayer",
+  "ar": "الصلاة"
+ },
+ {
+  "id": "v_surahs",
+  "en": "Surahs",
+  "ar": "السور"
+ },
+ {
+  "id": "v_ayahs",
+  "en": "Ayahs",
+  "ar": "الآيات"
+ },
+ {
+  "id": "v_other",
+  "en": "Other subjects",
+  "ar": "موضوعات أخرى"
+ },
+ {
+  "id": "br_chapters",
+  "en": "Chapters",
+  "ar": "الأبواب"
+ },
+ {
+  "id": "br_page",
+  "en": "Volume {v} · page {p}",
+  "ar": "الجزء {v} · الصفحة {p}"
+ },
+ {
+  "id": "ak_topic",
+  "en": "A subject — its title and text as the encyclopedia publishes them",
+  "ar": "موضوع — عنوانه ونصه كما تنشره الموسوعة"
+ },
+ {
+  "id": "w_meanings",
+  "en": "Word meanings",
+  "ar": "معاني الكلمات"
+ },
+ {
+  "id": "w_asbab",
+  "en": "Occasion of revelation",
+  "ar": "سبب النزول"
+ },
+ {
+  "id": "hf_hide",
+  "en": "Hide words to test yourself",
+  "ar": "أخفِ كلمات لتختبر نفسك"
+ },
+ {
+  "id": "hf_review",
+  "en": "Review schedule",
+  "ar": "جدول المراجعة"
+ },
+ {
+  "id": "hf_progress",
+  "en": "Memorised: {n} of {m} ayahs",
+  "ar": "حُفظ {n} من {m} آية"
+ },
+ {
+  "id": "hf_days",
+  "en": "Today · after 1 day · after 3 days · after 7 days",
+  "ar": "اليوم · بعد يوم · بعد ٣ أيام · بعد ٧ أيام"
+ },
+ {
+  "id": "k_days",
+  "en": "Finish in {n} days",
+  "ar": "الختم في {n} يومًا"
+ },
+ {
+  "id": "k_today",
+  "en": "Today's portion",
+  "ar": "ورد اليوم"
+ },
+ {
+  "id": "k_pages",
+  "en": "Pages {a} – {b}",
+  "ar": "الصفحات {a} – {b}"
+ },
+ {
+  "id": "k_progress",
+  "en": "{p}% read",
+  "ar": "قُرئ {p}٪"
+ },
+ {
+  "id": "nt_add",
+  "en": "Add a note",
+  "ar": "أضف ملاحظة"
+ },
+ {
+  "id": "sh_image",
+  "en": "As an image",
+  "ar": "صورة"
+ },
+ {
+  "id": "sh_text",
+  "en": "As text",
+  "ar": "نص"
+ },
+ {
+  "id": "sh_font",
+  "en": "Images wait for the font's permission (King Fahd Complex); text can be shared.",
+  "ar": "الصورة تنتظر إذن الخط (مجمع الملك فهد)؛ والنص يمكن مشاركته."
+ },
+ {
+  "id": "gd_wudu",
+  "en": "Wudu",
+  "ar": "الوضوء"
+ },
+ {
+  "id": "gd_hajj",
+  "en": "Hajj",
+  "ar": "الحج"
+ },
+ {
+  "id": "gd_umrah",
+  "en": "Umrah",
+  "ar": "العمرة"
+ },
+ {
+  "id": "gd_steps",
+  "en": "Steps",
+  "ar": "الخطوات"
+ },
+ {
+  "id": "gd_rule",
+  "en": "As a named book states them — diagrams only, no pictures of people.",
+  "ar": "كما يذكرها كتاب مسمّى — رسوم توضيحية فقط، بلا صور أشخاص."
+ },
+ {
+  "id": "gd_nusuk",
+  "en": "Bookings for Hajj, Umrah and the Rawdah are made in the Nusuk app.",
+  "ar": "حجوزات الحج والعمرة والروضة في تطبيق «نسك»."
+ },
+ {
+  "id": "kd_surahs",
+  "en": "Short surahs",
+  "ar": "قصار السور"
+ },
+ {
+  "id": "kd_letters",
+  "en": "The Arabic letters",
+  "ar": "الحروف العربية"
+ },
+ {
+  "id": "kd_repeat",
+  "en": "Listen and repeat after the reciter",
+  "ar": "استمع وردّد خلف القارئ"
+ },
+ {
+  "id": "z_cash",
+  "en": "Cash and savings",
+  "ar": "النقود والمدخرات"
+ },
+ {
+  "id": "z_gold",
+  "en": "Gold (grams)",
+  "ar": "الذهب (جرام)"
+ },
+ {
+  "id": "z_silver",
+  "en": "Silver (grams)",
+  "ar": "الفضة (جرام)"
+ },
+ {
+  "id": "z_trade",
+  "en": "Trade goods",
+  "ar": "عروض التجارة"
+ },
+ {
+  "id": "z_rules",
+  "en": "The nisab and the rules come from a named fatwa body — shown after they are chosen and checked.",
+  "ar": "النصاب والأحكام من جهة فتوى مسمّاة — تُعرض بعد اختيارها والتحقق منها."
+ },
+ {
+  "id": "z_noinh",
+  "en": "No inheritance calculator: inheritance needs a scholar.",
+  "ar": "لا حاسبة للمواريث: المواريث تحتاج إلى عالم."
+ },
+ {
+  "id": "z_due",
+  "en": "Zakat due",
+  "ar": "الزكاة الواجبة"
+ },
+ {
+  "id": "rq_src",
+  "en": "The ayahs from the Quran text we ship and the authentic duas, in the order of a named book.",
+  "ar": "الآيات من نص القرآن الذي نضمّنه، والأدعية الصحيحة، بترتيب كتاب مسمّى."
+ },
+ {
+  "id": "st_title",
+  "en": "Settings",
+  "ar": "الإعدادات"
+ },
+ {
+  "id": "st_method",
+  "en": "Prayer-time method",
+  "ar": "طريقة حساب المواقيت"
+ },
+ {
+  "id": "st_asr",
+  "en": "Asr time",
+  "ar": "وقت العصر"
+ },
+ {
+  "id": "st_hijri",
+  "en": "Hijri date adjustment",
+  "ar": "تعديل التاريخ الهجري"
+ },
+ {
+  "id": "st_export",
+  "en": "Save to a file",
+  "ar": "حفظ في ملف"
+ },
+ {
+  "id": "st_import",
+  "en": "Load from a file",
+  "ar": "تحميل من ملف"
+ },
+ {
+  "id": "st_file_note",
+  "en": "Settings, markers, notes and progress — there are no accounts.",
+  "ar": "الإعدادات والفواصل والملاحظات والتقدّم — لا توجد حسابات."
+ },
+ {
+  "id": "ab_by",
+  "en": "Made by",
+  "ar": "إعداد"
+ },
+ {
+  "id": "ab_free",
+  "en": "Free · no ads · no accounts · no tracking",
+  "ar": "مجاني · بلا إعلانات · بلا حسابات · بلا تتبّع"
+ },
+ {
+  "id": "ab_privacy",
+  "en": "Privacy: your location and everything you save stay on your device.",
+  "ar": "الخصوصية: موقعك وكل ما تحفظه يبقى على جهازك."
+ },
+ {
+  "id": "ab_version",
+  "en": "Version {v}",
+  "ar": "الإصدار {v}"
+ },
+ {
+  "id": "dv_ayah",
+  "en": "Ayah of the day",
+  "ar": "آية اليوم"
+ },
+ {
+  "id": "dv_nonotif",
+  "en": "A widget is not a notification.",
+  "ar": "الأداة ليست إشعارًا."
+ }
+]

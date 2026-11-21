@@ -2224,3 +2224,94 @@ All 22 languages render with no errors. One last visual check of the Sources scr
 Every screen checks out. Now running the whole build chain to confirm it rebuilds cleanly and leaves designs 1 and 2 untouched.
 
 Docs next: AGENTS.md, the plan, the design README, the meanings document and the session record.
+
+Docs are updated. Now the conversation copy, the memory, then commit and push.
+
+Now the memory file, then the sync, commit and push.
+
+I built everything in design 3 only, and checked it in all 22 languages, day and night, with no errors. Designs 1 and 2 are unchanged. It is all pushed to GitHub (commit `fc9a278`).
+
+#### ١. الصفحة الرئيسية
+
+- أضفت أربعة أزرار فوق «السِّيَر» بجانب الإذاعة والباقي: أسماء الله الحسنى، أسماء النبي ﷺ، الحفظ، كل الأقسام. أصبحت الأزرار ١٦ زرًا، وتتسع لها الشاشة.
+- «السِّيَر» آخر شيء كما طلبت، وصار فيها ٤ أجزاء: الأنبياء، الصحابة، الخلفاء، **العلماء**.
+
+#### ٢. أين تصميم كل الأقسام؟ — شاشة «كل الأقسام»
+
+شاشة جديدة فيها الأقسام الـ٥١ كلها في مجموعات، والسِّيَر آخرها. بجانب كل قسم علامة:
+- **✔ مرسومة**: الضغط عليها ينقلك إلى شاشتها في التصميم.
+- **◐ داخل شاشة أخرى**: مثل التفسير والتحميل، وهما داخل شاشة «أوامر الآية».
+- **☐ لم تُرسم بعد**.
+
+فتستطيع أن ترى بنفسك ما تبقّى من الشاشات.
+
+#### ٣. العلماء والكتب
+
+- **العلماء:** القائمة التي وافقت عليها، ٥٣ عالمًا، مع زر للتبديل بين «حسب المجموعة» و«حسب الزمن».
+- **حسب الزمن مرتّب بسنة الوفاة، لا بسنة المولد:** سنة المولد غير مذكورة لبعضهم، مثل ابن هشام والقرطبي، ومختلَف فيها عند آخرين، مثل الإمام مسلم. أما سنة الوفاة فمذكورة لهم جميعًا. والترتيب الحالي مبدئي، ويُثبَّت بعد نقل كل سنة من كتب التراجم.
+- **صفحة عالم (مثال: ابن القيم رحمه الله):**
+  - سيرته ستُنقل بنصها من «الدرر الكامنة» و«ذيل طبقات الحنابلة»، ولم أكتب أي تاريخ أو سيرة من عندي؛
+  - وتحتها كتبه، وكل كتاب يفتح المكتبة.
+- **المكتبة:** ٦٥ كتابًا حسب الموضوع، منها «الداء والدواء (الجواب الكافي)»، ومدارج السالكين، والوابل الصيب، والفوائد، وحادي الأرواح، وغيرها.
+
+#### ٤. صفحة المصادر
+
+صار لكل مصدر واحدة من أربع حالات، وعددها الآن ٢٥ مصدرًا:
+
+| الحالة | العدد | المصادر |
+| --- | --- | --- |
+| ✔ تم التحقق | ١١ | تنزيل، DigitalKhatt، الخطوط، mp3quran، مكتبة الأذان |
+| ✉ أُرسلت الرسالة، بانتظار الرد | ٧ | مجمع الملك فهد، QuranEnc، EveryAyah، الدرر، حصن المسلم، مؤسسة ابن عثيمين، الشيخ البدر |
+| ✎ الرسالة جاهزة، لم تُرسل | ٣ | sunnah.com، HadeethEnc، Quran Foundation |
+| ⏳ لم يُتحقق منه بعد | ٤ | طبعات الكتب، تسجيلات الأذان، الإذاعات، خريطة OpenStreetMap |
+
+#### ٥. ما الذي ترسله، ولمن بالضبط
+
+كل الملفات في `docs/permissions/letters/`:
+
+| الملف | إلى من | كيف ترسله |
+| --- | --- | --- |
+| `09-hadeethenc.md` | موسوعة الأحاديث النبوية HadeethEnc | بريد إلى **<e-mail>**، والعنوان والنص من الملف |
+| `10-sunnah-com.md` | sunnah.com | افتح https://github.com/sunnah-com/api/issues/new?template=request-for-api-access.md والصق النص. ⚠ الطلب يظهر للعامة، فلا تكتب فيه رقم هاتفك ولا بريدك الخاص |
+| `11-quran-foundation.md` | Quran Foundation (Quran.com) | سجّل التطبيق في https://dev-console.quran.foundation/projects/new على أنه **server app**. البريد إلى **<e-mail>** فقط إن بقي عندك سؤال |
+| `07-mp3quran.md` (اختياري) | mp3quran | نموذج موقعهم لا يعمل. البديل رسالة على x.com/mp3quran أو facebook.com/MP3Quran. وشروطهم تسمح بالاستخدام أصلًا |
+
+رسائل الكتب والسِّيَر تُكتب بعد اختيار طبعة كل كتاب.
+
+#### ما تبقّى من الشاشات
+
+اقترحت رسمها على ست دفعات:
+
+| # | الدفعة | الشاشات |
+| --- | --- | --- |
+| ١ | القرآن والاستماع | اختيار القارئ والمشغّل، البحث، التفسير، درس التجويد، الإذاعة |
+| ٢ | الصلاة | إعدادات الأذان، القبلة، الثلث الأخير، الأيام الفاضلة، المتابعة، المساجد |
+| ٣ | العلم | الأحاديث مع أحكام كل العلماء، الفضائل، قارئ الكتب، الأخلاق والآداب، معاني الكلمات |
+| ٤ | الحفظ | الحفظ، الختمة، الملاحظات، المشاركة |
+| ٥ | الأدلة | الوضوء والصلاة والحج والعمرة، الأطفال، الزكاة، الرقية |
+| ٦ | التطبيق | الإعدادات، عن التطبيق، ملف الإعدادات، أدوات الشاشة الرئيسية، الساعة، السيارة |
+
+## The author — 2026-11-21 00:15
+
+```text
+* الأقتراحات يمكنك عملها الأن, اوافق عليها كلها, اعملها كلها في تصميم 3 
+* 09-hadeethenc.md  - أرسلت الأيميل
+* 10-sunnah-com.md - قمت بإنشاء issue (https://github.com/sunnah-com/api/issues/4480) with status open
+* 11-quran-foundation.md - سجلت بالأيميل الخاص بي <e-mail> حالياً مافيش option غير create app وانا لسه مافيش callback url علشان لسه ماعملتش ال application ولا ال apis (https://dev-console.quran.foundation/projects/new) - لو كريتة أنت فأنا عاوزة بالأسم الكامل (Tajweed - The Noble Quran and Its Sciences)
+```
+
+## The agent — 2026-11-21 00:18
+
+Statuses recorded. Now gathering the real data some screens need: the radio list from mp3quran, the title of the word-meanings book on QuranEnc, and the sample prayer times.
+
+Data gathered (mp3quran's radio list read live, and the sample prayer times from the page). Writing the texts for about 120 new interface strings in the 20 other languages. This is the longest step.
+
+Texts are checked in all 22 languages. Now writing the build script with 28 screens.
+
+The bearing text is in the correct right-to-left order (measured on the page). Checking the remaining screens.
+
+The map's straight streets crossed each other in four-way crossings, which look like plus signs. I'm redrawing them as T-junctions and a curved road, since the rule is no cross shape anywhere.
+
+All the screens show correctly in Arabic and English, and in Urdu at night. Now the full rebuild, then the docs, memory, commit and push.
+
+Docs updated. Now the memory note, the conversation copy, then commit and push.

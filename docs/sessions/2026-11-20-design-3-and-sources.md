@@ -98,6 +98,10 @@ Drawn in design 3 only: 28 screens in six batches (`tools/build_design3_screens.
 
 The author sent a screenshot of the «Create app» form (the redirect URI is required) and the link to the Developer Terms. The agent read the terms (summary in `docs/permissions/README.md` and `AGENTS.md` §7.1, §5) and advised: redirect URI `http://localhost:8080/callback` (unused by a backend app, changeable later), «without a Client Secret» unchecked. New rule from the terms: Quran Foundation content in a public repository is redistribution — it is fetched at run time through Content Sync, never committed.
 
+## 2026-11-21 — the author's tenth message: the Quran Foundation app created
+
+The author created the app (screenshots of its overview: server app, active, two environments, 89 pre-live and 12 production permissions) and asked whether anything there is needed. The agent read the Developer Privacy Policy Packet and the FAQ and recorded what is used and when (`docs/permissions/README.md`): the credentials go into the backend's environment at `P0-07`; the tafsir scope checked before production; Social login, Webhooks, Connected Apps and the SDKs not used; the privacy policy needs a public e-mail and postal address — the author's decision before release.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)
@@ -110,5 +114,5 @@ The author sent a screenshot of the «Create app» form (the redirect URI is req
 - https://sunnah.com/developers · https://github.com/sunnah-com/api
 - https://api-docs.quran.foundation/ · https://api-docs.quran.foundation/docs/connected-apps/ · https://api.quran.com/api/v4/resources/tafsirs
 - https://quranenc.com/api/v1/translations/list · https://quranenc.com/ar/browse/arabic_saadi (and the other Arabic keys)
-- https://api-docs.quran.foundation/legal/developer-terms/ · https://api-docs.quran.foundation/docs/quickstart/ · https://www.mp3quran.net/api/v3/radios?language=ar (and language=eng)
+- https://api-docs.quran.foundation/legal/developer-privacy/ · https://api-docs.quran.foundation/docs/tutorials/faq/ · https://api-docs.quran.foundation/legal/developer-terms/ · https://api-docs.quran.foundation/docs/quickstart/ · https://www.mp3quran.net/api/v3/radios?language=ar (and language=eng)
 - https://quranenc.com/ar/home/contact_us · https://binothaimeen.net/ · https://al-badr.net/contact · https://www.mp3quran.net/ar/contact-us · https://everyayah.com/ · https://binwahaf.com/ · https://apps.apple.com/app/id1439791907 · https://hisn-almuslim.com/

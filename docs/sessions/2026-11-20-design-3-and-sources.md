@@ -123,6 +123,14 @@ B1 – B5 approved. The agent scaffolded `tajweed-backend` (`P0-06` backend part
 
 The agent read it as a go-ahead for the backend's phase 1 and built the `quran` module: the verified Tanzil files moved from the design assets into `tajweed-backend` (checksums equal), the tables written first in `docs/database/README.md` (the author may still change them — no deployed database has them), a Flyway Java import that checks the SHA-256 of every file and every count before writing, the endpoints, and 57 tests (every stored ayah compared with the file). Found while checking: Tanzil writes the basmala of 95:1 and 97:1 with a shadda («بِّسْمِ») — kept as written, recognised by its letters, noted for `P0-12`; the quarter at 15:49 applied from a reviewed correction file with its evidence. Not done, waiting: the search text needs Tanzil's «Simple» files — downloading them is the author's decision.
 
+## 2026-11-21 — the author's fourteenth message: «Yes, download both»
+
+```text
+Yes, download both
+```
+
+The agent downloaded Tanzil «Simple» and «Simple (Clean)» (version 1.1) from tanzil.net, recorded their SHA-256, and checked them: the same 6,236 ayahs in the same order as the Uthmani text; Tanzil kept the pause marks, ۞ and ۩ although the download options asked for none — the files are kept as received and the search ignores those signs. The rules of the search were fixed and written (§8.1 rule 3) and implemented in one Java function; an independent Python implementation computed ten reference queries (for example «الصبر» 4 ayahs, «الله» 1,842, «مُحَمَّدٌ» with tashkeel 2), and the Java tests give the same. The backend got the table `ayah_search_text` (migrations 1.2.0 / 1.2.1, the same checks as the Quran import) and `GET /v1/quran-search`: words with or without tashkeel (paged, counted by surah, with the words to highlight where the two spellings have the same words), surah names in Arabic and Latin, and references such as `2:255` or «البقرة 255». 75 tests green. Still to do in `P1-D3`: the common spellings of the surah names from a named source.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)
@@ -135,6 +143,7 @@ The agent read it as a go-ahead for the backend's phase 1 and built the `quran` 
 - https://sunnah.com/developers · https://github.com/sunnah-com/api
 - https://api-docs.quran.foundation/ · https://api-docs.quran.foundation/docs/connected-apps/ · https://api.quran.com/api/v4/resources/tafsirs
 - https://quranenc.com/api/v1/translations/list · https://quranenc.com/ar/browse/arabic_saadi (and the other Arabic keys)
+- https://tanzil.net/download/ (the Simple and Simple Clean text types, 2026-11-21)
 - https://repo1.maven.org/maven2/ (metadata of Spring Boot and each library) · https://www.postgresql.org/versions.json · https://services.gradle.org/versions/current
 - https://api-docs.quran.foundation/legal/developer-privacy/ · https://api-docs.quran.foundation/docs/tutorials/faq/ · https://api-docs.quran.foundation/legal/developer-terms/ · https://api-docs.quran.foundation/docs/quickstart/ · https://www.mp3quran.net/api/v3/radios?language=ar (and language=eng)
 - https://quranenc.com/ar/home/contact_us · https://binothaimeen.net/ · https://al-badr.net/contact · https://www.mp3quran.net/ar/contact-us · https://everyayah.com/ · https://binwahaf.com/ · https://apps.apple.com/app/id1439791907 · https://hisn-almuslim.com/

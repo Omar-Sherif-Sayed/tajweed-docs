@@ -339,3 +339,90 @@ ayahs differently, so its timings would not match the Hafs ayah numbers.
 - Changes from §13.2: `recitation.provider` added; the health state is a separate table `audio_source_check` (the
   content tables stay read-only); `download_allowed` is false everywhere until an owner allows downloads in writing.
 - **Size**: the timing files are 19.9 MB (1,482 files) — more than the 17 MB estimated.
+
+## 14. Radio, HadeethEnc hadiths, Quran Foundation tafsirs, «Hudhaify» — proposal of 2026-11-22, waiting for the author
+
+The author (2026-11-22): «أقسام ينفع نبنيها دلوقتي -> أبدأ فيها», «قسم ينفع نبدأه دلوقتي بس محتاج منك حاجة -> اعمله»,
+and «القارئ الشيخ علي الحذيفي» — EveryAyah's «Hudhaify» is Sheikh Ali al-Hudhaifi.
+
+### 14.1 What the sources hold (read 2026-11-22)
+
+- **mp3quran `radios`**: 177 channels, 176 on mp3quran's own server (`backup.qurango.net/radio/…`) and one national
+  station, «إذاعة القرآن الكريم - السعودية» (`stream.radiojar.com`). About 122 are one reciter each (some name the
+  riwayah, e.g. `ali_alhuthaifi_qalon`); 7 are recitations of several reciters (`mix`, `albaqarah`, `sakeenah`,
+  `tarateel`, `Surah_Al-Mulk`, `salma`, `ayyoub2`); the rest are **programmes** — fatwas, tafsir, seerah, the
+  Companions, ruqyah, adhkar, Sahih al-Bukhari / Muslim, Riyad al-Salihin, the Eid takbirat, and 24 «translations of
+  the meanings» in 17 languages, several without the translator's name.
+- **HadeethEnc API** (`hadeethenc.com/api/v1`, no key): 7 root categories, 493 categories, about 4,000 hadiths
+  (`categories/list`, `hadeeths/list?category_id&page&per_page`, `hadeeths/one?id&language`). A hadith in a language
+  has `title`, `hadeeth`, `hadeeth_intro`, `attribution`, `grade`, `explanation`, `hints[]`, `words_meanings[]`,
+  `reference` (volume / page / number), `categories[]`, and — in a translation — the Arabic fields beside it
+  (`hadeeth_ar`, `grade_ar` …). 72 languages; **21 of our 22** (Korean is missing: the Arabic is shown with a note).
+- **Quran Foundation** (docs read 2026-11-22): OAuth2 client credentials (`prelive-oauth2.quran.foundation` /
+  `oauth2.quran.foundation`, HTTP Basic, scopes `content.tafsirs.read content.sync.read`, token 3,600 s); every call
+  sends `x-auth-token` and `x-client-id`; Content API `apis-prelive.quran.foundation/content/api/v4` (pre-live: surahs
+  1 – 2 only) / `apis.quran.foundation/content/api/v4`. **Their rule: «Content Sync is the only permitted path for
+  obtaining and maintaining an offline copy … perform a next sync at least every 7 days»** — `GET /resources/sync`
+  (bootstrap, then `sync_token`), `GET /resources/snapshots/tafsirs/{id}` for a full copy. Arabic tafsirs there: Ibn
+  Kathir (14), al-Tabari (15), al-Qurtubi (90), al-Sa'di (91), al-Baghawi (94), al-Muyassar (16), al-Wasit of Tantawi
+  (93); translations: English Ibn Kathir abridged (169), Russian al-Sa'di (170), Bengali and Urdu works.
+
+### 14.2 Proposed tables (written into `tajweed-backend/docs/database/README.md` before the code)
+
+| Migration | Table | Columns |
+| --- | --- | --- |
+| 1.3.2 | (rows only) | recitation 38 — Ali al-Hudhaifi, Hafs, EveryAyah folders `Hudhaify_128kbps`, `_64kbps`, `_32kbps`, its own recitation (not a fallback — the recording cannot be measured); evidence: the author's identification of 2026-11-22. Its files were already checked (`audio-check.csv`). |
+| 1.4.0 | `radio_station` | `pk_id`, `provider` (MP3QURAN), `provider_key` (mp3quran id), `kind` (RECITER, RECITERS, NATIONAL), `reciter_id` → `reciter` (null when not one of ours), `riwayah_id` → `riwayah` (only when the channel names it), `name_ar`, `name_en`, `country_code` (national only), `broadcaster_url`, `sort_order`, audit |
+| | `radio_stream` | `pk_id`, `station_id`, `url`, `priority`, audit — several per station when the broadcaster publishes alternatives |
+| | `radio_stream_check` | `stream_id`, `status` (OK, FAILING), `last_checked_at`, `last_ok_at`, `consecutive_failures` — run-time state, apart from the content (as `audio_source_check`) |
+| 1.4.1 | (rows) | imported from the downloaded `radios` files (Arabic and English), SHA-256 checked, with a reviewed list of the channels kept (`content/reviewed/radios.csv`) |
+| 1.5.0 | `hadeethenc_category` | `pk_id` (their id), `parent_id`, audit |
+| | `hadeethenc_category_title` | `category_id`, `language`, `title` |
+| | `hadeethenc_hadith` | `pk_id` (their id), `fetched_at`, audit |
+| | `hadeethenc_hadith_category` | `hadith_id`, `category_id` |
+| | `hadeethenc_hadith_text` | `hadith_id`, `language`, `title`, `hadeeth`, `hadeeth_intro`, `attribution`, `grade`, `explanation`, `hints` (jsonb), `words_meanings` (jsonb), `reference`, `sha256` (of the answer as received), `fetched_at` |
+| | `content_sync` | `code` (HADEETHENC_ar, QF_TAFSIR_14 …), `last_started_at`, `last_finished_at`, `status`, `items`, `sync_token` (Quran Foundation), `message` — one row per synced resource |
+| 1.6.0 | `tafsir` | `pk_id` (the Quran Foundation resource id), `provider`, `name_ar`, `name_en`, `author_ar`, `author_en`, `language`, `sort_order`, audit |
+| | `tafsir_text` | `tafsir_id`, `ayah_id` → `ayah`, `text` (as received — HTML), `synced_at`; a text that covers several ayahs is stored once, on its first ayah, with `ayah_to` |
+
+None of the HadeethEnc or Quran Foundation rows is in a migration or in a file of the repository: the running backend
+fetches them (the author's decision for HadeethEnc, the Quran Foundation's terms).
+
+### 14.3 How the data moves
+
+- **Radio**: a daily check of every stream (a `GET` that reads the first bytes and closes — a live stream has no end, so
+  `HEAD` is not enough); a stream failing three days running is tried last, never dropped (as the recitations).
+- **HadeethEnc**: a scheduled sync, **one request a second** (about 4,000 hadiths × 21 languages ≈ 24 hours the first
+  time), refreshed every 30 days; an answer that is short, broken or without its grade is refused and the stored text
+  kept; their name and link on every hadith (`hadeethenc.com/ar/browse/hadith/{id}`).
+- **Quran Foundation**: Content Sync only — the snapshot of each chosen tafsir, then a sync every 6 days (their limit is
+  7); the credentials only in environment variables `QF_CLIENT_ID`, `QF_CLIENT_SECRET`, `QF_ENV` (prelive /
+  production); without them the tafsir part is off and the rest of the backend works.
+- Endpoints: `/v1/radios`, `/v1/radios/{id}`; `/v1/hadith-categories`, `/v1/hadith-categories/{id}/hadiths`,
+  `/v1/hadiths/{id}`; `/v1/tafsirs`, `/v1/surahs/{n}/ayahs/{a}/tafsirs` (every tafsir of an ayah — F26) and
+  `/v1/tafsirs/{id}/surahs/{n}/ayahs/{a}`.
+- Tests: WireMock answers with one or two records — never their content in the repository.
+
+### 14.4 The author's answers (2026-11-22)
+
+| Question | Answer |
+| --- | --- |
+| Which radio channels | **Recitation only**: the reciter channels, the channels of several reciters and the Saudi Quran radio; the programmes stay out until each is checked (who speaks, which book — §6.10). |
+| Which Quran Foundation tafsirs | **Everything offered**: the six Arabic (Ibn Kathir, al-Tabari, al-Qurtubi, al-Baghawi, al-Sa'di, al-Muyassar), al-Wasit of Tantawi, and the translations whose translator is named. Read with the product's rules (§6.10 — established Sunni sources, a translation only by a named translator): the other works on their list — «في ظلال القرآن», «Tazkirul Quran», «Bayan ul Quran», «Ma'arif al-Qur'an», the Kurdish «Rebar» — were not among the options and are not synced. |
+| The postal address of the privacy policy | **The author sends it later**; the policy is written now with his e-mail (omar.sherif.dwedar@gmail.com — his choice to publish it) and a marked gap for the address; it is not published before the gap is filled. |
+| The tables of §14.2 | **Yes, build them.** |
+
+### 14.5 As built (2026-11-23) — `tajweed-backend` 9e2fbd3
+
+- **Recitation 38** (1.3.2): EveryAyah's «Hudhaify» 128 / 64 / 32 kbps, Ali al-Hudhaifi, Hafs, its own recitation.
+- **Radio** (1.4.0 / 1.4.1): 177 channels decided — 127 of one reciter and 6 of several kept; left out with reasons:
+  the programmes and translations (§6.10), the Saudi Quran radio (the broadcaster's own publication of its stream not
+  verified — §8.4; ☐ added with the national stations), two streams that answered `404`. mp3quran's server answers
+  `500` at times, so the stream check tries up to three times.
+- **HadeethEnc** (1.5.0): the sync, the endpoints, an incomplete answer refused, a shrunken list never deletes.
+- **Tafsir** (1.6.0): Content Sync with snapshots and row changes; a text covers a range of ayahs. The translated
+  tafsirs of the answer «everything» wait until each translator is named by a source we can cite — none of the
+  Quran Foundation's list names one.
+- Changes from §14.2: `hints` and `words_meanings` stored as the received JSON text (not `jsonb`);
+  `hadeethenc_hadith.listed_at`; `content_sync.last_success_at`; `tafsir_text.source_record_id` and `ayah_to_id`.
+- 97 tests; the live check of the Quran Foundation waits for the author's keys (`./gradlew liveTest`).

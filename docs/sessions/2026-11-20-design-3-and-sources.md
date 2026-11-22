@@ -184,6 +184,32 @@ The author asked what "a data file" means and whether keeping their content in t
 The agent explained (a committed file in a public repository lets anyone download the whole encyclopedia) and agreed;
 **the author: «Yes, record it» — database only, fetched from their API, never in GitHub**; no follow-up letter.
 
+## 2026-11-22 / 23 — the author's five points
+
+The author: «القارئ الشيخ علي الحذيفي» (EveryAyah's «Hudhaify» is him); «نص سياسة الخصوصية - أيميلي الشخصي …» (his own
+e-mail in the privacy policy); «أقسام ينفع نبنيها دلوقتي -> أبدأ فيها»; «قسم ينفع نبدأه دلوقتي بس محتاج منك حاجة ->
+اعمله وعرفني بعد كده خطوات اني اخلي ال keys عندي»; «طريقة حساب مواقيت الصلاة لكل دولة (P2-D1) -> اعملهم».
+
+The agent read the sources (mp3quran's 177 radio channels; HadeethEnc's API; the Quran Foundation's OAuth, Content
+API and Content Sync docs — «Content Sync is the only permitted path for obtaining and maintaining an offline copy»),
+wrote the tables (`docs/plan/backend-plan.md` §14) and asked four questions. **The author's answers**: radio —
+recitation only; tafsirs — everything (read with §6.10: the Arabic seven, translations only with a named translator);
+the postal address — he sends it later; the tables — yes.
+
+Built and pushed (`tajweed-backend` 9e2fbd3, 97 tests): recitation 38; the radio module (a decision for every channel;
+the stream check had to retry — mp3quran's server answers `500` under load; two streams `404`); the HadeethEnc module
+(database only); the tafsir module (Content Sync; tested against a local fake server; the live check waits for the
+keys — `docs/setup/quran-foundation-keys.md` tells the author how to set them without writing them anywhere).
+
+`P2-D1`: the method of each official timetable computed from the timetable itself (sun position at the published
+minutes). Verified: Türkiye (365 days: 18° / 17°), Malaysia (365 days: 18° / 18° plus about two minutes — not the 20°
+preset), Singapore (365 days: 20° / 18°), Egypt and Saudi Arabia (one published day each: 19.5° / 17.5°; 18.5° and
+90 minutes). A call to the Umm al-Qura site's own backend was refused by the agent's safety check (it imitated the
+site's origin); the official page was read in the browser instead, as a visitor.
+
+The privacy policy was drafted in Arabic and English (`docs/legal/privacy-policy.md`) with three gaps: the postal
+address, the host, the effective date.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)

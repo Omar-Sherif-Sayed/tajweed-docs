@@ -161,6 +161,8 @@ letter written in that form (`docs/permissions/letters/01b-king-fahd-complex-sec
 unchanged; the author fills in the Hijri date and his mobile number (kept out of this public repository) and sends it
 as a reply in the same thread.
 
+The author: «تم الارسال, بأنتظار الرد» — the letter was sent on 2026-11-22; the status updated to waiting.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)

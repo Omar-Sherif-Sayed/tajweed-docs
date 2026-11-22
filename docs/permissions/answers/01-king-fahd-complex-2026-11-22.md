@@ -26,6 +26,6 @@ with «سعادة الأمين العام لمجمع الملك فهد لطبا�
 ## What was done
 
 The letter rewritten in that form: [`../letters/01b-king-fahd-complex-secretary-general.md`](../letters/01b-king-fahd-complex-secretary-general.md)
-(2026-11-22) — the author sends it as a reply in the same e-mail thread. Until a decision arrives, nothing changes:
+(2026-11-22) — **sent by the author the same day** as a reply in the same e-mail thread; waiting for the answer. Until a decision arrives, nothing changes:
 the King Fahd page fonts stay the default by the author's decision of 2026-11-17, with DigitalKhatt Old Madina (OFL,
 the same layout) as the fallback.

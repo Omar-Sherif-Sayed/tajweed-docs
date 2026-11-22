@@ -180,6 +180,10 @@ encyclopedia credited as the source (HadeethEnc.com). Recorded in `docs/permissi
 (their text verbatim; the author's address and phone number in the quoted thread left out). Open: whether their
 content may be committed to a public repository — decided on `P7-D1`.
 
+The author asked what "a data file" means and whether keeping their content in the database avoids the question.
+The agent explained (a committed file in a public repository lets anyone download the whole encyclopedia) and agreed;
+**the author: «Yes, record it» — database only, fetched from their API, never in GitHub**; no follow-up letter.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)

@@ -465,7 +465,7 @@ path monitor. Started after the Android slice is accepted. Device checks wait fo
 | --- | --- |
 | P7-D1 | الأربعون النووية, then صحيح البخاري and صحيح مسلم: a verified digital edition with its numbering stated; each hadith with collection, book, chapter, number, grade as stated by the source. |
 | P7-D2 | The link of each hadith to its page on الدرر السنية (⏸ their permission, `P0-13`); the explanation is linked, not copied, unless they permit. |
-| P7-B1 | `hadith` module: collections, books, chapters, hadiths, search. |
+| P7-B1 | `hadith` module: collections, books, chapters, hadiths, search. HadeethEnc's content (permission 2026-11-22) is fetched from `hadeethenc.com/api/v1` into the database and refreshed regularly — **never committed** to a repository or a public artifact (the author, 2026-11-22; `docs/permissions/answers/09-hadeethenc-2026-11-22.md`). |
 | P7-B2 | The Dorar client (`dorar` module): the API key from the environment only (never in a repository or an app), HTTPS, a 24-hour cache with regular refresh and full deletion if the key ends, a limiter for 60 requests a minute, attribution and the `url` link kept on every result, ruling never separated from the hadith; a checklist review against `AGENTS.md` §8.14 before any release; the test environment given to Dorar two weeks before publishing. ⏸ Dorar's key (requested 2026-11-20). |
 | P7-D3 | F29 virtues: the authentic hadiths about the virtue of prayer, of surahs, of ayahs and of other subjects, each linked to its subject, verbatim with collection, number and the source's grade; weak and fabricated narrations left out. |
 | P7-W/A/I-2 | Virtues shown where their subject is: on a surah's page, an ayah's actions, the prayer screen, a dhikr. |

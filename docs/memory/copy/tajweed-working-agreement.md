@@ -4,7 +4,7 @@ description: "How Omar wants agents to work on the Tajweed product (plan-ask-cod
 metadata:
   node_type: memory
   type: feedback
-  modified: 2026-11-21T19:37:16.172Z
+  modified: 2026-11-22T21:05:11.567Z
   originSessionId: 4f32e8cc-e0b3-4843-a4c0-dae31d57f095
 ---
 
@@ -25,7 +25,8 @@ project"): not in files, commit messages or session records; in quotes of his me
 `<another project of the author>`. His code style still comes from the <another project of the author> `AGENTS.md` files
 (`C:\Programming\WorkSpaces\<another project of the author>\<another project of the author>-backend|frontend\`) — read them privately, write the convention
 into Tajweed without naming the origin. The repositories are public, so raw transcripts and his e-mail in document
-text also stay out.
+text also stay out — with one exception he chose himself (2026-11-22): his personal e-mail is the privacy contact in
+the privacy policy (`docs/legal/privacy-policy.md`). His phone number never appears anywhere.
 
 Commits (his answer, 2026-11-16): "you can commit no problem, but make me the author (Omar Sherif
 <the author's e-mail>) not cloud". Set `git config user.name "Omar Sherif"` and `user.email` per repository.

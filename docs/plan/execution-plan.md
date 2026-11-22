@@ -294,7 +294,11 @@ chosen the text and the font.
 Done when: every letter is sent and tracked in a table (sent date, answer, decision). ⚠ A source without an answer
 is used only inside what its published terms already allow.
 
-### P0-14 Content pipeline and API contract
+### P0-14 Content pipeline and API contract — ✔ 2026-11-22
+
+Done: D1 / D2 approved (2026-11-21); the contract `tajweed-backend/docs/api/client-guide.md` with `openapi.yaml`; the
+SQLite bundle built by `./gradlew quranBundle` (the import migrations run on SQLite). Still open: how the bundle reaches
+the phone repositories — decided on `P0-09`.
 
 1. **Decision D1 (proposal — author confirms):** one import tool, kept in `tajweed-backend`, reads the untouched
    source files and produces (a) the PostgreSQL content, (b) the ready SQLite database that the two phone

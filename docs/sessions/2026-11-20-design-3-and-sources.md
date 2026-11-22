@@ -163,6 +163,15 @@ as a reply in the same thread.
 
 The author: «تم الارسال, بأنتظار الرد» — the letter was sent on 2026-11-22; the status updated to waiting.
 
+## 2026-11-22 — the author's messages: «ال backend خلصتة ولا لسه…» and «تمام ابدأه»
+
+The agent listed what the backend has and what is left; the author approved the three items that need nobody else.
+Done: (1) the phase 1 contract — `tajweed-backend/docs/api/client-guide.md`; (2) the phones' Quran bundle — a SQLite
+file written by running the server's own import migrations on SQLite tables with the same columns, then compared with
+the Tanzil files line by line; the same SHA-256 on every build; (3) About and Sources: already served by
+`/v1/app-info` and `/v1/content-version` — documented, no code. Also: the author's network blocked SSH to GitHub for a
+while; after he changed networks the docs commit was pushed; CI run #1's red mark is the old, fixed scaffold run.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)

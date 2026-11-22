@@ -190,7 +190,7 @@ none at scaffold time); on the server as environment variables. A leaked Dorar k
 | Large licensed content (hadith, books) — only after permission | an import job from versioned, checksummed data files | checksum, counts, spot checks against the edition |
 | **Quran Foundation** (tafsirs …) | **never committed** — synced at run time through Content Sync, at least every 7 days | their terms (§7.1): a public repository is redistribution |
 | **Dorar** | **never stored** — live through the backend, cached ≤ 24 h | §8.14 |
-| The phones' bundled database (D1) | the same import code writes the SQLite file the apps ship, with a manifest of checksums | the apps verify the manifest |
+| The phones' bundled database (D1) | the same import code writes the SQLite file the apps ship, with a manifest of checksums — ✔ built 2026-11-22: `./gradlew quranBundle` runs the import migrations on SQLite (`src/bundle`) | the apps verify the manifest; the build compares the file with the Tanzil files |
 
 ## 9. Tests
 

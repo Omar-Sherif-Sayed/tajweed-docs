@@ -13,7 +13,7 @@ Drafted by the agent; **sent by the author** from his own e-mail or the owner's 
 | 6 | مؤسسة الدرر السنية | support@dorar.net | [06-dorar.md](06-dorar.md) | ⏸ sent 2026-11-20 (question 2 reworded) |
 | 7 | موقع mp3quran.net | — contact form only | [07-mp3quran.md](07-mp3quran.md) | ⚠ the form fails (2026-11-20) — optional, the site's terms already allow use |
 | 8 | EveryAyah.com (support through the Quran.com help centre) | — help-centre form | [08-everyayah.md](08-everyayah.md) | ⏸ sent 2026-11-20 — Quran.com help-centre request #20971, open |
-| 9 | موسوعة الأحاديث النبوية HadeethEnc.com | info@hadeethenc.com | [09-hadeethenc.md](09-hadeethenc.md) | ⏸ sent by the author 2026-11-21 — waiting for the answer |
+| 9 | موسوعة الأحاديث النبوية HadeethEnc.com | info@hadeethenc.com | [09-hadeethenc.md](09-hadeethenc.md) | ✔ sent by the author 2026-11-21 — **permission given 2026-11-22** ([answer](../answers/09-hadeethenc-2026-11-22.md)) |
 | 10 | Sunnah.com — request for API access | — GitHub issue | [10-sunnah-com.md](10-sunnah-com.md) | ⏸ issue opened by the author 2026-11-21 — https://github.com/sunnah-com/api/issues/4480 (open) |
 | 11 | Quran Foundation — Content APIs (Quran.com) | developers@quran.com (questions) · registration in the Developer Console | [11-quran-foundation.md](11-quran-foundation.md) | ✔ the author created the app on 2026-11-21 (server app, pre-live and production client IDs, redirect URI set); the secret stays with him — `docs/permissions/README.md` |
 

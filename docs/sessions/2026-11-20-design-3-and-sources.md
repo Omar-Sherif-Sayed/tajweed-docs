@@ -172,6 +172,14 @@ the Tanzil files line by line; the same SHA-256 on every build; (3) About and So
 `/v1/app-info` and `/v1/content-version` — documented, no code. Also: the author's network blocked SSH to GitHub for a
 while; after he changed networks the docs commit was pushed; CI run #1's red mark is the old, fixed scaffold run.
 
+## 2026-11-22 — the author's message: HadeethEnc's answer
+
+The author showed HadeethEnc's reply (info@hadeethenc.com, 13:31) to letter 09: permission to include the content of
+the hadith encyclopedia, on three conditions — no unsuitable advertisements, no change that alters the meaning, the
+encyclopedia credited as the source (HadeethEnc.com). Recorded in `docs/permissions/answers/09-hadeethenc-2026-11-22.md`
+(their text verbatim; the author's address and phone number in the quoted thread left out). Open: whether their
+content may be committed to a public repository — decided on `P7-D1`.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)

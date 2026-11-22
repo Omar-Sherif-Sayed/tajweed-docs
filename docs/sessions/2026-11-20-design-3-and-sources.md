@@ -152,6 +152,15 @@ al-Shuraim 95 / 94 % — attached as fallbacks; al-Husary mujawwad 51 %, Abdul B
 (against his mujawwad), Yasser al-Dosari 56 %, al-Sudais 39 – 43 %, Fares Abbad 27 % — their own recitations; «Ghamadi»
 75 % against Saad al-Ghamdi — his own recitation; «Hudhaify» — not measurable, left out. 90 tests green.
 
+## 2026-11-22 — the author's sixteenth message: the King Fahd Complex's answer
+
+The author showed the Complex's reply (info@qurancomplex.gov.sa, 2026-11-22 09:45): not a decision — it asks for the
+request again as a formal letter addressed to «سعادة الأمين العام لمجمع الملك فهد لطباعة المصحف الشريف وفقه الله» with
+«مع التحية والتقدير». The answer was saved (`docs/permissions/answers/01-king-fahd-complex-2026-11-22.md`) and the
+letter written in that form (`docs/permissions/letters/01b-king-fahd-complex-secretary-general.md`), the request
+unchanged; the author fills in the Hijri date and his mobile number (kept out of this public repository) and sends it
+as a reply in the same thread.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)

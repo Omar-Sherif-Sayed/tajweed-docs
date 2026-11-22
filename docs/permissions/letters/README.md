@@ -4,7 +4,8 @@ Drafted by the agent; **sent by the author** from his own e-mail or the owner's 
 
 | # | To | Address / channel | File | Status |
 | --- | --- | --- | --- | --- |
-| 1 | مجمع الملك فهد لطباعة المصحف الشريف — King Fahd Glorious Quran Printing Complex | info@qurancomplex.gov.sa | [01-king-fahd-complex.md](01-king-fahd-complex.md) | ⏸ sent 2026-11-20 |
+| 1 | مجمع الملك فهد لطباعة المصحف الشريف — King Fahd Glorious Quran Printing Complex | info@qurancomplex.gov.sa | [01-king-fahd-complex.md](01-king-fahd-complex.md) | sent 2026-11-20; answered 2026-11-22 — resend as a formal letter |
+| 1b | سعادة الأمين العام لمجمع الملك فهد لطباعة المصحف الشريف | info@qurancomplex.gov.sa — reply in the same thread | [01b-king-fahd-complex-secretary-general.md](01b-king-fahd-complex-secretary-general.md) | ☐ ready 2026-11-22 — the author fills in the Hijri date and his mobile number, then sends |
 | 2 | موسوعة القرآن الكريم QuranEnc.com | info@quranenc.com | [02-quranenc.md](02-quranenc.md) | ⏸ sent 2026-11-20 |
 | 3 | مؤسسة الشيخ محمد بن صالح العثيمين الخيرية | info@binothaimeen.com | [03-ibn-uthaymeen-foundation.md](03-ibn-uthaymeen-foundation.md) | ⏸ sent 2026-11-20 |
 | 4 | أصحاب حقوق كتب الشيخ سعيد بن علي بن وهف القحطاني رحمه الله (حصن المسلم) | info@hisn-almuslim.com | [04-hisn-almuslim.md](04-hisn-almuslim.md) | ⏸ sent 2026-11-20 |

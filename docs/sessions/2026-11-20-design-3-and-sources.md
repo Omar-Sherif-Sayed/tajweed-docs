@@ -210,6 +210,15 @@ site's origin); the official page was read in the browser instead, as a visitor.
 The privacy policy was drafted in Arabic and English (`docs/legal/privacy-policy.md`) with three gaps: the postal
 address, the host, the effective date.
 
+## 2026-11-26 — the author: «المفاتيح جاهزة»
+
+The keys were in his user environment (checked by length only, never printed); this session had started before, so
+they were passed to the test process alone. Docker Desktop was started. `./gradlew liveTest`: the token and HadeethEnc
+worked; the sync stopped — **pre-live offers only tafsirs 159, 169, 170, 381, 804, 926, none of our seven**. Changed:
+the sync skips a chosen tafsir its environment does not offer and records it; the live test can name one pre-live
+offers (`QF_LIVE_TAFSIRS=169`). Second run: 293 rows (surahs 1 – 2), 1:1 covered, status OK. Next for the author: the
+Quran Foundation's production approval.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)

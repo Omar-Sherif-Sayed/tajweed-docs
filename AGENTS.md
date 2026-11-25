@@ -1164,7 +1164,7 @@ reviewer). Task ids: `P<phase>-<area><n>`, areas **D** data · **B** backend · 
 | P0-05 | Machine: install Android Studio; confirm Docker runs | ✔ 2026-11-17 — Android Studio, SDK and an emulator installed; Docker installed (start it before P0-07) |
 | P0-06 | Re-verify every version on scaffold day and write it down | ◐ backend ✔ 2026-11-21 (`tajweed-backend/AGENTS.md`); web, Android, iPhone on their scaffold days |
 | P0-07 | Scaffold `tajweed-backend` with CI and `GET /v1/app-info` | ✔ 2026-11-21 — 42 tests green, run locally; CI green on GitHub (run #2) |
-| P0-08 | Scaffold `tajweed-frontend`: Angular 22, Material, Tailwind, wrappers, language choice, CI | ☐ |
+| P0-08 | Scaffold `tajweed-frontend`: Angular 22, Material, Tailwind, wrappers, language choice, CI | ◐ 2026-11-26: plan and the author's answers (`docs/plan/web-plan.md`: SSR, the language in the URL, the first launch as in design 3, TanStack Query) |
 | P0-09 | Scaffold `tajweed-android`: Kotlin, Compose, both languages, CI | ☐ (needs P0-05) |
 | P0-10 | Scaffold `tajweed-ios`: generated project, SwiftUI, CI on a macOS runner | ☐ |
 | P0-11 | Design: tokens, colour directions, HTML prototypes, the author's approval, then Figma | ◐ ✔ **design 3 reviewed and approved by the author (2026-11-21)**; left: the Figma elements and `P0-17`. 2026-11-21: all remaining screens drawn (28, six batches); earlier the same day: home reorganised, «كل الأقسام», the scholars, the library, the Sources screen with four states (design 3 only). **design 3 chosen (author, 2026-11-20)** — `round-3.html`, 28 directions with landscapes checked against their tafsirs, all screens so far in 22 languages; designs 1 and 2 kept unchanged. Still to do: the remaining screens in design 3 (§13), its elements in Figma (⏸ the Starter plan's limit), the exports `P0-17` |
@@ -1213,7 +1213,7 @@ reviewer). Task ids: `P<phase>-<area><n>`, areas **D** data · **B** backend · 
 | Part | How | Cost (☐ confirm current prices) |
 | --- | --- | --- |
 | Domain | One domain: web application, `api.` for the backend, privacy policy page | about 10–15 USD / year |
-| Web (Angular) | Static build on a free static host with HTTPS (Cloudflare Pages / GitHub Pages / Firebase Hosting) | free |
+| Web (Angular) | **SSR (the author, 2026-11-26)**: the Angular server (Node) in Docker beside the backend, behind the same reverse proxy with HTTPS; the language in the URL (`/ar/…`, `/en/…`) — `docs/plan/web-plan.md` §4 | the same server as the backend |
 | Backend | Docker image on a small virtual server (or Oracle Cloud "Always Free"), PostgreSQL beside it, HTTPS by a reverse proxy (Caddy / Nginx), daily database backup, GitHub Actions for build and deploy | 0–6 USD / month |
 | Audio | Streamed from the sources — no storage or traffic cost for us | free |
 | Google Play | Developer account (one-time fee, identity verification). ⚠ A new **personal** account must run a closed test with **12 testers for 14 days** before publishing. Then: signed app bundle, data-safety form, content rating, privacy-policy link, declarations for exact alarms / playback service / location. | 25 USD once |

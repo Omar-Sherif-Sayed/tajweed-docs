@@ -5,7 +5,7 @@ Rule: no loose files — every document is in `docs/<kind>/` and listed here.
 
 | Folder | What it holds | State |
 | --- | --- | --- |
-| [`plan/`](plan/) | [`execution-plan.md`](plan/execution-plan.md) — every task of every phase in detail. Task status is in the parent [`AGENTS.md`](../AGENTS.md) §14.1. [`backend-plan.md`](plan/backend-plan.md) — the detailed plan of the backend scaffold (2026-11-21). | written 2026-11-17 |
+| [`plan/`](plan/) | [`execution-plan.md`](plan/execution-plan.md) — every task of every phase in detail; [`web-plan.md`](plan/web-plan.md) — the web scaffold (`P0-08`). Task status is in the parent [`AGENTS.md`](../AGENTS.md) §14.1. [`backend-plan.md`](plan/backend-plan.md) — the detailed plan of the backend scaffold (2026-11-21). | written 2026-11-17 |
 | [`sessions/`](sessions/) | The session memory: one record per working session (the author's messages, what was done, decisions, sources) and a conversation copy beside it. | [2026-11-16 planning — record](sessions/2026-11-16-planning.md) · [conversation copy](sessions/2026-11-16-planning-conversation.md) · [2026-11-20 design 3 and sources — record](sessions/2026-11-20-design-3-and-sources.md) |
 | [`data-sources/`](data-sources/) | The register of every content source (task P0-12); [`prayer-methods.md`](data-sources/prayer-methods.md) — the default prayer-time method of each country, read from the official timetables (`P2-D1`), with its script in `tools/`. |
 | [`legal/`](legal/) | [`privacy-policy.md`](legal/privacy-policy.md) — the privacy policy, Arabic and English (draft, `RT-04`). |

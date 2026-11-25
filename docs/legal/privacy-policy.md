@@ -26,6 +26,9 @@
 والملاحظات، وتقدّم الحفظ والختمة، وعدّاد التسبيح — كلها تُحفظ على جهازك فقط، ولا تُرسل إلينا. ويمكنك حفظها في ملف
 ونقلها إلى جهاز آخر بنفسك.
 
+**ملف تعريف ارتباط (كوكي) واحد للموقع:** يحفظ في متصفحك اللغة والمظهر اللذين اخترتهما، ليفتح الموقع بهما في
+زيارتك التالية. لا يُستخدم للتتبّع ولا للإعلانات، ولا يُرسل إلا إلى خادم موقعنا.
+
 **موقعك:** يُستخدم لحساب مواقيت الصلاة واتجاه القبلة والمساجد القريبة **على جهازك**، ولا يُرسل إلى خادمنا أبدًا.
 ويمكنك بدلًا من ذلك اختيار مدينة بيدك.
 
@@ -93,6 +96,9 @@ artificial-intelligence models.
 Your settings (language, appearance, reciter, prayer-time method, adhan), your reading position, the markers on
 ayahs, your notes, your memorisation and khatma progress and the tasbeeh counter are kept on your device only and are
 never sent to us. You can save them to a file and move them to another device yourself.
+
+**One cookie on the website:** it keeps the language and the appearance you chose in your browser, so the site opens
+with them on your next visit. It is not used for tracking or advertising, and is sent only to our own web server.
 
 **Your location** is used to calculate the prayer times, the Qibla and the nearby mosques **on your device**, and is
 never sent to our server. You can choose a city by hand instead.

@@ -53,3 +53,22 @@ The reader, search, the player and every feature screen (`P1-W1 …`); the King 
 | The first launch | **As in design 3**: the language from the searchable list of 22, the colour direction and day / night, on one screen. |
 | Data loading | **TanStack Query** (the convention of §10). |
 | The language with SSR | **In the URL** — `/ar/…`, `/en/…` for all 22; the server renders each language and search engines index each one (`hreflang`). The choice is remembered in **one functional cookie** (the language and the appearance — no tracking, nothing sent anywhere but our web server), so `/` leads to the user's language; the privacy policy says so. |
+
+## 5. As built (2026-11-26) — `tajweed-frontend` 682097f
+
+- As planned in §2, with SSR and the language in the URL (§4). `tools/sync-design.mjs` copies from this repository the
+  interface texts of the design (round 1 – 3 keys, with their 20 translations), design 3's tokens (28 directions, day and
+  night, as CSS variables), its icons and logo (recoloured with `currentColor` and the dot colour) and its 56
+  landscapes; `tools/extra-texts.json` holds the eleven texts the design does not have, in the 22 languages.
+- The first launch follows design 3's first screen: brand, the language button and the searchable sheet (the visitor's
+  own language first; names in the interface language from the platform's `Intl.DisplayNames`), the draft-translation
+  note for every language but Arabic, the colour directions with their landscapes, the day / night switch, Al-Fatihah
+  from `/v1/surahs/1/ayahs` in Amiri Quran with its source, «Start». The design's own translations of the short name are
+  kept (e.g. German «Tadschwid»), as in the approved prototype.
+- The fonts of Urdu, Hindi, Bengali, Korean, Japanese, Chinese, Persian and Pashto load only with their language
+  (`font-<code>.css`); the first load is 685 kB raw, 170 kB over the network.
+- A finding: Angular Material's `ng add` writes Google Fonts and Material Symbols links into `index.html`; they were
+  removed (no third-party request).
+- Not yet: the reader and the other features (`P1-W…`); the production `apiUrl` and the SSR host's allowed hosts
+  (`RT-01`).
+

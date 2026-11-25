@@ -236,6 +236,18 @@ whole content before failing, so the moved repository was checked (`git fsck` cl
 `CLAUDE.md` (`@tajweed-docs/AGENTS.md`); updated §0, §3, the README, `.gitignore`, the four application repositories'
 `AGENTS.md` (`../tajweed-docs/AGENTS.md`), the prototypes' `launch.json` and the agent's memory note.
 
+## 2026-11-26 — the author: «تمام ممكن تبدأ ال web ال angular»
+
+The plan (`docs/plan/web-plan.md`) with the versions read on npm (Angular 22.3.0 of 2026-11-18, TypeScript 6.0, Node
+22.23.5 in range) and four questions. **The author's answers**: SSR; the first launch as in design 3; TanStack Query;
+the language in the URL. Built `tajweed-frontend` (682097f): the scaffold merged into the existing repository; Material's
+`ng add` Google Fonts links removed; every route rendered per request; the language resolvers, `hreflang`, the cookie
+redirect in `server.ts`; design 3 synced by `tools/sync-design.mjs`; the font CSS of eight scripts split out of the first
+load (1.29 MB → 685 kB raw). Checked in the browser with the local backend (port 4200 was held by another program, so
+the web ran on 4201 and the local backend's `CORS_ORIGINS` allowed it): the first launch, «Start», `/ar/about`, `/ur/`
+server-rendered, the 302 and the 404. A button wrapper bug (content projected into a hidden `@switch` branch) was found
+in the browser and fixed.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)

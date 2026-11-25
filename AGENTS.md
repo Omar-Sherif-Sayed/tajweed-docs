@@ -41,7 +41,7 @@ repository the task touches → (6) the last record in [`docs/sessions/`](docs/s
 | Does not exist | The web, Android and iPhone code; the backend's modules after `tafsir` (adhkar, dua, library, the Lives, Dorar …); the product-wide register of content sources (the backend's own: `tajweed-backend/docs/data-sources/`; the prayer methods: `docs/data-sources/prayer-methods.md`). |
 | Last task done | 2026-11-23 (the author: «ابدأ فيها», «اعمله», «اعملهم» and four answers — `docs/plan/backend-plan.md` §14.4): **the backend's `radio`, `hadith` (HadeethEnc) and `tafsir` (Quran Foundation) modules**, recitation 38 (EveryAyah's «Hudhaify» = Sheikh Ali al-Hudhaifi, the author's identification), 97 tests green (`tajweed-backend` 9e2fbd3); **`P2-D1` first batch** — the method of Saudi Arabia, Egypt, Türkiye, Malaysia and Singapore read from their official timetables (`docs/data-sources/prayer-methods.md`); **the privacy policy drafted** (`docs/legal/privacy-policy.md`, with the author's e-mail, his decision). Before that, 2026-11-22: **HadeethEnc's permission recorded** (`docs/permissions/answers/09-hadeethenc-2026-11-22.md`) — its hadiths, explanations and translations may be included in the app, offline too, credited to HadeethEnc.com; kept in our database only, fetched from its API, never in GitHub (the author's decision). Before that, 2026-11-22 (the author: «تمام ابدأه»): **the phase 1 contract and the phones' Quran bundle** — `tajweed-backend/docs/api/client-guide.md` (how the three clients use every call, caching, errors, reader, search, playback and failover) and `./gradlew quranBundle` (a reproducible SQLite file written by the server's own import migrations, checked against the Tanzil files; CI artifact `quran-bundle`); About and Sources were already served (`/v1/app-info`, `/v1/content-version`). Before that, 2026-11-22 (the author: «Yes, reciters next», then his four answers — `docs/plan/backend-plan.md` §13.5): **the `reciter` module** in `tajweed-backend` — 13 reciters and 37 recitations (27 mp3quran moshafs, the other riwayat included as listening only, each with its riwayah said plainly; 10 EveryAyah folders), all 8,926 audio files checked, 74,977 ayah timings from mp3quran (Ali al-Hudhaifi's set and 7 surahs excluded with reasons — their ayah counts are wrong), EveryAyah folders attached as fallbacks only where measured to be the same recording, endpoints `/v1/reciters`, `/v1/recitations/{id}`, `…/timings`, a daily health check of the sources (ShedLock); 90 tests green. Before that, 2026-11-21 (the author: «Yes, download both»): **Quran search (F16)** in `tajweed-backend` — Tanzil «Simple» and «Simple (Clean)» downloaded with his permission and imported verbatim as the search text (table `ayah_search_text`, SHA-256 and order checked), the letter equivalences fixed (§8.1 rule 3), `GET /v1/quran-search` (words with or without tashkeel, surah names, references such as `2:255`), ten reference queries checked against an independent implementation; 75 tests green. Before that: **the `quran` module** in `tajweed-backend` — the Tanzil Uthmani text and metadata moved into the backend (`src/main/resources/content/`, SHA-256 checked, `-text`), tables `content_source`, `surah`, `ayah` (design: `tajweed-backend/docs/database/README.md`), a Java import that verifies checksums and counts before inserting, endpoints `/v1/surahs`, `/v1/surahs/{n}/ayahs`, `/v1/surahs/{n}/ayahs/{a}`, `/v1/pages/{p}`, `/v1/juzs`, `/v1/content-version`; 57 tests green — every stored ayah compared with the Tanzil file. Before that: `P0-07` (the scaffold). |
 | GitHub access from this machine | **Over SSH only** (the Windows certificate store blocks the HTTPS sign-in, §1). Key `~/.ssh/id_ed25519_tajweed` (no passphrase, fingerprint `SHA256:EPCRVeCpF+Jvsj40LKpu4Cta+mKF3ivLO8szlC2k/Po`), registered in the author's account as "Tajweed project - work laptop" (he confirmed it himself). Each of the five repositories uses it through its local `core.sshCommand`; remotes are `git@github.com:Omar-Sherif-Sayed/<name>.git`. A new clone on this machine needs the same two settings. Test: `ssh -i ~/.ssh/id_ed25519_tajweed -o IdentitiesOnly=yes -T git@github.com`. |
-| Folder name | `C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences` — renamed by the author on 2026-11-17. |
+| Folder name | `C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences` — renamed by the author on 2026-11-17. **Since 2026-11-26 (the author) it is a plain folder holding the five repositories side by side**: `tajweed-docs` (this one), `tajweed-backend`, `tajweed-frontend`, `tajweed-android`, `tajweed-ios`; a small `CLAUDE.md` there (in no repository) imports this file, so a session opened in the workspace folder reads it. **Open sessions in the workspace folder**: the agent's memory is kept by that path. |
 | GitHub account | `Omar-Sherif-Sayed` — <https://github.com/Omar-Sherif-Sayed?tab=repositories>. Pushing is allowed for this product (R1); push at the end of every task. |
 | Do not forget | `P2-D1` — the default prayer-time method of every country, each with a named official source (the author, 2026-11-17: it may be done at any time, before phase 2 starts) · **F19** — the in-app section «لماذا هذا التصميم؟ / Why this design?»: the reason for every colour, icon and the logo (§8.10, `docs/design/design-2-meanings.md` or `design-3-meanings.md`, for the chosen design). |
 | **Next task** | (1) The web scaffold (`P0-08`: Angular 22, Material, Tailwind, wrappers, language choice, CI), on the contract `tajweed-backend/docs/api/client-guide.md`. Backend, when their inputs exist: ☐ the common spellings of surah names from a named source (`P1-D3`); after EveryAyah answers (request #20971): offline downloads (F28). `P2-D1`: the next countries, read from their official timetables. The author may still change the `quran` tables — no deployed database has them. |
@@ -186,11 +186,12 @@ The author asked for one GitHub repository per client and one for the backend. *
 read, only the author can write** (author, 2026-11-16). Names (final unless the author changes them, §18.2 R1):
 
 ```
-C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences\
-                         = the documentation repository  -> github.com/Omar-Sherif-Sayed/tajweed-docs
-  AGENTS.md              this file (parent)            README.md      for human readers
-  .gitignore             ignores the four application folders below
-  docs\
+C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences\     a plain folder (the workspace), no repository
+  CLAUDE.md              one line: imports tajweed-docs/AGENTS.md (not in any repository — recreate it if lost)
+  .claude\              the workspace's agent settings (launch.json: the design prototypes' local server)
+  tajweed-docs\         the documentation repository  -> github.com/Omar-Sherif-Sayed/tajweed-docs
+    AGENTS.md            this file (parent)            README.md      for human readers
+    docs\
     README.md            index of all documents
     plan\                execution-plan.md — every task in detail
     sessions\            one record per working session
@@ -199,6 +200,7 @@ C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences\
     design\              tokens.json, HTML prototypes, Figma link (task P0-11)
     deployment\          hosting and store guides (release track)
     quality\             acceptance runs, iPhone test sessions
+    legal\               the privacy policy (release track)
   tajweed-backend\       Spring Boot REST API            -> github.com/Omar-Sherif-Sayed/tajweed-backend
   tajweed-frontend\      Angular web application         -> github.com/Omar-Sherif-Sayed/tajweed-frontend
   tajweed-android\       Android application             -> github.com/Omar-Sherif-Sayed/tajweed-android
@@ -207,7 +209,7 @@ C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences\
 
 | Repository | Holds | Does not hold |
 | --- | --- | --- |
-| `tajweed-docs` (this folder) | **The main picture of the whole product:** this `AGENTS.md`, the detailed plan and task status, decisions, the register of content sources, permission letters, the design (tokens, HTML prototypes, the Figma link and exported screens), hosting and store guides, session records and conversation copies | Application code |
+| `tajweed-docs` (this repository) | **The main picture of the whole product:** this `AGENTS.md`, the detailed plan and task status, decisions, the register of content sources, permission letters, the design (tokens, HTML prototypes, the Figma link and exported screens), hosting and store guides, session records and conversation copies | Application code |
 | `tajweed-backend` | The Spring Boot REST API, the database migrations, the content import tool and the untouched source files of the content (Quran text, search text), the OpenAPI contract | Designs, product decisions |
 | `tajweed-frontend` | The Angular web application | Content files (it reads the API) |
 | `tajweed-android` | The Android application (Kotlin, Compose) with the Quran database shipped inside it | — |
@@ -216,12 +218,14 @@ C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences\
 Each application repository also has its own `AGENTS.md`, `README.md` and `docs/` — only about that codebase; anything
 that concerns more than one application is written here.
 
-- **The workspace folder itself is the fifth repository, `tajweed-docs`** (decided 2026-11-17, the author asked for
-  a repository for the plan, the designs and everything that is not part of a running application). Reason: this
-  file stays at the root, where every agent that opens the workspace reads it automatically, and it is versioned —
-  one copy, no duplicate to keep in step. The four application folders are separate repositories; this repository
-  ignores them. The folder is named `Tajweed - The Noble Quran and Its Sciences` (the author's choice, 2026-11-17). ⚠ The
-  name contains spaces: every command puts the path in quotes.
+- **`tajweed-docs` is the fifth repository** (decided 2026-11-17, the author asked for a repository for the plan, the
+  designs and everything that is not part of a running application). Until 2026-11-26 it was the workspace folder
+  itself, with the four application repositories cloned inside it; **since 2026-11-26 (the author) the five
+  repositories sit side by side in the workspace folder**, each in its own folder. The workspace folder's `CLAUDE.md`
+  (one line, `@tajweed-docs/AGENTS.md`) makes every agent that opens the workspace read this file. In this repository's
+  documents, a path such as `tajweed-backend/docs/…` is relative to the workspace folder. The folder is named
+  `Tajweed - The Noble Quran and Its Sciences` (the author's choice, 2026-11-17). ⚠ The name contains spaces: every
+  command puts the path in quotes.
 - What belongs here: the plan, product rules and decisions, the source register, permissions, designs, store and
   deployment guides, session records. What does not: application code, and documents about one codebase (they live
   in that repository's own `docs/`).
@@ -1259,7 +1263,7 @@ Listed for the author to accept or reject — none is built without approval.
 | --- | --- | --- |
 | Q1 | Name | ✔ **تجويد - القرآن الكريم وعلومه**, short «تجويد» / "Tajweed" (accepted 2026-11-17; ☐ English wording and store check, §2). |
 | Q2 | GitHub | ✔ Public repositories; only the author writes. ✔ Account `Omar-Sherif-Sayed` (2026-11-17). ☐ Creation, push and code licence — R1. |
-| Q3 | Fifth repository `tajweed-docs` | ✔ Yes (2026-11-17): the workspace folder itself (§3). Local commit done; GitHub in P0-03. |
+| Q3 | Fifth repository `tajweed-docs` | ✔ Yes (2026-11-17): the workspace folder itself (§3) — since 2026-11-26 its own folder `tajweed-docs/` beside the other four. Local commit done; GitHub in P0-03. |
 | Q4 | Commits and notes | ✔ The agent commits as Omar Sherif (§1). ☐ Push — R1. ✔ Session records in `docs/sessions/`; raw transcripts stay private in `ai-agent-workspace\Tajweed\` (§3). |
 | Q5 | UI library | ✔ Angular 22 + Angular Material 22 + Tailwind CSS (§4.2). |
 | Q6 | Mobile | ✔ Two native repositories; no Mac / iPhone, a friend's Mac for testing (§4.3, §11–12). |
@@ -1282,7 +1286,7 @@ explicit yes** (it is public); R3 (permanent) and R10 (public) need the author's
 | # | Point | Default |
 | --- | --- | --- |
 | R1 | May the agent create the five public repositories under `Omar-Sherif-Sayed` through the author's Chrome session and push? Code licence? | ✔ **Yes** (author, 2026-11-17: "Create and push: Okay"). The five repositories are created; pushing is allowed for this product from now on. Licence: MIT for the code; content keeps its own licences. |
-| R2 | A fifth public repository `tajweed-docs`. | ✔ Settled 2026-11-17 — the workspace folder itself (§3). |
+| R2 | A fifth public repository `tajweed-docs`. | ✔ Settled 2026-11-17 — the workspace folder itself (§3); since 2026-11-26 its own folder `tajweed-docs/`. |
 | R3 | Base Java package and the Android / iPhone application id. ⚠ **It can never be changed after the first store release.** | **`io.github.omarsherifsayed.tajweed`** — one identical value for the Java base package, the Android application id and the iPhone bundle id. It is the GitHub user name `Omar-Sherif-Sayed` in lower case **with the hyphens removed**: a Java / Android name cannot contain `-`, and an Apple bundle id cannot contain `_` (✔ Apple: only letters, digits, `-` and `.`, checked 2026-11-17), so plain letters are the only form valid everywhere. ✔ **Confirmed by the author, 2026-11-17 — final.** |
 | R4 | Red colouring. | ✔ Closed 2026-11-17 — no coloured words (§8.1). |
 | R5 | Sheikh Noreen (riwayah الدوري عن أبي عمرو). | Listening only, labelled with his riwayah, without showing or highlighting the Hafs text (§6.7). |
@@ -1352,6 +1356,7 @@ explicit yes** (it is public); R3 (permanent) and R10 (public) need the author's
 | 2026-11-21 | Thirtieth update: the author approved design 3 and created the Quran Foundation app; the backend plan `docs/plan/backend-plan.md` (versions checked on Maven Central, structure, libraries, content pipeline, tests, order of work; decisions B1 – B5 for the author). |
 | 2026-11-21 | Thirty-first update: the author approved B1 – B5 and asked for Javadoc everywhere (§1); `P0-06` (backend) and `P0-07` done — `tajweed-backend` scaffolded on Spring Boot 4.2.0 / Java 25 / PostgreSQL 18 with `GET /v1/app-info`, 22 languages, 42 tests, CI; decisions in §9. |
 | 2026-11-21 | Thirty-second update: the `quran` module of the backend — the Tanzil text and metadata imported with checksum and count checks, the quarter at 15:49 as printed, `/v1/surahs`, `/v1/pages`, `/v1/juzs`, `/v1/content-version`; 57 tests. |
+| 2026-11-26 | Forty-second update (the author): the workspace folder became a plain folder with the five repositories side by side — this repository moved into `tajweed-docs/` (history and remote unchanged); a one-line `CLAUDE.md` in the workspace folder imports this file; the paths in the five `AGENTS.md` files updated (§0, §3). |
 | 2026-11-26 | Forty-first update (the author's production keys): the seven tafsirs synced from production — 42,623 rows; the sync filter fixed (one entry per resource group). |
 | 2026-11-26 | Fortieth update (the author: «المفاتيح جاهزة»): the live check of the Quran Foundation passed on pre-live (token, Content Sync, snapshot); pre-live offers none of our seven Arabic tafsirs — the sync now skips what an environment does not offer and says so; ⏸ production approval. |
 | 2026-11-23 | Thirty-ninth update (the author's five points of 2026-11-22): EveryAyah's «Hudhaify» = Sheikh Ali al-Hudhaifi (recitation 38); the privacy policy with his e-mail (his decision; ⏸ the postal address); the backend's radio (recitation only), HadeethEnc and Quran Foundation tafsir modules (his answers, `backend-plan.md` §14.4); the keys guide; `P2-D1` first batch — methods computed from official timetables. |

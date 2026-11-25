@@ -226,6 +226,16 @@ tafsirs are offered in production; Content Sync answered `422` «Duplicate resou
 name the group once (`tafsirs:14,15,…`); fixed, and the client's errors now carry the API's message. Second run:
 42,623 rows, the seven tafsirs, all covering 1:1. Everything was stored only in the test's throwaway database.
 
+## 2026-11-26 — the author: the workspace as five folders side by side
+
+The author asked that the workspace folder hold the five repositories side by side, this one in `tajweed-docs/`, as on
+GitHub. Both other sessions of the family were idle. The move: `.gitattributes`, `.gitignore`, `AGENTS.md`, `README.md`,
+`LICENSE` and `docs/` moved; `.git` could not be renamed (Windows: a watcher held the folder) — `mv` had copied its
+whole content before failing, so the moved repository was checked (`git fsck` clean, status clean, level with
+`origin/main`, hook and SSH settings in place) and the empty `.git` left behind was removed. Added the workspace
+`CLAUDE.md` (`@tajweed-docs/AGENTS.md`); updated §0, §3, the README, `.gitignore`, the four application repositories'
+`AGENTS.md` (`../tajweed-docs/AGENTS.md`), the prototypes' `launch.json` and the agent's memory note.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)

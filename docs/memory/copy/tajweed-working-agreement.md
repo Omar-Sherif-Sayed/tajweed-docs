@@ -10,8 +10,10 @@ metadata:
 
 For the Tajweed product, the parent `AGENTS.md` in the workspace folder is the source of truth — start at its §0
 "Start here" (state, next task), then §14.1 (task status) and `docs/plan/execution-plan.md`. Workspace folder:
-`C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences`. It is itself the public docs repository
-`tajweed-docs`; the four application repositories are cloned inside it.
+`C:\Programming\WorkSpaces\Tajweed - The Noble Quran and Its Sciences` — since 2026-11-26 a plain folder with the
+five repositories side by side (`tajweed-docs` holds the parent `AGENTS.md`); its one-line `CLAUDE.md`
+(`@tajweed-docs/AGENTS.md`, in no repository) loads the rules. Sessions open in the workspace folder (this memory is
+keyed by that path).
 
 Rules the user stated (2026-11-16 … 19): plan first and ask what is unclear before any code; document everything and
 update every touched repository's `AGENTS.md` after each task; keep the full plan in files so another model can

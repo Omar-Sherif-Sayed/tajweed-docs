@@ -49,11 +49,12 @@ written, changed or translated by the developers or by an AI model; every item s
 
 ## Working folder layout
 
-The application repositories are cloned **inside** this folder; this repository ignores them (`.gitignore`):
+The five repositories sit side by side in one working folder (since 2026-11-26):
 
 ```
-Tajweed - The Noble Quran and Its Sciences/     this repository (tajweed-docs)
-  AGENTS.md  README.md  docs/
+Tajweed - The Noble Quran and Its Sciences/     the working folder (no repository)
+  CLAUDE.md              one line that imports tajweed-docs/AGENTS.md for AI agents
+  tajweed-docs/          this repository: AGENTS.md  README.md  docs/
   tajweed-backend/       its own repository
   tajweed-frontend/      its own repository
   tajweed-android/       its own repository

@@ -65,7 +65,7 @@ Nothing religious is published in this phase.
 
 ### P0-01 Documentation repository ✔ (2026-11-17, local only)
 
-The workspace folder itself is the documentation repository (`AGENTS.md` §3). Done: `git init`, `.gitignore` that
+The workspace folder itself was the documentation repository until 2026-11-26; since then it is `tajweed-docs/` beside the other four (`AGENTS.md` §3). Done: `git init`, `.gitignore` that
 ignores the four application folders, `README.md`, `docs/` with its index, this plan, the first session record, first
 commit as the author. Not done: the GitHub repository and the push (`P0-03`).
 

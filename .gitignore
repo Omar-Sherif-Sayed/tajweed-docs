@@ -1,9 +1,3 @@
-# The four applications are separate repositories cloned inside this folder (AGENTS.md §3).
-/tajweed-backend/
-/tajweed-frontend/
-/tajweed-android/
-/tajweed-ios/
-
 # Local agent / editor / system files
 /.claude/
 .idea/

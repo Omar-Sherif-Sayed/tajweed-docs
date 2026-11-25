@@ -219,6 +219,13 @@ the sync skips a chosen tafsir its environment does not offer and records it; th
 offers (`QF_LIVE_TAFSIRS=169`). Second run: 293 rows (surahs 1 – 2), 1:1 covered, status OK. Next for the author: the
 Quran Foundation's production approval.
 
+## 2026-11-26 — the author's production keys
+
+The author set his production keys the same way («تم»). `liveTest`: the token was granted with both scopes; all seven
+tafsirs are offered in production; Content Sync answered `422` «Duplicate resource group: tafsirs» — the filter must
+name the group once (`tafsirs:14,15,…`); fixed, and the client's errors now carry the API's message. Second run:
+42,623 rows, the seven tafsirs, all covering 1:1. Everything was stored only in the test's throwaway database.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)

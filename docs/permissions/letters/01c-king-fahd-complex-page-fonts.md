@@ -7,7 +7,7 @@
 | **Form** | A formal letter (خطاب) to the Secretary General, as the Complex asked on 2026-11-22 ([`../answers/01-king-fahd-complex-2026-11-22.md`](../answers/01-king-fahd-complex-2026-11-22.md)): it opens with «سعادة الأمين العام لمجمع الملك فهد لطباعة المصحف الشريف وفقه الله» and ends with «مع التحية والتقدير» — rewritten in that form on 2026-11-26 (the author) |
 | **Why** | Their answer ([`../answers/01b-king-fahd-complex-2026-11-26.md`](../answers/01b-king-fahd-complex-2026-11-26.md)) permits the publications «المنشورة على الموقع الرسمي»; the page fonts of the 1405H mushaf, which our letter asked about, are not on the site; the Hafs font 3.0 that is on the site shows U+06DF wrongly with our text (2026-11-26) and is not used. |
 | **Before sending** | The author fills in the two fields in square brackets: his mobile number (kept out of this public repository on purpose) and the Hijri date |
-| **Status** | ☐ draft — the author sends it if he agrees |
+| **Status** | ✔ **sent by the author on 2026-11-26 at 13:31** (16 Jumada al-Akhirah 1448H), as a reply in the same thread, **without point ٢** (the Hafs 3.0 question) — he sent points ١ (the 1405H page fonts) and ٣ (the usage policy), numbered ١ and ٢. His phone number was in the sent letter; it is not copied here. Waiting for the answer. |
 
 ---
 

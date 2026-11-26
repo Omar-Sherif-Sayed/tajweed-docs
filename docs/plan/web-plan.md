@@ -72,3 +72,27 @@ The reader, search, the player and every feature screen (`P1-W1 …`); the King 
 - Not yet: the reader and the other features (`P1-W…`); the production `apiUrl` and the SSR host's allowed hosts
   (`RT-01`).
 
+
+## 6. The features whose inputs are ready (the author, 2026-11-26: «أبدأ بكل الحاجات الجاهزه اللي مش مستنية رد من أي حد»)
+
+Everything below is built on the backend's contract (`tajweed-backend/docs/api/client-guide.md`) or calculated in the
+browser, and waits for no answer, key or permission. Built in this order, one commit each:
+
+| # | Feature | Task | Notes |
+| --- | --- | --- | --- |
+| 1 | Home with the sections built so far, the Hijri date and the time at the top (F27), «continue reading» | `P1-W1`, `P2-W5` | the tiles of design 3; a section appears when its screen exists |
+| 2 | The index (114 surahs, 30 juz; go to surah / juz / page) and the reader **by surah** (F2): the basmala as a heading taken from the ayah's own first four words (client guide §3), page / juz / hizb marks between ayahs, font size, the last read position | `P1-W2` (by surah) | Quran font: **Amiri Quran** (OFL; draws every mark of the Tanzil text). ⚠ The page view as printed waits for the line data in the backend (`P0-12`) and the font (letter 01c) |
+| 3 | Search (F16): word with or without tashkeel, surah name or number, `2:255`; results by surah, the matched words tinted (a display layer) | `P1-W3` | |
+| 4 | The audio engine (F11): ordered sources, retry with a growing delay capped at 30 s, next source, without limit, the `online` event, resume at the position, «جارٍ إعادة الاتصال…»; Media Session | `P1-W4` | one global service; tests `P1-W8` |
+| 5 | Recitation (F3, F4): the reciter picker (riwayah always shown, listening-only said plainly), surah / range / endless (114 → 1), repeat, the playing ayah highlighted where timings or ayah files exist | `P1-W5`, `P1-W6` | downloads (F28) off — no source allows them yet |
+| 6 | Ayah actions (F26) and markers (F25): tap an ayah → markers (tint over the ayah and its number), listen from here / a range with repeat, all its tafsirs (F5) | `P1-W10`, `P1-W11`, `P4-W1` | the virtue (F29) waits for its hadith edition |
+| 7 | Radio (F7) on the same engine; Hadith from HadeethEnc (F13) with its credit on every screen | `P3-W1`, `P7-W1` | |
+| 8 | Sources (F17) from `/v1/content-version` plus the web's own fonts and libraries; «report a mistake» (§6.9) opening a GitHub issue | `P1-W7` | the privacy page waits for the postal address (`RT-04`) |
+| 9 | Prayer times (F8) with the Adhan library (MIT) in the browser, the last third of the night (F36), the Qibla bearing (F10), the Hijri calendar (F27) | `P2-W1`, `P2-W3`, `P2-W5`, `P10-W…` | the location never leaves the browser; the default method from `docs/data-sources/prayer-methods.md` (the five countries read), otherwise MWL and the screen says so; the adhan (F9) waits for the muezzins' recordings |
+
+Not built now — each waits for someone: F19 (the author's reading of the meanings document), adhkar, duas, misbaha
+texts (the book's rights), Dorar (its key), the tajweed lessons (a reviewer), the books and the Lives (editions),
+downloads (EveryAyah and mp3quran), the privacy page (the postal address).
+
+New interface texts go into `tools/extra-texts.json` in the 22 languages (translated by the agent, corrected from
+users' reports — `AGENTS.md` §1); the design's own texts are reused wherever it has them.

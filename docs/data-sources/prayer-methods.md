@@ -51,6 +51,14 @@ compares the apps' times with these timetables, day by day, within one minute.
 Every country not in the first table uses MWL and the screen names it. Each one is added to the first table only when
 its official timetable has been read and the method computed from it, as above.
 
+## The shared data file
+
+[`prayer-methods.json`](prayer-methods.json) (2026-11-26) holds the table above as data: each method's angles,
+interval and minutes, the country → method table, and the time zones that suggest a country on a device. The clients
+build each method from these values — not from the Adhan library's presets, which add a minute to Dhuhr for MWL and
+Egypt that the timetables do not show. Malaysia's minutes are the measured ones rounded (Fajr and Isha +2, Dhuhr +3,
+Maghrib +2). The web copies the file with `tools/sync-design.mjs`.
+
 ## Rules this sets for the clients (`P2-W/A/I-1`)
 
 - The default method follows the country of the device's location (or the chosen city); the user can change it, and

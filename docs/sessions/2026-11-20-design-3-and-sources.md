@@ -270,6 +270,16 @@ fonts were on any site we wrote to: the letters 01 and 01b asked the Complex —
 page fonts; they were never on its site («قريباً» in 2026-11, and not among the fonts published on 2026-11-26); our
 copies come from a third-party GitHub mirror (`nuqayah/qpc-fonts`), to which we never wrote.
 
+## 2026-11-26 — the web's ready features
+
+The author: «أبدأ بكل الحاجات الجاهزه اللي مش مستنية رد من أي حد», and «in compose.yaml in backend add container_name and
+(restart: unless-stopped)». The backend's PostgreSQL container is now `tajweed-postgres` with `restart: unless-stopped`
+(recreated locally, the volume kept). The web got every feature whose inputs are ready (`docs/plan/web-plan.md` §6):
+the reader by surah, markers, ayah actions with the tafsirs, search, the resilient player with the recitation modes,
+radio, hadith, prayer times with the last third of the night, the Qibla, the Hijri calendar, Sources. The prayer
+methods became a shared data file (`docs/data-sources/prayer-methods.json`). Letter 01c was sent by the author
+(without the Hafs 3.0 point) and recorded.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)

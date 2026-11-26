@@ -103,3 +103,20 @@ HadeethEnc's daily run). 45 new interface texts in the 22 languages; about 90 mo
 
 New interface texts go into `tools/extra-texts.json` in the 22 languages (translated by the agent, corrected from
 users' reports — `AGENTS.md` §1); the design's own texts are reused wherever it has them.
+
+## 7. The printed pages exactly as the mushaf (the author, 2026-11-27)
+
+The author sent photos of his printed mushaf (pages 1 – 2, 517 – 518, 593 – 596) and of the Ayah app: «عاوز يبقي كل
+شيء عندنا زي المصحف بالظبط». His answers:
+
+| Question | Answer |
+| --- | --- |
+| The letter shapes, the basmala and the surah names as printed | **The King Fahd QCF V1 fonts through the Quran Foundation** — their font guide (`api-docs.quran.foundation/docs/tutorials/fonts/font-rendering/`, read 2026-11-27): QCF V1 = mushaf 2, the 1405H edition (604 page fonts), the surah-names font, UthmanicHafs for the ayah numbers; bundling allowed while the account is active, credited «Quran fonts provided by Quran Foundation», never offered separately. The basmala: ayah 1:1 drawn in the page-1 font (their advice) |
+| The words' glyphs and lines | **Content Sync `mushafs:2`** (their only permitted offline path) into a new table `qf_mushaf_word` — pk_id, mushaf_id, qf_word_id, ayah_id, position, char_type, page, line, glyph, synced_at, audit; unique (mushaf_id, qf_word_id) — approved; the columns confirmed on the first real snapshot; never in GitHub |
+| Where the browser gets the fonts | **From our own server**: downloaded at deploy from the Quran Foundation's documented URLs, served as part of the site, never in GitHub; no third-party request from the reader's browser |
+| The ornament | **Our own drawing** in the printed arrangement and design 3's colours (circles and arches, no cross) — done (`tajweed-frontend` 165f452) |
+| The pause marks | **Attached to their words, as printed** — only the space Tanzil writes before a mark is not drawn — done |
+
+Waiting: the author's Quran Foundation keys in the environment (the first snapshot) and his OK to download the fonts
+(606 files, about 40 MB). Until then the pages are drawn in Amiri Quran with the same lines; Amiri stays the
+fallback afterwards (no keys, no fonts).

@@ -292,6 +292,18 @@ the lines and the quarter signs; the web's printed pages — page 545 line by li
 backend in IntelliJ kept running the old code; a second copy on 8081 applied the migration and served the checks, the
 web pointed at it for the test and back at 8080 after. CORS: the backend's default now allows 4200 and 4201.
 
+## 2026-11-27 — «زي المصحف بالظبط»
+
+The author sent photos of his printed mushaf and of the Ayah app and asked for everything to be exactly as the mushaf,
+and to be spoken to in Lebanese (then, for one question, Egyptian). The agent tested Amiri Quran on 2:2: the pause mark
+ۛ, written by Tanzil as a word of its own after a space, sits tiny on the space; attached to its word it draws right.
+The King Fahd Complex's site offers a round basmala, the shahada and «المدرجات» fonts — not the mushaf's basmala or
+surah names. Asked where else, the agent found the Quran Foundation's font guide: QCF V1 (the 1405H page fonts),
+the surah-names font, bundling allowed under conditions. The author chose it, approved the table `qf_mushaf_word`, our
+own server for the fonts, our own ornament, and the marks attached. Built: the ornament, tabs, bands, margin labels,
+the opening pages in an oval cartouche, the marks attached (`tajweed-frontend` 165f452). Waiting: his keys and his OK
+to download the fonts.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)

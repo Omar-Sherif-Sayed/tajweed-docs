@@ -5,7 +5,8 @@ Drafted by the agent; **sent by the author** from his own e-mail or the owner's 
 | # | To | Address / channel | File | Status |
 | --- | --- | --- | --- | --- |
 | 1 | مجمع الملك فهد لطباعة المصحف الشريف — King Fahd Glorious Quran Printing Complex | info@qurancomplex.gov.sa | [01-king-fahd-complex.md](01-king-fahd-complex.md) | sent 2026-11-20; answered 2026-11-22 — resend as a formal letter |
-| 1b | سعادة الأمين العام لمجمع الملك فهد لطباعة المصحف الشريف | info@qurancomplex.gov.sa — reply in the same thread | [01b-king-fahd-complex-secretary-general.md](01b-king-fahd-complex-secretary-general.md) | ⏸ sent by the author 2026-11-22 (reply in the same thread) — waiting for the answer |
+| 1b | سعادة الأمين العام لمجمع الملك فهد لطباعة المصحف الشريف | info@qurancomplex.gov.sa — reply in the same thread | [01b-king-fahd-complex-secretary-general.md](01b-king-fahd-complex-secretary-general.md) | ✔ sent by the author 2026-11-22 — **answered 2026-11-26** ([answer](../answers/01b-king-fahd-complex-2026-11-26.md)): the publications on the official site permitted, with conditions; the page fonts not on the site |
+| 1c | الاتصالات الإدارية بمجمع الملك فهد | comm@qurancomplex.gov.sa — reply in the same thread | [01c-king-fahd-complex-page-fonts.md](01c-king-fahd-complex-page-fonts.md) | ☐ draft 2026-11-26 — whether the permission covers the 1405H page fonts, and the usage policy |
 | 2 | موسوعة القرآن الكريم QuranEnc.com | info@quranenc.com | [02-quranenc.md](02-quranenc.md) | ⏸ sent 2026-11-20 |
 | 3 | مؤسسة الشيخ محمد بن صالح العثيمين الخيرية | info@binothaimeen.com | [03-ibn-uthaymeen-foundation.md](03-ibn-uthaymeen-foundation.md) | ⏸ sent 2026-11-20 |
 | 4 | أصحاب حقوق كتب الشيخ سعيد بن علي بن وهف القحطاني رحمه الله (حصن المسلم) | info@hisn-almuslim.com | [04-hisn-almuslim.md](04-hisn-almuslim.md) | ⏸ sent 2026-11-20 |

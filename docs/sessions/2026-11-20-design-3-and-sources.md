@@ -248,6 +248,16 @@ the web ran on 4201 and the local backend's `CORS_ORIGINS` allowed it): the firs
 server-rendered, the 302 and the 404. A button wrapper bug (content projected into a hidden `@switch` branch) was found
 in the browser and fixed.
 
+## 2026-11-26 — the King Fahd Complex's answer
+
+The author showed the Complex's answer (comm@qurancomplex.gov.sa, 12:04): its electronic publications published on its
+official site may be used — following its usage policy, unchanged, its rights kept, the font credited to the Complex,
+never for commercial purposes or income. The agent read `qurancomplex.gov.sa/fonts` in the browser: the Hafs font 3.0
+(SHA-256 published, with a signed Word document of the text), seven other riwayat, the basmala, shahada and
+«المدرجات» fonts — **not the 1405H page fonts** (our default, held from a mirror); no usage-policy page yet (the privacy
+policy «قريباً»). Recorded in `docs/permissions/answers/01b-king-fahd-complex-2026-11-26.md`; a follow-up asking about the
+page fonts and the usage policy drafted (`letters/01c-…`). The author's phone number in the quoted thread was not copied.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)

@@ -47,12 +47,15 @@
 - ⚠ **Not on the site: the page fonts of the 1405H mushaf** (one font per page) — the author's chosen default
   (2026-11-17), which we hold from a third-party mirror (`github.com/nuqayah/qpc-fonts`). The answer covers what is
   «المنشورة على الموقع الرسمي», so it does not clearly cover those copies.
-- Hafs 3.0 is a newer version than the 0.09 we rejected on 2026-11-17 (it did not draw U+06DF); ☐ whether 3.0 draws
-  every mark of the Tanzil text is checked before it is used.
+- Hafs 3.0 is a newer version than the 0.09 we rejected on 2026-11-17 (it did not draw U+06DF). Downloaded from the
+  official site with the author's permission (2026-11-26; SHA-256 equal to the published one; licence inside the font:
+  use, copy and distribution free of cost, no sale, no modification) and checked 2026-11-26 in the browser (Chrome) on the Tanzil text from our backend: **U+06DF is drawn as a dotted circle beside the word, not over its letter** (e.g. «ءَامَنُوا۟» in 103:3 — after alef, waw and ya alike); the mark is in 2,240 of the 6,236 ayahs (3,722 times after alef). **Rejected by the author (2026-11-26): «مش هانستخدم أي font فيه مشكلة العلامة الخطأ … أستخدم خطوط تانية»** — no font that shows this mark wrongly is used. The file is not kept in
+  any repository.
 
 ## Open — for the author
 
 1. The page fonts: a short follow-up asking whether the permission includes the 1405H page fonts and where to obtain the
    official copy — drafted in [`../letters/01c-king-fahd-complex-page-fonts.md`](../letters/01c-king-fahd-complex-page-fonts.md).
-2. Downloading Hafs 3.0 from the official site (with the author's permission) to check it against the Tanzil text and
-   the printed pages — the permitted font, whatever the answer about the page fonts.
+2. ~~Downloading Hafs 3.0 to check it~~ — done 2026-11-26; rejected (above). So **this permission covers no font we
+   use today**: the reader's fonts are the 1405H page fonts (the author's default, the subject of 01c), DigitalKhatt
+   Old Madina (OFL — the same 1405H layout), Amiri Quran and Scheherazade New (OFL).

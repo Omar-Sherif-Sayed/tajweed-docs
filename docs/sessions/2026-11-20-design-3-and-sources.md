@@ -258,6 +258,18 @@ never for commercial purposes or income. The agent read `qurancomplex.gov.sa/fon
 policy «قريباً»). Recorded in `docs/permissions/answers/01b-king-fahd-complex-2026-11-26.md`; a follow-up asking about the
 page fonts and the usage policy drafted (`letters/01c-…`). The author's phone number in the quoted thread was not copied.
 
+## 2026-11-26 — Hafs 3.0 tried, and rejected
+
+With the author's permission the agent downloaded «رواية حفص عن عاصم» 3.0 from `qurancomplex.gov.sa/fonts` (SHA-256
+equal to the published one; licence inside the font: free use and distribution, no sale, no modification), started the
+backend and the web, and showed it on a review page beside Amiri Quran. In the Tanzil text the small high rounded zero
+(U+06DF) is drawn as a dotted circle beside the word (103:3 «ءَامَنُوا۟»); it is in 2,240 ayahs. The author: «مش هانستخدم
+أي font فيه مشكلة العلامة الخطأ الموجودة في سورة العصر - أستخدم خطوط تانية». The review page and the font were removed
+from `tajweed-frontend` (never committed). He asked what exactly we asked the Complex for, and whether the 1405H page
+fonts were on any site we wrote to: the letters 01 and 01b asked the Complex — the fonts' owner — for exactly the 1405H
+page fonts; they were never on its site («قريباً» in 2026-11, and not among the fonts published on 2026-11-26); our
+copies come from a third-party GitHub mirror (`nuqayah/qpc-fonts`), to which we never wrote.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)

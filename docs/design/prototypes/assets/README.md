@@ -31,6 +31,7 @@ task `P0-12`; then the files move to the backend repository and the register of 
   provided "as is"; KFGQPC keeps full ownership. A free application that ships the file unchanged fits these terms.
   ⚠ This version does not draw U+06DF (small high rounded zero), which both verified texts use: dotted circles
   appear. It is not usable as is.
+- **KFGQPC Hafs 3.0** (the Complex's official site, 2026-11-26) — the same fault: checked 2026-11-26 in the browser (Chrome) on the Tanzil text from our backend: **U+06DF is drawn as a dotted circle beside the word, not over its letter** (e.g. «ءَامَنُوا۟» in 103:3 — after alef, waw and ya alike); the mark is in 2,240 of the 6,236 ayahs (3,722 times after alef). **Rejected by the author (2026-11-26): «مش هانستخدم أي font فيه مشكلة العلامة الخطأ … أستخدم خطوط تانية»** — no font that shows this mark wrongly is used.
 - **QCF page fonts (QCF_P001 … QCF_P604, version 5.10, designed by Harf Information Technology)** — the files say only
   "King Fahad Complex, All rights reserved." The mirror links to a copyright page of the Complex that no longer exists
   (404 on 2026-11-17), and the Complex's own site lists its fonts as «قريباً» (no download). **Decision of the author

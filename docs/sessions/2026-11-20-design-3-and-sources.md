@@ -280,6 +280,18 @@ radio, hadith, prayer times with the last third of the night, the Qibla, the Hij
 methods became a shared data file (`docs/data-sources/prayer-methods.json`). Letter 01c was sent by the author
 (without the Hafs 3.0 point) and recorded.
 
+## 2026-11-26 — the printed pages
+
+The author sent design 3's screen «8 · Web — the reader on a computer, two pages like an open mushaf» (pages 545 – 546):
+«that is what we speak about in design 3, وليس سورة كاملة في صفحة واحده — update angular design». The agent tested
+DigitalKhatt Old Madina on the Tanzil text first: the pause mark ۛ of 2:2 lies on the line, 9:1's small waw with madd
+breaks — so, like Hafs 3.0, not usable with our text. Two questions, two answers: **Amiri Quran now** (the King Fahd page
+fonts when permitted), and **the table `mushaf_line`** as proposed. Built: the backend's import (every Tanzil word matched
+to the DigitalKhatt layout, every token on one line, 604 × 15 lines, 114 headers, 112 basmalas), `/v1/pages/{p}` with
+the lines and the quarter signs; the web's printed pages — page 545 line by line as the author's photo. The author's
+backend in IntelliJ kept running the old code; a second copy on 8081 applied the migration and served the checks, the
+web pointed at it for the test and back at 8080 after. CORS: the backend's default now allows 4200 and 4201.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)

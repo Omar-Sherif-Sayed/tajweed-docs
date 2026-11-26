@@ -99,7 +99,7 @@ downloads (EveryAyah and mp3quran), the privacy page (the postal address).
 mid-play — it showed «جارٍ إعادة الاتصال…» and resumed on the same source at the position reached; the Adhan library's
 presets differ from the measured methods by a minute (Dhuhr), so the methods are built from the shared data file;
 tafsirs and hadiths show their empty states locally until the backend syncs them (the Quran Foundation's credentials,
-HadeethEnc's daily run). 51 new interface texts in the 22 languages; about 90 more reused from the design.
+HadeethEnc's daily run). 45 new interface texts in the 22 languages; about 90 more reused from the design.
 
 New interface texts go into `tools/extra-texts.json` in the 22 languages (translated by the agent, corrected from
 users' reports — `AGENTS.md` §1); the design's own texts are reused wherever it has them.

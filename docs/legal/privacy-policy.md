@@ -1,8 +1,8 @@
 # Privacy policy — draft (`RT-04`, 2026-11-22)
 
-> **Status: draft, not published.** Three gaps must be filled before it is published: ☐ **the postal address** (the
-> author sends it — required by the Quran Foundation's privacy requirements), ☐ **the hosting company** of the API
-> (chosen in `RT-01`), ☐ **the effective date** (the day of the first release). Before release it is read once more
+> **Status: draft, not published.** Two gaps must be filled before it is published: ☐ **the hosting company** of the
+> API (chosen in `RT-01`), ☐ **the effective date** (the day of the first release). ✔ The postal address — the
+> author's, sent on 2026-11-27 (required by the Quran Foundation's privacy requirements). Before release it is read once more
 > against the Quran Foundation's Developer Privacy Policy Packet and the stores' rules, and translated into the other
 > 20 languages of the application (`LANG-*`). The e-mail is the author's own, published by his decision of 2026-11-22.
 
@@ -47,7 +47,8 @@
 مذيعيها. لذلك يرى خادم المصدر عنوان IP لجهازك عند التشغيل، كأي موقع تزوره، وتنطبق عليه سياسة خصوصيته.
 
 يستخدم خادمنا واجهات برمجية لمؤسسة القرآن (Quran Foundation — Quran.com) لجلب التفاسير، وموسوعة الأحاديث النبوية
-(HadeethEnc.com) لجلب الأحاديث؛ يحدث ذلك بين خادمنا وخوادمهم، ولا يُرسل إليهم شيء عنك.
+(HadeethEnc.com) لجلب الأحاديث، ويجلب من مؤسسة القرآن أيضًا رسم كلمات المصحف المطبوع؛ يحدث ذلك بين خادمنا وخوادمهم،
+ولا يُرسل إليهم شيء عنك. وخطوط صفحات المصحف (من مؤسسة القرآن) يقدّمها موقعنا نفسه، فلا يتصل متصفحك بخوادمهم.
 
 ### ٥. الأمان
 
@@ -71,8 +72,8 @@
 
 ### ٩. التواصل
 
-لأي سؤال عن الخصوصية: **omar.sherif.dwedar@gmail.com** — العنوان البريدي: ☐ ‏(يرسله المؤلف). نردّ خلال ٣٠ يومًا
-على الأكثر.
+لأي سؤال عن الخصوصية: **omar.sherif.dwedar@gmail.com** — العنوان البريدي: جمهورية مصر العربية، محافظة الجيزة،
+مدينة الشيخ زايد، الحي ١١، المجاورة ٣. نردّ خلال ٣٠ يومًا على الأكثر.
 
 المطوّر: عمر شريف — https://www.linkedin.com/in/omarsherif21/
 
@@ -120,8 +121,10 @@ from its broadcasters' servers. The source's server therefore sees your device's
 website you visit does, and its own privacy policy applies.
 
 Our server uses the APIs of the Quran Foundation (Quran.com) to obtain the tafsirs and of the Encyclopedia of
-Translated Prophetic Hadiths (HadeethEnc.com) to obtain the hadiths; this happens between our server and theirs, and
-nothing about you is sent to them.
+Translated Prophetic Hadiths (HadeethEnc.com) to obtain the hadiths, and of the Quran Foundation also for the letter
+shapes of the printed mushaf; this happens between our server and theirs, and nothing about you is sent to them. The
+mushaf's page fonts (from the Quran Foundation) are served by our own website, so your browser does not connect to
+their servers for them.
 
 ### 5. Security
 
@@ -146,7 +149,7 @@ If this policy changes, we publish the new text here with its date and mention t
 
 ### 9. Contact
 
-For any question about privacy: **omar.sherif.dwedar@gmail.com** — postal address: ☐ (sent by the author). We answer
-within 30 days at most.
+For any question about privacy: **omar.sherif.dwedar@gmail.com** — postal address: Neighbourhood 3, District 11,
+Sheikh Zayed City, Giza Governorate, Arab Republic of Egypt. We answer within 30 days at most.
 
 Developer: Omar Sherif — https://www.linkedin.com/in/omarsherif21/

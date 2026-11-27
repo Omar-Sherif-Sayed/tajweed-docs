@@ -304,6 +304,16 @@ own server for the fonts, our own ornament, and the marks attached. Built: the o
 the opening pages in an oval cartouche, the marks attached (`tajweed-frontend` 165f452). Waiting: his keys and his OK
 to download the fonts.
 
+## 2026-11-27, later — «أعمل كل اللي فاضل»
+
+The author: do everything left; download the fonts (OK); the postal address (he first offered his e-mail — the agent
+explained a postal address is a place, and he sent it); research authoritative sources. His keys were already in the
+environment, so the first `mushafs:2` snapshot was read: 83,665 glyphs, its lines agreeing with ours except for an ayah's
+number opening the next line (566 lines, as printed). Built and checked in the browser: the QCF V1 pages, then
+memorisation, khatma, notes, share as text, tracker, kids, settings with its file, the privacy page. F46: he chose a wide
+area from our server and asked whether it is best and whether the direct way breaks any terms — the comparison is in
+`docs/data-sources/candidates-2026-11-27.md` §3. The research's findings are in the same file.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)

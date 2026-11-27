@@ -314,6 +314,17 @@ memorisation, khatma, notes, share as text, tracker, kids, settings with its fil
 area from our server and asked whether it is best and whether the direct way breaks any terms — the comparison is in
 `docs/data-sources/candidates-2026-11-27.md` §3. The research's findings are in the same file.
 
+## 2026-11-27, third message — six points
+
+The author: Zakat — write both fatwas, saying which is Egypt's and which Saudi Arabia's, with sources; the CLI's change in
+`angular.json` (he only added `--port 4201`); where the scope `content.chapters.read` is in the console; which Hisn
+al-Muslim site was meant; how to approve the letters; F46 from our server. Done: the console read (no such scope —
+`content.quran.read` is granted, surah names checked); `angular.json` restored (the Angular CLI's analytics id — a
+usage-reporting id of the CLI, not of the app — kept out of the public repository); the two sites read («رسالة الحرمين»:
+official, complete, 31 translations, all rights reserved; `hisnmuslim.com`: no owner or terms); the fatwas read in full
+(the earlier Egyptian note corrected); the Zakat screen built and checked in the browser (340,000 / 32,725 with the
+sample prices; below and above the nisab); the F46 tables written for his approval.
+
 ## Pages read
 
 - https://raw.githubusercontent.com/batoulapps/adhan-js/master/LICENSE (and adhan-java, adhan-swift)
